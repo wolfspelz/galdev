@@ -1,8 +1,10 @@
 year: 9999
 title: Title title title title
 short: Short short short short short short short short short short short short short
-claim: Claim claim claim: Subclaim Subclaim Subclaim subclaim 
+summary: Summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary 
+headline: Headline headline: Subheadline subheadline subheadline subheadline  
 image: Image.jpg
+smallimage: Small.jpg
 tags: 
   - Tag1
   - Tag2
