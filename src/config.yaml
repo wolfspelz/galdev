@@ -1,6 +1,6 @@
 languages:
-  - de: ./de/index.yaml
-  - en: ./en/index.yaml
+  - de: ./de/_index.yaml
+  - en: ./en/_index.yaml
 translations:
   - ErsterBesuch: 
     - de: ErsterBesuch
