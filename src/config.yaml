@@ -1,0 +1,8 @@
+languages:
+  - de: ./de/index.yaml
+  - en: ./en/index.yaml
+translations:
+  - ErsterBesuch: 
+    - de: ErsterBesuch
+    - en: FirstVisit
+  
