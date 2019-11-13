@@ -14,4 +14,3 @@ Deutsch: https://github.com/wolfspelz/galdev/tree/master/data/de
 
 English: https://github.com/wolfspelz/galdev/tree/master/data/en
 
-test1
