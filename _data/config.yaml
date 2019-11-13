@@ -2,6 +2,9 @@ languages:
   - de: ./de/_index.yaml
   - en: ./en/_index.yaml
 translations:
+  - FreierBereichVegas: 
+    - de: FreierBereichVegas
+    - en: FreeAreaVegas
   - ErsterBesuch: 
     - de: ErsterBesuch
     - en: FirstVisit
