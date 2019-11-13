@@ -1,14 +1,13 @@
 languages:
-  - de: ./de/_index.yaml
-  - en: ./en/_index.yaml
+  de: ./de/_index.yaml
+  en: ./en/_index.yaml
 translations:
-  - FreierBereichVegas: 
-    - de: FreierBereichVegas
-    - en: FreeAreaVegas
-  - ErsterBesuch: 
-    - de: ErsterBesuch
-    - en: FirstVisit
-  - Quantenkontinuum: 
-    - de: Quantenkontinuum
-    - en: QuantumContinuum
-  
+  FreierBereichVegas: 
+    de: FreierBereichVegas
+    en: FreeAreaVegas
+  ErsterBesuch: 
+    de: ErsterBesuch
+    en: FirstVisit
+  Quantenkontinuum: 
+    de: Quantenkontinuum
+    en: QuantumContinuum
