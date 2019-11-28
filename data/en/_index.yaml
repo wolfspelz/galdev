@@ -1,5 +1,33 @@
 images: ./images/
+topics:
+  accident: Accidents
+  adventure: Adventures
+  ai: Artificial Intelligence
+  aliens: Alien races
+  catastrophe: Catastrophes
+  conspiracy: Conspiracies
+  crime: Crimes
+  culture: Culture
+  discovery: Discoveries
+  ecology: Ecology, biology and environment
+  economy: Economy and economic crises
+  epidemic: Epidemics
+  event: Exciting events
+  luck: More by luck than judgment
+  people: People
+  philosophy: Philosophy und religion
+  politics: Politics
+  science: Sciences
+  spaceflight: Space flight
+  statistics: Statistics
+  technology: Technology
+  things: Things
+  upgrades: Upgrades for humans
+  visitors: Alien visitors
+  war: War
+  wonder: Wonders
 timeline: 
+  - 2135: Scale
   - 2208: OktopusSapiens
   - 2359: FreeAreaVegas
   - 2544: FirstVisit

@@ -2,6 +2,9 @@ languages:
   de: ./de/_index.yaml
   en: ./en/_index.yaml
 translations:
+  Scale:
+    de: Scale
+    en: Scale
   OktopusSapiens: 
     de: OktopusSapiens
     en: OktopusSapiens
