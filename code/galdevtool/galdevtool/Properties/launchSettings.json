@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "galdevtool": {
+      "commandName": "Project",
+      "commandLineArgs": "Bigfile2Yaml"
+    }
+  }
+}
