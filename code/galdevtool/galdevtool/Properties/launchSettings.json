@@ -2,7 +2,7 @@
   "profiles": {
     "galdevtool": {
       "commandName": "Project",
-      "commandLineArgs": "Bigfile2Yaml"
+      "commandLineArgs": "Bigfile2Yaml BigfilePath=C:\\Heiner\\wolfspelz-www.galactic-developments.de\\history\\data2.txt YamlFolderPath=C:\\Users\\wolf\\AppData\\Local\\Temp\\yaml"
     }
   }
 }
