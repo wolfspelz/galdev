@@ -277,7 +277,7 @@ topics:
                 }
 
                 var entry = "";
-                entry += $"name: {e.Name}\r\n";
+                if (!string.IsNullOrEmpty(e.Name)) { entry += $"name: {e.Name}\r\n"; }
                 entry += $"year: {e.Year}\r\n";
                 entry += $"title: {e.Title}\r\n";
                 if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {e.Short}\r\n"; }
