@@ -169,7 +169,7 @@ namespace galdevtool
             var outImgFolder = "images";
             Directory.CreateDirectory(Path.Combine(outputFolder, outImgFolder));
 
-            var index = $@"images: ./{outImgFolder}/
+            var config = $@"images: ./{outImgFolder}/
 topics:
   accident: Unfälle und Havarien
   adventure: Abenteuer
@@ -197,7 +197,6 @@ topics:
   visitors: Aliens im Sonnensystem
   war: Kriege
   wonder: Wunder
-timeline: 
 ";
             foreach (var e in entries)
             {
@@ -299,7 +298,7 @@ timeline:
                 File.WriteAllText(Path.Combine(outputFolder, file + ".yaml"), entry);
             }
 
-            File.WriteAllText(Path.Combine(outputFolder, "index.yaml"), index);
+            File.WriteAllText(Path.Combine(outputFolder, "config.yaml"), config);
         }
 
     }
