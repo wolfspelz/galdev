@@ -282,16 +282,16 @@ topics:
                 entry += $"title: {e.Title}\r\n";
                 if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {e.Short}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {e.Summary}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {e.Headline}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {e.Image}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {e.Headline}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"smallimage: {e.Smallimage}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {e.Post}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {e.Postimage}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {e.Facebook}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {e.Facebookimage}\r\n"; }
+                //if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {e.Post}\r\n"; }
+                //if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {e.Postimage}\r\n"; }
+                if (e.Tags.Count > 0) { entry += $"tags:\r\n{string.Join("\r\n", e.Tags.Select(x => "  - " + x))}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {e.Twitter}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {e.Twitterimage}\r\n"; }
-                if (e.Tags.Count > 0) { entry += $"tags:\r\n{string.Join("\r\n", e.Tags.Select(x => "  - " + x))}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {e.Facebook}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {e.Facebookimage}\r\n"; }
                 if (e.Topics.Count > 0) { entry += $"topics:\r\n{string.Join("\r\n", e.Topics.Select(x => "  - " + x))}\r\n"; }
                 if (e.Text.Count > 0) { entry += $"text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
