@@ -3,29 +3,29 @@ languages:
   en: ./en/_index.yaml
 translations:
   Fusang:
-    de: Fusang
-    en: Fusang
+    de: 2091_Fusang
+    en: 2091_Fusang
   Scale:
-    de: Scale
-    en: Scale
+    de: 2135_Scale
+    en: 2135_Scale
   OktopusSapiens: 
-    de: OktopusSapiens
-    en: OktopusSapiens
+    de: 2208_OktopusSapiens
+    en: 2208_OctopusSapiens
   FreierBereichVegas: 
-    de: FreierBereichVegas
-    en: FreeAreaVegas
+    de: 2359_FreierBereichVegas
+    en: 2359_FreeAreaVegas
   Mukhagni:
-    de: Mukhagni
-    en: Mukhagni
+    de: 2540_Mukhagni
+    en: 2540_Mukhagni
   ErsterBesuch: 
-    de: ErsterBesuch
-    en: FirstVisit
+    de: 2544_ErsterBesuch
+    en: 2544_FirstVisit
   Interia: 
-    de: Interia
-    en: Interia
+    de: 2648_Interia
+    en: 2648_Interia
   Gee: 
-    de: Gee
-    en: Gee
+    de: 2648_Gee
+    en: 2725_Gee
   Quantenkontinuum: 
-    de: Quantenkontinuum
-    en: QuantumContinuum
+    de: 3365_Quantenkontinuum
+    en: 3365_QuantumContinuum
