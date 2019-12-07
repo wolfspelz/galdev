@@ -26,7 +26,7 @@ namespace galdevtool
             Log.Info("");
             var data = Read(InputFilePath);
             var entries = Analyse(data);
-            Write(entries, OutputFolderPath, InputFilePath, InputPostImageFolderPath);
+            Write(entries, OutputFolderPath, InputImageFolderPath, InputPostImageFolderPath);
         }
 
         public List<TimelineEntry> Analyse(string data)
@@ -107,7 +107,7 @@ namespace galdevtool
                                                 {
                                                     x = x.Substring(0, pos).Trim();
                                                 }
-                                                e.Post = x;
+                                                e.Facebook = x;
                                             }
                                         }
                                         else
@@ -118,7 +118,7 @@ namespace galdevtool
                                             {
                                                 x = x.Substring(0, pos).Trim();
                                             }
-                                            e.Post = x;
+                                            e.Facebook = x;
                                         }
                                         if (fbParts.Length == 3)
                                         {
@@ -133,7 +133,7 @@ namespace galdevtool
                                     }
                                     break;
                                 case "facebookimage":
-                                    e.Postimage = value;
+                                    e.Facebookimage = value;
                                     break;
                                 case "topic":
                                     e.Topics = value.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToList();
@@ -247,6 +247,21 @@ timeline:
                     }
                 }
 
+                if (!string.IsNullOrEmpty(e.Facebookimage))
+                {
+                    var src = Path.Combine(snImgFolder, e.Facebookimage);
+                    var dst = Path.Combine(outputFolder, outImgFolder, e.Facebookimage);
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst, true);
+                        e.Postimage = e.Facebookimage;
+                    }
+                    else
+                    {
+                        e.Facebookimage = "";
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(e.Twitterimage))
                 {
                     var src = Path.Combine(snImgFolder, e.Twitterimage);
@@ -254,6 +269,7 @@ timeline:
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, true);
+                        e.Postimage = e.Twitterimage; // larger than FB image
                     }
                     else
                     {
@@ -261,38 +277,25 @@ timeline:
                     }
                 }
 
-                if (!string.IsNullOrEmpty(e.Postimage))
-                {
-                    var src = Path.Combine(snImgFolder, e.Postimage);
-                    var dst = Path.Combine(outputFolder, outImgFolder, e.Postimage);
-                    if (File.Exists(src))
-                    {
-                        File.Copy(src, dst, true);
-                    }
-                    else
-                    {
-                        e.Postimage = "";
-                    }
-                }
+                e.Post = e.Facebook;
 
-                var entry = $@"year: {e.Year}
-title: {e.Title}
-short: {e.Short}
-summary: {e.Summary}
-headline: {e.Headline}
-image: {e.Image}
-smallimage: {e.Smallimage}
-tags: 
-{string.Join("\r\n", e.Tags.Select(x => "  - " + x))}
-post: {e.Post}
-postimage: {e.Postimage}
-topics: 
-{string.Join("\r\n", e.Topics.Select(x => "  - " + x))}
-twitter: {e.Twitter}
-twitterimage: {e.Twitterimage}
-text: |
-{string.Join("\r\n", e.Text.Select(x => "  " + x))}
-";
+                var entry = "";
+                entry += $"year: {e.Year}\r\n";
+                entry += $"title: {e.Title}\r\n";
+                if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {e.Short}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {e.Summary}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {e.Headline}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {e.Image}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"smallimage: {e.Smallimage}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {e.Post}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {e.Postimage}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {e.Facebook}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {e.Facebookimage}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {e.Twitter}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {e.Twitterimage}\r\n"; }
+                if (e.Tags.Count > 0) { entry += $"tags:\r\n{string.Join("\r\n", e.Tags.Select(x => "  - " + x))}\r\n"; }
+                if (e.Topics.Count > 0) { entry += $"topics:\r\n{string.Join("\r\n", e.Topics.Select(x => "  - " + x))}\r\n"; }
+                if (e.Text.Count > 0) { entry += $"text: |  \r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
                 File.WriteAllText(Path.Combine(outputFolder, name + ".yaml"), entry);
             }

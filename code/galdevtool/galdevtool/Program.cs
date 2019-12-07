@@ -14,7 +14,7 @@ namespace galdevtool
             var program = new Program();
             program.Run();
 
-            Console.ReadKey();
+//            Console.ReadKey();
         }
 
         private void Run()

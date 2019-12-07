@@ -14,6 +14,8 @@ namespace galdevtool
         public List<string> Tags { get; set; } = new List<string>();
         public string Twitter { get; set; } = "";
         public string Twitterimage { get; set; } = "";
+        public string Facebook { get; set; } = "";
+        public string Facebookimage { get; set; } = "";
         public string Post { get; set; } = "";
         public string Postimage { get; set; } = "";
         public List<string> Topics { get; set; } = new List<string>();
