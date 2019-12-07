@@ -94,31 +94,25 @@ namespace galdevtool
                                         var claimAndText = fbParts[0].Trim();
                                         if (claimAndText.Contains(" - "))
                                         {
-                                            var claimAndTextParts = claimAndText.Split(new char[] { '-' }, 2);
-                                            if (claimAndTextParts.Length > 0)
+                                            var yearPos = claimAndText.IndexOf(e.Year);
+                                            if (yearPos > 0)
                                             {
-                                                e.Headline = claimAndTextParts[0].Trim();
-                                            }
-                                            if (claimAndTextParts.Length > 1)
-                                            {
-                                                var x = claimAndTextParts[1].Trim();
-                                                var pos = x.IndexOf("(");
-                                                if (pos > 0)
+                                                var headline = claimAndText.Substring(0, yearPos).Trim();
+                                                headline = headline.TrimEnd('-');
+                                                headline = headline.Trim();
+                                                e.Headline = headline;
+                                                var facebook = claimAndText.Substring(yearPos).Trim();
+                                                var likePos = facebook.IndexOf("(");
+                                                if (likePos > 0)
                                                 {
-                                                    x = x.Substring(0, pos).Trim();
+                                                    facebook = facebook.Substring(0, likePos).Trim();
                                                 }
-                                                e.Facebook = x;
+                                                e.Facebook = facebook;
                                             }
                                         }
                                         else
                                         {
-                                            var x = claimAndText;
-                                            var pos = x.IndexOf("(");
-                                            if (pos > 0)
-                                            {
-                                                x = x.Substring(0, pos).Trim();
-                                            }
-                                            e.Facebook = x;
+                                            e.Facebook = claimAndText;
                                         }
                                         if (fbParts.Length == 3)
                                         {
@@ -145,6 +139,24 @@ namespace galdevtool
                     }
                 }
 
+                {
+                    var dot = e.Image.IndexOf('.');
+                    if (dot > 0)
+                    {
+                        e.Name = e.Image.Substring(0, dot);
+                    }
+                }
+
+                e.Post = e.Facebook;
+                if (!string.IsNullOrEmpty(e.Facebookimage))
+                {
+                    e.Postimage = e.Facebookimage;
+                }
+                if (!string.IsNullOrEmpty(e.Twitterimage))
+                {
+                    e.Postimage = e.Twitterimage; // larger than FB image
+                }
+
                 timeline.Add(e);
                 lineCount++;
             }
@@ -157,7 +169,7 @@ namespace galdevtool
             var outImgFolder = "images";
             Directory.CreateDirectory(Path.Combine(outputFolder, outImgFolder));
 
-            var index = @"images: ./{outImgFolder}/
+            var index = $@"images: ./{outImgFolder}/
 topics:
   accident: Unfälle und Havarien
   adventure: Abenteuer
@@ -187,35 +199,25 @@ topics:
   wonder: Wunder
 timeline: 
 ";
-            var indexLabels = new HashSet<string>();
             foreach (var e in entries)
             {
-                var indexLabel = e.Year;
-                var cnt = 0;
-                while (indexLabels.Contains(indexLabel))
+                var file = "";
+                if (string.IsNullOrEmpty(file))
                 {
-                    indexLabel = e.Year + (char)('a' + cnt);
-                    cnt++;
-                }
-                indexLabels.Add(indexLabel);
-
-                var name = "";
-                if (string.IsNullOrEmpty(name))
-                {
-                    name = e.Image;
-                    if (!string.IsNullOrEmpty(name))
+                    file = e.Image;
+                    if (!string.IsNullOrEmpty(file))
                     {
-                        var dot = name.IndexOf('.');
+                        var dot = file.IndexOf('.');
                         if (dot > 2)
                         {
-                            name = name.Substring(0, dot);
+                            file = file.Substring(0, dot);
                         }
                     }
                 }
-                if (string.IsNullOrEmpty(name))
+                if (string.IsNullOrEmpty(file))
                 {
-                    name = e.Title
-                    .Replace(" ", "")
+                    file = e.Title
+                    .Replace(" ", "_")
                     .Replace("/", "")
                     .Replace(":", "")
                     .Replace("-", "")
@@ -224,14 +226,14 @@ timeline:
                     .Replace(")", "")
                     .Replace("\"", "")
                     ;
-                    var dot = name.IndexOf('.');
+                    var dot = file.IndexOf('.');
                     if (dot > 0)
                     {
-                        name = name.Substring(0, dot);
+                        file = file.Substring(0, dot);
                     }
-                    name = name.Truncate(40, "");
+                    file = file.Truncate(30, "");
                 }
-                index += $"  - {indexLabel}: {name}\r\n";
+                file = e.Year + "_" + file;
 
                 if (!string.IsNullOrEmpty(e.Image))
                 {
@@ -254,7 +256,6 @@ timeline:
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, true);
-                        e.Postimage = e.Facebookimage;
                     }
                     else
                     {
@@ -269,7 +270,6 @@ timeline:
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, true);
-                        e.Postimage = e.Twitterimage; // larger than FB image
                     }
                     else
                     {
@@ -277,9 +277,8 @@ timeline:
                     }
                 }
 
-                e.Post = e.Facebook;
-
                 var entry = "";
+                entry += $"name: {e.Name}\r\n";
                 entry += $"year: {e.Year}\r\n";
                 entry += $"title: {e.Title}\r\n";
                 if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {e.Short}\r\n"; }
@@ -295,9 +294,9 @@ timeline:
                 if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {e.Twitterimage}\r\n"; }
                 if (e.Tags.Count > 0) { entry += $"tags:\r\n{string.Join("\r\n", e.Tags.Select(x => "  - " + x))}\r\n"; }
                 if (e.Topics.Count > 0) { entry += $"topics:\r\n{string.Join("\r\n", e.Topics.Select(x => "  - " + x))}\r\n"; }
-                if (e.Text.Count > 0) { entry += $"text: |  \r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
+                if (e.Text.Count > 0) { entry += $"text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
-                File.WriteAllText(Path.Combine(outputFolder, name + ".yaml"), entry);
+                File.WriteAllText(Path.Combine(outputFolder, file + ".yaml"), entry);
             }
 
             File.WriteAllText(Path.Combine(outputFolder, "index.yaml"), index);

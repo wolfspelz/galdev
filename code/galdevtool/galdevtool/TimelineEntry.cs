@@ -4,6 +4,7 @@ namespace galdevtool
 {
     public class TimelineEntry
     {
+        public string Name { get; set; } = "";
         public string Year { get; set; } = "";
         public string Title { get; set; } = "";
         public string Short { get; set; } = "";
