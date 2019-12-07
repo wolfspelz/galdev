@@ -23,8 +23,8 @@ namespace galdevtool.Test
             Assert.AreEqual(6, e.Tags.Count);
             Assert.AreEqual("2052 Personenrechte für Primaten http://www.galactic-developments.de/data2.html?hilite=2052 #scifi #Menschenrechte #Primaten #Personen #Tiere #Delfine #Wale", e.Twitter);
             Assert.AreEqual("Primaten-snpost.jpg", e.Twitterimage);
-            Assert.AreEqual("2052 Personenrechte für Primaten. Immer mehr Staaten erkennen die großen Menschenaffen als Personen an und gewähren ihnen Menschenrechte oder vergleichbare Rechte... Weiter: http://jmp1.de/h2052", e.Facebook);
-            Assert.AreEqual("Primaten-snpost.jpg", e.Facebookimage);
+            Assert.AreEqual("2052 Personenrechte für Primaten. Immer mehr Staaten erkennen die großen Menschenaffen als Personen an und gewähren ihnen Menschenrechte oder vergleichbare Rechte... Weiter: http://jmp1.de/h2052", e.Post);
+            Assert.AreEqual("Primaten-snpost.jpg", e.Postimage);
             Assert.AreEqual(1, e.Topics.Count);
             Assert.AreEqual(9, e.Text.Count);
         }
@@ -46,8 +46,8 @@ namespace galdevtool.Test
             Assert.AreEqual(0, e.Tags.Count);
             Assert.AreEqual("", e.Twitter);
             Assert.AreEqual("", e.Twitterimage);
-            Assert.AreEqual("", e.Facebook);
-            Assert.AreEqual("", e.Facebookimage);
+            Assert.AreEqual("", e.Post);
+            Assert.AreEqual("", e.Postimage);
             Assert.AreEqual(0, e.Topics.Count);
             Assert.AreEqual(0, e.Text.Count);
         }
@@ -69,8 +69,8 @@ namespace galdevtool.Test
             Assert.AreEqual(0, e.Tags.Count);
             Assert.AreEqual("", e.Twitter);
             Assert.AreEqual("", e.Twitterimage);
-            Assert.AreEqual("", e.Facebook);
-            Assert.AreEqual("", e.Facebookimage);
+            Assert.AreEqual("", e.Post);
+            Assert.AreEqual("", e.Postimage);
             Assert.AreEqual(0, e.Topics.Count);
             Assert.AreEqual(1, e.Text.Count);
             Assert.AreEqual("Fast die Hälfte davon arbeitet an SCALE, im Erdorbit, auf dem Mond und am L1 Lagrange-Punkt.", e.Text[0]);
@@ -93,8 +93,8 @@ namespace galdevtool.Test
             Assert.AreEqual(0, e.Tags.Count);
             Assert.AreEqual("", e.Twitter);
             Assert.AreEqual("", e.Twitterimage);
-            Assert.AreEqual("", e.Facebook);
-            Assert.AreEqual("", e.Facebookimage);
+            Assert.AreEqual("", e.Post);
+            Assert.AreEqual("", e.Postimage);
             Assert.AreEqual("technology", e.Topics[0]);
             Assert.AreEqual(3, e.Text.Count);
             Assert.AreEqual("Während der traditionelle Ansatz auf Rechenknoten und Datenpaketen basierte, führt der wachsende Einsatz von Eter-Technologien zu einer weitgehend delokalisierten und kollektiven Leistungserbringung.".Replace("'", "\""), e.Text[0]);

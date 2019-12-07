@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace galdevtool
 {
     public class Bigfile2Yaml
     {
         public ICallbackLogger Log { get; set; } = new NullCallbackLogger();
+        public ICallbackConfig Config { get; set; } = new MemoryCallbackConfig();
+
+        public string InputFilePath => (string)Config.Get(nameof(AppConfig.BigfilePath), "");
+        public string OutputFolderPath => (string)Config.Get(nameof(AppConfig.YamlFolderPath), "");
+        public string InputImageFolderPath => (string)Config.Get(nameof(AppConfig.ImagePath), "");
+        public string InputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.SnImagePath), "");
 
         public string Read(string inputFile)
         {
@@ -16,12 +21,12 @@ namespace galdevtool
             return data;
         }
 
-        public void Convert(string inputFile, string outputFolder)
+        public void Convert()
         {
             Log.Info("");
-            var data = Read(inputFile);
+            var data = Read(InputFilePath);
             var entries = Analyse(data);
-            Write(entries, outputFolder);
+            Write(entries, OutputFolderPath, InputFilePath, InputPostImageFolderPath);
         }
 
         public List<TimelineEntry> Analyse(string data)
@@ -102,7 +107,7 @@ namespace galdevtool
                                                 {
                                                     x = x.Substring(0, pos).Trim();
                                                 }
-                                                e.Facebook = x;
+                                                e.Post = x;
                                             }
                                         }
                                         else
@@ -113,7 +118,7 @@ namespace galdevtool
                                             {
                                                 x = x.Substring(0, pos).Trim();
                                             }
-                                            e.Facebook = x;
+                                            e.Post = x;
                                         }
                                         if (fbParts.Length == 3)
                                         {
@@ -128,7 +133,7 @@ namespace galdevtool
                                     }
                                     break;
                                 case "facebookimage":
-                                    e.Facebookimage = value;
+                                    e.Postimage = value;
                                     break;
                                 case "topic":
                                     e.Topics = value.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToList();
@@ -147,9 +152,12 @@ namespace galdevtool
             return timeline;
         }
 
-        public void Write(List<TimelineEntry> entries, string outputFolder)
+        public void Write(List<TimelineEntry> entries, string outputFolder, string imgFolder, string snImgFolder)
         {
-            var index = @"images: ./images/
+            var outImgFolder = "images";
+            Directory.CreateDirectory(Path.Combine(outputFolder, outImgFolder));
+
+            var index = @"images: ./{outImgFolder}/
 topics:
   accident: Unfälle und Havarien
   adventure: Abenteuer
@@ -225,6 +233,48 @@ timeline:
                 }
                 index += $"  - {indexLabel}: {name}\r\n";
 
+                if (!string.IsNullOrEmpty(e.Image))
+                {
+                    var src = Path.Combine(imgFolder, e.Image);
+                    var dst = Path.Combine(outputFolder, outImgFolder, e.Image);
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst);
+                    }
+                    else
+                    {
+                        e.Image = "";
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(e.Twitterimage))
+                {
+                    var src = Path.Combine(snImgFolder, e.Twitterimage);
+                    var dst = Path.Combine(outputFolder, outImgFolder, e.Twitterimage);
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst, true);
+                    }
+                    else
+                    {
+                        e.Twitterimage = "";
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(e.Postimage))
+                {
+                    var src = Path.Combine(snImgFolder, e.Postimage);
+                    var dst = Path.Combine(outputFolder, outImgFolder, e.Postimage);
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst, true);
+                    }
+                    else
+                    {
+                        e.Postimage = "";
+                    }
+                }
+
                 var entry = $@"year: {e.Year}
 title: {e.Title}
 short: {e.Short}
@@ -234,12 +284,12 @@ image: {e.Image}
 smallimage: {e.Smallimage}
 tags: 
 {string.Join("\r\n", e.Tags.Select(x => "  - " + x))}
-twitter: {e.Twitter}
-twitterimage: {e.Twitterimage}
-facebook: {e.Facebook}
-facebookimage: {e.Facebookimage}
+post: {e.Post}
+postimage: {e.Postimage}
 topics: 
 {string.Join("\r\n", e.Topics.Select(x => "  - " + x))}
+twitter: {e.Twitter}
+twitterimage: {e.Twitterimage}
 text: |
 {string.Join("\r\n", e.Text.Select(x => "  " + x))}
 ";

@@ -39,8 +39,9 @@ namespace galdevtool
                 {
                     if (Config.Bigfile2Yaml)
                     {
-                        new Bigfile2Yaml() { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)) }
-                        .Convert(Config.BigfilePath, Config.YamlFolderPath);
+                        new Bigfile2Yaml() 
+                        { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)), Config = this.Config }
+                        .Convert();
                     }
                 }
                 catch (Exception ex)

@@ -27,8 +27,10 @@ namespace galdevtool
 
         public int TestInt { get; set; } = 42;
 
-        public string BigfilePath { get; set; } = "./data2.txt";
-        public string YamlFolderPath { get; set; } = "./yaml";
+        public string BigfilePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\history\data2.txt";
+        public string ImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
+        public string SnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
+        public string YamlFolderPath { get; set; } = @"C:\Users\wolf\AppData\Local\Temp\yaml";
 
         public static string[] HiddenKeys { get; set; } = {
             nameof(AppConfig.TestInt),
