@@ -15,18 +15,18 @@ namespace galdevtool
         public string InputImageFolderPath => (string)Config.Get(nameof(AppConfig.ImagePath), "");
         public string InputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.SnImagePath), "");
 
-        public string Read(string inputFile)
-        {
-            var data = File.ReadAllText(inputFile);
-            return data;
-        }
-
         public void Convert()
         {
             Log.Info("");
             var data = Read(InputFilePath);
             var entries = Analyse(data);
             Write(entries, OutputFolderPath, InputImageFolderPath, InputPostImageFolderPath);
+        }
+
+        public string Read(string inputFile)
+        {
+            var data = File.ReadAllText(inputFile);
+            return data;
         }
 
         public List<TimelineEntry> Analyse(string data)
