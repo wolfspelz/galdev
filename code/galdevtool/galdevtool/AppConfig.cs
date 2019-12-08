@@ -21,6 +21,7 @@ namespace galdevtool
 
         public bool ShowHelp { get; set; } = false;
         public bool Bigfile2Yaml { get; set; } = false;
+        public bool Yaml2Bigfile { get; set; } = false;
 
         public string LogLevels { get; set; } = "Error,Warning";
         public string LogFile { get; set; } = "%TEMP%galdevtool.log";
@@ -96,6 +97,9 @@ namespace galdevtool
                         break;
                     case "Bigfile2Yaml":
                         Bigfile2Yaml = true;
+                        break;
+                    case "Yaml2Bigfile":
+                        Yaml2Bigfile = true;
                         break;
                     default:
                         var kv = arg.Split(new[] { '=' }, 2);
