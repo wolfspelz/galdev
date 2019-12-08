@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace galdevtool
 {
@@ -28,10 +26,39 @@ namespace galdevtool
 
             foreach (var file in Directory.EnumerateFiles(inputFolder, "*.yaml", SearchOption.TopDirectoryOnly))
             {
+                Log.Info(Path.GetFileName(file));
                 if (!file.Contains("_")) continue;
                 var data = File.ReadAllText(file);
-                var deserializer = new YamlDotNet.Serialization.Deserializer();
-                var dict = deserializer.Deserialize<Dictionary<string, string>>(data);
+
+                //var yaml = new SharpYaml.Serialization.Serializer().Deserialize(data);
+
+                //var deserializer = new YamlDotNet.Serialization.Deserializer();
+                //var dict = deserializer.Deserialize<Dictionary<string, string>>(data);
+
+                var e = new TimelineEntry();
+                //foreach (var pair in dict)
+                //{
+                //    switch (pair.Key)
+                //    {
+                //        case "name": e.Name = pair.Value; break;
+                //        case "year": e.Year = pair.Value; break;
+                //        case "title": e.Title = pair.Value; break;
+                //        case "short": e.Short = pair.Value; break;
+                //        case "summary": e.Summary = pair.Value; break;
+                //        case "image": e.Image = pair.Value; break;
+                //        case "headline": e.Headline = pair.Value; break;
+                //        case "smallimage": e.Smallimage = pair.Value; break;
+                //        case "post": e.Post = pair.Value; break;
+                //        case "postimage": e.Postimage = pair.Value; break;
+                //        case "twitter": e.Twitter = pair.Value; break;
+                //        case "twitterimage": e.Twitterimage = pair.Value; break;
+                //        case "facebook": e.Facebook = pair.Value; break;
+                //        case "facebookimage": e.Facebookimage = pair.Value; break;
+                //        //case "tags": e.Tags = pair.Value.Select; break;
+                //        //case "topics": e.Topics = pair.Value; break;
+                //        //case "text": e.Text = pair.Value; break;
+                //    }
+                //}
             }
 
             return timeline;
