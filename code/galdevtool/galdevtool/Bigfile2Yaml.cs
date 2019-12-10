@@ -116,6 +116,8 @@ namespace galdevtool
                                         }
                                         if (fbParts.Length == 3)
                                         {
+                                            e.Facebook2 = fbParts[1].Trim();
+                                            e.Facebook3 = fbParts[2].Trim();
                                             var x = fbParts[2].Trim();
                                             var pos = x.ToLower().IndexOf("weiter");
                                             if (pos > 0)
@@ -290,8 +292,8 @@ topics:
 
                 var entry = "";
                 if (!string.IsNullOrEmpty(e.Name)) { entry += $"name: {e.Name}\r\n"; }
-                entry += $"year: {e.Year}\r\n";
-                entry += $"title: {e.Title}\r\n";
+                entry += $"year: {EscapeYamlValue(e.Year)}\r\n";
+                entry += $"title: {EscapeYamlValue(e.Title)}\r\n";
                 if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {EscapeYamlValue(e.Short)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {EscapeYamlValue(e.Summary)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {EscapeYamlValue(e.Image)}\r\n"; }
@@ -302,12 +304,17 @@ topics:
                 if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {EscapeYamlValue(e.Twitter)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {EscapeYamlValue(e.Twitterimage)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {EscapeYamlValue(e.Facebook)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"facebook2: {EscapeYamlValue(e.Facebook2)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"facebook3: {EscapeYamlValue(e.Facebook3)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {EscapeYamlValue(e.Facebookimage)}\r\n"; }
                 if (e.Tags.Count > 0) { entry += $"tags: [{string.Join(", ", e.Tags.Select(x => EscapeYamlValue(x)))}]\r\n"; }
                 if (e.Topics.Count > 0) { entry += $"topics: [{string.Join(", ", e.Topics.Select(x => EscapeYamlValue(x)))}]\r\n"; }
                 if (e.Text.Count > 0) { entry += $"text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
-                File.WriteAllText(Path.Combine(outputFolder, file + ".yaml"), entry);
+                var outputFilePath = Path.Combine(outputFolder, file + ".yaml");
+                Log.Info(Path.GetFileName(outputFilePath));
+
+                File.WriteAllText(outputFilePath, entry);
             }
 
             File.WriteAllText(Path.Combine(outputFolder, "config.yaml"), config);

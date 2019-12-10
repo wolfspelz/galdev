@@ -34,7 +34,7 @@ namespace galdevtool
         public string Bigfile2YamlYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
 
         public string Yaml2BigfileYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
-        public string Yaml2BigfileFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back";
+        public string Yaml2BigfileFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\data2-out.txt";
         public string Yaml2BigfileImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
         public string Yaml2BigfileSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
 
