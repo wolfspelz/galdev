@@ -2,7 +2,7 @@
   "profiles": {
     "galdevtool": {
       "commandName": "Project",
-      "commandLineArgs": "Yaml2Bigfile"
+      "commandLineArgs": "Bigfile2Yaml xYaml2Bigfile"
     }
   }
 }
