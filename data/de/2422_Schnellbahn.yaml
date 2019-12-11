@@ -1,18 +1,19 @@
+name: Schnellbahn
 year: 2422
 title: Eröffnung der Jupiter-Saturn Schnellbahn
-short: Die Schnellbahn ist eine Serie von elektromagnetischen Katapulten. Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen... (
-headline: Railgun für Container - Vom Jupiter zum Saturn in einer Woche http://jmp1.de/h
-post: 2422
+short: Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen...
+image: Schnellbahn.jpg
+headline: "Railgun für Container: Vom Jupiter zum Saturn in einer Woche"
+post: "2422 Eröffnung der Jupiter-Saturn Schnellbahn. Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen... weiter: http://jmp1.de/h2422"
 postimage: Schnellbahn-snpost.jpg
-twitter: 2422 Eröffnung der Jupiter-Saturn Schnellbahn, eine Serie von E/M-Katapulten.. http://jmp1.de/h2422 #Railgun #scifi
+twitter: "2422 Eröffnung der Jupiter-Saturn Schnellbahn, eine Serie von E/M-Katapulten.. http://jmp1.de/h2422 #Railgun #scifi"
 twitterimage: Schnellbahn-snpost.jpg
-facebook: 2422
+facebook: "2422 Eröffnung der Jupiter-Saturn Schnellbahn. Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen... weiter: http://jmp1.de/h2422"
+facebook2: 2422 Eröffnung der Jupiter-Saturn Schnellbahn
+facebook3: "Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen... weiter: http://jmp1.de/h2422"
 facebookimage: Schnellbahn-snpost.jpg
-tags:
-  - Schnellbahn.jpg
-topics:
-  - spaceflight
-  - technology
+tags: [Katapult, elektromagnetisch, Railgun, Coilgun, Saturn, Jupiter]
+topics: [spaceflight, technology]
 text: |
   Die Schnellbahn ist eine Serie von elektromagnetischen Katapulten. Die Strecke geht von einer Station im Jupiterorbit nach Titan. Sie verkürzt die Transportzeit zwischen Jupiter und Saturn auf 3-10 Wochen. Im Gegensatz zu ÜL-Frachtern, ist die Schnellbahn auch für Massengüter geeignet.
   Die Endstücke bei Jupiter und Saturn bestehen jeweils aus einer Sequenz von ringförmigen Beschleunigern. Die Beschleunigungs- und Bremsstrecken sind mehrere Millionen Kilometer lang. So weit reichen die Katapulte in den interplanetaren Raum.

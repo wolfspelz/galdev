@@ -1,7 +1,5 @@
 year: 2716
 title: Entdeckung der Transmittertore von Desanter
-topics:
-  - discovery
-  - wonder
+topics: [discovery, wonder]
 text: |
   Die Tore verbinden mehrere Planeten in der stellaren Umgebung von Desanter miteinander. Die Wirkungsweise der Tore bleibt trotz intensiver Forschung unbekannt.

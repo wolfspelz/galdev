@@ -1,7 +1,6 @@
 year: 2162
 title: Erste Austragung der modernen Nano-Wars
-topics:
-  - ai
+topics: [ai]
 text: |
   Nano-Wars sind ein Wettbewerb von selbständig kämpfenden Minirobotern in verschiedenen Klassen von 100 Nanometern bis zu 100 Mikrometern.
   Diese Mikromaschinen sind die Vorläufer der Naniten im späteren Nano-Fog der Caves und in Nanokomplexen. Die Leistungsfähigkeit ist aber noch sehr beschränkt was den Energiebedarf, Mobilität und Steuerung betrifft.

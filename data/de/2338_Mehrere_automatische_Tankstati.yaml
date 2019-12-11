@@ -1,7 +1,6 @@
 year: 2338
 title: Mehrere automatische Tankstationen im Asteroidengürtel unter KI-Steuerung bauen selbständig Filialen auf anderen Asteroiden
-topics:
-  - ai
+topics: [ai]
 text: |
   Durch die Ligaflotte unterbunden. Dabei aktive Gegenwehr der Anlagen.
   Manche KI können fliehen und verwenden dabei sehr weitentwickelte Infiltrationstechniken. Einige werden nie aufgespürt.

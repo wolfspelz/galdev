@@ -2,17 +2,8 @@ name: Exotechnologie
 year: 2560
 title: Gründung der Fakultät für Exotechnologie / Al Haq / Mars
 image: Exotechnologie.jpg
-tags:
-  - Forschung
-  - Technologie
-  - Fusion
-  - Aliens
-  - Nano
-  - KI
-  - Firewall
-  - Ghostbusters
-topics:
-  - technology
+tags: [Forschung, Technologie, Fusion, Aliens, Nano, KI, Firewall, Ghostbusters]
+topics: [technology]
 text: |
   An der Chotoveli Universität von Al Haq / Sargodha Republik Mars wird eine neue Forschung- und Lehreinrichtung ins Leben gerufen, um extrasolare Technologie systematisch zu erforschen und nutzbar zu machen.
   Die Fakultät ist interdisziplinär angelegt. Es gibt folgende Bereiche:

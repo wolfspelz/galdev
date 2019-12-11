@@ -2,26 +2,8 @@ name: Omikron
 year: 2349
 title: Omikron-Ereignis
 image: Omikron.jpg
-tags:
-  - Ekliptik
-  - Fusionsfackel
-  - Gammastrahlung
-  - interplanetar
-  - Jupiter
-  - Kommunikation
-  - Kuipergürtel
-  - Mikrowellenhintergrund
-  - Neptun
-  - Prospektor
-  - Saturn
-  - Sonnensystem
-  - Sternbild
-  - Trojaner
-  - Uranus
-  - Wasserstoff
-topics:
-  - science
-  - wonder
+tags: [Ekliptik, Fusionsfackel, Gammastrahlung, interplanetar, Jupiter, Kommunikation, Kuipergürtel, Mikrowellenhintergrund, Neptun, Prospektor, Saturn, Sonnensystem, Sternbild, Trojaner, Uranus, Wasserstoff]
+topics: [science, wonder]
 text: |
   Ein fremdes Objekt durchquert das Sonnensystem.
   Das Objekt ist 250.000 Kilometer groß, viel größer als Jupiter. Aber es scheint immateriell zu sein. Jedenfalls übt es keine messbare Gravitation aus. Das Objekt durchquert das Sonnensystem auf Höhe der Saturnbahn mit einer Geschwindigkeit von 370 km/s. Sein Kurs ist absolut linear ohne gravitative Einflüsse. Es gibt keine Kommunikation, nur einen Rendezvous-Versuch durch einen Fusionsfackel-Prospektor. Das Objekt verschwindet nach vier Monaten wieder im interstellaren Raum.

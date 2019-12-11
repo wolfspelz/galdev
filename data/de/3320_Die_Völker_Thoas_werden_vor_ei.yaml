@@ -1,7 +1,6 @@
 year: 3320
 title: Die Völker Thoas werden vor einer planetenweiten Eiszeit gerettet
-topics:
-  - ecology
+topics: [ecology]
 text: |
   Auf Thoa leben mehrere steinzeitliche Völker, die biologisch verwandt, aber nicht kompatibel sind.
   Seit Jahrhunderten wird das globale Klima kälter, erst sehr langsam, aber im letzten Jahrhundert immer schneller. Mehrere langfristige Schwankungszyklen mit verschiedenen Frequenzen überlagern sich so, dass in geologisch kurzer Zeit eine deutliche Abkühlung stattfindet.
