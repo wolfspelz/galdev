@@ -246,7 +246,7 @@ topics:
                 }
 
                 var suffix = "acfilortux";
-                file = e.Year + (years[e.Year] == 0? "" : "" + suffix[years[e.Year]]) + "_" + file;
+                file = e.Year + (years[e.Year] == 0 ? "" : "" + suffix[years[e.Year]]) + "_" + file;
 
                 if (!string.IsNullOrEmpty(e.Image))
                 {
@@ -254,7 +254,7 @@ topics:
                     var dst = Path.Combine(outputFolder, outImgFolder, e.Image);
                     if (File.Exists(src))
                     {
-                        File.Copy(src, dst);
+                        File.Copy(src, dst, overwrite: true);
                     }
                     else
                     {
@@ -268,7 +268,7 @@ topics:
                     var dst = Path.Combine(outputFolder, outImgFolder, e.Facebookimage);
                     if (File.Exists(src))
                     {
-                        File.Copy(src, dst, true);
+                        File.Copy(src, dst, overwrite: true);
                     }
                     else
                     {
@@ -282,7 +282,7 @@ topics:
                     var dst = Path.Combine(outputFolder, outImgFolder, e.Twitterimage);
                     if (File.Exists(src))
                     {
-                        File.Copy(src, dst, true);
+                        File.Copy(src, dst, overwrite: true);
                     }
                     else
                     {
@@ -292,23 +292,23 @@ topics:
 
                 var entry = "";
                 if (!string.IsNullOrEmpty(e.Name)) { entry += $"name: {e.Name}\r\n"; }
-                entry += $"year: {EscapeYamlValue(e.Year)}\r\n";
-                entry += $"title: {EscapeYamlValue(e.Title)}\r\n";
-                if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {EscapeYamlValue(e.Short)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {EscapeYamlValue(e.Summary)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {EscapeYamlValue(e.Image)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {EscapeYamlValue(e.Headline)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"smallimage: {EscapeYamlValue(e.Smallimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {EscapeYamlValue(e.Post)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {EscapeYamlValue(e.Postimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {EscapeYamlValue(e.Twitter)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {EscapeYamlValue(e.Twitterimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {EscapeYamlValue(e.Facebook)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"facebook2: {EscapeYamlValue(e.Facebook2)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"facebook3: {EscapeYamlValue(e.Facebook3)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {EscapeYamlValue(e.Facebookimage)}\r\n"; }
-                if (e.Tags.Count > 0) { entry += $"tags: [{string.Join(", ", e.Tags.Select(x => EscapeYamlValue(x)))}]\r\n"; }
-                if (e.Topics.Count > 0) { entry += $"topics: [{string.Join(", ", e.Topics.Select(x => EscapeYamlValue(x)))}]\r\n"; }
+                entry += $"year: {YamlValue(e.Year)}\r\n";
+                entry += $"title: {YamlValue(e.Title)}\r\n";
+                if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {YamlValue(e.Short)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {YamlValue(e.Summary)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {YamlValue(e.Image)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {YamlValue(e.Headline)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"smallimage: {YamlValue(e.Smallimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {YamlValue(e.Post)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {YamlValue(e.Postimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {YamlValue(e.Twitter)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {YamlValue(e.Twitterimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {YamlValue(e.Facebook)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"facebook2: {YamlValue(e.Facebook2)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"facebook3: {YamlValue(e.Facebook3)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {YamlValue(e.Facebookimage)}\r\n"; }
+                if (e.Tags.Count > 0) { entry += $"tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
+                if (e.Topics.Count > 0) { entry += $"topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
                 if (e.Text.Count > 0) { entry += $"text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
                 var outputFilePath = Path.Combine(outputFolder, file + ".yaml");
@@ -320,13 +320,27 @@ topics:
             File.WriteAllText(Path.Combine(outputFolder, "config.yaml"), config);
         }
 
-        public string EscapeYamlValue(string value)
+        public string YamlValue(string value)
         {
-            if (value.Contains(": "))
+            if (value.Contains(": ") || value.Contains(" #"))
             {
-                return "\"" + value.Replace("\"", "\\\"") + "\"";
+                return WrapValue(value);
             }
             return value;
+        }
+
+        public string WrapValue(string value)
+        {
+            var quote = "\"";
+            if (value.Contains(quote))
+            {
+                quote = "'";
+            }
+            if (value.Contains(quote))
+            {
+                quote = "\"";
+            }
+            return quote + value.Replace(quote, "\\" + quote) + quote;
         }
     }
 }

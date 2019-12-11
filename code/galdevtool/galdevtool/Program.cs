@@ -44,7 +44,7 @@ namespace galdevtool
                         { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)), Config = this.Config }
                         .Convert();
                     }
-                    else if (Config.Yaml2Bigfile)
+                    if (Config.Yaml2Bigfile)
                     {
                         new Yaml2Bigfile()
                         { Log = new GlobalCallbackLogger(nameof(Yaml2Bigfile)), Config = this.Config }

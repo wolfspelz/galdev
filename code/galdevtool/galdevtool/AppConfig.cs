@@ -28,7 +28,7 @@ namespace galdevtool
 
         public int TestInt { get; set; } = 42;
 
-        public string Bigfile2YamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\orig\data2.txt";
+        public string Bigfile2YamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\orig\data2-in.txt";
         public string Bigfile2YamlImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
         public string Bigfile2YamlSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
         public string Bigfile2YamlYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";

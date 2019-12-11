@@ -87,7 +87,7 @@ namespace galdevtool
                 if (e.Tags.Count > 0)
                 {
                     sb.Append(" | tags=");
-                    sb.Append(string.Join(" ", e.Text.Select(x => "#" + x)));
+                    sb.Append(string.Join(" ", e.Tags.Select(x => "#" + x)));
                 }
                 if (!string.IsNullOrEmpty(e.Image))
                 {
