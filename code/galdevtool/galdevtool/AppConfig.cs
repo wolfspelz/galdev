@@ -21,16 +21,22 @@ namespace galdevtool
 
         public bool ShowHelp { get; set; } = false;
         public bool Bigfile2Yaml { get; set; } = false;
+        public bool Yaml2Bigfile { get; set; } = false;
 
         public string LogLevels { get; set; } = "Error,Warning";
         public string LogFile { get; set; } = "%TEMP%galdevtool.log";
 
         public int TestInt { get; set; } = 42;
 
-        public string BigfilePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\history\data2.txt";
-        public string ImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
-        public string SnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
-        public string YamlFolderPath { get; set; } = @"C:\Users\wolf\AppData\Local\Temp\yaml";
+        public string Bigfile2YamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\orig\data2-in.txt";
+        public string Bigfile2YamlImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
+        public string Bigfile2YamlSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
+        public string Bigfile2YamlYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
+
+        public string Yaml2BigfileYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
+        public string Yaml2BigfileFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\data2-out.txt";
+        public string Yaml2BigfileImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
+        public string Yaml2BigfileSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
 
         public static string[] HiddenKeys { get; set; } = {
             nameof(AppConfig.TestInt),
@@ -96,6 +102,9 @@ namespace galdevtool
                         break;
                     case "Bigfile2Yaml":
                         Bigfile2Yaml = true;
+                        break;
+                    case "Yaml2Bigfile":
+                        Yaml2Bigfile = true;
                         break;
                     default:
                         var kv = arg.Split(new[] { '=' }, 2);

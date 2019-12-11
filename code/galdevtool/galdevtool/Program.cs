@@ -14,7 +14,7 @@ namespace galdevtool
             var program = new Program();
             program.Run();
 
-//            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         private void Run()
@@ -37,10 +37,17 @@ namespace galdevtool
             {
                 try
                 {
+                    if (false) { } else 
                     if (Config.Bigfile2Yaml)
                     {
-                        new Bigfile2Yaml() 
+                        new Bigfile2Yaml()
                         { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)), Config = this.Config }
+                        .Convert();
+                    }
+                    if (Config.Yaml2Bigfile)
+                    {
+                        new Yaml2Bigfile()
+                        { Log = new GlobalCallbackLogger(nameof(Yaml2Bigfile)), Config = this.Config }
                         .Convert();
                     }
                 }
