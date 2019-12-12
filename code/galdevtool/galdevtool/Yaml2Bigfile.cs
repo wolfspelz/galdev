@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,16 +11,17 @@ namespace galdevtool
         public ICallbackLogger Log { get; set; } = new NullCallbackLogger();
         public ICallbackConfig Config { get; set; } = new MemoryCallbackConfig();
 
-        public string InputFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileYamlFolderPath), "");
-        public string OutputFilePath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileFilePath), "");
-        public string OutputImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileImagePath), "");
-        public string OutputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileSnImagePath), "");
+        public string InputFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileInputFolderPath), "");
+        public string OutputFilePath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputYamlFilePath), "");
+        public string OutputImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputImagePath), "");
+        public string OutputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputSnImagePath), "");
+        public string YamlImageFolderName => (string)Config.Get(nameof(AppConfig.YamlImageFolderName), "");
 
         public void Convert()
         {
             Log.Info("");
             var entries = Read(InputFolderPath);
-            Write(entries, OutputFilePath, OutputImageFolderPath, OutputPostImageFolderPath);
+            Write(entries, OutputFilePath, Path.Combine(InputFolderPath, YamlImageFolderName), OutputImageFolderPath, OutputPostImageFolderPath);
         }
 
         public List<TimelineEntry> Read(string inputFolder)
@@ -40,7 +42,7 @@ namespace galdevtool
                 var e = new TimelineEntry();
                 foreach (var pair in dict)
                 {
-                    switch (pair.Key)
+                    switch (pair.Key.ToLower())
                     {
                         case "name": e.Name = (string)pair.Value; break;
                         case "year": e.Year = (string)pair.Value; break;
@@ -48,8 +50,8 @@ namespace galdevtool
                         case "short": e.Short = (string)pair.Value; break;
                         case "summary": e.Summary = (string)pair.Value; break;
                         case "image": e.Image = (string)pair.Value; break;
-                        case "headline": e.Headline = (string)pair.Value; break;
                         case "smallimage": e.Smallimage = (string)pair.Value; break;
+                        case "headline": e.Headline = (string)pair.Value; break;
                         case "post": e.Post = (string)pair.Value; break;
                         case "postimage": e.Postimage = (string)pair.Value; break;
                         case "twitter": e.Twitter = (string)pair.Value; break;
@@ -60,7 +62,7 @@ namespace galdevtool
                         case "facebookimage": e.Facebookimage = (string)pair.Value; break;
                         case "tags": e.Tags = ((List<object>)pair.Value).Select(o => (string)o).ToList(); break;
                         case "topics": e.Topics = ((List<object>)pair.Value).Select(o => (string)o).ToList(); break;
-                        case "text": e.Text = ((string)pair.Value).Replace("\r\n", "\n").Split(new char[] { '\n'}).ToList(); break;
+                        case "text": e.Text = ((string)pair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
                     }
                 }
                 timeline.Add(e);
@@ -69,7 +71,7 @@ namespace galdevtool
             return timeline;
         }
 
-        public void Write(List<TimelineEntry> entries, string outputFile, string imgFolder, string snImgFolder)
+        public void Write(List<TimelineEntry> entries, string outputFile, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
         {
             var sb = new StringBuilder();
 
@@ -93,6 +95,11 @@ namespace galdevtool
                 {
                     sb.Append(" | image=");
                     sb.Append(e.Image);
+                }
+                if (!string.IsNullOrEmpty(e.Smallimage))
+                {
+                    sb.Append(" | smallimage=");
+                    sb.Append(e.Smallimage);
                 }
                 if (!string.IsNullOrEmpty(e.Twitter))
                 {
@@ -135,10 +142,56 @@ namespace galdevtool
                     sb.Append(string.Join(",", e.Topics));
                 }
                 sb.Append("\r\n");
+
+                if (!string.IsNullOrEmpty(e.Image))
+                {
+                    var src = Path.Combine(inputImgFolder, e.Image);
+                    var dst = Path.Combine(OutputImageFolderPath, e.Image);
+                    CopyFile(src, dst);
+                }
+
+                if (!string.IsNullOrEmpty(e.Smallimage))
+                {
+                    var src = Path.Combine(inputImgFolder, e.Smallimage);
+                    var dst = Path.Combine(OutputImageFolderPath, e.Smallimage);
+                    CopyFile(src, dst);
+                }
+
+                if (!string.IsNullOrEmpty(e.Twitterimage))
+                {
+                    var src = Path.Combine(inputImgFolder, e.Twitterimage);
+                    var dst = Path.Combine(OutputPostImageFolderPath, e.Twitterimage);
+                    CopyFile(src, dst);
+                }
+
+                if (!string.IsNullOrEmpty(e.Facebookimage))
+                {
+                    var src = Path.Combine(inputImgFolder, e.Facebookimage);
+                    var dst = Path.Combine(OutputPostImageFolderPath, e.Facebookimage);
+                    CopyFile(src, dst);
+                }
             }
 
             File.WriteAllText(outputFile, sb.ToString());
         }
 
+        private static void CopyFile(string src, string dst)
+        {
+            if (File.Exists(src))
+            {
+                PrepareFolder(Path.GetDirectoryName(dst), 0);
+                File.Copy(src, dst, overwrite: true);
+            }
+        }
+
+        private static void PrepareFolder(string path, int recursion)
+        {
+            if (recursion > 1) return;
+            if (!Directory.Exists(path))
+            {
+                PrepareFolder(Path.GetDirectoryName(path), recursion + 1);
+                Directory.CreateDirectory(path);
+            }
+        }
     }
 }

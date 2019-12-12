@@ -28,15 +28,17 @@ namespace galdevtool
 
         public int TestInt { get; set; } = 42;
 
-        public string Bigfile2YamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\orig\data2-in.txt";
-        public string Bigfile2YamlImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
-        public string Bigfile2YamlSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
-        public string Bigfile2YamlYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
+        public string Bigfile2YamlInputYamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\orig\data2-in.txt";
+        public string Bigfile2YamlInputImageFolderPath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
+        public string Bigfile2YamlInputSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
+        public string Bigfile2YamlOutputFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
 
-        public string Yaml2BigfileYamlFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
-        public string Yaml2BigfileFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\data2-out.txt";
-        public string Yaml2BigfileImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images";
-        public string Yaml2BigfileSnImagePath { get; set; } = @"C:\Heiner\wolfspelz-www.galactic-developments.de\images\post";
+        public string Yaml2BigfileInputFolderPath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\yaml";
+        public string Yaml2BigfileOutputYamlFilePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\data2-out.txt";
+        public string Yaml2BigfileOutputImagePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\images";
+        public string Yaml2BigfileOutputSnImagePath { get; set; } = @"C:\Heiner\github-galdev\code\galdevtool\tmp\back\images\post";
+
+        public string YamlImageFolderName { get; set; } = @"images";
 
         public static string[] HiddenKeys { get; set; } = {
             nameof(AppConfig.TestInt),
