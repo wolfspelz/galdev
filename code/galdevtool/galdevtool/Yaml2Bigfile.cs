@@ -20,22 +20,33 @@ namespace galdevtool
         public void Convert()
         {
             Log.Info("");
-            var entries = Read(InputFolderPath);
-            Write(entries, OutputFilePath, Path.Combine(InputFolderPath, YamlImageFolderName), OutputImageFolderPath, OutputPostImageFolderPath);
+            var inputFiles = Read(InputFolderPath);
+            var entries = ProcessInput(inputFiles);
+            (var fileData, var copyFiles) = ProcessOutput(entries, Path.Combine(InputFolderPath, YamlImageFolderName), OutputImageFolderPath, OutputPostImageFolderPath);
+            Write(fileData, OutputFilePath, copyFiles);
         }
 
-        public List<TimelineEntry> Read(string inputFolder)
+        public List<string> Read(string inputFolder)
         {
-            var timeline = new List<TimelineEntry>();
+            var listOfYamlData = new List<string>();
 
             foreach (var file in Directory.EnumerateFiles(inputFolder, "*.yaml", SearchOption.TopDirectoryOnly).OrderBy(x => x))
             {
                 Log.Info(Path.GetFileName(file));
                 if (!file.Contains("_")) continue;
-                var data = File.ReadAllText(file);
+                var yaml = File.ReadAllText(file);
+                listOfYamlData.Add(yaml);
+            }
 
-                //var yaml = new SharpYaml.Serialization.Serializer().Deserialize(data);
+            return listOfYamlData;
+        }
 
+        private List<TimelineEntry> ProcessInput(List<string> inputData)
+        {
+            var timeline = new List<TimelineEntry>();
+
+            foreach (var data in inputData)
+            {
                 var deserializer = new YamlDotNet.Serialization.Deserializer();
                 var dict = deserializer.Deserialize<Dictionary<string, object>>(data);
 
@@ -71,9 +82,10 @@ namespace galdevtool
             return timeline;
         }
 
-        public void Write(List<TimelineEntry> entries, string outputFile, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
+        private (string yaml, Dictionary<string, string>) ProcessOutput(List<TimelineEntry> entries, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
         {
             var sb = new StringBuilder();
+            var copyFiles = new Dictionary<string, string>();
 
             foreach (var e in entries)
             {
@@ -147,49 +159,61 @@ namespace galdevtool
                 {
                     var src = Path.Combine(inputImgFolder, e.Image);
                     var dst = Path.Combine(OutputImageFolderPath, e.Image);
-                    CopyFile(src, dst);
+                    copyFiles[src] = dst;
                 }
 
                 if (!string.IsNullOrEmpty(e.Smallimage))
                 {
                     var src = Path.Combine(inputImgFolder, e.Smallimage);
                     var dst = Path.Combine(OutputImageFolderPath, e.Smallimage);
-                    CopyFile(src, dst);
+                    copyFiles[src] = dst;
                 }
 
                 if (!string.IsNullOrEmpty(e.Twitterimage))
                 {
                     var src = Path.Combine(inputImgFolder, e.Twitterimage);
                     var dst = Path.Combine(OutputPostImageFolderPath, e.Twitterimage);
-                    CopyFile(src, dst);
+                    copyFiles[src] = dst;
                 }
 
                 if (!string.IsNullOrEmpty(e.Facebookimage))
                 {
                     var src = Path.Combine(inputImgFolder, e.Facebookimage);
                     var dst = Path.Combine(OutputPostImageFolderPath, e.Facebookimage);
-                    CopyFile(src, dst);
+                    copyFiles[src] = dst;
                 }
             }
 
-            File.WriteAllText(outputFile, sb.ToString());
+            return (sb.ToString(), copyFiles);
+        }
+
+        private void Write(string data, string outputFilePath, Dictionary<string, string> copyFiles)
+        {
+            Log.Info($"Write {outputFilePath}");
+            File.WriteAllText(outputFilePath, data);
+
+            foreach (var pair in copyFiles)
+            {
+                Log.Info($"Copy {Path.GetFileName(pair.Value)}");
+                CopyFile(pair.Key, pair.Value);
+            }
         }
 
         private static void CopyFile(string src, string dst)
         {
             if (File.Exists(src))
             {
-                PrepareFolder(Path.GetDirectoryName(dst), 0);
+                PrepareFolder(Path.GetDirectoryName(dst));
                 File.Copy(src, dst, overwrite: true);
             }
         }
 
-        private static void PrepareFolder(string path, int recursion)
+        private static void PrepareFolder(string path, int depth = 1)
         {
-            if (recursion > 1) return;
+            if (depth > 2) return;
             if (!Directory.Exists(path))
             {
-                PrepareFolder(Path.GetDirectoryName(path), recursion + 1);
+                PrepareFolder(Path.GetDirectoryName(path), depth + 1);
                 Directory.CreateDirectory(path);
             }
         }
