@@ -10,10 +10,11 @@ namespace galdevtool
         public ICallbackLogger Log { get; set; } = new NullCallbackLogger();
         public ICallbackConfig Config { get; set; } = new MemoryCallbackConfig();
 
-        public string InputFilePath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlFilePath), "");
-        public string OutputFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlYamlFolderPath), "");
-        public string InputImageFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlImagePath), "");
-        public string InputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlSnImagePath), "");
+        public string InputFilePath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlInputYamlFilePath), "");
+        public string OutputFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlOutputFolderPath), "");
+        public string InputImageFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlInputImageFolderPath), "");
+        public string InputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.Bigfile2YamlInputSnImagePath), "");
+        public string YamlImageFolderName => (string)Config.Get(nameof(AppConfig.YamlImageFolderName), "");
 
         public void Convert()
         {
@@ -81,6 +82,9 @@ namespace galdevtool
                                     break;
                                 case "image":
                                     e.Image = value;
+                                    break;
+                                case "smallimage":
+                                    e.Smallimage = value;
                                     break;
                                 case "twitter":
                                     e.Twitter = value;
@@ -156,7 +160,7 @@ namespace galdevtool
                 }
                 if (!string.IsNullOrEmpty(e.Twitterimage))
                 {
-                    e.Postimage = e.Twitterimage; // larger than FB image
+                    e.Postimage = e.Twitterimage; // some years ago larger than FB image, later the same
                 }
 
                 timeline.Add(e);
@@ -168,10 +172,9 @@ namespace galdevtool
 
         public void Write(List<TimelineEntry> entries, string outputFolder, string imgFolder, string snImgFolder)
         {
-            var outImgFolder = "images";
-            Directory.CreateDirectory(Path.Combine(outputFolder, outImgFolder));
+            Directory.CreateDirectory(Path.Combine(outputFolder, YamlImageFolderName));
 
-            var config = $@"images: ./{outImgFolder}/
+            var config = $@"images: ./{YamlImageFolderName}/
 topics:
   accident: Unfälle und Havarien
   adventure: Abenteuer
@@ -251,7 +254,7 @@ topics:
                 if (!string.IsNullOrEmpty(e.Image))
                 {
                     var src = Path.Combine(imgFolder, e.Image);
-                    var dst = Path.Combine(outputFolder, outImgFolder, e.Image);
+                    var dst = Path.Combine(outputFolder, YamlImageFolderName, e.Image);
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, overwrite: true);
@@ -262,10 +265,24 @@ topics:
                     }
                 }
 
+                if (!string.IsNullOrEmpty(e.Smallimage))
+                {
+                    var src = Path.Combine(imgFolder, e.Smallimage);
+                    var dst = Path.Combine(outputFolder, YamlImageFolderName, e.Smallimage);
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst, overwrite: true);
+                    }
+                    else
+                    {
+                        e.Smallimage = "";
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(e.Facebookimage))
                 {
                     var src = Path.Combine(snImgFolder, e.Facebookimage);
-                    var dst = Path.Combine(outputFolder, outImgFolder, e.Facebookimage);
+                    var dst = Path.Combine(outputFolder, YamlImageFolderName, e.Facebookimage);
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, overwrite: true);
@@ -279,7 +296,7 @@ topics:
                 if (!string.IsNullOrEmpty(e.Twitterimage))
                 {
                     var src = Path.Combine(snImgFolder, e.Twitterimage);
-                    var dst = Path.Combine(outputFolder, outImgFolder, e.Twitterimage);
+                    var dst = Path.Combine(outputFolder, YamlImageFolderName, e.Twitterimage);
                     if (File.Exists(src))
                     {
                         File.Copy(src, dst, overwrite: true);
@@ -291,25 +308,25 @@ topics:
                 }
 
                 var entry = "";
-                if (!string.IsNullOrEmpty(e.Name)) { entry += $"name: {e.Name}\r\n"; }
-                entry += $"year: {YamlValue(e.Year)}\r\n";
-                entry += $"title: {YamlValue(e.Title)}\r\n";
-                if (!string.IsNullOrEmpty(e.Short)) { entry += $"short: {YamlValue(e.Short)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"summary: {YamlValue(e.Summary)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Image)) { entry += $"image: {YamlValue(e.Image)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"headline: {YamlValue(e.Headline)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"smallimage: {YamlValue(e.Smallimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Post)) { entry += $"post: {YamlValue(e.Post)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"postimage: {YamlValue(e.Postimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"twitter: {YamlValue(e.Twitter)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"twitterimage: {YamlValue(e.Twitterimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"facebook: {YamlValue(e.Facebook)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"facebook2: {YamlValue(e.Facebook2)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"facebook3: {YamlValue(e.Facebook3)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"facebookimage: {YamlValue(e.Facebookimage)}\r\n"; }
-                if (e.Tags.Count > 0) { entry += $"tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
-                if (e.Topics.Count > 0) { entry += $"topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
-                if (e.Text.Count > 0) { entry += $"text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Name)) { entry += $"Name: {e.Name}\r\n"; }
+                entry += $"Year: {YamlValue(e.Year)}\r\n";
+                entry += $"Title: {YamlValue(e.Title)}\r\n";
+                if (!string.IsNullOrEmpty(e.Short)) { entry += $"Short: {YamlValue(e.Short)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"Summary: {YamlValue(e.Summary)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Image)) { entry += $"Image: {YamlValue(e.Image)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"Headline: {YamlValue(e.Headline)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"SmallImage: {YamlValue(e.Smallimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Post)) { entry += $"Post: {YamlValue(e.Post)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"PostImage: {YamlValue(e.Postimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"Twitter: {YamlValue(e.Twitter)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"TwitterImage: {YamlValue(e.Twitterimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"Facebook: {YamlValue(e.Facebook)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"Facebook2: {YamlValue(e.Facebook2)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"Facebook3: {YamlValue(e.Facebook3)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"FacebookImage: {YamlValue(e.Facebookimage)}\r\n"; }
+                if (e.Tags.Count > 0) { entry += $"Tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
+                if (e.Topics.Count > 0) { entry += $"Topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
+                if (e.Text.Count > 0) { entry += $"Text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
 
                 var outputFilePath = Path.Combine(outputFolder, file + ".yaml");
                 Log.Info(Path.GetFileName(outputFilePath));
