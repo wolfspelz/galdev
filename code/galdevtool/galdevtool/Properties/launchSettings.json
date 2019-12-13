@@ -1,8 +1,7 @@
 {
   "profiles": {
     "galdevtool": {
-      "commandName": "Project",
-      "commandLineArgs": "Bigfile2Yaml xBigfilePath=C:\\Heiner\\github-galdev\\code\\galdevtool\\test\\data2-Bigbang-only.txt"
+      "commandName": "Project"
     }
   }
 }
