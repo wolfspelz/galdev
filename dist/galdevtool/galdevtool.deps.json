@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "9d41118f5d0b6decabba27e35b8ab8cccc80b29e"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "galdevtool/1.0.0": {
+        "dependencies": {
+          "YamlDotNet": "8.0.0"
+        },
+        "runtime": {
+          "galdevtool.dll": {}
+        }
+      },
+      "YamlDotNet/8.0.0": {
+        "runtime": {
+          "lib/netstandard1.3/YamlDotNet.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "galdevtool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YamlDotNet/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ib8lKt7TlODREDFLOWef0OmxChsQlTsRSGGx7A6YH8d7Y+YrMg8Z/RneW5WAnDsfygg/Ao2r2ND1UNe0LLPMFw==",
+      "path": "yamldotnet/8.0.0",
+      "hashPath": "yamldotnet.8.0.0.nupkg.sha512"
+    }
+  }
+}
