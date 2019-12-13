@@ -26,6 +26,8 @@ namespace galdevtool
         public string LogLevels { get; set; } = "Error,Warning";
         public string LogFile { get; set; } = "%TEMP%galdevtool.log";
 
+        public bool WaitOnException { get; set; } = false;
+
         public int TestInt { get; set; } = 42;
 
         public string Bigfile2YamlInputYamlFilePath { get; set; } = "";
@@ -74,6 +76,7 @@ namespace galdevtool
                 case RunMode.Development:
                     //LogLevels = "Error,Warning,Debug,User,Info";
                     LogLevels = "Error,Warning,Debug,User,Info,Verbose";
+                    WaitOnException = true;
                     break;
 
                 case RunMode.Production:

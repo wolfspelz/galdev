@@ -55,7 +55,10 @@ namespace galdevtool
             catch (Exception ex)
             {
                 Log.Error(ex);
-                Console.ReadKey();
+                if (Config.WaitOnException)
+                {
+                    Console.ReadKey();
+                }
             }
         }
 
