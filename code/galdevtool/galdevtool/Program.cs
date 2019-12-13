@@ -13,8 +13,6 @@ namespace galdevtool
         {
             var program = new Program();
             program.Run();
-
-//            Console.ReadKey();
         }
 
         private void Run()
@@ -25,29 +23,39 @@ namespace galdevtool
             Log.LogHandler = (level, context, message) => { Console.WriteLine($"{Log.LevelFromString(level.ToString())} {context} {message}"); };
             Log.Info("-----------------------------------------------");
             Log.Info(string.Join(" ", Environment.GetCommandLineArgs().Select(x => "[" + x + "]")));
-            Config.ParseCommandline(Environment.GetCommandLineArgs().ToList());
-            Log.LogFile = Config.LogFile;
-            Log.LogLevel = Log.LevelFromString(Config.LogLevels);
 
-            if (Config.ShowHelp)
+            try
             {
-                ShowHelp();
-            }
-            else
-            {
-                try
+                Config.ParseCommandline(Environment.GetCommandLineArgs().ToList());
+                Log.LogFile = Config.LogFile;
+                Log.LogLevel = Log.LevelFromString(Config.LogLevels);
+
+                if (Config.ShowHelp)
                 {
+                    ShowHelp();
+                }
+                else
+                {
+                    if (false) { }
+                    else
                     if (Config.Bigfile2Yaml)
                     {
-                        new Bigfile2Yaml() 
+                        new Bigfile2Yaml()
                         { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)), Config = this.Config }
                         .Convert();
                     }
+                    if (Config.Yaml2Bigfile)
+                    {
+                        new Yaml2Bigfile()
+                        { Log = new GlobalCallbackLogger(nameof(Yaml2Bigfile)), Config = this.Config }
+                        .Convert();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    Log.Error(ex);
-                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                Console.ReadKey();
             }
         }
 
