@@ -80,7 +80,7 @@ namespace galdevtool
                     break;
 
                 case RunMode.Production:
-                    LogLevels = "Error,Warning,Debug,User,Info";
+                    LogLevels = "Error,Warning";
                     break;
             }
 

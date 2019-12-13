@@ -189,7 +189,7 @@ namespace galdevtool
 
         private void Write(string data, string outputFilePath, Dictionary<string, string> copyFiles)
         {
-            Log.Info($"Write {outputFilePath}");
+            Log.Info($"{outputFilePath}");
             File.WriteAllText(outputFilePath, data);
 
             foreach (var pair in copyFiles)
