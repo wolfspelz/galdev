@@ -1,6 +1,64 @@
 languages:
-  de: ./de/_index.yaml
-  en: ./en/_index.yaml
+  de: 
+    path: ./de
+    images: ./de/images
+    topics:
+      accident: Unfälle und Havarien
+      adventure: Abenteuer
+      ai: Künstliche Intelligenz
+      aliens: Völker
+      catastrophe: Katastrophen
+      conspiracy: Verschwörungen
+      crime: Verbrechen
+      culture: Kultur
+      discovery: Entdeckungen
+      ecology: Ökologie, Biologie und Umwelt
+      economy: Wirtschaft und Wirtschaftskrisen
+      epidemic: Epidemien
+      event: Aufregende Ereignisse
+      luck: Mehr Glück als Verstand
+      people: Personen
+      philosophy: Philosophie und Religion
+      politics: Politik
+      science: Wissenschaft
+      spaceflight: Raumfahrt
+      statistics: Statistik
+      technology: Technik
+      things: Gegenstände
+      upgrades: Verbesserungen für Menschen
+      visitors: Aliens im Sonnensystem
+      war: Kriege
+      wonder: Wunder
+  en:
+    path: ./en
+    images: ./en/images
+    topics:
+      accident: Accidents
+      adventure: Adventures
+      ai: Artificial Intelligence
+      aliens: Alien races
+      catastrophe: Catastrophes
+      conspiracy: Conspiracies
+      crime: Crimes
+      culture: Culture
+      discovery: Discoveries
+      ecology: Ecology, biology and environment
+      economy: Economy and economic crises
+      epidemic: Epidemics
+      event: Exciting events
+      luck: More by luck than judgment
+      people: People
+      philosophy: Philosophy und religion
+      politics: Politics
+      science: Sciences
+      spaceflight: Space flight
+      statistics: Statistics
+      technology: Technology
+      things: Things
+      upgrades: Upgrades for humans
+      visitors: Alien visitors
+      war: War
+      wonder: Wonders
 translations:
   Fusang:
     de: 2091_Fusang
