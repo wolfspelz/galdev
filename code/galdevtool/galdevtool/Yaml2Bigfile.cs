@@ -12,7 +12,7 @@ namespace galdevtool
         public ICallbackConfig Config { get; set; } = new MemoryCallbackConfig();
 
         public string InputFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileInputFolderPath), "");
-        public string OutputFilePath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputYamlFilePath), "");
+        public string OutputFilePath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputFilePath), "");
         public string OutputImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputImagePath), "");
         public string OutputPostImageFolderPath => (string)Config.Get(nameof(AppConfig.Yaml2BigfileOutputSnImagePath), "");
         public string YamlImageFolderName => (string)Config.Get(nameof(AppConfig.YamlImageFolderName), "");
