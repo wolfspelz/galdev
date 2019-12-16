@@ -26,54 +26,56 @@ namespace galdevtool
             Write(fileData, OutputFilePath, copyFiles);
         }
 
-        public List<string> Read(string inputFolder)
+        public Dictionary<string, string> Read(string inputFolder)
         {
-            var listOfYamlData = new List<string>();
+            var listOfYamlData = new Dictionary<string, string>();
 
             foreach (var file in Directory.EnumerateFiles(inputFolder, "*.yaml", SearchOption.TopDirectoryOnly).OrderBy(x => x))
             {
                 Log.Info(Path.GetFileName(file));
                 if (!file.Contains("_")) continue;
                 var yaml = File.ReadAllText(file);
-                listOfYamlData.Add(yaml);
+                listOfYamlData.Add(file, yaml);
             }
 
             return listOfYamlData;
         }
 
-        private List<TimelineEntry> ProcessInput(List<string> inputData)
+        private List<TimelineEntry> ProcessInput(Dictionary<string, string> inputData)
         {
             var timeline = new List<TimelineEntry>();
 
-            foreach (var data in inputData)
+            foreach (var filePair in inputData)
             {
+                Log.Info(Path.GetFileName(filePair.Key));
+
                 var deserializer = new YamlDotNet.Serialization.Deserializer();
-                var dict = deserializer.Deserialize<Dictionary<string, object>>(data);
+                var dict = deserializer.Deserialize<Dictionary<string, object>>(filePair.Value);
 
                 var e = new TimelineEntry();
-                foreach (var pair in dict)
+                foreach (var linePair in dict)
                 {
-                    switch (pair.Key.ToLower())
+                    switch (linePair.Key.ToLower())
                     {
-                        case "name": e.Name = (string)pair.Value; break;
-                        case "year": e.Year = (string)pair.Value; break;
-                        case "title": e.Title = (string)pair.Value; break;
-                        case "short": e.Short = (string)pair.Value; break;
-                        case "summary": e.Summary = (string)pair.Value; break;
-                        case "image": e.Image = (string)pair.Value; break;
-                        case "smallimage": e.Smallimage = (string)pair.Value; break;
-                        case "headline": e.Headline = (string)pair.Value; break;
-                        case "post": e.Post = (string)pair.Value; break;
-                        case "postimage": e.Postimage = (string)pair.Value; break;
-                        case "twitter": e.Twitter = (string)pair.Value; break;
-                        case "twitterimage": e.Twitterimage = (string)pair.Value; break;
-                        case "facebook": e.Facebook = (string)pair.Value; break;
-                        case "facebook2": e.Facebook2 = (string)pair.Value; break;
-                        case "facebook3": e.Facebook3 = (string)pair.Value; break;
-                        case "facebookimage": e.Facebookimage = (string)pair.Value; break;
-                        case "tags": e.Tags = ((List<object>)pair.Value).Select(o => (string)o).ToList(); break;
-                        case "topics": e.Topics = ((List<object>)pair.Value).Select(o => (string)o).ToList(); break;
-                        case "text": e.Text = ((string)pair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
+                        case "name": e.Name = (string)linePair.Value; break;
+                        case "year": e.Year = (string)linePair.Value; break;
+                        case "title": e.Title = (string)linePair.Value; break;
+                        case "short": e.Short = (string)linePair.Value; break;
+                        case "summary": e.Summary = (string)linePair.Value; break;
+                        case "image": e.Image = (string)linePair.Value; break;
+                        case "smallimage": e.Smallimage = (string)linePair.Value; break;
+                        case "headline": e.Headline = (string)linePair.Value; break;
+                        case "post": e.Post = (string)linePair.Value; break;
+                        case "postimage": e.Postimage = (string)linePair.Value; break;
+                        case "twitter": e.Twitter = (string)linePair.Value; break;
+                        case "twitterimage": e.Twitterimage = (string)linePair.Value; break;
+                        case "facebook": e.Facebook = (string)linePair.Value; break;
+                        case "facebook2": e.Facebook2 = (string)linePair.Value; break;
+                        case "facebook3": e.Facebook3 = (string)linePair.Value; break;
+                        case "facebookimage": e.Facebookimage = (string)linePair.Value; break;
+                        case "tags": e.Tags = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
+                        case "topics": e.Topics = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
+                        case "text": e.Text = ((string)linePair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
                     }
                 }
                 timeline.Add(e);
