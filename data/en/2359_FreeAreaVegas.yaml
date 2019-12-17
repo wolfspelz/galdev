@@ -1,16 +1,9 @@
 Name: FreeAreaVegas
 Year: 2359
 Title: Opening of the first free area on the Moon
-Image: Vegas.jpg
-Tags: 
-  - Moon 
-  - Atmosphere
-  - Leasure
-  - RnR
-  - War
-  - Blue Sky
-Topics: 
-  - technology
+Image: en_Vegas.jpg
+Tags: [Moon, Atmosphere, Leasure, RnR, War, Blue Sky]
+Topics: [technology]
 Text: |
   The free area is connected to the moon base Vegas. It is covered by an immaterial dome, but otherwise the area is open to space like earth's surface. Earth-like atmospheric conditions are created by technical means without employing a solid dome, massive shields or side walls.
   The free area comprises a circle of five kilometers. The atmosphere is three kilometers high. But only the lower 100 meters are habitable. Beyond that the layered containment system begins. The system provides a pressure of 0.7 bar at ground level and an oxygen partial pressure which allows unlimited abidance without additional life support.

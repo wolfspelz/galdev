@@ -2,17 +2,9 @@ Name: Scale
 Year: 2135
 Title: "SCALE: a Large-Scale Program Against Global Warming"
 Short: A million square kilometers of sunshades to reduce the solar radiation
-Image: Scale.jpg
 Headline: "Againt the Global Warming: A Gigant Sunshade"
-Tags: 
-  - Ecology
-  - Technology
-  - Interplanetar
-  - Conspiracy
-Topics: 
-  - ecology
-  - spaceflight
-  - conspiracy
+Tags: [Ecology, Technology, Interplanetar, Conspiracy]
+Topics: [ecology, spaceflight, conspiracy]
 Text: |
   The name SCALE means "Solar Constant Adjustment at the Lagrangian point of Earth", a sunshade between sun and earth.
   There are five Lagrangian points where the gravity of sun and earth cancel each other out. One of them, the L1 point, is exactly between sun and earth in 1.5 million kilometers distance from the earth. Objects can stay there for a long time even without propulsion.
