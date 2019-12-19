@@ -152,16 +152,16 @@ namespace galdevtool
                     sb.Append(" | facebookimage=");
                     sb.Append(e.Facebookimage);
                 }
-                //if (!string.IsNullOrEmpty(e.Author))
-                //{
-                //    sb.Append(" | author=");
-                //    sb.Append(e.Author);
-                //}
-                //if (!string.IsNullOrEmpty(e.Translation))
-                //{
-                //    sb.Append(" | translation=");
-                //    sb.Append(e.Translation);
-                //}
+                if (!string.IsNullOrEmpty(e.Author))
+                {
+                    sb.Append(" | author=");
+                    sb.Append(e.Author);
+                }
+                if (!string.IsNullOrEmpty(e.Translation))
+                {
+                    sb.Append(" | translation=");
+                    sb.Append(e.Translation);
+                }
                 if (e.Topics.Count > 0)
                 {
                     sb.Append(" | topic=");

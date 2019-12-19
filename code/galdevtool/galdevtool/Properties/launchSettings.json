@@ -1,8 +1,7 @@
 {
   "profiles": {
     "galdevtool": {
-      "commandName": "Project",
-      "commandLineArgs": "Bigfile2Yaml Bigfile2YamlInputYamlFilePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\history\\data2.txt\" Bigfile2YamlInputImageFolderPath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\" Bigfile2YamlInputSnImagePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\\post\" Bigfile2YamlOutputFolderPath=\"C:\\Users\\wolf\\Desktop\\tmp\\galdev-yaml\"          Yaml2Bigfile Yaml2BigfileInputFolderPath=\"C:\\Users\\wolf\\Desktop\\tmp\\galdev-yaml\" Yaml2BigfileOutputFilePath=\"C:\\Users\\wolf\\Desktop\\tmp\\wolfspelz-www.galactic-developments.de\\history\\data2.txt\" Yaml2BigfileOutputImagePath=\"C:\\Users\\wolf\\Desktop\\tmp\\wolfspelz-www.galactic-developments.de\\images\" Yaml2BigfileOutputSnImagePath=\"C:\\Users\\wolf\\Desktop\\tmp\\wolfspelz-www.galactic-developments.de\\images\\post\" "
+      "commandName": "Project"
     }
   }
 }
