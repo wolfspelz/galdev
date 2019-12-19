@@ -324,6 +324,8 @@ topics:
                 if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"Facebook2: {YamlValue(e.Facebook2)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"Facebook3: {YamlValue(e.Facebook3)}\r\n"; }
                 if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"FacebookImage: {YamlValue(e.Facebookimage)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Author)) { entry += $"Author: {YamlValue(e.Author)}\r\n"; }
+                if (!string.IsNullOrEmpty(e.Translation)) { entry += $"Translation: {YamlValue(e.Translation)}\r\n"; }
                 if (e.Tags.Count > 0) { entry += $"Tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
                 if (e.Topics.Count > 0) { entry += $"Topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
                 if (e.Text.Count > 0) { entry += $"Text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }

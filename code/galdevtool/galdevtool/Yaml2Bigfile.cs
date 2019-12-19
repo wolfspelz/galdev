@@ -73,6 +73,8 @@ namespace galdevtool
                         case "facebook2": e.Facebook2 = (string)linePair.Value; break;
                         case "facebook3": e.Facebook3 = (string)linePair.Value; break;
                         case "facebookimage": e.Facebookimage = (string)linePair.Value; break;
+                        case "author": e.Author = (string)linePair.Value; break;
+                        case "translation": e.Translation = (string)linePair.Value; break;
                         case "tags": e.Tags = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
                         case "topics": e.Topics = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
                         case "text": e.Text = ((string)linePair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
@@ -150,6 +152,16 @@ namespace galdevtool
                     sb.Append(" | facebookimage=");
                     sb.Append(e.Facebookimage);
                 }
+                //if (!string.IsNullOrEmpty(e.Author))
+                //{
+                //    sb.Append(" | author=");
+                //    sb.Append(e.Author);
+                //}
+                //if (!string.IsNullOrEmpty(e.Translation))
+                //{
+                //    sb.Append(" | translation=");
+                //    sb.Append(e.Translation);
+                //}
                 if (e.Topics.Count > 0)
                 {
                     sb.Append(" | topic=");
