@@ -1,8 +1,7 @@
 {
   "profiles": {
     "galdevtool": {
-      "commandName": "Project",
-      "commandLineArgs": "Bigfile2Yaml   Bigfile2YamlInputYamlFilePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\history\\data2.txt\"   Bigfile2YamlInputImageFolderPath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\"   Bigfile2YamlInputSnImagePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\\post\"   Bigfile2YamlOutputFolderPath=\"C:\\Heiner\\github-galdev\\data\\de\" "
+      "commandName": "Project"
     }
   }
 }
