@@ -21,7 +21,7 @@ namespace galdevtool
         public string Facebookimage { get; set; } = "";
         public string Post { get; set; } = "";
         public string Postimage { get; set; } = "";
-        public string Author { get; set; } = "Heiner Wolf";
+        public string Author { get; set; } = "";
         public string Translation { get; set; } = "";
         public List<string> Topics { get; set; } = new List<string>();
         public List<string> Text { get; set; } = new List<string>();
