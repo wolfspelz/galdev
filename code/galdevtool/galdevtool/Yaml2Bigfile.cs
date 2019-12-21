@@ -41,7 +41,7 @@ namespace galdevtool
             return listOfYamlData;
         }
 
-        private List<TimelineEntry> ProcessInput(Dictionary<string, string> inputData)
+        public List<TimelineEntry> ProcessInput(Dictionary<string, string> inputData)
         {
             var timeline = new List<TimelineEntry>();
 
@@ -86,7 +86,7 @@ namespace galdevtool
             return timeline;
         }
 
-        private (string yaml, Dictionary<string, string>) ProcessOutput(List<TimelineEntry> entries, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
+        public (string bigfile, Dictionary<string, string>) ProcessOutput(List<TimelineEntry> entries, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
         {
             var sb = new StringBuilder();
             var copyFiles = new Dictionary<string, string>();
