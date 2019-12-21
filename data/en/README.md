@@ -12,7 +12,7 @@ Later, humanity is drawn into the dramatic development of its interstellar neigh
 
 Project page: http://www.galactic-developments.de/index.html?lang=en
 
-PLease clone, add or translate, send pull requests. 
+PLease clone (develop), add or translate and send pull requests. 
 - The format is YAML
 - One file per timeline entry
 - A template with all tags is here: https://raw.githubusercontent.com/wolfspelz/galdev/develop/data/template.yaml
