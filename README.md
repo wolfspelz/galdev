@@ -13,7 +13,7 @@
 
 ## Contribute
 
-PLease clone (develop), add or translate and send pull requests. 
+Please clone (develop), add or translate and send pull requests. 
 - The format is YAML
 - One file per timeline entry
 - A template with all tags is here: https://raw.githubusercontent.com/wolfspelz/galdev/develop/data/template.yaml
