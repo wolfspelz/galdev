@@ -6,9 +6,9 @@
 
 ## Links
 
-- German page: http://www.galactic-developments.de/lang=de
+- German page: http://www.galactic-developments.de/?lang=de
 - German source: https://github.com/wolfspelz/galdev/tree/master/data/de
-- English page: http://www.galactic-developments.de/lang=en
+- English page: http://www.galactic-developments.de/?lang=en
 - English source: https://github.com/wolfspelz/galdev/tree/master/data/en
 
 ## Contribute
