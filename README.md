@@ -1,4 +1,4 @@
-# Die Geschichte der Menschheit / The History of the Future
+# Die Geschichte der Menschheit - The History of the Future
 
 | DE |  EN |
 |---|---|
