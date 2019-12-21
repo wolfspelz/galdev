@@ -6,10 +6,10 @@
 
 ## Links
 
-| | DE | EN |
-|-|----|----|
-| Website | http://www.galactic-developments.de/ | http://www.galactic-developments.de/?lang=en |
-| Source | https://github.com/wolfspelz/galdev/tree/master/data/de | https://github.com/wolfspelz/galdev/tree/master/data/en |
+- German page: http://www.galactic-developments.de/lang=de
+- German source: https://github.com/wolfspelz/galdev/tree/master/data/de
+- English page: http://www.galactic-developments.de/lang=en
+- English source: https://github.com/wolfspelz/galdev/tree/master/data/en
 
 ## Contribute
 
