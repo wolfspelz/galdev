@@ -7,13 +7,59 @@ using System.Reflection;
 
 namespace galdevtool
 {
-    public class ConfigBase
+    public class ConfigBase : ICallbackConfig
     {
         private static Random _random;
         public Random Random => GetRandom();
         public static Random GetRandom()
         {
             return _random ?? (_random = new Random());
+        }
+
+        object ICallbackConfig.Get(string name, object defaultValue)
+        {
+            var value = Get(name);
+            if (value == null)
+            {
+                Log.Warning($"No config for: {name}");
+            }
+
+            return value ?? defaultValue;
+        }
+
+        void ICallbackConfig.Set(string name, object value)
+        {
+            string s;
+            if (value is string alreadyString)
+            {
+                s = alreadyString;
+            }
+            else if (value is float f)
+            {
+                s = f.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is double d)
+            {
+                s = d.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is int i)
+            {
+                s = i.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is long l)
+            {
+                s = l.ToString(CultureInfo.InvariantCulture);
+            }
+            else if (value is DateTime dt)
+            {
+                s = dt.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                s = value.ToString();
+            }
+
+            Set(name, s);
         }
 
         public bool Set(string key, string value)
@@ -200,6 +246,30 @@ namespace galdevtool
             assembly = assembly ?? Assembly.GetExecutingAssembly();
             var fileInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             return fileInfo.ProductName;
+        }
+
+        public void ParseCommandline(IList<string> args)
+        {
+            BeforeCommandline();
+
+            foreach (var arg in args)
+            {
+                HandleCommandlineParameter(arg);
+            }
+
+            AfterCommandline();
+        }
+
+        protected virtual void HandleCommandlineParameter(string arg)
+        {
+        }
+
+        protected virtual void BeforeCommandline()
+        {
+        }
+
+        protected virtual void AfterCommandline()
+        {
         }
 
     }

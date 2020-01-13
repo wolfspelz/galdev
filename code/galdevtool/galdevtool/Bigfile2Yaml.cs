@@ -135,6 +135,12 @@ namespace galdevtool
                                 case "facebookimage":
                                     e.Facebookimage = value;
                                     break;
+                                case "author":
+                                    e.Author = value;
+                                    break;
+                                case "translation":
+                                    e.Translation = value;
+                                    break;
                                 case "topic":
                                     e.Topics = value.Trim().Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToList();
                                     break;
@@ -168,6 +174,33 @@ namespace galdevtool
             }
 
             return timeline;
+        }
+
+        public string CreateYamlData(TimelineEntry e)
+        {
+            var s = "";
+            if (!string.IsNullOrEmpty(e.Name)) { s += $"Name: {e.Name}\r\n"; }
+            s += $"Year: {YamlValue(e.Year)}\r\n";
+            s += $"Title: {YamlValue(e.Title)}\r\n";
+            if (!string.IsNullOrEmpty(e.Short)) { s += $"Short: {YamlValue(e.Short)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Summary)) { s += $"Summary: {YamlValue(e.Summary)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Image)) { s += $"Image: {YamlValue(e.Image)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Headline)) { s += $"Headline: {YamlValue(e.Headline)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Smallimage)) { s += $"SmallImage: {YamlValue(e.Smallimage)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Post)) { s += $"Post: {YamlValue(e.Post)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Postimage)) { s += $"PostImage: {YamlValue(e.Postimage)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Twitter)) { s += $"Twitter: {YamlValue(e.Twitter)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Twitterimage)) { s += $"TwitterImage: {YamlValue(e.Twitterimage)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Facebook)) { s += $"Facebook: {YamlValue(e.Facebook)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Facebook2)) { s += $"Facebook2: {YamlValue(e.Facebook2)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Facebook3)) { s += $"Facebook3: {YamlValue(e.Facebook3)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Facebookimage)) { s += $"FacebookImage: {YamlValue(e.Facebookimage)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Author)) { s += $"Author: {YamlValue(e.Author)}\r\n"; }
+            if (!string.IsNullOrEmpty(e.Translation)) { s += $"Translation: {YamlValue(e.Translation)}\r\n"; }
+            if (e.Tags.Count > 0) { s += $"Tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
+            if (e.Topics.Count > 0) { s += $"Topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
+            if (e.Text.Count > 0) { s += $"Text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
+            return s;
         }
 
         public void Write(List<TimelineEntry> entries, string outputFolder, string imgFolder, string snImgFolder)
@@ -206,50 +239,7 @@ topics:
             var years = new Dictionary<string, int>();
             foreach (var e in entries)
             {
-                var file = "";
-                if (string.IsNullOrEmpty(file))
-                {
-                    file = e.Image;
-                    if (!string.IsNullOrEmpty(file))
-                    {
-                        var dot = file.IndexOf('.');
-                        if (dot > 2)
-                        {
-                            file = file.Substring(0, dot);
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(file))
-                {
-                    file = e.Title
-                    .Replace(" ", "_")
-                    .Replace("/", "")
-                    .Replace(":", "")
-                    .Replace("-", "")
-                    .Replace(",", "")
-                    .Replace("(", "")
-                    .Replace(")", "")
-                    .Replace("\"", "")
-                    ;
-                    var dot = file.IndexOf('.');
-                    if (dot > 0)
-                    {
-                        file = file.Substring(0, dot);
-                    }
-                    file = file.Truncate(30, "");
-                }
-
-                if (!years.ContainsKey(e.Year))
-                {
-                    years[e.Year] = 0;
-                }
-                else
-                {
-                    years[e.Year] += 1;
-                }
-
-                var suffix = "acfilortux";
-                file = e.Year + (years[e.Year] == 0 ? "" : "" + suffix[years[e.Year]]) + "_" + file;
+                var outputFilePath = GetFilePath(e, outputFolder, years);
 
                 if (!string.IsNullOrEmpty(e.Image))
                 {
@@ -307,36 +297,65 @@ topics:
                     }
                 }
 
-                var entry = "";
-                if (!string.IsNullOrEmpty(e.Name)) { entry += $"Name: {e.Name}\r\n"; }
-                entry += $"Year: {YamlValue(e.Year)}\r\n";
-                entry += $"Title: {YamlValue(e.Title)}\r\n";
-                if (!string.IsNullOrEmpty(e.Short)) { entry += $"Short: {YamlValue(e.Short)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Summary)) { entry += $"Summary: {YamlValue(e.Summary)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Image)) { entry += $"Image: {YamlValue(e.Image)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Headline)) { entry += $"Headline: {YamlValue(e.Headline)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Smallimage)) { entry += $"SmallImage: {YamlValue(e.Smallimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Post)) { entry += $"Post: {YamlValue(e.Post)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Postimage)) { entry += $"PostImage: {YamlValue(e.Postimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitter)) { entry += $"Twitter: {YamlValue(e.Twitter)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Twitterimage)) { entry += $"TwitterImage: {YamlValue(e.Twitterimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook)) { entry += $"Facebook: {YamlValue(e.Facebook)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook2)) { entry += $"Facebook2: {YamlValue(e.Facebook2)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebook3)) { entry += $"Facebook3: {YamlValue(e.Facebook3)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Facebookimage)) { entry += $"FacebookImage: {YamlValue(e.Facebookimage)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Author)) { entry += $"Author: {YamlValue(e.Author)}\r\n"; }
-                if (!string.IsNullOrEmpty(e.Translation)) { entry += $"Translation: {YamlValue(e.Translation)}\r\n"; }
-                if (e.Tags.Count > 0) { entry += $"Tags: [{string.Join(", ", e.Tags.Select(x => YamlValue(x)))}]\r\n"; }
-                if (e.Topics.Count > 0) { entry += $"Topics: [{string.Join(", ", e.Topics.Select(x => YamlValue(x)))}]\r\n"; }
-                if (e.Text.Count > 0) { entry += $"Text: |\r\n{string.Join("\r\n", e.Text.Select(x => "  " + x))}\r\n"; }
-
-                var outputFilePath = Path.Combine(outputFolder, file + ".yaml");
+                var entry = CreateYamlData(e);
                 Log.Info(Path.GetFileName(outputFilePath));
 
                 File.WriteAllText(outputFilePath, entry);
             }
 
             File.WriteAllText(Path.Combine(outputFolder, "config.yaml"), config);
+        }
+
+        public string GetFilePath(TimelineEntry e, string outputFolder, Dictionary<string, int> years)
+        {
+            var file = "";
+            
+            if (string.IsNullOrEmpty(file))
+            {
+                file = e.Image;
+                if (!string.IsNullOrEmpty(file))
+                {
+                    var dot = file.IndexOf('.');
+                    if (dot > 2)
+                    {
+                        file = file.Substring(0, dot);
+                    }
+                }
+            }
+        
+            if (string.IsNullOrEmpty(file))
+            {
+                file = e.Title
+                .Replace(" ", "_")
+                .Replace("/", "")
+                .Replace(":", "")
+                .Replace("-", "")
+                .Replace(",", "")
+                .Replace("(", "")
+                .Replace(")", "")
+                .Replace("\"", "")
+                ;
+                var dot = file.IndexOf('.');
+                if (dot > 0)
+                {
+                    file = file.Substring(0, dot);
+                }
+                file = file.Truncate(30, "");
+            }
+
+            if (!years.ContainsKey(e.Year))
+            {
+                years[e.Year] = 0;
+            }
+            else
+            {
+                years[e.Year] += 1;
+            }
+
+            var suffix = "acfilortux";
+            file = e.Year + (years[e.Year] == 0 ? "" : "" + suffix[years[e.Year]]) + "_" + file;
+
+            return Path.Combine(outputFolder, file + ".yaml");
         }
 
         public string YamlValue(string value)

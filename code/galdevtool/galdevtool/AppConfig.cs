@@ -6,7 +6,7 @@ using System.Text;
 
 namespace galdevtool
 {
-    public class AppConfig : ConfigBase, ICallbackConfig
+    public class AppConfig : ConfigBase
     {
         public enum RunMode
         {
@@ -87,109 +87,46 @@ namespace galdevtool
             return this;
         }
 
-        public void ParseCommandline(IList<string> args)
+        protected override void HandleCommandlineParameter(string arg)
         {
-            BeforeCommandline();
-
-            var q = new Queue<string>(args);
-            while (q.Count > 0)
+            switch (arg)
             {
-                var arg = q.Dequeue();
-                arg = arg.Trim();
-                switch (arg)
-                {
-                    case "-?":
-                    case "/?":
-                    case "--help":
-                    case "help":
-                    case "Help":
-                        ShowHelp = true;
-                        break;
-                    case "Bigfile2Yaml":
-                        Bigfile2Yaml = true;
-                        break;
-                    case "Yaml2Bigfile":
-                        Yaml2Bigfile = true;
-                        break;
-                    default:
-                        var kv = arg.Split(new[] { '=' }, 2);
-                        if (kv.Length == 2)
+                case "-?":
+                case "/?":
+                case "--help":
+                case "help":
+                case "Help":
+                    ShowHelp = true;
+                    break;
+                case "Bigfile2Yaml":
+                    Bigfile2Yaml = true;
+                    break;
+                case "Yaml2Bigfile":
+                    Yaml2Bigfile = true;
+                    break;
+                default:
+                    var kv = arg.Split(new[] { '=' }, 2);
+                    if (kv.Length == 2)
+                    {
+                        try
                         {
-                            try
+                            if (Set(kv[0], kv[1]))
                             {
-                                if (Set(kv[0], kv[1]))
-                                {
-                                    Log.Info($"{kv[0]}={kv[1]}");
-                                }
-                                else
-                                {
-                                    Log.Warning($"No such option: {arg}");
-                                }
+                                Log.Info($"{kv[0]}={kv[1]}");
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                Log.Warning(ex);
+                                Log.Warning($"No such option: {arg}");
                             }
                         }
-                        break;
-                }
+                        catch (Exception ex)
+                        {
+                            Log.Warning(ex);
+                        }
+                    }
+                    break;
             }
-
-            AfterCommandline();
         }
 
-        private void BeforeCommandline()
-        {
-        }
-
-        public void AfterCommandline()
-        {
-        }
-
-        object ICallbackConfig.Get(string name, object defaultValue)
-        {
-            var value = Get(name);
-            if (value == null)
-            {
-                Log.Warning($"No config for: {name}");
-            }
-
-            return value ?? defaultValue;
-        }
-
-        void ICallbackConfig.Set(string name, object value)
-        {
-            string s;
-            if (value is string alreadyString)
-            {
-                s = alreadyString;
-            }
-            else if (value is float f)
-            {
-                s = f.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is double d)
-            {
-                s = d.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is int i)
-            {
-                s = i.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is long l)
-            {
-                s = l.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is DateTime dt)
-            {
-                s = dt.ToString(CultureInfo.InvariantCulture);
-            }
-            else
-            {
-                s = value.ToString();
-            }
-
-            Set(name, s);
-        }
     }
 }
