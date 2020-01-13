@@ -100,7 +100,7 @@ namespace galdevtool
                 if (e.Text.Count > 0)
                 {
                     sb.Append(" # ");
-                    sb.Append(string.Join(" # ", e.Text.Where(x => !string.IsNullOrEmpty(x))));
+                    sb.Append(string.Join(" # ", e.Text.Where(x => !string.IsNullOrEmpty(x)).Select(x => x.TrimEnd())));
                 }
                 if (e.Tags.Count > 0)
                 {
