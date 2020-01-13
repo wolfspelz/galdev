@@ -77,7 +77,7 @@ namespace galdevtool
                         case "translation": e.Translation = (string)linePair.Value; break;
                         case "tags": e.Tags = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
                         case "topics": e.Topics = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
-                        case "text": e.Text = ((string)linePair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
+                        case "text": e.Text = ((string)linePair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd()).ToList(); break;
                     }
 
                     if (string.IsNullOrEmpty(e.Post)) { e.Postimage = ""; }
