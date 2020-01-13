@@ -122,10 +122,20 @@ namespace galdevtool
                     sb.Append(" | twitter=");
                     sb.Append(e.Twitter);
                 }
-                if (!string.IsNullOrEmpty(e.Twitterimage))
+                else
                 {
-                    sb.Append(" | twitterimage=");
-                    sb.Append(e.Twitterimage);
+                    if (!string.IsNullOrEmpty(e.Post))
+                    {
+                        sb.Append(" | twitter=");
+                        sb.Append(e.Post);
+                        sb.Append(" #SciFi ");
+                        sb.Append(string.Join(" ", e.Tags.Select(x => "#" + x)));
+                    }
+                    if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | twitterimage=");
+                        sb.Append(e.Postimage);
+                    }
                 }
                 if (!string.IsNullOrEmpty(e.Facebook))
                 {
@@ -147,10 +157,29 @@ namespace galdevtool
                         sb.Append(e.Facebook3);
                     }
                 }
-                if (!string.IsNullOrEmpty(e.Facebookimage))
+                else
                 {
-                    sb.Append(" | facebookimage=");
-                    sb.Append(e.Facebookimage);
+                    if (!string.IsNullOrEmpty(e.Post))
+                    {
+                        sb.Append(" | facebook=");
+                        if (!string.IsNullOrEmpty(e.Headline))
+                        {
+                            sb.Append(e.Headline);
+                            sb.Append(" - ");
+                        }
+                        sb.Append(e.Post);
+                        sb.Append(" # ");
+                        sb.Append(e.Year);
+                        sb.Append(" ");
+                        sb.Append(e.Title);
+                        sb.Append(" # ");
+                        sb.Append(e.Summary);
+                    }
+                    if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | facebookimage=");
+                        sb.Append(e.Postimage);
+                    }
                 }
                 if (!string.IsNullOrEmpty(e.Author))
                 {
