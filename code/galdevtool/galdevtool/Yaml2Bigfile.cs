@@ -86,10 +86,10 @@ namespace galdevtool
             return timeline;
         }
 
-        public (string bigfile, Dictionary<string, string>) ProcessOutput(List<TimelineEntry> entries, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
+        public (string bigfile, List<KeyValuePair<string, string>>) ProcessOutput(List<TimelineEntry> entries, string inputImgFolder, string outputImgFolder, string outputSnImgFolder)
         {
             var sb = new StringBuilder();
-            var copyFiles = new Dictionary<string, string>();
+            var copyFiles = new List<KeyValuePair<string, string>>();
 
             foreach (var e in entries)
             {
@@ -117,27 +117,58 @@ namespace galdevtool
                     sb.Append(" | smallimage=");
                     sb.Append(e.Smallimage);
                 }
+
                 if (!string.IsNullOrEmpty(e.Twitter))
                 {
                     sb.Append(" | twitter=");
                     sb.Append(e.Twitter);
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(e.Post))
-                    {
-                        sb.Append(" | twitter=");
-                        sb.Append(e.Post);
-                        sb.Append(" #SciFi ");
-                        sb.Append(string.Join(" ", e.Tags.Select(x => "#" + x)));
 
-                        if (!string.IsNullOrEmpty(e.Postimage))
-                        {
-                            sb.Append(" | twitterimage=");
-                            sb.Append(e.Postimage);
-                        }
+                    if (!string.IsNullOrEmpty(e.Twitterimage))
+                    {
+                        sb.Append(" | twitterimage=");
+                        sb.Append(e.Twitterimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Twitterimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Twitterimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                    else if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | twitterimage=");
+                        sb.Append(e.Postimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Postimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Postimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
                     }
                 }
+                else if (!string.IsNullOrEmpty(e.Post))
+                {
+                    sb.Append(" | twitter=");
+                    sb.Append(e.Post);
+                    sb.Append(" #SciFi ");
+                    sb.Append(string.Join(" ", e.Tags.Select(x => "#" + x)));
+
+                    if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | twitterimage=");
+                        sb.Append(e.Postimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Postimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Postimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                    else if (!string.IsNullOrEmpty(e.Twitterimage))
+                    {
+                        sb.Append(" | twitterimage=");
+                        sb.Append(e.Twitterimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Twitterimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Twitterimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(e.Facebook))
                 {
                     sb.Append(" | facebook=");
@@ -157,42 +188,74 @@ namespace galdevtool
                         sb.Append(" # ");
                         sb.Append(e.Facebook3);
                     }
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(e.Post))
-                    {
-                        sb.Append(" | facebook=");
-                        if (!string.IsNullOrEmpty(e.Headline))
-                        {
-                            sb.Append(e.Headline);
-                            sb.Append(" - ");
-                        }
-                        sb.Append(e.Post);
-                        sb.Append(" # ");
-                        sb.Append(e.Year);
-                        sb.Append(" ");
-                        sb.Append(e.Title);
-                        sb.Append(" # ");
-                        sb.Append(e.Summary);
 
-                        if (!string.IsNullOrEmpty(e.Postimage))
-                        {
-                            sb.Append(" | facebookimage=");
-                            sb.Append(e.Postimage);
-                        }
+                    if (!string.IsNullOrEmpty(e.Facebookimage))
+                    {
+                        sb.Append(" | facebookimage=");
+                        sb.Append(e.Facebookimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Facebookimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Facebookimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                    else if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | facebookimage=");
+                        sb.Append(e.Postimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Postimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Postimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
                     }
                 }
+                else if (!string.IsNullOrEmpty(e.Post))
+                {
+                    sb.Append(" | facebook=");
+                    if (!string.IsNullOrEmpty(e.Headline))
+                    {
+                        sb.Append(e.Headline);
+                        sb.Append(" - ");
+                    }
+                    sb.Append(e.Post);
+                    sb.Append(" # ");
+                    sb.Append(e.Year);
+                    sb.Append(" ");
+                    sb.Append(e.Title);
+                    sb.Append(" # ");
+                    sb.Append(e.Summary);
+
+                    if (!string.IsNullOrEmpty(e.Postimage))
+                    {
+                        sb.Append(" | facebookimage=");
+                        sb.Append(e.Postimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Postimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Postimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                    else if (!string.IsNullOrEmpty(e.Facebookimage))
+                    {
+                        sb.Append(" | facebookimage=");
+                        sb.Append(e.Facebookimage);
+
+                        var src = Path.Combine(inputImgFolder, e.Facebookimage);
+                        var dst = Path.Combine(OutputPostImageFolderPath, e.Facebookimage);
+                        copyFiles.Add(new KeyValuePair<string, string>(src, dst));
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(e.Author))
                 {
                     sb.Append(" | author=");
                     sb.Append(e.Author);
                 }
+
                 if (!string.IsNullOrEmpty(e.Translation))
                 {
                     sb.Append(" | translation=");
                     sb.Append(e.Translation);
                 }
+                
                 if (e.Topics.Count > 0)
                 {
                     sb.Append(" | topic=");
@@ -204,35 +267,21 @@ namespace galdevtool
                 {
                     var src = Path.Combine(inputImgFolder, e.Image);
                     var dst = Path.Combine(OutputImageFolderPath, e.Image);
-                    copyFiles[src] = dst;
+                    copyFiles.Add(new KeyValuePair<string, string>(src, dst));
                 }
 
                 if (!string.IsNullOrEmpty(e.Smallimage))
                 {
                     var src = Path.Combine(inputImgFolder, e.Smallimage);
                     var dst = Path.Combine(OutputImageFolderPath, e.Smallimage);
-                    copyFiles[src] = dst;
-                }
-
-                if (!string.IsNullOrEmpty(e.Twitterimage))
-                {
-                    var src = Path.Combine(inputImgFolder, e.Twitterimage);
-                    var dst = Path.Combine(OutputPostImageFolderPath, e.Twitterimage);
-                    copyFiles[src] = dst;
-                }
-
-                if (!string.IsNullOrEmpty(e.Facebookimage))
-                {
-                    var src = Path.Combine(inputImgFolder, e.Facebookimage);
-                    var dst = Path.Combine(OutputPostImageFolderPath, e.Facebookimage);
-                    copyFiles[src] = dst;
+                    copyFiles.Add(new KeyValuePair<string, string>(src, dst));
                 }
             }
 
             return (sb.ToString(), copyFiles);
         }
 
-        private void Write(string data, string outputFilePath, Dictionary<string, string> copyFiles)
+        private void Write(string data, string outputFilePath, List<KeyValuePair<string, string>> copyFiles)
         {
             Log.Info($"{outputFilePath}");
             File.WriteAllText(outputFilePath, data);
