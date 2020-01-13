@@ -22,7 +22,7 @@ namespace galdevtool.Test
             var importedTimeline = y2b.ProcessInput(importedYamlData);
             for (var i = 0; i < importedTimeline.Count; i++)
             {
-                Assert.IsTrue(importedTimeline[i].Equals(exportedTimeline[i]));
+                Assert.IsTrue(importedTimeline[i].Equals(exportedTimeline[i]), $"{importedTimeline[i].Year} exportedTimeline/importedTimeline different");
             }
 
             var years = new Dictionary<string, int>();
