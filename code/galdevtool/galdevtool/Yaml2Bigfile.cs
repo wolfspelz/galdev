@@ -79,6 +79,10 @@ namespace galdevtool
                         case "topics": e.Topics = ((List<object>)linePair.Value).Select(o => (string)o).ToList(); break;
                         case "text": e.Text = ((string)linePair.Value).Replace("\r\n", "\n").Split(new char[] { '\n' }).ToList(); break;
                     }
+
+                    if (string.IsNullOrEmpty(e.Post)) { e.Postimage = ""; }
+                    if (string.IsNullOrEmpty(e.Twitter)) { e.Twitterimage = ""; }
+                    if (string.IsNullOrEmpty(e.Facebook)) { e.Facebookimage = ""; }
                 }
                 timeline.Add(e);
             }
@@ -222,7 +226,7 @@ namespace galdevtool
                     sb.Append(" ");
                     sb.Append(e.Title);
                     sb.Append(" # ");
-                    sb.Append(e.Summary);
+                    sb.Append(e.Short);
 
                     if (!string.IsNullOrEmpty(e.Postimage))
                     {
