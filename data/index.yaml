@@ -60,6 +60,9 @@ languages:
       war: War
       wonder: Wonders
 translations:
+  Apes:
+    de: 2052_Primaten
+    en: 2052_CivilRightsForApes
   Fusang:
     de: 2091_Fusang
     en: 2091_Fusang
