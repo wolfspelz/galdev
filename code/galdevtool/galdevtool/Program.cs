@@ -44,12 +44,18 @@ namespace galdevtool
                         { Log = new GlobalCallbackLogger(nameof(Bigfile2Yaml)), Config = this.Config }
                         .Convert();
                     }
-                    if (Config.Yaml2Bigfile)
-                    {
-                        new Yaml2Bigfile()
-                        { Log = new GlobalCallbackLogger(nameof(Yaml2Bigfile)), Config = this.Config }
+                    if (Config.Yaml2Bigfile) {
+                        new Yaml2Bigfile() { Log = new GlobalCallbackLogger(nameof(Yaml2Bigfile)), Config = this.Config }
                         .Convert();
                     }
+                    if (Config.CountCharacters) {
+                        new CharacterCounter() { Log = new GlobalCallbackLogger(nameof(CharacterCounter)), Config = this.Config }
+                        .LogCounts();
+                    }
+                }
+
+                if (Config.WaitOnFinished) {
+                    Console.ReadLine();
                 }
             }
             catch (Exception ex)

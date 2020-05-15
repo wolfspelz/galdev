@@ -2,7 +2,7 @@
   "profiles": {
     "galdevtool": {
       "commandName": "Project",
-      "commandLineArgs": "Yaml2Bigfile   Yaml2BigfileOutputFilePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\history\\data2.txt\"   Yaml2BigfileOutputImagePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\"   Yaml2BigfileOutputSnImagePath=\"C:\\Heiner\\wolfspelz-www.galactic-developments.de\\images\\post\"   Yaml2BigfileInputFolderPath=\"C:\\Heiner\\github-galdev\\data\\de\""
+      "commandLineArgs": "CountCharacters CountCharactersDataFolderPath=\"C:\\Heiner\\github-galdev\\data\\de\" WaitOnFinished=1 LogLevels=User"
     }
   }
 }
