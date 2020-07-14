@@ -22,11 +22,13 @@ namespace galdevtool
         public bool ShowHelp { get; set; } = false;
         public bool Bigfile2Yaml { get; set; } = false;
         public bool Yaml2Bigfile { get; set; } = false;
+        public bool CountCharacters { get; set; } = false;
 
         public string LogLevels { get; set; } = "Error,Warning";
         public string LogFile { get; set; } = "%TEMP%galdevtool.log";
 
         public bool WaitOnException { get; set; } = false;
+        public bool WaitOnFinished { get; set; } = false;
 
         public int TestInt { get; set; } = 42;
 
@@ -42,14 +44,15 @@ namespace galdevtool
 
         public string YamlImageFolderName { get; set; } = @"images";
 
+        public string CountCharactersDataFolderPath { get; set; } = "";
+
         public static string[] HiddenKeys { get; set; } = {
             nameof(AppConfig.TestInt),
         };
 
         public AppConfig Initialize()
         {
-            if (IsInitialized)
-            {
+            if (IsInitialized) {
                 return this;
             }
             IsInitialized = true;
@@ -62,17 +65,14 @@ namespace galdevtool
             // ReSharper disable once ConditionIsAlwaysTrueOrFalse
             Mode = isDebugBuild ? RunMode.Development : RunMode.Production;
 
-            if (Environment.GetCommandLineArgs().Intersect(new List<string> { "--dev", "--debug", "Debug" }).Any())
-            {
+            if (Environment.GetCommandLineArgs().Intersect(new List<string> { "--dev", "--debug", "Debug" }).Any()) {
                 Mode = RunMode.Development;
             }
-            if (Environment.GetCommandLineArgs().Intersect(new List<string> { "--prod", "--production", "--release", "Release" }).Any())
-            {
+            if (Environment.GetCommandLineArgs().Intersect(new List<string> { "--prod", "--production", "--release", "Release" }).Any()) {
                 Mode = RunMode.Production;
             }
 
-            switch (Mode)
-            {
+            switch (Mode) {
                 case RunMode.Development:
                     //LogLevels = "Error,Warning,Debug,User,Info";
                     LogLevels = "Error,Warning,Debug,User,Info,Verbose";
@@ -89,8 +89,7 @@ namespace galdevtool
 
         protected override void HandleCommandlineParameter(string arg)
         {
-            switch (arg)
-            {
+            switch (arg) {
                 case "-?":
                 case "/?":
                 case "--help":
@@ -104,23 +103,19 @@ namespace galdevtool
                 case "Yaml2Bigfile":
                     Yaml2Bigfile = true;
                     break;
+                case "CountCharacters":
+                    CountCharacters = true;
+                    break;
                 default:
                     var kv = arg.Split(new[] { '=' }, 2);
-                    if (kv.Length == 2)
-                    {
-                        try
-                        {
-                            if (Set(kv[0], kv[1]))
-                            {
+                    if (kv.Length == 2) {
+                        try {
+                            if (Set(kv[0], kv[1])) {
                                 Log.Info($"{kv[0]}={kv[1]}");
-                            }
-                            else
-                            {
+                            } else {
                                 Log.Warning($"No such option: {arg}");
                             }
-                        }
-                        catch (Exception ex)
-                        {
+                        } catch (Exception ex) {
                             Log.Warning(ex);
                         }
                     }

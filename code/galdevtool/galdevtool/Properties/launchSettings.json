@@ -1,7 +1,8 @@
 {
   "profiles": {
     "galdevtool": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "CountCharacters CountCharactersDataFolderPath=\"C:\\Heiner\\github-galdev\\data\\de\" WaitOnFinished=1 LogLevels=User"
     }
   }
 }
