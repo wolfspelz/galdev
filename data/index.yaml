@@ -60,6 +60,9 @@ languages:
       war: War
       wonder: Wonders
 translations:
+  Apes:
+    de: 2052_Primaten
+    en: 2052_CivilRightsForPrimates
   Ecoterrorism:
     de: 2060_Oekoterrorismus
     en: 2060_Ecoterrorism
