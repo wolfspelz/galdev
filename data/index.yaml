@@ -60,6 +60,9 @@ languages:
       war: War
       wonder: Wonders
 translations:
+  NeuroImplant:
+    de: 2051_Neuroimplantat
+    en: 2051_NeuroImplant
   Apes:
     de: 2052_Primaten
     en: 2052_CivilRightsForPrimates
