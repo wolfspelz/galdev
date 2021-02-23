@@ -108,3 +108,126 @@ translations:
   Drachenlegenden:
     de: 3296_Drachenlegenden
     en: 3296_Dragonlegends
+  LifeThemes:
+    de: 2115_LifeTheme.yaml
+    en: 2115_LifeThemes.yaml
+  Darwin:
+    de: 2128_Darwin.yaml
+    en: 2128_Darwin.yaml
+  Yksityiskohta:
+    de: 2165_Yksitis.yaml
+    en: 2165_Yksityiskohta.yaml
+  Udyama:
+    de: 2168_Udyama.yaml
+    en: 2168_Udyama.yaml
+  AsteroidHeist:
+    de: 2174_Goldregen.yaml
+    en: 2174_AsteroidHeist.yaml
+  100000InSpace:
+    de: 2191_Asteroidenbergbau.yaml
+    en: 2191_100000InSpace.yaml
+  DubaiCosmodrome:
+    de: 2199_Dubai.yaml
+    en: 2199_DubaiCosmodrome.yaml
+  TetrachromaticVision:
+    de: 2204_Entdeckung_der_tetrachromaten_.yaml
+    en: 2204_TetrachromaticVision.yaml
+  NinthPlanet:
+    de: 2390_Planet9.yaml
+    en: 2390_NinthPlanet.yaml
+  ScumFestival:
+    de: 2445_ScumFestival.yaml
+    en: 2445_ScumFestival.yaml
+  Tranquility500:
+    de: 2469_Tranquility500.yaml
+    en: 2469_Tranquility500.yaml
+  FashionWar:
+    de: 2471_FashionWar.yaml
+    en: 2471_FashionWar.yaml
+  AutoimmuneMeme:
+    de: 2475_AutoimmunMem.yaml
+    en: 2475_AutoimmuneMeme.yaml
+  Raid:
+    de: 2478_Razzia.yaml
+    en: 2478_Raid.yaml
+  Oumuamua:
+    de: 2493_Oumuamua.yaml
+    en: 2493_Oumuamua.yaml
+  MemeVirusConspiracy:
+    de: 2495_Jamaliya.yaml
+    en: 2495_MemeVirusConspiracy.yaml
+  HeroOfTheFederation:
+    de: 2526_Hrycyszyn.yaml
+    en: 2526_HeroOfTheFederation.yaml
+  OuterSystemWipe:
+    de: 2532_DilanWipe.yaml
+    en: 2532_OuterSystemWipe.yaml
+  TragedyOfCobol:
+    de: 2535_Cobol1.yaml
+    en: 2535_TragedyOfCobol.yaml
+  Vladivostok:
+    de: 2557_Wladiwostok.yaml
+    en: 2557_Vladivostok.yaml
+  ArtuDomain:
+    de: 2574_ArtuDomaene.yaml
+    en: 2574_ArtuDomain.yaml
+  GroupAssociation:
+    de: 2580_Teamspirit.yaml
+    en: 2580_GroupAssociation.yaml
+  ShipPurchase:
+    de: 2603_ThorisSchiff.yaml
+    en: 2603_ShipPurchase.yaml
+  AdministrativeProcess:
+    de: 2626_Sektorzentrum.yaml
+    en: 2626_AdministrativeProcess.yaml
+  ChanyakaConspiracy:
+    de: 2630_Chanakya.yaml
+    en: 2630_ChanyakaConspiracy.yaml
+  UltraMetals:
+    de: 2668_Draco.yaml
+    en: 2668_UltraMetals.yaml
+  AncientRobots:
+    de: 2681_Solberg.yaml
+    en: 2681_AncientRobots.yaml
+  ExecutiveDecision:
+    de: 2750_Decision.yaml
+    en: 2750_ExecutiveDecision.yaml
+  Yaris:
+    de: 2786_Yaris.yaml
+    en: 2786_Yaris.yaml
+  Contour:
+    de: 2791_Contour.yaml
+    en: 2791_Contour.yaml
+  Prophet:
+    de: 2794_Hro.yaml
+    en: 2794_Prophet.yaml
+  QueenMarduk:
+    de: 2949_KoeniginMarduk.yaml
+    en: 2949_QueenMarduk.yaml
+  FeudalConspiracy:
+    de: 2956_Chaosmanagement.yaml
+    en: 2956_FeudalConspiracy.yaml
+  Tranquility1000:
+    de: 2969_Millennium.yaml
+    en: 2969_Tranquility1000.yaml
+  Utho:
+    de: 2997_Utho.yaml
+    en: 2997_Utho.yaml
+  IntelligentGalaxies:
+    de: 3042_Simba.yaml
+    en: 3042_IntelligentGalaxies.yaml
+  Solos:
+    de: 3050_Solos.yaml
+    en: 3050_Solos.yaml
+  WarringSwarms:
+    de: 3061_Krrz.yaml
+    en: 3061_WarringSwarms.yaml
+  MoonUprising:
+    de: 3116_Shackleton.yaml
+    en: 3116_MoonUprising.yaml
+  Supernova:
+    de: 3308_Supernova.yaml
+    en: 3308_Supernova.yaml
+  ControversyGate:
+    de: 3353_Das_Tor_der_Kontroverse.yaml
+    en: 3353_ControversyGate.yaml
