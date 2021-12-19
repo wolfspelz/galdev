@@ -201,6 +201,9 @@ translations:
   Prophet:
     de: 2794_Hro.yaml
     en: 2794_Prophet.yaml
+  FTLRailgun:
+    de: 2915_FTLRailgun.yaml
+    en: 2915_FTLRailgun.yaml
   QueenMarduk:
     de: 2949_KoeniginMarduk.yaml
     en: 2949_QueenMarduk.yaml
