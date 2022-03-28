@@ -273,9 +273,9 @@ namespace JsonPath.Test
             var json = Node.FromJson(data);
 
             // Assert
-            Node lastListItem = null;
-            string lastMapItemKey = null;
-            Node lastMapItemValue = null;
+            Node? lastListItem = null;
+            string? lastMapItemKey = null;
+            Node? lastMapItemValue = null;
             foreach (var item in json.List) {
                 lastListItem = item;
             }
@@ -285,10 +285,10 @@ namespace JsonPath.Test
             }
 
             // ReSharper disable once PossibleNullReferenceException
-            Assert.AreEqual(lastListItem.Dictionary.Count, 2);
+            Assert.AreEqual(lastListItem?.Dictionary.Count, 2);
             Assert.AreEqual(lastMapItemKey, "dFloat");
             // ReSharper disable once PossibleNullReferenceException
-            Assert.AreEqual(lastMapItemValue.AsFloat, 3.14159265358979323);
+            Assert.AreEqual(lastMapItemValue?.AsFloat, 3.14159265358979323);
 
             // Act/Assert
             Assert.AreEqual(json.List.ElementAt(0).Dictionary.ElementAt(0).Key, "aInt");

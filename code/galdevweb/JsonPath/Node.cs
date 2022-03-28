@@ -243,8 +243,6 @@ namespace JsonPath
             }
         }
 
-        public string Key { get; set; }
-
         public Node(Type type)
         {
             _type = type;
@@ -270,6 +268,9 @@ namespace JsonPath
                     break;
                 case Type.Date:
                     Value = new DateTime();
+                    break;
+                default:
+                    Value = 0;
                     break;
             }
         }
@@ -324,7 +325,7 @@ namespace JsonPath
         {
             var node = new Node(Type.Dictionary);
             foreach (var pair in dict) {
-                var child = (Node)null;
+                Node child;
                 var value = pair.Value;
 
                 if (value is string s) {
@@ -348,7 +349,7 @@ namespace JsonPath
                 } else if (value == null) {
                     child = new Node(Type.Empty);
                 } else {
-                    child = Node.From(value.ToString());
+                    child = Node.From($"Unhandled type={value.GetType().Name}");
 
                     // if ToJson exists
                     //   child = Node.From(value.ToJson());
@@ -515,7 +516,7 @@ namespace JsonPath
                 return node;
             } else if (IsList) {
                 var node = new Node(_type);
-                foreach (var child in AsList.OrderBy(kv => kv.Key)) {
+                foreach (var child in AsList.OrderBy(n => n.AsString)) {
                     node.AsList.Add(child.Normalized());
                 }
                 return node;
