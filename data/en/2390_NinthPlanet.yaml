@@ -2,17 +2,14 @@ AssertUtf8: ä
 Name: NinthPlanet
 Year: 2390
 Title: Expedition to the Ninth Planet 
-Short: SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT
-Summary: SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY 
-Headline: "HEADLINE HEADLINE: SUBHEADLINE SUBHEADLINE SUBHEADLINE"
-Post: "YEAR TITLE TITLE TITLE TITLE TITLE. SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT.. Mehr: http://jmp1.de/hYEAR"
-Image: NAME.jpg
-Postimage: NAME.jpg
-Smallimage: NAME-100x70.jpg
+Short: Scientists discover a giant planet at the fringe of the solar system. Then the spaceship drive fails...
+Headline: "Planet 9: An Icy Wonderland in the Darkness"
+Post: "2390 Planet 9: An Icy Wonderland in the Darkness. Scientists discover a giant planet at the fringe of the solar system. Then the spaceship drive fails.. Mehr: http://jmp1.de/e2390"
+Image: en_NinthPlanet.jpg
 Author: Heiner Wolf
 Translation: DeepL, Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
-Topics: [accident, adventure, ai, aliens, catastrophe, conspiracy, crime, culture, discovery, ecology, economy, epidemic, event, luck, people, philosophy, politics, science, spaceflight, statistics, technology, things, upgrades, visitors, war, wonder]
+Tags: [science, interplanetary, spaceship, FTL, accident]
+Topics: [adventure, discovery, accident]
 Text: |
   --- Private message ---
   Calixtos Kamikatsu on board the Gahara Sthaan IX on the return flight from Pontos, planet 9, at the 1000 AU mark, year 2390:
