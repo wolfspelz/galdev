@@ -2,17 +2,14 @@ AssertUtf8: ä
 Name: AsteroidHeist
 Year: 2174
 Title: Asteroid Heist
-Short: SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT
-Summary: SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY 
-Headline: "HEADLINE HEADLINE: SUBHEADLINE SUBHEADLINE SUBHEADLINE"
-Post: "YEAR TITLE TITLE TITLE TITLE TITLE. SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT.. Mehr: http://jmp1.de/hYEAR"
-Image: NAME.jpg
-Postimage: NAME.jpg
-Smallimage: NAME-100x70.jpg
+Short: Thieves are stealing an entire asteroid in earth orbit. Then they let it rain gold from the skies.
+Headline: "Asteroid Heist: The biggest theft of the century"
+Post: "2174 Asteroid Heist. Thieves are stealing an entire asteroid in earth orbit. Then they let it rain gold from the skies... more: http://jmp1.de/e2174"
+Image: en_AsteroidHeist.jpg
 Author: Heiner Wolf
 Translation: DeepL, Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
-Topics: [accident, adventure, ai, aliens, catastrophe, conspiracy, crime, culture, discovery, ecology, economy, epidemic, event, luck, people, philosophy, politics, science, spaceflight, statistics, technology, things, upgrades, visitors, war, wonder]
+Tags: [asteroid, theft, orbit, gold, crash]
+Topics: [event, crime, economy]
 Text: |
   The biggest theft of the century and the "Rain of Gold".
   In 2172, the asteroid mining company Seren-Enterprises maneuvers the core of a small comet from a near-Earth solar Orbit into high Earth orbit. The comet is 90 meters in size. It contains two million metric tons of water ice and an exceptionally high proportion of rare earths. The whole operation takes 14 years with fusion flare engines consuming most of the comet's ice.

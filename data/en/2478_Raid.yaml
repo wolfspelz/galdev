@@ -2,17 +2,14 @@ AssertUtf8: ä
 Name: Raid
 Year: 2478
 Title: Big Raid in the Asteroid Belt 
-Short: SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT
-Summary: SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY 
-Headline: "HEADLINE HEADLINE: SUBHEADLINE SUBHEADLINE SUBHEADLINE"
-Post: "YEAR TITLE TITLE TITLE TITLE TITLE. SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT.. Mehr: http://jmp1.de/hYEAR"
-Image: NAME.jpg
-Postimage: NAME.jpg
-Smallimage: NAME-100x70.jpg
+Short: Police raid an illegal drug lab and bioroid fabrication facility. The police drones have to overcome fierce resistance, but then a leading AI of the Trojan mafia can be captured
+Headline: "Raid in the Asteroid Belt: Police break up drug ring"
+Post: "2478 Big Raid in the Asteroid Belt. Police raid an illegal drug lab and bioroid fabrication facility. The police drones have to overcome fierce resistance, but then a leading AI of the Trojan mafia can be captured.. more: http://jmp1.de/e2478"
+Image: en_Raid.jpg
 Author: Heiner Wolf
 Translation: DeepL, Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
-Topics: [accident, adventure, ai, aliens, catastrophe, conspiracy, crime, culture, discovery, ecology, economy, epidemic, event, luck, people, philosophy, politics, science, spaceflight, statistics, technology, things, upgrades, visitors, war, wonder]
+Tags: [asteroids, police, KA, bioroid, trojans, crime]
+Topics: [adventure, people, crime]
 Text: |
   Report of a police raid by Norden Esstisch, CO (commanding officer) SWAT CEA (Cloning Enforcement Agency), Iris City, 2478:
   Our target was an old refueling station on asteroid 14387. The station had been abandoned 15 years ago if the available data is to be believed. At least that was the last recorded refueling. After that there have been no more registered visits. Statistical traffic analysis and other indirect evidence indicated that 14387 was operating as an illegal manufacturing facility. Investigations last year related to a final homicide at Vesta Prime were along the same lines. This particular operation came about after an illegal warehouse of bioroids was busted on Vesta Prime. The flight data acquired in the process contained indirect hints at the immediate vicinity of 14387.
@@ -20,7 +17,7 @@ Text: |
   Anyway, at 100 klicks distance, we sent three short range reconnaissance probes. They moved into their orbits and began active operations three minutes before we arrived. Two of them were caught immediately. The third at least sent us a scan before it was neutralized. So we were warned. But so were they. It was also clear that they had had enough time to organize their defenses. No surprise effect then. But after brief consultation with the other section leaders, I decided to continue the mission anyway.
   I ordered to fire at the defensive positions with targeting data based on the single orbital scan. This attack was conducted by the AKV offensive drones and the shuttles' launchers. Then we sent down a platoon of melee combat drones. Unfortunately, one of the two shuttles was shot down on approach. The second dropped its drones getting hit after takeoff. As the platoon met with strong resistance from automatic guns, we had to abandon it and neutralized the ground defenses with the AKV. Then three shuttles dropped a full company of our combat drones. The drones entered the complex under weak defensive fire, followed by nine contact specialists in battle armor from three directions. One of the SWAT teams picked up the only human in the complex. Her name was Alaiia Zucca. She killed herself before she could be immobilized. Zucca's brain was too badly damaged for ghosting, but our info-war guys were more successful. After the infiltrators gained us access, we were able to capture three AIs. One AI named Haratani Zindato-Vilmouth, who apparently was leading the operation, contained valuable information about the syndicate's structures and distribution networks. Zucca, the woman, was presumably only serving in a subordinate capacity.
   We found production facilities for bioroids and also several drug synthesizers, mainly Pitchou and Darkstar derivatives. The bioroids were in various stages of production, from cell cultures of tissues, to full grown adults. Some were sitting in the programmers when the contact units entered. The whole thing looked like a production line running at full capacity. Unfortunately, 15 bioroids suffered explosive decompression when the second wave of drones broke open the access. We were able to rescue 22 bioroids. Of these, ten were for various service functions (see lab analysis), and the rest were apparently pleasure models.
-  Overall, the mission can be considered a success. The high drone losses are to be regretted. This was due to incomplete data. There were no serious personal injuries. We could capture several suspected rouge AIs in senior positions. The main objective, stopping illegal bioroid production was achieved. 
+  Overall, the mission can be considered a success. The high drone losses are to be regretted. This was due to incomplete data. There were no serious personal injuries. We could capture several suspected rogue AIs in senior positions. The main objective, stopping illegal bioroid production was achieved. 
   Material used and personnel involved:
   - Material: 3 personnel carriers, 5 transporters for equipment, 180 combat drones (1:3 Defender/Enforcer mix) in 2 companies, 4 Vestigo short range reconnaissance probes, 1 PointDev3K missile defense system, 2 AKV offensive units, 3 EM platforms, 6 shuttles (2 Tukker and 4 KQ3), 3 short-range missile launchers, 16 battle armor, 2 medbots, 1 autodoc.
   - Personnel: mission command: 3, drone operator: 5, combat units crew: 6, armored contact personnel: 9 in 3 SWAT teams, medics: 2, info-penetration specialists: 2, info-analysts: 3.
