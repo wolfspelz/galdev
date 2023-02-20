@@ -2,17 +2,16 @@ AssertUtf8: ä
 Name: 2956
 Year: FeudalConspiracy
 Title: A Feudal Conspiracy 
-Short: SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT
-Summary: SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY SUMMARY 
-Headline: "HEADLINE HEADLINE: SUBHEADLINE SUBHEADLINE SUBHEADLINE"
-Post: "YEAR TITLE TITLE TITLE TITLE TITLE. SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT SHORT.. Mehr: http://jmp1.de/hYEAR"
-Image: NAME.jpg
-Postimage: NAME.jpg
-Smallimage: NAME-100x70.jpg
+Short: They are specialists in managing chaotic systems. It's an important industry with high profits. Until one day they fall victim to their success. Their freedom falls victim to a conspiracy...
+Headline: "Managers of Chaos: victims of a conspiracy"
+Post: "2956 A Feudal Conspiracy. They are specialists in managing chaotic systems. It's an important industry with high profits. Until one day they fall victim to their success. Their freedom falls victim to a conspiracy... Mehr: http://jmp1.de/hYEAR"
+Image: FeudalConspiracy.jpg
+Postimage: FeudalConspiracy.jpg
+Smallimage: FeudalConspiracy-100x70.jpg
 Author: Heiner Wolf
 Translation: DeepL, Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
-Topics: [accident, adventure, ai, aliens, catastrophe, conspiracy, crime, culture, discovery, ecology, economy, epidemic, event, luck, people, philosophy, politics, science, spaceflight, statistics, technology, things, upgrades, visitors, war, wonder]
+Tags: [industry, war, high-tech, chaos, conspiracy, accident]
+Topics: [conspiracy, politics]
 Text2Graphics: 
   - complex machinery with control screen in a space station, sci fi, future technology, industrial setting, high detail, hyper realistic, octan render, unreal engine --ar 16:9
 Text: |
