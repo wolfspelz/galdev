@@ -84,6 +84,9 @@ translations:
   Scale:
     de: 2135_Scale
     en: 2135_Scale
+  AsteroidMining:
+    de: 2155_AsteroidMining
+    en: 2155_AsteroidMining
   OktopusSapiens: 
     de: 2208_Oktopus
     en: 2208_OctopusSapiens
