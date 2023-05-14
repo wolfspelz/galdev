@@ -81,9 +81,12 @@ translations:
   Fusang:
     de: 2091_Fusang
     en: 2091_Fusang
- PopulationMinimum:
+  PopulationMinimum:
     de: 2094_PopulationMinimum
     en: 2094_PopulationMinimum
+  1000InSpace:
+    de: 2136_1000InSpace
+    en: 2136_1000InSpace
   Scale:
     de: 2135_Scale
     en: 2135_Scale
