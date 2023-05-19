@@ -93,6 +93,9 @@ translations:
   AsteroidMining:
     de: 2155_AsteroidMining
     en: 2155_AsteroidMining
+  SpacePatrol:
+    de: 2158_SpacePatrol
+    en: 2158_SpacePatrol
   OktopusSapiens: 
     de: 2208_Oktopus
     en: 2208_OctopusSapiens
@@ -109,7 +112,7 @@ translations:
     de: 2648_Interia
     en: 2648_Interia
   Gee: 
-    de: 2648_Gee
+    de: 2725_Gee
     en: 2725_Gee
   Quantenkontinuum: 
     de: 3365_Quantenkontinuum
