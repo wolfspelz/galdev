@@ -135,6 +135,9 @@ translations:
   AsteroidHeist:
     de: 2174_Goldregen.yaml
     en: 2174_AsteroidHeist.yaml
+  ServizioStazione:
+    de: 2179_ServizioStazione.yaml
+    en: 2179_ServizioStazione.yaml
   100000InSpace:
     de: 2191_Asteroidenbergbau.yaml
     en: 2191_100000InSpace.yaml
