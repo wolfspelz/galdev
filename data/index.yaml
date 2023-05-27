@@ -138,6 +138,9 @@ translations:
   ServizioStazione:
     de: 2179_ServizioStazione.yaml
     en: 2179_ServizioStazione.yaml
+  EndVenusTerraforming:
+    de: 2182_EndVenusTerraforming.yaml
+    en: 2182_EndVenusTerraforming.yaml
   100000InSpace:
     de: 2191_Asteroidenbergbau.yaml
     en: 2191_100000InSpace.yaml
