@@ -1,0 +1,14 @@
+﻿<!-- Begin MarkdownConverter -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+<script>
+    var converter = new showdown.Converter({
+        noHeaderId: true,
+        headerLevelStart: 4,
+        simplifiedAutoLink: true,
+        tables: true,
+        requireSpaceBeforeHeadingText: true,
+        //openLinksInNewWindow: true,
+    });
+    $('#iTarget').html(converter.makeHtml($('#iSource').text()));
+</script>
+<!-- End MarkdownConverter -->

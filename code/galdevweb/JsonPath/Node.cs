@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Globalization;
-using System.Linq;
 
 namespace JsonPath
 {
@@ -82,8 +79,8 @@ namespace JsonPath
         public DateTime Date => AsDate;
 
         // For Xml
-        public Node Name => this[Xml.Name];
-        public Node Text => this[Xml.Text];
+        public string Name => this[Xml.Name].AsString;
+        public string Text => this[Xml.Text].AsString;
         public Dictionary Attributes => this[Xml.Attributes];
         public List Children => this[Xml.Children];
 
@@ -282,7 +279,12 @@ namespace JsonPath
 
         public static Node FromXml(string xml, XmlDeserializerOptions? options = null)
         {
-            return new XmlDeserializer().Parse(xml, options);
+            return new XmlDeserializer(options).Parse(xml);
+        }
+
+        public static Node FromKeyValueLf(string data)
+        {
+            return new KeyValueLfDeserializer().Parse(data);
         }
 
         public static Node From(Node n) { return new Node(n._type) { Value = n.Value }; }
@@ -326,7 +328,7 @@ namespace JsonPath
             var node = new Node(Type.Dictionary);
             foreach (var pair in dict) {
                 Node child;
-                var value = pair.Value;
+                object value = pair.Value;
 
                 if (value is string s) {
                     child = Node.From(s);
@@ -342,14 +344,14 @@ namespace JsonPath
                     child = Node.From(b);
                 } else if (value is DateTime dt) {
                     child = Node.From(dt);
-                //} else if (value is IEnumerable<object> valueIEnumerable) {
-                //    child = Node.From(valueIEnumerable);
+                    //} else if (value is IEnumerable<object> valueIEnumerable) {
+                    //    child = Node.From(valueIEnumerable);
                 } else if (value is IDictionary<string, object> valueIDictionary) {
                     child = Node.From(valueIDictionary);
                 } else if (value == null) {
                     child = new Node(Type.Empty);
                 } else {
-                    child = Node.From($"Unhandled type={value.GetType().Name}");
+                    child = Node.From(value.ToString() ?? "");
 
                     // if ToJson exists
                     //   child = Node.From(value.ToJson());

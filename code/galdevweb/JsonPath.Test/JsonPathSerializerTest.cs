@@ -10,7 +10,7 @@ namespace JsonPath.Test
     public class JsonPathSerializerTest
     {
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_Serializer_output()
         {
             // Arrange
@@ -32,7 +32,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void Serializes_array_of_dictionary()
         {
             // Arrange
@@ -47,7 +47,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void ToJavascript_creates_human_readable_JS_with_few_double_quotes()
         {
             // Arrange
@@ -62,7 +62,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void ToJavascript_creates_valid_JS_for_weird_keys()
         {
             // Arrange
@@ -103,7 +103,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void IsGoodKey()
         {
             Assert.IsTrue(JsonPath.Serializer.IsGoodKey("a"));
@@ -131,7 +131,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void Defaults_to_double_quotes_and_quoted_keys_and_no_formatting()
         {
             // Arrange
@@ -146,7 +146,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathSerializerTest")]
+        [TestCategory("JsonPath")]
         public void Serializes_deserialized_data_with_added_node()
         {
             // Arrange

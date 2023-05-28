@@ -9,7 +9,7 @@ namespace JsonPath.Test
     public class JsonPathNodeXmlTest
     {
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_XML()
         {
             // Arrange
@@ -33,7 +33,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_no_text_children()
         {
             // Arrange
@@ -55,7 +55,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_XML_style_aliases()
         {
             // Arrange
@@ -77,7 +77,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_Flatten()
         {
             // Arrange
@@ -99,7 +99,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_Flatten_avoid_collision()
         {
             // Arrange
@@ -124,7 +124,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeXmlTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_avatar_xml()
         {
             // Arrange

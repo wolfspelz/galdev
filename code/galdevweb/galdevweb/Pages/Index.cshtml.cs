@@ -1,20 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace galdevweb.Pages
+﻿namespace GaldevWeb.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexModel : AppPageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public string Test = "A";
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+        public IndexModel(MyApp app) : base(app, "Index") { }
 
         public void OnGet()
         {
-
+            Test = RandomString.Alphanum(10);
         }
     }
 }
