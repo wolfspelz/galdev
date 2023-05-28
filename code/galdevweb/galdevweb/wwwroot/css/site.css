@@ -16,3 +16,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+body {
+    font-family: Consolas, Courier New, Courier, monospace;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}

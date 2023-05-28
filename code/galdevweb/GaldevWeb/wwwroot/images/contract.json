@@ -1,0 +1,8 @@
+{
+  "name": "Loot Places (for Adventurers)",
+  "description": "Metaverse Loot Places (for Adventurers). These tokens let you claim ownership of web based metaverse places AND they define individual properties for these places.",
+  "external_link": "https://www.weblin.io/LootPlaces",
+  "image": "https://www.weblin.io/images/lootplaces/contract.jpg",
+  "seller_fee_basis_points": 200,
+  "fee_recipient": "0x510F5dD4f91Ee303332B6EAC96bCCE510f05E0E2"
+}

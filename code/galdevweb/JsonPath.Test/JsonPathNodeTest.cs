@@ -9,7 +9,7 @@ namespace JsonPath.Test
     public class JsonPathNodeTest
     {
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_basic_types()
         {
             //var since = 43147.85388009260;
@@ -78,28 +78,28 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Converts_float_from_string_with_InvariantCulture()
         {
             Assert.AreEqual(3.14159265358979323, Node.FromJson("{\"a\":\"3.14159265358979323\"}").Dictionary.First().Value.AsFloat);
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Returns_empty_node_for_missing_dictionary_key()
         {
             Assert.AreEqual(0, Node.FromJson("{a:41}").AsDictionary.Get("b").AsInt);
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Returns_empty_node_for_missing_list_index()
         {
             Assert.AreEqual(0, Node.FromJson("[41,42]").AsList.Get(2).AsInt);
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Supports_alternative_notations_for_value_types()
         {
             // Arrange
@@ -135,7 +135,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Supports_alternative_notations_for_structures()
         {
             // Arrange
@@ -149,7 +149,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Supports_List_enumeration()
         {
             // Arrange
@@ -165,7 +165,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Supports_Dictionary_enumeration()
         {
             // Arrange
@@ -186,7 +186,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Node_From_string_string_Dictionary()
         {
             // Arrange
@@ -201,7 +201,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Node_From_string_long_Dictionary()
         {
             // Arrange
@@ -216,7 +216,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Supports_Linq()
         {
             // Arrange
@@ -231,7 +231,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Deserializes_a_typical_json_structure()
         {
             var data = @"
@@ -332,7 +332,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Patch()
         {
             var data = @"
@@ -529,7 +529,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         public void Dictionary_ctor()
         {
             // Arrange
@@ -547,7 +547,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0028:Simplify collection initialization", Justification = "<Pending>")]
         public void Dictionary_operatorNode()
         {
@@ -560,7 +560,7 @@ namespace JsonPath.Test
         }
 
         [TestMethod]
-        [TestCategory("JsonPathNodeTest")]
+        [TestCategory("JsonPath")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0028:Simplify collection initialization", Justification = "<Pending>")]
         public void List_operatorNode()
         {

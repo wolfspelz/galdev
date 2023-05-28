@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 
 namespace JsonPath.Test
 {
@@ -9,7 +6,7 @@ namespace JsonPath.Test
     public class JsonPathContentProviderTest
     {
         [TestMethod]
-        [TestCategory("JsonPathContentProviderTest")]
+        [TestCategory("JsonPath")]
         public void Survive_null_lang()
         {
             // Arrange

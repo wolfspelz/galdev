@@ -1,0 +1,29 @@
+{
+    "claim": {
+
+        "startBtnCaption": "Claim a Loot Place now...",
+        "startBtnCaptionRepeat": "Claim another Loot Place...",
+
+        "unknownError": "Claiming a Loot Place failed for unknown reason!",
+        "userCanceled": "Canceled.",
+        "insufficientFunds": "Insufficient funds!",
+        "success": "You successfully claimed a Loot Place!",
+        "successAfter": "You successfully claimed a Loot Place after {blocks} blocks!",
+        "successAfterS": "You successfully claimed a Loot Place after {blocks} block!",
+        "etherscanLabel": "Show on Etherscan >",
+
+        "walletExtensionNotFound": "You need the Metamask extension to claim a Loot Place!",
+        "walletExtensionDisappeared": "The Metamask extension has been disabled! You need it to claim a Loot Place!",
+        "walletExtensionConnecting": "Connecting Metamask...",
+        "walletExtensionConnectionFailed": "Connection to Metamask failed!",
+        "walletChainNotsupported": "Your Metamask needs to be on Main or Rinkeby chain to claim a Loot Place!",
+
+        "tokenFindFree": "Selecting a Loot Place to claim...",
+        "tokenNoFreeLeft": "All Loot Places have been claimed!",
+        "tokenClaiming": "Please confirm the transaction...",
+        "tokenAwaitingConfirmation": "Waiting for confirmation from the blockchain...",
+        "tokenAwaitingConfirmationSince": "Waiting for confirmation from the blockchain since {blocks} blocks...",
+        "tokenAwaitingConfirmationSinceS": "Waiting for confirmation from the blockchain since {blocks} block..."
+
+    }
+}
