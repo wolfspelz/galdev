@@ -1,7 +1,8 @@
-# Loot Places
+# Galactic Developments
 
 This is just a web site made with 
 - dotnet 6, 
+- JsonPath
 - docker, 
 - github ci/cd, 
 - dockerhub, 
@@ -10,4 +11,4 @@ This is just a web site made with
 
 Thanks all.
 
-https://www.lootplaces.com/
+https://www.galactic-developments.de/
