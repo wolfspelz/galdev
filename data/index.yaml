@@ -141,6 +141,9 @@ translations:
   EndVenusTerraforming:
     de: 2182_EndVenusTerraforming.yaml
     en: 2182_EndVenusTerraforming.yaml
+  MoonDeportations:
+    de: 2187_MoonDeportations.yaml
+    en: 2187_MoonDeportations.yaml
   100000InSpace:
     de: 2191_Asteroidenbergbau.yaml
     en: 2191_100000InSpace.yaml
