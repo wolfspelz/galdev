@@ -7,6 +7,7 @@ namespace GaldevWeb
         public MyApp App;
         public ICallbackLogger Log;
         public MyConfig Config;
+        public string UiCultureName { get; set; }
         public ITextProvider I18n;
 
         public AppPageModel(MyApp app, string textName)
@@ -14,7 +15,8 @@ namespace GaldevWeb
             App = app;
             Log = App.Log;
             Config = App.Config;
-            I18n = new TextProvider(new ReadonlyFileDataProvider(), App.Config.AppName, Thread.CurrentThread.CurrentUICulture.Name, textName);
+            UiCultureName = Thread.CurrentThread.CurrentUICulture.Name;
+            I18n = new TextProvider(new ReadonlyFileDataProvider(), App.Config.AppName, UiCultureName, textName);
         }
     }
 }

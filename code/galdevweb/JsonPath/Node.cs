@@ -272,14 +272,19 @@ namespace JsonPath
             }
         }
 
-        public static Node FromJson(string json)
+        public static Node FromJson(string json, DeserializerOptions? options = null)
         {
-            return Deserializer.FromJson(json, null);
+            return Deserializer.FromJson(json, options);
         }
 
         public static Node FromXml(string xml, XmlDeserializerOptions? options = null)
         {
             return new XmlDeserializer(options).Parse(xml);
+        }
+
+        public static Node FromYaml(string yaml)
+        {
+            return YamlDeserializer.Decode(yaml);
         }
 
         public static Node FromKeyValueLf(string data)
@@ -526,5 +531,6 @@ namespace JsonPath
                 return Node.From(AsString);
             }
         }
+
     }
 }
