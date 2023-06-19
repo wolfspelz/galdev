@@ -59,67 +59,67 @@ languages:
       visitors: Alien visitors
       war: War
       wonder: Wonders
-translations:
+entries:
   NeuroImplant:
-    de: 2051_Neuroimplantat
-    en: 2051_NeuroImplant
+    de: 2051_Neuroimplantat.yaml
+    en: 2051_NeuroImplant.yaml
   Apes:
-    de: 2052_Primaten
-    en: 2052_CivilRightsForPrimates
+    de: 2052_Primaten.yaml
+    en: 2052_CivilRightsForPrimates.yaml
   GariTata:
-    de: 2055_GariTata
-    en: 2055_GariTata
+    de: 2055_GariTata.yaml
+    en: 2055_GariTata.yaml
   Ecoterrorism:
-    de: 2060_Oekoterrorismus
-    en: 2060_Ecoterrorism
+    de: 2060_Oekoterrorismus.yaml
+    en: 2060_Ecoterrorism.yaml
   DeliveryBot:
-    de: 2071_PaketBot
-    en: 2071_DeliveryBot
+    de: 2071_PaketBot.yaml
+    en: 2071_DeliveryBot.yaml
   CodingKit:
-    de: 2081_Wachtang
-    en: 2081_CodingKit
+    de: 2081_Wachtang.yaml
+    en: 2081_CodingKit.yaml
   Fusang:
-    de: 2091_Fusang
-    en: 2091_Fusang
+    de: 2091_Fusang.yaml
+    en: 2091_Fusang.yaml
   PopulationMinimum:
-    de: 2094_PopulationMinimum
-    en: 2094_PopulationMinimum
+    de: 2094_PopulationMinimum.yaml
+    en: 2094_PopulationMinimum.yaml
   1000InSpace:
-    de: 2136_1000_in_Space
-    en: 2136_1000_in_Space
+    de: 2136_1000_in_Space.yaml
+    en: 2136_1000_in_Space.yaml
   Scale:
-    de: 2135_Scale
-    en: 2135_Scale
+    de: 2135_Scale.yaml
+    en: 2135_Scale.yaml
   AsteroidMining:
-    de: 2155_AsteroidMining
-    en: 2155_AsteroidMining
+    de: 2155_AsteroidMining.yaml
+    en: 2155_AsteroidMining.yaml
   SpacePatrol:
-    de: 2158_SpacePatrol
-    en: 2158_SpacePatrol
+    de: 2158_SpacePatrol.yaml
+    en: 2158_SpacePatrol.yaml
   OktopusSapiens: 
-    de: 2208_Oktopus
-    en: 2208_OctopusSapiens
+    de: 2208_Oktopus.yaml
+    en: 2208_OctopusSapiens.yaml
   FreierBereichVegas: 
-    de: 2359_Vegas
-    en: 2359_FreeAreaVegas
+    de: 2359_Vegas.yaml
+    en: 2359_FreeAreaVegas.yaml
   Mukhagni:
-    de: 2540_Mukhagni
-    en: 2540_Mukhagni
+    de: 2540_Mukhagni.yaml
+    en: 2540_Mukhagni.yaml
   ErsterBesuch: 
-    de: 2544_Ibadan
-    en: 2544_FirstVisit
+    de: 2544_Ibadan.yaml
+    en: 2544_FirstVisit.yaml
   Interia: 
-    de: 2648_Interia
-    en: 2648_Interia
+    de: 2648_Interia.yaml
+    en: 2648_Interia.yaml
   Gee: 
-    de: 2725_Gee
-    en: 2725_Gee
+    de: 2725_Gee.yaml
+    en: 2725_Gee.yaml
   Quantenkontinuum: 
-    de: 3365_Quantenkontinuum
-    en: 3365_QuantumContinuum
+    de: 3365_Quantenkontinuum.yaml
+    en: 3365_QuantumContinuum.yaml
   Drachenlegenden:
-    de: 3296_Drachenlegenden
-    en: 3296_Dragonlegends
+    de: 3296_Drachenlegenden.yaml
+    en: 3296_Dragonlegends.yaml
   LifeThemes:
     de: 2115_LifeTheme.yaml
     en: 2115_LifeThemes.yaml

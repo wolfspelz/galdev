@@ -282,9 +282,9 @@ namespace JsonPath
             return new XmlDeserializer(options).Parse(xml);
         }
 
-        public static Node FromYaml(string yaml)
+        public static Node FromYaml(string yaml, YamlDeserializer.Options? options = null)
         {
-            return YamlDeserializer.Decode(yaml);
+            return YamlDeserializer.Deserialize(yaml, options);
         }
 
         public static Node FromKeyValueLf(string data)
