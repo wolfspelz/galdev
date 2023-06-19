@@ -5,7 +5,7 @@ namespace JsonPath
 {
     public class DeserializerOptions
     {
-        public bool LowerCaseKeys = false;
+        public bool LowerCaseDictKeys = false;
     }
 
     public static class Deserializer
@@ -72,7 +72,7 @@ namespace JsonPath
             if (obj is JObject dict) {
                 var node = new Node(Node.Type.Dictionary);
                 foreach (var pair in dict) {
-                    var key = options.LowerCaseKeys ? pair.Key.ToLower() : pair.Key;
+                    var key = options.LowerCaseDictKeys ? pair.Key.ToLower() : pair.Key;
                     node.Dictionary.Add(key, NodeFromJsonObject(pair.Value ?? JToken.Parse("''"), options));
                 }
                 return node;

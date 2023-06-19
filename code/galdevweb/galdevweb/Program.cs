@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace GaldevWeb
 {
@@ -12,30 +13,42 @@ namespace GaldevWeb
             builder.Services.AddControllers();
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
+            builder.Services.AddLocalization();
+
+            builder.Services.AddMvc()
+              .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+              .AddDataAnnotationsLocalization();
+
+            builder.Services.Configure<RequestLocalizationOptions>(options => {
+                var supportedCultures = new[] { "en-US", "de-DE" };
+                options.SetDefaultCulture(supportedCultures[0])
+                    .AddSupportedCultures(supportedCultures)
+                    .AddSupportedUICultures(supportedCultures);
+            });
+
             builder.Services.AddSingleton(new MyApp { });
 
             var app = builder.Build();
 
-            if (!app.Environment.IsDevelopment())
-            {
+            if (!app.Environment.IsDevelopment()) {
                 app.UseExceptionHandler("/Error");
             }
             app.UseStaticFiles();
 
+            app.UseRequestLocalization(new[] { "en-US", "de-DE" }); // Sets Thread.CurrentThread.CurrentUICulture
+
+            app.UseCors();
             app.UseRouting();
-
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
-
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
+            });
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
             app.Run();
