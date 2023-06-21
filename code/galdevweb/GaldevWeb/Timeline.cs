@@ -67,6 +67,11 @@
                 entry.Summary = shortSummary;
             }
 
+            var image = entryNode["image"].AsString;
+            if (Is.Value(image)) {
+                entry.Image = $"{lang}/{image}";
+            }
+
             return entry;
         }
 

@@ -63,6 +63,8 @@ entries:
   NeuroImplant:
     de: 2051_Neuroimplantat.yaml
     en: 2051_NeuroImplant.yaml
+  2051c_Die_Weltbevölkerung_überschrei:
+    de: 2051c_Die_Weltbevölkerung_überschrei.yaml
   Apes:
     de: 2052_Primaten.yaml
     en: 2052_CivilRightsForPrimates.yaml
@@ -72,93 +74,345 @@ entries:
   Ecoterrorism:
     de: 2060_Oekoterrorismus.yaml
     en: 2060_Ecoterrorism.yaml
+  2060c_100_Menschen_leben_und_arbeite:
+    de: 2060c_100_Menschen_leben_und_arbeite.yaml
+  2061_DoomsdayCocktail:
+    de: 2061_DoomsdayCocktail.yaml
   DeliveryBot:
     de: 2071_PaketBot.yaml
     en: 2071_DeliveryBot.yaml
   CodingKit:
     de: 2081_Wachtang.yaml
     en: 2081_CodingKit.yaml
+  2090_AdaptiveZusammenfassung:
+    de: 2090_AdaptiveZusammenfassung.yaml
   Fusang:
     de: 2091_Fusang.yaml
     en: 2091_Fusang.yaml
   PopulationMinimum:
     de: 2094_PopulationMinimum.yaml
     en: 2094_PopulationMinimum.yaml
-  1000InSpace:
-    de: 2136_1000_in_Space.yaml
-    en: 2136_1000_in_Space.yaml
-  Scale:
-    de: 2135_Scale.yaml
-    en: 2135_Scale.yaml
-  AsteroidMining:
-    de: 2155_AsteroidMining.yaml
-    en: 2155_AsteroidMining.yaml
-  SpacePatrol:
-    de: 2158_SpacePatrol.yaml
-    en: 2158_SpacePatrol.yaml
-  OktopusSapiens: 
-    de: 2208_Oktopus.yaml
-    en: 2208_OctopusSapiens.yaml
-  FreierBereichVegas: 
-    de: 2359_Vegas.yaml
-    en: 2359_FreeAreaVegas.yaml
-  Mukhagni:
-    de: 2540_Mukhagni.yaml
-    en: 2540_Mukhagni.yaml
-  ErsterBesuch: 
-    de: 2544_Ibadan.yaml
-    en: 2544_FirstVisit.yaml
-  Interia: 
-    de: 2648_Interia.yaml
-    en: 2648_Interia.yaml
-  Gee: 
-    de: 2725_Gee.yaml
-    en: 2725_Gee.yaml
-  Quantenkontinuum: 
-    de: 3365_Quantenkontinuum.yaml
-    en: 3365_QuantumContinuum.yaml
-  Drachenlegenden:
-    de: 3296_Drachenlegenden.yaml
-    en: 3296_Dragonlegends.yaml
+  2101_Fusion:
+    de: 2101_Fusion.yaml
   LifeThemes:
     de: 2115_LifeTheme.yaml
     en: 2115_LifeThemes.yaml
   Darwin:
     de: 2128_Darwin.yaml
     en: 2128_Darwin.yaml
+  Scale:
+    de: 2135_Scale.yaml
+    en: 2135_Scale.yaml
+  1000InSpace:
+    de: 2136_1000_in_Space.yaml
+    en: 2136_1000_in_Space.yaml
+  2153_Eter_ein_neues_Paradigma_in_de:
+    de: 2153_Eter_ein_neues_Paradigma_in_de.yaml
+  2154_Gemini:
+    de: 2154_Gemini.yaml
+  AsteroidMining:
+    de: 2155_AsteroidMining.yaml
+    en: 2155_AsteroidMining.yaml
+  SpacePatrol:
+    de: 2158_SpacePatrol.yaml
+    en: 2158_SpacePatrol.yaml
+  2162_Erste_Austragung_der_modernen_:
+    de: 2162_Erste_Austragung_der_modernen_.yaml
   Yksityiskohta:
     de: 2165_Yksitis.yaml
     en: 2165_Yksityiskohta.yaml
   Udyama:
     de: 2168_Udyama.yaml
     en: 2168_Udyama.yaml
+  2170_Pilze:
+    de: 2170_Pilze.yaml
+  2171_Pandora_Artefakt:
+    de: 2171_Pandora_Artefakt.yaml
   AsteroidHeist:
     de: 2174_Goldregen.yaml
     en: 2174_AsteroidHeist.yaml
+  2176_Yurep:
+    de: 2176_Yurep.yaml
   ServizioStazione:
     de: 2179_ServizioStazione.yaml
     en: 2179_ServizioStazione.yaml
+  2181_Skotaphyll:
+    de: 2181_Skotaphyll.yaml
   EndVenusTerraforming:
     de: 2182_EndVenusTerraforming.yaml
     en: 2182_EndVenusTerraforming.yaml
+  2184_Erster_erfolgreicher_Upload_ei:
+    de: 2184_Erster_erfolgreicher_Upload_ei.yaml
   MoonDeportations:
     de: 2187_MoonDeportations.yaml
     en: 2187_MoonDeportations.yaml
+  2190_KopernikusStation:
+    de: 2190_KopernikusStation.yaml
   100000InSpace:
     de: 2191_Asteroidenbergbau.yaml
     en: 2191_100000InSpace.yaml
+  2192_Anschläge_von_radikalen_Neosoz:
+    de: 2192_Anschläge_von_radikalen_Neosoz.yaml
+  2194_SGQS:
+    de: 2194_SGQS.yaml
+  2197_Niederschlagung_des_Aufstands_:
+    de: 2197_Niederschlagung_des_Aufstands_.yaml
   DubaiCosmodrome:
     de: 2199_Dubai.yaml
     en: 2199_DubaiCosmodrome.yaml
+  2201_Duoyang:
+    de: 2201_Duoyang.yaml
+  2202_Virus:
+    de: 2202_Virus.yaml
   TetrachromaticVision:
     de: 2204_Entdeckung_der_tetrachromaten_.yaml
     en: 2204_TetrachromaticVision.yaml
+  2205_Unabhängigkeitserklärung_der_A:
+    de: 2205_Unabhängigkeitserklärung_der_A.yaml
+  OktopusSapiens: 
+    de: 2208_Oktopus.yaml
+    en: 2208_OctopusSapiens.yaml
+  2209_Zerstörung_einer_Strafgefangen:
+    de: 2209_Zerstörung_einer_Strafgefangen.yaml
+  2211_Freundschaftsvertrag_zwischen_:
+    de: 2211_Freundschaftsvertrag_zwischen_.yaml
+  2214_Dog:
+    de: 2214_Dog.yaml
+  2216_Erster_interplanetarer_Staat:
+    de: 2216_Erster_interplanetarer_Staat.yaml
+  2218_Die_größte_Raumtransportgesell:
+    de: 2218_Die_größte_Raumtransportgesell.yaml
+  2219_Taromka_Rettungsaktion:
+    de: 2219_Taromka_Rettungsaktion.yaml
+  2222_Erster_Piratenüberfall_auf_ein:
+    de: 2222_Erster_Piratenüberfall_auf_ein.yaml
+  2223_Die_SPATRAC_verweigert_einem_P:
+    de: 2223_Die_SPATRAC_verweigert_einem_P.yaml
+  2225_Wiederaufnahme_der_Terraformun:
+    de: 2225_Wiederaufnahme_der_Terraformun.yaml
+  2227_Weltspiel:
+    de: 2227_Weltspiel.yaml
+  2229_Der_energetische_Hohlleiter_wi:
+    de: 2229_Der_energetische_Hohlleiter_wi.yaml
+  2231_Unabhängigkeit_von_VegasLuna:
+    de: 2231_Unabhängigkeit_von_VegasLuna.yaml
+  2233_Lunar_Skyhook_Eine_Orbitalroto:
+    de: 2233_Lunar_Skyhook_Eine_Orbitalroto.yaml
+  2236_Eine_atomare_Explosion_zerstör:
+    de: 2236_Eine_atomare_Explosion_zerstör.yaml
+  2239_Big5:
+    de: 2239_Big5.yaml
+  2241_Beschluss_von_AntiTrustGesetze:
+    de: 2241_Beschluss_von_AntiTrustGesetze.yaml
+  2244_Bewaffneter_Kampf_zwischen_Sch:
+    de: 2244_Bewaffneter_Kampf_zwischen_Sch.yaml
+  2246_Enklave:
+    de: 2246_Enklave.yaml
+  2247_Raumpiraten_unterbrechen_den_V:
+    de: 2247_Raumpiraten_unterbrechen_den_V.yaml
+  2248_Zerstörung_der_GeminiKolonie_L:
+    de: 2248_Zerstörung_der_GeminiKolonie_L.yaml
+  2250_Nach_einer_20jährigen_Wachstum:
+    de: 2250_Nach_einer_20jährigen_Wachstum.yaml
+  2252_Weltfreundschaft:
+    de: 2252_Weltfreundschaft.yaml
+  2254_Reformversuche_des_Ratsministe:
+    de: 2254_Reformversuche_des_Ratsministe.yaml
+  2256_Putschversuch_der_Weltfreundsc:
+    de: 2256_Putschversuch_der_Weltfreundsc.yaml
+  2257_Dritter_amerikanischer_Bürgerk:
+    de: 2257_Dritter_amerikanischer_Bürgerk.yaml
+  2258_Machtübernahme_der_Weltfreunds:
+    de: 2258_Machtübernahme_der_Weltfreunds.yaml
+  2260_Kriegserklärung_der_Diktatoren:
+    de: 2260_Kriegserklärung_der_Diktatoren.yaml
+  2263_Befreiung_Kretas:
+    de: 2263_Befreiung_Kretas.yaml
+  2265_Oekomil:
+    de: 2265_Oekomil.yaml
+  2268_Piraten:
+    de: 2268_Piraten.yaml
+  2269_Am_dreihundertsten_Jahrestag_d:
+    de: 2269_Am_dreihundertsten_Jahrestag_d.yaml
+  2270_Blüte_der_interplanetaren_Zivi:
+    de: 2270_Blüte_der_interplanetaren_Zivi.yaml
+  2273_Unabhängigkeit_von_MarsTerrito:
+    de: 2273_Unabhängigkeit_von_MarsTerrito.yaml
+  2274_Lokaler_Ausbruch_unkontrollier:
+    de: 2274_Lokaler_Ausbruch_unkontrollier.yaml
+  2274c_Die_Weltbevölkerung_überschrei:
+    de: 2274c_Die_Weltbevölkerung_überschrei.yaml
+  2275_Vertrag_von_VegasLuna:
+    de: 2275_Vertrag_von_VegasLuna.yaml
+  2276_Raummodulation:
+    de: 2276_Raummodulation.yaml
+  2278_Free_Space_Treaty:
+    de: 2278_Free_Space_Treaty.yaml
+  2280_Konflikte_zwischen_Europa_und_:
+    de: 2280_Konflikte_zwischen_Europa_und_.yaml
+  2281_Gedankenabstraktum:
+    de: 2281_Gedankenabstraktum.yaml
+  2282_Gründung_der_japanischen_Repub:
+    de: 2282_Gründung_der_japanischen_Repub.yaml
+  2284_Separationsbeschluss_der_Erde:
+    de: 2284_Separationsbeschluss_der_Erde.yaml
+  2287_GrundarfjördurZilberstein_Theo:
+    de: 2287_GrundarfjördurZilberstein_Theo.yaml
+  2289_Ein_Orbitalrotor_für_die_Erde:
+    de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
+  2291_Ausschluss_der_Asteroidenbasis:
+    de: 2291_Ausschluss_der_Asteroidenbasis.yaml
+  2293_Expansionistenaufstand:
+    de: 2293_Expansionistenaufstand.yaml
+  2295_Eosix:
+    de: 2295_Eosix.yaml
+  2298_Handelskrieg_der_Palladischen_:
+    de: 2298_Handelskrieg_der_Palladischen_.yaml
+  2301_Beginn_der_JupiterSwingBy_Gebü:
+    de: 2301_Beginn_der_JupiterSwingBy_Gebü.yaml
+  2302_Neuorganisation_der_interplane:
+    de: 2302_Neuorganisation_der_interplane.yaml
+  2303_Putsch_der_Raumhändler_in_Sant:
+    de: 2303_Putsch_der_Raumhändler_in_Sant.yaml
+  2305_Onong:
+    de: 2305_Onong.yaml
+  2306_Zweiter_Mittelmeerkrieg:
+    de: 2306_Zweiter_Mittelmeerkrieg.yaml
+  2308_Friedenskonvention_der_Koaliti:
+    de: 2308_Friedenskonvention_der_Koaliti.yaml
+  2309_Nach_einem_Aufstand_auf_Vesta_:
+    de: 2309_Nach_einem_Aufstand_auf_Vesta_.yaml
+  2312_Entdeckung_des_KaioArtefakts:
+    de: 2312_Entdeckung_des_KaioArtefakts.yaml
+  2315_Ein_Raketenangriff_zerstört_zw:
+    de: 2315_Ein_Raketenangriff_zerstört_zw.yaml
+  2318_Erdunion:
+    de: 2318_Erdunion.yaml
+  2321_Selbstgewählte_Isolation_der_E:
+    de: 2321_Selbstgewählte_Isolation_der_E.yaml
+  2322_Kalter_Krieg:
+    de: 2322_Kalter_Krieg.yaml
+  2326_Kriegserklärung_an_die_Koaliti:
+    de: 2326_Kriegserklärung_an_die_Koaliti.yaml
+  2328_Rücknahme_der_Kriegserklärung:
+    de: 2328_Rücknahme_der_Kriegserklärung.yaml
+  2330_Konferenz_von_Quadrupol:
+    de: 2330_Konferenz_von_Quadrupol.yaml
+  2333_Die_Entwicklung_des_Konvertert:
+    de: 2333_Die_Entwicklung_des_Konvertert.yaml
+  2335_Übertragung_der_Verantwortung_:
+    de: 2335_Übertragung_der_Verantwortung_.yaml
+  2336_Aufgrund_wirtschaftlicher_Schw:
+    de: 2336_Aufgrund_wirtschaftlicher_Schw.yaml
+  2337_Übernahme_der_wiederaufgebaute:
+    de: 2337_Übernahme_der_wiederaufgebaute.yaml
+  2338_Mehrere_automatische_Tankstati:
+    de: 2338_Mehrere_automatische_Tankstati.yaml
+  2340_Neuausrichtung_der_Raummodulat:
+    de: 2340_Neuausrichtung_der_Raummodulat.yaml
+  2343_Erstmalige_Austragung_der_sola:
+    de: 2343_Erstmalige_Austragung_der_sola.yaml
+  2346_Faktische_Auflösung_der_Pallad:
+    de: 2346_Faktische_Auflösung_der_Pallad.yaml
+  2347_Die_mobile_Raumkolonie_Esperan:
+    de: 2347_Die_mobile_Raumkolonie_Esperan.yaml
+  2349_Omikron:
+    de: 2349_Omikron.yaml
+  2350_Aufstieg_Vestas:
+    de: 2350_Aufstieg_Vestas.yaml
+  2351_Baubeginn_des_Giant_Gravitic_I:
+    de: 2351_Baubeginn_des_Giant_Gravitic_I.yaml
+  2354_Friedliche_Eingliederung_von_V:
+    de: 2354_Friedliche_Eingliederung_von_V.yaml
+  2357_Fraktal:
+    de: 2357_Fraktal.yaml
+  FreierBereichVegas: 
+    de: 2359_Vegas.yaml
+    en: 2359_FreeAreaVegas.yaml
+  2363_Beginn_des_Baus_der_Weltraumst:
+    de: 2363_Beginn_des_Baus_der_Weltraumst.yaml
+  2366_Der_Nabenrat_von_VestaPrime_ve:
+    de: 2366_Der_Nabenrat_von_VestaPrime_ve.yaml
+  2369_MabesiKrise_Schwere_soziale_un:
+    de: 2369_MabesiKrise_Schwere_soziale_un.yaml
+  2370_Beginn_des_Spacedom_Baus:
+    de: 2370_Beginn_des_Spacedom_Baus.yaml
+  2372_Jupiterschutzabkommen:
+    de: 2372_Jupiterschutzabkommen.yaml
+  2374_Im_interplanetaren_Raum_leben_:
+    de: 2374_Im_interplanetaren_Raum_leben_.yaml
+  2375_Beim_Bruch_der_Hsjuang_Station:
+    de: 2375_Beim_Bruch_der_Hsjuang_Station.yaml
+  2376_Kopernikus:
+    de: 2376_Kopernikus.yaml
+  2379_Raumschiffe_mit_unkonventionel:
+    de: 2379_Raumschiffe_mit_unkonventionel.yaml
+  2382_Ein_Virus_befällt_weite_Teile_:
+    de: 2382_Ein_Virus_befällt_weite_Teile_.yaml
+  2383_Massenflucht_von_12_Millionen_:
+    de: 2383_Massenflucht_von_12_Millionen_.yaml
+  2384_Der_erste_Raumkrümmer_wird_als:
+    de: 2384_Der_erste_Raumkrümmer_wird_als.yaml
+  2387_Schwächung_der_solaren_Koaliti:
+    de: 2387_Schwächung_der_solaren_Koaliti.yaml
+  2389_Biostasis:
+    de: 2389_Biostasis.yaml
   NinthPlanet:
     de: 2390_Planet9.yaml
     en: 2390_NinthPlanet.yaml
+  2392_Schmerzen:
+    de: 2392_Schmerzen.yaml
+  2394_Starprobe:
+    de: 2394_Starprobe.yaml
+  2397_Bison:
+    de: 2397_Bison.yaml
+  2400_Raumkrieg_zwischen_Vesta_und_m:
+    de: 2400_Raumkrieg_zwischen_Vesta_und_m.yaml
+  2403_Savant:
+    de: 2403_Savant.yaml
+  2406_Erster_Flug_unter_Raummodulati:
+    de: 2406_Erster_Flug_unter_Raummodulati.yaml
+  2408_Der_Rat_der_Koalition_beschlie:
+    de: 2408_Der_Rat_der_Koalition_beschlie.yaml
+  2409_Nach_mehreren_schweren_Unfälle:
+    de: 2409_Nach_mehreren_schweren_Unfälle.yaml
+  2410_Kosmologie:
+    de: 2410_Kosmologie.yaml
+  2415_Der_ÜLVerkehr_steigt_im_innere:
+    de: 2415_Der_ÜLVerkehr_steigt_im_innere.yaml
+  2416_Offener_Ausbruch_der_Konfronta:
+    de: 2416_Offener_Ausbruch_der_Konfronta.yaml
+  2419_Unruhen_in_mehreren_Großstädte:
+    de: 2419_Unruhen_in_mehreren_Großstädte.yaml
+  2422_Schnellbahn:
+    de: 2422_Schnellbahn.yaml
+  2425_AngryCheetah:
+    de: 2425_AngryCheetah.yaml
+  2430_Isru:
+    de: 2430_Isru.yaml
+  2432_Die_Pallas_Domäne_besetzt_und_:
+    de: 2432_Die_Pallas_Domäne_besetzt_und_.yaml
+  2434_Ein_Schiff_entfernt_sich_inner:
+    de: 2434_Ein_Schiff_entfernt_sich_inner.yaml
+  2435_Sezession_des_Andenbundes:
+    de: 2435_Sezession_des_Andenbundes.yaml
+  2440_Zerstörung_der_Asteroidenbasis:
+    de: 2440_Zerstörung_der_Asteroidenbasis.yaml
   ScumFestival:
     de: 2445_ScumFestival.yaml
     en: 2445_ScumFestival.yaml
+  2449_Sogenannter_Putsch_der_Nabe_vo:
+    de: 2449_Sogenannter_Putsch_der_Nabe_vo.yaml
+  2453_Voyager-text:
+    de: 2453_Voyager-text.yaml
+  2458_Egalitaetsflug:
+    de: 2458_Egalitaetsflug.yaml
+  2460_Turnaround:
+    de: 2460_Turnaround.yaml
+  2463_Aufdeckung_der_NewplaceVerschw:
+    de: 2463_Aufdeckung_der_NewplaceVerschw.yaml
+  2466_Auswanderer:
+    de: 2466_Auswanderer.yaml
   Tranquility500:
     de: 2469_Tranquility500.yaml
     en: 2469_Tranquility500.yaml
@@ -171,60 +425,620 @@ entries:
   Raid:
     de: 2478_Razzia.yaml
     en: 2478_Raid.yaml
+  2482_Flug_der_Tanxian_Zhe_zum_Alpha:
+    de: 2482_Flug_der_Tanxian_Zhe_zum_Alpha.yaml
+  2484_Die_ehemalige_Führung_der_Pall:
+    de: 2484_Die_ehemalige_Führung_der_Pall.yaml
+  2487_Adic:
+    de: 2487_Adic.yaml
+  2491_Multitasking:
+    de: 2491_Multitasking.yaml
   Oumuamua:
     de: 2493_Oumuamua.yaml
     en: 2493_Oumuamua.yaml
   MemeVirusConspiracy:
     de: 2495_Jamaliya.yaml
     en: 2495_MemeVirusConspiracy.yaml
+  2497_Dilan:
+    de: 2497_Dilan.yaml
+  2501_Extraplanetar:
+    de: 2501_Extraplanetar.yaml
+  2503_Meteorkrater:
+    de: 2503_Meteorkrater.yaml
+  2506_Hephaistos:
+    de: 2506_Hephaistos.yaml
+  2511_MarcoPoloDilan:
+    de: 2511_MarcoPoloDilan.yaml
+  2515_Oxi:
+    de: 2515_Oxi.yaml
+  2518_LongShot:
+    de: 2518_LongShot.yaml
+  2520_Beginn_des_interstellaren_Hand:
+    de: 2520_Beginn_des_interstellaren_Hand.yaml
+  2523_Erste_interstellare_Kolonisten:
+    de: 2523_Erste_interstellare_Kolonisten.yaml
+  2525_Die_Marco_Polo_kehrt_von_ihrem:
+    de: 2525_Die_Marco_Polo_kehrt_von_ihrem.yaml
   HeroOfTheFederation:
     de: 2526_Hrycyszyn.yaml
     en: 2526_HeroOfTheFederation.yaml
+  2527_Die_gemeinsame_Handelsvertretu:
+    de: 2527_Die_gemeinsame_Handelsvertretu.yaml
+  2528_Verlust_eines_Fernhandelsraums:
+    de: 2528_Verlust_eines_Fernhandelsraums.yaml
+  2530_Ein_MaruiHandelsschiff_besucht:
+    de: 2530_Ein_MaruiHandelsschiff_besucht.yaml
   OuterSystemWipe:
     de: 2532_DilanWipe.yaml
     en: 2532_OuterSystemWipe.yaml
+  2533_Die_Erde_rüstet_auf:
+    de: 2533_Die_Erde_rüstet_auf.yaml
   TragedyOfCobol:
     de: 2535_Cobol1.yaml
     en: 2535_TragedyOfCobol.yaml
+  2536_Kollisionskurs:
+    de: 2536_Kollisionskurs.yaml
+  2538_Start_des_Fernraumschiffes_Kin:
+    de: 2538_Start_des_Fernraumschiffes_Kin.yaml
+  Mukhagni:
+    de: 2540_Mukhagni.yaml
+    en: 2540_Mukhagni.yaml
+  ErsterBesuch: 
+    de: 2544_Ibadan.yaml
+    en: 2544_FirstVisit.yaml
+  2547_Neustart_für_Cobol:
+    de: 2547_Neustart_für_Cobol.yaml
+  2548_Irdische_Truppen_besetzen_mit_:
+    de: 2548_Irdische_Truppen_besetzen_mit_.yaml
+  2549_Zwei_Interstellarschiffe_werde:
+    de: 2549_Zwei_Interstellarschiffe_werde.yaml
+  2550_Systemkrieg:
+    de: 2550_Systemkrieg.yaml
+  2552_Beginn_der_dauerhaften_Präsenz:
+    de: 2552_Beginn_der_dauerhaften_Präsenz.yaml
+  2554_Befreiung_von_VegasLuna_durch_:
+    de: 2554_Befreiung_von_VegasLuna_durch_.yaml
+  2555_Nur_noch_drei_Fernraumschiffe_:
+    de: 2555_Nur_noch_drei_Fernraumschiffe_.yaml
+  2556_Zerstörung_der_GeminiL5_Koloni:
+    de: 2556_Zerstörung_der_GeminiL5_Koloni.yaml
   Vladivostok:
     de: 2557_Wladiwostok.yaml
     en: 2557_Vladivostok.yaml
+  2560_Exotechnologie:
+    de: 2560_Exotechnologie.yaml
+  2561_Kinetische_Bombardierung_von_I:
+    de: 2561_Kinetische_Bombardierung_von_I.yaml
+  2562_Friedensvertrag_der_Koalition_:
+    de: 2562_Friedensvertrag_der_Koalition_.yaml
+  2563_Sieg_des_Andenbundes_in_den_Sc:
+    de: 2563_Sieg_des_Andenbundes_in_den_Sc.yaml
+  2564_100_Millionen_leben_im_Sonnens:
+    de: 2564_100_Millionen_leben_im_Sonnens.yaml
+  2565_Kriege_zwischen_expansionistis:
+    de: 2565_Kriege_zwischen_expansionistis.yaml
+  2568_Auf_der_Erde_zeichnet_sich_ab_:
+    de: 2568_Auf_der_Erde_zeichnet_sich_ab_.yaml
+  2570_Waffenstillstand_in_Südchina_S:
+    de: 2570_Waffenstillstand_in_Südchina_S.yaml
+  2571_Das_Konzil_von_Kalkutta_entwic:
+    de: 2571_Das_Konzil_von_Kalkutta_entwic.yaml
   ArtuDomain:
     de: 2574_ArtuDomaene.yaml
     en: 2574_ArtuDomain.yaml
+  2575_Siedlung_auf_Kullur:
+    de: 2575_Siedlung_auf_Kullur.yaml
+  2576_Siedlung_auf_Liberia:
+    de: 2576_Siedlung_auf_Liberia.yaml
+  2577_Zerstörung_von_IbadanTitan_Gem:
+    de: 2577_Zerstörung_von_IbadanTitan_Gem.yaml
   GroupAssociation:
     de: 2580_Teamspirit.yaml
     en: 2580_GroupAssociation.yaml
+  2583_Die_Amaterasu_geht_mit_3:
+    de: 2583_Die_Amaterasu_geht_mit_3.yaml
+  2585_Erster_Kontakt_mit_Thoris:
+    de: 2585_Erster_Kontakt_mit_Thoris.yaml
+  2587_Alienkriege:
+    de: 2587_Alienkriege.yaml
+  2590_Siedlungsgesetze:
+    de: 2590_Siedlungsgesetze.yaml
+  2591_Flottengesetz:
+    de: 2591_Flottengesetz.yaml
+  2595_Bau_der_ersten_Weltraumfontäne:
+    de: 2595_Bau_der_ersten_Weltraumfontäne.yaml
+  2598_Der_Feldanzug_löst_konventione:
+    de: 2598_Der_Feldanzug_löst_konventione.yaml
   ShipPurchase:
     de: 2603_ThorisSchiff.yaml
     en: 2603_ShipPurchase.yaml
+  2605_Die_Bevölkerung_des_CobolSyste:
+    de: 2605_Die_Bevölkerung_des_CobolSyste.yaml
+  2606_Gründung_der_Volksrepublik_Jia:
+    de: 2606_Gründung_der_Volksrepublik_Jia.yaml
+  2608_Erster_Kontakt_mit_Artu:
+    de: 2608_Erster_Kontakt_mit_Artu.yaml
+  2611_Inbetriebnahme_einer_Startschl:
+    de: 2611_Inbetriebnahme_einer_Startschl.yaml
+  2614_Befreiung_des_Solsystems:
+    de: 2614_Befreiung_des_Solsystems.yaml
+  2615_Interstellare_Händler:
+    de: 2615_Interstellare_Händler.yaml
+  2616_TawannaIntervention:
+    de: 2616_TawannaIntervention.yaml
+  2618_Zehn_Millionen_bei_Cobol:
+    de: 2618_Zehn_Millionen_bei_Cobol.yaml
+  2620_Intervention_der_Koalitionstru:
+    de: 2620_Intervention_der_Koalitionstru.yaml
+  2622_Entdeckung_der_Monolithen_von_:
+    de: 2622_Entdeckung_der_Monolithen_von_.yaml
+  2625_Qiji:
+    de: 2625_Qiji.yaml
   AdministrativeProcess:
     de: 2626_Sektorzentrum.yaml
     en: 2626_AdministrativeProcess.yaml
+  2628_Wissenschaftliche_und_wirtscha:
+    de: 2628_Wissenschaftliche_und_wirtscha.yaml
   ChanyakaConspiracy:
     de: 2630_Chanakya.yaml
     en: 2630_ChanyakaConspiracy.yaml
+  2631_Die_Verabschiedung_der_Protekt:
+    de: 2631_Die_Verabschiedung_der_Protekt.yaml
+  2632_Besiedlung_des_RamaSystems:
+    de: 2632_Besiedlung_des_RamaSystems.yaml
+  2635_Entdeckung_des_Schiffsfriedhof:
+    de: 2635_Entdeckung_des_Schiffsfriedhof.yaml
+  2636_Auf_der_Erde_leben_20_Milliard:
+    de: 2636_Auf_der_Erde_leben_20_Milliard.yaml
+  2638_Wotan:
+    de: 2638_Wotan.yaml
+  2641_Erstbesiedung_von_Fox:
+    de: 2641_Erstbesiedung_von_Fox.yaml
+  2643_Überfall_der_Kelrecs_von_Miro_:
+    de: 2643_Überfall_der_Kelrecs_von_Miro_.yaml
+  2645_Besetzung_von_Valerius_durch_K:
+    de: 2645_Besetzung_von_Valerius_durch_K.yaml
+  2646_Handelsgericht:
+    de: 2646_Handelsgericht.yaml
+  2647_Besetzung_des_KullurSystems_du:
+    de: 2647_Besetzung_des_KullurSystems_du.yaml
+  Interia: 
+    de: 2648_Interia.yaml
+    en: 2648_Interia.yaml
+  2648c_Gründung_der_Kolonie_Eden:
+    de: 2648c_Gründung_der_Kolonie_Eden.yaml
+  2649_Kelrec:
+    de: 2649_Kelrec.yaml
+  2650_Zellweger-1200x720:
+    de: 2650_Zellweger-1200x720.yaml
+  2651_Zerstörung_der_Weltraumstadt_N:
+    de: 2651_Zerstörung_der_Weltraumstadt_N.yaml
+  2654_Erster_Kontakt_mit_der_steinze:
+    de: 2654_Erster_Kontakt_mit_der_steinze.yaml
+  2655_Die_interplanetare_Wirtschaft_:
+    de: 2655_Die_interplanetare_Wirtschaft_.yaml
+  2657_Überraschender_Rückzug_der_Kel:
+    de: 2657_Überraschender_Rückzug_der_Kel.yaml
+  2658_Fox_Kobesiedlungsabkommen:
+    de: 2658_Fox_Kobesiedlungsabkommen.yaml
+  2659_Erster_Kontakt_mit_T’k’t‘ca_ei:
+    de: 2659_Erster_Kontakt_mit_T’k’t‘ca_ei.yaml
+  2661_Besuch_Panol_Degans_auf_Aaron:
+    de: 2661_Besuch_Panol_Degans_auf_Aaron.yaml
+  2664_Podgorski:
+    de: 2664_Podgorski.yaml
+  2666_Wiederbesiedlung_von_Tawanna:
+    de: 2666_Wiederbesiedlung_von_Tawanna.yaml
   UltraMetals:
     de: 2668_Draco.yaml
     en: 2668_UltraMetals.yaml
+  2669_Fertigstellung_des_geosynchron:
+    de: 2669_Fertigstellung_des_geosynchron.yaml
+  2671_Sapio_Eine_Gruppe_von_Siedlung:
+    de: 2671_Sapio_Eine_Gruppe_von_Siedlung.yaml
+  2673_Konflikte_mit_Ureinwohnern_esk:
+    de: 2673_Konflikte_mit_Ureinwohnern_esk.yaml
+  2673c_TawannaKrise:
+    de: 2673c_TawannaKrise.yaml
+  2674_Entdeckung_des_Brandes:
+    de: 2674_Entdeckung_des_Brandes.yaml
+  2676_AlwayBesiedlung:
+    de: 2676_AlwayBesiedlung.yaml
+  2677_Mansalu:
+    de: 2677_Mansalu.yaml
+  2678_AlwayKrieg:
+    de: 2678_AlwayKrieg.yaml
+  2679_Entdeckung_der_goldenen_Städte:
+    de: 2679_Entdeckung_der_goldenen_Städte.yaml
+  2680_Ohni_Unruhen_in_den_Uranbergwe:
+    de: 2680_Ohni_Unruhen_in_den_Uranbergwe.yaml
   AncientRobots:
     de: 2681_Solberg.yaml
     en: 2681_AncientRobots.yaml
+  2682_TXYG:
+    de: 2682_TXYG.yaml
+  2683_Koalitionstruppen_zwingen_ein_:
+    de: 2683_Koalitionstruppen_zwingen_ein_.yaml
+  2684_Erste_Austragung_des_Raumrenne:
+    de: 2684_Erste_Austragung_des_Raumrenne.yaml
+  2685_Handelsstützpunkt_auf_Diobe:
+    de: 2685_Handelsstützpunkt_auf_Diobe.yaml
+  2686_Gründung_der_Philosophenschule:
+    de: 2686_Gründung_der_Philosophenschule.yaml
+  2687_Kisor_entsendet_Kriegsschiffe_:
+    de: 2687_Kisor_entsendet_Kriegsschiffe_.yaml
+  2688_Errichtung_der_ersten_Supermet:
+    de: 2688_Errichtung_der_ersten_Supermet.yaml
+  2689_Die_Lage_auf_Tawanna_verschärf:
+    de: 2689_Die_Lage_auf_Tawanna_verschärf.yaml
+  2689c_Freundschaftsvertrag_der_Koali:
+    de: 2689c_Freundschaftsvertrag_der_Koali.yaml
+  2690_Entdeckung_des_sonnenlosen_Sch:
+    de: 2690_Entdeckung_des_sonnenlosen_Sch.yaml
+  2691_Koriko:
+    de: 2691_Koriko.yaml
+  2692_Rettung_mehrerer_Völker_Checko:
+    de: 2692_Rettung_mehrerer_Völker_Checko.yaml
+  2693_Veröffentlichung_der_Reisen_un:
+    de: 2693_Veröffentlichung_der_Reisen_un.yaml
+  2694_Wesentliche_Verstärkung_der_zu:
+    de: 2694_Wesentliche_Verstärkung_der_zu.yaml
+  2695_Entdeckung_und_erste_Erforschu:
+    de: 2695_Entdeckung_und_erste_Erforschu.yaml
+  2696_Ausschreitungen_gegen_Gildeein:
+    de: 2696_Ausschreitungen_gegen_Gildeein.yaml
+  2697_Umwandlung_der_Kobesiedlungsko:
+    de: 2697_Umwandlung_der_Kobesiedlungsko.yaml
+  2697c_Im_AsgardSystem_wird_ein_Gilde:
+    de: 2697c_Im_AsgardSystem_wird_ein_Gilde.yaml
+  2699_Die_Planetenregierung_von_Äzea:
+    de: 2699_Die_Planetenregierung_von_Äzea.yaml
+  2699c_Vernichtung_einer_größeren_mil:
+    de: 2699c_Vernichtung_einer_größeren_mil.yaml
+  2700_Kisor_entsendet_eine_Kriegsflo:
+    de: 2700_Kisor_entsendet_eine_Kriegsflo.yaml
+  2700c_Je'esua'a_löst_sich_aus_dem_Ha:
+    de: 2700c_Je'esua'a_löst_sich_aus_dem_Ha.yaml
+  2702_Landung_auf_Je'esua'a_und_Bese:
+    de: 2702_Landung_auf_Je'esua'a_und_Bese.yaml
+  2702c_Zuspitzung_der_Lage_auf_Khedro:
+    de: 2702c_Zuspitzung_der_Lage_auf_Khedro.yaml
+  2702f_Schwere_Raum_und_Bodenkämpfe_i:
+    de: 2702f_Schwere_Raum_und_Bodenkämpfe_i.yaml
+  2702i_TawannaBlockade:
+    de: 2702i_TawannaBlockade.yaml
+  2702l_Eingliederung_der_Kolonie_Obsk:
+    de: 2702l_Eingliederung_der_Kolonie_Obsk.yaml
+  2703_Angriff_der_Flotte_von_Kisor_g:
+    de: 2703_Angriff_der_Flotte_von_Kisor_g.yaml
+  2703c_Afro_eine_wichtige_Handelskolo:
+    de: 2703c_Afro_eine_wichtige_Handelskolo.yaml
+  2704_Die_Völker_von_Neith_lehnen_si:
+    de: 2704_Die_Völker_von_Neith_lehnen_si.yaml
+  2704c_Eine_Freiwilligenarmee_von_Ger:
+    de: 2704c_Eine_Freiwilligenarmee_von_Ger.yaml
+  2705_KisorKrieg:
+    de: 2705_KisorKrieg.yaml
+  2705c_Entdeckung_der_pflanzlichen_In:
+    de: 2705c_Entdeckung_der_pflanzlichen_In.yaml
+  2705f_Stellvertreterkrieg_zwischen_D:
+    de: 2705f_Stellvertreterkrieg_zwischen_D.yaml
+  2706_Konferenz_der_äußeren_Kolonien:
+    de: 2706_Konferenz_der_äußeren_Kolonien.yaml
+  2706c_Gründung_des_Fernhandelszentru:
+    de: 2706c_Gründung_des_Fernhandelszentru.yaml
+  2706f_Beginn_des_Aufbaus_von_Selbstv:
+    de: 2706f_Beginn_des_Aufbaus_von_Selbstv.yaml
+  2706i_Bombardierung_Kisor_Betas:
+    de: 2706i_Bombardierung_Kisor_Betas.yaml
+  2707_Beschluss_des_Konfliktvertrags:
+    de: 2707_Beschluss_des_Konfliktvertrags.yaml
+  2707c_Kisor_zieht_seine_Flotte_in_da:
+    de: 2707c_Kisor_zieht_seine_Flotte_in_da.yaml
+  2708_Zur_Jahreswende_versucht_die_K:
+    de: 2708_Zur_Jahreswende_versucht_die_K.yaml
+  2708c_Kontaktdrohung_Kisors_an_die_K:
+    de: 2708c_Kontaktdrohung_Kisors_an_die_K.yaml
+  2709_Fragmentierung_der_Koalitionst:
+    de: 2709_Fragmentierung_der_Koalitionst.yaml
+  2709c_Die_Strategie_der_Koalition_Ki:
+    de: 2709c_Die_Strategie_der_Koalition_Ki.yaml
+  2710_Kisor_verhindert_erfolgreich_w:
+    de: 2710_Kisor_verhindert_erfolgreich_w.yaml
+  2710c_Rückzug_der_Koalition:
+    de: 2710c_Rückzug_der_Koalition.yaml
+  2711_FoxKatastrophe:
+    de: 2711_FoxKatastrophe.yaml
+  2712_Gegenangriff_der_Koalition:
+    de: 2712_Gegenangriff_der_Koalition.yaml
+  2712c_Befreiung_Poleans:
+    de: 2712c_Befreiung_Poleans.yaml
+  2713_Kisor_konzentriert_seine_Flott:
+    de: 2713_Kisor_konzentriert_seine_Flott.yaml
+  2714_Rückkehr_der_GaPax_Expedition:
+    de: 2714_Rückkehr_der_GaPax_Expedition.yaml
+  2715_Stellungskrieg_auf_den_Planete:
+    de: 2715_Stellungskrieg_auf_den_Planete.yaml
+  2716_Entdeckung_der_Transmittertore:
+    de: 2716_Entdeckung_der_Transmittertore.yaml
+  2718_Langsamer_Rückzug_der_Koalitio:
+    de: 2718_Langsamer_Rückzug_der_Koalitio.yaml
+  2719_Verlust_der_Schlachten_von_Lib:
+    de: 2719_Verlust_der_Schlachten_von_Lib.yaml
+  2720_Kriegsabkommen:
+    de: 2720_Kriegsabkommen.yaml
+  2720c_Belagerung_und_Blockade_des_So:
+    de: 2720c_Belagerung_und_Blockade_des_So.yaml
+  2721_Spacedom:
+    de: 2721_Spacedom.yaml
+  2722_Guedan:
+    de: 2722_Guedan.yaml
+  2723_Spektakuläre_Evakuierung_von_1:
+    de: 2723_Spektakuläre_Evakuierung_von_1.yaml
+  2723c_Entdeckung_der_unsterblichen_S:
+    de: 2723c_Entdeckung_der_unsterblichen_S.yaml
+  2724_Eroberung_der_Basen_auf_Pluto:
+    de: 2724_Eroberung_der_Basen_auf_Pluto.yaml
+  Gee: 
+    de: 2725_Gee.yaml
+    en: 2725_Gee.yaml
+  2725c_Landung_auf_Mars_durch_Kisors_:
+    de: 2725c_Landung_auf_Mars_durch_Kisors_.yaml
+  2726_Lem:
+    de: 2726_Lem.yaml
+  2727_SpacedomRettung:
+    de: 2727_SpacedomRettung.yaml
+  2727c_Mehrwöchige_Schlacht_um_die_Er:
+    de: 2727c_Mehrwöchige_Schlacht_um_die_Er.yaml
+  2728_Bodenkämpfe_auf_der_Erde:
+    de: 2728_Bodenkämpfe_auf_der_Erde.yaml
+  2729_Entdeckung_eines_Black_Hole_vo:
+    de: 2729_Entdeckung_eines_Black_Hole_vo.yaml
+  2730_Minimum_der_interplanetaren_Be:
+    de: 2730_Minimum_der_interplanetaren_Be.yaml
+  2731_MittelalterUltimatum:
+    de: 2731_MittelalterUltimatum.yaml
+  2732_Kisor_besetzt_die_Erde_und_all:
+    de: 2732_Kisor_besetzt_die_Erde_und_all.yaml
+  2733_Gilden_befriedigen_Reparations:
+    de: 2733_Gilden_befriedigen_Reparations.yaml
+  2734_Die_Versorgung_der_internierte:
+    de: 2734_Die_Versorgung_der_internierte.yaml
+  2734c_Rücktransport_von_Siedlern_von:
+    de: 2734c_Rücktransport_von_Siedlern_von.yaml
+  2735_Die_Gilden_werden_der_Gouverne:
+    de: 2735_Die_Gilden_werden_der_Gouverne.yaml
+  2735c_Die_nahen_Kolonien_sind_in_seh:
+    de: 2735c_Die_nahen_Kolonien_sind_in_seh.yaml
+  2736_Start_von_Hilfsprogrammen_gege:
+    de: 2736_Start_von_Hilfsprogrammen_gege.yaml
+  2736c_Ende_der_Reparationen:
+    de: 2736c_Ende_der_Reparationen.yaml
+  2737_Aufhebung_der_Kontrolle_über_e:
+    de: 2737_Aufhebung_der_Kontrolle_über_e.yaml
+  2738_Aufhebung_des_Handelsausschlus:
+    de: 2738_Aufhebung_des_Handelsausschlus.yaml
+  2739_Wahl_zu_Staatsregierungen:
+    de: 2739_Wahl_zu_Staatsregierungen.yaml
+  2740_Neugründung_der_Koalition:
+    de: 2740_Neugründung_der_Koalition.yaml
+  2741_Aufhebung_der_Kontrolle_über_d:
+    de: 2741_Aufhebung_der_Kontrolle_über_d.yaml
+  2742_Alle_Erdteile_werden_von_ihren:
+    de: 2742_Alle_Erdteile_werden_von_ihren.yaml
+  2743_Kisor:
+    de: 2743_Kisor.yaml
+  2744_Die_Wirtschaft_erholt_sich_wie:
+    de: 2744_Die_Wirtschaft_erholt_sich_wie.yaml
+  2745_Schuldenschnitt:
+    de: 2745_Schuldenschnitt.yaml
+  2746_Massara:
+    de: 2746_Massara.yaml
+  2747_Rennen:
+    de: 2747_Rennen.yaml
+  2749_Gabriele_von_Pellworn_wird_zur:
+    de: 2749_Gabriele_von_Pellworn_wird_zur.yaml
   ExecutiveDecision:
     de: 2750_Decision.yaml
     en: 2750_ExecutiveDecision.yaml
+  2752_Beginn_einer_neuen_Auswanderun:
+    de: 2752_Beginn_einer_neuen_Auswanderun.yaml
+  2754_FoxPetition_an_Kisor:
+    de: 2754_FoxPetition_an_Kisor.yaml
+  2755_Gründung_des_Imperiums_von_Gor:
+    de: 2755_Gründung_des_Imperiums_von_Gor.yaml
+  2757_Die_Nachfrage_nach_Rohstoffen_:
+    de: 2757_Die_Nachfrage_nach_Rohstoffen_.yaml
+  2759_Wiederaufrüstung_der_Koalition:
+    de: 2759_Wiederaufrüstung_der_Koalition.yaml
+  2761_Wiederauferstehung_der_Sweet_3:
+    de: 2761_Wiederauferstehung_der_Sweet_3.yaml
+  2763_Einer_Seuche_fallen_130_Millia:
+    de: 2763_Einer_Seuche_fallen_130_Millia.yaml
+  2765_Der_Konkurrenzkampf_zwischen_u:
+    de: 2765_Der_Konkurrenzkampf_zwischen_u.yaml
+  2767_Zeit_des_Wirtschaftswunders_im:
+    de: 2767_Zeit_des_Wirtschaftswunders_im.yaml
+  2769_Der_Koloss_von_Ifri_erwacht:
+    de: 2769_Der_Koloss_von_Ifri_erwacht.yaml
+  2770_Unruhen_im_Kisor_System:
+    de: 2770_Unruhen_im_Kisor_System.yaml
+  2772_Entdeckung_der_lebenden_Plattf:
+    de: 2772_Entdeckung_der_lebenden_Plattf.yaml
+  2774_Zeit_der_Konsolidierung_im_Sol:
+    de: 2774_Zeit_der_Konsolidierung_im_Sol.yaml
+  2776_Caves:
+    de: 2776_Caves.yaml
+  2778_Kisorfeindliche_Stimmen_tauche:
+    de: 2778_Kisorfeindliche_Stimmen_tauche.yaml
+  2780_Die_adeligen_Gilden_Alphas_bes:
+    de: 2780_Die_adeligen_Gilden_Alphas_bes.yaml
+  2782_Beginn_des_16jährigen_Baus_der:
+    de: 2782_Beginn_des_16jährigen_Baus_der.yaml
+  2783_Regionalzentrum:
+    de: 2783_Regionalzentrum.yaml
+  2785_Ende_des_Gildesystems_Kisors:
+    de: 2785_Ende_des_Gildesystems_Kisors.yaml
   Yaris:
     de: 2786_Yaris.yaml
     en: 2786_Yaris.yaml
+  2787_Teilweise_bewaffnete_Auseinand:
+    de: 2787_Teilweise_bewaffnete_Auseinand.yaml
+  2788_Entdeckung_der_großen_Pyramide:
+    de: 2788_Entdeckung_der_großen_Pyramide.yaml
+  2789_Befreiung_von_Fox_vom_Joch_der:
+    de: 2789_Befreiung_von_Fox_vom_Joch_der.yaml
   Contour:
     de: 2791_Contour.yaml
     en: 2791_Contour.yaml
+  2793_Eine_Milliarde_Bewohner_leben_:
+    de: 2793_Eine_Milliarde_Bewohner_leben_.yaml
   Prophet:
     de: 2794_Hro.yaml
     en: 2794_Prophet.yaml
+  2795_Argentina:
+    de: 2795_Argentina.yaml
+  2796_Mit_der_Fertigstellung_der_Mar:
+    de: 2796_Mit_der_Fertigstellung_der_Mar.yaml
+  2797_Entdeckung_des_beringten_Stern:
+    de: 2797_Entdeckung_des_beringten_Stern.yaml
+  2799_Beobachtung_des_Exodus_der_Alt:
+    de: 2799_Beobachtung_des_Exodus_der_Alt.yaml
+  2800_Chinti_Bürgerkriege:
+    de: 2800_Chinti_Bürgerkriege.yaml
+  2801_Inbetriebnahme_einer_uralten_v:
+    de: 2801_Inbetriebnahme_einer_uralten_v.yaml
+  2804_Die_Jagd_auf_die_riesigen_rept:
+    de: 2804_Die_Jagd_auf_die_riesigen_rept.yaml
+  2806_Muell:
+    de: 2806_Muell.yaml
+  2808_Erster_Kontakt_mit_den_schwebe:
+    de: 2808_Erster_Kontakt_mit_den_schwebe.yaml
+  2809_Entdeckung_der_intelligenten_n:
+    de: 2809_Entdeckung_der_intelligenten_n.yaml
+  2811_Entdeckung_eines_uralten_unter:
+    de: 2811_Entdeckung_eines_uralten_unter.yaml
+  2813_Öffnung_der_historischen_Archi:
+    de: 2813_Öffnung_der_historischen_Archi.yaml
+  2815_Erstmaliger_Abbau_der_schweben:
+    de: 2815_Erstmaliger_Abbau_der_schweben.yaml
+  2817_Gründung_der_interstellaren_Ha:
+    de: 2817_Gründung_der_interstellaren_Ha.yaml
+  2819_Kisor_Beta_übernimmt_die_Macht:
+    de: 2819_Kisor_Beta_übernimmt_die_Macht.yaml
+  2820_Kisorische_Truppen_ziehen_aus_:
+    de: 2820_Kisorische_Truppen_ziehen_aus_.yaml
+  2821_Ende_des_Bürgerkriegs_im_Fox_S:
+    de: 2821_Ende_des_Bürgerkriegs_im_Fox_S.yaml
+  2822_Koloss-von-Ifri-1000x613:
+    de: 2822_Koloss-von-Ifri-1000x613.yaml
+  2824_Eröffnung_der_GigantkunstAusst:
+    de: 2824_Eröffnung_der_GigantkunstAusst.yaml
+  2825_Erste_spektakuläre_Aktionen_de:
+    de: 2825_Erste_spektakuläre_Aktionen_de.yaml
+  2828_CrabZivilisation:
+    de: 2828_CrabZivilisation.yaml
+  2830_Schlacht_bei_Akkukak_2100_Lich:
+    de: 2830_Schlacht_bei_Akkukak_2100_Lich.yaml
+  2832_Überfall_der_Erui_auf_Novem_20:
+    de: 2832_Überfall_der_Erui_auf_Novem_20.yaml
+  2833_Putsch_der_Händler_auf_Tschang:
+    de: 2833_Putsch_der_Händler_auf_Tschang.yaml
+  2834_Generationsschiff:
+    de: 2834_Generationsschiff.yaml
+  2835_Errichtung_von_Raumschutzzonen:
+    de: 2835_Errichtung_von_Raumschutzzonen.yaml
+  2837_Erste_bewaffnete_Auseinanderse:
+    de: 2837_Erste_bewaffnete_Auseinanderse.yaml
+  2838_Entdeckung_einer_Nanitenzivili:
+    de: 2838_Entdeckung_einer_Nanitenzivili.yaml
+  2840_Überfall_der_Lochnagar_einem_S:
+    de: 2840_Überfall_der_Lochnagar_einem_S.yaml
+  2841_Tempel:
+    de: 2841_Tempel.yaml
+  2843_RiskanteBergung:
+    de: 2843_RiskanteBergung.yaml
+  2844_Centaurus:
+    de: 2844_Centaurus.yaml
+  2845_Plünderung_von_Artus_durch_Neo:
+    de: 2845_Plünderung_von_Artus_durch_Neo.yaml
+  2846_Kisor_tritt_dem_kisorischen_Vö:
+    de: 2846_Kisor_tritt_dem_kisorischen_Vö.yaml
+  2849_Einsatz_von_Söldnern_zum_Schut:
+    de: 2849_Einsatz_von_Söldnern_zum_Schut.yaml
+  2850_Befestigung_des_SolSystems:
+    de: 2850_Befestigung_des_SolSystems.yaml
+  2851_Begun:
+    de: 2851_Begun.yaml
+  2853_Dellianer_und_Allen_plündern_i:
+    de: 2853_Dellianer_und_Allen_plündern_i.yaml
+  2854_Sklavenaufstand_in_BenutGorman:
+    de: 2854_Sklavenaufstand_in_BenutGorman.yaml
+  2855_Kisor_interveniert_im_KheTiSan:
+    de: 2855_Kisor_interveniert_im_KheTiSan.yaml
+  2857_Ausdehnung_des_kisorischen_Ein:
+    de: 2857_Ausdehnung_des_kisorischen_Ein.yaml
+  2858_Ermordung_von_Krell_auf_Gorman:
+    de: 2858_Ermordung_von_Krell_auf_Gorman.yaml
+  2859_Konfrontation_im_FoxSystem_zwi:
+    de: 2859_Konfrontation_im_FoxSystem_zwi.yaml
+  2860_Yacht:
+    de: 2860_Yacht.yaml
+  2862_Erneuter_Überfall_eines_Dellia:
+    de: 2862_Erneuter_Überfall_eines_Dellia.yaml
+  2863_Pferdekopfallianz:
+    de: 2863_Pferdekopfallianz.yaml
+  2864_Übergriffe_von_leccianischen_S:
+    de: 2864_Übergriffe_von_leccianischen_S.yaml
+  2866_Der_Fernhandel_geht_stark_zurü:
+    de: 2866_Der_Fernhandel_geht_stark_zurü.yaml
+  2867_Bewaffnete_Konflikte_zwischen_:
+    de: 2867_Bewaffnete_Konflikte_zwischen_.yaml
+  2869_Dellianer_fallen_in_das_Solsys:
+    de: 2869_Dellianer_fallen_in_das_Solsys.yaml
+  2870_Qi.jpg:
+    de: 2870_Qi.jpg.yaml
+  2871_Ifri_Eskalation:
+    de: 2871_Ifri_Eskalation.yaml
+  2873_SupraZone:
+    de: 2873_SupraZone.yaml
+  2874_Gründung_der_Reshumanis:
+    de: 2874_Gründung_der_Reshumanis.yaml
+  2875_Wirtschaftsaufschwung_im_Solsy:
+    de: 2875_Wirtschaftsaufschwung_im_Solsy.yaml
+  2882_Kisor_konzentriert_starke_Kräf:
+    de: 2882_Kisor_konzentriert_starke_Kräf.yaml
+  2885_Materialschlachten_in_den_äuße:
+    de: 2885_Materialschlachten_in_den_äuße.yaml
+  2890_Solares_Bevölkerungsmaximum_be:
+    de: 2890_Solares_Bevölkerungsmaximum_be.yaml
+  2895_Militärisches_Patt_zwischen_de:
+    de: 2895_Militärisches_Patt_zwischen_de.yaml
+  2899_Putsch_der_Leccianer_im_Solsys:
+    de: 2899_Putsch_der_Leccianer_im_Solsys.yaml
+  2903_Die_Führung_der_RogOzar_etabli:
+    de: 2903_Die_Führung_der_RogOzar_etabli.yaml
+  2906_Das_Solsystem_wird_zum_heilige:
+    de: 2906_Das_Solsystem_wird_zum_heilige.yaml
+  2910_Angriff_Kisors_auf_das_Solsyst:
+    de: 2910_Angriff_Kisors_auf_das_Solsyst.yaml
+  2912_Belagerung_des_Kisor_Systems_d:
+    de: 2912_Belagerung_des_Kisor_Systems_d.yaml
   FTLRailgun:
     de: 2915_FTLRailgun.yaml
     en: 2915_FTLRailgun.yaml
+  2920_Die_Bevölkerung_der_Erde_sinkt:
+    de: 2920_Die_Bevölkerung_der_Erde_sinkt.yaml
+  2924_Zerstörung_der_zwei_KisorPlane:
+    de: 2924_Zerstörung_der_zwei_KisorPlane.yaml
+  2926_Vertreibung_der_RogOzar_aus_de:
+    de: 2926_Vertreibung_der_RogOzar_aus_de.yaml
+  2933_RamaUnterwerfung:
+    de: 2933_RamaUnterwerfung.yaml
+  2940_WhiteNoise:
+    de: 2940_WhiteNoise.yaml
+  2943_Als_erster_Nichtkalahner_gewin:
+    de: 2943_Als_erster_Nichtkalahner_gewin.yaml
   QueenMarduk:
     de: 2949_KoeniginMarduk.yaml
     en: 2949_QueenMarduk.yaml
@@ -234,24 +1048,132 @@ entries:
   Tranquility1000:
     de: 2969_Millennium.yaml
     en: 2969_Tranquility1000.yaml
+  2980_Wiederbelebung_der_Reshumanis_:
+    de: 2980_Wiederbelebung_der_Reshumanis_.yaml
+  2988_RamaAufstand:
+    de: 2988_RamaAufstand.yaml
   Utho:
     de: 2997_Utho.yaml
     en: 2997_Utho.yaml
+  3010_IcePlanet:
+    de: 3010_IcePlanet.yaml
+  3020_MagnetUnabhängigkeit:
+    de: 3020_MagnetUnabhängigkeit.yaml
+  3028_Gründung_der_RamaDomäne:
+    de: 3028_Gründung_der_RamaDomäne.yaml
+  3035_Das_Minimum_der_solaren_Bevölk:
+    de: 3035_Das_Minimum_der_solaren_Bevölk.yaml
   IntelligentGalaxies:
     de: 3042_Simba.yaml
     en: 3042_IntelligentGalaxies.yaml
   Solos:
     de: 3050_Solos.yaml
     en: 3050_Solos.yaml
+  3055_Die_Bevölkerung_außerhalb_des_:
+    de: 3055_Die_Bevölkerung_außerhalb_des_.yaml
   WarringSwarms:
     de: 3061_Krrz.yaml
     en: 3061_WarringSwarms.yaml
+  3068_Die_Bevölkerung_von_Cobol_wäch:
+    de: 3068_Die_Bevölkerung_von_Cobol_wäch.yaml
+  3075_Sabotage_des_Ökoformings_auf_K:
+    de: 3075_Sabotage_des_Ökoformings_auf_K.yaml
+  3080_Die_ChintiExpansion_setzt_wied:
+    de: 3080_Die_ChintiExpansion_setzt_wied.yaml
+  3090_SoloEhre:
+    de: 3090_SoloEhre.yaml
+  3100_Rückzug_der_SolBarbaren_in_das:
+    de: 3100_Rückzug_der_SolBarbaren_in_das.yaml
+  3110_Fragmentierung:
+    de: 3110_Fragmentierung.yaml
   MoonUprising:
     de: 3116_Shackleton.yaml
     en: 3116_MoonUprising.yaml
+  3124_Minimum_der_solaren_Wirtschaft:
+    de: 3124_Minimum_der_solaren_Wirtschaft.yaml
+  3131_Ruinen:
+    de: 3131_Ruinen.yaml
+  3141_Kartusche:
+    de: 3141_Kartusche.yaml
+  3148_Aufstand_im_Erdorbit:
+    de: 3148_Aufstand_im_Erdorbit.yaml
+  3155_Isabella_Akari_InghanaShawnee_:
+    de: 3155_Isabella_Akari_InghanaShawnee_.yaml
+  3162_Erste_Konflikte_zwischen_Mensc:
+    de: 3162_Erste_Konflikte_zwischen_Mensc.yaml
+  3168_Akari_Inghana_wird_erste_Präsi:
+    de: 3168_Akari_Inghana_wird_erste_Präsi.yaml
+  3170_Wiederherstellung_der_Ordnung_:
+    de: 3170_Wiederherstellung_der_Ordnung_.yaml
+  3176_Einigung_des_Solsystems:
+    de: 3176_Einigung_des_Solsystems.yaml
+  3180_Mikroben:
+    de: 3180_Mikroben.yaml
+  3190_ChintiKatastrophe:
+    de: 3190_ChintiKatastrophe.yaml
+  3191_ReshumanisCobol:
+    de: 3191_ReshumanisCobol.yaml
+  3195_Erste_erfolgreiche_Schläge_geg:
+    de: 3195_Erste_erfolgreiche_Schläge_geg.yaml
+  3201_Akari_I:
+    de: 3201_Akari_I.yaml
+  3203_ChintiKrieg:
+    de: 3203_ChintiKrieg.yaml
+  3214_Bündelung_der_Verteidigung_in_:
+    de: 3214_Bündelung_der_Verteidigung_in_.yaml
+  3219_Minimum_der_extrasolaren_Bevöl:
+    de: 3219_Minimum_der_extrasolaren_Bevöl.yaml
+  3225_Flux:
+    de: 3225_Flux.yaml
+  3235_Reform_der_Streitkräfte:
+    de: 3235_Reform_der_Streitkräfte.yaml
+  3243_DumaKontroverse:
+    de: 3243_DumaKontroverse.yaml
+  3245_Sterge:
+    de: 3245_Sterge.yaml
+  3251_Akari_I:
+    de: 3251_Akari_I.yaml
+  3255_Entdeckung_der_Überreste_eines:
+    de: 3255_Entdeckung_der_Überreste_eines.yaml
+  3258_ReshumanisFinanzreform:
+    de: 3258_ReshumanisFinanzreform.yaml
+  3260_Erfolgreicher_Schlag_gegen_ein:
+    de: 3260_Erfolgreicher_Schlag_gegen_ein.yaml
+  3270_Kammer:
+    de: 3270_Kammer.yaml
+  3280_Kolonialplaneten_treten_Reshum:
+    de: 3280_Kolonialplaneten_treten_Reshum.yaml
+  3291_Gone:
+    de: 3291_Gone.yaml
+  Drachenlegenden:
+    de: 3296_Drachenlegenden.yaml
+    en: 3296_Dragonlegends.yaml
+  3300_Begriffsveränderung_Reshumanis:
+    de: 3300_Begriffsveränderung_Reshumanis.yaml
   Supernova:
     de: 3308_Supernova.yaml
     en: 3308_Supernova.yaml
+  3314_Inbetriebnahme_des_ersten_irdi:
+    de: 3314_Inbetriebnahme_des_ersten_irdi.yaml
+  3320_Die_Völker_Thoas_werden_vor_ei:
+    de: 3320_Die_Völker_Thoas_werden_vor_ei.yaml
+  3329_Der_satereynische_Händler_Scha:
+    de: 3329_Der_satereynische_Händler_Scha.yaml
+  3334_Besuch_einer_Gesandtschaft_der:
+    de: 3334_Besuch_einer_Gesandtschaft_der.yaml
+  3340_Brueckenkopf:
+    de: 3340_Brueckenkopf.yaml
+  3344_Imperiumsverfassung:
+    de: 3344_Imperiumsverfassung.yaml
+  3347_Betriebsstart_von_Argus:
+    de: 3347_Betriebsstart_von_Argus.yaml
   ControversyGate:
     de: 3353_Das_Tor_der_Kontroverse.yaml
     en: 3353_ControversyGate.yaml
+  3359_Survivalisten_in_Not:
+    de: 3359_Survivalisten_in_Not.yaml
+  3361_Die_erste_Menschheit:
+    de: 3361_Die_erste_Menschheit.yaml
+  Quantenkontinuum: 
+    de: 3365_Quantenkontinuum.yaml
+    en: 3365_QuantumContinuum.yaml
