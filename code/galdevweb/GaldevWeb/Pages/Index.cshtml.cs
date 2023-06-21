@@ -11,12 +11,13 @@ namespace GaldevWeb.Pages
         public void OnGet(string name)
         {
             if (Is.Value(name)) {
+                var lang = GetLangFromCultureName(UiCultureName);
+                Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
                 var timeline = new Timeline {
                     IndexFilePath = Config.IndexPath,
                 };
 
-                var lang = GetLangFromCultureName(UiCultureName);
                 Entry = timeline.GetEntry(name, lang);
 
             } else {

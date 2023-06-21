@@ -18,8 +18,4 @@
     <ProjectReference Include="..\n3q.Tools\n3q.Tools.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

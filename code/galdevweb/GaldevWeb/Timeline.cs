@@ -70,5 +70,13 @@
         {
             return $"{entry.Name}-{entry.Year}-{entry.Title}";
         }
+
+        internal string GetImagePath(string imageName, string lang)
+        {
+            var indexData = DataProvider.GetData(IndexFilePath);
+            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var langPath = indexNode["languages"][lang]["images"].AsString;
+            return Path.Combine(Path.GetDirectoryName(IndexFilePath) ?? "", langPath, imageName);
+        }
     }
 }
