@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 COPY . ./
-RUN dotnet publish GaldevWeb/GaldevWeb.csproj -c Release -o out
+RUN dotnet publish code/galdevweb/GaldevWeb/GaldevWeb.csproj -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app

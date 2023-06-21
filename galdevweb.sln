@@ -10,13 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{64
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaldevWeb", "GaldevWeb\GaldevWeb.csproj", "{01A8F030-660A-4B6B-B924-BA68ADC022EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaldevWeb", "code\galdevweb\GaldevWeb\GaldevWeb.csproj", "{01A8F030-660A-4B6B-B924-BA68ADC022EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath", "JsonPath\JsonPath.csproj", "{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath", "code\galdevweb\JsonPath\JsonPath.csproj", "{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath.Test", "JsonPath.Test\JsonPath.Test.csproj", "{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath.Test", "code\galdevweb\JsonPath.Test\JsonPath.Test.csproj", "{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n3q.Tools", "n3q.Tools\n3q.Tools.csproj", "{C5C372FD-4231-41BF-81D2-D2A525417ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n3q.Tools", "code\galdevweb\n3q.Tools\n3q.Tools.csproj", "{C5C372FD-4231-41BF-81D2-D2A525417ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
