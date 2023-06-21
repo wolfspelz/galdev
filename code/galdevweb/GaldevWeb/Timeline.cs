@@ -5,6 +5,16 @@
         public string IndexFilePath { get; set; } = "(IndexFilePath)";
         public IDataProvider DataProvider { get; set; } = new FileDataProvider();
 
+        public IEnumerable<string> GetNames(string lang)
+        {
+            var indexData = DataProvider.GetData(IndexFilePath);
+            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            return indexNode["entries"]
+                .AsDictionary
+                .Where(kv => Is.Value(kv.Value[lang]))
+                .Select(kv => kv.Key);
+        }
+
         public TimelineEntry GetEntry(string name, string lang)
         {
             var id = Timeline.GetNameFromSeoTitle(name);

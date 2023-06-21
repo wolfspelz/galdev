@@ -36,6 +36,24 @@
         </div>
     </div>
 
+} else @if (Model.Names != null) {
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <h1>
+                Timeline
+            </h1>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            @foreach (var name in Model.Names) {
+                <a href="@name">@name</a>
+            }
+        </div>
+    </div>
+
 } else {
     <div class="row">
         <div class="col-12">
