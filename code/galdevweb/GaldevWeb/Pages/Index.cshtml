@@ -28,11 +28,11 @@
         </div>
     </div>
 
-    <div class="row mt-4">
+    @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
         <div class="col-12">
-            <img src="Image/@Model.Entry.Image" />
+            <img src="Image/@Model.Entry.Image" class="img-responsive" />
         </div>
-    </div>
+    }
 
     <div class="row mt-2">
         <div class="col-12">
@@ -44,23 +44,6 @@
 
 } else @if (Model.Names != null) {
 
-    <div class="row mt-4">
-        <div class="col-12">
-            <h1>
-                Timeline
-            </h1>
-        </div>
-    </div>
-
-    <div class="row mt-2">
-        <div class="col-12">
-            @foreach (var name in Model.Names) {
-                <a href="@name">@name</a>
-            }
-        </div>
-    </div>
-
-} else {
     <div class="row">
         <div class="col-12">
             <h1>
@@ -89,17 +72,19 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-12">
             <h2>
-                Die grosse Erweiterung
+                Timeline
             </h2>
-            <p>
-                Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe.
-            </p>
-            <p>
-                Hier sind die Ergebnisse der Erweiterungkampagne:
-            </p>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            @foreach (var name in Model.Names) {
+                <a href="@name">@name</a>
+            }
         </div>
     </div>
 }
