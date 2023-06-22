@@ -3,7 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Loot Places</title>
+    <title>@ViewData["Title"]</title>
+
+    <meta name="description" content="@(ViewData["MetaDescription"])" />
+    <meta property="og:title" content="@(ViewData["MetaFacebookTitle"])" />
+    <meta property="og:description" content="@(ViewData["MetaFacebookDescription"])" />
+    <meta property="og:image" content="@(ViewData["MetaFacebookImage"])" />
+    <meta property="og:image:alt" content="@(ViewData["MetaFacebookImageAlt"])" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@("https://" + Context.Request.Host + Context.Request.Path + Context.Request.QueryString)" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@(ViewData["MetaTwitterTitle"])" />
+    <meta name="twitter:description" content="@(ViewData["MetaTwitterDescription"])" />
+    <meta name="twitter:image" content="@(ViewData["MetaTwitterImage"])" />
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GaldevWeb.styles.css" asp-append-version="true" />

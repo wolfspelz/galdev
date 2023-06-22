@@ -21,6 +21,31 @@ body {
     margin-bottom: 60px;
 }
 
+a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #f4f4f4;
+    padding: 0 0.2rem;
+    margin-left: -0.2rem;
+}
+
+    a:visited {
+    }
+
+    a:hover {
+        color: #000000;
+        background-color: #e0e0e0;
+    }
+
+    a:focus {
+        color: #000000;
+        background-color: #c0c0c0;
+    }
+
 /*.navbar-brand {
     font-weight: bold;
 }*/

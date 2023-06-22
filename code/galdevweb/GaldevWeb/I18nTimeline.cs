@@ -46,15 +46,13 @@
 
         public TimelineEntry GetEntry(string name, string lang)
         {
-            var id = I18nTimeline.GetNameFromSeoTitle(name);
-
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
 
             var langPath = indexNode["languages"][lang]["path"].AsString;
-            var entryFileName = indexNode["entries"][id][lang].AsString;
+            var entryFileName = indexNode["entries"][name][lang].AsString;
             if (Is.Empty(entryFileName)) {
-                throw new Exception($"No entry={id} for lang={lang} in index={IndexFilePath}");
+                throw new Exception($"No entry={name} for lang={lang} in index={IndexFilePath}");
             }
             if (entryFileName.EndsWith(".yaml")) {
                 entryFileName = entryFileName.Substring(0, entryFileName.Length - ".yaml".Length);
@@ -84,7 +82,7 @@
                 .Select(x => x.Trim())
                 .ToArray();
 
-            var entry = new TimelineEntry(id, year, title, text);
+            var entry = new TimelineEntry(name, year, title, text);
 
             var summary = entryNode["summary"].AsString;
             if (Is.Value(summary)) {
@@ -104,15 +102,10 @@
             return entry;
         }
 
-        protected static string GetNameFromSeoTitle(string seoTitle)
+        internal static string GetNameFromSeoTitle(string seoTitle)
         {
             var parts = seoTitle.ToLower().Split(new char[] { '-', ':' }, 2);
             return parts[0];
-        }
-
-        public static string GetSeoTitle(TimelineEntry entry)
-        {
-            return $"{entry.Name}-{entry.Year}-{entry.Title}";
         }
 
         internal string GetImagePath(string imageName, string lang)

@@ -16,5 +16,7 @@
             Title = title;
             Text = text;
         }
+
+        public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-");
     }
 }

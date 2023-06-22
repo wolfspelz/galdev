@@ -24,6 +24,7 @@ namespace GaldevWeb.Pages
             var timeline = _timelines.GetEntries(lang);
 
             if (Is.Value(name)) {
+                name = I18nTimeline.GetNameFromSeoTitle(name);
                 Log.Info("Entry", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
                 Entry = timeline.GetEntry(name);
             } else {
