@@ -110,19 +110,21 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <h2>
-                Timeline
-            </h2>
+    <div class="gd-timeline">
+        <div class="row">
+            <div class="col-12">
+                <h2>
+                    Timeline
+                </h2>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-12">
-            @foreach (var kv in Model.Entries) {
-                <div><a href="@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a></div>
-            }
+        <div class="row">
+            <div class="col-12">
+                @foreach (var kv in Model.Entries) {
+                    <div><a href="@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a></div>
+                }
+            </div>
         </div>
     </div>
 }
