@@ -1,18 +1,36 @@
-﻿namespace GaldevWeb
+﻿using Microsoft.AspNetCore.Mvc.Formatters;
+
+namespace GaldevWeb
 {
     public class Timeline
     {
         public string IndexFilePath { get; set; } = "(IndexFilePath)";
+        int MinEntryTextLength { get; set; } = 1000;
         public IDataProvider DataProvider { get; set; } = new FileDataProvider();
 
         public IEnumerable<string> GetNames(string lang)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-            return indexNode["entries"]
+            var names = indexNode["entries"]
                 .AsDictionary
                 .Where(kv => Is.Value(kv.Value[lang]))
-                .Select(kv => kv.Key);
+                .Select(kv => kv.Key)
+                ;
+            ;
+            var result = new List<string>();
+            foreach (var name in names) {
+                var entry = GetEntry(name, lang);
+                var textLength = entry.Text.Aggregate(0, (acc, x) => acc + x.Length);
+                if (entry != null && textLength > MinEntryTextLength) {
+                    result.Add(name);
+                }
+            }
+            //return indexNode["entries"]
+            //    .AsDictionary
+            //    .Where(kv => Is.Value(kv.Value[lang]))
+            //    .Select(kv => kv.Key);
+            return result;
         }
 
         public TimelineEntry GetEntry(string name, string lang)
