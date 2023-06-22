@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
+using System.IO;
 
 namespace GaldevWeb.Controllers
 {
@@ -20,6 +21,10 @@ namespace GaldevWeb.Controllers
             var provider = new FileExtensionContentTypeProvider();
             if (!provider.TryGetContentType(filePath, out string? contentType)) {
                 contentType = "application/octet-stream";
+            }
+
+            if (!System.IO.File.Exists(filePath)) {
+                filePath = Config.NotFoundImagePath;
             }
 
             var stream = System.IO.File.OpenRead(filePath);
