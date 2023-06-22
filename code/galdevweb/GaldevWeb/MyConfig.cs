@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace GaldevWeb
+﻿namespace GaldevWeb
 {
     public class MyConfig : MemoryCallbackConfig
     {

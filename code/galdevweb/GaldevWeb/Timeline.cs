@@ -1,115 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc.Formatters;
-
-namespace GaldevWeb
+﻿namespace GaldevWeb
 {
-    public class Timeline
+    public class Timeline : Dictionary<string, TimelineEntry>
     {
-        public string IndexFilePath { get; set; } = "(IndexFilePath)";
-        int MinEntryTextLength { get; set; } = 1000;
-        public IDataProvider DataProvider { get; set; } = new FileDataProvider();
-
-        public IEnumerable<string> GetNames(string lang)
+        internal TimelineEntry GetEntry(string name)
         {
-            var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-            var names = indexNode["entries"]
-                .AsDictionary
-                .Where(kv => Is.Value(kv.Value[lang]))
-                .Select(kv => kv.Key)
-                ;
-            ;
-            var result = new List<string>();
-            foreach (var name in names) {
-                var entry = GetEntry(name, lang);
-                var textLength = entry.Text.Aggregate(0, (acc, x) => acc + x.Length);
-                if (entry != null && textLength > MinEntryTextLength) {
-                    result.Add(name);
-                }
-            }
-            //return indexNode["entries"]
-            //    .AsDictionary
-            //    .Where(kv => Is.Value(kv.Value[lang]))
-            //    .Select(kv => kv.Key);
-            return result;
+            return this[name];
         }
 
-        public TimelineEntry GetEntry(string name, string lang)
+        internal IEnumerable<string> GetNames()
         {
-            var id = Timeline.GetNameFromSeoTitle(name);
-
-            var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-
-            var langPath = indexNode["languages"][lang]["path"].AsString;
-            var entryFileName = indexNode["entries"][id][lang].AsString;
-            if (Is.Empty(entryFileName)) {
-                throw new Exception($"No entry={id} for lang={lang} in index={IndexFilePath}");
-            }
-            if (entryFileName.EndsWith(".yaml")) {
-                entryFileName = entryFileName.Substring(0, entryFileName.Length - ".yaml".Length);
-            }
-            if (entryFileName.EndsWith(".yml")) {
-                entryFileName = entryFileName.Substring(0, entryFileName.Length - ".yml".Length);
-            }
-
-            var dirPath = Path.GetDirectoryName(IndexFilePath);
-            var entryPath = Path.Combine(dirPath ?? "", langPath, entryFileName);
-            var entryPathWithExt = entryPath + ".yml";
-            if (!DataProvider.HasData(entryPathWithExt)) {
-                entryPathWithExt = entryPath + ".yaml";
-                if (!DataProvider.HasData(entryPathWithExt)) {
-                    throw new Exception($"No entry file= {entryPathWithExt}");
-                }
-            }
-            var entryData = DataProvider.GetData(entryPathWithExt);
-            var entryNode = JsonPath.Node.FromYaml(entryData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-
-            var year = entryNode["year"].AsString;
-            var title = entryNode["title"].AsString;
-            var text = entryNode["text"].AsString
-                .Replace("\r\n", "\n")
-                .Replace("\r", "\n")
-                .Split('\n')
-                .Select(x => x.Trim())
-                .ToArray();
-
-            var entry = new TimelineEntry(id, year, title, text);
-
-            var summary = entryNode["summary"].AsString;
-            if (Is.Value(summary)) {
-                entry.Summary = summary;
-            }
-
-            var shortSummary = entryNode["short"].AsString;
-            if (Is.Value(shortSummary)) {
-                entry.Summary = shortSummary;
-            }
-
-            var image = entryNode["image"].AsString;
-            if (Is.Value(image)) {
-                entry.Image = $"{lang}/{image}";
-            }
-
-            return entry;
+            return Keys;
         }
 
-        protected static string GetNameFromSeoTitle(string seoTitle)
+        internal Timeline GetEntries()
         {
-            var parts = seoTitle.ToLower().Split(new char[] { '-', ':' }, 2);
-            return parts[0];
-        }
-
-        public static string GetSeoTitle(TimelineEntry entry)
-        {
-            return $"{entry.Name}-{entry.Year}-{entry.Title}";
-        }
-
-        internal string GetImagePath(string imageName, string lang)
-        {
-            var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-            var langPath = indexNode["languages"][lang]["images"].AsString;
-            return Path.Combine(Path.GetDirectoryName(IndexFilePath) ?? "", langPath, imageName);
+            return this;
         }
     }
 }

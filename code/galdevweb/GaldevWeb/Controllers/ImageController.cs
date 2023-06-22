@@ -15,7 +15,7 @@ namespace GaldevWeb.Controllers
         {
             Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
-            var filePath = new Timeline { IndexFilePath = Config.IndexPath, }.GetImagePath(name, lang);
+            var filePath = new I18nTimeline { IndexFilePath = Config.IndexPath, }.GetImagePath(name, lang);
 
             var provider = new FileExtensionContentTypeProvider();
             if (!provider.TryGetContentType(filePath, out string? contentType)) {

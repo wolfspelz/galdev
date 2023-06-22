@@ -26,7 +26,12 @@ namespace GaldevWeb
                     .AddSupportedUICultures(supportedCultures);
             });
 
-            builder.Services.AddSingleton(new MyApp { });
+            var config = new MyConfig();
+            builder.Services.AddSingleton(new MyApp { Config = config });
+
+            var timeline = new I18nTimeline { IndexFilePath = config.IndexPath, };
+            timeline.Init();
+            builder.Services.AddSingleton(timeline);
 
             var app = builder.Build();
 

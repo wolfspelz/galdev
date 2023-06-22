@@ -42,7 +42,7 @@
         </div>
     </div>
 
-} else @if (Model.Names != null) {
+} else @if (Model.Entries != null) {
 
     <div class="row">
         <div class="col-12">
@@ -82,8 +82,8 @@
 
     <div class="row mt-2">
         <div class="col-12">
-            @foreach (var name in Model.Names) {
-                <a href="@name">@name</a>
+            @foreach (var kv in Model.Entries) {
+                <div><a href="@kv.Value.Name">@kv.Value.Year @kv.Value.Title</a></div>
             }
         </div>
     </div>

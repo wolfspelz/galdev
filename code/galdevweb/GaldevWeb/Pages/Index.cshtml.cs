@@ -4,25 +4,31 @@ namespace GaldevWeb.Pages
 {
     public class IndexModel : AppPageModel
     {
-        public IEnumerable<string>? Names;
+        public I18nTimeline _timelines;
+        public Timeline? Entries;
         public TimelineEntry? Entry;
 
-        public IndexModel(MyApp app) : base(app, "Index") { }
+        public IndexModel(MyApp app, I18nTimeline timelines) : base(app, "Index")
+        {
+            _timelines = timelines;
+        }
 
         public void OnGet(string name)
         {
             var lang = GetLangFromCultureName(UiCultureName);
 
-            var timeline = new Timeline {
-                IndexFilePath = Config.IndexPath,
-            };
+            //var timeline = new Timeline {
+            //    IndexFilePath = Config.IndexPath,
+            //};
+
+            var timeline = _timelines.GetEntries(lang);
 
             if (Is.Value(name)) {
                 Log.Info("Entry", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
-                Entry = timeline.GetEntry(name, lang);
+                Entry = timeline.GetEntry(name);
             } else {
-                Log.Info("Names", new LogData { [nameof(lang)] = lang });
-                Names = timeline.GetNames(lang);
+                Log.Info("Entries", new LogData { [nameof(lang)] = lang });
+                Entries = timeline.GetEntries();
             }
         }
 
