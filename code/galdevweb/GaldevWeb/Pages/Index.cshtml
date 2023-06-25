@@ -1,131 +1,119 @@
-﻿@page "{name?}"
-@model IndexModel
+﻿@model IndexModel
 @{
-    if (Model.Entry != null) {
-        ViewData["Active"] = "Entry";
-        ViewData["Title"] = Model.Entry.Title;
-        ViewData["MetaDescription"] = Model.Entry.Summary;
-        ViewData["MetaFacebookTitle"] = Model.Entry.Title;
-        ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
-        ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
-        ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
-        ViewData["MetaTwitterTitle"] = Model.Entry.Title;
-        ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
-        ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
-    } else {
-        ViewData["Active"] = "Index";
-        ViewData["Title"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
-                    ["en-US"] = () => "Galactic Developments - The History of the Future"
-                });
-        //ViewData["MetaDescription"] = Model.Entry.Summary;
-        //ViewData["MetaFacebookTitle"] = Model.Entry.Title;
-        //ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
-        //ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
-        //ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
-        //ViewData["MetaTwitterTitle"] = Model.Entry.Title;
-        //ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
-        //ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
-    }
+    ViewData["Active"] = "Index";
+    ViewData["Title"] = @Model.I18n.String(path: "Meta/Title", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
+                ["en-US"] = () => "Galactic Developments - The History of the Future"
+            });
+    //ViewData["MetaDescription"] = Model.Entry.Summary;
+    //ViewData["MetaFacebookTitle"] = Model.Entry.Title;
+    //ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
+    //ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    //ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
+    //ViewData["MetaTwitterTitle"] = Model.Entry.Title;
+    //ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
+    //ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
 }
 
-@if (Model.Entry != null) {
+  <div class="row mt-3">
+      <div class="col-12">
+          <h1>
+              @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "Die Geschichte der Zukunft",
+                ["en-US"] = () => "The History of the Future"
+              })
+          </h1>
+      </div>
+  </div>
 
-    <div class="row mt-4">
-        <div class="col-12">
-            <h1>
-                @Model.Entry.Title
-            </h1>
-        </div>
-    </div>
-
-    @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
-        <div class="col-12">
-            <img src="Image/@Model.Entry.Image" class="img-responsive" />
-        </div>
-    }
-
-    <div class="row mt-2">
-        <div class="col-12">
-            @foreach (var t in Model.Entry.Text) {
-                <p>@t</p>
-            }
-        </div>
-    </div>
-
-} else @if (Model.Entries != null) {
-
-    <div class="row mt-3">
-        <div class="col-12">
-            <h1>
-                @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Die Geschichte der Zukunft",
-            ["en-US"] = () => "The History of the Future"
+  <div class="row my-3">
+      <div class="col-12">
+          <h2>
+              @Model.I18n.String(path: "SubTitle", i18n: new StringGeneratorI18n {
+              ["de-DE"] = () => "Von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation",
+              ["en-US"] = () => "From Early Settlements in the Solar System to an Interstellar Civilization"
             })
-            </h1>
-        </div>
-    </div>
+          </h2>
+      </div>
+  </div>
 
-    <div class="row my-3">
-        <div class="col-12">
-            <h2>
-                @Model.I18n.String(path: "SubTitle", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation",
-            ["en-US"] = () => "From Early Settlements in the Solar System to an Interstellar Civilization"
-            })
-            </h2>
-        </div>
-    </div>
+  <script src="~/lib/masonry-4.2.2.min.js" async></script>
+  <script src="~/js/masonryAutoRelayout.js" async></script>
+  <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
+      @{
+          ListGenerator cardsData = () => new List<Node> {
 
-    <div class="row">
-        <div class="col-12">
-            <p>
-                @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Galactic Developments ist ein Geschichtsbuch der Zukunft, eine realistische Timeline.",
-            ["en-US"] = () => "Galactic Developments is a history book of the future, a realistic timeline."
-            })
-            </p>
-            <p>
-                @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Erst besiedelt die Menschheit das eigene Sonnensystem. Eine interplanetare Zivilisation entwickelt sich mit Erfindungen und Entdeckungen, Politik und Intrigen. Machtzentren kommen und gehen.",
-            ["en-US"] = () => "Humanity expands into the Solar System. The interplanetary civilization develops. With inventions and discoveries, politics and intrigues. Interplanetary powers come and go... "
-            })
-            </p>
-            <p>
-                @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Dann die Sterne. Schon bevor Raumkrümmer-Antriebe richtig schnell sind, gibt es gewagte Missionen und lange Reisen ins Unbekannte. Nicht nur die Menschen schauen sich um. Auch die Umgebung nimmt die Menschen langsam wahr.",
-            ["en-US"] = () => "Then the stars. Initially, FTL space ships are slower than light speed Bold missions explore the unknown fringes."
-            })
-            </p>
-            <p>
-                @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Später wird die Menschheit in die dramatische Entwicklung ihrer interstellaren Nachbarschaft hineingezogen und lernt auf die harte Tour, dass Stabilität nicht selbstverständlich ist.",
-            ["en-US"] = () => "Later, humanity is drawn into the dramatic development of its interstellar neighborhood and must learn the hard way, that stability is not a given."
-            })
-            </p>
-        </div>
-    </div>
+              Node.From(new Dictionary<string, string> { 
+                  ["Title"] = @Model.I18n.String(path: "Box/Historybook/Title", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Ein Geschichtsbuch",
+                      ["en-US"] = () => "A History Book",
+                  }),
+                  ["Text"] = @Model.I18n.String(path: "Box/Historybook/Text", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Eine Timeline der Zukunft erzählt in vielen einzelnen Ereignissen, Entdeckungen und Erfindungen aus Technik, Wirtschaft und Gesellschaft.",
+                      ["en-US"] = () => "A timeline of the future told in many events, discoveries, and inventions in technology, economy, and society.",
+                  }),
+              }),
 
-    <div class="gd-timeline">
-        <div class="row">
-            <div class="col-12">
-                <h2>
-                    Timeline
-                </h2>
-            </div>
-        </div>
+              Node.From(new Dictionary<string, string> { 
+                  ["Title"] = @Model.I18n.String(path: "Box/HardScifi/Title", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Hard SciFi",
+                      ["en-US"] = () => "Hard SciFi"
+                  }),
+                  ["Text"] = @Model.I18n.String(path: "Box/HardScifi/Text", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Basierend auf echter Wissenschaft. Futurologie, realistische Physik, mögliche Technik.",
+                      ["en-US"] = () => "Based on science. Futuorology, real physics, possible technology."
+                  }),
+              }),
 
-        <div class="row">
-            <div class="col-12">
-                @foreach (var kv in Model.Entries) {
-                    <div><a href="@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a></div>
-                }
-            </div>
-        </div>
-    </div>
-}
+              Node.From(new Dictionary<string, string> { 
+                  ["Title"] = @Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Interplanetar und interstellar",
+                      ["en-US"] = () => "Interplanetary and Interstellar"
+                  }),
+                  ["Text"] = @Model.I18n.String(path: "Box/Interplanetary/Text", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Erst besiedelt die Menschheit das eigene Sonnensystem. Eine interplanetare Zivilisation entwickelt sich mit Erfindungen und Entdeckungen, Politik und Intrigen. Machtzentren kommen und gehen.<br /><br />Dann die Sterne. Schon bevor Raumkrümmer-Antriebe richtig schnell sind, gibt es gewagte Missionen und lange Reisen ins Unbekannte. Nicht nur die Menschen schauen sich um. Auch die Umgebung nimmt die Menschen langsam wahr.<br /><br />Später wird die Menschheit in die dramatische Entwicklung ihrer interstellaren Nachbarschaft hineingezogen und lernt auf die harte Tour, dass Stabilität nicht selbstverständlich ist.",
+                      ["en-US"] = () => "Humanity expands into the Solar System. The interplanetary civilization develops with inventions and discoveries, politics and intrigues. Interplanetary powers come and go.<br /><br />Then the stars. Initially, FTL drives ships are slower than the speed of light and bold missions explore the unknown fringes.<br /><br />Later, humanity is drawn into the dramatic development of its interstellar neighborhood and must learn the hard way, that stability is not a given."
+                  }),
+              }),
 
-@section Scripts {
-    <script>
-    </script>
-}
+              Node.From(new Dictionary<string, string> { 
+                  ["Title"] = @Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "Die ganze Zeitleiste",
+                      ["en-US"] = () => "Full Timeline",
+                  }),
+                  ["Text"] = @Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
+                      ["de-DE"] = () => "<a href='List'>Alle vollständigen Artikel als Liste</a> (ohne Platzhalter und Ideen)",
+                      ["en-US"] = () => "<a href='List'>List of complete timeline entries</a> (omitting placeholders and ideas)",
+                  }),
+              }),
+
+          };
+      }
+
+      @{
+          var cardsCnt = 0;
+      }
+      @foreach (var card in Model.I18n.List(path: "Cards", data: cardsData)) {
+          cardsCnt++;
+          <div class="col-sm-6 col-lg-4 my-2">
+              <div class="card">
+                  @if (@card["ImgSrc"].String != "") {
+                      <img class="card-img-top" src="~/images/site/@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+                      <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
+                          <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+                              <div class="modal-content">
+                                  <div class="modal-body">
+                                      <img src="~/images/site/@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  }
+                  <div class="card-body">
+                      <h5 class="card-title">@card["Title"]</h5>
+                      <p>@Html.Raw(card["Text"])</p>
+                  </div>
+              </div>
+          </div>
+      }
+  </div>

@@ -1,8 +1,8 @@
 ﻿namespace GaldevWeb
 {
-    public class MyApp
+    public class GaldevApp
     {
-        public MyConfig Config = new MyConfig();
+        public GaldevConfig Config = new GaldevConfig();
         public ICallbackLogger Log = new NullCallbackLogger();
         public ITimeProvider Time = new RealTime();
     }

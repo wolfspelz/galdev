@@ -1,0 +1,37 @@
+﻿@page "{name?}"
+@model EntryModel
+@{
+    ViewData["Active"] = "Entry";
+    ViewData["Title"] = Model.Entry.Title;
+    ViewData["MetaDescription"] = Model.Entry.Summary;
+    ViewData["MetaFacebookTitle"] = Model.Entry.Title;
+    ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
+    ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
+    ViewData["MetaTwitterTitle"] = Model.Entry.Title;
+    ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
+    ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+}
+
+<div class="row mt-4">
+    <div class="col-12">
+        <h1>
+            @Model.Entry.Title
+        </h1>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.Entry.Image)) {
+    <div class="col-12">
+        <img src="Image/@Model.Entry.Image" class="img-responsive" />
+    </div>
+}
+
+<div class="row mt-2">
+    <div class="col-12">
+        @foreach (var t in Model.Entry.Text) {
+            <p>@t</p>
+        }
+    </div>
+</div>
+

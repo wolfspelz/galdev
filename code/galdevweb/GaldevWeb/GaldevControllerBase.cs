@@ -2,14 +2,14 @@
 
 namespace GaldevWeb
 {
-    public class AppControllerBase : Controller
+    public class GaldevControllerBase : Controller
     {
-        public MyApp App;
+        public GaldevApp App;
         public ICallbackLogger Log;
-        public MyConfig Config;
+        public GaldevConfig Config;
         public string UiCultureName { get; set; }
 
-        public AppControllerBase(MyApp app)
+        public GaldevControllerBase(GaldevApp app)
         {
             App = app;
             Log = App.Log;

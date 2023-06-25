@@ -18,5 +18,6 @@
         }
 
         public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-");
+        public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
     }
 }

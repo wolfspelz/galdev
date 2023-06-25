@@ -1,25 +1,32 @@
 ﻿namespace GaldevWeb
 {
-    public class I18nTimeline
+    public class I18nTimelines
     {
         public string IndexFilePath { get; set; } = "(IndexFilePath)";
-        public int MinEntryTextLength { get; set; } = 1000;
+        public int MinEntryTextLength { get; set; } = 0;
         public string[] Languages { get; set; } = new[] { "en", "de", };
         public IDataProvider DataProvider { get; set; } = new FileDataProvider();
 
-        private Dictionary<string, Timeline> _entries = new Dictionary<string, Timeline>();
-        public Timeline GetEntries(string lang) => _entries[lang];
+        private Dictionary<string, Timeline> _timelineByLang = new Dictionary<string, Timeline>();
+
+        public delegate bool TimelineEntryCondition(TimelineEntry entry);
+        public Timeline GetEntries(string lang) => _timelineByLang[lang];
+        public Timeline GetEntries(string lang, TimelineEntryCondition filter)
+        {
+            var entries = _timelineByLang[lang].Where(kv => filter(kv.Value));
+            return new Timeline(entries);
+        }
 
         internal void Init()
         {
             foreach (var lang in Languages) {
                 var names = GetNames(lang);
-                var entries = new Timeline();
+                var timeline = new Timeline();
                 foreach (var name in names) {
                     var entry = GetEntry(name, lang);
-                    entries.Add(name, entry);
+                    timeline.Add(name, entry);
                 }
-                _entries.Add(lang, entries);
+                _timelineByLang.Add(lang, timeline);
             }
         }
 

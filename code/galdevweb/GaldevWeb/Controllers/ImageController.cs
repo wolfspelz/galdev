@@ -4,9 +4,9 @@ using System.IO;
 
 namespace GaldevWeb.Controllers
 {
-    public class ImageController : AppControllerBase
+    public class ImageController : GaldevControllerBase
     {
-        public ImageController(MyApp app) : base(app)
+        public ImageController(GaldevApp app) : base(app)
         {
         }
 
@@ -16,7 +16,7 @@ namespace GaldevWeb.Controllers
         {
             Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
-            var filePath = new I18nTimeline { IndexFilePath = Config.IndexPath, }.GetImagePath(name, lang);
+            var filePath = new I18nTimelines { IndexFilePath = Config.IndexPath, }.GetImagePath(name, lang);
 
             var provider = new FileExtensionContentTypeProvider();
             if (!provider.TryGetContentType(filePath, out string? contentType)) {

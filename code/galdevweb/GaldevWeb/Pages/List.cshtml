@@ -1,0 +1,36 @@
+﻿@model ListModel
+@{
+    ViewData["Active"] = "List";
+    ViewData["Title"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
+                ["en-US"] = () => "Galactic Developments - The History of the Future"
+            });
+    //ViewData["MetaDescription"] = Model.Entry.Summary;
+    //ViewData["MetaFacebookTitle"] = Model.Entry.Title;
+    //ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
+    //ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    //ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
+    //ViewData["MetaTwitterTitle"] = Model.Entry.Title;
+    //ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
+    //ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+}
+
+<div class="gd-timeline">
+    <div class="row">
+        <div class="col-12">
+            <h2>
+                Timeline
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            @foreach (var kv in Model.Entries) {
+                <div>
+                    <a href="/Entry/@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

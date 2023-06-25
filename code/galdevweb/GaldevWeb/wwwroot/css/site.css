@@ -48,7 +48,7 @@ a {
     }
 
 div.stage {
-    background-image: url(https://placehold.co/800x200);
+    background-image: url(/images/stage-VenusFreighter-800x200.jpg);
     background-size:auto;
     width: 100%;
     height: 200px;
@@ -56,7 +56,7 @@ div.stage {
 
 @media (min-width: 800px) {
     div.stage {
-        background-image: url(https://placehold.co/1600x400);
+        background-image: url(/images/stage-VenusFreighter-1600x400.jpg);
         width: 100%;
         height: 400px;
     }
@@ -64,7 +64,7 @@ div.stage {
 
 @media (min-width: 1600px) {
     div.stage {
-        background-image: url(https://placehold.co/3000x500);
+        background-image: url(/images/stage-VenusFreighter-3000x500.jpg);
         width: 100%;
         height: 500px;
     }

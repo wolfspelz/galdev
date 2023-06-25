@@ -5,9 +5,9 @@ using GaldevWeb;
 namespace n3q.GaldevWeb.Controllers
 {
     [ApiController]
-    public class CultureController : AppControllerBase
+    public class CultureController : GaldevControllerBase
     {
-        public CultureController(MyApp app) : base(app) { }
+        public CultureController(GaldevApp app) : base(app) { }
 
         [Route("[controller]")]
         [HttpGet]
