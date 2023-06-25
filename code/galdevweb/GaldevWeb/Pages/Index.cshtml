@@ -33,7 +33,7 @@
             @Model.I18n.String(path: "SubTitle", i18n: new StringGeneratorI18n {
             ["de-DE"] = () => "Von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation",
             ["en-US"] = () => "From Early Settlements in the Solar System to an Interstellar Civilization"
-        })
+            })
         </h2>
     </div>
 </div>
@@ -43,7 +43,7 @@
 @{
     ListGenerator cardsData = () => new List<Node> {
 
-        Node.From(new Dictionary<string, string> { 
+        Node.From(new Dictionary<string, string> {
             ["Title"] = @Model.I18n.String(path: "Box/Historybook/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Ein Geschichtsbuch",
                 ["en-US"] = () => "A History Book",
@@ -54,7 +54,7 @@
             }),
         }),
 
-        Node.From(new Dictionary<string, string> { 
+        Node.From(new Dictionary<string, string> {
             ["Title"] = @Model.I18n.String(path: "Box/HardScifi/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Hard SciFi",
                 ["en-US"] = () => "Hard SciFi"
@@ -65,7 +65,7 @@
             }),
         }),
 
-        Node.From(new Dictionary<string, string> { 
+        Node.From(new Dictionary<string, string> {
             ["Title"] = @Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Interplanetar und interstellar",
                 ["en-US"] = () => "Interplanetary and Interstellar"
@@ -76,7 +76,7 @@
             }),
         }),
 
-        Node.From(new Dictionary<string, string> { 
+        Node.From(new Dictionary<string, string> {
             ["Title"] = @Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Die ganze Zeitleiste",
                 ["en-US"] = () => "Full Timeline",
@@ -137,13 +137,26 @@
                 "Sterge",
                 "Prophet",
                 "ReshumanisCobol",
-                "Supernova",
             }
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
                 return $"<a href='/Entry/{entry.SeoTitle}'>{entry.Year} {entry.DisplayName}</a>";
             })),
+        }),
+
+        Node.From(new Dictionary<string, string> {
+            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Supernova").Image ?? "",
+            ["ImgAlt"] = @Model.Entries.GetEntry("Supernova").DisplayName,
+            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Supernova").SeoTitle,
+            ["Text"] = @Model.Entries.GetEntry("Supernova").Summary?? "",
+        }),
+
+        Node.From(new Dictionary<string, string> {
+            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Gee").Image ?? "",
+            ["ImgAlt"] = @Model.Entries.GetEntry("Gee").DisplayName,
+            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Gee").SeoTitle,
+            ["Text"] = @Model.Entries.GetEntry("Gee").Summary?? "",
         }),
 
     };
@@ -161,12 +174,16 @@
         <div class="col-sm-6 col-lg-4 my-2">
             <div class="card">
                 @if (@card["ImgSrc"].String != "") {
-                    <img class="card-img-top" src="~/images/site/@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+                    @if (@card["Link"].String != "") {
+                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
+                    } else {
+                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+                    }
                     <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <img src="~/images/site/@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+                                    <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
                                 </div>
                             </div>
                         </div>
