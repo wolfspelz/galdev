@@ -1,9 +1,8 @@
 ﻿@page "{name?}"
 @model IndexModel
 @{
-    ViewData["Active"] = "Index";
-
     if (Model.Entry != null) {
+        ViewData["Active"] = "Entry";
         ViewData["Title"] = Model.Entry.Title;
         ViewData["MetaDescription"] = Model.Entry.Summary;
         ViewData["MetaFacebookTitle"] = Model.Entry.Title;
@@ -14,6 +13,7 @@
         ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
         ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
     } else {
+        ViewData["Active"] = "Index";
         ViewData["Title"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
                     ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
                     ["en-US"] = () => "Galactic Developments - The History of the Future"
@@ -55,10 +55,6 @@
 
 } else @if (Model.Entries != null) {
 
-    <div class="row">
-        <img src="images/banner.jpg" class="col-12" />
-    </div>
-
     <div class="row mt-3">
         <div class="col-12">
             <h1>
@@ -70,7 +66,7 @@
         </div>
     </div>
 
-    <div class="row mb-3">
+    <div class="row my-3">
         <div class="col-12">
             <h2>
                 @Model.I18n.String(path: "SubTitle", i18n: new StringGeneratorI18n {

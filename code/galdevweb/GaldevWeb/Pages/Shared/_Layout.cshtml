@@ -26,7 +26,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container">
                 <a class="navbar-brand" href="/">Galactic Developments</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -51,6 +51,10 @@
             </div>
         </nav>
     </header>
+
+    @if ((ViewData["Active"] ?? "").ToString() == "Index") {
+        <div class="stage"></div>
+    }
 
     <div class="container">
         <main role="main" class="pb-3">
