@@ -54,14 +54,22 @@
         </nav>
     </header>
 
-    @if ((ViewData["Active"] ?? "").ToString() == "Index") {
-        <div class="stage"></div>
-    }
-
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="content">
+        @if ((ViewData["Active"] ?? "").ToString() == "Index") {
+            <div class="stage-Index"></div>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        } else {
+            <div class="container">
+                <img src="/images/stage-VenusFreighter-1600x200.jpg" style="width:100%;" class="img-fluid" alt="Venus Freighter" />
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        }
     </div>
 
     <footer class="border-top footer text-muted text-center">

@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-.gd-timeline a {
+.content a {
     text-decoration: none;
     color: #000000;
     background-color: #f4f4f4;
@@ -34,28 +34,28 @@ a {
     margin-left: -0.2rem;
 }
 
-    .gd-timeline a:visited {
+    .content a:visited {
     }
 
-    .gd-timeline a:hover {
+    .content a:hover {
         color: #000000;
         background-color: #e0e0e0;
     }
 
-    .gd-timeline a:focus {
+    .content a:focus {
         color: #000000;
         background-color: #c0c0c0;
     }
 
-div.stage {
+div.stage-Index {
     background-image: url(/images/stage-VenusFreighter-800x200.jpg);
-    background-size:auto;
+    background-size: auto;
     width: 100%;
     height: 200px;
 }
 
 @media (min-width: 800px) {
-    div.stage {
+    div.stage-Index {
         background-image: url(/images/stage-VenusFreighter-1600x400.jpg);
         width: 100%;
         height: 400px;
@@ -63,7 +63,7 @@ div.stage {
 }
 
 @media (min-width: 1600px) {
-    div.stage {
+    div.stage-Index {
         background-image: url(/images/stage-VenusFreighter-3000x500.jpg);
         width: 100%;
         height: 500px;

@@ -17,7 +17,7 @@
             return new Timeline(entries);
         }
 
-        internal void Init()
+        public void Init()
         {
             foreach (var lang in Languages) {
                 var names = GetNames(lang);
@@ -91,6 +91,11 @@
 
             var entry = new TimelineEntry(name, year, title, text);
 
+            var shortTitle = entryNode["shorttitle"].AsString;
+            if (Is.Value(shortTitle)) {
+                entry.ShortTitle = shortTitle;
+            }
+
             var summary = entryNode["summary"].AsString;
             if (Is.Value(summary)) {
                 entry.Summary = summary;
@@ -109,13 +114,13 @@
             return entry;
         }
 
-        internal static string GetNameFromSeoTitle(string seoTitle)
+        public static string GetNameFromSeoTitle(string seoTitle)
         {
             var parts = seoTitle.ToLower().Split(new char[] { '-', ':' }, 2);
             return parts[0];
         }
 
-        internal string GetImagePath(string imageName, string lang)
+        public string GetImagePath(string imageName, string lang)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });

@@ -6,6 +6,8 @@
         public string Year;
         public string Title;
         public string[] Text;
+
+        public string? ShortTitle;
         public string? Summary;
         public string? Image;
 
@@ -19,5 +21,6 @@
 
         public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-");
         public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
+        public string DisplayName => string.IsNullOrEmpty(ShortTitle) ? Title : ShortTitle;
     }
 }

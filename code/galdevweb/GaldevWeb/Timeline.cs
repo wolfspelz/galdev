@@ -10,17 +10,27 @@
         {
         }
 
-        internal TimelineEntry GetEntry(string name)
+        public bool HasEntry(string name)
         {
-            return this[name];
+            name = name.ToLower();
+            return this.ContainsKey(name);
         }
 
-        internal IEnumerable<string> GetNames()
+        public TimelineEntry GetEntry(string name)
+        {
+            name = name.ToLower();
+            if (this.ContainsKey(name)) {
+                return this[name];
+            }
+            throw new KeyNotFoundException($"Timeline entry '{name}' not found");
+        }
+
+        public IEnumerable<string> GetNames()
         {
             return Keys;
         }
 
-        internal Timeline GetEntries()
+        public Timeline GetEntries()
         {
             return this;
         }
