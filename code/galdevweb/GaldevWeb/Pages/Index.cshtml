@@ -93,10 +93,10 @@
                 ["en-US"] = () => "The great Expansion",
             }),
             ["Text"] = @Model.I18n.String(path: "Box/Expansion/Text", i18n: new StringGeneratorI18n {
-                ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. <br/><br/>Hier die Ergebnisse der Erweiterungkampagne:",
-                ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. <br/><br/>The results of the expansion campaign:",
+                ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
+                ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
             })
-            + "<br/>"
+            + "<br/><br/>"
             + string.Join("<br/>", new [] {
                 "1000InSpace",
                 "Gemini",
@@ -161,9 +161,6 @@
 
     };
 }
-
-@*    @await Html.PartialAsync("_EntryLinkListPartial", new ViewDataDictionary { ["Entries"] => new [] {"x", "y"}})
-*@
 
 <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
     @{
