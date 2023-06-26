@@ -10,8 +10,8 @@
         ["en-US"] = () => "A Science Fiction history of the future from eary settlements in the Solar System to an interstellar civilization"
     });
     var image = Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
-        ["de-DE"] = () => "/images/FlyerFront.jpg",
-        ["en-US"] = () => "/images/FlyerFront.jpg"
+        ["de-DE"] = () => "/images/site/FlyerFront.jpg",
+        ["en-US"] = () => "/images/site/FlyerFront.jpg"
     });
 
     ViewData["Active"] = "Index";
@@ -184,7 +184,7 @@
         }),
 
         Node.From(new Dictionary<string, string> {
-            ["ImgSrc"] = "/images/book.png",
+            ["ImgSrc"] = "/images/site/book.png",
             ["ImgAlt"] = "Buch",
             ["Link"] = "https://www.amazon.de/dp/1536999199",
             ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {

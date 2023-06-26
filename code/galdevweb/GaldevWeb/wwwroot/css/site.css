@@ -50,7 +50,7 @@ a {
     }
 
 div.stage-Index {
-    background-image: url(/images/stage-VenusFreighter-800x200.jpg);
+    background-image: url(/images/site/stage-VenusFreighter-800x200.jpg);
     background-size: auto;
     background-position: center;
     width: 100%;
@@ -59,7 +59,7 @@ div.stage-Index {
 
 @media (min-width: 800px) {
     div.stage-Index {
-        background-image: url(/images/stage-VenusFreighter-1600x400.jpg);
+        background-image: url(/images/site/stage-VenusFreighter-1600x400.jpg);
         background-position: center;
         width: 100%;
         height: 400px;
@@ -68,7 +68,7 @@ div.stage-Index {
 
 @media (min-width: 1600px) {
     div.stage-Index {
-        background-image: url(/images/stage-VenusFreighter-3000x500.jpg);
+        background-image: url(/images/site/stage-VenusFreighter-3000x500.jpg);
         background-position: center;
         width: 100%;
         height: 500px;
