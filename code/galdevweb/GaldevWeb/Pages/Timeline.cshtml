@@ -13,23 +13,36 @@
     ViewData["MetaTwitterImage"] = "/Image/" + Model.Entry.Image;
 }
 
-<div class="row mt-3">
-    <div class="col-12">
-        <h1>
-            @Model.Entry.Title
-        </h1>
+@if (Model.NotAvailable) {
+    
+    <div class="row mt-3">
+        <div class="col-12">
+            <h3>
+                Not available in this language
+            </h3>
+        </div>
     </div>
-</div>
 
-<div class="row mt-3">
-    <div class="col-12">
-        @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
-            <img src="/Image/@Model.Entry.Image" style="width:50%; min-width:200px; margin-left:1em; margin-bottom:0.3em; filter:drop-shadow(5px 5px 5px #505050);" class="float-end img-fluid mb-3" />
-        }
+} else {
 
-        @foreach (var t in Model.Entry.Text) {
-            <p>@t</p>
-        }
+    <div class="row mt-3">
+        <div class="col-12">
+            <h1>
+                @Model.Entry.Title
+            </h1>
+        </div>
     </div>
-</div>
 
+    <div class="row mt-3">
+        <div class="col-12">
+            @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
+                <img src="/Image/@Model.Entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
+            }
+
+            @foreach (var t in Model.Entry.Text) {
+                <p>@t</p>
+            }
+        </div>
+    </div>
+
+}

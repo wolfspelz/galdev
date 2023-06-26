@@ -74,3 +74,11 @@ div.stage-Index {
         height: 500px;
     }
 }
+
+img.gd-entry-image {
+    width: 50%;
+    min-width: 200px;
+    margin-left: 1em;
+    margin-bottom: 0.3em;
+    filter: drop-shadow(5px 5px 5px #505050);
+}
