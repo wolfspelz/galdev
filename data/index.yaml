@@ -63,7 +63,7 @@ entries:
   NeuroImplant:
     de: 2051_Neuroimplantat.yaml
     en: 2051_NeuroImplant.yaml
-  Die_Weltbevölkerung_überschrei:
+  Pop10b:
     de: 2051c_Die_Weltbevölkerung_überschrei.yaml
   Apes:
     de: 2052_Primaten.yaml

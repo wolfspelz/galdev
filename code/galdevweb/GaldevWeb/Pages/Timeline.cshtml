@@ -21,14 +21,12 @@
     </div>
 </div>
 
-<div class="row mt-2">
-    @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
-        <div class="col-md-6 mb-3">
-            <img src="/Image/@Model.Entry.Image" class="img-fluid" />
-        </div>
-    }
-
+<div class="row mt-3">
     <div class="col-12">
+        @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
+            <img src="/Image/@Model.Entry.Image" style="width:50%; min-width:200px; margin-left:1em; margin-bottom:0.3em; filter:drop-shadow(5px 5px 5px #505050);" class="float-end img-fluid mb-3" />
+        }
+
         @foreach (var t in Model.Entry.Text) {
             <p>@t</p>
         }
