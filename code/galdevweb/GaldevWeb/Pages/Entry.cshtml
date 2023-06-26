@@ -6,11 +6,11 @@
     ViewData["MetaDescription"] = Model.Entry.Summary;
     ViewData["MetaFacebookTitle"] = Model.Entry.Title;
     ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
-    ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    ViewData["MetaFacebookImage"] = "/Image/" + Model.Entry.Image;
     ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
     ViewData["MetaTwitterTitle"] = Model.Entry.Title;
     ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
-    ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    ViewData["MetaTwitterImage"] = "/Image/" + Model.Entry.Image;
 }
 
 <div class="row mt-3">
