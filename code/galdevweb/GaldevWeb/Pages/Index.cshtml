@@ -119,14 +119,14 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Entry", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
+                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
             })),
         }),
 
         Node.From(new Dictionary<string, string> {
             ["ImgSrc"] = "/Image/" + Model.Entries.GetEntry("Supernova").Image ?? "",
             ["ImgAlt"] = Model.Entries.GetEntry("Supernova").DisplayName,
-            ["Link"] = Model.Links.GetPathByPage("/Entry", null, new { name = Model.Entries.GetEntry("Supernova").SeoTitle}) ?? "",
+            ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = Model.Entries.GetEntry("Supernova").SeoTitle}) ?? "",
             ["Text"] = Model.Entries.GetEntry("Supernova").Summary ?? "",
         }),
 
@@ -153,7 +153,7 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Entry", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
+                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
             })),
         }),
 
@@ -179,7 +179,7 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Entry", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
+                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name =  entry.SeoTitle})}'>{entry.Year} {entry.DisplayName}</a>";
             })),
         }),
 
@@ -200,7 +200,7 @@
         Node.From(new Dictionary<string, string> {
             ["ImgSrc"] = "/Image/" + Model.Entries.GetEntry("Gee").Image ?? "",
             ["ImgAlt"] = Model.Entries.GetEntry("Gee").DisplayName,
-            ["Link"] = Model.Links.GetPathByPage("/Entry", null, new { name = Model.Entries.GetEntry("Gee").SeoTitle}) ?? "",
+            ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = Model.Entries.GetEntry("Gee").SeoTitle}) ?? "",
             ["Text"] = Model.Entries.GetEntry("Gee").Summary ?? "",
         }),
 

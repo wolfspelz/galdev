@@ -19,7 +19,7 @@
     <div class="col-12">
         @foreach (var kv in Model.Entries) {
             <div>
-                <a asp-page="/Entry" asp-route-name="@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a>
+                    <a asp-page="/Timeline" asp-route-name="@kv.Value.SeoTitle">@kv.Value.Year @kv.Value.Title</a>
             </div>
         }
     </div>

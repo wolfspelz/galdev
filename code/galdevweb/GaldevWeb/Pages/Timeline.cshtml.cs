@@ -1,11 +1,11 @@
 ﻿namespace GaldevWeb.Pages
 {
-    public class EntryModel : GaldevPageModel
+    public class TimelineModel : GaldevPageModel
     {
         public I18nTimelines _timelines;
         public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
 
-        public EntryModel(GaldevApp app, I18nTimelines timelines) : base(app, "Entry")
+        public TimelineModel(GaldevApp app, I18nTimelines timelines) : base(app, "Entry")
         {
             _timelines = timelines;
         }
