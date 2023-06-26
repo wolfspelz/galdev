@@ -6,16 +6,13 @@
 
 ## Links
 
-- German page: http://www.galactic-developments.de/?lang=de
-- German source: https://github.com/wolfspelz/galdev/tree/master/data/de
-- English page: http://www.galactic-developments.de/?lang=en
-- English source: https://github.com/wolfspelz/galdev/tree/master/data/en
+- Website: http://www.galactic-developments.de/
+- German data: https://github.com/wolfspelz/galdev/tree/master/data/de
+- English data: https://github.com/wolfspelz/galdev/tree/master/data/en
+- Website code: https://github.com/wolfspelz/galdev/tree/master/code/galdevweb
 
 ## Contribute
 
 Please clone (develop), add or translate and send pull requests. 
 - The format is YAML
 - One file per timeline entry
-- A template with all tags is here: https://raw.githubusercontent.com/wolfspelz/galdev/develop/data/template.yaml
-
-
