@@ -123,6 +123,13 @@
         }),
 
         Node.From(new Dictionary<string, string> {
+            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Supernova").Image ?? "",
+            ["ImgAlt"] = @Model.Entries.GetEntry("Supernova").DisplayName,
+            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Supernova").SeoTitle,
+            ["Text"] = @Model.Entries.GetEntry("Supernova").Summary?? "",
+        }),
+
+        Node.From(new Dictionary<string, string> {
             ["Title"] = @Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Neue Beiträge",
                 ["en-US"] = () => "Latest Articles",
@@ -130,14 +137,9 @@
             ["Text"] = string.Join("<br/>", new [] {
                 "Die_erste_Menschheit",
                 "QueenMarduk",
-                "Drachenlegenden",
                 "Quantenkontinuum",
-                "Kartusche",
                 "100000InSpace",
                 "ControversyGate",
-                "Fusang",
-                "CodingKit",
-                "DeliveryBot",
                 "Flux",
                 "SoloEhre",
                 "Fragmentierung",
@@ -155,17 +157,29 @@
         }),
 
         Node.From(new Dictionary<string, string> {
-            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Supernova").Image ?? "",
-            ["ImgAlt"] = @Model.Entries.GetEntry("Supernova").DisplayName,
-            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Supernova").SeoTitle,
-            ["Text"] = @Model.Entries.GetEntry("Supernova").Summary?? "",
-        }),
-
-        Node.From(new Dictionary<string, string> {
-            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Gee").Image ?? "",
-            ["ImgAlt"] = @Model.Entries.GetEntry("Gee").DisplayName,
-            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Gee").SeoTitle,
-            ["Text"] = @Model.Entries.GetEntry("Gee").Summary?? "",
+            ["Title"] = @Model.I18n.String(path: "Box/Things/Title", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "100 Dinge",
+                ["en-US"] = () => "100 Things",
+            }),
+            ["Text"] = @Model.I18n.String(path: "Box/Things/Text", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
+                ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
+            })
+            + "<br/><br/>"
+            + string.Join("<br/>", new [] {
+                "NeuroImplant",
+                "DoomsdayCocktail",
+                "DeliveryBot",
+                "CodingKit",
+                "Fusang",
+                "Kartusche",
+                "Drachenlegenden",
+            }
+            .Where(name => Model.Entries.HasEntry(name))
+            .Select(name => {
+                var entry = Model.Entries.GetEntry(name);
+                return $"<a href='/Entry/{entry.SeoTitle}'>{entry.Year} {entry.DisplayName}</a>";
+            })),
         }),
 
         Node.From(new Dictionary<string, string> {
@@ -180,6 +194,13 @@
                 ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
                 ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
             }),
+        }),
+
+        Node.From(new Dictionary<string, string> {
+            ["ImgSrc"] = "/Image/" + @Model.Entries.GetEntry("Gee").Image ?? "",
+            ["ImgAlt"] = @Model.Entries.GetEntry("Gee").DisplayName,
+            ["Link"] = "/Entry/" + @Model.Entries.GetEntry("Gee").SeoTitle,
+            ["Text"] = @Model.Entries.GetEntry("Gee").Summary?? "",
         }),
 
     };
@@ -210,7 +231,9 @@
                     </div>
                 }
                 <div class="card-body">
-                    <h5 class="card-title">@card["Title"]</h5>
+                    @if (@card["Title"].String != "") {
+                        <h5 class="card-title">@card["Title"]</h5>
+                    }
                     <p>@Html.Raw(card["Text"])</p>
                 </div>
             </div>

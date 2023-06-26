@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+.card-body {
+    padding: 1rem 1rem 0 1rem; /* because <p> always has its own margin-bottom */
+}
+
 .content a {
     text-decoration: none;
     color: #000000;
@@ -67,7 +71,3 @@ div.stage-Index {
         height: 500px;
     }
 }
-
-/*.navbar-brand {
-    font-weight: bold;
-}*/
