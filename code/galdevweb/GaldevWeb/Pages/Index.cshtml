@@ -1,19 +1,28 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Active"] = "Index";
-    ViewData["Title"] = @Model.I18n.String(path: "Meta/Title", i18n: new StringGeneratorI18n {
+    var title = @Model.I18n.String(path: "Meta/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
                 ["en-US"] = () => "Galactic Developments - The History of the Future"
             });
-    //ViewData["MetaDescription"] = Model.Entry.Summary;
-    //ViewData["MetaFacebookTitle"] = Model.Entry.Title;
-    //ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
-    //ViewData["MetaFacebookImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
-    //ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
-    //ViewData["MetaTwitterTitle"] = Model.Entry.Title;
-    //ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
-    //ViewData["MetaTwitterImage"] = Url.IsLocalUrl(Model.Entry.Image) ? Url.Content(Model.Entry.Image) : Model.Entry.Image;
+    var description = @Model.I18n.String(path: "Meta/Description", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Eine Science Fiction Geschichte der Menschheit von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation.",
+        ["en-US"] = () => "A Science Fiction history of the future from eary settlements in the Solar System to an interstellar civilization"
+    });
+    var image = @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "/images/FlyerFront.jpg",
+                ["en-US"] = () => "/images/FlyerFront.jpg"
+            });
+    ViewData["Active"] = "Index";
+    ViewData["Title"] = title;
+    ViewData["MetaDescription"] = description;
+    ViewData["MetaFacebookTitle"] = title;
+    ViewData["MetaFacebookDescription"] = description;
+    ViewData["MetaFacebookImage"] = image;
+    ViewData["MetaFacebookImageAlt"] = title;
+    ViewData["MetaTwitterTitle"] = title;
+    ViewData["MetaTwitterDescription"] = description;
+    ViewData["MetaTwitterImage"] = image;
 }
 
 <div class="row mt-5">
