@@ -33,7 +33,7 @@
                             Entries.Add(entry);
                             entry = timeline.GetNextEntry(entry.Name);
                         }
-                    } while (totalLen < Config.EntryPageTextLength);
+                    } while (totalLen < Config.EntryPageTextLength && entry != null);
 
                     NextEntry = entry;
                 }
