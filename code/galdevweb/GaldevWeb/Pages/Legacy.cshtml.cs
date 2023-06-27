@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace GaldevWeb.Pages
 {
@@ -26,7 +27,8 @@ namespace GaldevWeb.Pages
                 var timeline = _timelines.GetEntries(lang);
                 var entry = timeline.GetEntryByYear(year);
                 var seoTitle = entry.SeoTitle;
-                return Redirect($"/Timeline/{seoTitle}");
+                var urlEscapedSeoTitle = WebUtility.UrlEncode(seoTitle);
+                return Redirect($"/Timeline/{urlEscapedSeoTitle}");
             }
             return NotFound();
         }
