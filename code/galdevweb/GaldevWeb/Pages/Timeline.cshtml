@@ -32,11 +32,19 @@
     @foreach (var entry in Model.Entries) {
 
         <div class="row mt-3 gd-entry">
-            <div class="col-12">
-                <h5 class="col-12 gd-entry-headline"><span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span></h5>
+            <div class="offset-sm-0 col-sm-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                <h5 class="gd-entry-headline"><span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span></h5>
 
                 @if (!string.IsNullOrEmpty(entry.Image)) {
                     <img src="/Image/@entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
+
+                    <div class="modal fade" role="dialog" id="iModalDialog">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <img class="img-responsive" src="" id="iModalDialogImage" />
+                            </div>
+                        </div>
+                    </div>
                 }
 
                 @foreach (var t in entry.Text) {
@@ -50,16 +58,28 @@
 
     @if (Model.NextEntry != null) {
         <div class="row mt-3 mb-3">
-            <div class="col-12">
+            <div class="offset-sm-0 col-sm-12 offset-md-1 col-md-11 offset-lg-2 col-lg-10">
                 <a asp-page="/Timeline" asp-route-name="@Model.NextEntry.SeoTitle">
                     <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-left" />
 
                     @Model.NextEntry.Year
-                    @Model.NextEntry.Title
+                    @Model.NextEntry.DisplayName
 
                     <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />
                 </a>
             </div>
         </div>
     }
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.gd-entry-image').click(function () {
+                var src = $(this).attr('src');
+                $('#iModalDialogImage').attr('src', src);
+                $('#iModalDialog').modal('show');
+            });
+        });
+    </script>
 }
