@@ -2,11 +2,11 @@
 {
     public class IndexModel : GaldevPageModel
     {
-        public I18nTimelines _timelines;
+        public TimelineIndex _timelines;
         public LinkGenerator Links;
-        public Timeline Entries = new();
+        public TimelineSeries Entries = new();
 
-        public IndexModel(GaldevApp app, I18nTimelines timelines, LinkGenerator linkGenerator) : base(app, "Index")
+        public IndexModel(GaldevApp app, TimelineIndex timelines, LinkGenerator linkGenerator) : base(app, "Index")
         {
             _timelines = timelines;
             Links = linkGenerator;
@@ -18,7 +18,7 @@
             var timeline = _timelines.GetEntries(lang, entry => entry.TextLen > Config.ListMinTextLength);
 
             Log.Info("Index", new LogData { [nameof(lang)] = lang });
-            Entries = timeline.GetEntries();
+            Entries = timeline.GetAllEntries();
         }
     }
 }

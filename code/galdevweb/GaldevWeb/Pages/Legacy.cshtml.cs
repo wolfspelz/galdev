@@ -5,10 +5,10 @@ namespace GaldevWeb.Pages
 {
     public class LegacyModel : GaldevPageModel
     {
-        public I18nTimelines _timelines;
+        public TimelineIndex _timelines;
         public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
 
-        public LegacyModel(GaldevApp app, I18nTimelines timelines) : base(app, "Legacy")
+        public LegacyModel(GaldevApp app, TimelineIndex timelines) : base(app, "Legacy")
         {
             _timelines = timelines;
         }
@@ -26,7 +26,7 @@ namespace GaldevWeb.Pages
 
                 var timeline = _timelines.GetEntries(lang);
                 var entry = timeline.GetEntryByYear(year);
-                var seoTitle = entry.SeoTitle;
+                var seoTitle = entry?.SeoTitle;
                 var urlEscapedSeoTitle = WebUtility.UrlEncode(seoTitle);
                 return Redirect($"/Timeline/{urlEscapedSeoTitle}");
             }

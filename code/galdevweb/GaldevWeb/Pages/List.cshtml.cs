@@ -2,10 +2,10 @@
 {
     public class ListModel : GaldevPageModel
     {
-        public I18nTimelines _timelines;
-        public Timeline Entries = new Timeline();
+        public TimelineIndex _timelines;
+        public TimelineSeries Entries = new TimelineSeries();
 
-        public ListModel(GaldevApp app, I18nTimelines timelines) : base(app, "List")
+        public ListModel(GaldevApp app, TimelineIndex timelines) : base(app, "List")
         {
             _timelines = timelines;
         }
@@ -16,7 +16,7 @@
             var timeline = _timelines.GetEntries(lang, entry => entry.TextLen > Config.ListMinTextLength);
 
             Log.Info("List", new LogData { [nameof(lang)] = lang });
-            Entries = timeline.GetEntries();
+            Entries = timeline.GetAllEntries();
         }
     }
 }

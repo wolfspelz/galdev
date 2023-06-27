@@ -1,20 +1,22 @@
 ﻿@page "{name?}"
 @model TimelineModel
 @{
-    ViewData["Active"] = "Entry";
-    ViewData["Title"] = Model.Entry.Title;
-    ViewData["MetaDescription"] = Model.Entry.Summary;
-    ViewData["MetaFacebookTitle"] = Model.Entry.Title;
-    ViewData["MetaFacebookDescription"] = Model.Entry.Summary;
-    ViewData["MetaFacebookImage"] = "/Image/" + Model.Entry.Image;
-    ViewData["MetaFacebookImageAlt"] = Model.Entry.Title;
-    ViewData["MetaTwitterTitle"] = Model.Entry.Title;
-    ViewData["MetaTwitterDescription"] = Model.Entry.Summary;
-    ViewData["MetaTwitterImage"] = "/Image/" + Model.Entry.Image;
+    ViewData["Active"] = "Timeline";
+
+    var firstEntry = Model.Entries[0];
+    ViewData["Title"] = firstEntry.Title;
+    ViewData["MetaDescription"] = firstEntry.Summary;
+    ViewData["MetaFacebookTitle"] = firstEntry.Title;
+    ViewData["MetaFacebookDescription"] = firstEntry.Summary;
+    ViewData["MetaFacebookImage"] = "/Image/" + firstEntry.Image;
+    ViewData["MetaFacebookImageAlt"] = firstEntry.Title;
+    ViewData["MetaTwitterTitle"] = firstEntry.Title;
+    ViewData["MetaTwitterDescription"] = firstEntry.Summary;
+    ViewData["MetaTwitterImage"] = "/Image/" + firstEntry.Image;
 }
 
 @if (Model.NotAvailable) {
-    
+
     <div class="row mt-3">
         <div class="col-12">
             <h3>
@@ -25,24 +27,39 @@
 
 } else {
 
-    <div class="row mt-5">
-        <div class="col-12">
-            <h1>
-                @Model.Entry.Year @Model.Entry.Title
-            </h1>
+    <div class="row mt-3"></div>
+
+    @foreach (var entry in Model.Entries) {
+
+        <div class="row mt-3 gd-entry">
+            <div class="col-12">
+                <h5 class="col-12 gd-entry-headline"><span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span></h5>
+
+                @if (!string.IsNullOrEmpty(entry.Image)) {
+                    <img src="/Image/@entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
+                }
+
+                @foreach (var t in entry.Text) {
+                    <p class="gd-entry-text">@t</p>
+                }
+
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-3">
-        <div class="col-12">
-            @if (!string.IsNullOrEmpty(Model.Entry.Image)) {
-                <img src="/Image/@Model.Entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
-            }
+    }
 
-            @foreach (var t in Model.Entry.Text) {
-                <p>@t</p>
-            }
+    @if (Model.NextEntry != null) {
+        <div class="row mt-3 mb-3">
+            <div class="col-12">
+                <a asp-page="/Timeline" asp-route-name="@Model.NextEntry.SeoTitle">
+                    <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-left" />
+
+                    @Model.NextEntry.Year
+                    @Model.NextEntry.Title
+
+                    <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />
+                </a>
+            </div>
         </div>
-    </div>
-
+    }
 }

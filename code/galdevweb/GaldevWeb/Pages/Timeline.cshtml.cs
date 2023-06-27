@@ -2,11 +2,12 @@
 {
     public class TimelineModel : GaldevPageModel
     {
-        public I18nTimelines _timelines;
-        public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
+        public TimelineIndex _timelines;
+        public List<TimelineEntry> Entries = new();
         public bool NotAvailable = false;
+        public TimelineEntry? NextEntry = null;
 
-        public TimelineModel(GaldevApp app, I18nTimelines timelines) : base(app, "Entry")
+        public TimelineModel(GaldevApp app, TimelineIndex timelines) : base(app, "Timeline")
         {
             _timelines = timelines;
         }
@@ -17,13 +18,24 @@
             var timeline = _timelines.GetEntries(lang);
 
             if (Is.Value(name)) {
-                name = I18nTimelines.GetNameFromSeoTitle(name);
-                Log.Info("Entry", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
+                name = TimelineIndex.GetNameFromSeoTitle(name);
+                Log.Info("Timeline", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
-                try {
-                    Entry = timeline.GetEntry(name);
-                } catch (KeyNotFoundException) {
+                var entry = timeline.GetEntry(name);
+                if (entry == null) {
                     NotAvailable = true;
+
+                } else {
+                    var totalLen = 0;
+                    do {
+                        if (entry != null) {
+                            totalLen += entry.TextLen;
+                            Entries.Add(entry);
+                            entry = timeline.GetNextEntry(entry.Name);
+                        }
+                    } while (totalLen < Config.EntryPageTextLength);
+
+                    NextEntry = entry;
                 }
             }
         }

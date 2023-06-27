@@ -119,16 +119,19 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>";
+                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["ImgSrc"] = "/Image/" + Model.Entries.GetEntry("Supernova").Image ?? "",
-                ["ImgAlt"] = Model.Entries.GetEntry("Supernova").DisplayName,
-                ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = Model.Entries.GetEntry("Supernova").SeoTitle }) ?? "",
-                ["Text"] = Model.Entries.GetEntry("Supernova").Summary ?? "",
-            }));
+    {
+        var entry = Model.Entries.GetEntry("Supernova");
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
+                    ["ImgAlt"] = entry?.DisplayName ?? "",
+                    ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Text"] = entry?.Summary ?? "",
+                }));
+    }
 
     cards.Add(Node.From(new Dictionary<string, string> {
                 ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
@@ -153,7 +156,7 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>";
+                        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
 
@@ -179,7 +182,7 @@
             .Where(name => Model.Entries.HasEntry(name))
             .Select(name => {
                 var entry = Model.Entries.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>";
+                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
 
@@ -215,12 +218,15 @@
                 }),
             }));
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["ImgSrc"] = "/Image/" + Model.Entries.GetEntry("Gee").Image ?? "",
-                ["ImgAlt"] = Model.Entries.GetEntry("Gee").DisplayName,
-                ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = Model.Entries.GetEntry("Gee").SeoTitle }) ?? "",
-                ["Text"] = Model.Entries.GetEntry("Gee").Summary ?? "",
-            }));
+    {
+        var entry = Model.Entries.GetEntry("Gee");
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
+                    ["ImgAlt"] = entry?.DisplayName ?? "",
+                    ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Text"] = entry?.Summary ?? "",
+                }));
+    }
 
 }
 
