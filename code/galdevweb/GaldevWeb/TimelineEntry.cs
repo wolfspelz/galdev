@@ -19,7 +19,7 @@
             Text = text;
         }
 
-        public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-");
+        public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-").Replace(" ", "_");
         public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
         public string DisplayName => string.IsNullOrEmpty(ShortTitle) ? Title : ShortTitle;
     }
