@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath.Test", "code\galde
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n3q.Tools", "code\galdevweb\n3q.Tools\n3q.Tools.csproj", "{C5C372FD-4231-41BF-81D2-D2A525417ED1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaldevWeb.Test", "code\galdevweb\GaldevWeb.Test\GaldevWeb.Test.csproj", "{C69BC625-C94D-4D47-87CA-D63BAFC49C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69BC625-C94D-4D47-87CA-D63BAFC49C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69BC625-C94D-4D47-87CA-D63BAFC49C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69BC625-C94D-4D47-87CA-D63BAFC49C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69BC625-C94D-4D47-87CA-D63BAFC49C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

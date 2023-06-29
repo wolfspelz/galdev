@@ -30,7 +30,7 @@ namespace GaldevWeb
             builder.Services.AddSingleton(new GaldevApp { Config = config });
 
             var timeline = new TimelineIndex { IndexFilePath = config.IndexPath, };
-            timeline.Init();
+            timeline.Load();
             builder.Services.AddSingleton(timeline);
 
             var app = builder.Build();
