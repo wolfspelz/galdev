@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Text.RegularExpressions;
 
 namespace GaldevWeb.Pages
 {
@@ -26,21 +24,10 @@ namespace GaldevWeb.Pages
                     _ => "de",
                 };
 
-                var timeline = _timelines.GetEntries(lang);
+                var timeline = _timelines.GetSeriesForLanguage(lang);
                 var entry = timeline.GetEntryByYear(year);
                 var seoTitle = entry?.SeoTitle;
                 var urlEscapedSeoTitle = WebUtility.UrlEncode(seoTitle);
-                var culture = new Dictionary<string, string> {
-                    { "de", "de-DE" },
-                    { "en", "en-US" },
-                }[lang];
-
-                Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                    new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-                    );
-
                 return Redirect($"/Timeline/{urlEscapedSeoTitle}");
             }
             return NotFound();

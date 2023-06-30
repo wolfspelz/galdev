@@ -1,4 +1,7 @@
-﻿namespace GaldevWeb
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Immutable;
+
+namespace GaldevWeb
 {
     public class TimelineIndex
     {
@@ -9,8 +12,8 @@
         private Dictionary<string, TimelineSeries> _timelineByLang = new Dictionary<string, TimelineSeries>();
 
         public delegate bool TimelineEntryCondition(TimelineEntry entry);
-        public TimelineSeries GetEntries(string lang) => _timelineByLang[lang];
-        public TimelineSeries GetEntries(string lang, TimelineEntryCondition filter)
+        public TimelineSeries GetSeriesForLanguage(string lang) => _timelineByLang[lang];
+        public TimelineSeries GetSeriesForLanguageWithFilter(string lang, TimelineEntryCondition filter)
         {
             var entries = _timelineByLang[lang].Where(kv => filter(kv.Value));
             return new TimelineSeries(entries);
@@ -23,6 +26,15 @@
 
             LoadLanguages(indexNode);
             LoadEntries(indexNode);
+            ConnectEntries();
+        }
+
+        private void ConnectEntries()
+        {
+            foreach (var kv in _timelineByLang) {
+                var timeline = kv.Value;
+                timeline.ConnectEntries();
+            }
         }
 
         private void LoadLanguages(Node indexNode)

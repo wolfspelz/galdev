@@ -15,7 +15,7 @@
         public void OnGet()
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            var timeline = _timelines.GetEntries(lang, entry => entry.TextLen > Config.ListMinTextLength);
+            var timeline = _timelines.GetSeriesForLanguageWithFilter(lang, entry => entry.TextLen > Config.ListMinTextLength);
 
             Log.Info("Index", new LogData { [nameof(lang)] = lang });
             Entries = timeline.GetAllEntries();

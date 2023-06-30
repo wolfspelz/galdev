@@ -11,6 +11,9 @@
         public string? Summary;
         public string? Image;
 
+        public string Next = "";
+        public string Previous = "";
+
         public TimelineEntry(string name, string year, string title, string[] text)
         {
             Name = name;

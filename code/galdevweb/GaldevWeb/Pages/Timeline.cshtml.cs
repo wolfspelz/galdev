@@ -15,7 +15,7 @@
         public void OnGet(string name)
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            var timeline = _timelines.GetEntries(lang);
+            var timeline = _timelines.GetSeriesForLanguage(lang);
 
             if (Is.Value(name)) {
                 name = TimelineIndex.GetNameFromSeoTitle(name);

@@ -3,20 +3,32 @@
     public class ListModel : GaldevPageModel
     {
         public TimelineIndex _timelines;
-        public TimelineSeries Entries = new TimelineSeries();
+        public List<TimelineEntry> Entries = new();
 
         public ListModel(GaldevApp app, TimelineIndex timelines) : base(app, "List")
         {
             _timelines = timelines;
         }
 
-        public void OnGet(string name)
+        public void OnGet()
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            var timeline = _timelines.GetEntries(lang, entry => entry.TextLen > Config.ListMinTextLength);
-
             Log.Info("List", new LogData { [nameof(lang)] = lang });
-            Entries = timeline.GetAllEntries();
+            var timeline = _timelines.GetSeriesForLanguage(lang);
+
+            var name = timeline.FirstName;
+            while (Is.Value(name)) {
+                var entry = timeline.GetEntry(name);
+                if (entry != null) {
+                    if (entry.TextLen > Config.ListMinTextLength) {
+                        Entries.Add(entry);
+                    }
+                    name = entry.Next;
+                } else {
+                    name = "";
+                }
+            }
+
         }
     }
 }

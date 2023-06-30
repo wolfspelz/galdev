@@ -5,7 +5,7 @@
     {
         [TestMethod]
         [TestCategory("GaldevWeb")]
-        public void Load()
+        public void Load_loads_2_languages_with_2_entries_each()
         {
             // Arrange
             var sut = new TimelineIndex();
