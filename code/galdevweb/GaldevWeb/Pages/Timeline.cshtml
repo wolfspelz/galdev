@@ -32,8 +32,12 @@
     @foreach (var entry in Model.Entries) {
 
         <div class="row mt-3 gd-entry">
-            <div class="offset-sm-0 col-sm-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
-                <h5 class="gd-entry-headline"><span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span></h5>
+            <div class="col-sm-12 col-lg-8">
+                <h5 class="gd-entry-headline">
+                    <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">
+                        <span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span>
+                    </a>
+                </h5>
 
                 @if (!string.IsNullOrEmpty(entry.Image)) {
                     <img src="/Image/@entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
@@ -52,13 +56,232 @@
                 }
 
             </div>
+            <div class="col-sm-0 col-lg-4">
+                @*
+        <script src="~/lib/masonry-4.2.2.min.js" async></script>
+        <script src="~/js/masonryAutoRelayout.js" async></script>
+        @{
+        var cards = new List<Node>();
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/Historybook/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Ein Geschichtsbuch",
+        ["en-US"] = () => "A History Book",
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Historybook/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Die Geschichte der Zukunft erzählt in vielen einzelnen Ereignissen, Entdeckungen und Erfindungen aus Technik, Wirtschaft und Gesellschaft.",
+        ["en-US"] = () => "The history of the future told in many events, discoveries, and inventions in technology, economy, and society.",
+        }),
+        }));
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/HardScifi/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Hard SciFi",
+        ["en-US"] = () => "Hard SciFi"
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/HardScifi/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Basierend auf echter Wissenschaft. Futurologie, realistische Physik, mögliche Technik.",
+        ["en-US"] = () => "Based on science. Futuorology, real physics, possible technology."
+        }),
+        }));
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Interplanetar und interstellar",
+        ["en-US"] = () => "Interplanetary and Interstellar"
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Interplanetary/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Erst besiedelt die Menschheit das eigene Sonnensystem. Eine interplanetare Zivilisation entwickelt sich mit Erfindungen und Entdeckungen, Politik und Intrigen. Machtzentren kommen und gehen.<br /><br />Dann die Sterne. Schon bevor Raumkrümmer-Antriebe richtig schnell sind, gibt es gewagte Missionen und lange Reisen ins Unbekannte. Nicht nur die Menschen schauen sich um. Auch die Umgebung nimmt die Menschen langsam wahr.<br /><br />Später wird die Menschheit in die dramatische Entwicklung ihrer interstellaren Nachbarschaft hineingezogen und lernt auf die harte Tour, dass Stabilität nicht selbstverständlich ist.",
+        ["en-US"] = () => "Humanity expands into the Solar System. The interplanetary civilization develops with inventions and discoveries, politics and intrigues. Interplanetary powers come and go.<br /><br />Then the stars. Initially, FTL drives ships are slower than the speed of light and bold missions explore the unknown fringes.<br /><br />Later, humanity is drawn into the dramatic development of its interstellar neighborhood and must learn the hard way, that stability is not a given."
+        }),
+        }));
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Die ganze Zeitleiste",
+        ["en-US"] = () => "Full Timeline",
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "<a href='List'>Alle Artikel als Liste</a>",
+        ["en-US"] = () => "<a href='List'>Complete List of timeline entries</a>",
+        }),
+        }));
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/Expansion/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Die grosse Erweiterung",
+        ["en-US"] = () => "The great Expansion",
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Expansion/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
+        ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
+        })
+        + "<br/><br/>"
+        + string.Join("<br/>", new[] {
+        "1000InSpace",
+        "Gemini",
+        "AsteroidMining",
+        "SpacePatrol",
+        "ServizioStazione",
+        "EndVenusTerraforming",
+        "MoonDeportations",
+        }
+        .Where(name => Model.Entries.HasEntry(name))
+        .Select(name => {
+        var entry = Model.Entries.GetEntry(name);
+        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+        })),
+        }));
+
+        {
+        var entry = Model.Entries.GetEntry("Supernova");
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
+        ["ImgAlt"] = entry?.DisplayName ?? "",
+        ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+        ["Text"] = entry?.Summary ?? "",
+        }));
+        }
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Neue Beiträge",
+        ["en-US"] = () => "Latest Articles",
+        }),
+        ["Text"] = string.Join("<br/>", new[] {
+        "Die_erste_Menschheit",
+        "QueenMarduk",
+        "Quantenkontinuum",
+        "100000InSpace",
+        "ControversyGate",
+        "Flux",
+        "SoloEhre",
+        "Fragmentierung",
+        "Solos",
+        "Scale",
+        "Sterge",
+        "Prophet",
+        "ReshumanisCobol",
+        }
+        .Where(name => Model.Entries.HasEntry(name))
+        .Select(name => {
+        var entry = Model.Entries.GetEntry(name);
+        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+        })),
+        }));
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["Title"] = Model.I18n.String(path: "Box/Things/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "100 Dinge",
+        ["en-US"] = () => "100 Things",
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Things/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
+        ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
+        })
+        + "<br/><br/>"
+        + string.Join("<br/>", new[] {
+        "NeuroImplant",
+        "DoomsdayCocktail",
+        "DeliveryBot",
+        "CodingKit",
+        "Fusang",
+        "Kartusche",
+        "Drachenlegenden",
+        }
+        .Where(name => Model.Entries.HasEntry(name))
+        .Select(name => {
+        var entry = Model.Entries.GetEntry(name);
+        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+        })),
+        }));
+
+        if (Model.UiCultureName == "de-DE") {
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["ImgSrc"] = "/images/Index/Megastrukturen-und-Galaktische-Imperien.jpg",
+        ["ImgAlt"] = "Megastrukturen und Galaktische Imperien",
+        ["Title"] = "Megastrukturen und Galaktische Imperien",
+        ["Text"] = "Es geht um große Dinge in Science Fiction: Dyson Sphären und Imperien mit unzähligen Planeten. Wer ist mächtiger? die Föderation der Planeten, das Imperium von Trantor oder ein voll ausgebautes Sonnensystem? Anfangs gibt es Raumstationen wie die ISS, dann rotierende Raumkolonien, irgendwann einen Ring um die Erde. Später vielleicht mehrere Ringe oder sogar ein Banks-Orbital mit Millionen Kilometern Durchmesser. Und eine Ringwelt um die Sonne ist erst der Anfang, wenn man eine Dyson Sphäre bauen will. Der mögliche Weg von rotierenden Zylindern zur Kardashev 2 Zivilisation.<br/>[Ein Vortrag, den ich gerne bei euch halte]",
+        }));
+        }
+
+        if (Model.UiCultureName == "de-DE") {
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["ImgSrc"] = "/images/Index/Science-in-Science-Fiction.jpg",
+        ["ImgAlt"] = "Science in Science Fiction",
+        ["Title"] = "Science in Science Fiction",
+        ["Text"] = "Von der Science Fiction kennen wir diese Themen: Überlichtgeschwindigkeit, Aliens, Antigravitation, Terraforming, Schutzschilde, Beamen, Railguns, KI, Fusion, Nano, usw. Dieser Vortrag gibt einen Überblick, was die moderne Wissenschaft dazu sagt. Bei einigen Themen hat sich der Stand der Wissenschaft geändert und das kommt nur langsam in der Science Fiction Literatur an. Was stimmt noch und was hat sich geändert? Was ist wissenschaftlich fundiert, was wäre vielleicht möglich und was wird immer erfundene Wissenschaft bleiben.<br/>[Ein Vortrag, den ich gerne bei euch halte]",
+        }));
+        }
+
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["ImgSrc"] = "/images/Index/book.png",
+        ["ImgAlt"] = "Buch",
+        ["Link"] = "https://www.amazon.de/dp/1536999199",
+        ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Buch",
+        ["en-US"] = () => "Printed Book",
+        }),
+        ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
+        ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
+        ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
+        }),
+        }));
+
+        {
+        var entry = Model.Entries.GetEntry("Gee");
+        cards.Add(Node.From(new Dictionary<string, string> {
+        ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
+        ["ImgAlt"] = entry?.DisplayName ?? "",
+        ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+        ["Text"] = entry?.Summary ?? "",
+        }));
+        }
+
+        }
+        <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
+        @{
+        var cardsCnt = 0;
+        }
+        @foreach (var card in cards) {
+        cardsCnt++;
+        <div class="col-sm-12 my-2">
+        <div class="card">
+        @if (@card["ImgSrc"].String != "") {
+        @if (@card["Link"].String != "") {
+        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
+        } else {
+        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+        }
+        <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+        <div class="modal-content">
+        <div class="modal-body">
+        <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+        </div>
+        </div>
+        </div>
+        </div>
+        }
+        <div class="card-body">
+        @if (@card["Title"].String != "") {
+        <h5 class="card-title">@card["Title"]</h5>
+        }
+        <p>@Html.Raw(card["Text"])</p>
+        </div>
+        </div>
+        </div>
+        }
+        </div>
+        *@
+            </div>
         </div>
 
     }
 
     @if (Model.NextEntry != null) {
         <div class="row mt-3 mb-3">
-            <div class="offset-sm-0 col-sm-12 offset-md-1 col-md-11 offset-lg-2 col-lg-10">
+            <div class="col-12">
                 <a asp-page="/Timeline" asp-route-name="@Model.NextEntry.SeoTitle">
                     <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-left" />
 

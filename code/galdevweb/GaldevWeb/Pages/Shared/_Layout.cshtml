@@ -60,6 +60,12 @@
         @if ((ViewData["Active"] ?? "").ToString() == "Index") {
             <div class="stage-Index"></div>
             <div class="container">
+                <div class="col-12 text-end" style="position:relative; top:-30px; color: #ffffff">
+                    @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
+                ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre.",
+                ["en-US"] = () => "A bubble freighter in the upper Venus upper atmosphere crusing above the clouds."
+                    })                   
+                </div>
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>

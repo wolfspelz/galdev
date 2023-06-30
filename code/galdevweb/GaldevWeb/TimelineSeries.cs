@@ -12,16 +12,6 @@
         {
         }
 
-        public IEnumerable<string> GetAllNames()
-        {
-            return Keys;
-        }
-
-        public TimelineSeries GetAllEntries()
-        {
-            return this;
-        }
-
         public bool HasEntry(string name)
         {
             name = name.ToLower();
@@ -45,6 +35,28 @@
                 }
             }
             return null;
+        }
+
+        public delegate bool TimelineEntryCondition(TimelineEntry entry);
+
+        public List<TimelineEntry> GetFilteredList(TimelineEntryCondition? filter = null)
+        {
+            var result = new List<TimelineEntry>();
+
+            var name = FirstName;
+            while (Is.Value(name)) {
+                var entry = GetEntry(name);
+                if (entry != null) {
+                    if (filter == null || filter(entry)) {
+                        result.Add(entry);
+                    }
+                    name = entry.Next;
+                } else {
+                    name = "";
+                }
+            }
+
+            return result;
         }
 
         public void ConnectEntries()

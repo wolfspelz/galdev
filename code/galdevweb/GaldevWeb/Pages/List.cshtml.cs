@@ -15,20 +15,7 @@
             var lang = GetLangFromCultureName(UiCultureName);
             Log.Info("List", new LogData { [nameof(lang)] = lang });
             var timeline = _timelines.GetSeriesForLanguage(lang);
-
-            var name = timeline.FirstName;
-            while (Is.Value(name)) {
-                var entry = timeline.GetEntry(name);
-                if (entry != null) {
-                    if (entry.TextLen > Config.ListMinTextLength) {
-                        Entries.Add(entry);
-                    }
-                    name = entry.Next;
-                } else {
-                    name = "";
-                }
-            }
-
+            Entries = timeline.GetFilteredList(entry => entry.TextLen > Config.ListMinTextLength);
         }
     }
 }

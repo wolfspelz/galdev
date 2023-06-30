@@ -26,7 +26,7 @@
     ViewData["MetaTwitterImage"] = image;
 }
 
-<div class="row mt-5">
+<div class="row mt-3">
     <div class="col-12">
         <h1>
             @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
@@ -116,15 +116,15 @@
 "EndVenusTerraforming",
 "MoonDeportations",
             }
-            .Where(name => Model.Entries.HasEntry(name))
+            .Where(name => Model.Series.HasEntry(name))
             .Select(name => {
-                var entry = Model.Entries.GetEntry(name);
+                var entry = Model.Series.GetEntry(name);
                 return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
 
     {
-        var entry = Model.Entries.GetEntry("Supernova");
+        var entry = Model.Series.GetEntry("Supernova");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
@@ -153,9 +153,9 @@
 "Prophet",
 "ReshumanisCobol",
 }
-            .Where(name => Model.Entries.HasEntry(name))
+            .Where(name => Model.Series.HasEntry(name))
             .Select(name => {
-                var entry = Model.Entries.GetEntry(name);
+                var entry = Model.Series.GetEntry(name);
                         return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
@@ -179,9 +179,9 @@
 "Kartusche",
 "Drachenlegenden",
             }
-            .Where(name => Model.Entries.HasEntry(name))
+            .Where(name => Model.Series.HasEntry(name))
             .Select(name => {
-                var entry = Model.Entries.GetEntry(name);
+                var entry = Model.Series.GetEntry(name);
                 return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
             })),
             }));
@@ -191,7 +191,7 @@
                     ["ImgSrc"] = "/images/Index/Megastrukturen-und-Galaktische-Imperien.jpg",
                     ["ImgAlt"] = "Megastrukturen und Galaktische Imperien",
                     ["Title"] = "Megastrukturen und Galaktische Imperien",
-                    ["Text"] = "Es geht um große Dinge in Science Fiction: Dyson Sphären und Imperien mit unzähligen Planeten. Wer ist mächtiger? die Föderation der Planeten, das Imperium von Trantor oder ein voll ausgebautes Sonnensystem? Anfangs gibt es Raumstationen wie die ISS, dann rotierende Raumkolonien, irgendwann einen Ring um die Erde. Später vielleicht mehrere Ringe oder sogar ein Banks-Orbital mit Millionen Kilometern Durchmesser. Und eine Ringwelt um die Sonne ist erst der Anfang, wenn man eine Dyson Sphäre bauen will. Der mögliche Weg von rotierenden Zylindern zur Kardashev 2 Zivilisation.<br/>(Ein Vortrag, den ich gerne bei euch halte)",
+                    ["Text"] = "Es geht um große Dinge in Science Fiction: Dyson Sphären und Imperien mit unzähligen Planeten. Wer ist mächtiger? die Föderation der Planeten, das Imperium von Trantor oder ein voll ausgebautes Sonnensystem? Anfangs gibt es Raumstationen wie die ISS, dann rotierende Raumkolonien, irgendwann einen Ring um die Erde. Später vielleicht mehrere Ringe oder sogar ein Banks-Orbital mit Millionen Kilometern Durchmesser. Und eine Ringwelt um die Sonne ist erst der Anfang, wenn man eine Dyson Sphäre bauen will. Der mögliche Weg von rotierenden Zylindern zur Kardashev 2 Zivilisation.<br/>[Ein Vortrag, den ich gerne bei euch halte]",
                 }));
     }
 
@@ -200,7 +200,7 @@
                     ["ImgSrc"] = "/images/Index/Science-in-Science-Fiction.jpg",
                     ["ImgAlt"] = "Science in Science Fiction",
                     ["Title"] = "Science in Science Fiction",
-                    ["Text"] = "Von der Science Fiction kennen wir diese Themen: Überlichtgeschwindigkeit, Aliens, Antigravitation, Terraforming, Schutzschilde, Beamen, Railguns, KI, Fusion, Nano, usw. Dieser Vortrag gibt einen Überblick, was die moderne Wissenschaft dazu sagt. Bei einigen Themen hat sich der Stand der Wissenschaft geändert und das kommt nur langsam in der Science Fiction Literatur an. Was stimmt noch und was hat sich geändert? Was ist wissenschaftlich fundiert, was wäre vielleicht möglich und was wird immer erfundene Wissenschaft bleiben.<br/>(Ein Vortrag, den ich gerne bei euch halte)",
+                    ["Text"] = "Von der Science Fiction kennen wir diese Themen: Überlichtgeschwindigkeit, Aliens, Antigravitation, Terraforming, Schutzschilde, Beamen, Railguns, KI, Fusion, Nano, usw. Dieser Vortrag gibt einen Überblick, was die moderne Wissenschaft dazu sagt. Bei einigen Themen hat sich der Stand der Wissenschaft geändert und das kommt nur langsam in der Science Fiction Literatur an. Was stimmt noch und was hat sich geändert? Was ist wissenschaftlich fundiert, was wäre vielleicht möglich und was wird immer erfundene Wissenschaft bleiben.<br/>[Ein Vortrag, den ich gerne bei euch halte]",
                 }));
     }
 
@@ -219,7 +219,7 @@
             }));
 
     {
-        var entry = Model.Entries.GetEntry("Gee");
+        var entry = Model.Series.GetEntry("Gee");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",

@@ -1,23 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Immutable;
-
-namespace GaldevWeb
+﻿namespace GaldevWeb
 {
     public class TimelineIndex
     {
         public IDataProvider DataProvider = new FileDataProvider();
         public string IndexFilePath = "timeline/index.yaml";
 
-        private Dictionary<string, TimelineLanguage> _languageById = new Dictionary<string, TimelineLanguage>();
-        private Dictionary<string, TimelineSeries> _timelineByLang = new Dictionary<string, TimelineSeries>();
+        private readonly Dictionary<string, TimelineLanguage> _languageById = new Dictionary<string, TimelineLanguage>();
+        private readonly Dictionary<string, TimelineSeries> _timelineByLang = new Dictionary<string, TimelineSeries>();
 
-        public delegate bool TimelineEntryCondition(TimelineEntry entry);
         public TimelineSeries GetSeriesForLanguage(string lang) => _timelineByLang[lang];
-        public TimelineSeries GetSeriesForLanguageWithFilter(string lang, TimelineEntryCondition filter)
-        {
-            var entries = _timelineByLang[lang].Where(kv => filter(kv.Value));
-            return new TimelineSeries(entries);
-        }
 
         public void Load()
         {
@@ -114,7 +105,7 @@ namespace GaldevWeb
                     }
 
                     var image = contentNode["image"].AsString;
-                    if (Is.Value(image)) {
+                    if (Is.Value(image) && !image.Contains("NAME")) {
                         entry.Image = $"{lang}/{image}";
                     }
 
