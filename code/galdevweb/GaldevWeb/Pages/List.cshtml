@@ -17,7 +17,7 @@
 
 <div class="row mt-2">
     <div class="col-12">
-        @foreach (var entry in Model.Entries) {
+        @foreach (var entry in Model.List) {
             <div>
                 <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
             </div>

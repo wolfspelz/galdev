@@ -1,18 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace GaldevWeb.Pages
+﻿namespace GaldevWeb.Pages
 {
-    public class PrivacyModel : PageModel
+    public class PrivacyModel : GaldevPageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
-
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public PrivacyModel(GaldevApp app) : base(app, "Privacy")
         {
-            _logger = logger;
         }
 
         public void OnGet()
         {
+            Log.Info("", new LogData { });
         }
     }
 }

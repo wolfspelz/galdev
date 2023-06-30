@@ -80,14 +80,9 @@
 
         public TimelineEntry? GetNextEntry(string name)
         {
-            var takeNext = false;
-            foreach (var kv in this) {
-                if (takeNext) {
-                    return kv.Value;
-                }
-                if (kv.Key == name) {
-                    takeNext = true;
-                }
+            var entry = GetEntry(name);
+            if (entry != null) {
+                return GetEntry(entry.Next);
             }
             return null;
         }

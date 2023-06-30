@@ -3,28 +3,21 @@ using System.Net;
 
 namespace GaldevWeb.Pages
 {
-    public class LegacyModel : GaldevPageModel
+    public class YearModel : GaldevPageModel
     {
         public TimelineIndex _timelines;
         public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
 
-        public LegacyModel(GaldevApp app, TimelineIndex timelines) : base(app, "Legacy")
+        public YearModel(GaldevApp app, TimelineIndex timelines) : base(app, "Year")
         {
             _timelines = timelines;
         }
 
-        public IActionResult OnGet(string code)
+        public IActionResult OnGet(string year)
         {
-            if (Is.Value(code)) {
-                Log.Info("", new LogData { [nameof(code)] = code });
-                var prefix = code.Substring(0, 1);
-                var year = code.Substring(1);
-
-                var lang = prefix switch {
-                    "e" => "en",
-                    _ => "de",
-                };
-
+            if (Is.Value(year)) {
+                var lang = GetLangFromCultureName(UiCultureName);
+                Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(year)] = year });
                 var timeline = _timelines.GetSeriesForLanguage(lang);
                 var entry = timeline.GetEntryByYear(year);
                 var seoTitle = entry?.SeoTitle;

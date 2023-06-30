@@ -106,8 +106,8 @@ entries:
   1000InSpace:
     de: 2136_1000_in_Space.yaml
     en: 2136_1000_in_Space.yaml
-  Eter_ein_neues_Paradigma_in_de:
-    de: 2153_Eter_ein_neues_Paradigma_in_de.yaml
+  Eter:
+    de: 2147_Eter.yaml
   Gemini:
     de: 2154_Gemini.yaml
   AsteroidMining:

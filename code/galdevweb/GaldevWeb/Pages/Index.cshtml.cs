@@ -15,7 +15,7 @@
         public void OnGet()
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            Log.Info("Index", new LogData { [nameof(lang)] = lang });
+            Log.Info("", new LogData { [nameof(lang)] = lang });
             Series = _timelines.GetSeriesForLanguage(lang);
         }
     }
