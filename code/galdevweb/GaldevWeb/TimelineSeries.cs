@@ -101,7 +101,9 @@
             }
         }
 
-        public string GetTopicDisplayName(string topic)
+        public string[] Topics => _topicsById.Keys.ToArray();
+
+        public string GetTitleOfTopic(string topic)
         {
             topic = topic.ToLower();
             if (_topicDisplayNameById.ContainsKey(topic)) {

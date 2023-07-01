@@ -33,11 +33,11 @@
         <div class="col-sm-12 col-lg-8">
             @foreach (var entry in Model.List) {
 
-                <h5 class="gd-entry-headline">
+                <h3 class="gd-entry-headline">
                     @*                    <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">*@
                     <span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span>
                     @*                    </a>*@
-                </h5>
+                </h3>
 
                 @if (!string.IsNullOrEmpty(entry.Image)) {
                     <img src="/Image/@entry.Image" class="gd-entry-image float-end img-fluid mb-3" />
@@ -63,6 +63,17 @@
             <script src="~/js/masonryAutoRelayout.js" async></script>
             @{
                 var cards = new List<Node>();
+
+                if (Model.List[0].Topics.Length > 0) {
+                    var topic = Model.List[0].Topics[0];
+                    cards.Add(Node.From(new Dictionary<string, string> {
+                        ["Title"] = Model.Series.GetTitleOfTopic(topic),
+                        ["Text"] = string.Join("<br/>",
+                    Model.Series.GetEntriesOfTopic(topic)
+                    .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                    )
+                    }));
+                }
 
                 {
                     cards.Add(Node.From(new Dictionary<string, string> {

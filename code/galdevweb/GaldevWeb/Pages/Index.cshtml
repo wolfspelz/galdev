@@ -95,11 +95,21 @@
     {
         var topic = "adventure";
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.Series.GetTopicDisplayName(topic),
+                    ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                 Model.Series.GetEntriesOfTopic(topic)
                 .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                 )
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Alle Themen",
+                        ["en-US"] = () => "All Topics",
+                    }),
+                    ["Text"] = string.Join(" ", Model.Series.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Series.GetTitleOfTopic(topic) + "</a>")),
                 }));
     }
 
@@ -157,7 +167,7 @@
     {
         var topic = "culture";
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.Series.GetTopicDisplayName(topic),
+                    ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                         Model.Series.GetEntriesOfTopic(topic)
                         .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")

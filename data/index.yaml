@@ -3,62 +3,62 @@ languages:
     path: ./de
     images: ./de/images
     topics:
-      accident: Unfälle und Havarien
       adventure: Abenteuer
-      ai: Künstliche Intelligenz
-      aliens: Völker
-      catastrophe: Katastrophen
-      conspiracy: Verschwörungen
-      crime: Verbrechen
+      politics: Politik
       culture: Kultur
       discovery: Entdeckungen
-      ecology: Ökologie, Biologie und Umwelt
-      economy: Wirtschaft und Wirtschaftskrisen
-      epidemic: Epidemien
-      event: Aufregende Ereignisse
-      luck: Mehr Glück als Verstand
-      people: Personen
-      philosophy: Philosophie und Religion
-      politics: Politik
       science: Wissenschaft
       spaceflight: Raumfahrt
-      statistics: Statistik
+      event: Aufregende Ereignisse
       technology: Technik
-      things: Gegenstände
-      upgrades: Verbesserungen für Menschen
       visitors: Aliens im Sonnensystem
+      catastrophe: Katastrophen
+      upgrades: Verbesserungen für Menschen
+      luck: Mehr Glück als Verstand
+      aliens: Völker
+      economy: Wirtschaft und Wirtschaftskrisen
       war: Kriege
       wonder: Wunder
+      epidemic: Epidemien
+      things: Gegenstände
+      crime: Verbrechen
+      philosophy: Philosophie und Religion
+      conspiracy: Verschwörungen
+      ecology: Biologie und Ökologie
+      people: Personen
+      statistics: Statistik
+      ai: Künstliche Intelligenz
+      accident: Unfälle und Havarien
   en:
     path: ./en
     images: ./en/images
     topics:
-      accident: Accidents
       adventure: Adventures
-      ai: Artificial Intelligence
-      aliens: Alien races
-      catastrophe: Catastrophes
-      conspiracy: Conspiracies
-      crime: Crimes
+      politics: Politics
       culture: Culture
       discovery: Discoveries
-      ecology: Ecology, biology and environment
-      economy: Economy and economic crises
-      epidemic: Epidemics
-      event: Exciting events
-      luck: More by luck than judgment
-      people: People
-      philosophy: Philosophy und religion
-      politics: Politics
       science: Science
       spaceflight: Space flight
-      statistics: Statistics
+      event: Exciting events
       technology: Technology
-      things: Things
-      upgrades: Upgrades for humans
       visitors: Alien visitors
+      catastrophe: Catastrophes
+      upgrades: Upgrades
+      luck: More luck than sense
+      aliens: Alien races
+      economy: Economy and economic crises
       war: War
       wonder: Wonders
+      epidemic: Epidemics
+      things: Things
+      crime: Crimes
+      philosophy: Philosophy und religion
+      conspiracy: Conspiracies
+      ecology: Biology and ecology
+      people: People
+      statistics: Statistics
+      accident: Accidents
+      ai: Artificial Intelligence
 entries:
   NeuroImplant:
     de: 2051_Neuroimplantat.yaml
