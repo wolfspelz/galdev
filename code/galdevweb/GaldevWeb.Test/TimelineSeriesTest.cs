@@ -1,11 +1,38 @@
-﻿
-namespace GaldevWeb.Test
+﻿namespace GaldevWeb.Test
 {
     [TestClass]
     public class TimelineSeriesTest
     {
         [TestMethod]
-        [TestCategory("GaldevWeb")]
+        public void CreateTopics_creates_a_TopicSet()
+        {
+            // Arrange
+            var sut = new TimelineSeries();
+            Array.ForEach(
+                new[] { "3", "2", "4", "1", "5", "3b" },
+                x => {
+                    var entry = new TimelineEntry(x, x, x, new[] { x, x });
+                    entry.Topics = new[] { x, "t" };
+                    sut.Add(x, entry);
+                });
+            sut.ConnectEntries();
+
+            // Act
+            sut.CreateTopics(new[] { "1", "t", "3" });
+
+            // Assert
+            Assert.AreEqual(1, sut.GetEntriesOfTopic("1")?.Count);
+            Assert.AreEqual("1", sut.GetEntriesOfTopic("1")?[0].Name);
+
+            Assert.AreEqual(1, sut.GetEntriesOfTopic("3")?.Count);
+            Assert.AreEqual("3", sut.GetEntriesOfTopic("3")?[0].Name);
+
+            Assert.AreEqual(6, sut.GetEntriesOfTopic("t")?.Count);
+            Assert.AreEqual("1", sut.GetEntriesOfTopic("t")?[0].Name);
+            Assert.AreEqual("5", sut.GetEntriesOfTopic("t")?[5].Name);
+        }
+
+        [TestMethod]
         public void ConnectEntries_inserts_Previous_and_Next_Properties_into_all_entries()
         {
             // Arrange

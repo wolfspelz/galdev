@@ -5,7 +5,7 @@ namespace GaldevWeb.Pages
     public class TimelineModel : GaldevPageModel
     {
         public TimelineIndex _timelines;
-        public List<TimelineEntry> List = new();
+        public TimelineEntryList List = new();
         public bool NotAvailable = false;
         public TimelineEntry? NextEntry = null;
         public LinkGenerator Links;

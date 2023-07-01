@@ -3,7 +3,7 @@
     public class ListModel : GaldevPageModel
     {
         public TimelineIndex _timelines;
-        public List<TimelineEntry> List = new();
+        public TimelineEntryList List = new();
 
         public ListModel(GaldevApp app, TimelineIndex timelines) : base(app, "List")
         {

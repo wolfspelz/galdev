@@ -5,19 +5,26 @@
         public IDataProvider DataProvider = new FileDataProvider();
         public string IndexFilePath = "timeline/index.yaml";
 
-        private readonly Dictionary<string, TimelineLanguage> _languageById = new Dictionary<string, TimelineLanguage>();
-        private readonly Dictionary<string, TimelineSeries> _timelineByLang = new Dictionary<string, TimelineSeries>();
+        private readonly Dictionary<string, TimelineLanguage> _languageById = new();
+        private readonly Dictionary<string, TimelineSeries> _timelineByLang = new();
 
         public TimelineSeries GetSeriesForLanguage(string lang) => _timelineByLang[lang];
 
         public void Load()
         {
-            var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-
-            LoadLanguages(indexNode);
-            LoadEntries(indexNode);
+            LoadLanguages();
+            LoadEntries();
             ConnectEntries();
+            CreateTopics();
+        }
+
+        private void CreateTopics()
+        {
+            foreach (var kv in _timelineByLang) {
+                var timeline = kv.Value;
+                var langageConfig = _languageById[kv.Key];
+                timeline.CreateTopics(langageConfig.Topics.Keys.ToArray());
+            }
         }
 
         private void ConnectEntries()
@@ -28,8 +35,11 @@
             }
         }
 
-        private void LoadLanguages(Node indexNode)
+        private void LoadLanguages()
         {
+            var indexData = DataProvider.GetData(IndexFilePath);
+            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+
             var languagesNode = indexNode["languages"].AsDictionary;
             foreach (var langNode in languagesNode) {
                 var id = langNode.Key;
@@ -41,8 +51,11 @@
             }
         }
 
-        private void LoadEntries(Node indexNode)
+        private void LoadEntries()
         {
+            var indexData = DataProvider.GetData(IndexFilePath);
+            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+
             foreach (var kv in _languageById) {
                 _timelineByLang.Add(kv.Key, new TimelineSeries());
             }
@@ -108,6 +121,8 @@
                     if (Is.Value(image) && !image.Contains("NAME")) {
                         entry.Image = $"{lang}/{image}";
                     }
+
+                    entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
 
                     _timelineByLang[lang].Add(name, entry);
                 }

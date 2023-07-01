@@ -4,6 +4,8 @@
     {
         public string FirstName => Values.First(x => x.Previous == "").Name;
 
+        private readonly Dictionary<string, TimelineEntryList> _topicsById = new();
+
         public TimelineSeries()
         {
         }
@@ -39,9 +41,9 @@
 
         public delegate bool TimelineEntryCondition(TimelineEntry entry);
 
-        public List<TimelineEntry> GetFilteredList(TimelineEntryCondition? filter = null)
+        public TimelineEntryList GetFilteredList(TimelineEntryCondition? filter = null)
         {
-            var result = new List<TimelineEntry>();
+            var result = new TimelineEntryList();
 
             var name = FirstName;
             while (Is.Value(name)) {
@@ -86,5 +88,24 @@
             }
             return null;
         }
+
+        public void CreateTopics(string[] topics)
+        {
+            //_topicsById
+            foreach (var topic in topics) {
+                var entriesWithTopic = GetFilteredList(entry => entry.Topics.Contains(topic));
+                _topicsById[topic] = entriesWithTopic;
+            }
+        }
+
+        public TimelineEntryList? GetEntriesOfTopic(string topic)
+        {
+            topic = topic.ToLower();
+            if (_topicsById.ContainsKey(topic)) {
+                return _topicsById[topic];
+            }
+            return null;
+        }
+
     }
 }
