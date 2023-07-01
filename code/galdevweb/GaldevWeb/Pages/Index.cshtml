@@ -113,18 +113,18 @@
                 }));
     }
 
-    {
-        cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Die ganze Zeitleiste",
-                        ["en-US"] = () => "Full Timeline",
-                    }),
-                    ["Text"] = Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "<a href='List'>Alle Artikel als Liste</a>",
-                        ["en-US"] = () => "<a href='List'>Complete List of timeline entries</a>",
-                    }),
-                }));
-    }
+    //{
+    //    cards.Add(Node.From(new Dictionary<string, string> {
+    //                ["Title"] = Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
+    //                    ["de-DE"] = () => "Die ganze Zeitleiste",
+    //                    ["en-US"] = () => "Full Timeline",
+    //                }),
+    //                ["Text"] = Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
+    //                    ["de-DE"] = () => "<a href='List'>Alle Artikel als Liste</a>",
+    //                    ["en-US"] = () => "<a href='List'>Complete List of timeline entries</a>",
+    //                }),
+    //            }));
+    //}
 
     {
         cards.Add(Node.From(new Dictionary<string, string> {
@@ -136,8 +136,8 @@
                         ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
                         ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
                     })
-                                + "<br/><br/>"
-                                + string.Join("<br/>", new[] {
+                + "<br/><br/>"
+                + string.Join("<br/>", new[] {
 "1000InSpace",
 "Gemini",
 "AsteroidMining",
@@ -145,12 +145,64 @@
 "ServizioStazione",
 "EndVenusTerraforming",
 "MoonDeportations",
-                                }
-                                .Where(name => Model.Series.HasEntry(name))
-                                .Select(name => {
-                                    var entry = Model.Series.GetEntry(name);
-                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                                })),
+                }
+                .Where(name => Model.Series.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Series.GetEntry(name);
+                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Project/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Softwareprojekt",
+                        ["en-US"] = () => "Software Project",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Project/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "<ul>" + string.Join("\n", new[] {
+"Quellcode: <a href='https://github.com/wolfspelz/galdev/'>GitHub</a>",
+"dotnet, docker, github actions, nginx",
+"Die C# IDE ist mein CMS",
+"GitHub Actions sind mein Deployment",
+"Ein git-push auf main und es ist online",
+"Alle <a href='https://github.com/wolfspelz/galdev/tree/main/data/de'>Artikel</a> als YAML",
+"<a href='https://github.com/wolfspelz/galdev/issues'>Probleme melden</a>",
+}.Select(x => $"<li>{x}</li>")) + "</ul>",
+                        ["en-US"] = () => "<ul>" + string.Join("\n", new[] {
+"Source: <a href='https://github.com/wolfspelz/galdev/'>GitHub</a>",
+"dotnet, docker, github actions, nginx",
+"The C# IDE is my CMS",
+"GitHub Actions is my deployment",
+"A git-push to main and it's online",
+"<a href='https://github.com/wolfspelz/galdev/tree/main/data/en'>Content</a> in YAML files",
+"<a href='https://github.com/wolfspelz/galdev/issues'>Issues</a>",
+}.Select(x => $"<li>{x}</li>")) + "</ul>",
+                    }),
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/SocialMedia/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Social Media",
+                        ["en-US"] = () => "SocialMedia",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/SocialMedia/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => string.Join(" ", new[] {
+"<a href='https://www.facebook.com/GalacticDevelopments'>Facebook</a>",
+"<a href='https://www.youtube.com/@GalacticDevelopments'>YouTube</a>",
+"<a href='https://twitter.com/galacticdev'>Twitter</a>",
+"<a href='https://www.instagram.com/galacticdevelopments/'>Insta</a>",
+}),
+                        ["en-US"] = () => string.Join(" ", new[] {
+"<a href='https://www.facebook.com/GalacticDevelopments'>Facebook</a>",
+"<a href='https://www.youtube.com/@GalacticDevelopments'>YouTube</a>",
+"<a href='https://twitter.com/galacticdev'>Twitter</a>",
+"<a href='https://www.instagram.com/galacticdevelopments/'>Insta</a>",
+}),
+                    }),
                 }));
     }
 
@@ -169,9 +221,9 @@
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                        Model.Series.GetEntriesOfTopic(topic)
-                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
-                        )
+                Model.Series.GetEntriesOfTopic(topic)
+                .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                )
                 }));
     }
 
@@ -196,11 +248,11 @@
 "Prophet",
 "ReshumanisCobol",
 }
-                                .Where(name => Model.Series.HasEntry(name))
-                                .Select(name => {
-                                    var entry = Model.Series.GetEntry(name);
-                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                                })),
+                .Where(name => Model.Series.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Series.GetEntry(name);
+                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -214,8 +266,8 @@
                         ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
                         ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
                     })
-                                + "<br/><br/>"
-                                + string.Join("<br/>", new[] {
+                + "<br/><br/>"
+                + string.Join("<br/>", new[] {
 "NeuroImplant",
 "DoomsdayCocktail",
 "DeliveryBot",
@@ -223,12 +275,12 @@
 "Fusang",
 "Kartusche",
 "Drachenlegenden",
-                                }
-                                .Where(name => Model.Series.HasEntry(name))
-                                .Select(name => {
-                                    var entry = Model.Series.GetEntry(name);
-                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                                })),
+                }
+                .Where(name => Model.Series.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Series.GetEntry(name);
+                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
