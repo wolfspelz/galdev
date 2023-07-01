@@ -36,15 +36,6 @@ a {
     background-color: #f4f4f4;
 }
 
-.content a[name] {
-    color: unset;
-    background-color: unset;
-}
-
-/* 
-    .content a:visited {
-    }
- */
     .content a:hover {
         color: #000000;
         background-color: #e0e0e0;
@@ -54,6 +45,12 @@ a {
         color: #000000;
         background-color: #c0c0c0;
     }
+
+a[name], a[name]:hover, a[name]:focus {
+    color: unset;
+    background-color: unset;
+}
+
 
 div.stage-Index {
     background-image: url(/images/site/stage-VenusFreighter-800x200.jpg);
