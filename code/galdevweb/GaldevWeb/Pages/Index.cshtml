@@ -53,61 +53,81 @@
 @{
     var cards = new List<Node>();
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/Historybook/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Ein Geschichtsbuch",
-                    ["en-US"] = () => "A History Book",
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Historybook/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Die Geschichte der Zukunft erzählt in vielen einzelnen Ereignissen, Entdeckungen und Erfindungen aus Technik, Wirtschaft und Gesellschaft.",
-                    ["en-US"] = () => "The history of the future told in many events, discoveries, and inventions in technology, economy, and society.",
-                }),
-            }));
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Historybook/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Ein Geschichtsbuch",
+                        ["en-US"] = () => "A History Book",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Historybook/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Die Geschichte der Zukunft erzählt in vielen einzelnen Ereignissen, Entdeckungen und Erfindungen aus Technik, Wirtschaft und Gesellschaft.",
+                        ["en-US"] = () => "The history of the future told in many events, discoveries, and inventions in technology, economy, and society.",
+                    }),
+                }));
+    }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/HardScifi/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Hard SciFi",
-                    ["en-US"] = () => "Hard SciFi"
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/HardScifi/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Basierend auf echter Wissenschaft. Futurologie, realistische Physik, mögliche Technik.",
-                    ["en-US"] = () => "Based on science. Futuorology, real physics, possible technology."
-                }),
-            }));
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/HardScifi/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Hard SciFi",
+                        ["en-US"] = () => "Hard SciFi"
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/HardScifi/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Basierend auf echter Wissenschaft. Futurologie, realistische Physik, mögliche Technik.",
+                        ["en-US"] = () => "Based on science. Futuorology, real physics, possible technology."
+                    }),
+                }));
+    }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Interplanetar und interstellar",
-                    ["en-US"] = () => "Interplanetary and Interstellar"
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Interplanetary/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Erst besiedelt die Menschheit das eigene Sonnensystem. Eine interplanetare Zivilisation entwickelt sich mit Erfindungen und Entdeckungen, Politik und Intrigen. Machtzentren kommen und gehen.<br /><br />Dann die Sterne. Schon bevor Raumkrümmer-Antriebe richtig schnell sind, gibt es gewagte Missionen und lange Reisen ins Unbekannte. Nicht nur die Menschen schauen sich um. Auch die Umgebung nimmt die Menschen langsam wahr.<br /><br />Später wird die Menschheit in die dramatische Entwicklung ihrer interstellaren Nachbarschaft hineingezogen und lernt auf die harte Tour, dass Stabilität nicht selbstverständlich ist.",
-                    ["en-US"] = () => "Humanity expands into the Solar System. The interplanetary civilization develops with inventions and discoveries, politics and intrigues. Interplanetary powers come and go.<br /><br />Then the stars. Initially, FTL drives ships are slower than the speed of light and bold missions explore the unknown fringes.<br /><br />Later, humanity is drawn into the dramatic development of its interstellar neighborhood and must learn the hard way, that stability is not a given."
-                }),
-            }));
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Interplanetar und interstellar",
+                        ["en-US"] = () => "Interplanetary and Interstellar"
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Interplanetary/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Erst besiedelt die Menschheit das eigene Sonnensystem. Eine interplanetare Zivilisation entwickelt sich mit Erfindungen und Entdeckungen, Politik und Intrigen. Machtzentren kommen und gehen.<br /><br />Dann die Sterne. Schon bevor Raumkrümmer-Antriebe richtig schnell sind, gibt es gewagte Missionen und lange Reisen ins Unbekannte. Nicht nur die Menschen schauen sich um. Auch die Umgebung nimmt die Menschen langsam wahr.<br /><br />Später wird die Menschheit in die dramatische Entwicklung ihrer interstellaren Nachbarschaft hineingezogen und lernt auf die harte Tour, dass Stabilität nicht selbstverständlich ist.",
+                        ["en-US"] = () => "Humanity expands into the Solar System. The interplanetary civilization develops with inventions and discoveries, politics and intrigues. Interplanetary powers come and go.<br /><br />Then the stars. Initially, FTL drives ships are slower than the speed of light and bold missions explore the unknown fringes.<br /><br />Later, humanity is drawn into the dramatic development of its interstellar neighborhood and must learn the hard way, that stability is not a given."
+                    }),
+                }));
+    }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Die ganze Zeitleiste",
-                    ["en-US"] = () => "Full Timeline",
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "<a href='List'>Alle Artikel als Liste</a>",
-                    ["en-US"] = () => "<a href='List'>Complete List of timeline entries</a>",
-                }),
-            }));
+    {
+        var topic = "adventure";
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.Series.GetTopicDisplayName(topic),
+                    ["Text"] = string.Join("<br/>",
+                Model.Series.GetEntriesOfTopic(topic)
+                .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                )
+                }));
+    }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/Expansion/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Die grosse Erweiterung",
-                    ["en-US"] = () => "The great Expansion",
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Expansion/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
-                    ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
-                })
-            + "<br/><br/>"
-            + string.Join("<br/>", new[] {
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Timeline/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Die ganze Zeitleiste",
+                        ["en-US"] = () => "Full Timeline",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Timeline/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "<a href='List'>Alle Artikel als Liste</a>",
+                        ["en-US"] = () => "<a href='List'>Complete List of timeline entries</a>",
+                    }),
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Expansion/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Die grosse Erweiterung",
+                        ["en-US"] = () => "The great Expansion",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Expansion/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
+                        ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
+                    })
+                                + "<br/><br/>"
+                                + string.Join("<br/>", new[] {
 "1000InSpace",
 "Gemini",
 "AsteroidMining",
@@ -115,13 +135,14 @@
 "ServizioStazione",
 "EndVenusTerraforming",
 "MoonDeportations",
-            }
-            .Where(name => Model.Series.HasEntry(name))
-            .Select(name => {
-                var entry = Model.Series.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-            })),
-            }));
+                                }
+                                .Where(name => Model.Series.HasEntry(name))
+                                .Select(name => {
+                                    var entry = Model.Series.GetEntry(name);
+                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                                })),
+                }));
+    }
 
     {
         var entry = Model.Series.GetEntry("Supernova");
@@ -133,12 +154,24 @@
                 }));
     }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Neue Beiträge",
-                    ["en-US"] = () => "Latest Articles",
-                }),
-                ["Text"] = string.Join("<br/>", new[] {
+    {
+        var topic = "culture";
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.Series.GetTopicDisplayName(topic),
+                    ["Text"] = string.Join("<br/>",
+                        Model.Series.GetEntriesOfTopic(topic)
+                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                        )
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Neue Beiträge",
+                        ["en-US"] = () => "Latest Articles",
+                    }),
+                    ["Text"] = string.Join("<br/>", new[] {
 "Die_erste_Menschheit",
 "QueenMarduk",
 "Quantenkontinuum",
@@ -153,24 +186,26 @@
 "Prophet",
 "ReshumanisCobol",
 }
-            .Where(name => Model.Series.HasEntry(name))
-            .Select(name => {
-                var entry = Model.Series.GetEntry(name);
-                        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-            })),
-            }));
+                                .Where(name => Model.Series.HasEntry(name))
+                                .Select(name => {
+                                    var entry = Model.Series.GetEntry(name);
+                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                                })),
+                }));
+    }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = Model.I18n.String(path: "Box/Things/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "100 Dinge",
-                    ["en-US"] = () => "100 Things",
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Things/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
-                    ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
-                })
-            + "<br/><br/>"
-            + string.Join("<br/>", new[] {
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Things/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "100 Dinge",
+                        ["en-US"] = () => "100 Things",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Things/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
+                        ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
+                    })
+                                + "<br/><br/>"
+                                + string.Join("<br/>", new[] {
 "NeuroImplant",
 "DoomsdayCocktail",
 "DeliveryBot",
@@ -178,13 +213,14 @@
 "Fusang",
 "Kartusche",
 "Drachenlegenden",
-            }
-            .Where(name => Model.Series.HasEntry(name))
-            .Select(name => {
-                var entry = Model.Series.GetEntry(name);
-                return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-            })),
-            }));
+                                }
+                                .Where(name => Model.Series.HasEntry(name))
+                                .Select(name => {
+                                    var entry = Model.Series.GetEntry(name);
+                                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                                })),
+                }));
+    }
 
     if (Model.UiCultureName == "de-DE") {
         cards.Add(Node.From(new Dictionary<string, string> {
@@ -204,19 +240,21 @@
                 }));
     }
 
-    cards.Add(Node.From(new Dictionary<string, string> {
-                ["ImgSrc"] = "/images/Index/book.png",
-                ["ImgAlt"] = "Buch",
-                ["Link"] = "https://www.amazon.de/dp/1536999199",
-                ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Buch",
-                    ["en-US"] = () => "Printed Book",
-                }),
-                ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
-                    ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
-                }),
-            }));
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/images/Index/book.png",
+                    ["ImgAlt"] = "Buch",
+                    ["Link"] = "https://www.amazon.de/dp/1536999199",
+                    ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Buch",
+                        ["en-US"] = () => "Printed Book",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
+                        ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
+                    }),
+                }));
+    }
 
     {
         var entry = Model.Series.GetEntry("Gee");

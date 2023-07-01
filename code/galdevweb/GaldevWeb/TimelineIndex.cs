@@ -23,7 +23,7 @@
             foreach (var kv in _timelineByLang) {
                 var timeline = kv.Value;
                 var langageConfig = _languageById[kv.Key];
-                timeline.CreateTopics(langageConfig.Topics.Keys.ToArray());
+                timeline.CreateTopics(langageConfig.Topics);
             }
         }
 
@@ -69,14 +69,14 @@
 
                     var entryFileName = fileByLang.Value.AsString;
                     if (entryFileName.EndsWith(".yaml")) {
-                        entryFileName = entryFileName.Substring(0, entryFileName.Length - ".yaml".Length);
+                        entryFileName = entryFileName[..^".yaml".Length];
                     }
                     if (entryFileName.EndsWith(".yml")) {
-                        entryFileName = entryFileName.Substring(0, entryFileName.Length - ".yml".Length);
+                        entryFileName = entryFileName[..^".yml".Length];
                     }
 
                     var dirPath = Path.GetDirectoryName(IndexFilePath);
-                    dirPath = dirPath ?? "";
+                    dirPath ??= "";
                     var entryPath = (dirPath + "/" + langPath + "/" + entryFileName).Replace("//", "/");
                     var entryPathWithExt = entryPath + ".yaml";
 

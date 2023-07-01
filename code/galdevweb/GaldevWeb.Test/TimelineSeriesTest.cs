@@ -4,6 +4,7 @@
     public class TimelineSeriesTest
     {
         [TestMethod]
+        [TestCategory("GaldevWeb")]
         public void CreateTopics_creates_a_TopicSet()
         {
             // Arrange
@@ -11,14 +12,15 @@
             Array.ForEach(
                 new[] { "3", "2", "4", "1", "5", "3b" },
                 x => {
-                    var entry = new TimelineEntry(x, x, x, new[] { x, x });
-                    entry.Topics = new[] { x, "t" };
+                    var entry = new TimelineEntry(x, x, x, new[] { x, x }) {
+                        Topics = new[] { x, "t" }
+                    };
                     sut.Add(x, entry);
                 });
             sut.ConnectEntries();
 
             // Act
-            sut.CreateTopics(new[] { "1", "t", "3" });
+            sut.CreateTopics(new Dictionary<string, string> { ["1"] = "1", ["t"] = "t", ["3"] = "3" });
 
             // Assert
             Assert.AreEqual(1, sut.GetEntriesOfTopic("1")?.Count);
@@ -33,6 +35,7 @@
         }
 
         [TestMethod]
+        [TestCategory("GaldevWeb")]
         public void ConnectEntries_inserts_Previous_and_Next_Properties_into_all_entries()
         {
             // Arrange
