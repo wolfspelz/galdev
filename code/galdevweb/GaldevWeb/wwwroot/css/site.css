@@ -32,18 +32,19 @@ a {
 
 .content a {
     text-decoration: none;
-    color: #000000;
-    background-color: #f4f4f4;
+    color: #8080a0;
 }
 
     .content a:hover {
-        color: #000000;
-        background-color: #e0e0e0;
+        background-color: #f0f0f0;
     }
 
     .content a:focus {
-        color: #000000;
-        background-color: #c0c0c0;
+        background-color: #e0e0e0;
+    }
+
+    .content a:visited {
+        color: #808080;
     }
 
 a[name], a[name]:hover, a[name]:focus {
