@@ -4,7 +4,6 @@ languages:
     images: ./de/images
     topics:
       adventure: Abenteuer
-      politics: Politik
       culture: Kultur
       discovery: Entdeckungen
       science: Wissenschaft
@@ -25,6 +24,7 @@ languages:
       philosophy: Philosophie und Religion
       conspiracy: Verschwörungen
       ecology: Biologie und Ökologie
+      politics: Politik
       people: Personen
       statistics: Statistik
       ai: Künstliche Intelligenz
@@ -34,7 +34,6 @@ languages:
     images: ./en/images
     topics:
       adventure: Adventures
-      politics: Politics
       culture: Culture
       discovery: Discoveries
       science: Science
@@ -55,6 +54,7 @@ languages:
       philosophy: Philosophy und religion
       conspiracy: Conspiracies
       ecology: Biology and ecology
+      politics: Politics
       people: People
       statistics: Statistics
       accident: Accidents

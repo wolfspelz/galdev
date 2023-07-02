@@ -48,8 +48,6 @@
     </div>
 </div>
 
-<script src="~/lib/masonry-4.2.2.min.js" async></script>
-<script src="~/js/masonryAutoRelayout.js" async></script>
 @{
     var cards = new List<Node>();
 
@@ -330,21 +328,19 @@
 
 }
 
+<script src="~/lib/masonry-4.2.2.min.js" async></script>
+<script src="~/js/masonryAutoRelayout.js" async></script>
 <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
-    @{
-        var cardsCnt = 0;
-    }
     @foreach (var card in cards) {
-        cardsCnt++;
         <div class="col-sm-6 col-lg-4 my-2">
             <div class="card">
                 @if (@card["ImgSrc"].String != "") {
                     @if (@card["Link"].String != "") {
-                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
+                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
                     } else {
-                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
                     }
-                    <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
+                    <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
                             <div class="modal-content">
                                 <div class="modal-body">
