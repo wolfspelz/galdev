@@ -22,6 +22,17 @@ body {
     overflow-x: hidden;
 }
 
+.navbar-brand {
+    padding: 0.3125rem;
+}
+
+dt {
+    margin-bottom: 0.5em;
+}
+dd {
+    margin-bottom: unset;
+    margin-left: 0;
+}
 a {
     text-decoration: none;
 }
@@ -30,20 +41,20 @@ a {
     padding: 1rem 1rem 0 1rem; /* because <p> always has its own margin-bottom */
 }
 
-.content a {
+a {
     text-decoration: none;
     color: #8080a0;
 }
 
-    .content a:hover {
+    a:hover {
         background-color: #f0f0f0;
     }
 
-    .content a:focus {
+    a:focus {
         background-color: #e0e0e0;
     }
 
-    .content a:visited {
+    a:visited {
         color: #808080;
     }
 

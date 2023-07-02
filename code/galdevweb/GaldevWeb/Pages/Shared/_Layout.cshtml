@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="~/images/site/logo.jpg" style="max-height:40px;" alt="Logo" />
+                    <img src="~/images/site/logo.png" style="max-height:40px;" alt="Logo MarcoPolo" />
                 </a>
                 <a class="navbar-brand" href="/">Galactic Developments</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,11 +40,13 @@
 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        @*
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Topics">@Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"Themen", ["en-US"] = () =>"Topics" })</a>
                         </li>
-                        *@
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">@Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"About", ["en-US"] = () =>"About" })</a>
+                        </li>
 
                         <li class="nav-item">
                             <div class="nav-link">
@@ -66,7 +68,7 @@
                     @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre.",
                 ["en-US"] = () => "A bubble freighter in the upper Venus upper atmosphere crusing above the clouds."
-                    })                   
+                })
                 </div>
                 <main role="main" class="pb-3">
                     @RenderBody()

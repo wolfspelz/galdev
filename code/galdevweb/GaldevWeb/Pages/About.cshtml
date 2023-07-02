@@ -1,0 +1,55 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Active"] = "About";
+}
+
+<div class="row my-3">
+    <div class="col-12">
+        <h1>
+            @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+            ["de-DE"] = () =>"About",
+            ["en-US"] = () =>"About"
+            })
+        </h1>
+    </div>
+</div>
+
+<div class="row my-3">
+    <div class="col-md-3 mb-3">
+        <img src="~/images/About/squirrel.jpg" alt="Squirrel takes a shot" class="img-fluid">
+    </div>
+
+    <div class="col-md-6">
+        <p>
+            Norden Esstisch war Kommandant beim Sondereinsatzkommando der Cloning Kontrollbehörde auf dem Asteroiden Iris. Er verhinderte, dass Androiden in menschenunwürdigen Umständen leben und schrieb nie gerne Einsatzberichte. 
+            Auf noch nicht geklärte Weise hat das Schicksal ihn in das Jahr 4000 u.Z. auf New Paris verschlagen, wo er jetzt Geschichtsbücher schreibt, bzw. von der KI zusammenstellen läßt. 
+        </p>
+        <dl>
+            <dt>Profil</dt>
+            <dd>Alter: 17 Parsec / Lj</dd>
+            <dd>Typ: wissenschaftlicher Praktiker</dd>
+            <dd>Beruf: IT-Manager</dd>
+            <dd>Berufung: Coder</dd>
+            <dd>Handicap: Detailverliebt</dd>
+            <dd>Wohnort: Hamburg</dd>
+            <dd>Ziel: Spaß haben und nett bleiben</dd>
+            <dd>Angst: Dass es nicht zum Upload reicht</dd>
+            <dd>Marotte: MMORPG und LARP als Theoretiker</dd>
+            <dd>Talent: Assoziieren</dd>
+            <dd>Leidenschaft: Nachrichten</dd>
+            <dd>Traum: Aprilscherze über die Millionen lachen</dd>
+            <dd>Ideal: Anstand</dd>
+        </dl>
+        <p>
+            Im realen Leben ist Heiner Wolf Diplom Physiker, hat einen Doktor in Informatik und ist leidenschaftlich Full Stack Entwickler (C#, Typescript). Er hat mehrere Unternehmen gegründet und ist seit 17 Jahren IT-Leiter. Er hat Giphys und AJAX erfunden, den ersten Livestream im Web gesendet, das erste animierte GIF gepostet und viele andere "erste" im Web gemacht. Er hat den Lead-Award für Webdesign und ein paar andere Auszeichnungen für Startups bekommen. Er interessiert sich für Wissenschaft und Technologie, für gesellschaftliche und wirtschaftliche Entwicklungen. Er liebt realistische Zukunftsszenarien und Hard-Science-Fiction mit einer kleinen Ausnahme: Überlichtgeschwindigkeit, denn sonst kann man keine Außerirdischen treffen. Seit er 15 ist, schreibt er Geschichtsbücher für die Zukunft.
+        <p>
+        </p>
+        
+        <dl>
+            <dt>Andere Hobbies</dt>
+            <dd><a href="http://blog.wolfspelz.de/">Blog - Rants about Code and Life</a></dd>
+            <dd><a href="https://www.weblin.io/Start">webin.io - Avatare auf Webseiten</a></dd>
+        </dl>
+    </div>
+</div>
