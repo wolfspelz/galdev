@@ -1,4 +1,19 @@
 ﻿@page "{year?}"
 @model YearModel
+@{
+    ViewData["Active"] = "Year";
+}
 
-redirecting...
+@if (Model.NotAvailable) {
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <h3>
+                Not available in this language
+            </h3>
+        </div>
+    </div>
+
+} else {
+    <p>redirecting...</p>
+}

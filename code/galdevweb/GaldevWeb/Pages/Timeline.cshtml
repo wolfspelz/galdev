@@ -3,16 +3,18 @@
 @{
     ViewData["Active"] = "Timeline";
 
-    var firstEntry = Model.List[0];
-    ViewData["Title"] = firstEntry.Title;
-    ViewData["MetaDescription"] = firstEntry.Summary;
-    ViewData["MetaFacebookTitle"] = firstEntry.Title;
-    ViewData["MetaFacebookDescription"] = firstEntry.Summary;
-    ViewData["MetaFacebookImage"] = "/Image/" + firstEntry.Image;
-    ViewData["MetaFacebookImageAlt"] = firstEntry.Title;
-    ViewData["MetaTwitterTitle"] = firstEntry.Title;
-    ViewData["MetaTwitterDescription"] = firstEntry.Summary;
-    ViewData["MetaTwitterImage"] = "/Image/" + firstEntry.Image;
+    if (!Model.NotAvailable) {
+        var firstEntry = Model.List[0];
+        ViewData["Title"] = firstEntry.Title;
+        ViewData["MetaDescription"] = firstEntry.Summary;
+        ViewData["MetaFacebookTitle"] = firstEntry.Title;
+        ViewData["MetaFacebookDescription"] = firstEntry.Summary;
+        ViewData["MetaFacebookImage"] = "/Image/" + firstEntry.Image;
+        ViewData["MetaFacebookImageAlt"] = firstEntry.Title;
+        ViewData["MetaTwitterTitle"] = firstEntry.Title;
+        ViewData["MetaTwitterDescription"] = firstEntry.Summary;
+        ViewData["MetaTwitterImage"] = "/Image/" + firstEntry.Image;
+    }
 }
 
 @if (Model.NotAvailable) {
