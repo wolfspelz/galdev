@@ -26,12 +26,20 @@ body {
     padding: 0.3125rem;
 }
 
+@media (min-width: 1200px) {
+    .h3, h3 {
+        font-size: 1.25rem;
+    }
+}
+
 dt {
     margin-bottom: 0.5em;
 }
+
 dd {
     margin-left: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -63,10 +71,10 @@ a {
         color: #808080;
     }
 
-a[name], a[name]:hover, a[name]:focus {
-    color: unset;
-    background-color: unset;
-}
+    a[name], a[name]:hover, a[name]:focus {
+        color: unset;
+        background-color: unset;
+    }
 
 
 div.stage-Index {
@@ -105,10 +113,12 @@ img.gd-entry-image {
 img.gd-timeline-next {
     max-height: 1em;
 }
+
 img.gd-timeline-next-left {
     margin-right: 0.5em;
     padding: 0 0 0.2em 0.4em;
 }
+
 img.gd-timeline-next-right {
     margin-left: 0.5em;
     padding: 0 0.4em 0.2em 0;
