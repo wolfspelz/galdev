@@ -51,10 +51,12 @@ a {
 
     a:hover {
         background-color: #f0f0f0;
+        color: #8080a0;
     }
 
     a:focus {
         background-color: #e0e0e0;
+        color: #8080a0;
     }
 
     a:visited {
