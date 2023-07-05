@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis.Diagnostics;
+using System.Linq;
 
 namespace GaldevWeb
 {
@@ -33,8 +34,12 @@ namespace GaldevWeb
             get {
                 var s = ShortTitle;
                 if (string.IsNullOrEmpty(s)) {
-                    var parts = Headline.Split(":", 2);
-                    s = parts[0];
+                    var part0 = Headline.Split(":", 2)[0];
+                    if (!part0.Contains("HEADLINE")) {
+                        if (part0.Length < Title.Length) {
+                            s = part0;
+                        }
+                    }
                 }
                 if (string.IsNullOrEmpty(s)) { s = Title; }
                 return s;
