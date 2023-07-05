@@ -117,6 +117,11 @@
                         entry.Summary = shortSummary;
                     }
 
+                    var headline = contentNode["headline"].AsString;
+                    if (Is.Value(headline)) {
+                        entry.Headline = headline;
+                    }
+
                     var image = contentNode["image"].AsString;
                     if (Is.Value(image) && !image.Contains("NAME")) {
                         entry.Image = $"{lang}/{image}";

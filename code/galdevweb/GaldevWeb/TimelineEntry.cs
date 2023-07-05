@@ -1,4 +1,6 @@
-﻿namespace GaldevWeb
+﻿using Microsoft.CodeAnalysis.Diagnostics;
+
+namespace GaldevWeb
 {
     public class TimelineEntry
     {
@@ -14,6 +16,7 @@
 
         public string Next = "";
         public string Previous = "";
+        public string Headline = "";
 
         public TimelineEntry(string name, string year, string title, string[] text)
         {
@@ -25,6 +28,18 @@
 
         public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-").Replace(" ", "_");
         public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
-        public string DisplayName => string.IsNullOrEmpty(ShortTitle) ? Title : ShortTitle;
+        public string DisplayName
+        {
+            get {
+                var s = ShortTitle;
+                if (string.IsNullOrEmpty(s)) {
+                    var parts = Headline.Split(":", 2);
+                    s = parts[0];
+                }
+                if (string.IsNullOrEmpty(s)) { s = Title; }
+                return s;
+            }
+        }
+
     }
 }

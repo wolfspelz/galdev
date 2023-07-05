@@ -293,6 +293,51 @@
 
     if (Model.UiCultureName == "de-DE") {
         cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = "30 Day Challenge: Awesomisierung",
+                    ["Text"] = "Viele alte Einträge der Timeline enthalten Ideen, die noch nicht richtig ausgearbeitet sind. Oft sind das nur Einzeiler. Da könnte man viel mehr dazu schreiben. Deshalb werde ich in den nächsten 30 Tagen jeden Tag einem alten Eintrag mehr Inhalt geben. Also keine neuen Einträge in die Zeitleiste, aber viel mehr Story für existierende Einträge. Oft entsteht die Story erst jetzt. Es zeigt sich, dass manche der Einzeiler nur Platzhalter waren. Da geht mehr. Beim Schreiben kommen neue Ideen. Highlights: <br/>" + string.Join("<br/>", new[] {
+"piraten",
+"dilan",
+"marcopolodilan",
+"kopernikusstation",
+"centaurus",
+"schnellbahn",
+"generationsschiff",
+"begun",
+"fraktal",
+"interia",
+"ultrametals",
+"kelrec",
+"wotan",
+"adic",
+"oekomil",
+"muell",
+"savant",
+"rennen",
+"flottengesetz",
+"yaris",
+"regionalzentrum",
+"gee",
+"guedan",
+"spacedomrettung",
+"dubaicosmodrome",
+"massara",
+"caves",
+"freierbereichvegas",
+"mukhagni",
+"ancientrobots",
+"executivedecision",
+"kisor",
+}
+                .Where(name => Model.Series.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Series.GetEntry(name);
+                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
+                }));
+    }
+
+    if (Model.UiCultureName == "de-DE") {
+        cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/images/Index/Science-in-Science-Fiction.jpg",
                     ["ImgAlt"] = "Science in Science Fiction",
                     ["Title"] = "Science in Science Fiction",
