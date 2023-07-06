@@ -371,6 +371,22 @@
                 }));
     }
 
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/images/Index/merch.jpg",
+                    ["ImgAlt"] = "Hoodie",
+                    ["Link"] = "https://shop.spreadshirt.de/galactic-developments",
+                    ["Title"] = Model.I18n.String(path: "Box/Merch/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Merch",
+                        ["en-US"] = () => "Merch",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Merch/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "T-Shirts und Hoodies",
+                        ["en-US"] = () => "T-Shirts and Hoodies",
+                    }),
+                }));
+    }
+
 }
 
 <script src="~/lib/masonry-4.2.2.min.js" async></script>
