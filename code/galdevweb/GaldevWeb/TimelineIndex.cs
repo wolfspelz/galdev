@@ -1,9 +1,12 @@
-﻿namespace GaldevWeb
+﻿using YamlDotNet.Core;
+
+namespace GaldevWeb
 {
     public class TimelineIndex
     {
         public IDataProvider DataProvider = new FileDataProvider();
         public string IndexFilePath = "timeline/index.yaml";
+        public ICallbackLogger Log = new NullCallbackLogger();
 
         private readonly Dictionary<string, TimelineLanguage> _languageById = new();
         private readonly Dictionary<string, TimelineSeries> _timelineByLang = new();
@@ -65,73 +68,81 @@
                 var name = entryNode.Key;
                 foreach (var fileByLang in entryNode.Value.AsDictionary) {
                     var lang = fileByLang.Key;
-                    var langPath = _languageById[lang].TextPath;
+                    var folderPath = _languageById[lang].TextPath;
+                    var fileName = fileByLang.Value.AsString;
 
-                    var entryFileName = fileByLang.Value.AsString;
-                    if (entryFileName.EndsWith(".yaml")) {
-                        entryFileName = entryFileName[..^".yaml".Length];
+                    TimelineEntry? entry = GetEntryFromFile(lang, name, folderPath, fileName);
+                    if (entry != null) {
+                        _timelineByLang[lang].Add(name, entry);
                     }
-                    if (entryFileName.EndsWith(".yml")) {
-                        entryFileName = entryFileName[..^".yml".Length];
-                    }
-
-                    var dirPath = Path.GetDirectoryName(IndexFilePath);
-                    dirPath ??= "";
-                    var entryPath = (dirPath + "/" + langPath + "/" + entryFileName).Replace("//", "/");
-                    var entryPathWithExt = entryPath + ".yaml";
-
-                    if (!DataProvider.HasData(entryPathWithExt)) {
-                        entryPathWithExt = entryPath + ".yml";
-                        if (!DataProvider.HasData(entryPathWithExt)) {
-                            throw new Exception($"No entry file= {entryPathWithExt}");
-                        }
-                    }
-
-                    var contentData = DataProvider.GetData(entryPathWithExt);
-                    var contentNode = JsonPath.Node.FromYaml(contentData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
-
-                    var year = contentNode["year"].AsString;
-                    var title = contentNode["title"].AsString;
-                    var text = contentNode["text"].AsString
-                        .Replace("\r\n", "\n")
-                        .Replace("\r", "\n")
-                        .Replace("\n\n", "\n")
-                        .Split('\n')
-                        .Select(x => x.Trim())
-                        .ToArray();
-
-                    var entry = new TimelineEntry(name, year, title, text);
-
-                    var shortTitle = contentNode["shorttitle"].AsString;
-                    if (Is.Value(shortTitle)) {
-                        entry.ShortTitle = shortTitle;
-                    }
-
-                    var summary = contentNode["summary"].AsString;
-                    if (Is.Value(summary)) {
-                        entry.Summary = summary;
-                    }
-
-                    var shortSummary = contentNode["short"].AsString;
-                    if (Is.Value(shortSummary)) {
-                        entry.Summary = shortSummary;
-                    }
-
-                    var headline = contentNode["headline"].AsString;
-                    if (Is.Value(headline)) {
-                        entry.Headline = headline;
-                    }
-
-                    var image = contentNode["image"].AsString;
-                    if (Is.Value(image) && !image.Contains("NAME")) {
-                        entry.Image = $"{lang}/{image}";
-                    }
-
-                    entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
-
-                    _timelineByLang[lang].Add(name, entry);
                 }
             }
+        }
+
+        private TimelineEntry? GetEntryFromFile(string lang, string entryName, string folderPath, string fileName)
+        {
+            if (fileName.EndsWith(".yaml")) {
+                fileName = fileName[..^".yaml".Length];
+            }
+            if (fileName.EndsWith(".yml")) {
+                fileName = fileName[..^".yml".Length];
+            }
+
+            var dirPath = Path.GetDirectoryName(IndexFilePath);
+            dirPath ??= "";
+            var entryPath = (dirPath + "/" + folderPath + "/" + fileName).Replace("//", "/");
+            var entryPathWithExt = entryPath + ".yaml";
+
+            if (!DataProvider.HasData(entryPathWithExt)) {
+                entryPathWithExt = entryPath + ".yml";
+                if (!DataProvider.HasData(entryPathWithExt)) {
+                    Log.Warning($"No entry file= {entryPathWithExt}");
+                    return null;
+                }
+            }
+
+            var contentData = DataProvider.GetData(entryPathWithExt);
+            var contentNode = JsonPath.Node.FromYaml(contentData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+
+            var year = contentNode["year"].AsString;
+            var title = contentNode["title"].AsString;
+            var text = contentNode["text"].AsString
+                .Replace("\r\n", "\n")
+                .Replace("\r", "\n")
+                .Replace("\n\n", "\n")
+                .Split('\n')
+                .Select(x => x.Trim())
+                .ToArray();
+
+            var entry = new TimelineEntry(entryName, year, title, text);
+
+            var shortTitle = contentNode["shorttitle"].AsString;
+            if (Is.Value(shortTitle)) {
+                entry.ShortTitle = shortTitle;
+            }
+
+            var summary = contentNode["summary"].AsString;
+            if (Is.Value(summary)) {
+                entry.Summary = summary;
+            }
+
+            var shortSummary = contentNode["short"].AsString;
+            if (Is.Value(shortSummary)) {
+                entry.Summary = shortSummary;
+            }
+
+            var headline = contentNode["headline"].AsString;
+            if (Is.Value(headline)) {
+                entry.Headline = headline;
+            }
+
+            var image = contentNode["image"].AsString;
+            if (Is.Value(image) && !image.Contains("NAME")) {
+                entry.Image = $"{lang}/{image}";
+            }
+
+            entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
+            return entry;
         }
 
         public TimelineEntry GetEntry(string name, string lang)
