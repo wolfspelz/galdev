@@ -211,6 +211,8 @@
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
                     ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Title"] = entry?.DisplayName ?? "",
+                    ["TitleHasLink"] = "true",
                     ["Text"] = entry?.Summary ?? "",
                 }));
     }
@@ -368,6 +370,8 @@
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
                     ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Title"] = entry?.DisplayName ?? "",
+                    ["TitleHasLink"] = "true",
                     ["Text"] = entry?.Summary ?? "",
                 }));
     }
@@ -414,9 +418,17 @@
                 }
                 <div class="card-body">
                     @if (@card["Title"].String != "") {
-                        <h5 class="card-title">@card["Title"]</h5>
+                        @if (@card["TitleHasLink"].Bool) {
+                            <h5 class="card-title"><a href="@card["Link"].String">@card["Title"]</a></h5>
+                        } else {
+                            <h5 class="card-title">@card["Title"]</h5>
+                        }
                     }
-                    <p>@Html.Raw(card["Text"])</p>
+                    @if (@card["TextHasLink"].Bool) {
+                        <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
+                    } else {
+                        <p>@Html.Raw(card["Text"])</p>
+                    }
                 </div>
             </div>
         </div>
