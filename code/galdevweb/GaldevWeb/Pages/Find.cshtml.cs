@@ -15,10 +15,11 @@ namespace GaldevWeb.Pages
             var lang = GetLangFromCultureName(UiCultureName);
             Log.Info("", new LogData { [nameof(lang)] = lang });
             var timeline = _timelines.GetSeriesForLanguage(lang);
+            var searchTerm = term.ToLower();
 
             foreach (var kv in timeline) {
                 var entry = kv.Value;
-                if (entry.FullTextForSearch.ToLower().Contains(term)) {
+                if (entry.FullTextForSearch.ToLower().Contains(searchTerm)) {
                     List.Add(entry);
                 }
             }
