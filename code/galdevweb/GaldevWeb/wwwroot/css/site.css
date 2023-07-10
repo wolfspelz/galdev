@@ -48,6 +48,27 @@ p {
     margin-bottom: 0.7rem;
 }
 
+.my-findform {
+    margin-top: 6px ;
+    margin-right: 0.5em;
+    margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .my-findform {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+
+input[type="text"] {
+    padding: 0 3px;
+}
+
+    input[type="text"]::placeholder {
+        color: #a0a0a0;
+    }
+
 .card-body {
     padding: 1rem 1rem 0.3rem 1rem; /* because <p> always has its own margin-bottom */
 }

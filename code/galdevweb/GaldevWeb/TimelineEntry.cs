@@ -46,5 +46,23 @@ namespace GaldevWeb
             }
         }
 
+        public string FullTextForSearch
+        {
+            get {
+                var s = "";
+                s += " " + Year ;
+                s += " " + Title;
+                s += ShortTitle != null ? " " + ShortTitle : "";
+                s += Summary != null ? " " + Summary : "";
+                s += Headline != null ? " " + Headline : "";
+                foreach (var t in Text) {
+                    s += " " + t;
+                }
+                foreach (var t in Topics) {
+                    s += " " + t;
+                }
+                return s;
+            }
+        }
     }
 }

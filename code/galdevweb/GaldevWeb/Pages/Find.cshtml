@@ -1,0 +1,26 @@
+﻿@page "{term?}"
+@model FindModel
+@{
+    ViewData["Active"] = "Find";
+}
+
+<div class="row mt-3">
+    <div class="col-12">
+        <h2>
+            @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+            ["de-DE"] = () => "Zeitleisteneinträge",
+            ["en-US"] = () => "Timeline Entries"
+            })
+        </h2>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-12">
+        @foreach (var entry in Model.List) {
+            <div>
+                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
+            </div>
+        }
+    </div>
+</div>
