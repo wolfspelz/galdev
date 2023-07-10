@@ -10,12 +10,13 @@
             _timelines = timelines;
         }
 
-        public void OnGet()
+        public void OnGet(int min = -1)
         {
+            min = min < 0 ? Config.ListMinTextLength : min;
             var lang = GetLangFromCultureName(UiCultureName);
             Log.Info("", new LogData { [nameof(lang)] = lang });
             var timeline = _timelines.GetSeriesForLanguage(lang);
-            List = timeline.GetFilteredList(entry => entry.TextLen > Config.ListMinTextLength);
+            List = timeline.GetFilteredList(entry => entry.TextLen > min);
         }
     }
 }
