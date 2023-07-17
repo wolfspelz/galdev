@@ -182,6 +182,20 @@
                 }));
     }
 
+    if (Model.UiCultureName == "de-DE") {
+        var link = Model.Links.GetPathByPage("/Assumptions", null, new { }) ?? "";
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Link"] = link,
+                    ["Title"] = "Annahmen",
+                    ["TextHasLink"] = "true",
+                    ["Text"] = @"
+Galactic Developments basiert auf echter Wissenschaft. 
+Diese Geschichte der Zukunft ist eine Fortschreibung unserer Welt. 
+Aber wie sieht das Szenario aus. Gibt es Aliens? Wenn ja, wie viele? Gibt es Nanotechnologie, KI?
+Hier gibt es eine Reihe von Annahmen und Grundlagen...",
+                }));
+    }
+
     {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.I18n.String(path: "Box/SocialMedia/Title", i18n: new StringGeneratorI18n {
