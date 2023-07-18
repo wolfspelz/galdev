@@ -14,6 +14,7 @@ namespace GaldevWeb
         public string? Summary;
         public string? Image;
         public string[] Topics = new string[0];
+        public string[] Aliases = new string[0];
 
         public string Next = "";
         public string Previous = "";

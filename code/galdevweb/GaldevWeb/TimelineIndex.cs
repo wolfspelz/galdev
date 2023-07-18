@@ -1,6 +1,4 @@
-﻿using YamlDotNet.Core;
-
-namespace GaldevWeb
+﻿namespace GaldevWeb
 {
     public class TimelineIndex
     {
@@ -19,6 +17,15 @@ namespace GaldevWeb
             LoadEntries();
             ConnectEntries();
             CreateTopics();
+            CreateAliases();
+        }
+
+        private void CreateAliases()
+        {
+            foreach (var kv in _timelineByLang) {
+                var timeline = kv.Value;
+                timeline.CreateAliases();
+            }
         }
 
         private void CreateTopics()
@@ -142,6 +149,9 @@ namespace GaldevWeb
             }
 
             entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
+
+            entry.Aliases = contentNode["aliases"].AsList.Select(n => n.AsString).ToArray();
+
             return entry;
         }
 

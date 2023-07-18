@@ -5,6 +5,29 @@
     {
         [TestMethod]
         [TestCategory("GaldevWeb")]
+        public void CreateAliases_creates_aliases_for_language_dependent_indexing()
+        {
+            // Arrange
+            var sut = new TimelineSeries();
+            Array.ForEach(
+                new[] { "3", "2", "4", "1", "5", "3b" },
+                x => {
+                    var entry = new TimelineEntry(x, x, x, new[] { x, x }) {
+                        Aliases = new[] { x + x }
+                    };
+                    sut.Add(x, entry);
+                });
+
+            // Act
+            sut.CreateAliases();
+
+            // Assert
+            Assert.AreEqual("1", sut.GetEntry("1")?.Name);
+            Assert.AreEqual("1", sut.GetEntry("11")?.Name);
+        }
+
+        [TestMethod]
+        [TestCategory("GaldevWeb")]
         public void CreateTopics_creates_a_TopicSet()
         {
             // Arrange

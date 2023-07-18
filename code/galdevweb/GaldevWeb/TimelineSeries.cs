@@ -1,4 +1,6 @@
-﻿namespace GaldevWeb
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace GaldevWeb
 {
     public class TimelineSeries : Dictionary<string, TimelineEntry>
     {
@@ -6,6 +8,7 @@
 
         private readonly Dictionary<string, TimelineEntryList> _topicsById = new();
         private readonly Dictionary<string, string> _topicDisplayNameById = new();
+        private readonly Dictionary<string, string> _nameByAlias = new();
 
         public TimelineSeries()
         {
@@ -21,11 +24,19 @@
             return this.ContainsKey(name);
         }
 
-        public TimelineEntry? GetEntry(string name)
+        public TimelineEntry? GetEntry(string nameOrAlias)
         {
-            name = name.ToLower();
-            if (HasEntry(name)) {
-                return this[name];
+            {
+                var nameToLower = nameOrAlias.ToLower();
+                if (HasEntry(nameToLower)) {
+                    return this[nameToLower];
+                }
+            }
+            if (_nameByAlias.ContainsKey(nameOrAlias)) {
+                var nameToLower = _nameByAlias[nameOrAlias].ToLower();
+                if (HasEntry(nameToLower)) {
+                    return this[nameToLower];
+                }
             }
             return null;
         }
@@ -119,6 +130,18 @@
                 return _topicsById[topic];
             }
             return new TimelineEntryList();
+        }
+
+        public void CreateAliases()
+        {
+            foreach (var kv in this) {
+                var name = kv.Key;
+                var entry = kv.Value;
+                _nameByAlias[entry.Name] = name;
+                foreach (var alias in entry.Aliases) {
+                    _nameByAlias[alias.ToLower()] = name;
+                }
+            }
         }
 
     }
