@@ -156,8 +156,9 @@ entries:
     en: 2192_NeosozTerror.yaml
   SGQS:
     de: 2194_SGQS.yaml
-  Niederschlagung_des_Aufstands_:
-    de: 2197_Niederschlagung_des_Aufstands_.yaml
+  LunarRevolt:
+    de: 2197_Mondaufstand.yaml
+    en: 2197_LunarRevolt.yaml
   DubaiCosmodrome:
     de: 2199_Dubai.yaml
     en: 2199_DubaiCosmodrome.yaml
@@ -1130,8 +1131,8 @@ entries:
     de: 3243_DumaKontroverse.yaml
   Sterge:
     de: 3245_Sterge.yaml
-  Akari_I:
-    de: 3251_Akari_I.yaml
+  BioAxion:
+    de: 3251_BioAxion.yaml
   Entdeckung_der_Überreste_eines:
     de: 3255_Entdeckung_der_Überreste_eines.yaml
   ReshumanisFinanzreform:
