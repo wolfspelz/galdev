@@ -1093,8 +1093,9 @@ entries:
     en: 3116_MoonUprising.yaml
   Minimum_der_solaren_Wirtschaft:
     de: 3124_Minimum_der_solaren_Wirtschaft.yaml
-  Ruinen:
+  Ruins:
     de: 3131_Ruinen.yaml
+    de: 3131_Ruins.yaml
   Kartusche:
     de: 3141_Kartusche.yaml
   Aufstand_im_Erdorbit:
