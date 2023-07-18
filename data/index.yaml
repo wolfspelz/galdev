@@ -411,6 +411,7 @@ entries:
     de: 2458_Egalitaetsflug.yaml
   Turnaround:
     de: 2460_Turnaround.yaml
+    en: 2460_Turnaround.yaml
   Aufdeckung_der_NewplaceVerschw:
     de: 2463_Aufdeckung_der_NewplaceVerschw.yaml
   Auswanderer:
@@ -478,8 +479,9 @@ entries:
   TragedyOfCobol:
     de: 2535_Cobol1.yaml
     en: 2535_TragedyOfCobol.yaml
-  Kollisionskurs:
+  Collisioncourse:
     de: 2536_Kollisionskurs.yaml
+    en: 2536_Collisioncourse.yaml
   Start_des_Fernraumschiffes_Kin:
     de: 2538_Start_des_Fernraumschiffes_Kin.yaml
   Mukhagni:
