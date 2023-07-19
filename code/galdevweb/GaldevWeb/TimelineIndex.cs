@@ -2,7 +2,7 @@
 {
     public class TimelineIndex
     {
-        public IDataProvider DataProvider = new FileDataProvider();
+        public IDataProvider DataProvider = new TabConvertingFileDataProvider();
         public string IndexFilePath = "timeline/index.yaml";
         public ICallbackLogger Log = new NullCallbackLogger();
 

@@ -1,10 +1,11 @@
 ﻿namespace GaldevWeb
 {
-    public class FileDataProvider : JsonPath.IDataProvider
+    public class TabConvertingFileDataProvider : JsonPath.IDataProvider
     {
         public string GetData(string key)
         {
-            return System.IO.File.ReadAllText(key);
+            var data = System.IO.File.ReadAllText(key);
+            return data.Replace("\t", "  ");
         }
 
         public bool HasData(string key)
