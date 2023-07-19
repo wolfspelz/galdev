@@ -1095,7 +1095,7 @@ entries:
     de: 3124_Minimum_der_solaren_Wirtschaft.yaml
   Ruins:
     de: 3131_Ruinen.yaml
-    de: 3131_Ruins.yaml
+    en: 3131_Ruins.yaml
   Kartusche:
     de: 3141_Kartusche.yaml
   Aufstand_im_Erdorbit:
