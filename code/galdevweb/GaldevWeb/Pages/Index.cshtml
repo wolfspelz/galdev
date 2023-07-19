@@ -243,6 +243,38 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                 }));
     }
 
+    if (Model.UiCultureName == "en-US") {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = "Latest Translations",
+                    ["Text"] = string.Join(" - ", new[] {
+"ultrametals",
+"ancientrobots",
+"executivedecision",
+"yaris",
+"contour",
+"prophet",
+"queenmarduk",
+"feudalconspiracy",
+"tranquility1000",
+"utho",
+"intelligentgalaxies",
+"solos",
+"warringswarms",
+"moonuprising",
+"supernova",
+"controversygate",
+"Ruins",
+"Turnaround",
+"Collisioncourse",
+}
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
+                }));
+    }
+
     {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
