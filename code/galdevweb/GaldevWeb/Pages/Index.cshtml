@@ -136,16 +136,17 @@
                     })
                 + "<br/><br/>"
                 + string.Join("<br/>", new[] {
-"1000InSpace",
-"Gemini",
-"AsteroidMining",
-"SpacePatrol",
-"ServizioStazione",
-"EndVenusTerraforming",
-"MoonDeportations",
-"NeosozTerror",
+"PalladianLeague",
 "LunarRevolt",
-                                        }
+"NeosozTerror",
+"MoonDeportations",
+"EndVenusTerraforming",
+"ServizioStazione",
+"SpacePatrol",
+"AsteroidMining",
+"Gemini",
+"1000InSpace",
+                }
                 .Where(name => Model.Series.HasEntry(name))
                 .Select(name => {
                     var entry = Model.Series.GetEntry(name);
@@ -190,8 +191,8 @@
                     ["Title"] = "Annahmen",
                     ["TextHasLink"] = "true",
                     ["Text"] = @"
-Galactic Developments basiert auf echter Wissenschaft. 
-Diese Geschichte der Zukunft ist eine Fortschreibung unserer Welt. 
+Galactic Developments basiert auf echter Wissenschaft.
+Diese Geschichte der Zukunft ist eine Fortschreibung unserer Welt.
 Aber wie sieht das Szenario aus. Gibt es Aliens? Wenn ja, wie viele? Gibt es Nanotechnologie, KI?
 Hier ist eine Reihe von Annahmen und Grundlagen...",
                 }));
@@ -267,11 +268,11 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Turnaround",
 "Collisioncourse",
 }
-                        .Where(name => Model.Series.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                .Where(name => Model.Series.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Series.GetEntry(name);
+                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
