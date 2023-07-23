@@ -51,6 +51,13 @@ p {
     margin-bottom: 0.7rem;
 }
 
+.card:hover {
+    /* border: 1px solid rgba(0,0,0,0.5); */
+    /* margin: -2px; */
+    /* background-color: #e8e8e8; */
+    filter: drop-shadow(1px 1px 3px #555);
+}
+
 .card-body {
     padding: 1rem 1rem 0.3rem 1rem; /* because <p> always has its own margin-bottom */
 }
