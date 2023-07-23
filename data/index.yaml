@@ -169,8 +169,9 @@ entries:
   TetrachromaticVision:
     de: 2204_Entdeckung_der_tetrachromaten_.yaml
     en: 2204_TetrachromaticVision.yaml
-  Unabhängigkeitserklärung_der_A:
-    de: 2205_Unabhängigkeitserklärung_der_A.yaml
+  PalladianLeague:
+    de: 2205_PalladischeLiga.yaml
+    de: 2205_PalladianLeague.yaml
   OktopusSapiens: 
     de: 2208_Oktopus.yaml
     en: 2208_OctopusSapiens.yaml
