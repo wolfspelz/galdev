@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace GaldevWeb
@@ -30,8 +31,8 @@ namespace GaldevWeb
             var myApp = new GaldevApp { Config = myConfig };
             builder.Services.AddSingleton(myApp);
 
-            var timeline = new TimelineIndex { 
-                IndexFilePath = myConfig.IndexPath, 
+            var timeline = new TimelineIndex {
+                IndexFilePath = myConfig.IndexPath,
                 Log = myApp.Log,
             };
             timeline.Load();
@@ -44,7 +45,19 @@ namespace GaldevWeb
             }
             app.UseStaticFiles();
 
-            app.UseRequestLocalization(new[] { "en-US", "de-DE" }); // Sets Thread.CurrentThread.CurrentUICulture
+            var supportedCultures = new[]{
+                new CultureInfo("de-DE"),
+                new CultureInfo("en-US"),
+            };
+            var localizationOptions = new RequestLocalizationOptions {
+                DefaultRequestCulture = new RequestCulture("de-DE"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures,
+            };
+            localizationOptions.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider { QueryStringKey = "lang" });
+            localizationOptions.RequestCultureProviders.Insert(1, new CookieRequestCultureProvider());
+            localizationOptions.RequestCultureProviders.Insert(2, new AcceptLanguageHeaderRequestCultureProvider());
+            app.UseRequestLocalization(localizationOptions); // Sets Thread.CurrentThread.CurrentUICulture
 
             app.UseCors();
             app.UseRouting();
