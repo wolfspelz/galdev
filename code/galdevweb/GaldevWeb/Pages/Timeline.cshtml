@@ -1,19 +1,24 @@
 ﻿@page "{name?}"
 @model TimelineModel
+@inject IUrlHelper UrlHelper
 @{
     ViewData["Active"] = "Timeline";
 
-    if (!Model.NotAvailable) {
+    var BaseUrl = $"https://{UrlHelper.ActionContext.HttpContext.Request.Host}";
+
+    if (Model.NotAvailable) {
+        //
+    } else {
         var firstEntry = Model.List[0];
         ViewData["Title"] = firstEntry.Title;
         ViewData["MetaDescription"] = firstEntry.Summary;
         ViewData["MetaFacebookTitle"] = firstEntry.Title;
         ViewData["MetaFacebookDescription"] = firstEntry.Summary;
-        ViewData["MetaFacebookImage"] = "/Image/" + firstEntry.Image;
+        ViewData["MetaFacebookImage"] = BaseUrl + "/Image/" + firstEntry.Image;
         ViewData["MetaFacebookImageAlt"] = firstEntry.Title;
         ViewData["MetaTwitterTitle"] = firstEntry.Title;
         ViewData["MetaTwitterDescription"] = firstEntry.Summary;
-        ViewData["MetaTwitterImage"] = "/Image/" + firstEntry.Image;
+        ViewData["MetaTwitterImage"] = BaseUrl + "/Image/" + firstEntry.Image;
     }
 }
 
