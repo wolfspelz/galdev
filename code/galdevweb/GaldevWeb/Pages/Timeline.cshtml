@@ -4,7 +4,7 @@
 @{
     ViewData["Active"] = "Timeline";
 
-    var BaseUrl = $"https://{UrlHelper.ActionContext.HttpContext.Request.Host}";
+    var BaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}";
 
     if (Model.NotAvailable) {
         //

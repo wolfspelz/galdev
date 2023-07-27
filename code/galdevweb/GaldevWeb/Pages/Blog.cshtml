@@ -1,0 +1,193 @@
+﻿@page "{name?}"
+@model BlogModel
+@inject IUrlHelper UrlHelper
+@{
+    ViewData["Active"] = "Blog";
+
+    var ImageBaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}/blog/";
+
+    if (Model.Post != null) {
+        ViewData["Title"] = Model.Post.Title;
+        ViewData["MetaDescription"] = Model.Post.Summary;
+        ViewData["MetaFacebookTitle"] = Model.Post.Title;
+        ViewData["MetaFacebookDescription"] = Model.Post.Summary;
+        ViewData["MetaFacebookImage"] = ImageBaseUrl + Model.Post.Image;
+        ViewData["MetaFacebookImageAlt"] = Model.Post.Title;
+        ViewData["MetaTwitterTitle"] = Model.Post.Title;
+        ViewData["MetaTwitterDescription"] = Model.Post.Summary;
+        ViewData["MetaTwitterImage"] = ImageBaseUrl + Model.Post.Image;
+    }
+}
+
+<script src="~/lib/masonry-4.2.2.min.js" async></script>
+<script src="~/js/masonryAutoRelayout.js" async></script>
+
+@if (Model.Post != null) {
+
+    <div class="row mt-4">
+        <div class="col-sm-12 col-lg-8">
+            <h1>
+                @Model.Post.Title
+            </h1>
+
+            <p class="mt-2">
+                @Model.Post.Summary
+            </p>
+
+            <p class="fst-italic">
+                @Model.Post.Time
+                @Model.I18n.String(path: "Post/by", i18n: new StringGeneratorI18n { ["de-DE"] = () => "von", ["en-US"] = () => "by" })
+                @Model.Post.Author
+                @foreach (var tag in Model.Post.Tags) {
+                    <span>#@tag</span>
+                }
+            </p>
+
+            <p class="mt-4 mb-4">
+                @if (string.IsNullOrEmpty(Model.Post.Html)) {
+                    <img src="@ImageBaseUrl@Model.Post.Image" class="img-fluid" alt="@Model.Post.Title" />
+                } else {
+                    <text>
+                        @Html.Raw(Model.Post.Html)
+                    </text>
+                }
+            </p>
+
+            <p id="iTarget">
+                <span id="iSource">@Model.Post.Text</span>
+            </p>
+
+        </div>
+
+        <div class="col-sm-0 col-lg-4">
+
+            @{
+                var cards = new List<Node>();
+
+                {
+                    cards.Add(Node.From(new Dictionary<string, string> {
+                        ["Title"] = Model.I18n.String(path: "Box/Posts/Title", i18n: new StringGeneratorI18n {
+                            ["de-DE"] = () => "Blog Posts",
+                            ["en-US"] = () => "Blog Posts",
+                        }),
+                        ["Text"] = "<ul>" + string.Join("", Model.Index.Where(p => p.Language == Model.Lang).Select(p => $"<li><a href='{Model.Links.GetPathByPage("/Blog", null, new { name = p.SeoTitle })}'>{p.Title}</a></li>")) + "</ul>",
+                    }));
+                }
+
+                //{
+                //    cards.Add(Node.From(new Dictionary<string, string> {
+                //        ["ImgSrc"] = "/images/Index/book.png",
+                //        ["ImgAlt"] = "Buch",
+                //        ["Link"] = "https://www.amazon.de/dp/1536999199",
+                //        ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
+                //            ["de-DE"] = () => "Buch",
+                //            ["en-US"] = () => "Printed Book",
+                //        }),
+                //        ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
+                //            ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
+                //            ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
+                //        }),
+                //    }));
+                //}
+
+            }
+            <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
+                @{
+                    var cardsCnt = 0;
+                }
+                @foreach (var card in cards) {
+                    cardsCnt++;
+                    <div class="col-sm-12 my-2">
+                        <div class="card">
+                            @if (@card["ImgSrc"].String != "") {
+                                @if (@card["Link"].String != "") {
+                                    <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
+                                } else {
+                                    <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
+                                }
+                                <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="card-body">
+                                @if (@card["Title"].String != "") {
+                                    <h5 class="card-title">@card["Title"]</h5>
+                                }
+                                <p>@Html.Raw(card["Text"])</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+} else {
+
+    var cards = new List<Node>();
+
+    foreach (var post in Model.Index.Where(p => p.Language == Model.Lang)) {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                        ["ImgSrc"] = $"{ImageBaseUrl}{post.Image}",
+                        ["ImgAlt"] = post.Title,
+                        ["Link"] = Model.Links.GetPathByPage("/Blog", null, new { name = post.SeoTitle }) ?? "",
+                        ["Title"] = post.Title,
+                        ["Text"] = post.Summary,
+                    }));
+
+    }
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <h1>News</h1>
+        </div>
+    </div>
+
+    <div class="row " data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
+        @foreach (var card in cards) {
+            <div class="col-sm-6 col-lg-4 my-2">
+                <div class="card">
+                    @if (@card["ImgSrc"].String != "") {
+                        @if (@card["Link"].String != "") {
+                            <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
+                        } else {
+                            <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
+                        }
+                        <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="card-body">
+                        @if (@card["Title"].String != "") {
+                            @if (@card["TitleHasLink"].Bool) {
+                                <h5 class="card-title"><a href="@card["Link"].String">@card["Title"]</a></h5>
+                            } else {
+                                <h5 class="card-title">@card["Title"]</h5>
+                            }
+                        }
+                        @if (@card["TextHasLink"].Bool) {
+                            <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
+                        } else {
+                            <p>@Html.Raw(card["Text"])</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@await Html.PartialAsync("_MarkdownConverterPartial")

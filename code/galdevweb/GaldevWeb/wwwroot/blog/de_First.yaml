@@ -1,0 +1,19 @@
+AssertUtf8: ä
+Language: de
+Title: "Erstes Posting"
+Time: 26.07.2023
+Author: Heiner Wolf
+Summary: "MVP Blog Function für Galactic Developments"
+Tags: [Blog, MVP, QuickNotDirty]
+Image: de_First.jpg
+xHtml: |
+    HTML HTML HTML HTML HTML HTML
+    HTML HTML HTML HTML HTML HTML
+Text: |
+  Eine schnelle Blog Funktion damit Social Media Posings hierher linken können
+
+  # Features
+
+  - Markdown
+  - Social Network HTML Meta Tags
+  - Tags

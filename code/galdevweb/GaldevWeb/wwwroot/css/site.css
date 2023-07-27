@@ -55,7 +55,7 @@ p {
     /* border: 1px solid rgba(0,0,0,0.5); */
     /* margin: -2px; */
     /* background-color: #e8e8e8; */
-    filter: drop-shadow(1px 1px 3px #555);
+    /*filter: drop-shadow(1px 1px 3px #555);*/
 }
 
 .card-body {

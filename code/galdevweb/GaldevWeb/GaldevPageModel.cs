@@ -7,8 +7,9 @@ namespace GaldevWeb
         public GaldevApp App;
         public ICallbackLogger Log;
         public GaldevConfig Config;
-        public string UiCultureName { get; set; }
+        public string UiCultureName;
         public ITextProvider I18n;
+        public string Lang => GetLangFromCultureName(UiCultureName);
 
         public GaldevPageModel(GaldevApp app, string textName)
         {
@@ -19,7 +20,7 @@ namespace GaldevWeb
             I18n = new TextProvider(new ReadonlyFileDataProvider(), App.Config.AppName, UiCultureName, textName);
         }
 
-        protected static string GetLangFromCultureName(string cultureName)
+        public static string GetLangFromCultureName(string cultureName)
         {
             return cultureName.Split(new char[] { '-', '_' }).First().ToLower();
         }
