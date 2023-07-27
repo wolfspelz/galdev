@@ -49,6 +49,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Assumptions">@Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"Annahmen", ["en-US"] = () =>"Assumptions" })</a>
+                        </li>
+
+                        <li class="nav-item">
                             <div class="my-findform">
                                 <form id="selectLanguage" asp-page="/Find" method="get" class="form-horizontal" role="form">
                                     <input type="text" name="term" placeholder="@Model.I18n.String(path: "Search", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"Suchen", ["en-US"] = () =>"Search" })" />
