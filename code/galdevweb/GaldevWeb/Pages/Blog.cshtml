@@ -45,7 +45,7 @@
 
             <p class="mt-4 mb-4">
                 @if (string.IsNullOrEmpty(Model.Post.Html)) {
-                    <img src="@ImageBaseUrl@Model.Post.Image" class="img-fluid" alt="@Model.Post.Title" />
+                    <img src="@ImageBaseUrl@Model.Post.Image" class="img-fluid gd-blog-post-image" alt="@Model.Post.Title" />
                 } else {
                     <text>
                         @Html.Raw(Model.Post.Html)
