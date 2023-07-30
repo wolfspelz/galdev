@@ -158,6 +158,10 @@ img.gd-timeline-next-right {
     padding: 0 0.4em 0.2em 0;
 }
 
+img.gd-blog-post-image {
+    filter: drop-shadow(5px 5px 5px #505050);
+}
+
 @media (min-width: 768px) {
     div.gd-multi-column {
         column-count: 2;
