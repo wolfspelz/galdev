@@ -1,6 +1,13 @@
 entries:
   Megastrukturen:
     de: de_Megastrukturen.yaml
+  interviewandromedamagazin:
+    de: de_interview-andromeda-nachrichten-263.yaml
+    en: en_interview-andromeda-nachrichten-263.yaml
+  deutschesciencefiction:
+    de: de_deutsche-science-fiction.yaml
+  flyfictionfantasy:
+    de: de_flyfictionfantasy.yaml
   First:
     de: de_First.yaml
     en: en_First.yaml
