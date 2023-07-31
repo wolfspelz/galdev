@@ -7,10 +7,8 @@
 
         public LinkGenerator Links;
 
-        public BlogModel(GaldevApp app, BlogIndex blogs, LinkGenerator linkGenerator) : base(app, "Blog")
+        public BlogModel(GaldevApp app, LinkGenerator linkGenerator) : base(app, "Blog")
         {
-            Index = blogs;
-            Index.Clear();
             Index.Load();
 
             Links = linkGenerator;

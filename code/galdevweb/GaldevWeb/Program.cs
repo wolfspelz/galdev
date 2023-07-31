@@ -38,12 +38,14 @@ namespace GaldevWeb
             timeline.Load();
             builder.Services.AddSingleton(timeline);
 
-            BlogIndex? blog = new BlogIndex {
-                IndexFilePath = myConfig.BlogIndexPath,
-                Log = myApp.Log,
+            Don.t = () => {
+                BlogIndex? blog = new BlogIndex {
+                    IndexFilePath = myConfig.BlogIndexPath,
+                    Log = myApp.Log,
+                };
+                blog.Load();
+                builder.Services.AddSingleton(blog);
             };
-            blog.Load();
-            builder.Services.AddSingleton(blog);
 
             var app = builder.Build();
 
