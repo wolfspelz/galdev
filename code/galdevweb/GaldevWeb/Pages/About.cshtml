@@ -4,7 +4,7 @@
     ViewData["Active"] = "About";
 }
 
-<div class="row my-3">
+<div class="row mt-3">
     <div class="col-12">
         <h1>
             @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
@@ -15,52 +15,109 @@
     </div>
 </div>
 
-<div class="row my-3">
-    <div class="col-md-3 mb-3">
-        <img src="~/images/About/squirrel.jpg" alt="Squirrel takes a shot" class="img-fluid">
-        <p>
-            Author and squirrel taking a shot.
-        </p>
-    </div>
+<script src="~/lib/masonry-4.2.2.min.js" async></script>
+<script src="~/js/masonryAutoRelayout.js" async></script>
 
-    <div class="col-md-7">
-        <p>
-            Norden Esstisch war Kommandant beim Sondereinsatzkommando der Cloning Kontrollbehörde auf dem Asteroiden Iris. Er verhinderte, dass Androiden in menschenunwürdigen Umständen leben müssen und schrieb nie gerne Einsatzberichte. 
-            Auf noch nicht geklärte Weise hat das Schicksal ihn in das <a href="https://www.instagram.com/p/CiSjvR7s84E/">Jahr 4581 u.Z. nach New Paris</a> verschlagen, wo er jetzt Geschichtsbücher schreibt.
-        </p>
-        <dl>
-            <dt>Profil:</dt>
-            <dd>Alter: 17 Parsec / Lj</dd>
-            <dd>Typ: wissenschaftlicher Praktiker</dd>
-            <dd>Beruf: IT-Manager</dd>
-            <dd>Berufung: Coder</dd>
-            <dd>Handicap: Detailverliebt</dd>
-            <dd>Wohnort: Hamburg</dd>
-            <dd>Glaube oder so: Das wissenschaftliche Prinzip</dd>
-            <dd>ScienceCode: <a href="https://medium.com/@@Wolfspelz/sciencecode-the-geekcode-for-science-e859698fc60f">bb+/un ci0 eu+ dm+/sn de- mv/rp sm+ ss- st- lqg+ gr+ sr++ gut- fp++/gf sh0</a></dd>
-            <dd>Vorbilder: Margaret Hamilton, David Pulver, Douglas C. Schmidt, Vitalik Buterin, Kelonikoa Pono</dd>
-            <dd>Gute SF: <a href="http://blog.wolfspelz.de/2012/11/die-besten-science-fiction-romane.html">A Talent For War, Voice of the Whirlwind, The Cosmic Computer, The Honor of the Queen, Matter, Transhuman Space, The Earth Book of Stormgate, Schismatrix, The Mote in God's Eye, The Engines of God, Starship Troopers, Pushing Ice, A Fire Upon the Deep</a></dd>
-            <dd>Motto: Know what you are doing</dd>
-            <dd>Lieblingsrant: <a href="http://blog.wolfspelz.de/2022/10/hot-fusion-technologien.html">Fusion geht besser</a></dd>
-            <dd>Lieblingskunstwerk: <a href="https://www.youtube.com/watch?v=vV1YbWBSXS8">Watch The World, Sternennacht, Second Life, Vincent, Robbie Dingo, Don McLean, Vincent Van Gogh</a></dd>
-            <dd>Lieblingsspektumsymptom: Restzeit der Mikrowelle auf 0 stellen, damit ordentlich</dd>
-            <dd>Ziel: Spaß haben und nett bleiben</dd>
-            <dd>Angst: Dass es nicht zum Upload reicht</dd>
-            <dd>Marotte: Über Games lesen und Letsplays anschauen ohne selbst zu spielen</dd>
-            <dd>Talent: Assoziieren</dd>
-            <dd>Leidenschaft: Nachrichten</dd>
-            <dd>Traum: Aprilscherze machen über die Millionen lachen</dd>
-            <dd>Ideal: Anstand</dd>
-        </dl>
-        <p>
-            Im realen Leben ist Heiner Wolf Diplom Physiker. Er hat seinen Master am CERN in Hochenergiephysik gemacht, dann einen Doktor in Informatik und jetzt ist er leidenschaftlich Full Stack Entwickler (C#, Typescript). Heiner hat mehrere Unternehmen gegründet und ist seit vielen Jahren IT-Leiter. Er hat Giphys (giffies?), AJAX und embedded Webserver erfunden, Microservices, Devops und REST gemacht bevor die einen Namen hatten, den ersten Livestream im Web gesendet, das <a href="http://4.bp.blogspot.com/-EE7hEURrOlw/VLZyvL5ldQI/AAAAAAAAJuE/fMAtr2RSqYk/s1600/Startrek.gif">erste animierte GIF im Web</a> gepostet und viele andere "erste" im Web gemacht. Er hat den Lead-Award für Webdesign und ein paar andere Auszeichnungen für Startups bekommen. Er interessiert sich für Wissenschaft und Technologie, für gesellschaftliche und wirtschaftliche Entwicklungen. Neben allen möglichen guten Geschichten mag er realistische Zukunftsszenarien und Hard-Science-Fiction mit einer kleinen Ausnahme: Überlichtgeschwindigkeit, denn sonst kann man keine Außerirdischen treffen. Aber dafür hat er sich was überlegt (nichts Ausgefallenes: nur so mit Fraktalen, Quantenspiegeln und exotischer Materie). Seit er 15 ist, schreibt er Geschichtsbücher für die Zukunft.
-        <p>
-        </p>
-        
-        <dl>
-            <dt>Andere Beschäftigungen:</dt>
-            <dd><a href="http://blog.wolfspelz.de/">Blog - Rants about Code and Life</a></dd>
-            <dd><a href="https://www.weblin.io/Start">weblin.io - Avatare auf Webseiten</a></dd>
-        </dl>
-    </div>
+@{
+    var cards = new List<Node>();
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["ImgSrc"] = "/images/About/squirrel.jpg",
+                ["ImgAlt"] = "Author and squirrel taking a shot",
+                ["Text"] = "Author and squirrel taking a shot",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Text"] = "Norden Esstisch war Kommandant beim Sondereinsatzkommando der Cloning Kontrollbehörde auf dem Asteroiden Iris. Er verhinderte, dass Androiden in menschenunwürdigen Umständen leben müssen und schrieb nie gerne Einsatzberichte. Auf noch nicht geklärte Weise hat das Schicksal ihn in das <a href='https://www.instagram.com/p/CiSjvR7s84E/'>Jahr 4581 u.Z. nach New Paris</a> verschlagen, wo er jetzt Geschichtsbücher schreibt.",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Text"] = @"
+<dl>
+    <dt>Profil:</dt>
+    <dd>Alter: 17 Parsec / Lj</dd>
+    <dd>Typ: wissenschaftlicher Praktiker</dd>
+    <dd>Beruf: IT-Manager</dd>
+    <dd>Berufung: Coder</dd>
+    <dd>Handicap: Detailverliebt</dd>
+    <dd>Wohnort: Hamburg</dd>
+    <dd>Glaube oder so: Das wissenschaftliche Prinzip</dd>
+    <dd>ScienceCode: <a href='https://medium.com/@@Wolfspelz/sciencecode-the-geekcode-for-science-e859698fc60f'>bb+/un ci0 eu+ dm+/sn de- mv/rp sm+ ss- st- lqg+ gr+ sr++ gut- fp++/gf sh0</a></dd>
+    <dd>Vorbilder: Margaret Hamilton, David Pulver, Douglas C. Schmidt, Vitalik Buterin, Kelonikoa Pono</dd>
+    <dd>Gute SF: <a href='http://blog.wolfspelz.de/2012/11/die-besten-science-fiction-romane.html'>A Talent For War, Voice of the Whirlwind, The Cosmic Computer, The Honor of the Queen, Matter, Transhuman Space, The Earth Book of Stormgate, Schismatrix, The Mote in God's Eye, The Engines of God, Starship Troopers, Pushing Ice, A Fire Upon the Deep</a></dd>
+    <dd>Motto: Know what you are doing</dd>
+    <dd>Lieblingsrant: <a href='http://blog.wolfspelz.de/2022/10/hot-fusion-technologien.html'>Fusion geht besser</a></dd>
+    <dd>Lieblingskunstwerk: <a href='https://www.youtube.com/watch?v=vV1YbWBSXS8'>Watch The World, Sternennacht, Second Life, Vincent, Robbie Dingo, Don McLean, Vincent Van Gogh</a></dd>
+    <dd>Lieblingsspektumsymptom: Restzeit der Mikrowelle auf 0 stellen, damit ordentlich</dd>
+    <dd>Ziel: Spaß haben und nett bleiben</dd>
+    <dd>Angst: Dass es nicht zum Upload reicht</dd>
+    <dd>Marotte: Über Games lesen und Letsplays anschauen ohne selbst zu spielen</dd>
+    <dd>Talent: Assoziieren</dd>
+    <dd>Leidenschaft: Nachrichten</dd>
+    <dd>Traum: Aprilscherze machen über die Millionen lachen</dd>
+    <dd>Ideal: Anstand</dd>
+</dl>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Im realen Leben",
+                ["Text"] = "... ist Heiner Wolf Diplom Physiker. Er hat seinen Master am CERN in Hochenergiephysik gemacht, dann einen Doktor in Informatik und jetzt ist er leidenschaftlich Full Stack Entwickler (C#, Typescript). Heiner hat mehrere Unternehmen gegründet und ist seit vielen Jahren IT-Leiter. Er hat Giphys (giffies?), AJAX und embedded Webserver erfunden, Microservices, Devops und REST gemacht, bevor die einen Namen hatten, den ersten Livestream im Web gesendet, das <a href='http://4.bp.blogspot.com/-EE7hEURrOlw/VLZyvL5ldQI/AAAAAAAAJuE/fMAtr2RSqYk/s1600/Startrek.gif'>erste animierte GIF im Web</a> gepostet und viele andere \"erste\" im Web gemacht. Er hat mal den Lead-Award für Webdesign und ein paar andere Auszeichnungen für Startups bekommen. Er interessiert sich für Wissenschaft und Technologie, für gesellschaftliche und wirtschaftliche Entwicklungen. Neben allen möglichen guten Geschichten mag er realistische Zukunftsszenarien und Hard-Science-Fiction mit einer kleinen Ausnahme: Überlichtgeschwindigkeit, denn sonst kann man keine Außerirdischen treffen. Aber dafür hat er sich was überlegt (nichts Ausgefallenes: nur so mit Fraktalen, Quantenspiegeln und exotischer Materie). Seit er 15 ist, schreibt er Geschichtsbücher für die Zukunft.",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Andere Beschäftigungen",
+                ["Text"] = @"
+<dl>
+    <dd><a href='http://blog.wolfspelz.de/'>Blog - Rants about Code and Life</a></dd>
+    <dd><a href='https://www.weblin.io/Start'>weblin.io - Avatare auf Webseiten</a></dd>
+</dl>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["ImgSrc"] = "/images/About/Lego-Margaret-Hamilton.jpg",
+                ["ImgAlt"] = "Lego Margaret Hamilton",
+                ["Text"] = "<a href='https://de.wikipedia.org/wiki/Margaret_Hamilton_(Wissenschaftlerin)'>Margaret Hamilton</a>",
+            }));
+
+}
+
+<div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
+    @foreach (var card in cards) {
+        <div class="col-sm-6 col-lg-4 my-2">
+            <div class="card">
+                @if (@card["ImgSrc"].String != "") {
+                    @if (@card["Link"].String != "") {
+                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
+                    } else {
+                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
+                    }
+                    <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="card-body">
+                    @if (@card["Title"].String != "") {
+                        @if (@card["TitleHasLink"].Bool) {
+                            <h5 class="card-title"><a href="@card["Link"].String">@card["Title"]</a></h5>
+                        } else {
+                            <h5 class="card-title">@card["Title"]</h5>
+                        }
+                    }
+                    @if (@card["TextHasLink"].Bool) {
+                        <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
+                    } else {
+                        <p>@Html.Raw(card["Text"])</p>
+                    }
+                </div>
+            </div>
+        </div>
+    }
 </div>
