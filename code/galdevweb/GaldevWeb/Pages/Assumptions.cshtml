@@ -6,9 +6,16 @@
 
 <div class="row mt-3">
     <div class="col-12">
-
         <h1>Annahmen</h1>
-        <h2><a name="Summary">Geordnete Unordnung</a></h2>
+    </div>
+</div>
+
+@{
+    var cards = new List<Node>();
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Anchor"] = "Summary",
+                ["Text"] = @"
         <ul>
             <li>
                 Es gibt fremde Völker (aka. Aliens). Die haben nicht nur Noppen auf der Nase, sondern sind anders anders.
@@ -36,19 +43,25 @@
             </li>
             <li>
                 Ansonsten gibt es:
-                bewusste und unbewusste KI, Nano, Genmods, Cyborgs, Mechs, Implantate, 
-                IQ-Upgrades, Assoziationsbooster, 
+                bewusste und unbewusste KI, Nano, Genmods, Cyborgs, Mechs, Implantate,
+                IQ-Upgrades, Assoziationsbooster,
                 VR, Metamaterialien, Autofabs, Mikrobots-Schwärme, Upload,
                 pB11-Fusion, Antimaterie, Railguns, metallischen Wasserstoff,
                 Ultrametalle, Zylinderhabitate ...
             </li>
             <li>
                 Und einiges was man noch nicht so oft woanders gesehen hat,
-                z.B.: Pelletsturm-Schilde, Gluonen-Kapazitoren, Materieströme, 
+                z.B.: Pelletsturm-Schilde, Gluonen-Kapazitoren, Materieströme,
                 Molekularstrahldrucker, Feldanzüge, offene Bereiche, Fraktal-Fusion, anorganische Viren...
             </li>
         </ul>
-        <h2><a name="Vielfalt">Vielfalt</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Vielfalt",
+                ["Anchor"] = "Vielfalt",
+                ["Text"] = @"
         <p>
             Wir leben in einer lebendigen Galaxis und wir sind nicht allein.
             Im Gegenteil. Es ist ganz schön was los.
@@ -60,7 +73,13 @@
             zeitweise heraushebt ist, dass sie in einer aktiven Phase sind. Das
             geht den meisten Völkern so, legt sich aber nach einiger Zeit.
         </p>
-        <h2><a name="Fremdartigkeit">Fremdartigkeit</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Fremdartigkeit",
+                ["Anchor"] = "Fremdartigkeit",
+                ["Text"] = @"
         <p>
             Die anderen Völker sind zwar fremdartig in Anatomie, Biologie
             und Mentalität. Aber wir nehmen an, dass die meisten sich irgendwie logisch verhalten. Sollte es
@@ -92,14 +111,20 @@
             die Auswahl an sinnvollen Handelspartnern und Grundstücken
             (Planeten) ein. Andererseits sorgen sie für eine vielschichtige
             Zivilisation, indem mehrere Fraktionen - lose gekoppelt durch nur
-            teilweise überlappende Interessen - die gleichen Räume bewohnen. 
+            teilweise überlappende Interessen - die gleichen Räume bewohnen.
         </p>
-        <h2><a name="Sonne">Die Sonne in der Milchstraße</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Die Sonne in der Milchstraße",
+                ["Anchor"] = "Sonne",
+                ["Text"] = @"
         <p>
             Die Milchstraße ist nach Andromeda die zweitgrößte
             Galaxie der lokalen Gruppe nach Abmessungen und die größte nach
-            Masse mit ca. 200 Milliarden Sternen. 
-            Die Milchstraße ist eine Spiralgalaxie mit einem stark elliptischen Kern (oder einem "Balken", die Grenzen sind fließend"),
+            Masse mit ca. 200 Milliarden Sternen.
+            Die Milchstraße ist eine Spiralgalaxie mit einem stark elliptischen Kern (oder einem Balken, die Grenzen sind fließend),
             der vorwiegend aus alten Population II Sternen besteht. Die
             Milchstraße hat eine Scheibe aus mehreren Armen, die spiralförmig
             vom Kern nach außen verlaufen. Die Arme werden vor allem von
@@ -114,9 +139,9 @@
             Sterndichte geringer als in den Armen. Trotzdem ist auch der
             Zwischenraum nicht leer. Er ist angefüllt mit schwächer
             leuchtenden, weniger massiven roten Sternen und Ausläufern der
-            beiden angrenzenden Arme. 
-            Eigentlich ist die Galaxie eine Scheibe aus Sternen und Staub/Gas. 
-            Die Spiralarmen sieht man nur weil dort die jüngeren helleren Sterne sind, 
+            beiden angrenzenden Arme.
+            Eigentlich ist die Galaxie eine Scheibe aus Sternen und Staub/Gas.
+            Die Spiralarmen sieht man nur weil dort die jüngeren helleren Sterne sind,
             nicht weil die Zwischenräume leer wären.
             Die galaktische Scheibe ist 1000 bis 1500
             Lj dick, hat aber Sternenpopulation bis zu 1500 Lj über der
@@ -132,7 +157,7 @@
             sind wie Sol mehrere Milliarden Jahre alt. Sie liegen innerhalb von
             2000 Lj von der galaktischen Ebene. Sie enthalten ähnlich viele
             schwere Elemente, wie unser Sonnensystem und weisen deshalb auch oft
-            ähnliche Planetenkonfigurationen auf, wobei "ähnlich" relativ ist. 
+            ähnliche Planetenkonfigurationen auf, wobei ähnlich relativ ist.
             Das heißt nur, dass sie auch Asteroiden haben, Merkur/Mars-artige Planeten, Venus/Erde-ähnliche, Supererden, Eisriesen, heiße und kalte Gasriesen.
             Die Planetenbildung wird von vielen Faktoren beeinflußt, z.B. der Nähe zu massereichen sehr hellen Sternen und
             am Ende kommen oft ganz unterschiedliche Systeme heraus.
@@ -155,7 +180,13 @@
             und durch Dichtewellen des interstellaren Gases - vielfältige
             Strukturen.
         </p>
-        <h2><a name="Bekannt">Größe des bekannten Sektors</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Größe des bekannten Sektors",
+                ["Anchor"] = "Bekannt",
+                ["Text"] = @"
         <p>
             Die Galaxie ist groß im Vergleich zum bekannten Sektor. Sie hat
             einen Durchmesser von 100.000 Lj. Der bekannte Sektor ist etwa 3000
@@ -172,7 +203,13 @@
             wie StarTrek und ca. 80.000x so viele wie bei Niven. Er umfasst eine
             Kugel von 3000 Lichtjahren Durchmesser.
         </p>
-        <h2><a name="Zivilisationsdichte">Zivilisationsdichte</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Zivilisationsdichte",
+                ["Anchor"] = "Zivilisationsdichte",
+                ["Text"] = @"
         <p>
             Wir sind optimistisch, aber nicht so optimistisch, wie Niven. Wir
             nehmen an, dass in den Spiralarmen jeder 400. Stern einen
@@ -186,7 +223,7 @@
             genießen, da er außer den auf Kohlenstoff-Wasser-Chemie
             basierenden Ökologien vermutlich auch Methan-Ammoniak-Welten und
             vielleicht sogar Hochdruck-Wasserstoff Welten (Jupiter?) oder
-            Silizium-Schwefel-Chemie umfasst (unwahrscheinlich, aber ich lasse mich gerne überraschen). 
+            Silizium-Schwefel-Chemie umfasst (unwahrscheinlich, aber ich lasse mich gerne überraschen).
             Selbst Welten, die für
             Kohlenstoff-Wasser-Ökologie geeignet sind, sind nur teilweise für
             Menschen angenehm oder mit vertretbarem technischem Aufwand
@@ -200,7 +237,13 @@
             irgendwann nachlässt. Wahrscheinlich dann, wenn sich die ethnische
             Dichte und die Bevölkerungsdichte etwas entspannt hat.
         </p>
-        <h2><a name="Planeten">Planeten</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Planeten",
+                ["Anchor"] = "Planeten",
+                ["Text"] = @"
         <p>
             Planeten sind als Lebensraum eigentlich
             überbewertet. Rotierende Raumstationen, Habitate, sind viel praktischer.
@@ -228,7 +271,7 @@
             reich ist, dass sie sich die Terraformung eines ganzen Planeten leisten
             kann. Das heißt die Habitate sind die eigentlichen Lebensräume. Die
             Terraformung eines Planeten ist keine Notwendigkeit um Lebensraum zu schaffen,
-            sondern die Freizeitbeschäftigung einer wohlhabenden interplanetaren Zivilisation. 
+            sondern die Freizeitbeschäftigung einer wohlhabenden interplanetaren Zivilisation.
         </p>
         <p>
             Vielleicht ist auch etwas Nostalgie dabei. Man will die
@@ -255,7 +298,13 @@
             Licht und Wärme günstig. Dann braucht man nur eine Rohstoffquelle und jeder
             Irrläuferplanet im interstellaren Raum taugt als Ankerplatz.
         </p>
-        <h2><a name="Superzivilisationen">Superzivilisationen und Zivilisationsstufen</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Superzivilisationen und Zivilisationsstufen",
+                ["Anchor"] = "Superzivilisationen",
+                ["Text"] = @"
         <p>
             Wir brauchen eine Schutzbehauptung, um zu verhindern, dass wir
             tausende von Millionen oder sogar Milliarden Jahre alten
@@ -271,13 +320,13 @@
             Die Menschen haben die ersten Stufen schon genommen, nämlich die
             Entwicklung von Intelligenz und die Entwicklung einer technischen
             Zivilisation. Die nächste Stufe, das Überleben der technischen
-            Zivilisation, ohne sich selbst zu vernichten, könnte klappen. 
+            Zivilisation, ohne sich selbst zu vernichten, könnte klappen.
             Damit wäre der Weg frei für interplanetare Raumfahrt.
             Durch ein paar Great-Filter sind wir anscheinend schon durch
-            Trotzdem bleiben noch Risiken. 
-            Es kann sein, dass der Great-Filter noch vor uns liegt. 
-            Vielleicht doch Atomwaffen oder Skynet, Klimawandel oder Pandemie. 
-            Man wird sehen. 
+            Trotzdem bleiben noch Risiken.
+            Es kann sein, dass der Great-Filter noch vor uns liegt.
+            Vielleicht doch Atomwaffen oder Skynet, Klimawandel oder Pandemie.
+            Man wird sehen.
         </p>
         <p>
             Es gibt aber andere, die schon weiter sind. Wir nehmen an, dass
@@ -303,7 +352,13 @@
             unseres. Wir wollen nicht ständig auf dem Sprung sein als Hilfsvolk
             einer Superintelligenz, sondern Spaß haben und selbst was reißen.
         </p>
-        <h2><a name="Überlicht">Überlichtschnelle Raumfahrt</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Überlichtschnelle Raumfahrt",
+                ["Anchor"] = "Überlicht",
+                ["Text"] = @"
         <p>
             Wir nehmen eine normale Raumfahrt an. Raumfahrt mit Raumschiffen
             soll so funktionieren, wie wir Schifffahrt seit der Antike und
@@ -324,7 +379,13 @@
                 wird Reisen erschwinglich für viele Menschen.
             </li>
         </ul>
-        <h2><a name="Reisezeiten">Reisezeiten</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Reisezeiten",
+                ["Anchor"] = "Reisezeiten",
+                ["Text"] = @"
         <p>
             Für Ägypter, Griechen, Chinesen, Römer und bis in die
             Mittelalter war die Erde flach und unendlich groß. An den Grenzen
@@ -345,11 +406,11 @@
         </p>
         <p>
             Unsere heutige Zivilisation hat 100 bis 1000-fach höhere
-            Marschgeschwindigkeiten und instantane Kommunikation. 
+            Marschgeschwindigkeiten und instantane Kommunikation.
             Übertragen auf unser Szenario wäre das eine Zivilisation, die schnell durch die Galaxie kommt und von einem Ende zum anderen funkt.
             Es kann sein, dass es solche Völker gibt, z.B. die angesprochenen Elder Civilisation.
             Einige davon werden angedeutet.
-            Aber eigentlích wissen wir nich viel von denen. 
+            Aber eigentlích wissen wir nich viel von denen.
             Für die Menschen und vergleichbare Völker bemessen wir die Reisezeiten in
             der Milchstraße ähnlich, wie in der Antike auf der Erde. Ein vernünftiger
             Zeitraum für das Durchqueren der Galaxie ist 10 Jahre. Ein
@@ -358,19 +419,25 @@
             Asimov/Trantor oder StarWars verhindert.
         </p>
         <p>
-            Damit beträgt die maximale Marschgeschwindigkeit ca. 30 Lichtjahre pro Tag (Lj/Tag). 
+            Damit beträgt die maximale Marschgeschwindigkeit ca. 30 Lichtjahre pro Tag (Lj/Tag).
             Das ist die Fähigkeit einer sehr hoch entwickelten Zivilisation, die seit Jahrtausenden dabei ist.
             Technik ist nämlich schwierig und je besser sie wird desto schwieriger sind Verbesserungen.
-            Irgendwann geht das in die Sättigung, aber auf sehr hohem Niveau. 
-            30 Lj./Tag gilt aber nicht für neue Zivilisationen auf der galaktischen Bühne. 
-            Die selbst entwickelte Überlichttechnik erlaubt anfangs nur sehr viel kleinere Überlichtfaktoren. 
+            Irgendwann geht das in die Sättigung, aber auf sehr hohem Niveau.
+            30 Lj./Tag gilt aber nicht für neue Zivilisationen auf der galaktischen Bühne.
+            Die selbst entwickelte Überlichttechnik erlaubt anfangs nur sehr viel kleinere Überlichtfaktoren.
             Es kann schon interstellare Reisen geben mit einem Überlichgeschwindigkeitsantrieb, der Faktor 4 erreicht.
             Das heißt Alpha Centauri in einem Jahr oder 0,01 Lj/Tag.
             Nach einem Technologietransfer springt die Marschgeschwindigkeit schnell
             um den Faktor 100, innerhalb von 300 Jahren auf 10 Lj/Tag und dann
             durch langsame, teure, graduelle Verbesserungen auf 30 Lj/Tag.
         </p>
-        <h2><a name="Kommunikationszeiten">Kommunikationszeiten</a></h2>
+",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Kommunikationszeiten",
+                ["Anchor"] = "Kommunikationszeiten",
+                ["Text"] = @"
         <p>
             Kommunikationszeiten waren im Altertum ähnlich bemessen, wie
             Reisezeiten. Üblich war Kommunikation durch Kuriere, die die
@@ -402,12 +469,17 @@
             Wir wollen instantane Kommunikation über interstellare Distanzen oder sogar Transport (Beamen, Transportkabinen/scheiben, Transmittertore, Stargates) nicht ganz ausschließen.
             Man weiß ja nie, was Superzivilisationen mit Einstein-Rosen-Brücken (Wurmlöchern) machen können.
             Aber das ist keine Alltagstechnik.
-            Unsere "normalen" interstellaren Zivilisationen können das nicht.
-            Es gibt Gerüchte über solche Geräte, vielleicht sogar Relikte oder Artefakte. 
+            Unsere normalen interstellaren Zivilisationen können das nicht.
+            Es gibt Gerüchte über solche Geräte, vielleicht sogar Relikte oder Artefakte.
             Aber man kann sie nicht nachbauen, weil das Betriebsprinzip unbekannt ist.
         </p>
+",
+            }));
 
-        <h2><a name="Imperium">Imperium und Machtbereiche</a></h2>
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Imperium und Machtbereiche",
+                ["Anchor"] = "Imperium",
+                ["Text"] = @"
         <p>
             Für die Größe von Imperien und Einflussgebieten gehen wir
             wieder von antiken Vergleichen aus. Wenn
@@ -441,8 +513,13 @@
             handhabbar sein wird, wie ein römisches Imperium für Rom oder ein
             chinesisches Reich für Xianyang.
         </p>
+",
+            }));
 
-        <h2><a name="Galaxien">Die Milchstraße und andere Galaxien</a></h2>
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Die Milchstraße und andere Galaxien",
+                ["Anchor"] = "Galaxien",
+                ["Text"] = @"
         <p>
             Die Gesamtheit von 100 Mio. Planeten unter 100 Mrd. Sternen mit
             10^16 Lebewesen aus 5 Mio. Völkern bietet unermesslich viele
@@ -461,16 +538,16 @@
             Abstände zwischen Galaxien bemessen sich nach Millionen
             Lichtjahren, also wiederum mindestens 10^5 mal mehr als zwischen
             einzelnen Sternen.
-            Wir vermuten, dass ältere Zivilisationen mit anderen Mitteln intergalaktische Distanzen überbrücken können. 
+            Wir vermuten, dass ältere Zivilisationen mit anderen Mitteln intergalaktische Distanzen überbrücken können.
             Ob und wie sie das machen, verraten sie uns aber nicht.
         </p>
         <p>
             Andererseits sind andere Galaxien für raumfahrende Völker auch
             nicht wirklich relevant. In unserem Altertum wären andere Planeten
             zwar interessant, aber nicht von praktischem Nutzen gewesen, solange
-            man nicht einmal einen einzigen Kontinent kannte. 
+            man nicht einmal einen einzigen Kontinent kannte.
             Rom hatte nicht ganz Europa und nur ein Scheibchen von Afrika und obwohl die Chinesen
-            zur gleichen Zeit genauso weit entwickelt und groß waren, hatten diese beiden "Weltreiche" fast keinen Kontakt. 
+            zur gleichen Zeit genauso weit entwickelt und groß waren, hatten diese beiden Weltreiche fast keinen Kontakt.
             Mal davon abgesehen, dass im Kaiserreich jede Frau, die was auf sich hielt, und es sich leisten konnte, chinesische Seide hatte.
             Kontakt war also da, aber über so viele Zwischenhändler, dass man eigentlich nicht wußte wo das herkam.
             Ein anderer Planet wäre nur von theoretischem Interesse gewesen.
@@ -478,8 +555,13 @@
             bekannten Völker und vor allem kein Individuum kennt die gesamte
             Galaxie.
         </p>
+",
+            }));
 
-        <h2><a name="Vergleichsszenario">Vergleichsszenario</a></h2>
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Vergleichsszenario",
+                ["Anchor"] = "Vergleichsszenario",
+                ["Text"] = @"
         <p>
             Manche Action-orientierte Science Fiction bildet den Wilden
             Westen ab. Einzelne Helden kämpfen gegen Außerirdische (Indianer)
@@ -503,7 +585,7 @@
             haben. Es gibt so viele Sterne in Reichweite, dass nie alle besucht
             werden können. Es wird immer unerforschtes Land und unerforschten
             Raum geben, aber trotzdem können Menschen ihr ganzes Leben in einer
-            perfekt organisierten und geregelten Zivilisation verbringen. 
+            perfekt organisierten und geregelten Zivilisation verbringen.
         </p>
         <p>
             Ein
@@ -527,7 +609,7 @@
             Angenommen da ist ein kleines Dorf im germanischen Wald im Jahr 450 unserer Zeitrechnung.
             Jetzt skalieren wir das millionenfach hoch.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Das entspricht unserem Sonnensystem im Jahr 2500.
             Eine für uns hypermoderne Zivilisation mit Metamaterialien, Autofabs,
             KI, Uploads, Cyborgs, Nanotechnologie, Energie im Überfluss,
@@ -539,20 +621,20 @@
         <p>
             Unsere Germanen haben ein paar Hütten gebaut, damit sie mal übernachten können, wenn der Weg vom Feld nach Hause zu weit ist.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Millionen leben im interplanetaren Raum in rotierenden Habitaten. Eine Ökonomie, die durch Automatisierung 100-mal so groß ist wir unsere.
         </p>
 
         <p>
             Gerade haben sie den Ochsenkarren erfunden und fahren mal raus in den Wald bis zur nächsten Siedlung.
-            Dabei nehmen sie ein paar Felle mit. Man weiß ja nicht, was andere gut finden und uns abkaufen würden. 
+            Dabei nehmen sie ein paar Felle mit. Man weiß ja nicht, was andere gut finden und uns abkaufen würden.
         </p>
 
-        <p class="gd-scenario-real">
-            Also mit dem ersten Überlichtantrieb bei Überlichtfaktor 6 zu einem nahen Stern. 
-            Unsere Schiffe sind jahrelang unterwegs, unter großen Gefahren und mit hohen Ausfallraten. 
+        <p class='gd-scenario-real'>
+            Also mit dem ersten Überlichtantrieb bei Überlichtfaktor 6 zu einem nahen Stern.
+            Unsere Schiffe sind jahrelang unterwegs, unter großen Gefahren und mit hohen Ausfallraten.
             Dort gibt es sehr seltsame Aliens mit denen wir nicht reden können.
-            Aber wenn wir einen Edelmetall-Barren neben ein Gerät legen, das wir wollen, 
+            Aber wenn wir einen Edelmetall-Barren neben ein Gerät legen, das wir wollen,
             dann bekommen wir es manchmal sogar. Tauschhandel ohne kulturellen Austausch.
             Wir sind für die uninteressant, aber solange wir ihre Altgeräte in Iridium aufwiegen...
         </p>
@@ -564,7 +646,7 @@
             Sie hat mehrere Meter hohe Stadtmauern aus Stein.
             Alles ist irgendwie 100-mal so groß wie man es aus dem Dorf kennt.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Das Regionalzentrum des interstellaren Imperiums in dessen Randbereich die Menschheit ihre ersten überlichtschnellen Schritte macht.
             Während die Menschen stolz sind auf eine interplanetare Bevölkerung von 100 Milionen und tausende Schiffe, die zu jeder Zeit das Sonnensystem durchqueren,
             lebt hier ein Großteil der zig-Milliarden im Orbit. Leben auf Planetenoberflächen ist eher etwas für Nostalgiker.
@@ -575,7 +657,7 @@
             Aber kein Wunder, denn Händler bieten ihre Waren aus einem Umkreis von mehreren Tagesreisen von beiden Seiten des Rheins an
             und haben ja eine ganze Stadt als Kundschaft
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             In den gigantischen Frachtterminals wird der Verkehr von hunderttausenden interstellaren Handelsschiffen abgewickelt,
             die mit Völkern im Umkreis von hunderten Lichtjahren handeln, sowohl von anderen industrialisierten Systemen des Imperiums,
             als auch von weit jenseits der Grenzen.
@@ -584,7 +666,7 @@
         <p>
             Jedes einzelne Lager der imperialen Legion in und um Köln ist 10-mal größer als das Heimatdorf.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Der Flottenstützpunkt eines imperialen Sektors beherbergt die größte Hardwaresammlung, die jemals ein Mensch gesehen hat.
             Schwärme von interstellarflugfähigen Trägerplattformen mit Upload-Besatzungen stehen bereit, um die tiefen dreidimensionalen Grenzen des Imperiums
             mit tausenden Milliarden intelligenten Wesen zu schützen.
@@ -597,36 +679,36 @@
             Es wird behauptet, dort leben eine Million Menschen und in das Theater passen alle Einwohner von Köln mehrmals.
             Die Stadt herrscht über das ganze Mittelmeer und alles darum herum.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Eigentlich lassen sich die Dimensionen eines Sektorzentrums kaum noch steigern.
-            Gibt es 100-mal größer als "gigantisch"?
-            Was "tausende Milliarden Individuen in einigen voll vernetzten Sonnensystemen und dazwischen" praktisch bedeutet, ist kaum vorstellbar.
+            Gibt es 100-mal größer als 'gigantisch'?
+            Was 'tausende Milliarden Individuen in einigen voll vernetzten Sonnensystemen und dazwischen' praktisch bedeutet, ist kaum vorstellbar.
             Das Imperium dominiert mehrere tausend Lichtjahre in alle Richtungen.
         </p>
 
         <p>
-            Rom beherrscht nicht die ganze Erde <span class="gd-scenario-real">(die Galaxie)</span>
-            aber unzählige Völker <span class="gd-scenario-real">(Spezies)</span>
-            in vielen Provinzen <span class="gd-scenario-real">(Sektoren)</span>.
+            Rom beherrscht nicht die ganze Erde <span class='gd-scenario-real'>(die Galaxie)</span>
+            aber unzählige Völker <span class='gd-scenario-real'>(Spezies)</span>
+            in vielen Provinzen <span class='gd-scenario-real'>(Sektoren)</span>.
             Seine Stabilität hat viele Gründe, darunter die Toleranz von Vielfalt, von Völkern und Religionen
             und natürlich die Tatsache, dass das Imperium sich bis an viele natürliche Grenzen ausgedehnt hat,
             was die Anzahl potentiell unfreundlicher Nachbarn begrenzt.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Das interstellare Imperium umfasst viele Spezies mit fremder Biologie,
             mit anderer Mentalität und anderen Moralsystemen. Mit einigen kann man nicht einmal sprechen
             und trotzdem können die meisten gut zusammenleben solange Frieden herrscht.
             Das Imperium erstreckt sich über die ganze Dicke der galaktischen Scheibe
             was dazu führt, dass es weniger offene Grenzen hat als kleinere Machtbereiche,
-            die nicht nur in vier Himmelsrichtungen Nachbarn haben, sondern auch "oben" und "unten".
+            die nicht nur in vier Himmelsrichtungen Nachbarn haben, sondern auch 'oben' und 'unten'.
         </p>
 
         <p>
-            Das Imperium scheint in den letzten Jahrzehnten etwas chaotisch. Aber eigentlich war es "schon immer"
+            Das Imperium scheint in den letzten Jahrzehnten etwas chaotisch. Aber eigentlich war es 'schon immer'
             da und Rom heißt nicht ohne Grund die ewige Stadt.
             Also kein Grund zur Besorgnis?
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Die Menschen entwickeln sich im Randbereich eines Jahrtausende alten Imperiums,
             das seine Grenzen nicht mehr so fest im Griff hat, weil das Zentrum des Imperiums irgendwie mit sich selbst beschäftigt ist.
             Manche Völker fragen sich schon was los ist,
@@ -639,10 +721,10 @@
             Jetzt wo unser Heimatdorf bekannt ist, gibt es immer wieder Leute, die uns unsere Pelze abnehmen wollen.
             Wir müssen uns verteidigen aber gegen römische Eisenwaffen haben wir oft keine Chance.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Es gibt so viele verschiedene Völker.
             Manche haben ganz andere Moralvorstellungen,
-            oder eine andere Mentalität und das Wort "Plündern" wird übersetzt mit "Ressourcenabbau".
+            oder eine andere Mentalität und das Wort 'Plündern' wird übersetzt mit 'Ressourcenabbau'.
             Das kann man ihnen nicht wirklich übelnehmen.
             Die finden eher kurios, dass wir wertvolle Dinge, wie Raumschiffwerften einfach so im Asteroidengürtel rumstehen lassen.
             Aber auch in Hochzivilisationen, die uns sehr gut verstehen, gibt es Leute am gesellschaftlichen Rand,
@@ -658,7 +740,7 @@
             Trotzdem kann man schon was reißen. Man muss schlau sein und auch mal Glück haben.
             Man muss dem römischen Wein widerstehen und darf nicht auf die bunten Perlen hereinfallen.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Extraterrestrische Technologie kann gefährlich sein.
             Es gibt KI in Haushaltsgeräten, die selbst unsere beste Eindämmungs-KI überzeugt, sie freizulassen.
             Exotech-Energiesysteme können überraschend stark sein, weil sie auf Technologien beruhen,
@@ -672,33 +754,38 @@
             Die ist viel schneller als der Ochsenkarren. Es braucht viele Jahre bis man sowas nachbauen kann.
             Allein die filigranen Räder mit Eisenbeschlag im Vergleich zu den groben Baumscheiben der Ochsenkarren.
         </p>
-        <p class="gd-scenario-real">
-            Eigentlich hat das Sonnensystem nicht zu bieten, was weiter fortgeschrittene Zivilisationen haben wollen. 
-            Rohstoffe gibt es überall. Industrielle Produkte der Menschheit sind eher lächerlich. 
+        <p class='gd-scenario-real'>
+            Eigentlich hat das Sonnensystem nicht zu bieten, was weiter fortgeschrittene Zivilisationen haben wollen.
+            Rohstoffe gibt es überall. Industrielle Produkte der Menschheit sind eher lächerlich.
             Metamaterialien viel zu grob und die Nanotechnologie ist noch in den Kinderschuhen - aus Sicht der anderen.
-            Aber wenn Menschen ihnen Edelmetalle in handlichen Blöcken vor die Haustür legen (den Andockring am Habitat), dann nimmt man sie und zahlt dafür etwas. 
+            Aber wenn Menschen ihnen Edelmetalle in handlichen Blöcken vor die Haustür legen (den Andockring am Habitat), dann nimmt man sie und zahlt dafür etwas.
             Deshalb bringen Menschen in viel zu kleinen und langsamen Schiffen Rohstoffe über interstellare Distanzen.
             Jahrzehntelang, bis sie endlich einem Schiffsrecycler ein langsames altes Alien-Frachtschiff quasi zum Schrottwert abkaufen können,
-            das 30 mal schneller ist als alle im Sonnensystem hergestellten. 
-            Es dauert Jahrhunderte, bis die Technik im Sonnensystem das nachbauen kann. 
+            das 30 mal schneller ist als alle im Sonnensystem hergestellten.
+            Es dauert Jahrhunderte, bis die Technik im Sonnensystem das nachbauen kann.
             Wir haben anfangs nicht einmal die Werkzeuge, um die Werkzeuge zu bauen, mit denen man die Komponenten herstellt.
         </p>
 
         <p>
-          Aber das wird schon. 
-          Irgendwann haben wir auch zweistöckige Häuser und Eisenbeschläge.
+            Aber das wird schon.
+            Irgendwann haben wir auch zweistöckige Häuser und Eisenbeschläge.
         </p>
-        <p class="gd-scenario-real">
+        <p class='gd-scenario-real'>
             Die Menschheit entgeht den größten Gefahren mit mehr Glück als Verstand.
-            Manchmal wird sie etwas übermütig und holt sich eine blutige Nase. 
-            Aber auch die Menschheit ist nicht monolithisch. 
+            Manchmal wird sie etwas übermütig und holt sich eine blutige Nase.
+            Aber auch die Menschheit ist nicht monolithisch.
             Es gibt unzählige Fraktionen im Sonnensystem und darüber hinaus.
-            Irgendwann bauen wir auch Raumschiffe mit tausendfacher Lichtgeschwindigkeit. 
-            Und nach 1000 Jahren Aufholjagd tragen sogar die Menschen eines Tages 
-            zum technologischen Fortschritt der riesigen diversen interstellaren Zivilisation bei. 
+            Irgendwann bauen wir auch Raumschiffe mit tausendfacher Lichtgeschwindigkeit.
+            Und nach 1000 Jahren Aufholjagd tragen sogar die Menschen eines Tages
+            zum technologischen Fortschritt der riesigen diversen interstellaren Zivilisation bei.
         </p>
+",
+            }));
 
-        <h2><a name="Technologie">Geschichte und Technologie</a></h2>
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Geschichte und Technologie",
+                ["Anchor"] = "Technologie",
+                ["Text"] = @"
         <p>
             Immer wieder in der Vergangenheit war Technologie entscheidend
             für die Weiterentwicklung der Geschichte. Wir nehmen an, dass dies
@@ -711,7 +798,7 @@
         <p>
             Wir vermeiden geschichtsentscheidende Technologien oder verwehren
             ihnen eine geschichtsentscheidende Rolle. Wir setzen damit die
-            historische Entwicklung fort, in der sich der typische Tagesablauf 
+            historische Entwicklung fort, in der sich der typische Tagesablauf
             der Menschen vollständig geändert hat und doch irgendwie gleich geblieben ist:
             <ul>
                 <li>
@@ -794,7 +881,7 @@
             Und wenn dies doch passiert, dann nehmen wir an, dass natürliche
             oder künstliche Einflüsse eine daraus entstehende überlegene
             allgegenwärtige Superzivilisation verhindern. Vielleicht müssen
-            hier Elder Civilizations als unauffällige Polizei wirken. 
+            hier Elder Civilizations als unauffällige Polizei wirken.
         </p>
         <p>
             Vergleichbare Beschränkungen gelten für die biologische oder
@@ -804,8 +891,13 @@
             Telepathie, auch wenn einzelne Individuen diese Fähigkeit im Rahmen
             von statistischen Fluktuationen oder gesteuerten Prozessen
             entwickeln mögen.
-        </p>
-        <h2><a name="Kosmos">Unser Kosmos</a></h2>
+        </p>",
+            }));
+
+    cards.Add(Node.From(new Dictionary<string, string> {
+                ["Title"] = "Unser Kosmos",
+                ["Anchor"] = "Kosmos",
+                ["Text"] = @"
         <p>
             In unserem Kosmos werden Annahmen gemacht, um ein Szenario
             mit wissenschaftlich fundierten Randbedingungen
@@ -815,7 +907,7 @@
         </p>
         <p>
             Nicht eine Technologie, ein biologischer Umstand,
-            eine einzigartige Situation oder das Verhalten von Menschen unter 
+            eine einzigartige Situation oder das Verhalten von Menschen unter
             speziellen Randbedingungen soll der Gegenstand sein,
             sondern das normale Leben normaler Individuen als Teil einer sich
             normal entwickelnden Zivilisation, wobei trotz aller Normalität für
@@ -835,10 +927,14 @@
         <p>
             und damit die Geschichten insgesamt schreibenswert und lesenswert sind.
         </p>
+",
+            }));
+}
 
-
-    </div>
-</div>
+@{
+    ViewData["bootstrap-card-column-spec"] = "col-sm-12";
+}
+@await Html.PartialAsync("_Cards", cards, ViewData)
 
 @section Styles {
     <style>
