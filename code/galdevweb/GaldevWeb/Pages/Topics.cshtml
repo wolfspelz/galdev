@@ -4,7 +4,7 @@
     ViewData["Active"] = "Topics";
 }
 
-<div class="row my-3">
+<div class="row mt-3">
     <div class="col-12">
         <h1>
             @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
@@ -30,41 +30,5 @@
     }
 }
 
-<script src="~/lib/masonry-4.2.2.min.js" async></script>
-<script src="~/js/masonryAutoRelayout.js" async></script>
-<div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
-    @foreach (var card in cards) {
-        <div class="col-sm-6 col-lg-4 my-2">
-            <div class="card">
-                @if (@card["ImgSrc"].String != "") {
-                    @if (@card["Link"].String != "") {
-                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
-                    } else {
-                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
-                    }
-                    <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-                <div class="card-body">
-                    @if (@card["Title"].String != "") {
-                        <h5 class="card-title">
-                            @if (@card["Anchor"].String != "") {
-                                <a name="@card["Anchor"]">@card["Title"]</a>
-                            } else {
-                                @card["Title"]
-                            }
-                        </h5>
-                    }
-                    <p>@Html.Raw(card["Text"])</p>
-                </div>
-            </div>
-        </div>
-    }
-</div>
+@await Html.PartialAsync("_Cards", cards, ViewData)
+

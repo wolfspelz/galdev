@@ -19,9 +19,6 @@
     }
 }
 
-<script src="~/lib/masonry-4.2.2.min.js" async></script>
-<script src="~/js/masonryAutoRelayout.js" async></script>
-
 @if (Model.Post != null) {
 
     <div class="row mt-4">
@@ -91,40 +88,11 @@
                 //}
 
             }
-            <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
-                @{
-                    var cardsCnt = 0;
-                }
-                @foreach (var card in cards) {
-                    cardsCnt++;
-                    <div class="col-sm-12 my-2">
-                        <div class="card">
-                            @if (@card["ImgSrc"].String != "") {
-                                @if (@card["Link"].String != "") {
-                                    <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
-                                } else {
-                                    <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
-                                }
-                                <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                            <div class="card-body">
-                                @if (@card["Title"].String != "") {
-                                    <h5 class="card-title">@card["Title"]</h5>
-                                }
-                                <p>@Html.Raw(card["Text"])</p>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
+
+            @{
+                ViewData["bootstrap-card-column-spec"] = "col-sm-12";
+            }
+            @await Html.PartialAsync("_Cards", cards, ViewData)
 
         </div>
     </div>
@@ -150,44 +118,8 @@
         </div>
     </div>
 
-    <div class="row " data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
-        @foreach (var card in cards) {
-            <div class="col-sm-6 col-lg-4 my-2">
-                <div class="card">
-                    @if (@card["ImgSrc"].String != "") {
-                        @if (@card["Link"].String != "") {
-                            <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
-                        } else {
-                            <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
-                        }
-                        <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
-                            <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    <div class="card-body">
-                        @if (@card["Title"].String != "") {
-                            @if (@card["TitleHasLink"].Bool) {
-                                <h5 class="card-title"><a href="@card["Link"].String">@card["Title"]</a></h5>
-                            } else {
-                                <h5 class="card-title">@card["Title"]</h5>
-                            }
-                        }
-                        @if (@card["TextHasLink"].Bool) {
-                            <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
-                        } else {
-                            <p>@Html.Raw(card["Text"])</p>
-                        }
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+    @await Html.PartialAsync("_Cards", cards)
+
 }
 
 @await Html.PartialAsync("_MarkdownConverterPartial")

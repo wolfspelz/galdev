@@ -158,40 +158,11 @@
                 }
 
             }
-            <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
-                @{
-                    var cardsCnt = 0;
-                }
-                @foreach (var card in cards) {
-                    cardsCnt++;
-                    <div class="col-sm-12 my-2">
-                        <div class="card">
-                            @if (@card["ImgSrc"].String != "") {
-                                @if (@card["Link"].String != "") {
-                                    <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)"></a>
-                                } else {
-                                    <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(cardsCnt)">
-                                }
-                                <div id="iCard@(cardsCnt)" class="modal fade" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <img src="@card["ImgSrc"]" alt="@card["ImgAlt"]" class="img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                            <div class="card-body">
-                                @if (@card["Title"].String != "") {
-                                    <h5 class="card-title">@card["Title"]</h5>
-                                }
-                                <p>@Html.Raw(card["Text"])</p>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
+
+            @{
+                ViewData["bootstrap-card-column-spec"] = "col-sm-12";
+            }
+            @await Html.PartialAsync("_Cards", cards, ViewData)
 
         </div>
 
