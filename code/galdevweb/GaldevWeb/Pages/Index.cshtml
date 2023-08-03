@@ -79,6 +79,8 @@
 
     {
         cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/images/Index/woman-cockpit.jpg",
+                    ["ImgAlt"] = "Pilot",
                     ["Title"] = Model.I18n.String(path: "Box/Interplanetary/Title", i18n: new StringGeneratorI18n {
                         ["de-DE"] = () => "Interplanetar und interstellar",
                         ["en-US"] = () => "Interplanetary and Interstellar"
@@ -107,7 +109,7 @@
                         ["de-DE"] = () => "Alle Themen",
                         ["en-US"] = () => "All Topics",
                     }),
-                    ["Text"] = string.Join(" ", Model.Series.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Series.GetTitleOfTopic(topic) + "</a>")),
+                    ["Text"] = string.Join(" - ", Model.Series.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Series.GetTitleOfTopic(topic) + "</a>")),
                 }));
     }
 
