@@ -91,13 +91,25 @@
     }
 
     {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/Community/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Community",
+                        ["en-US"] = () => "Community",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Community/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "<a href='https://discord.gg/wFXZvGqMSX'>Discord</a>",
+                    }),
+                }));
+    }
+
+    {
         var topic = "adventure";
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                Model.Series.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
-                )
+                        Model.Series.GetEntriesOfTopic(topic)
+                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                        )
                 }));
     }
 
@@ -134,8 +146,8 @@
                         ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
                         ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
                     })
-                + "<br/><br/>"
-                + string.Join("<br/>", new[] {
+                        + "<br/><br/>"
+                        + string.Join("<br/>", new[] {
 "PalladianLeague",
 "LunarRevolt",
 "NeosozTerror",
@@ -146,12 +158,12 @@
 "AsteroidMining",
 "Gemini",
 "1000InSpace",
-                }
-                .Where(name => Model.Series.HasEntry(name))
-                .Select(name => {
-                    var entry = Model.Series.GetEntry(name);
-                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                })),
+                        }
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
                 }));
     }
 
@@ -236,9 +248,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                Model.Series.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
-                )
+                        Model.Series.GetEntriesOfTopic(topic)
+                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                        )
                 }));
     }
 
@@ -266,11 +278,11 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Turnaround",
 "Collisioncourse",
 }
-                .Where(name => Model.Series.HasEntry(name))
-                .Select(name => {
-                    var entry = Model.Series.GetEntry(name);
-                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                })),
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
                 }));
     }
 
@@ -295,11 +307,11 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Prophet",
 "ReshumanisCobol",
 }
-                .Where(name => Model.Series.HasEntry(name))
-                .Select(name => {
-                    var entry = Model.Series.GetEntry(name);
-                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                })),
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
                 }));
     }
 
@@ -313,8 +325,8 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
                         ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
                     })
-                + "<br/><br/>"
-                + string.Join("<br/>", new[] {
+                        + "<br/><br/>"
+                        + string.Join("<br/>", new[] {
 "NeuroImplant",
 "DoomsdayCocktail",
 "DeliveryBot",
@@ -322,12 +334,12 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Fusang",
 "Kartusche",
 "Drachenlegenden",
-                }
-                .Where(name => Model.Series.HasEntry(name))
-                .Select(name => {
-                    var entry = Model.Series.GetEntry(name);
-                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                })),
+                        }
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
                 }));
     }
 
@@ -377,11 +389,11 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "executivedecision",
 "kisor",
 }
-                .Where(name => Model.Series.HasEntry(name))
-                .Select(name => {
-                    var entry = Model.Series.GetEntry(name);
-                    return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                })),
+                        .Where(name => Model.Series.HasEntry(name))
+                        .Select(name => {
+                            var entry = Model.Series.GetEntry(name);
+                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        })),
                 }));
     }
 
