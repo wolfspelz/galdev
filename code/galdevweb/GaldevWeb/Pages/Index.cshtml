@@ -91,18 +91,6 @@
     }
 
     {
-        cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.I18n.String(path: "Box/Community/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Community",
-                        ["en-US"] = () => "Community",
-                    }),
-                    ["Text"] = Model.I18n.String(path: "Box/Community/Text", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "<a href='https://discord.gg/wFXZvGqMSX'>Discord</a>",
-                    }),
-                }));
-    }
-
-    {
         var topic = "adventure";
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
@@ -120,6 +108,19 @@
                         ["en-US"] = () => "All Topics",
                     }),
                     ["Text"] = string.Join(" ", Model.Series.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Series.GetTitleOfTopic(topic) + "</a>")),
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Link"] = "https://discord.gg/wFXZvGqMSX",
+                    ["ImgSrc"] = "/images/Index/discord.png",
+                    ["ImgAlt"] = "Discord",
+                    ["TextHasLink"] = "true",
+                    ["Text"] = Model.I18n.String(path: "Box/Community/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Rede mit uns über die Geschichte der Zukunft",
+                        ["en-US"] = () => "Talk about the history of the future",
+                    }),
                 }));
     }
 
