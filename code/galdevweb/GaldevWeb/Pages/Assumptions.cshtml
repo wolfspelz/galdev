@@ -1,7 +1,22 @@
 ﻿@page
 @model AssumptionsModel
+@inject IUrlHelper UrlHelper
 @{
-    ViewData["Title"] = "Assumptions";
+    ViewData["Active"] = "Assumptions";
+
+    var title = "Annahmen für das Szenario von Galactic Developments";
+    var description = "Annahmen für das Szenario von Galactic Developments: Es gibt fremde Völker (aka. Aliens). Die haben nicht nur Noppen auf der Nase, sondern sind anders anders. Menschen sind nicht besser oder schlechter als andere Völker. Die meisten raumfahrenden Völker sind schon länger dabei als die Menschen. Technologisch sind die Menschen anfangs eher rückständig. Technik ist kompliziert, vor allem in der Zukunft. Menschen und andere Völker sind nicht homogen. Auch Alien-Völker sind so vielfältig wie die Menschheit. Nur ein Teil der Milchstraße ist bekannt, aber immerhin ein Teil. Hard Science Fiction: nur mögliche (oder nicht unmögliche) Wissenschaft. Ausnahme: Reisen (scheinbar) schneller als das Licht, erklärt mit einer - nicht auf den ersten Blick unwissenschaftlichen - Idee. Ansonsten gibt es: bewusste und unbewusste KI, Nano, Genmods, Cyborgs, Mechs, Implantate, IQ-Upgrades, Assoziationsbooster, VR, Metamaterialien, Autofabs, Mikrobots-Schwärme, Upload, pB11-Fusion, Antimaterie, Railguns, metallischen Wasserstoff, Zylinderhabitate... Und einiges, was man noch nicht so oft woanders gesehen hat, z.B.: Pelletsturm-Schilde, Gluonen-Kapazitoren, Materieströme, Ultrametalle, Molekularstrahldrucker, Feldanzüge, offene Bereiche, Fraktal-Fusion, anorganische Viren...";
+    var imageBaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}/images/Assumption/";
+
+    ViewData["Title"] = title;
+    ViewData["MetaDescription"] = description;
+    ViewData["MetaFacebookTitle"] = title;
+    ViewData["MetaFacebookDescription"] = description;
+    ViewData["MetaFacebookImage"] = imageBaseUrl + "old-ship.jpg";
+    ViewData["MetaFacebookImageAlt"] = "Old Ship in Hangar";
+    ViewData["MetaTwitterTitle"] = title;
+    ViewData["MetaTwitterDescription"] = description;
+    ViewData["MetaTwitterImage"] = imageBaseUrl + "old-ship.jpg";
 }
 
 <div class="row mt-3">
