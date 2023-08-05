@@ -10,6 +10,7 @@ namespace GaldevWeb
         public string UiCultureName;
         public ITextProvider I18n;
         public string Lang => GetLangFromCultureName(UiCultureName);
+        public LinkGenerator? Links;
         public CarouselModel Carousel = new();
 
         public GaldevPageModel(GaldevApp app, string textName)

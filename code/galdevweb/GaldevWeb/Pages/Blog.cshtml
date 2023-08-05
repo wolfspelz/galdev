@@ -1,6 +1,7 @@
 ﻿@page "{name?}"
 @model BlogModel
 @inject IUrlHelper UrlHelper
+@inject LinkGenerator Links
 @{
     ViewData["Active"] = "Blog";
 
@@ -67,7 +68,7 @@
                             ["de-DE"] = () => "Blog Posts",
                             ["en-US"] = () => "Blog Posts",
                         }),
-                        ["Text"] = "<ul>" + string.Join("", Model.Index.Where(p => p.Language == Model.Lang).Select(p => $"<li><a href='{Model.Links.GetPathByPage("/Blog", null, new { name = p.SeoTitle })}'>{p.Title}</a></li>")) + "</ul>",
+                        ["Text"] = "<ul>" + string.Join("", Model.Index.Where(p => p.Language == Model.Lang).Select(p => $"<li><a href='{Links.GetPathByPage("/Blog", null, new { name = p.SeoTitle })}'>{p.Title}</a></li>")) + "</ul>",
                     }));
                 }
 
@@ -105,7 +106,7 @@
         cards.Add(Node.From(new Dictionary<string, string> {
                         ["ImgSrc"] = $"{ImageBaseUrl}{post.Image}",
                         ["ImgAlt"] = post.Title,
-                        ["Link"] = Model.Links.GetPathByPage("/Blog", null, new { name = post.SeoTitle }) ?? "",
+                        ["Link"] = Links.GetPathByPage("/Blog", null, new { name = post.SeoTitle }) ?? "",
                         ["Title"] = post.Title,
                         ["Text"] = post.Summary,
                     }));

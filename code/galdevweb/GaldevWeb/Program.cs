@@ -28,7 +28,9 @@ namespace GaldevWeb
             });
 
             var myConfig = new GaldevConfig();
-            var myApp = new GaldevApp { Config = myConfig };
+            var myApp = new GaldevApp {
+                Config = myConfig,
+            };
             builder.Services.AddSingleton(myApp);
 
             var timeline = new TimelineIndex {

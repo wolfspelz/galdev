@@ -1,5 +1,6 @@
 ﻿@page
 @model IndexModel
+@inject LinkGenerator Links
 @{
     var title = Model.I18n.String(path: "Meta/Title", i18n: new StringGeneratorI18n {
                 ["de-DE"] = () => "Galactic Developments - Die Geschichte der Zukunft",
@@ -98,7 +99,7 @@
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                         Model.Series.GetEntriesOfTopic(topic)
-                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                        .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                         )
                 }));
     }
@@ -165,7 +166,7 @@
                         .Where(name => Model.Series.HasEntry(name))
                         .Select(name => {
                             var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -200,7 +201,7 @@
     }
 
     if (Model.UiCultureName == "de-DE") {
-        var link = Model.Links.GetPathByPage("/Assumptions", null, new { }) ?? "";
+        var link = Links.GetPathByPage("/Assumptions", null, new { }) ?? "";
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Link"] = link,
                     ["Title"] = "Annahmen",
@@ -239,7 +240,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
-                    ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Link"] = Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
                     ["Title"] = entry?.DisplayName ?? "",
                     ["TitleHasLink"] = "true",
                     ["Text"] = entry?.Summary ?? "",
@@ -252,7 +253,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                     ["Title"] = Model.Series.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                         Model.Series.GetEntriesOfTopic(topic)
-                        .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                        .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                         )
                 }));
     }
@@ -284,7 +285,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         .Where(name => Model.Series.HasEntry(name))
                         .Select(name => {
                             var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -313,7 +314,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         .Where(name => Model.Series.HasEntry(name))
                         .Select(name => {
                             var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -341,7 +342,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         .Where(name => Model.Series.HasEntry(name))
                         .Select(name => {
                             var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -395,7 +396,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         .Where(name => Model.Series.HasEntry(name))
                         .Select(name => {
                             var entry = Model.Series.GetEntry(name);
-                            return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -430,7 +431,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
-                    ["Link"] = Model.Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Link"] = Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
                     ["Title"] = entry?.DisplayName ?? "",
                     ["TitleHasLink"] = "true",
                     ["Text"] = entry?.Summary ?? "",

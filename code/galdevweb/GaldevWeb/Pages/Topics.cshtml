@@ -1,5 +1,6 @@
 ﻿@page
 @model TopicsModel
+@inject LinkGenerator Links
 @{
     ViewData["Active"] = "Topics";
 }
@@ -24,7 +25,7 @@
                     ["Anchor"] = topic,
                     ["Text"] = string.Join("<br/>",
                 Model.Series.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                 )
                 }));
     }

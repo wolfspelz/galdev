@@ -3,13 +3,11 @@
     public class IndexModel : GaldevPageModel
     {
         public TimelineIndex _timelines;
-        public LinkGenerator Links;
         public TimelineSeries Series = new();
 
-        public IndexModel(GaldevApp app, TimelineIndex timelines, LinkGenerator linkGenerator) : base(app, "Index")
+        public IndexModel(GaldevApp app, TimelineIndex timelines) : base(app, "Index")
         {
             _timelines = timelines;
-            Links = linkGenerator;
         }
 
         public void OnGet()

@@ -8,13 +8,11 @@ namespace GaldevWeb.Pages
         public TimelineEntryList List = new();
         public bool NotAvailable = false;
         public TimelineEntry? NextEntry = null;
-        public LinkGenerator Links;
         public TimelineSeries Series = new();
 
-        public TimelineModel(GaldevApp app, TimelineIndex timelines, LinkGenerator linkGenerator) : base(app, "Timeline")
+        public TimelineModel(GaldevApp app, TimelineIndex timelines) : base(app, "Timeline")
         {
             _timelines = timelines;
-            Links = linkGenerator;
         }
 
         public void OnGet(string name)

@@ -5,13 +5,9 @@
         public BlogIndex Index = new BlogIndex();
         public BlogPost? Post = null;
 
-        public LinkGenerator Links;
-
-        public BlogModel(GaldevApp app, LinkGenerator linkGenerator) : base(app, "Blog")
+        public BlogModel(GaldevApp app) : base(app, "Blog")
         {
             Index.Load();
-
-            Links = linkGenerator;
         }
 
         public void OnGet(string name)

@@ -1,6 +1,7 @@
 ﻿@page "{name?}"
 @model TimelineModel
 @inject IUrlHelper UrlHelper
+@inject LinkGenerator Links
 @{
     ViewData["Active"] = "Timeline";
 
@@ -79,7 +80,7 @@
                         ["Title"] = Model.Series.GetTitleOfTopic(topic),
                         ["Text"] = string.Join("<br/>",
                     Model.Series.GetEntriesOfTopic(topic)
-                    .Select(entry => $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                    .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                     )
                     }));
                 }
@@ -108,7 +109,7 @@
                     .Where(name => Model.Series.HasEntry(name))
                     .Select(name => {
                         var e = Model.Series.GetEntry(name);
-                        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
+                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
                     })),
                     }));
                 }
@@ -136,7 +137,7 @@
                     .Where(name => Model.Series.HasEntry(name))
                     .Select(name => {
                         var e = Model.Series.GetEntry(name);
-                        return $"<a href='{Model.Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
+                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
                     })),
                     }));
                 }

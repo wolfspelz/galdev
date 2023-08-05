@@ -171,3 +171,11 @@ img.gd-blog-post-image {
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
+
+.carousel-control-next, .carousel-control-prev {
+    width: 100px;
+}
+
+.carousel .card-img-overlay {
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject LinkGenerator Links
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -78,7 +79,7 @@
 
     <div class="content">
         <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
                 <div class="carousel-inner" role="listbox">
 
                     @for (int i = 0; i < Model.Carousel.Count; i++) {
@@ -89,7 +90,7 @@
                                     <div class="card-img">
                                         <img src="@Url.Content($"~/carousel/{item.Image}")" class="img-fluid">
                                     </div>
-                                    <div class="card-img-overlay">@item.Description</div>
+                                    <div class="card-img-overlay" onclick="location.href = '@Links.GetPathByPage("/Timeline", null, new { name = item.Name })'">@item.Description</div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +108,6 @@
 
         <script>
             let items = document.querySelectorAll('.carousel .carousel-item')
-
             items.forEach((el) => {
                 const minPerSlide = 4
                 let next = el.nextElementSibling
