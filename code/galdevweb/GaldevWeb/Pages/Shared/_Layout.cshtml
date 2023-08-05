@@ -77,27 +77,58 @@
     </header>
 
     <div class="content">
-        @if ((ViewData["Active"] ?? "").ToString() == "Index") {
-            <div class="stage-Index"></div>
-            <div class="container">
-                <div class="col-12 text-end" style="position:relative; top:-30px; color: #ffffff; text-shadow: 2px 1px 2px #000000;">
-                    @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
-                ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre",
-                ["en-US"] = () => "A bubble freighter in the upper Venus atmosphere crusing above the clouds"
-                })
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
+                <div class="carousel-inner" role="listbox">
+
+                    @for (int i = 0; i < Model.Carousel.Count; i++) {
+                        var item = Model.Carousel[i];
+                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="@Url.Content($"~/carousel/{item.Image}")" class="img-fluid">
+                                    </div>
+                                    <div class="card-img-overlay">@item.Description</div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
                 </div>
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
             </div>
-        } else {
-            <div class="container">
-                <img src="/images/site/stage-VenusFreighter-1600x200.jpg" style="width:100%;" class="img-fluid" alt="Venus Freighter" />
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </div>
-        }
+        </div>
+
+        <script>
+            let items = document.querySelectorAll('.carousel .carousel-item')
+
+            items.forEach((el) => {
+                const minPerSlide = 4
+                let next = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    if (!next) {
+                        // wrap carousel by using first child
+                        next = items[0]
+                    }
+                    let cloneChild = next.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next.nextElementSibling
+                }
+            })
+        </script>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
     </div>
 
     <footer class="border-top footer text-muted text-center">

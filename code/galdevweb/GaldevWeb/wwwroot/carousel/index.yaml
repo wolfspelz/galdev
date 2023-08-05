@@ -1,5 +1,16 @@
-carousel:
+entries:
   - image: Schnellbahn-snpost.jpg
-    description: This is Schnellbahn
+    name: schnellbahn
+    description: 
   - image: Shackleton-snpost.jpg
-    description: This is Shackleton
+    name: moonuprising
+    description: 
+  - image: Chaosmanagement-snpost.jpg
+    name: feudalconspiracy
+    description: 
+  - image: ChintiKatastrophe-snpost.jpg
+    name: chintikatastrophe
+    description: 
+  - image: Alienkriege-snpost.jpg
+    name: alienkriege
+    description: 
