@@ -51,6 +51,7 @@ namespace GaldevWeb
         {
             get {
                 var s = "";
+                s += " " + Name;
                 s += " " + Year ;
                 s += " " + Title;
                 s += ShortTitle != null ? " " + ShortTitle : "";
