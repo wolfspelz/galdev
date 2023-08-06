@@ -28,26 +28,29 @@ namespace GaldevWeb
             });
 
             var myConfig = new GaldevConfig();
-            var myApp = new GaldevApp {
-                Config = myConfig,
-            };
-            builder.Services.AddSingleton(myApp);
+            var myLogger = new NullCallbackLogger();
 
-            var timeline = new TimelineIndex {
+            var timeIndex = new TimelineIndex {
                 IndexFilePath = myConfig.IndexPath,
-                Log = myApp.Log,
+                Log = myLogger,
             };
-            timeline.Load();
-            builder.Services.AddSingleton(timeline);
+            timeIndex.Load();
 
             Don.t = () => {
                 BlogIndex? blog = new BlogIndex {
                     IndexFilePath = myConfig.BlogIndexPath,
-                    Log = myApp.Log,
+                    Log = myLogger,
                 };
                 blog.Load();
                 builder.Services.AddSingleton(blog);
             };
+
+            var myApp = new GaldevApp {
+                Config = myConfig,
+                Log = myLogger,
+                Timelines = timeIndex,
+            };
+            builder.Services.AddSingleton(myApp);
 
             var app = builder.Build();
 

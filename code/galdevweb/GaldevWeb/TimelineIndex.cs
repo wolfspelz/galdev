@@ -149,8 +149,8 @@
             }
 
             entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
-
             entry.Aliases = contentNode["aliases"].AsList.Select(n => n.AsString).ToArray();
+            entry.Tags = contentNode["tags"].AsList.Select(n => n.AsString).ToArray();
 
             return entry;
         }

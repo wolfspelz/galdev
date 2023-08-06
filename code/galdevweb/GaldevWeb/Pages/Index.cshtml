@@ -96,9 +96,9 @@
     {
         var topic = "adventure";
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.Series.GetTitleOfTopic(topic),
+                    ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                        Model.Series.GetEntriesOfTopic(topic)
+                        Model.Timeline.GetEntriesOfTopic(topic)
                         .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                         )
                 }));
@@ -110,7 +110,7 @@
                         ["de-DE"] = () => "Alle Themen",
                         ["en-US"] = () => "All Topics",
                     }),
-                    ["Text"] = string.Join(" - ", Model.Series.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Series.GetTitleOfTopic(topic) + "</a>")),
+                    ["Text"] = string.Join(" - ", Model.Timeline.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
                 }));
     }
 
@@ -163,9 +163,9 @@
 "Gemini",
 "1000InSpace",
                         }
-                        .Where(name => Model.Series.HasEntry(name))
+                        .Where(name => Model.Timeline.HasEntry(name))
                         .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
+                            var entry = Model.Timeline.GetEntry(name);
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -236,7 +236,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     }
 
     {
-        var entry = Model.Series.GetEntry("Supernova");
+        var entry = Model.Timeline.GetEntry("Supernova");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",
@@ -250,9 +250,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     {
         var topic = "culture";
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.Series.GetTitleOfTopic(topic),
+                    ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                        Model.Series.GetEntriesOfTopic(topic)
+                        Model.Timeline.GetEntriesOfTopic(topic)
                         .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                         )
                 }));
@@ -282,9 +282,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Turnaround",
 "Collisioncourse",
 }
-                        .Where(name => Model.Series.HasEntry(name))
+                        .Where(name => Model.Timeline.HasEntry(name))
                         .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
+                            var entry = Model.Timeline.GetEntry(name);
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -311,9 +311,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Prophet",
 "ReshumanisCobol",
 }
-                        .Where(name => Model.Series.HasEntry(name))
+                        .Where(name => Model.Timeline.HasEntry(name))
                         .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
+                            var entry = Model.Timeline.GetEntry(name);
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -339,9 +339,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "Kartusche",
 "Drachenlegenden",
                         }
-                        .Where(name => Model.Series.HasEntry(name))
+                        .Where(name => Model.Timeline.HasEntry(name))
                         .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
+                            var entry = Model.Timeline.GetEntry(name);
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -393,9 +393,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "executivedecision",
 "kisor",
 }
-                        .Where(name => Model.Series.HasEntry(name))
+                        .Where(name => Model.Timeline.HasEntry(name))
                         .Select(name => {
-                            var entry = Model.Series.GetEntry(name);
+                            var entry = Model.Timeline.GetEntry(name);
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -427,7 +427,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     }
 
     {
-        var entry = Model.Series.GetEntry("Gee");
+        var entry = Model.Timeline.GetEntry("Gee");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",
                     ["ImgAlt"] = entry?.DisplayName ?? "",

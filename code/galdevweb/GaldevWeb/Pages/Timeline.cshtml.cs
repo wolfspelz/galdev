@@ -4,28 +4,21 @@ namespace GaldevWeb.Pages
 {
     public class TimelineModel : GaldevPageModel
     {
-        public TimelineIndex _timelines;
         public TimelineEntryList List = new();
         public bool NotAvailable = false;
         public TimelineEntry? NextEntry = null;
-        public TimelineSeries Series = new();
 
-        public TimelineModel(GaldevApp app, TimelineIndex timelines) : base(app, "Timeline")
+        public TimelineModel(GaldevApp app) : base(app, "Timeline")
         {
-            _timelines = timelines;
         }
 
         public void OnGet(string name)
         {
-            var lang = GetLangFromCultureName(UiCultureName);
-            var timeline = _timelines.GetSeriesForLanguage(lang);
-            Series = timeline;
-
             if (Is.Value(name)) {
                 name = TimelineIndex.GetNameFromSeoTitle(name);
-                Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
+                Log.Info("", new LogData { [nameof(name)] = name });
 
-                var entry = timeline.GetEntry(name);
+                var entry = base.Timeline.GetEntry(name);
                 if (entry == null) {
                     NotAvailable = true;
 
@@ -35,7 +28,7 @@ namespace GaldevWeb.Pages
                         if (entry != null) {
                             totalLen += entry.TextLen;
                             List.Add(entry);
-                            entry = timeline.GetNextEntry(entry.Name);
+                            entry = base.Timeline.GetNextEntry(entry.Name);
                         }
                     } while (totalLen < Config.EntryPageTextLength && entry != null);
 

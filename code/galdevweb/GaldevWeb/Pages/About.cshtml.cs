@@ -8,6 +8,7 @@
 
         public void OnGet()
         {
+            Log.Info("");
         }
     }
 }

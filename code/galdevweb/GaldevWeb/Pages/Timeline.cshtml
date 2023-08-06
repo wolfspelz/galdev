@@ -77,9 +77,9 @@
                 if (Model.List[0].Topics.Length > 0) {
                     var topic = Model.List[0].Topics[0];
                     cards.Add(Node.From(new Dictionary<string, string> {
-                        ["Title"] = Model.Series.GetTitleOfTopic(topic),
+                        ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                         ["Text"] = string.Join("<br/>",
-                    Model.Series.GetEntriesOfTopic(topic)
+                    Model.Timeline.GetEntriesOfTopic(topic)
                     .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                     )
                     }));
@@ -106,9 +106,9 @@
         "Prophet",
         "ReshumanisCobol",
         }
-                    .Where(name => Model.Series.HasEntry(name))
+                    .Where(name => Model.Timeline.HasEntry(name))
                     .Select(name => {
-                        var e = Model.Series.GetEntry(name);
+                        var e = Model.Timeline.GetEntry(name);
                         return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
                     })),
                     }));
@@ -134,9 +134,9 @@
         "EndVenusTerraforming",
         "MoonDeportations",
                     }
-                    .Where(name => Model.Series.HasEntry(name))
+                    .Where(name => Model.Timeline.HasEntry(name))
                     .Select(name => {
-                        var e = Model.Series.GetEntry(name);
+                        var e = Model.Timeline.GetEntry(name);
                         return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
                     })),
                     }));

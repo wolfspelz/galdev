@@ -19,12 +19,12 @@
 @{
     var cards = new List<Node>();
 
-    foreach (var topic in Model.Series.Topics) {
+    foreach (var topic in Model.Timeline.Topics) {
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.Series.GetTitleOfTopic(topic),
+                    ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Anchor"] = topic,
                     ["Text"] = string.Join("<br/>",
-                Model.Series.GetEntriesOfTopic(topic)
+                Model.Timeline.GetEntriesOfTopic(topic)
                 .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
                 )
                 }));

@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Diagnostics;
 using System.Linq;
 
 namespace GaldevWeb
@@ -15,6 +16,7 @@ namespace GaldevWeb
         public string? Image;
         public string[] Topics = new string[0];
         public string[] Aliases = new string[0];
+        public string[] Tags = new string[0];
 
         public string Next = "";
         public string Previous = "";
@@ -28,8 +30,29 @@ namespace GaldevWeb
             Text = text;
         }
 
-        public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-").Replace(" ", "_");
+        public string SeoTitle => $"{Name}-{Year}-{Title}".Replace("/", "-").Replace(" ", "_").Replace(":", "_");
         public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
+
+        public string Description
+        {
+            get {
+                var s = Title;
+                if (string.IsNullOrEmpty(s)) {
+                    s = Headline;
+                }
+                if (string.IsNullOrEmpty(s)) {
+                    s = ShortTitle;
+                }
+                if (string.IsNullOrEmpty(s)) {
+                    s = Summary;
+                }
+                if (string.IsNullOrEmpty(s)) {
+                    s = "";
+                }
+                return s;
+            }
+        }
+
         public string DisplayName
         {
             get {
@@ -51,17 +74,21 @@ namespace GaldevWeb
         {
             get {
                 var s = "";
-                s += " " + Name;
-                s += " " + Year ;
-                s += " " + Title;
-                s += ShortTitle != null ? " " + ShortTitle : "";
-                s += Summary != null ? " " + Summary : "";
-                s += Headline != null ? " " + Headline : "";
+                var sep = "|";
+                s += sep + Name;
+                s += sep + Year ;
+                s += sep + Title;
+                s += ShortTitle != null ? sep + ShortTitle : "";
+                s += Summary != null ? sep + Summary : "";
+                s += Headline != null ? sep + Headline : "";
                 foreach (var t in Text) {
-                    s += " " + t;
+                    s += sep + t;
                 }
                 foreach (var t in Topics) {
-                    s += " " + t;
+                    s += sep + t;
+                }
+                foreach (var t in Tags) {
+                    s += sep + t;
                 }
                 return s;
             }

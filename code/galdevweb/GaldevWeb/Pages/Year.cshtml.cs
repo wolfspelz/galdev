@@ -5,22 +5,19 @@ namespace GaldevWeb.Pages
 {
     public class YearModel : GaldevPageModel
     {
-        public TimelineIndex _timelines;
         public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
         public bool NotAvailable = false;
 
-        public YearModel(GaldevApp app, TimelineIndex timelines) : base(app, "Year")
+        public YearModel(GaldevApp app) : base(app, "Year")
         {
-            _timelines = timelines;
         }
 
         public IActionResult OnGet(string year)
         {
             if (Is.Value(year)) {
                 var lang = GetLangFromCultureName(UiCultureName);
-                Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(year)] = year });
-                var timeline = _timelines.GetSeriesForLanguage(lang);
-                var entry = timeline.GetEntryByYear(year);
+                Log.Info("", new LogData { [nameof(year)] = year });
+                var entry = Timeline.GetEntryByYear(year);
                 if (entry == null) {
                     NotAvailable = true;
                     return Page();
