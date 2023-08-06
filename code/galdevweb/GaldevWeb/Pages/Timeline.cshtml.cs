@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Routing;
-
-namespace GaldevWeb.Pages
+﻿namespace GaldevWeb.Pages
 {
     public class TimelineModel : GaldevPageModel
     {
@@ -18,7 +16,7 @@ namespace GaldevWeb.Pages
                 name = TimelineIndex.GetNameFromSeoTitle(name);
                 Log.Info("", new LogData { [nameof(name)] = name });
 
-                var entry = base.Timeline.GetEntry(name);
+                var entry = Timeline.GetEntry(name);
                 if (entry == null) {
                     NotAvailable = true;
 
@@ -28,7 +26,7 @@ namespace GaldevWeb.Pages
                         if (entry != null) {
                             totalLen += entry.TextLen;
                             List.Add(entry);
-                            entry = base.Timeline.GetNextEntry(entry.Name);
+                            entry = Timeline.GetNextEntry(entry.Name);
                         }
                     } while (totalLen < Config.EntryPageTextLength && entry != null);
 
