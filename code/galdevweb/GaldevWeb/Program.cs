@@ -60,9 +60,9 @@ namespace GaldevWeb
 
             var app = builder.Build();
 
-            if (!app.Environment.IsDevelopment()) {
-                app.UseExceptionHandler("/Error");
-            }
+            //if (!app.Environment.IsDevelopment()) {
+            //    app.UseExceptionHandler("/Error");
+            //}
             app.UseStaticFiles();
 
             var supportedCultures = new[]{
