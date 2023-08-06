@@ -3,7 +3,7 @@
     public class BlogIndex : List<BlogPost>
     {
         public IDataProvider DataProvider = new TabConvertingFileDataProvider();
-        public string IndexFilePath = "wwwroot/blog/index.yaml";
+        public string IndexFilePath = "../../../../GaldevWeb/wwwroot/blog/index.yaml";
         public ICallbackLogger Log = new NullCallbackLogger();
 
         public void Load()

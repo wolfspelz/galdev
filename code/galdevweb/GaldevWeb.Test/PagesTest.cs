@@ -100,5 +100,21 @@ namespace GaldevWeb.Test
             Assert.AreEqual("2197 Rebellion in Lunar Penal Colonies", doc.DocumentNode.SelectNodes("//h3").FirstOrDefault()?.InnerText.Trim());
         }
 
+        [TestMethod]
+        [TestCategory("GaldevWeb.Pages")]
+        public async Task Blog_de()
+        {
+            // Act
+            var response = await _client.GetAsync("/Blog?lang=de-DE");
+
+            // Assert
+            Assert.IsNotNull(response.Content);
+            response.EnsureSuccessStatusCode();
+            Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+            var doc = new HtmlDocument();
+            doc.LoadHtml(await response.Content.ReadAsStringAsync());
+            Assert.AreEqual("News", doc.DocumentNode.SelectNodes("//h1").FirstOrDefault()?.InnerText.Trim());
+        }
+
     }
 }
