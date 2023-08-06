@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
+using YamlDotNet.Core;
 
 namespace GaldevWeb.Controllers
 {
@@ -15,7 +16,7 @@ namespace GaldevWeb.Controllers
         {
             Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
-            var filePath = new TimelineIndex { IndexFilePath = Config.IndexPath, }.GetImagePath(name, lang);
+            var filePath = Timelines.GetImagePath(lang, name);
 
             var provider = new FileExtensionContentTypeProvider();
             if (!provider.TryGetContentType(filePath, out string? contentType)) {

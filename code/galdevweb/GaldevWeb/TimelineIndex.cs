@@ -155,7 +155,7 @@
             return entry;
         }
 
-        public TimelineEntry GetEntry(string name, string lang)
+        public TimelineEntry GetEntry(string lang, string name)
         {
             var timeline = _timelineByLang[lang];
             var entry = timeline[name];
@@ -168,7 +168,7 @@
             return parts[0];
         }
 
-        public string GetImagePath(string imageName, string lang)
+        public string GetImagePath(string lang, string imageName)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });

@@ -8,6 +8,7 @@ namespace GaldevWeb
         public ICallbackLogger Log;
         public GaldevConfig Config;
         public TimelineSeries Timeline;
+
         public string UiCultureName;
         public ITextProvider I18n;
         public string Lang => GetLangFromCultureName(UiCultureName);

@@ -73,21 +73,21 @@ text: |
             sut.Load();
 
             // Assert
-            Assert.AreEqual("a", sut.GetEntry("a", "en").Name);
-            Assert.AreEqual("1234", sut.GetEntry("a", "en").Year);
-            Assert.AreEqual("a en title", sut.GetEntry("a", "en").Title);
+            Assert.AreEqual("a", sut.GetEntry("en", "a").Name);
+            Assert.AreEqual("1234", sut.GetEntry("en", "a").Year);
+            Assert.AreEqual("a en title", sut.GetEntry("en", "a").Title);
 
-            Assert.AreEqual("a", sut.GetEntry("a", "de").Name);
-            Assert.AreEqual("1234", sut.GetEntry("a", "de").Year);
-            Assert.AreEqual("a de title", sut.GetEntry("a", "de").Title);
+            Assert.AreEqual("a", sut.GetEntry("de", "a").Name);
+            Assert.AreEqual("1234", sut.GetEntry("de", "a").Year);
+            Assert.AreEqual("a de title", sut.GetEntry("de", "a").Title);
 
-            Assert.AreEqual("b", sut.GetEntry("b", "en").Name);
-            Assert.AreEqual("1235", sut.GetEntry("b", "en").Year);
-            Assert.AreEqual("b en title", sut.GetEntry("b", "en").Title);
+            Assert.AreEqual("b", sut.GetEntry("en", "b").Name);
+            Assert.AreEqual("1235", sut.GetEntry("en", "b").Year);
+            Assert.AreEqual("b en title", sut.GetEntry("en", "b").Title);
 
-            Assert.AreEqual("b", sut.GetEntry("b", "de").Name);
-            Assert.AreEqual("1235", sut.GetEntry("b", "de").Year);
-            Assert.AreEqual("b de title", sut.GetEntry("b", "de").Title);
+            Assert.AreEqual("b", sut.GetEntry("de", "b").Name);
+            Assert.AreEqual("1235", sut.GetEntry("de", "b").Year);
+            Assert.AreEqual("b de title", sut.GetEntry("de", "b").Title);
         }
 
     }
