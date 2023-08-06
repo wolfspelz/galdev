@@ -1,13 +1,19 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using System.Reflection;
 
 namespace GaldevWeb
 {
-    public static class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
+            var cwd = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location);
+            if (!string.IsNullOrEmpty(cwd)) {
+                Directory.SetCurrentDirectory(cwd);
+            }
+
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -31,7 +37,7 @@ namespace GaldevWeb
             var myLogger = new NullCallbackLogger();
 
             var timeIndex = new TimelineIndex {
-                IndexFilePath = myConfig.IndexPath,
+                IndexFilePath = myConfig.DataIndexPath,
                 Log = myLogger,
             };
             timeIndex.Load();
