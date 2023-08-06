@@ -3,7 +3,7 @@
     public class TimelineIndex
     {
         public IDataProvider DataProvider = new TabConvertingFileDataProvider();
-        public string IndexFilePath = "timeline/index.yaml";
+        public string IndexFilePath = "timeline-index.yaml";
         public ICallbackLogger Log = new NullCallbackLogger();
 
         private readonly Dictionary<string, TimelineLanguage> _languageById = new();

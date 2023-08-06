@@ -2,11 +2,14 @@
 {
     public class BlogModel : GaldevPageModel
     {
-        public BlogIndex Index = new BlogIndex();
+        public BlogIndex Index;
         public BlogPost? Post = null;
 
         public BlogModel(GaldevApp app) : base(app, "Blog")
         {
+            Index = new BlogIndex {
+                IndexFilePath = Config.BlogIndexPath
+            };
             Index.Load();
         }
 
