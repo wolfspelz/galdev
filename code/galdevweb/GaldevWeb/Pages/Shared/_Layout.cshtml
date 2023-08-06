@@ -1,4 +1,6 @@
 ﻿@inject LinkGenerator Links
+@using Microsoft.AspNetCore.Http
+@using n3q.Tools
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +83,9 @@
     <div class="content">
         <div class="row mx-auto my-auto justify-content-center">
             @{
-                var activeItem = Random.Shared.Next(Model.Carousel.Count);
+                var url = Context.Request.Path;
+                var f = Crc32.ToDouble(url);
+                var activeItem = (int) Math.Floor(Model.Carousel.Count * f);
                 var carouselInterval = 1000000000;
                 if (ViewData["Active"] is string s && s == "Index") {
                     carouselInterval = 10000;
