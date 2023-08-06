@@ -9,10 +9,10 @@ namespace GaldevWeb
     {
         public static void Main(string[] args)
         {
-            var cwd = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location);
-            if (!string.IsNullOrEmpty(cwd)) {
-                Directory.SetCurrentDirectory(cwd);
-            }
+            //var cwd = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location);
+            //if (!string.IsNullOrEmpty(cwd)) {
+            //    Directory.SetCurrentDirectory(cwd);
+            //}
 
             var builder = WebApplication.CreateBuilder(args);
 
