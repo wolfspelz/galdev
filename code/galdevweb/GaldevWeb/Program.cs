@@ -26,6 +26,13 @@ namespace GaldevWeb
               .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
               .AddDataAnnotationsLocalization();
 
+            builder.Services.Configure<RequestLocalizationOptions>(options => {
+                var supportedCultures = new[] { "en-US", "de-DE" };
+                options.SetDefaultCulture("de-DE")
+                    .AddSupportedCultures(supportedCultures)
+                    .AddSupportedUICultures(supportedCultures);
+            });
+
             var myConfig = new GaldevConfig();
             var myLogger = new NullCallbackLogger();
 

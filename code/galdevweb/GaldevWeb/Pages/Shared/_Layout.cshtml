@@ -79,12 +79,15 @@
 
     <div class="content">
         <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+            @{
+                var activeItem = Random.Shared.Next(Model.Carousel.Count);
+                var carouselInterval = 1000000000;
+                if (ViewData["Active"] is string s && s == "Index") {
+                    carouselInterval = 10000;
+                }
+            }
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="@carouselInterval">
                 <div class="carousel-inner" role="listbox">
-
-                    @{
-                        var activeItem = Random.Shared.Next(Model.Carousel.Count);
-                    }
                     @for (int i = 0; i < Model.Carousel.Count; i++) {
                         var item = Model.Carousel[i];
                         <div class="carousel-item @(i == activeItem ? "active" : "")">
