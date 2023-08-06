@@ -24,6 +24,14 @@ body {
 
 .navbar-brand {
     padding: 0.3125rem;
+    text-align: left;
+}
+
+a.navbar-brand {
+    padding: 0 0 3px 0;
+    text-align: left;
+    word-break: normal;
+    font-size: x-large;
 }
 
 @media (min-width: 1200px) {
@@ -85,6 +93,10 @@ a {
         color: unset;
         background-color: unset;
     }
+
+.my-logo {
+    margin-right: 1em;
+}
 
 .my-findform {
     margin-top: 7px;
