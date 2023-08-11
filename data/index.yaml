@@ -175,8 +175,9 @@ entries:
   OktopusSapiens: 
     de: 2208_Oktopus.yaml
     en: 2208_OctopusSapiens.yaml
-  Zerstörung_einer_Strafgefangen:
-    de: 2209_Zerstörung_einer_Strafgefangen.yaml
+  Dekompression:
+    de: 2209_Dekompression.yaml
+    en: 2209_Decompression.yaml
   Freundschaftsvertrag_zwischen_:
     de: 2211_Freundschaftsvertrag_zwischen_.yaml
   Dog:
