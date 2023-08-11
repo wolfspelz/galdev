@@ -44,9 +44,11 @@
             @foreach (var entry in Model.List) {
 
                 <h3 class="gd-entry-headline">
-                    @*                    <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">*@
-                    <span class="gd-entry-year">@entry.Year</span> <span class="gd-entry-title">@entry.Title</span>
-                    @*                    </a>*@
+                    <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">
+                        <span class="gd-entry-year">@entry.Year</span>
+                    </a>
+                    <span class="gd-entry-title">@entry.Title</span>
+
                 </h3>
 
                 @if (!string.IsNullOrEmpty(entry.Image)) {
