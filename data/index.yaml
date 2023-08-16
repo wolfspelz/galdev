@@ -1169,8 +1169,9 @@ entries:
     en: 3353_ControversyGate.yaml
   Survivalisten_in_Not:
     de: 3359_Survivalisten_in_Not.yaml
-  Die_erste_Menschheit:
-    de: 3361_Die_erste_Menschheit.yaml
+  FirstHumanity:
+    de: 3361_ErsteMenschheit.yaml
+    en: 3361_FirstHumanity.yaml
   Quantenkontinuum: 
     de: 3365_Quantenkontinuum.yaml
     en: 3365_QuantumContinuum.yaml
