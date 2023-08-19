@@ -11,7 +11,7 @@ Postimage: NAME.jpg
 Smallimage: NAME-100x70.jpg
 Author: Heiner Wolf
 Translation: DeepL, Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
+Tags: [_new_en, TAG1, TAG2]
 Topics: [aliens]
 Text2Graphics:
   - insect swarm space war, sci fi, future technology --ar 16:9

@@ -93,25 +93,10 @@
                             ["de-DE"] = () => "Neue Beiträge",
                             ["en-US"] = () => "Latest Articles",
                         }),
-                        ["Text"] = string.Join("<br/>", new[] {
-        "Die_erste_Menschheit",
-        "QueenMarduk",
-        "Quantenkontinuum",
-        "100000InSpace",
-        "ControversyGate",
-        "Flux",
-        "SoloEhre",
-        "Fragmentierung",
-        "Solos",
-        "Scale",
-        "Sterge",
-        "Prophet",
-        "ReshumanisCobol",
-        }
-                    .Where(name => Model.Timeline.HasEntry(name))
-                    .Select(name => {
-                        var e = Model.Timeline.GetEntry(name);
-                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
+                        ["Text"] = string.Join("<br/>",
+                    Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new"))
+                    .Select(entry => {
+                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                     })),
                     }));
                 }
@@ -127,19 +112,10 @@
                             ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
                         })
                     + "<br/><br/>"
-                    + string.Join("<br/>", new[] {
-        "1000InSpace",
-        "Gemini",
-        "AsteroidMining",
-        "SpacePatrol",
-        "ServizioStazione",
-        "EndVenusTerraforming",
-        "MoonDeportations",
-                    }
-                    .Where(name => Model.Timeline.HasEntry(name))
-                    .Select(name => {
-                        var e = Model.Timeline.GetEntry(name);
-                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = e?.SeoTitle })}'>{e?.Year} {e?.DisplayName}</a>";
+                    + string.Join("<br/>",
+                    Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_project_expansion"))
+                    .Select(entry => {
+                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                     })),
                     }));
                 }

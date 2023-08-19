@@ -151,21 +151,9 @@
                         ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
                     })
                         + "<br/><br/>"
-                        + string.Join("<br/>", new[] {
-"PalladianLeague",
-"LunarRevolt",
-"NeosozTerror",
-"MoonDeportations",
-"EndVenusTerraforming",
-"ServizioStazione",
-"SpacePatrol",
-"AsteroidMining",
-"Gemini",
-"1000InSpace",
-                        }
-                        .Where(name => Model.Timeline.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Timeline.GetEntry(name);
+                        + string.Join("<br/>",
+                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_project_expansion"))
+                        .Select(entry => {
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -261,30 +249,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     if (Model.UiCultureName == "en-US") {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = "Latest Translations",
-                    ["Text"] = string.Join("<br/>", new[] {
-"ultrametals",
-"ancientrobots",
-"executivedecision",
-"yaris",
-"contour",
-"prophet",
-"queenmarduk",
-"feudalconspiracy",
-"tranquility1000",
-"utho",
-"intelligentgalaxies",
-"solos",
-"warringswarms",
-"moonuprising",
-"supernova",
-"controversygate",
-"Ruins",
-"Turnaround",
-"Collisioncourse",
-}
-                        .Where(name => Model.Timeline.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Timeline.GetEntry(name);
+                    ["Text"] = string.Join("<br/>",
+                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new_en"))
+                        .Select(entry => {
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -296,24 +263,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["de-DE"] = () => "Neue Beiträge",
                         ["en-US"] = () => "Latest Articles",
                     }),
-                    ["Text"] = string.Join("<br/>", new[] {
-"Die_erste_Menschheit",
-"QueenMarduk",
-"Quantenkontinuum",
-"100000InSpace",
-"ControversyGate",
-"Flux",
-"SoloEhre",
-"Fragmentierung",
-"Solos",
-"Scale",
-"Sterge",
-"Prophet",
-"ReshumanisCobol",
-}
-                        .Where(name => Model.Timeline.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Timeline.GetEntry(name);
+                    ["Text"] = string.Join("<br/>",
+                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new"))
+                        .Select(entry => {
                             return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
@@ -329,21 +281,12 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
                         ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
                     })
-                        + "<br/><br/>"
-                        + string.Join("<br/>", new[] {
-"NeuroImplant",
-"DoomsdayCocktail",
-"DeliveryBot",
-"CodingKit",
-"Fusang",
-"Kartusche",
-"Drachenlegenden",
-                        }
-                        .Where(name => Model.Timeline.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Timeline.GetEntry(name);
-                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                + "<br/><br/>"
+                + string.Join("<br/>",
+                Model.Timeline.GetFilteredList(entry => entry.Topics.Contains("things"))
+                .Select(entry => {
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 

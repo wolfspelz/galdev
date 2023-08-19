@@ -22,6 +22,8 @@ namespace GaldevWeb
         public string Previous = "";
         public string Headline = "";
 
+        public override string ToString() => $"{Year} {Name} {Title}";
+
         public TimelineEntry(string name, string year, string title, string[] text)
         {
             Name = name;
