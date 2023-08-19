@@ -79,7 +79,10 @@
                 if (Model.List[0].Topics.Length > 0) {
                     var topic = Model.List[0].Topics[0];
                     cards.Add(Node.From(new Dictionary<string, string> {
-                        ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
+                        ["Title"] = Model.I18n.String(path: "Box/Other/Prefix", i18n: new StringGeneratorI18n {
+                            ["de-DE"] = () => "Andere ",
+                            ["en-US"] = () => "Other ",
+                        }) + Model.Timeline.GetTitleOfTopic(topic),
                         ["Text"] = string.Join("<br/>",
                     Model.Timeline.GetEntriesOfTopic(topic)
                     .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
