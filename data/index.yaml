@@ -13,9 +13,9 @@ languages:
       visitors: Aliens im Sonnensystem
       catastrophe: Katastrophen
       upgrades: Verbesserungen für Menschen
-      luck: Mehr Glück als Verstand
+      luck: Glücksfälle
       aliens: Völker
-      economy: Wirtschaft und Wirtschaftskrisen
+      economy: Wirtschaft
       war: Kriege
       wonder: Wunder
       epidemic: Epidemien
@@ -37,23 +37,23 @@ languages:
       culture: Culture
       discovery: Discoveries
       science: Science
-      spaceflight: Space flight
-      event: Exciting events
+      spaceflight: Space Flight
+      event: Exciting Events
       technology: Technology
-      visitors: Alien visitors
+      visitors: Alien Visitors
       catastrophe: Catastrophes
       upgrades: Upgrades
-      luck: More luck than sense
-      aliens: Alien races
-      economy: Economy and economic crises
+      luck: More Luck Than Sense
+      aliens: Aliens
+      economy: Economy
       war: War
       wonder: Wonders
       epidemic: Epidemics
       things: Things
       crime: Crimes
-      philosophy: Philosophy und religion
+      philosophy: Philosophy and Religion
       conspiracy: Conspiracies
-      ecology: Biology and ecology
+      ecology: Biology and Ecology
       politics: Politics
       people: People
       statistics: Statistics

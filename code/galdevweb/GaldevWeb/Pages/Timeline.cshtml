@@ -80,7 +80,7 @@
                     var topic = Model.List[0].Topics[0];
                     cards.Add(Node.From(new Dictionary<string, string> {
                         ["Title"] = Model.I18n.String(path: "Box/Other/Prefix", i18n: new StringGeneratorI18n {
-                            ["de-DE"] = () => "Andere ",
+                            ["de-DE"] = () => "Mehr ",
                             ["en-US"] = () => "Other ",
                         }) + Model.Timeline.GetTitleOfTopic(topic),
                         ["Text"] = string.Join("<br/>",
