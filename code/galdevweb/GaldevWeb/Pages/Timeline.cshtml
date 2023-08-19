@@ -39,7 +39,20 @@
 
 } else {
 
-    <div class="row mt-3 gd-entry">
+    @if (Model.PreviousEntry != null) {
+        <div class="row mt-3">
+            <div class="col-12">
+                <a asp-page="/Timeline" asp-route-name="@Model.PreviousEntry.SeoTitle">
+                    <img src="~/images/Timeline/previous.png" alt="next" class="gd-timeline-previous gd-timeline-previous-left" />
+
+                    @Model.PreviousEntry.Year
+                    @Model.PreviousEntry.DisplayName
+                </a>
+            </div>
+        </div>
+    }
+
+    <div class="row gd-entry">
         <div class="col-sm-12 col-lg-8">
             @foreach (var entry in Model.List) {
 
@@ -159,7 +172,7 @@
                     @Model.NextEntry.Year
                     @Model.NextEntry.DisplayName
 
-                    <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />
+                    @*<img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />*@
                 </a>
             </div>
         </div>

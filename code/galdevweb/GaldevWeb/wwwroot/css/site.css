@@ -130,15 +130,15 @@ h3.gd-entry-headline {
     margin: 1em 0 0.8em 0;
 }
 
-img.gd-timeline-next {
+img.gd-timeline-next, img.gd-timeline-previous {
     max-height: 1em;
 }
-img.gd-timeline-next-left {
+img.gd-timeline-next-left, img.gd-timeline-previous-left {
     margin-right: 0.5em;
-    padding: 0 0 0.2em 0.4em;
+    padding: 0 0 0.2em 0;
 }
 
-img.gd-timeline-next-right {
+img.gd-timeline-next-right, img.gd-timeline-previous-right {
     margin-left: 0.5em;
     padding: 0 0.4em 0.2em 0;
 }

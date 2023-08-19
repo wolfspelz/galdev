@@ -5,6 +5,7 @@
         public TimelineEntryList List = new();
         public bool NotAvailable = false;
         public TimelineEntry? NextEntry = null;
+        public TimelineEntry? PreviousEntry = null;
 
         public TimelineModel(GaldevApp app) : base(app, "Timeline")
         {
@@ -21,6 +22,10 @@
                     NotAvailable = true;
 
                 } else {
+                    if (Is.Value(entry.Previous)) {
+                        PreviousEntry = Timeline.GetEntry(entry.Previous);
+                    }
+                    
                     var totalLen = 0;
                     do {
                         if (entry != null) {
