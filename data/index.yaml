@@ -1088,8 +1088,9 @@ entries:
     de: 3090_SoloEhre.yaml
   Rückzug_der_SolBarbaren_in_das:
     de: 3100_Rückzug_der_SolBarbaren_in_das.yaml
-  Fragmentierung:
+  Fragmentation:
     de: 3110_Fragmentierung.yaml
+    en: 3110_Fragmentation.yaml
   MoonUprising:
     de: 3116_Shackleton.yaml
     en: 3116_MoonUprising.yaml
