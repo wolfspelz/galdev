@@ -1,19 +1,17 @@
-Name: ChintiKatastrophe
+AssertUtf8: ä
+Name: ChintiArmageddon
+Aliases: []
 Year: 3190
-Title: Chinti-Katastrophe
-Short: Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können ...
-Image: ChintiKatastrophe.jpg
+Title: "Armageddon im Solsystem"
+ShortTitle: Überraschungsangriff
+Short: Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können
 Headline: "Überraschungsangriff: Ein Techniker verteidigt das Sonnensystem"
-Post: "3190 Chinti-Katastrophe. Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können ... Weiter: http://jmp1.de/h3190"
-PostImage: ChintiKatastrophe-snpost.jpg
-Twitter: "3190 Chinti-Katastrophe, ein Techniker wird zum Helden http://www.galactic-developments.de/data2.html?first=3190&hilite=3190 #scifi #Krieg #Ballistik #Antimaterie #Drohne #KI #Held"
-TwitterImage: ChintiKatastrophe-snpost.jpg
-Facebook: "3190 Chinti-Katastrophe. Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können ... Weiter: http://jmp1.de/h3190"
-Facebook2: 3190 Chinti-Katastrophe
-Facebook3: "Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können ... Weiter: http://jmp1.de/h3190"
-FacebookImage: ChintiKatastrophe-snpost.jpg
+Post: "3190 Armageddon im Solsystem. Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können.. Mehr: https://www.galactic-developments.de/Timeline/ChintiArmageddon?lang=de-DE"
+Twitter: "3190 Armageddon im Solsystem. Ein Drittel der Menschheit wird durch einen Überraschungsangriff ausgelöscht. Nur der Eigeninitiative eines Technikers ist es zu verdanken, dass die anderen gerettet werden können.. Mehr: https://www.galactic-developments.de/Timeline/ChintiArmageddon?lang=de-DE"
+Image: de_3190_ChintiArmageddon.jpg
 Author: Heiner Wolf
-Tags: [Krieg, Held, Technik, Ballistik, Antimaterie, KI, Bot, Mech]
+Translation: Heiner Wolf
+Tags: [_hilite, _carousel, Krieg, Held, Technik, Ballistik, Antimaterie, KI, Bot, Mech]
 Topics: [war, catastrophe, luck, ai, people]
 Text: |
   Ein Überraschungsangriff von Chinti-Schwärmen hat verheerende Folgen für das Solsystem.

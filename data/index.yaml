@@ -1109,8 +1109,9 @@ entries:
     de: 3176_Einigung_des_Solsystems.yaml
   Mikroben:
     de: 3180_Mikroben.yaml
-  ChintiKatastrophe:
-    de: 3190_ChintiKatastrophe.yaml
+  ChintiArmageddon:
+    de: 3190_ChintiArmageddon.yaml
+    en: 3190_ChintiArmageddon.yaml
   ReshumanisCobol:
     de: 3191_ReshumanisCobol.yaml
   Erste_erfolgreiche_Schläge_geg:
