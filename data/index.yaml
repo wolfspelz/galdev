@@ -94,6 +94,7 @@ entries:
     en: 2094_PopulationMinimum.yaml
   Fusion:
     de: 2101_Fusion.yaml
+    en: 2101_Fusion.yaml
   LifeThemes:
     de: 2115_LifeTheme.yaml
     en: 2115_LifeThemes.yaml

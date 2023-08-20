@@ -1,19 +1,17 @@
+AssertUtf8: ä
 Name: Fusion
+Aliases: []
 Year: 2101
-Title: Smart Fusion
-Short: Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks. ....
-Image: Fusion.jpg
+Title: "Smart Fusion"
+ShortTitle: Smart Fusion
+Short: Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks
 Headline: "Hot Fusion wird Smart: Mr. Fusion löst Gigawatt-Kraftwerke ab"
-Post: "2101 Smart Fusion. Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks. .... Weiter: http://jmp1.de/h2101"
-PostImage: Fusion-twpost.jpg
-Twitter: "2101 Smart Fusion http://www.galactic-developments.de/data2.html?first=2101&hilite=2101 #scifi #Fusion #Energie #Wissenschaft #Wirtschaft #Krise"
-TwitterImage: Fusion-twpost.jpg
-Facebook: "2101 Smart Fusion. Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks. .... Weiter: http://jmp1.de/h2101"
-Facebook2: 2101 Smart Fusion
-Facebook3: "Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks. .... Weiter: http://jmp1.de/h2101"
-FacebookImage: Fusion-fbpost.jpg
+Post: "2101 Smart Fusion. Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks.. Mehr: https://www.galactic-developments.de/Timeline/Fusion?lang=de-DE"
+Twitter: "2101 Smart Fusion. Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen teuren Tokamaks.. Mehr: https://www.galactic-developments.de/Timeline/Fusion?lang=de-DE"
+Image: de_2101_Fusion.jpg
 Author: Heiner Wolf
-Tags: [Fusion, Energie, Wissenschaft, Wirtschaft, Krise]
+Translation: Heiner Wolf
+Tags: [_carousel, Fusion, Energie, Wissenschaft, Wirtschaft, Krise]
 Topics: [technology]
 Text: |
   Die Geschichte der Kernfusion hat Höhen und Tiefen, vor allem aber Längen. Neue physikalische Ansätze führen schneller zum Ziel, als die großen und teuren Tokamaks. Dezentralisierte Fusionsanlagen lösen Gigawatt-Kraftwerke ab. Hot Fusion wird Smart.
