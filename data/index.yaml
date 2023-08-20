@@ -111,6 +111,7 @@ entries:
     de: 2147_Eter.yaml
   Gemini:
     de: 2154_Gemini.yaml
+    en: 2154_Gemini.yaml
   AsteroidMining:
     de: 2155_AsteroidMining.yaml
     en: 2155_AsteroidMining.yaml

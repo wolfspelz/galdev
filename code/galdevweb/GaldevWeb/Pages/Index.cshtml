@@ -105,12 +105,16 @@
     }
 
     {
+        var entry = Model.Timeline.GetEntry("Gemini");
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Alle Themen",
-                        ["en-US"] = () => "All Topics",
+                    ["ImgSrc"] = "/images/Index/oneill3.jpg",
+                    ["ImgAlt"] = "O'Neill Cylinder",
+                    ["Link"] = Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle }) ?? "",
+                    ["Text"] = Model.I18n.String(path: "Box/Oneill/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "O'Neill Raumkolonien<br/>Städte der interplanetaren Zivilisation",
+                        ["en-US"] = () => "O'Neill Space Colonies<br/>The cities of the interplanetary civilization.",
                     }),
-                    ["Text"] = string.Join(" - ", Model.Timeline.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
+                    ["TextHasLink"] = "true",
                 }));
     }
 
