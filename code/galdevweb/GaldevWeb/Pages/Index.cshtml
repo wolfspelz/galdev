@@ -105,6 +105,16 @@
     }
 
     {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Alle Themen",
+                        ["en-US"] = () => "All Topics",
+                    }),
+                    ["Text"] = string.Join(" - ", Model.Timeline.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
+                }));
+    }
+
+    {
         var entry = Model.Timeline.GetEntry("Gemini");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/images/Index/oneill3.jpg",
