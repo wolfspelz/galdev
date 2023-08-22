@@ -36,7 +36,7 @@ namespace GaldevWeb
             .Replace("/", "-")
             .Replace(" ", "_")
             .Replace(":", "_")
-            .Replace("\"", "_")
+            .Replace("\"", "")
             ;
 
         public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
