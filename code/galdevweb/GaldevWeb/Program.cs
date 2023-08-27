@@ -63,7 +63,9 @@ namespace GaldevWeb
             //if (!app.Environment.IsDevelopment()) {
             //    app.UseExceptionHandler("/Error");
             //}
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions() {
+                ServeUnknownFileTypes = true
+            });
 
             var supportedCultures = new[]{
                 new CultureInfo("de-DE"),
