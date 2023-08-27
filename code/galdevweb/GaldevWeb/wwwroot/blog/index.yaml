@@ -1,4 +1,6 @@
 entries:
+  lego:
+    de: de_lego.yaml
   discord:
     de: de_discord.yaml
   Megastrukturen:
