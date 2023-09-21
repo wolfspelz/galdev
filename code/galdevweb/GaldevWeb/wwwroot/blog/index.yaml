@@ -1,4 +1,6 @@
 entries:
+  BuCon23:
+    de: de_BuCon23.yaml
   lego:
     de: de_lego.yaml
   discord:
