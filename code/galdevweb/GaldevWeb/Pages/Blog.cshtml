@@ -108,6 +108,7 @@
                         ["ImgAlt"] = post.Title,
                         ["Link"] = Links.GetPathByPage("/Blog", null, new { name = post.SeoTitle }) ?? "",
                         ["Title"] = post.Title,
+                        ["TitleHasLink"] = "true",
                         ["Text"] = post.Summary,
                     }));
 
