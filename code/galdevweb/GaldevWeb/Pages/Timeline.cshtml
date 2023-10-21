@@ -82,21 +82,6 @@
             }
         </div>
 
-        @if (Model.NextEntry != null) {
-            <div class="row mt-3 mb-3">
-                <div class="col-sm-12 col-lg-8">
-                    <a asp-page="/Timeline" asp-route-name="@Model.NextEntry.SeoTitle">
-                        <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-left" />
-
-                        @Model.NextEntry.Year
-                        @Model.NextEntry.DisplayName
-
-                        @*<img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />*@
-                    </a>
-                </div>
-            </div>
-        }
-
         <div class="col-sm-0 col-lg-4">
 
             <script src="~/lib/masonry-4.2.2.min.js" async></script>
@@ -175,6 +160,21 @@
             @await Html.PartialAsync("_Cards", cards, ViewData)
 
         </div>
+
+        @if (Model.NextEntry != null) {
+            <div class="row mt-3 mb-3">
+                <div class="col-12">
+                    <a asp-page="/Timeline" asp-route-name="@Model.NextEntry.SeoTitle">
+                        <img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-left" />
+
+                        @Model.NextEntry.Year
+                        @Model.NextEntry.DisplayName
+
+                        @*<img src="~/images/Timeline/next.png" alt="next" class="gd-timeline-next gd-timeline-next-right" />*@
+                    </a>
+                </div>
+            </div>
+        }
 
     </div>
 }
