@@ -126,6 +126,12 @@ img.gd-entry-image {
     filter: drop-shadow(5px 5px 5px #505050);
 }
 
+img.gd-list-image {
+    width: 100%;
+    min-width: 200px;
+    filter: drop-shadow(5px 5px 5px #505050);
+}
+
 h3.gd-entry-headline {
     margin: 1em 0 0.8em 0;
 }
