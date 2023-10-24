@@ -16,7 +16,7 @@
 </div>
 
 @foreach (var entry in Model.List) {
-    <div class="row mt-2" style="position: relative">
+    <div class="row mt-1" style="position: relative">
         @if (string.IsNullOrEmpty(entry.Image)) {
             <div class="col-7 gd-list-item">
                 <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>

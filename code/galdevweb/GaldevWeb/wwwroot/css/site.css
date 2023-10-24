@@ -132,6 +132,11 @@ img.gd-list-image {
     filter: drop-shadow(5px 5px 5px #505050);
 }
 
+div.gd-list-item {
+    padding-left: 3.1em;
+    text-indent: -2.5em;
+}
+
 h3.gd-entry-headline {
     margin: 1em 0 0.8em 0;
 }
