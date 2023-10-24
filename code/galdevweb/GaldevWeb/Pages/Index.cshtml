@@ -94,7 +94,7 @@
     }
 
     {
-        var entry = Model.Timeline.GetEntry(Model.Timeline.FirstName);
+        var entry = Model.Timeline.GetEntry("Fusang");
         if (entry != null) {
             cards.Add(Node.From(new Dictionary<string, string> {
                         ["Title"] = Model.I18n.String(path: "Box/Start/Title", i18n: new StringGeneratorI18n {
