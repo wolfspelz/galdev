@@ -1,13 +1,13 @@
 ﻿@page
-@model BookExportModel
+@model PlainModel
 @{
     Layout = "_PlainLayout";
 }
 
 @foreach (var entry in Model.List) {
     <div>
-        <p>BOOK_YEAR @(entry.Year) @entry.Title</p>
-        BOOK_TEXT
+        <p>MARK_TITLE @(entry.Year) @entry.Title</p>
+        MARK_TEXT
         @foreach (var t in entry.Text) {
             <p>@t</p>
         }

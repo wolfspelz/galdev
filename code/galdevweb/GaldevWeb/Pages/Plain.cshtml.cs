@@ -1,10 +1,10 @@
 ﻿namespace GaldevWeb.Pages
 {
-    public class BookExportModel : GaldevPageModel
+    public class PlainModel : GaldevPageModel
     {
         public TimelineEntryList List = new();
 
-        public BookExportModel(GaldevApp app) : base(app, "BookExport")
+        public PlainModel(GaldevApp app) : base(app, "Plain")
         {
         }
 
