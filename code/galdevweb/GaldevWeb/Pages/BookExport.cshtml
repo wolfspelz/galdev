@@ -6,7 +6,7 @@
 
 @foreach (var entry in Model.List) {
     <div>
-        <p>BOOK_YEAR@(entry.Year) @entry.Title</p>
+        <p>BOOK_YEAR @(entry.Year) @entry.Title</p>
         BOOK_TEXT
         @foreach (var t in entry.Text) {
             <p>@t</p>
