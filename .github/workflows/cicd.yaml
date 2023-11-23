@@ -44,5 +44,5 @@ jobs:
             docker image pull wolfspelz/galdevweb
             docker container stop galdevweb-prod
             docker container prune -f
-            docker run -d --name galdevweb-prod --restart unless-stopped -p 127.0.0.1:5001:80 -it wolfspelz/galdevweb
+            docker run -d --name galdevweb-prod --restart always -e VIRTUAL_HOST=www.galactic-developments.de -e VIRTUAL_PORT=80 -it wolfspelz/galdevweb
             docker image prune -f
