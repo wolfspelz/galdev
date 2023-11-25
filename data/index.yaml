@@ -184,8 +184,9 @@ entries:
     de: 2214_Dog.yaml
   Taromka_Rettungsaktion:
     de: 2219_Taromka_Rettungsaktion.yaml
-  Erster_Piratenüberfall_auf_ein:
-    de: 2222_Erster_Piratenüberfall_auf_ein.yaml
+  BeltPirates:
+    de: 2222_BeltPirates.yaml
+    en: 2222_GuertelPiraten.yaml
   Die_SPATRAC_verweigert_einem_P:
     de: 2223_Die_SPATRAC_verweigert_einem_P.yaml
   Wiederaufnahme_der_Terraformun:
