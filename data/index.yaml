@@ -81,6 +81,8 @@ entries:
   DeliveryBot:
     de: 2071_PaketBot.yaml
     en: 2071_DeliveryBot.yaml
+  Dog:
+    de: 2078_Dog.yaml
   CodingKit:
     de: 2081_Wachtang.yaml
     en: 2081_CodingKit.yaml
@@ -180,8 +182,6 @@ entries:
   Dekompression:
     de: 2209_Dekompression.yaml
     en: 2209_Decompression.yaml
-  Dog:
-    de: 2214_Dog.yaml
   Taromka_Rettungsaktion:
     de: 2219_Taromka_Rettungsaktion.yaml
   BeltPirates:
