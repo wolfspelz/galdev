@@ -185,8 +185,8 @@ entries:
   Taromka_Rettungsaktion:
     de: 2219_Taromka_Rettungsaktion.yaml
   BeltPirates:
-    de: 2222_BeltPirates.yaml
-    en: 2222_GuertelPiraten.yaml
+    de: 2222_GuertelPiraten.yaml
+    en: 2222_BeltPirates.yaml
   Die_SPATRAC_verweigert_einem_P:
     de: 2223_Die_SPATRAC_verweigert_einem_P.yaml
   Wiederaufnahme_der_Terraformun:

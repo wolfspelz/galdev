@@ -16,9 +16,9 @@ Topics: [adventure, spaceflight, crime]
 Text: |
     Long range cargo vessel LRV Void Wanderer en route from Mars orbit to trojan asteroid 911 Agamemnon carrying valuable high-tech metamaterials, filaments, and components destined for autofabs supplying the mining operations on Agamemnon. The ship is about to enter the pre-ordered in-flight refueling matter stream lane.
     Crew: 
-    - Captain Priya Nair: 52, Master's in Space Command and Operation from the Thiruvananthapuram Space Institute / Kerala. Lead several successful missions for the Kerala Space Agency before moving to the belt. Fluent in Malayalam, English, and has learned conversational Mandarin to liaise with other space agencies. Nair’s training in classical Kerala dance forms like Kathakali and Mohiniyattam has instilled in her a sense of rhythm and awareness of her body that proves invaluable in the zero-gravity environment of space. She also practices 0G yoga to maintain her physical and mental well-being amidst the stresses of space travel. 
-    - Flight Engineer Tarek Al-Kazemi: 38, MSc in Aerospace Engineering, Queen Noor University of Minerals and Automation, Dhahran. Specialized in propulsion systems at the Kalifate Space Agency Kuwait City. Innovator of a micro-repair drone system for in-flight emergencies. Fluent in Arabic, proficient in Mandarin. Al-Kazemi still has a keen interest in remote mineralogy and enjoys photographing celestial bodies from the ship's observation deck where he operates a privately owned phased array synthetic aperture telescope (PHASAT). His channel where he shares his remote mineralogy photos and spectra has 7 million followers, a mix of academic enthusiasts, industry professionals, and a growing community of space aficionados drawn by his unique blend of scientific expertise and captivating visuals. 
-    - Cargo Specialist Ling Wei: 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and have the potential to be the cause of a system-wide Kessler syndrome in the far future if left unchecked.  
+    - Captain Priya Nair, station id CMD (Command): age 52, Master's in Space Command and Operation from the Thiruvananthapuram Space Institute / Kerala. Lead several successful missions for the Kerala Space Agency before moving to the belt. Fluent in Malayalam, English, and has learned conversational Mandarin to liaise with other space agencies. Nair’s training in classical Kerala dance forms like Kathakali and Mohiniyattam has instilled in her a sense of rhythm and awareness of her body that proves invaluable in the zero-gravity environment of space. She also practices 0G yoga to maintain her physical and mental well-being amidst the stresses of space travel. 
+    - Flight Engineer Tarek Al-Kazemi, station OPS id (Operations): age 38, MSc in Aerospace Engineering, Queen Noor University of Minerals and Automation, Dhahran. Specialized in propulsion systems at the Kalifate Space Agency Kuwait City. Innovator of a micro-repair drone system for in-flight emergencies. Fluent in Arabic, proficient in Mandarin. Al-Kazemi still has a keen interest in remote mineralogy and enjoys photographing celestial bodies from the ship's observation deck where he operates a privately owned phased array synthetic aperture telescope (PHASAT). His channel where he shares his remote mineralogy photos and spectra has 7 million followers, a mix of academic enthusiasts, industry professionals, and a growing community of space aficionados drawn by his unique blend of scientific expertise and captivating visuals. 
+    - Cargo Specialist Ling Wei, station CTL id (Control): age 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and have the potential to be the cause of a system-wide Kessler syndrome in the far future if left unchecked.  
     Message log via ComLaser:
     CMD Nair: "Approaching MSRC." (Matter Stream Resupply Corridor).
     CTL Ling: "Pre-MSA established." (Pre-Matter Stream Alignment trajectory).
@@ -38,8 +38,8 @@ Text: |
     OPS Al-Kazemi: "Woah, something just emerged on IR behind the bow MS emitter, 80 k klicks, doppler sees accel matching our vector." (IR: the infrared telescope).
     CMD Nair: "Maybe a maintenance unit ... but they won’t appear out of nowhere. OPS: any reason why LIDAR did not pick it up? Sensor edge case?" (LIDAR: an active sensor using a phased laser emitter. Meaning the object might be at the edge of the sensor range).
     OPS Al-Kazemi: "Nope, it’s squarely in our view. Must have been there for a long time. Like it deflected LIDAR. Only showing up when it lit the drive." (When they started their drive).
-    CMD Nair: "OPS: any id?"
-    OPS Al-Kazemi: "No transponder signal." (All vessels – big and small – broadcast their identification code. Switching off the transponder is an indication of hostile intent. They could of course run their transponder with a fake id, but that would ease tracking from afar).
+    CMD Nair: "Control: any id?"
+    CTL Ling: "No transponder signal." (All vessels – big and small – broadcast their identification code. Switching off the transponder is an indication of hostile intent. They could of course run their transponder with a fake id, but that would ease tracking from afar).
     CMD Nair: "Control: hail them."
     [Short Pause]
     CTL Ling: "No response. Neither voice nor AMES." (Human – voice – communication attempts and the Autonomous Maintenance and Engineering System, a widely used system designed to execute maintenance and repair tasks for deep space infrastructure without the need for human intervention).
@@ -55,7 +55,7 @@ Text: |
     OPS Al-Kazemi: "Hard to say. They are coming at us under high power, no comms, no transponder, but stealth coatings and some containers look like ... well, launch cells, actually. Looks veeery suspicious." (Launch cells: standardized missile containers which start their payload directly from the built-in tube).
     CMD Nair: "Control: anything to add?"
     [Short Pause]
-    CTL Ling: "Stats has it at 92% unfriendly, 5% their malfunction, 1% ours."
+    CTL Ling: "Stats has it at 92% unfriendly, 5% their malfunction, 1% ours." (Statistical analysis indicating  a high probability of hostile intent with a low chance of this just being a misunderstanding due to equipment failure).
     CMD Nair: "Ok, then ... general notice: considering past events, lack of communication, their setup and vector, I declare the contact hostile. While this com-log goes live to base anyway, Control: please file an additional MSR for this declaration." (Mission Status Report).
     CMD Nair: "OPS: anyone else close enough to help?"
     OPS Al-Kazemi: "Not within 30 LS" (30 light seconds = 9 million kilometers).
@@ -70,7 +70,7 @@ Text: |
     CMD Nair: "I see it, 'Low threat level', pff AIs..."
     CMD Nair: "OPS: at ETA minus 20 minutes, break MSD and accelerate at max to 2 minus 20" (Detach from matter stream 20 min before contact and accelerate straight at the enemy, 2 minus 20 meaning 2 o'clock to the right and 20 degrees down).
     OPS Al-Kazemi: "Towards them, really?"
-    CMD Nair: "Assuming they are at their max, I want to add as much delta-V as possible." (Being faster than the others might prevent them from docking).
+    CMD Nair: "Assuming they are at their max, I want to add as much delta-V as possible." (Delta-V: difference in velocity. Being faster than the others might prevent them from docking).
     [Pause]
     OPS Al-Kazemi: "MSD off, powering up, prepare for MES." (Main Engine Start).
     CMD Nair: "Ack."
@@ -99,7 +99,7 @@ Text: |
     [Short Pause]
     OPS Al-Kazemi: "MES." (Main Engine Start).
     Unidentified: "What are you doing? f**k."
-    OPS Al-Kazemi: "Another missile launch. The missile 1 maneuvers ... closes in."
+    OPS Al-Kazemi: "Another missile launch. Missile 1 maneuvers ... closes in."
     [Loud blast sound and alarms.]
     OPS Al-Kazemi: "Missile 1 went off at 100 m, conventional, estimate 20 kg, unfocused, showering us with shrapnel, minor damage." (Apparently the explosion had a spherical distribution and was not configured for a focused effect. A deliberate choice by the attacker to send a strong signal rather than do irreparable damage).
     CMD Nair: "A warning shot. If that’s not enough, then I don’t know. Cut the drive, turn back to them."
@@ -112,7 +112,7 @@ Text: |
     OPS Al-Kazemi: "The S-POD is disengaging ... [Short Pause] ... back to 'Low threat level' ... what?"
     CMD Nair: "Any way to override it?"
     CTL Ling: "I am trying. S-POD is unresponsive ... uh, it's like they knew exactly how to disable it via AMES."
-    OPS Al-Kazemi: "The S-POD just vanished from CnCC." (The Command & Control Console displaying all ship components and software modules).
+    OPS Al-Kazemi: "The S-POD just vanished from CnCC. Can't even talk to it now." (CnCC: the Command & Control Console displaying all ship components and software modules).
     CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our of point of view in 7 minutes."
     [Short Pause]
     OPS Al-Kazemi: "Drone launched."
