@@ -18,7 +18,7 @@ Text: |
     Crew: 
     - Captain Priya Nair, station id CMD (Command): age 52, Master's in Space Command and Operation from the Thiruvananthapuram Space Institute / Kerala. Lead several successful missions for the Kerala Space Agency before moving to the belt. Fluent in Malayalam, English, and has learned conversational Mandarin to liaise with other space agencies. Nair’s training in classical Kerala dance forms like Kathakali and Mohiniyattam has instilled in her a sense of rhythm and awareness of her body that proves invaluable in the zero-gravity environment of space. She also practices 0G yoga to maintain her physical and mental well-being amidst the stresses of space travel. 
     - Flight Engineer Tarek Al-Kazemi, station OPS id (Operations): age 38, MSc in Aerospace Engineering, Queen Noor University of Minerals and Automation, Dhahran. Specialized in propulsion systems at the Kalifate Space Agency Kuwait City. Innovator of a micro-repair drone system for in-flight emergencies. Fluent in Arabic, proficient in Mandarin. Al-Kazemi still has a keen interest in remote mineralogy and enjoys photographing celestial bodies from the ship's observation deck where he operates a privately owned phased array synthetic aperture telescope (PHASAT). His channel where he shares his remote mineralogy photos and spectra has 7 million followers, a mix of academic enthusiasts, industry professionals, and a growing community of space aficionados drawn by his unique blend of scientific expertise and captivating visuals. 
-    - Cargo Specialist Ling Wei, station CTL id (Control): age 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and have the potential to be the cause of a system-wide Kessler syndrome in the far future if left unchecked.  
+    - Cargo Specialist Ling Wei, station CTL id (Control): age 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and may even contribute to a system-wide Kessler syndrome in the far future if left unchecked.  
     Message log via ComLaser:
     CMD Nair: "Approaching MSRC." (Matter Stream Resupply Corridor).
     CTL Ling: "Pre-MSA established." (Pre-Matter Stream Alignment trajectory).
@@ -33,7 +33,7 @@ Text: |
     CTL Ling: "Lots of scatter, their focus is getting worse and worse. I'll file a notice. But we also had better days, we’ve lost 1200 klicks of hazardust." (Navigational Hazardust: colloquial for uncaptured potentially hazardous matter stream particles, klicks = kilometers).
     CMD Nair: "Control: send it." (Captain acknowledging the complaint to Jade Rabbit Matter Stream Co., the matter stream provider).
     CTL Ling: "@JadeRabbit QACC Luminosity 5.3 Focus 83 down from 85 sustained below expected 90, burning our receiver at 11 ppms." (Human made Quality Assurance Customer Complaint in addition to automated communication between emitter end receiver, because the faulty stream is producing additional hazardust and stray particles are wearing down the receiver hardware rapidly at 11 parts per million per second, a gentle hint at potential damage claims).
-    CMD Nair: "I have a blip on the CSA, OPS: please check." (CSA: Composite Situational Awareness, the AI aggregating many signal sources to infer interesting events early even if they are below noise level on individual detectors).
+    CMD Nair: "I have a blip on CSA, OPS: please check." (CSA: Composite Situational Awareness, the AI aggregating many signal sources to infer interesting events early even if they are below noise level on individual detectors).
     OPS Al-Kazemi: "PHASAT gives a weird reading." (His private remote mineralogy telescope).
     OPS Al-Kazemi: "Woah, something just emerged on IR behind the bow MS emitter, 80 k klicks, doppler sees accel matching our vector." (IR: the infrared telescope).
     CMD Nair: "Maybe a maintenance unit ... but they won’t appear out of nowhere. OPS: any reason why LIDAR did not pick it up? Sensor edge case?" (LIDAR: an active sensor using a phased laser emitter. Meaning the object might be at the edge of the sensor range).
@@ -44,7 +44,7 @@ Text: |
     [Short Pause]
     CTL Ling: "No response. Neither voice nor AMES." (Human – voice – communication attempts and the Autonomous Maintenance and Engineering System, a widely used system designed to execute maintenance and repair tasks for deep space infrastructure without the need for human intervention).
     OPS Al-Kazemi: "It's kind o' big, not a drone. Closing quickly at 3g. CSA thinks it's a mil grade core over there." (The Composite Situational Awareness AI deducing from various sensors and known emission profiles, a military grade reactor core).
-    OPS Al-Kazemi: "They’re on a 0-intercept. ETA 40 minutes." (Zero-intercept: expected to match trajectory if nothing changes, Estimated Time of Arrival).
+    OPS Al-Kazemi: "They’re on a 0-intercept. ETA 40 minutes." (Zero-intercept: expected to match trajectory if nothing changes, ETA: Estimated Time of Arrival).
     CMD Nair: "Control: how is our re-supply status?"
     CTL Ling: "We are at 10% reaction mass. 12% in 20 minutes. Reactor fuel is 50 kg B and 2 tons H, unchanged." (Still some reaction mass for the drive and boron-11 plus hydrogen for the fusion reactor left, but not much refueled yet since the resupply phase hast just started).
     CMD Nair: "OPS: get me a visual."
@@ -56,7 +56,7 @@ Text: |
     CMD Nair: "Control: anything to add?"
     [Short Pause]
     CTL Ling: "Stats has it at 92% unfriendly, 5% their malfunction, 1% ours." (Statistical analysis indicating  a high probability of hostile intent with a low chance of this just being a misunderstanding due to equipment failure).
-    CMD Nair: "Ok, then ... general notice: considering past events, lack of communication, their setup and vector, I declare the contact hostile. While this com-log goes live to base anyway, Control: please file an additional MSR for this declaration." (Mission Status Report).
+    CMD Nair: "Ok, then ... general notice: considering past events, lack of communication, their setup and vector, I declare the contact hostile. While this com-log goes live to base anyway, Control: please file an additional MSR for this declaration." (MSR: Mission Status Report).
     CMD Nair: "OPS: anyone else close enough to help?"
     OPS Al-Kazemi: "Not within 30 LS" (30 light seconds = 9 million kilometers).
     [Short Pause]
@@ -70,7 +70,7 @@ Text: |
     CMD Nair: "I see it, 'Low threat level', pff AIs..."
     CMD Nair: "OPS: at ETA minus 20 minutes, break MSD and accelerate at max to 2 minus 20" (Detach from matter stream 20 min before contact and accelerate straight at the enemy, 2 minus 20 meaning 2 o'clock to the right and 20 degrees down).
     OPS Al-Kazemi: "Towards them, really?"
-    CMD Nair: "Assuming they are at their max, I want to add as much delta-V as possible." (Delta-V: difference in velocity. Being faster than the others might prevent them from docking).
+    CMD Nair: "Assuming they are at their max, I want to add as much delta-V as possible." (Delta-V: difference in velocity. Being faster than the others might prevent them from docking, just in case this is their goal).
     [Pause]
     OPS Al-Kazemi: "MSD off, powering up, prepare for MES." (Main Engine Start).
     CMD Nair: "Ack."
@@ -80,9 +80,10 @@ Text: |
     [Short Pause]
     OPS Al-Kazemi: "Missile launch ... ETA 90 seconds." (Approx. 90 seconds flight time).
     Unidentified: "Cut your drive NOW. Reverse accel to match course."
-    CMD Nair: "Control: any ideas? Can we dodge that?"
+    CMD Nair: "Control: any ideas? OPS: Can we dodge that?"
     [Short Pause]
     CTL Ling: "No options."
+    OPS Al-Kazemi: "Nope."
     [Pause]
     OPS Al-Kazemi: "Missile ETA 60 seconds."
     CMD Nair: "Well ... OPS: cut the drive. Turn around. Match course."
@@ -91,7 +92,7 @@ Text: |
     OPS Al-Kazemi: "Missile decelerating, matching course."
     CMD Nair: "S-POD still at 'Low threat level', WTF, we have a hostile missile hovering. That not enough? OPS: run a diagnostic on the POD."
     [Pause]
-    OPS Al-Kazemi: " S-POD self-test complete ... triggering re-assessment ... [Short Pause] ... says: 'Assessment complete: low threat level'."
+    OPS Al-Kazemi: "S-POD self-test complete ... triggering re-assessment ... [Short Pause] ... says: 'Assessment complete: low threat level'."
     CMD Nair: "OPS: turn 180, accel 2 g."
     OPS Al-Kazemi: "Captain...?"
     CMD Nair: "Do it."
@@ -102,7 +103,7 @@ Text: |
     OPS Al-Kazemi: "Another missile launch. Missile 1 maneuvers ... closes in."
     [Loud blast sound and alarms.]
     OPS Al-Kazemi: "Missile 1 went off at 100 m, conventional, estimate 20 kg, unfocused, showering us with shrapnel, minor damage." (Apparently the explosion had a spherical distribution and was not configured for a focused effect. A deliberate choice by the attacker to send a strong signal rather than do irreparable damage).
-    CMD Nair: "A warning shot. If that’s not enough, then I don’t know. Cut the drive, turn back to them."
+    CMD Nair: "A warning shot. If that’s not enough, then I don’t know. Cut the drive."
     OPS Al-Kazemi: "S-POD now shows 'High threat level', engaging ... [Short Pause] ... PDL cell open." (Point Defense missile Launcher).
     CMD Nair: "Well, that worked. Finally, we got the PODs attention."
     CTL Ling: "I detect lots of AMES signaling inbound."
@@ -111,13 +112,13 @@ Text: |
     CMD Nair: "Control: shut that down. Disable AMES-Com."
     OPS Al-Kazemi: "The S-POD is disengaging ... [Short Pause] ... back to 'Low threat level' ... what?"
     CMD Nair: "Any way to override it?"
-    CTL Ling: "I am trying. S-POD is unresponsive ... uh, it's like they knew exactly how to disable it via AMES."
+    CTL Ling: "I am trying. S-POD is unresponsive ... uh, it's like they know exactly how to disable it via AMES."
     OPS Al-Kazemi: "The S-POD just vanished from CnCC. Can't even talk to it now." (CnCC: the Command & Control Console displaying all ship components and software modules).
     CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our of point of view in 7 minutes."
     [Short Pause]
     OPS Al-Kazemi: "Drone launched."
     [Pause]
-    OPS Al-Kazemi: "1 minutes to 0-intercept."
+    OPS Al-Kazemi: "1 minute to 0-intercept."
     [Pause]
     Unidentified: "You are hereby ordered to power down the core and go to aux. If we see one erg from your radiator, you’re toast." (Aux: auxiliary power from power banks. Erg being a small energy quantity, this means that they would detect if the reactor were still running by looking at the infrared waste heat emitted by the radiators).
     CMD Nair: "OPS: do it."
@@ -125,7 +126,7 @@ Text: |
     [Short Pause]
     OPS Al-Kazemi: "And ... we are on aux."
     [Pause]
-    OPS Al-Kazemi: "CSA has them hovering at 100 meters. RCS-ing" (Coming closer on RCS thrusters).
+    OPS Al-Kazemi: "CSA has them hovering at 100 meters. RCS-ing" (CSA: the Composite Situational Awareness AI reports that they shut down their main drive and are now closing in on RCS thrusters).
     [Pause]
     OPS Al-Kazemi: "They stopped at 30 meters at our 5 minus 45" (5 o'clock meaning at the back of the vessel and 45 degrees down with respect to its axis. Top and bottom are defined by the arrangement of the acceleration seats, a rather arbitrary, but necessary definition).
     [Short Pause]
@@ -133,7 +134,7 @@ Text: |
     OPS Al-Kazemi: "Looks like one is approaching the ventral com-cluster. Two others are heading for the front hatch." (Ventral: on the lower – belly – side in relation to the main axis of the vessel. One of the two communication clusters, ventral or dorsal, should always be in contact with the base regardless of the ship's orientation in space).
     CMD Nair: "Control: can we hit them with a container? Can we blow one up or get a container between us and missile 2? Ideally both at the same time."
     CTL Ling: "I need three minutes to detach containers and give them a boost. But I have to move the pusher for the aft container." (Container pusher: a small tele-operated vessel used to move containers around in zero gee).
-    CMD Nair: "Control: do it. OPS: stop the relay-drone. Reverse its course and send it on a close miss with the Wanderer in 5 minutes. Prepare for terminal maneuvering. Sync the timing with the container activity."
+    CMD Nair: "Control: do it. OPS: stop the relay-drone. Reverse its course and send it on a close miss with the Wanderer in three minutes. Prepare for terminal maneuvering. Sync the timing with the container activity."
     Unidentified: "You are ordered to clear the hatch and stand by for cycling. Don't get creative. This is not our first mission. We've seen it all. Containers thrown at us. Drive as a weapon. Com-laser blinding. Drone ramming. Younameit. Seriously, we take no risks. Any threat to our mission and the missile will blow you apart. Bridge first. Don't even think about it."
     OPS Al-Kazemi: "Second missile maneuvering, approaching CLM ... 20 meters ... should come into view now ... there it is ... that's a pretty Suzume Mark 8." (CLM: Command and Living Module, Suzume: a standard short range intercept missile with enough brains, sensors, and propulsion to follow any target autonomously, especially civilian freighters).
     CMD Nair: "Control: stop the container activity. The missile is on top of us. They could detonate it without being hit themselves. Our body shields them. Their 5 minus 45 position was well chosen."

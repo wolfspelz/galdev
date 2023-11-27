@@ -70,7 +70,7 @@ Text: |
     KMDO Nair: "Ich sehe es, 'Niedrige Bedrohungsstufe', pff KIs ..."
     KMDO Nair: "Betrieb: bei GAZ minus 20 Minuten, MSK abbrechen und beschleunigen mit max auf 2 minus 20" (20 Minuten vor dem Kontakt vom Materiestrom lösen und direkt auf den Feind zu beschleunigen, 2 minus 20 bedeutet 2 Uhr nach rechts und 20 Grad nach unten).
     BETR Al-Kazemi: "Zu denen, wirklich?"
-    KMDO Nair: "Angenommen, sie sind auf ihrem Maximum, dann möchte ich so viel Delta-V wie möglich." (Delta-V: Geschwindigkeitsunterschied. Schneller zu sein als die anderen, könnte sie am Andocken hindern).
+    KMDO Nair: "Angenommen, sie sind auf ihrem Maximum, dann möchte ich so viel Delta-V wie möglich." (Delta-V: Geschwindigkeitsunterschied. Schneller zu sein als die anderen, könnte sie am Andocken hindern, falls das ihre Absicht ist).
     [Pause]
     BETR Al-Kazemi: "MSK aus, Antrieb fährt hoch, vorbereiten auf HTS" (Materiestromkopplung, Haupttriebwerksstart).
     KMDO Nair: "Bestätigt."
@@ -80,9 +80,10 @@ Text: |
     [Kurze Pause]
     BETR Al-Kazemi: "Raketenstart ... GAZ 90 Sekunden." (Geschätzte Ankunftszeit der Rakete ca. 90 Sekunden).
     Nicht identifiziert: "Schalten Sie Ihren Antrieb ab. Drehen Sie um, und passen sie den Kurs an. SOFORT".
-    KMDO Nair: "Kontrolle: irgendwelche Ideen? Können wir ausweichen?"
+    KMDO Nair: "Kontrolle: irgendwelche Ideen? Betrieb: können wir ausweichen?"
     [Kurze Pause]
     KTRL Ling: "Keine Optionen." 
+    BETR Al-Kazemi: "Nada."
     [Pause]
     BETR Al-Kazemi: "Rakete GAZ 60 Sekunden." (Geschätzte Ankunftszeit)
     KMDO Nair: "OK... Betrieb: Antrieb aus. Dann umdrehen und langsam Kurs anpassen."
@@ -133,7 +134,7 @@ Text: |
     BETR Al-Kazemi: "Anscheinend nähert sich einer dem ventralen Kommunikationscluster. Zwei andere kommen Richtung unserer Frontluke." (Ventral: auf der Unterseite – Bauchseite – bezogen auf die Hauptachse des Schiffes. Einer der beiden Kommunikationscluster, ventral oder dorsal, sollte immer Kontakt zur Basis haben egal wie das Schiff im Raum steht). 
     KMDO Nair: "Kontrolle: können wir sie mit einem Container treffen? Können wir einen Container sprengen oder einen Container zwischen uns und die Rakete 2 bringen? Am besten beides gleichzeitig."
     KTRL Ling: "Ich brauche drei Minuten, um die Container freizumachen und ihnen einen Schub zu geben. Aber ich muss den Schieber benutzen für den hinteren Container." (Containerschieber: ein kleines Raumfahrzeug, das zum Verschieben von Containern benutzt wird). 
-    KMDO Nair: "Kontrolle: mach' es. Betrieb: Relais-Drohne stop. Kehre den Kurs um und schicke sie in 5 Minuten dicht an uns vorbei. Bereite dich auf Manöver im Endanflug vor. Koordiniere das Timing mit der Container-Aktion."
+    KMDO Nair: "Kontrolle: mach' es. Betrieb: Relais-Drohne stop. Kehre den Kurs um und schicke sie in drei Minuten dicht an uns vorbei. Bereite dich auf Manöver im Endanflug vor. Koordiniere das Timing mit der Container-Aktion."
     Nicht identifiziert: "Sie werden angewiesen, die Luke zu räumen und sich für den Schleusenzyklus bereitzuhalten. Versucht nicht kreativ zu werden. Das ist nicht unsere erste Mission. Wir haben schon viel gesehen. Container, die auf uns geworfen werden. Der Antrieb als Waffe. Blenden mit Kommunikationslaser. Drohnen, die uns rammen. Alles Mögliche. Ernsthaft, wir gehen kein Risiko ein. Eine Bedrohung unserer Mission, und die Rakete jagt euch in die Luft. Zuerst die Brücke. Denkt nicht mal dran."
     BETR Al-Kazemi: "Zweite Rakete manövriert, nähert sich KWM ... 20 Meter ... sollte jetzt in Sicht kommen ... da ist sie ... eine schöne Suzume Typ 8." (KWM: Kommando- und Wohnmodul, Suzume: Standard-Abfangrakete für kurze Entfernungen mit genug Intelligenz, Sensoren und Antrieb, um jedes Ziel autonom zu verfolgen, vor allem jedes zivile Frachtschiff).
     KMDO Nair: "Kontrolle: stop' die Container-Aktion. Die Rakete ist direkt über uns. Sie können sie explodieren lassen, ohne selbst getroffen zu werden. Unser Schiffskörper schirmt sie ab. Ihre Position 5 minus 45 war gut gewählt."
