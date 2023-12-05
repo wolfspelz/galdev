@@ -109,6 +109,9 @@ entries:
   1000InSpace:
     de: 2136_1000_in_Space.yaml
     en: 2136_1000_in_Space.yaml
+  Big5:
+    de: 2141_Big5.yaml
+    en: 2141_Big5.yaml
   Eter:
     de: 2147_Eter.yaml
   Gemini:
@@ -201,9 +204,6 @@ entries:
     de: 2233_Lunar_Skyhook_Eine_Orbitalroto.yaml
   Eine_atomare_Explosion_zerstör:
     de: 2236_Eine_atomare_Explosion_zerstör.yaml
-  Big5:
-    de: 2239_Big5.yaml
-    en: 2239_Big5.yaml
   Beschluss_von_AntiTrustGesetze:
     de: 2241_Beschluss_von_AntiTrustGesetze.yaml
   Bewaffneter_Kampf_zwischen_Sch:
