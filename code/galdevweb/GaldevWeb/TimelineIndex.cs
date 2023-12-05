@@ -20,6 +20,18 @@
             CreateAliases();
         }
 
+        public void Reload()
+        {
+            Unload();
+            Load();
+        }
+
+        private void Unload()
+        {
+            _languageById.Clear();
+            _timelineByLang.Clear();
+        }
+
         private void CreateAliases()
         {
             foreach (var kv in _timelineByLang) {
