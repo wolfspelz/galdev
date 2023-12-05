@@ -38,6 +38,7 @@ a.navbar-brand {
     .h2, h2 {
         font-size: 1.5rem;
     }
+
     .h3, h3 {
         font-size: 1.25rem;
     }
@@ -144,6 +145,7 @@ h3.gd-entry-headline {
 img.gd-timeline-next, img.gd-timeline-previous {
     max-height: 1em;
 }
+
 img.gd-timeline-next-left, img.gd-timeline-previous-left {
     margin-right: 0.5em;
     padding: 0 0 0.2em 0;
@@ -156,6 +158,36 @@ img.gd-timeline-next-right, img.gd-timeline-previous-right {
 
 img.gd-blog-post-image {
     filter: drop-shadow(5px 5px 5px #505050);
+}
+
+@media (min-width: 576px) {
+    #iTarget p img {
+        max-width: 520px;
+    }
+}
+
+@media (min-width: 768px) {
+    #iTarget p img {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 992px) {
+    #iTarget p img {
+        max-width: 940px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #iTarget p img {
+        max-width: 1120px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #iTarget p img {
+        max-width: 1300px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -189,7 +221,7 @@ img.gd-blog-post-image {
     transform: translateX(0);
 }
 
-.carousel-control-next, 
+.carousel-control-next,
 .carousel-control-prev {
     width: 80px;
 }
@@ -213,8 +245,7 @@ img.gd-blog-post-image {
 .carousel-control-next:hover,
 .carousel-control-next:focus,
 .carousel-control-prev:hover,
-.carousel-control-prev:focus
-{
+.carousel-control-prev:focus {
     opacity: .5;
 }
 
