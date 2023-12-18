@@ -1,28 +1,21 @@
 entries:
   GalerieFrauen:
     de: de_GalerieFrauen.yaml
-    en: de_GalerieFrauen.yaml
+    en: en_GalerieFrauen.yaml
   GermanFilmNComicCon23:
     de: de_GermanFilmNComicCon23.yaml
-    en: de_GermanFilmNComicCon23.yaml
   BerlinScienceWeek23:
     de: de_BerlinScienceWeek23.yaml
-    en: de_BerlinScienceWeek23.yaml
   InterviewDreieichCon23:
     de: de_InterviewDreieichCon23.yaml
-    en: de_InterviewDreieichCon23.yaml
   DreieichCon23:
     de: de_DreieichCon23.yaml
-    en: de_DreieichCon23.yaml
   BuCon23:
     de: de_BuCon23.yaml
-    en: de_BuCon23.yaml
   lego:
     de: de_lego.yaml
-    en: de_lego.yaml
   discord:
     de: de_discord.yaml
-    en: de_discord.yaml
   Megastrukturen:
     de: de_Megastrukturen.yaml
   spacedays22:
