@@ -249,6 +249,32 @@ img.gd-blog-post-image {
     opacity: .5;
 }
 
+div.stage-Index {
+    background-image: url(/images/site/stage-VenusFreighter-800x200.jpg);
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+}
+
+@media (min-width: 800px) {
+    div.stage-Index {
+        background-image: url(/images/site/stage-VenusFreighter-1600x400.jpg);
+        background-position: center;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1600px) {
+    div.stage-Index {
+        background-image: url(/images/site/stage-VenusFreighter-3000x500.jpg);
+        background-position: center;
+        width: 100%;
+        height: 500px;
+    }
+}
+
 div.modal-content img#iModalDialogImage {
     box-shadow: 0px 0px 20px #000000;
 }
