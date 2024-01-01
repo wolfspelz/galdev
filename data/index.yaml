@@ -185,9 +185,6 @@ entries:
   Dekompression:
     de: 2209_Dekompression.yaml
     en: 2209_Decompression.yaml
-  SpaceStationLifeCycle:
-    de: 2219_SpaceStationLifeCycle.yaml
-    en: 2219_SpaceStationLifeCycle.yaml
   BeltPirates:
     de: 2222_GuertelPiraten.yaml
     en: 2222_BeltPirates.yaml
@@ -203,6 +200,9 @@ entries:
     de: 2231_Unabhängigkeit_von_VegasLuna.yaml
   Lunar_Skyhook_Eine_Orbitalroto:
     de: 2233_Lunar_Skyhook_Eine_Orbitalroto.yaml
+  SpaceStationLifeCycle:
+    de: 2234_SpaceStationLifeCycle.yaml
+    en: 2234_SpaceStationLifeCycle.yaml
   Eine_atomare_Explosion_zerstör:
     de: 2236_Eine_atomare_Explosion_zerstör.yaml
   Beschluss_von_AntiTrustGesetze:
