@@ -91,7 +91,7 @@
                     var fileName = fileByLang.Value.AsString;
 
                     TimelineEntry? entry = GetEntryFromFile(lang, name, folderPath, fileName);
-                    if (entry != null) {
+                    if (entry != null && !entry.Tags.Contains("_hidden")) {
                         _timelineByLang[lang].Add(name, entry);
                     }
                 }
