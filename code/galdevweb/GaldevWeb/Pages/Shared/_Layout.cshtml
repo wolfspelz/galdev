@@ -80,32 +80,33 @@
         </nav>
     </header>
 
-    <div class="content">
-        <div class="row mx-auto my-auto justify-content-center">
-            @{
-                var url = Context.Request.Path;
-                var f = Crc32.ToDouble(url);
-                var activeItem = (int) Math.Floor(Model.Carousel.Count * f);
-                var carouselInterval = 1000000000;
-                if (ViewData["Active"] is string s && s == "Index") {
-                    carouselInterval = 10000;
-                }
+    <div-- class="content">
+
+        <!--div class="row mx-auto my-auto justify-content-center">
+        @{
+            var url = Context.Request.Path;
+            var f = Crc32.ToDouble(url);
+            var activeItem = (int)Math.Floor(Model.Carousel.Count * f);
+            var carouselInterval = 1000000000;
+            if (ViewData["Active"] is string s && s == "Index") {
+                carouselInterval = 10000;
             }
+        }
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="@carouselInterval">
                 <div class="carousel-inner" role="listbox">
-                    @for (int i = 0; i < Model.Carousel.Count; i++) {
-                        var item = Model.Carousel[i];
-                        <div class="carousel-item @(i == activeItem ? "active" : "")">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="/Image/@item.Image" class="img-fluid">
+        @for (int i = 0; i < Model.Carousel.Count; i++) {
+            var item = Model.Carousel[i];
+                            <div class="carousel-item @(i == activeItem ? "active" : "")">
+                                <div class="col-md-3">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="/Image/@item.Image" class="img-fluid">
+                                        </div>
+                                        <div class="card-img-overlay" onclick="location.href = '@Links.GetPathByPage("/Timeline", null, new { name = item.Link })'">@*@item.Description*@</div>
                                     </div>
-                                    <div class="card-img-overlay" onclick="location.href = '@Links.GetPathByPage("/Timeline", null, new { name = item.Link })'">@*@item.Description*@</div>
                                 </div>
                             </div>
-                        </div>
-                    }
+        }
 
                 </div>
                 <a class="carousel-control-prev w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
@@ -115,9 +116,8 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
             </div>
-        </div>
-
-        <script>
+        </div-->
+        <!--script>
             let items = document.querySelectorAll('.carousel .carousel-item')
             items.forEach((el) => {
                 const minPerSlide = 4
@@ -132,21 +132,37 @@
                     next = next.nextElementSibling
                 }
             })
-        </script>
+        </script-->
 
         <div class="container">
+            @if ((ViewData["Active"] ?? "").ToString() == "Index") {
+                <div class="stage-Index"></div>
+                <div class="container">
+                    <div class="col-12 text-end" style="position:relative; top:-30px; color: #ffffff">
+                        @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre.",
+                    ["en-US"] = () => "A bubble freighter in the upper Venus upper atmosphere crusing above the clouds."
+                    })
+                    </div>
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+            } else {
+                <img src="/images/site/stage-VenusFreighter-1600x200.jpg" style="width:100%;" class="img-fluid" alt="Venus Freighter" />
+            }
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div>
 
-    </div>
-
-    <footer class="border-top footer text-muted text-center">
-        <div class="container">
-            &copy; 2000 - 2023 (Wolf) - <a asp-area="" asp-page="/Privacy">Impressum / Legal / Privacy / DSGVO</a>
         </div>
-    </footer>
+
+        <footer class="border-top footer text-muted text-center">
+            <div class="container">
+                &copy; 2000 - 2023 (Wolf) - <a asp-area="" asp-page="/Privacy">Impressum / Legal / Privacy / DSGVO</a>
+            </div>
+        </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

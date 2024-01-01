@@ -5,7 +5,7 @@
     var colSpec = ViewData["bootstrap-card-column-spec"] ?? "col-sm-6 col-lg-4";
 }
 
-<div class="row" data-masonry="{ 'percentPosition': true, 'isLayoutInstant': true }">
+<div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
     @foreach (var card in Model) {
         <div class="@colSpec my-2">
             <div class="card">
