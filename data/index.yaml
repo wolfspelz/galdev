@@ -185,8 +185,9 @@ entries:
   Dekompression:
     de: 2209_Dekompression.yaml
     en: 2209_Decompression.yaml
-  Taromka_Rettungsaktion:
-    de: 2219_Taromka_Rettungsaktion.yaml
+  SpaceStationLifeCycle:
+    de: 2219_SpaceStationLifeCycle.yaml
+    en: 2219_SpaceStationLifeCycle.yaml
   BeltPirates:
     de: 2222_GuertelPiraten.yaml
     en: 2222_BeltPirates.yaml
