@@ -15,15 +15,19 @@
     </div>
 </div>
 
+@{
+    var cnt = 0;
+}
 @foreach (var entry in Model.List) {
+    cnt++;
     <div class="row mt-1" style="position: relative">
         @if (string.IsNullOrEmpty(entry.Image)) {
             <div class="col-7 gd-list-item">
-                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
+                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a> [@entry.TextLen] <span style="color:white">#@cnt</span>
             </div>
         } else {
             <div class="col-7 gd-list-item">
-                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle" onmouseover="document.getElementById('iHoverImage-@entry.Name').style.display='block'" onmouseout="document.getElementById('iHoverImage-@entry.Name').style.display='none'">@entry.Year @entry.Title</a>
+                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle" onmouseover="document.getElementById('iHoverImage-@entry.Name').style.display='block'" onmouseout="document.getElementById('iHoverImage-@entry.Name').style.display='none'">@entry.Year @entry.Title</a> [@entry.TextLen] <span style="color:white">#@cnt</span>
             </div>
             <div class="col-5" id="iHoverImage-@entry.Name" style="display:none; position: absolute; right: 0px;">
                 <img class="gd-list-image float-end img-fluid" src="/Image/@entry.Image" />
