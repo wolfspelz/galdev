@@ -1,6 +1,6 @@
 Name: Yurep
 Year: 2176
-Title: Der Zusammenbruch eines der führenden Reputationssysteme yu–rep führt zu bedeutenden Verlusten in der Realwirtschaft
+Title: Der Zusammenbruch eines Reputationssystems
 Short: Die Weltwirtschaft schrumpft um 9%. Gegen 2190 schwindet die Bedeutung von Reputationsbewertungen. Kapazitätssysteme, in denen man reale Produktionskapazitäten und -absichten abbildet, werden wichtiger...
 Image: Yurep.jpg
 Headline: "Wirtschaftskrise: Zusammenbruch der Reputationssysteme"
@@ -16,6 +16,7 @@ Author: Heiner Wolf
 Tags: [Wirtschaft, Krise, Reputation, Zahlungssystem]
 Topics: [economy]
 Text: |
+  Der Zusammenbruch eines der führenden Reputationssysteme yu–rep führt zu bedeutenden Verlusten in der Realwirtschaft.     
   Die Weltwirtschaft schrumpft um 9%. In den Folgejahren wächst die Wirtschaft um 6% bzw. 4% und kompensiert so den Ausfall. Die von yu-rep ausgelöste Wirtschaftskrise offenbart andere Schieflagen der globalen Wirtschaft, vor allem die Überbewertung von Reputation gegenüber Kapazität und die Zersplitterung der Bewertungsnetzwerke.
   Kapazitätssysteme, in denen man reale Produktionskapazitäten abbildet, werden wichtiger, darunter hCap für Endverbraucher-Hardware aller Art, Recap für Fab-Input (Resource-Cap), CRAP für Kreativleistungen, Design und Modellierung, e-cap für Informationsverarbeitung (Eter-basiert). Gegen 2190 schwindet die Bedeutung von Reputationsbewertungen. 2195, fast 20 Jahre nach der Rep-Krise, migrieren mehrere führende Rep- und Cap-Systeme zur qui-Allianz. Während Reputationssysteme dazu tendieren, Verhalten in der Vergangenheit zu bewerten, dominiert bei Kapazitätssystemen der mögliche zukünftige Output.
   Die Rep/Cap-Synthese durch qui-Netze erweist sich als stabile Grundlage für das Wirtschaftssystem, stabiler jedenfalls als die bisherigen Ansätze, wie begrenzt verfügbare Stellvertreter (LAP Währung = Limited Availability Proxy Currency), zentralisierte Buchhaltung mit Fiat-Währungen, verteilte Kryptostreams und reine Reputationssysteme. Mit quiX, dem qui-Exchange, entwickelt sich ein delokalisierter Austausch verschiedener qui-Netze. quiX ist architekturbedingt nicht dominierbar, d.h. keine lokale Macht kann quiX manipulieren. Das ist ein wesentlicher Erfolgsfaktor von qui.
