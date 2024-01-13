@@ -211,8 +211,9 @@ entries:
     de: 2244_Bewaffneter_Kampf_zwischen_Sch.yaml
   Enklave:
     de: 2246_Enklave.yaml
-  Zerstörung_der_GeminiKolonie_L:
-    de: 2248_Zerstörung_der_GeminiKolonie_L.yaml
+  GeminiDisaster:
+    de: 2248_GeminiDisaster.yaml
+    en: 2248_GeminiDisaster.yaml
   Nach_einer_20jährigen_Wachstum:
     de: 2250_Nach_einer_20jährigen_Wachstum.yaml
   Weltfreundschaft:
