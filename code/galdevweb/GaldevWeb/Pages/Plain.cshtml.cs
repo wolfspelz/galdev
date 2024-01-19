@@ -76,10 +76,10 @@ namespace GaldevWeb.Pages
 
                 var entryText = entryString.ToString();
                 var limitedText = entryText;
-                if (entryText.Length > 32000) {
-                    limitedText = entryText.Substring(0, 32000);
-                    limitedText += "... (truncated)";
-                }
+                //if (entryText.Length > 32000) {
+                //    limitedText = entryText.Substring(0, 32000);
+                //    limitedText += "... (truncated)";
+                //}
                 sb.Append(limitedText);
                 sb.Append(" |");
                 sb.Append('\n');
