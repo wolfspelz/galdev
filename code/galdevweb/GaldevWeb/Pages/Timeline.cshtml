@@ -61,6 +61,9 @@
                         <span class="gd-entry-year">@entry.Year</span>
                     </a>
                     <span class="gd-entry-title">@entry.Title</span>
+                    <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle" asp-route-lang="@Model.UiCultureName">
+                       <span class="gd-link-icon"></span>
+                    </a>
 
                 </h3>
 
