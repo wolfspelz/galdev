@@ -70,7 +70,7 @@ text: |
             };
 
             // Act
-            sut.Load();
+            sut.Load(e => true);
 
             // Assert
             Assert.AreEqual("a", sut.GetEntry("en", "a").Name);

@@ -4,12 +4,3 @@
     Layout = "_PlainLayout";
 }
 
-@foreach (var entry in Model.List) {
-    <div>
-        <p>MARK_TITLE @(entry.Year) @entry.Title</p>
-        MARK_TEXT
-        @foreach (var t in entry.Text) {
-            <p>@t</p>
-        }
-    </div>
-}

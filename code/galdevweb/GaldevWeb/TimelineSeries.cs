@@ -51,8 +51,6 @@ namespace GaldevWeb
             return null;
         }
 
-        public delegate bool TimelineEntryCondition(TimelineEntry entry);
-
         public TimelineEntryList GetFilteredList(TimelineEntryCondition? filter = null)
         {
             var result = new TimelineEntryList();
