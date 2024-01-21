@@ -375,9 +375,6 @@ entries:
   #   en: 2388_MetricAccident.yaml
   Biostasis:
     de: 2389_Biostasis.yaml
-  NinthPlanet:
-    de: 2390_Planet9.yaml
-    en: 2390_NinthPlanet.yaml
   Schmerzen:
     de: 2392_Schmerzen.yaml
   Starprobe:
@@ -386,16 +383,17 @@ entries:
     de: 2397_Bison.yaml
   Raumkrieg_zwischen_Vesta_und_m:
     de: 2400_Raumkrieg_zwischen_Vesta_und_m.yaml
+  Erster_Flug_unter_Raummodulati:
+    de: 2401_Erster_Flug_unter_Raummodulati.yaml
   Savant:
     de: 2403_Savant.yaml
-  Erster_Flug_unter_Raummodulati:
-    de: 2406_Erster_Flug_unter_Raummodulati.yaml
-  Der_Rat_der_Koalition_beschlie:
-    de: 2408_Der_Rat_der_Koalition_beschlie.yaml
-  Nach_mehreren_schweren_Unfälle:
-    de: 2409_Nach_mehreren_schweren_Unfälle.yaml
+  2409_FTLLimit:
+    de: 2409_Überlichtverbot.yaml
   Kosmologie:
     de: 2410_Kosmologie.yaml
+  NinthPlanet:
+    de: 2412_Planet9.yaml
+    en: 2412_NinthPlanet.yaml
   Der_ÜLVerkehr_steigt_im_innere:
     de: 2415_Der_ÜLVerkehr_steigt_im_innere.yaml
   Offener_Ausbruch_der_Konfronta:
