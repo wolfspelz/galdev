@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
-using System.Reflection;
 
 namespace GaldevWeb
 {
@@ -40,7 +39,7 @@ namespace GaldevWeb
                 IndexFilePath = myConfig.DataIndexPath,
                 Log = myLogger,
             };
-            timeIndex.Load();
+            timeIndex.Load(entry => !entry.Tags.Contains("_hidden") && !entry.Tags.Contains("_noweb"));
 
             Don.t = () => {
                 BlogIndex? blog = new BlogIndex {

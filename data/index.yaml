@@ -123,6 +123,8 @@ entries:
   SpacePatrol:
     de: 2158_SpacePatrol.yaml
     en: 2158_SpacePatrol.yaml
+  SGQS:
+    de: 2160_SGQS.yaml
   NanoWars:
     de: 2162_NanoWars.yaml
   Yksityiskohta:
@@ -161,8 +163,6 @@ entries:
   NeosozTerror:
     de: 2192_NeosozTerror.yaml
     en: 2192_NeosozTerror.yaml
-  SGQS:
-    de: 2194_SGQS.yaml
   LunarRevolt:
     de: 2197_Mondaufstand.yaml
     en: 2197_LunarRevolt.yaml
@@ -176,6 +176,9 @@ entries:
   TetrachromaticVision:
     de: 2204_Entdeckung_der_tetrachromaten_.yaml
     en: 2204_TetrachromaticVision.yaml
+  # MetricExperiment:
+  #   de: 2207_MetricExperiment.yaml
+  #   en: 2207_MetricExperiment.yaml
   PalladianLeague:
     de: 2205_PalladischeLiga.yaml
     en: 2205_PalladianLeague.yaml
@@ -207,10 +210,15 @@ entries:
     de: 2236_Eine_atomare_Explosion_zerstör.yaml
   Beschluss_von_AntiTrustGesetze:
     de: 2241_Beschluss_von_AntiTrustGesetze.yaml
+  GrundarfjördurZilberstein_Theo:
+    de: 2243_GrundarfjördurZilberstein_Theo.yaml
   Bewaffneter_Kampf_zwischen_Sch:
     de: 2244_Bewaffneter_Kampf_zwischen_Sch.yaml
   Enklave:
     de: 2246_Enklave.yaml
+  # MetricShift:
+  #   de: 2247_MetricShift.yaml
+  #   en: 2247_MetricShift.yaml
   GeminiDisaster:
     de: 2248_GeminiDisaster.yaml
     en: 2248_GeminiDisaster.yaml
@@ -239,6 +247,8 @@ entries:
     de: 2269_Am_dreihundertsten_Jahrestag_d.yaml
   Blüte_der_interplanetaren_Zivi:
     de: 2270_Blüte_der_interplanetaren_Zivi.yaml
+  Fraktal:
+    de: 2271_Fraktal.yaml
   Unabhängigkeit_von_MarsTerrito:
     de: 2273_Unabhängigkeit_von_MarsTerrito.yaml
   Lokaler_Ausbruch_unkontrollier:
@@ -259,8 +269,9 @@ entries:
     de: 2282_Gründung_der_japanischen_Repub.yaml
   Separationsbeschluss_der_Erde:
     de: 2284_Separationsbeschluss_der_Erde.yaml
-  GrundarfjördurZilberstein_Theo:
-    de: 2287_GrundarfjördurZilberstein_Theo.yaml
+  # MetricTrack:
+  #   de: 2287_MetricTrack.yaml
+  #   en: 2287_MetricTrack.yaml
   Ein_Orbitalrotor_für_die_Erde:
     de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
   Ausschluss_der_Asteroidenbasis:
@@ -281,6 +292,9 @@ entries:
     de: 2305_Onong.yaml
   Zweiter_Mittelmeerkrieg:
     de: 2306_Zweiter_Mittelmeerkrieg.yaml
+  # MetricDrive:
+  #   de: 2307_MetricDrive.yaml
+  #   en: 2307_MetricDrive.yaml
   Friedenskonvention_der_Koaliti:
     de: 2308_Friedenskonvention_der_Koaliti.yaml
   Nach_einem_Aufstand_auf_Vesta_:
@@ -327,8 +341,8 @@ entries:
     de: 2351_Baubeginn_des_Giant_Gravitic_I.yaml
   Friedliche_Eingliederung_von_V:
     de: 2354_Friedliche_Eingliederung_von_V.yaml
-  Fraktal:
-    de: 2357_Fraktal.yaml
+  Raumschiffe_mit_unkonventionel:
+    de: 2357_Raumschiffe_mit_unkonventionel.yaml
   FreierBereichVegas: 
     de: 2359_Vegas.yaml
     en: 2359_FreeAreaVegas.yaml
@@ -348,8 +362,6 @@ entries:
     de: 2375_Beim_Bruch_der_Hsjuang_Station.yaml
   Kopernikus:
     de: 2376_Kopernikus.yaml
-  Raumschiffe_mit_unkonventionel:
-    de: 2379_Raumschiffe_mit_unkonventionel.yaml
   Ein_Virus_befällt_weite_Teile_:
     de: 2382_Ein_Virus_befällt_weite_Teile_.yaml
   Massenflucht_von_12_Millionen_:
@@ -358,6 +370,9 @@ entries:
     de: 2384_Der_erste_Raumkrümmer_wird_als.yaml
   Schwächung_der_solaren_Koaliti:
     de: 2387_Schwächung_der_solaren_Koaliti.yaml
+  # MetricAccident:
+  #   de: 2388_MetricAccident.yaml
+  #   en: 2388_MetricAccident.yaml
   Biostasis:
     de: 2389_Biostasis.yaml
   NinthPlanet:

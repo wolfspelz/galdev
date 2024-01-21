@@ -1,5 +1,7 @@
 ﻿namespace GaldevWeb
 {
+    public delegate bool TimelineEntryCondition(TimelineEntry entry);
+
     public class TimelineIndex
     {
         public IDataProvider DataProvider = new TabConvertingFileDataProvider();
@@ -11,10 +13,14 @@
 
         public TimelineSeries GetSeriesForLanguage(string lang) => _timelineByLang[lang];
 
-        public void Load()
+        private TimelineEntryCondition _lastFilter = (e) => true;
+
+        public void Load(TimelineEntryCondition filter)
         {
+            _lastFilter = filter;
+
             LoadLanguages();
-            LoadEntries();
+            LoadEntries(filter);
             ConnectEntries();
             CreateTopics();
             CreateAliases();
@@ -23,7 +29,7 @@
         public void Reload()
         {
             Unload();
-            Load();
+            Load(_lastFilter);
         }
 
         private void Unload()
@@ -73,7 +79,7 @@
             }
         }
 
-        private void LoadEntries()
+        private void LoadEntries(TimelineEntryCondition filter)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
@@ -91,10 +97,13 @@
                     var fileName = fileByLang.Value.AsString;
 
                     TimelineEntry? entry = GetEntryFromFile(lang, name, folderPath, fileName);
-                    if (entry != null && !entry.Tags.Contains("_hidden")) {
-                        _timelineByLang[lang].Add(name, entry);
+                    if (entry != null) {
+                        if (filter == null || filter(entry)) {
+                            _timelineByLang[lang].Add(name, entry);
+                        }
                     }
                 }
+
             }
         }
 
