@@ -216,9 +216,9 @@ entries:
     de: 2244_Bewaffneter_Kampf_zwischen_Sch.yaml
   Enklave:
     de: 2246_Enklave.yaml
-  # MetricShift:
-  #   de: 2247_MetricShift.yaml
-  #   en: 2247_MetricShift.yaml
+  MetricShift:
+    de: 2247_MetricShift.yaml
+    en: 2247_MetricShift.yaml
   GeminiDisaster:
     de: 2248_GeminiDisaster.yaml
     en: 2248_GeminiDisaster.yaml
