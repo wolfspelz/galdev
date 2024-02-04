@@ -197,6 +197,12 @@
 
     {
         cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Link"] = Model.I18n.String(path: "Box/SocialMedia/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "https://github.com/wolfspelz/galdev/tree/main/data/de",
+                        ["en-US"] = () => "https://github.com/wolfspelz/galdev/tree/main/data/en",
+                    }),
+                    ["ImgSrc"] = "/images/Index/software.jpg",
+                    ["ImgAlt"] = "software screen",
                     ["Title"] = Model.I18n.String(path: "Box/Project/Title", i18n: new StringGeneratorI18n {
                         ["de-DE"] = () => "Softwareprojekt",
                         ["en-US"] = () => "Software Project",
