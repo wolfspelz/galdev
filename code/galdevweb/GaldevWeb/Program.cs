@@ -59,6 +59,12 @@ namespace GaldevWeb
 
             var app = builder.Build();
 
+            app.UseForwardedHeaders(new ForwardedHeadersOptions {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+                KnownNetworks = { },
+                KnownProxies = { },
+            });
+
             //if (!app.Environment.IsDevelopment()) {
             //    app.UseExceptionHandler("/Error");
             //}
@@ -88,10 +94,6 @@ namespace GaldevWeb
             app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
-            });
-
-            app.UseForwardedHeaders(new ForwardedHeadersOptions {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
             app.Run();

@@ -5,18 +5,18 @@
 @{
     ViewData["Active"] = "Blog";
 
-    var ImageBaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}/blog/";
+    var BaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Headers["X-Forwarded-Proto"].FirstOrDefault() ?? UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}";
 
     if (Model.Post != null) {
         ViewData["Title"] = Model.Post.Title;
         ViewData["MetaDescription"] = Model.Post.Summary;
         ViewData["MetaFacebookTitle"] = Model.Post.Title;
         ViewData["MetaFacebookDescription"] = Model.Post.Summary;
-        ViewData["MetaFacebookImage"] = ImageBaseUrl + Model.Post.Image;
+        ViewData["MetaFacebookImage"] = BaseUrl + "/blog/" + Model.Post.Image;
         ViewData["MetaFacebookImageAlt"] = Model.Post.Title;
         ViewData["MetaTwitterTitle"] = Model.Post.Title;
         ViewData["MetaTwitterDescription"] = Model.Post.Summary;
-        ViewData["MetaTwitterImage"] = ImageBaseUrl + Model.Post.Image;
+        ViewData["MetaTwitterImage"] = BaseUrl + "/blog/" + Model.Post.Image;
     }
 }
 
@@ -43,7 +43,7 @@
 
             <p class="mt-4 mb-4">
                 @if (string.IsNullOrEmpty(Model.Post.Html)) {
-                    <img src="@ImageBaseUrl@Model.Post.Image" class="img-fluid gd-blog-post-image" alt="@Model.Post.Title" />
+                    <img src="@BaseUrl/blog/@Model.Post.Image" class="img-fluid gd-blog-post-image" alt="@Model.Post.Title" />
                 } else {
                     <text>
                         @Html.Raw(Model.Post.Html)
@@ -104,7 +104,7 @@
 
     foreach (var post in Model.Index.Where(p => p.Language == Model.Lang)) {
         cards.Add(Node.From(new Dictionary<string, string> {
-                        ["ImgSrc"] = $"{ImageBaseUrl}{post.Image}",
+                        ["ImgSrc"] = $"{BaseUrl}/blog/{post.Image}",
                         ["ImgAlt"] = post.Title,
                         ["Link"] = Links.GetPathByPage("/Blog", null, new { name = post.SeoTitle }) ?? "",
                         ["Title"] = post.Title,
@@ -125,3 +125,4 @@
 }
 
 @await Html.PartialAsync("_MarkdownConverterPartial")
+
