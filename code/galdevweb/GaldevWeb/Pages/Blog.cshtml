@@ -126,4 +126,8 @@
 
 @await Html.PartialAsync("_MarkdownConverterPartial")
 
-<span>@ImageBaseUrl</span>
+<ul>
+    @foreach (var header in UrlHelper.ActionContext.HttpContext.Request.Headers) {
+        <li><strong>@header.Key:</strong> @header.Value</li>
+    }
+</ul>
