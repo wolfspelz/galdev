@@ -15,11 +15,13 @@
             foreach (var entryNode in entriesNode) {
                 var name = entryNode.Key;
                 foreach (var fileByLang in entryNode.Value.AsDictionary) {
+                    var lang = fileByLang.Key;
                     var folderPath = Path.GetDirectoryName(IndexFilePath) ?? "";
                     var fileName = fileByLang.Value.AsString;
 
                     var post = GetPostFromFile(name, folderPath, fileName);
                     if (post != null) {
+                        post.Language = lang;
                         this.Add(post);
                     }
                 }
@@ -53,7 +55,7 @@
             var post = new BlogPost();
 
             post.Name = name.ToLower();
-            post.Language = contentNode["language"].AsString;
+            //post.Language = contentNode["language"].AsString;
             post.Title = contentNode["title"].AsString;
             post.Time = contentNode["time"].AsString;
             post.Author = contentNode["author"].AsString;
