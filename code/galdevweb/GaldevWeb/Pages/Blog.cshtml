@@ -5,7 +5,7 @@
 @{
     ViewData["Active"] = "Blog";
 
-    var ImageBaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Scheme}://{UrlHelper.ActionContext.HttpContext.Request.Host}/blog/";
+    var ImageBaseUrl = $"{UrlHelper.ActionContext.HttpContext.Request.Headers["X-Forwarded-Proto"].FirstOrDefault()}://{UrlHelper.ActionContext.HttpContext.Request.Host}/blog/";
 
     if (Model.Post != null) {
         ViewData["Title"] = Model.Post.Title;
@@ -125,11 +125,3 @@
 }
 
 @await Html.PartialAsync("_MarkdownConverterPartial")
-
-<div>@ImageBaseUrl</div>
-
-<ul>
-    @foreach (var header in UrlHelper.ActionContext.HttpContext.Request.Headers) {
-        <li><strong>@header.Key:</strong> @header.Value</li>
-    }
-</ul>
