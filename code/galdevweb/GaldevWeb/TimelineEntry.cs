@@ -9,6 +9,7 @@ namespace GaldevWeb
         public string Name;
         public string Year;
         public string Title;
+        public string Filename;
         public string[] Text;
 
         public string? ShortTitle;
@@ -24,11 +25,12 @@ namespace GaldevWeb
 
         public override string ToString() => $"{Year} {Name} {Title}";
 
-        public TimelineEntry(string name, string year, string title, string[] text)
+        public TimelineEntry(string name, string year, string title, string filename, string[] text)
         {
             Name = name;
             Year = year;
             Title = title;
+            Filename = filename;
             Text = text;
         }
 

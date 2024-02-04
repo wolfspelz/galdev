@@ -10,5 +10,6 @@
         public string NotFoundImagePath = "wwwroot/images/site/NotFound.jpg";
         public int ListMinTextLength = 300;
         public int EntryPageTextLength = 4000;
+        public string GitHubProjectDataBaseUrl = "https://raw.githubusercontent.com/wolfspelz/galdev/main";
     }
 }

@@ -5,7 +5,7 @@ namespace GaldevWeb.Pages
 {
     public class LegacyModel : GaldevPageModel
     {
-        public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
+        public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", "(no-filename)", new string[0]);
 
         public LegacyModel(GaldevApp app) : base(app, "Legacy")
         {

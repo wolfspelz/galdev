@@ -5,7 +5,7 @@ namespace GaldevWeb.Pages
 {
     public class YearModel : GaldevPageModel
     {
-        public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", new string[0]);
+        public TimelineEntry Entry = new TimelineEntry("(no-name)", "(no-year)", "(no-title)", "(no-filename)", new string[0]);
         public bool NotAvailable = false;
 
         public YearModel(GaldevApp app) : base(app, "Year")

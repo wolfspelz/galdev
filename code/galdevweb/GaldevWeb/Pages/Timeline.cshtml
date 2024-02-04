@@ -62,7 +62,10 @@
                     </a>
                     <span class="gd-entry-title">@entry.Title</span>
                     <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle" asp-route-lang="@Model.UiCultureName">
-                       <span class="gd-link-icon"></span>
+                        <span class="gd-icon gd-link-icon"></span>
+                    </a>
+                    <a href="@Model.Config.GitHubProjectDataBaseUrl/data/@Model.Lang/@entry.Filename">
+                        <span class="gd-icon gd-code-icon"></span>
                     </a>
 
                 </h3>

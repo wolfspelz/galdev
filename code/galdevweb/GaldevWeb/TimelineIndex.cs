@@ -120,9 +120,11 @@
             dirPath ??= "";
             var entryPath = (dirPath + "/" + folderPath + "/" + fileName).Replace("//", "/");
             var entryPathWithExt = entryPath + ".yaml";
+            var fileNameWithExt = fileName + ".yaml";
 
             if (!DataProvider.HasData(entryPathWithExt)) {
                 entryPathWithExt = entryPath + ".yml";
+                fileNameWithExt = fileName + ".yml";
                 if (!DataProvider.HasData(entryPathWithExt)) {
                     Log.Warning($"No entry file= {entryPathWithExt}");
                     return null;
@@ -142,7 +144,7 @@
                 .Select(x => x.Trim())
                 .ToArray();
 
-            var entry = new TimelineEntry(entryName, year, title, text);
+            var entry = new TimelineEntry(entryName, year, title, fileNameWithExt, text);
 
             var shortTitle = contentNode["shorttitle"].AsString;
             if (Is.Value(shortTitle)) {

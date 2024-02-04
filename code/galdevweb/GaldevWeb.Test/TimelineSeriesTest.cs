@@ -12,7 +12,7 @@
             Array.ForEach(
                 new[] { "3", "2", "4", "1", "5", "3b" },
                 x => {
-                    var entry = new TimelineEntry(x, x, x, new[] { x, x }) {
+                    var entry = new TimelineEntry(x, x, x, x + ".yaml", new[] { x, x }) {
                         Aliases = new[] { x + x }
                     };
                     sut.Add(x, entry);
@@ -35,7 +35,7 @@
             Array.ForEach(
                 new[] { "3", "2", "4", "1", "5", "3b" },
                 x => {
-                    var entry = new TimelineEntry(x, x, x, new[] { x, x }) {
+                    var entry = new TimelineEntry(x, x, x, x + ".yaml", new[] { x, x }) {
                         Topics = new[] { x, "t" }
                     };
                     sut.Add(x, entry);
@@ -65,7 +65,7 @@
             var sut = new TimelineSeries();
             Array.ForEach(
                 new[] { "3", "2", "4", "1", "5", "3b" },
-                x => sut.Add(x, new TimelineEntry(x, x, x, new[] { x, x }))
+                x => sut.Add(x, new TimelineEntry(x, x, x, x + ".yaml", new[] { x, x }))
                 );
 
             // Act
