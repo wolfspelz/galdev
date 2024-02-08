@@ -136,12 +136,16 @@
 
         <div class="container">
             @if ((ViewData["Active"] ?? "").ToString() == "Index") {
-                <div class="stage-Index"></div>
+                <div class="stage-Index">
+                    <img src="/images/site/stage-MegaProbe-1600x400.jpg" style="width:100%;" class="img-fluid" alt="Megaprobe" />
+                </div>
                 <div class="container">
                     <div class="col-12 text-end" style="position:relative; top:-30px; color: #ffffff">
                         @Model.I18n.String(path: "Meta/Image", i18n: new StringGeneratorI18n {
-                    ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre.",
-                    ["en-US"] = () => "A bubble freighter in the upper Venus upper atmosphere crusing above the clouds."
+                    // ["de-DE"] = () => "Ein Frachter über den Wolken in der oberen Venus-Atmosphäre.",
+                    // ["en-US"] = () => "A bubble freighter in the upper Venus upper atmosphere crusing above the clouds."
+                    ["de-DE"] = () => "Automatischer interstellarer sublicht Mega-Scout des 24. Jahrhunderts",
+                    ["en-US"] = () => "A automated 24th century interstellar sublight mega probe"
                     })
                     </div>
                     <main role="main" class="pb-3">
@@ -149,7 +153,7 @@
                     </main>
                 </div>
             } else {
-                <img src="/images/site/stage-VenusFreighter-1600x200.jpg" style="width:100%;" class="img-fluid" alt="Venus Freighter" />
+                <img src="/images/site/stage-MegaProbe-1600x200.jpg" style="width:100%;" class="img-fluid" alt="Megaprobe" />
             }
             <main role="main" class="pb-3">
                 @RenderBody()
