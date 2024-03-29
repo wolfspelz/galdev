@@ -7,9 +7,9 @@
 ## Links
 
 - Website: http://www.galactic-developments.de/
-- German data: https://github.com/wolfspelz/galdev/tree/master/data/de
-- English data: https://github.com/wolfspelz/galdev/tree/master/data/en
-- Website code: https://github.com/wolfspelz/galdev/tree/master/code/galdevweb
+- German data: https://github.com/wolfspelz/galdev/tree/main/data/de
+- English data: https://github.com/wolfspelz/galdev/tree/main/data/en
+- Website code: https://github.com/wolfspelz/galdev/tree/main/code/galdevweb
 
 ## Contribute
 
