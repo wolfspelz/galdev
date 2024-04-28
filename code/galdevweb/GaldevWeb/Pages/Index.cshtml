@@ -202,16 +202,15 @@
                     ["ImgSrc"] = "/images/Index/software.jpg",
                     ["ImgAlt"] = "software screen",
                     ["Title"] = Model.I18n.String(path: "Box/Project/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Softwareprojekt",
-                        ["en-US"] = () => "Software Project",
+                        ["de-DE"] = () => "Ein Softwareprojekt",
+                        ["en-US"] = () => "A Software Project",
                     }),
                     ["Text"] = Model.I18n.String(path: "Box/Project/Text", i18n: new StringGeneratorI18n {
                         ["de-DE"] = () => "<ul>" + string.Join("\n", new[] {
 "Quellcode: <a href='https://github.com/wolfspelz/galdev/'>GitHub</a>",
-"dotnet, docker, github actions, nginx",
-"Die C# IDE ist mein CMS",
-"GitHub Actions sind mein Deployment",
-"Ein git-push auf main und es ist online",
+"dotnet, docker, github, nginx",
+"Die IDE ist mein CMS",
+"git-push ist mein Deployment",
 "Alle <a href='https://github.com/wolfspelz/galdev/tree/main/data/de'>Artikel als YAML</a>",
 "<a href='https://github.com/wolfspelz/galdev/issues'>Probleme melden</a>",
 }.Select(x => $"<li>{x}</li>")) + "</ul>",
