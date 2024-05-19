@@ -59,6 +59,25 @@ languages:
       statistics: Statistics
       accident: Accidents
       ai: Artificial Intelligence
+sequences:
+  WiseDragon:
+    de: 
+      title: Der Weise Drache
+      summary: Der *Weise Drache*, auch bekannt als der *Drache in Kisorigestalt*, ist eine zentrale Figur in den Legenden des kisorischen Mittelalters. 
+      entries: [Ruins, Drachenlegenden, SoloEhre]
+    en: 
+      title: The Wise Dragon
+      summary: Wise Dragon Summary
+      entries: [Ruins, Drachenlegenden]
+  # Mercatos:
+  #   de: 
+  #     title: Die interstellaren Händler
+  #     summary: Interstellare Händler Zusammenfassung
+  #     entries: [Mercatos, Kisor, Prophet, Ruins, Gone, Drachenlegenden]
+  #   en: 
+  #     title: The Interstellar Traders
+  #     summary: Interstellar Traders Summary
+  #     entries: [Prophet, Ruins, Drachenlegenden]
 entries:
   NeuroImplant:
     de: 2051_Neuroimplantat.yaml
@@ -569,7 +588,7 @@ entries:
     de: 2608_Erster_Kontakt_mit_Artu.yaml
   Befreiung_des_Solsystems:
     de: 2614_Befreiung_des_Solsystems.yaml
-  Interstellare_Händler:
+  Mercatos:
     de: 2615_Interstellare_Händler.yaml
   TawannaIntervention:
     de: 2616_TawannaIntervention.yaml

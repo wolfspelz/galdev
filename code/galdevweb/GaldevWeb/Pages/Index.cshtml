@@ -137,6 +137,20 @@
     }
 
     {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Roter Faden",
+                        ["en-US"] = () => "Wide Arcs",
+                    }),
+                    ["Text"] = string.Join("", Model.Timeline.GetSequences().Select(name => 
+                      "<a href='Sequence/" + name + "'>" 
+                      + Model.Timeline.GetSequence(name).Title
+                      + "</a><br/>"
+                    )),
+                }));
+    }
+
+    {
         var entry = Model.Timeline.GetEntry("Supernova");
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/Image/" + entry?.Image ?? "",

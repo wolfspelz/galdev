@@ -22,6 +22,17 @@ namespace GaldevWeb
         public string Next = "";
         public string Previous = "";
         public string Headline = "";
+        
+        public Dictionary<string, string> _sequenceText = new();
+        public Dictionary<string, string> _sequenceNext = new();
+
+        public string SequenceText(string name)
+        {
+            if (_sequenceText.ContainsKey(name)) {
+                return _sequenceText[name];
+            }
+            return "";
+        }
 
         public override string ToString() => $"{Year} {Name} {Title}";
 

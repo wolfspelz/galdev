@@ -1,4 +1,5 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+﻿using Microsoft.AspNetCore.Mvc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace GaldevWeb
 {
@@ -9,6 +10,7 @@ namespace GaldevWeb
         private readonly Dictionary<string, TimelineEntryList> _topicsById = new();
         private readonly Dictionary<string, string> _topicDisplayNameById = new();
         private readonly Dictionary<string, string> _nameByAlias = new();
+        private readonly Dictionary<string, TimelineSequence> _sequenceByName = new();
 
         public TimelineSeries()
         {
@@ -140,6 +142,35 @@ namespace GaldevWeb
                     _nameByAlias[alias.ToLower()] = name;
                 }
             }
+        }
+
+        public void AddSequence(string name, TimelineSequence thread)
+        {
+            _sequenceByName[name] = thread;
+
+            var previousEntryName = "";
+            foreach (var entryName in thread.Entries) {
+                var entry = GetEntry(entryName);
+                if (entry != null) {
+                    if (Is.Value(previousEntryName)) {
+                        var previousEntry = GetEntry(previousEntryName);
+                        if (previousEntry != null) {
+                            previousEntry._sequenceNext[name] = entryName;
+                        }
+                    }
+                    previousEntryName = entryName;
+                }
+            }
+        }
+
+        public IEnumerable<string> GetSequences()
+        {
+            return _sequenceByName.Keys;
+        }
+
+        public TimelineSequence GetSequence(string name)
+        {
+            return _sequenceByName[name];
         }
 
     }

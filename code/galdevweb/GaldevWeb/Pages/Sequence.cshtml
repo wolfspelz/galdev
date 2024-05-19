@@ -1,0 +1,31 @@
+﻿@page "{name?}"
+@using Markdig;
+@model SequenceModel
+@{
+    ViewData["Active"] = "Sequence";
+}
+
+<div class="row mt-3">
+    <div class="col-12">
+        <h2>@Model.Title</h2>
+        <p>@Html.Raw(Markdown.ToHtml(Model.Summary))</p>
+    </div>
+</div>
+
+@foreach (var entry in Model.List) {
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="offset-1 col-11">
+            <div>
+                <p>@Html.Raw(Markdown.ToHtml(entry.SequenceText(Model.Name)))</p>
+            </div>
+        </div>
+    </div>
+}
