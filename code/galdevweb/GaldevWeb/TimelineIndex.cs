@@ -21,6 +21,7 @@
 
             LoadLanguages();
             LoadEntries(filter);
+            LoadThreads();
             ConnectEntries();
             CreateTopics();
             CreateAliases();
@@ -107,6 +108,26 @@
             }
         }
 
+        private void LoadThreads()
+        {
+            var indexData = DataProvider.GetData(IndexFilePath);
+            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+
+            var sequencesNode = indexNode["sequences"].AsDictionary;
+            foreach (var sequenceNode in sequencesNode) {
+                var name = sequenceNode.Key;
+
+                foreach (var threadByLang in sequenceNode.Value.AsDictionary) {
+                    var lang = threadByLang.Key;
+                    var title = threadByLang.Value.AsDictionary["title"].AsString;
+                    var summary = threadByLang.Value.AsDictionary["summary"].AsString;
+                    var entries = threadByLang.Value.AsDictionary["entries"].AsList.Select(x => x.String);
+                    var sequence = new TimelineSequence(title, summary, entries);
+                    _timelineByLang[lang].AddSequence(name, sequence);
+                }
+            }
+        }
+
         private TimelineEntry? GetEntryFromFile(string lang, string entryName, string folderPath, string fileName)
         {
             if (fileName.EndsWith(".yaml")) {
@@ -169,6 +190,11 @@
             var image = contentNode["image"].AsString;
             if (Is.Value(image) && !image.Contains("NAME")) {
                 entry.Image = $"{lang}/{image}";
+            }
+
+            var sequences = contentNode["sequencetext"].AsDictionary;
+            foreach (var sequence in sequences) {
+                entry._sequenceText[sequence.Key] = sequence.Value.AsString;
             }
 
             entry.Topics = contentNode["topics"].AsList.Select(n => n.AsString).ToArray();
