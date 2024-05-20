@@ -15,17 +15,20 @@
 @foreach (var entry in Model.List) {
     <div class="row">
         <div class="col-12">
-            <div>
-                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
-            </div>
+            <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
         </div>
     </div>
 
     <div class="row">
         <div class="offset-1 col-11">
-            <div>
-                <p>@Html.Raw(Markdown.ToHtml(entry.SequenceText(Model.Name)))</p>
-            </div>
+            @if (!string.IsNullOrEmpty(entry.Image)) {
+                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle"><img src="/Image/@entry.Image" class="gd-sequence-image img-fluid float-end mb-3" /></a>
+            }
+            @if (!string.IsNullOrEmpty(entry.SequenceText(Model.Name))) {
+                @Html.Raw(Markdown.ToHtml(entry.SequenceText(Model.Name)))
+            } else {
+                @Html.Raw(Markdown.ToHtml(entry.Description))
+            }
         </div>
     </div>
 }

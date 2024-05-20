@@ -57,15 +57,18 @@ namespace GaldevWeb
         public string Description
         {
             get {
-                var s = Title;
-                if (string.IsNullOrEmpty(s)) {
+                var s = "";
+                if (Is.Empty(s) && Is.Value(Summary)) {
+                    s = Summary;
+                }
+                if (Is.Empty(s) && Is.Value(Headline)) {
                     s = Headline;
                 }
-                if (string.IsNullOrEmpty(s)) {
-                    s = ShortTitle;
+                if (Is.Empty(s) && Is.Value(Title)) {
+                    s = Title;
                 }
-                if (string.IsNullOrEmpty(s)) {
-                    s = Summary;
+                if (Is.Empty(s) && Is.Value(ShortTitle)) {
+                    s = ShortTitle;
                 }
                 if (string.IsNullOrEmpty(s)) {
                     s = "";
