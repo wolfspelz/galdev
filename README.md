@@ -13,6 +13,6 @@
 
 ## Contribute
 
-Please clone (develop), add or translate and send pull requests. 
+Please clone, develop features, add or translate text and send pull requests. 
 - The format is YAML
 - One file per timeline entry
