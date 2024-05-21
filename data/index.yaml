@@ -69,6 +69,22 @@ sequences:
       title: The Wise Dragon
       summary: Wise Dragon Summary
       entries: [Ruins, Drachenlegenden]
+  Spacedom:
+    de:
+      title: Die Spacedome-Tragödie
+      summary: |
+        Der grandiose Spacedom ist eines der wichtigsten religiösen und spirituellen Zentren im Asteroidengürtel des 25. Jahrhunderts. Durch wundersame und dramatische Ereignisse der nächsten 300 Jahre wird er zu einem legendären Symbol der interplanetaren Kultur im Solsystem. 
+      entries: 
+        - Beginn_des_Spacedom_Baus
+        - Zellweger
+        - Kriegsabkommen
+        - Spacedom
+        - Guedan
+        - SpacedomEvakuierung
+        - Gee
+        - SpacedomRettung
+        - ExecutiveDecision
+        - Regionalzentrum
   # Mercatos:
   #   de: 
   #     title: Die interstellaren Händler
@@ -801,7 +817,7 @@ entries:
   Guedan:
     de: 2722_Guedan.yaml
     en: 2722_Guedan.yaml
-  Spektakuläre_Evakuierung_von_1:
+  SpacedomEvakuierung:
     de: 2723_Spektakuläre_Evakuierung_von_1.yaml
   Entdeckung_der_unsterblichen_S:
     de: 2723c_Entdeckung_der_unsterblichen_S.yaml
