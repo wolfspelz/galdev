@@ -63,7 +63,7 @@ sequences:
   WiseDragon:
     de: 
       title: Der Weise Drache
-      summary: Der *Weise Drache*, auch bekannt als der *Drache in Kisorigestalt*, ist eine zentrale Figur in den Legenden des kisorischen Mittelalters. 
+      summary: Der "Weise Drache", auch bekannt als der "Drache in Kisorigestalt", ist eine zentrale Figur in den Legenden des kisorischen Mittelalters. 
       entries: [Ruins, Drachenlegenden, SoloEhre]
     en: 
       title: The Wise Dragon
@@ -73,7 +73,7 @@ sequences:
     de:
       title: Die Spacedome-Tragödie
       summary: |
-        Der grandiose Spacedom ist eines der wichtigsten religiösen und spirituellen Zentren im Asteroidengürtel des 25. Jahrhunderts. Durch wundersame und dramatische Ereignisse der nächsten 300 Jahre wird er zu einem legendären Symbol der interplanetaren Kultur im Solsystem. 
+        Der grandiose Spacedom ist eines der wichtigsten religiösen und spirituellen Zentren im Asteroidengürtel des 25. Jahrhunderts. Durch wundersame und dramatische Ereignisse der nächsten 300 Jahre wird er zu einem Symbol der solaren Kultur. 
       entries: 
         - Beginn_des_Spacedom_Baus
         - Zellweger

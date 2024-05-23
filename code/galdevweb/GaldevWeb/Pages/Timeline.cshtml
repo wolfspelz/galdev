@@ -1,4 +1,5 @@
 ﻿@page "{name?}"
+@using Markdig
 @model TimelineModel
 @inject IUrlHelper UrlHelper
 @inject LinkGenerator Links
@@ -29,9 +30,9 @@
         <div class="col-12">
             <p>
                 @Model.I18n.String(path: "SwitchLanguage", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Nicht verfügbar in der eingestellten Sprache. Sprache wechseln?",
-            ["en-US"] = () => "Not available in this language. You might want to switch the display language?",
-            })
+           ["de-DE"] = () => "Nicht verfügbar in der eingestellten Sprache. Sprache wechseln?",
+           ["en-US"] = () => "Not available in this language. You might want to switch the display language?",
+       })
                 @await Html.PartialAsync("_SelectLanguagePartial")
             </p>
         </div>
@@ -83,7 +84,7 @@
                 }
 
                 @foreach (var t in entry.Text) {
-                    <p class="gd-entry-text">@t</p>
+                    @Html.Raw(Markdown.ToHtml(t))
                 }
             }
         </div>
