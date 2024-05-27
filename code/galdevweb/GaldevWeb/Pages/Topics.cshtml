@@ -21,6 +21,7 @@
 
     foreach (var topic in Model.Timeline.Topics) {
         cards.Add(Node.From(new Dictionary<string, string> {
+                    ["Id"] = "id-" + topic,
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Anchor"] = topic,
                     ["Text"] = string.Join("<br/>",
@@ -33,3 +34,13 @@
 
 @await Html.PartialAsync("_Cards", cards, ViewData)
 
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                $("#id-" + hash).addClass("card-body-hilite");
+            }
+        });
+    </script>
+}

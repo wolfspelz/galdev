@@ -8,7 +8,7 @@
 <div class="row" data-masonry='{ "percentPosition": true, "isLayoutInstant": true }'>
     @foreach (var card in Model) {
         <div class="@colSpec my-2">
-            <div class="card">
+            <div class="card" @(string.IsNullOrEmpty(card["Id"]) ? "" : "id=" + card["Id"])>
                 @if (@card["ImgSrc"].String != "") {
                     @if (@card["Link"].String != "") {
                         <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
