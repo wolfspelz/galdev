@@ -21,7 +21,7 @@
 
             LoadLanguages();
             LoadEntries(filter);
-            LoadThreads();
+            LoadSequences();
             ConnectEntries();
             CreateTopics();
             CreateAliases();
@@ -108,7 +108,7 @@
             }
         }
 
-        private void LoadThreads()
+        private void LoadSequences()
         {
             var indexData = DataProvider.GetData(IndexFilePath);
             var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
