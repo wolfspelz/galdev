@@ -1,7 +1,9 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
+using System.IO;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace GaldevWeb.Test
@@ -9,10 +11,24 @@ namespace GaldevWeb.Test
     [TestClass]
     public class PagesTest
     {
+        static string _cwd = "";
         HttpClient _client = new();
 
+        [AssemblyInitialize]
+        public static void AssemblyInitialize(TestContext context)
+        {
+            _cwd = Directory.GetCurrentDirectory();
+            Directory.SetCurrentDirectory("../../../../GaldevWeb");
+        }
+
+        [AssemblyCleanup]
+        public static void AssemblyCleanup()
+        {
+            Directory.SetCurrentDirectory(_cwd);
+        }
+
         [TestInitialize]
-        public void Startup()
+        public void TestInitialize()
         {
             _client = new WebApplicationFactory<GaldevWeb.Program>()
                 .WithWebHostBuilder(builder => builder.UseSolutionRelativeContentRoot("code/galdevweb/GaldevWeb"))
@@ -80,7 +96,8 @@ namespace GaldevWeb.Test
             var doc = new HtmlDocument();
             doc.LoadHtml(await response.Content.ReadAsStringAsync());
             Assert.AreEqual("Aufstand in lunaren Strafkolonien", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
-            Assert.AreEqual("2197 Aufstand in lunaren Strafkolonien", doc.DocumentNode.SelectNodes("//h3").FirstOrDefault()?.InnerText.Trim());
+            Assert.AreEqual("2197", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+            Assert.AreEqual("Aufstand in lunaren Strafkolonien", doc.DocumentNode.SelectNodes("//h3/span").FirstOrDefault()?.InnerText.Trim());
         }
 
         [TestMethod]
@@ -97,7 +114,8 @@ namespace GaldevWeb.Test
             var doc = new HtmlDocument();
             doc.LoadHtml(await response.Content.ReadAsStringAsync());
             Assert.AreEqual("Rebellion in Lunar Penal Colonies", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
-            Assert.AreEqual("2197 Rebellion in Lunar Penal Colonies", doc.DocumentNode.SelectNodes("//h3").FirstOrDefault()?.InnerText.Trim());
+            Assert.AreEqual("2197", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+            Assert.AreEqual("Rebellion in Lunar Penal Colonies", doc.DocumentNode.SelectNodes("//h3/span").FirstOrDefault()?.InnerText.Trim());
         }
 
         [TestMethod]
