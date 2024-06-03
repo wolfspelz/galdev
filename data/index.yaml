@@ -275,8 +275,6 @@ entries:
     en: 2269_1000000InSpace.yaml
   # Blüte_der_interplanetaren_Zivi:
   #   de: 2270_Blüte_der_interplanetaren_Zivi.yaml
-  Fraktal:
-    de: 2271_Fraktal.yaml
   Unabhängigkeit_von_MarsTerrito:
     de: 2273_Unabhängigkeit_von_MarsTerrito.yaml
   Lokaler_Ausbruch_unkontrollier:
@@ -318,9 +316,9 @@ entries:
     de: 2305_Onong.yaml
   Zweiter_Mittelmeerkrieg:
     de: 2306_Zweiter_Mittelmeerkrieg.yaml
-  # MetricDrive:
-  #   de: 2307_MetricDrive.yaml
-  #   en: 2307_MetricDrive.yaml
+  MetricDrive:
+    de: 2307_MetricDrive.yaml
+    en: 2307_MetricDrive.yaml
   Friedenskonvention_der_Koaliti:
     de: 2308_Friedenskonvention_der_Koaliti.yaml
   Nach_einem_Aufstand_auf_Vesta_:
