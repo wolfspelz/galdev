@@ -273,8 +273,8 @@ entries:
   1000000InSpace:
     de: 2269_1000000InSpace.yaml
     en: 2269_1000000InSpace.yaml
-  Blüte_der_interplanetaren_Zivi:
-    de: 2270_Blüte_der_interplanetaren_Zivi.yaml
+  # Blüte_der_interplanetaren_Zivi:
+  #   de: 2270_Blüte_der_interplanetaren_Zivi.yaml
   Fraktal:
     de: 2271_Fraktal.yaml
   Unabhängigkeit_von_MarsTerrito:
