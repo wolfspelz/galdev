@@ -291,8 +291,9 @@ entries:
     de: 2281_Gedankenabstraktum.yaml
   Gründung_der_japanischen_Repub:
     de: 2282_Gründung_der_japanischen_Repub.yaml
-  Separationsbeschluss_der_Erde:
-    de: 2284_Separationsbeschluss_der_Erde.yaml
+  Separation:
+    de: 2284_Trennung.yaml
+    en: 2284_Separation.yaml
   # MetricTrack:
   #   de: 2287_MetricTrack.yaml
   #   en: 2287_MetricTrack.yaml
