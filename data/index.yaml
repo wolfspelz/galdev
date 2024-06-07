@@ -297,8 +297,8 @@ entries:
   # MetricTrack:
   #   de: 2287_MetricTrack.yaml
   #   en: 2287_MetricTrack.yaml
-  Ein_Orbitalrotor_für_die_Erde:
-    de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
+  # Ein_Orbitalrotor_für_die_Erde:
+  #   de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
   Ausschluss_der_Asteroidenbasis:
     de: 2291_Ausschluss_der_Asteroidenbasis.yaml
   Expansionistenaufstand:
@@ -348,8 +348,9 @@ entries:
     de: 2336_Aufgrund_wirtschaftlicher_Schw.yaml
   Übernahme_der_wiederaufgebaute:
     de: 2337_Übernahme_der_wiederaufgebaute.yaml
-  Mehrere_automatische_Tankstati:
-    de: 2338_Mehrere_automatische_Tankstati.yaml
+  AiExpansionStopped:
+    de: 2338_KiExpansionGestoppt.yaml
+    en: 2338_AiExpansionStopped.yaml
   Neuausrichtung_der_Raummodulat:
     de: 2340_Neuausrichtung_der_Raummodulat.yaml
   Erstmalige_Austragung_der_sola:
