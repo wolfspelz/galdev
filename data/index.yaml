@@ -297,10 +297,11 @@ entries:
   # MetricTrack:
   #   de: 2287_MetricTrack.yaml
   #   en: 2287_MetricTrack.yaml
-  Ein_Orbitalrotor_für_die_Erde:
-    de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
-  Ausschluss_der_Asteroidenbasis:
-    de: 2291_Ausschluss_der_Asteroidenbasis.yaml
+  # Ein_Orbitalrotor_für_die_Erde:
+  #   de: 2289_Ein_Orbitalrotor_für_die_Erde.yaml
+  IllegalAiResearch:
+    de: 2291_IllegaleKiForschung.yaml
+    en: 2291_IllegalAiResearch.yaml
   Expansionistenaufstand:
     de: 2293_Expansionistenaufstand.yaml
   Eosix:
