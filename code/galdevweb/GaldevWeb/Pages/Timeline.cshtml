@@ -194,6 +194,12 @@
                 $('#iModalDialogImage').attr('src', src);
                 $('#iModalDialog').modal('show');
             });
+
+            $(document).keydown(function (e) {
+                if (e.key === "Escape") {
+                    $('#iModalDialog').modal('hide');
+                }
+            });
         });
     </script>
 }
