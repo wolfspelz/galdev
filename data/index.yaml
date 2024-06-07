@@ -553,6 +553,7 @@ entries:
     en: 2557_Vladivostok.yaml
   Exotechnologie:
     de: 2560_Exotechnologie.yaml
+    en: 2560_Exotechnology.yaml
   Kinetische_Bombardierung_von_I:
     de: 2561_Kinetische_Bombardierung_von_I.yaml
   Friedensvertrag_der_Koalition_:
@@ -587,6 +588,7 @@ entries:
     de: 2585_Erster_Kontakt_mit_Thoris.yaml
   Alienkriege:
     de: 2587_Alienkriege.yaml
+    en: 2587_Alienwars.yaml
   Siedlungsgesetze:
     de: 2590_Siedlungsgesetze.yaml
   Flottengesetz:
@@ -1006,6 +1008,7 @@ entries:
     de: 2843_RiskanteBergung.yaml
   Centaurus:
     de: 2844_Centaurus.yaml
+    en: 2844_Centaurus.yaml
   Plünderung_von_Artus_durch_Neo:
     de: 2845_Plünderung_von_Artus_durch_Neo.yaml
   Kisor_tritt_dem_kisorischen_Vö:
@@ -1128,6 +1131,7 @@ entries:
     de: 3080_Die_ChintiExpansion_setzt_wied.yaml
   SoloEhre:
     de: 3090_SoloEhre.yaml
+    en: 3090_SoloCode.yaml
   Rückzug_der_SolBarbaren_in_das:
     de: 3100_Rückzug_der_SolBarbaren_in_das.yaml
   Fragmentation:
@@ -1210,6 +1214,7 @@ entries:
     de: 3334_Besuch_einer_Gesandtschaft_der.yaml
   Brueckenkopf:
     de: 3340_Brueckenkopf.yaml
+    en: 3340_Bridgehead.yaml
   Imperiumsverfassung:
     de: 3344_Imperiumsverfassung.yaml
   Betriebsstart_von_Argus:
