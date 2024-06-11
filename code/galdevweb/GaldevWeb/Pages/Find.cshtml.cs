@@ -20,6 +20,8 @@ namespace GaldevWeb.Pages
                     List.Add(entry);
                 }
             }
+
+            ViewData["SearchTerm"] = SearchTerm;
         }
     }
 }
