@@ -234,9 +234,9 @@ entries:
     de: 2227_Weltspiel.yaml
   Der_energetische_Hohlleiter_wi:
     de: 2229_Der_energetische_Hohlleiter_wi.yaml
-  VegasTreaty:
-    de: 2231_VertragVonVegas.yaml
-    en: 2231_TreatyOfVegas.yaml
+  # VegasTreaty:
+  #   de: 2231_VertragVonVegas.yaml
+  #   en: 2231_TreatyOfVegas.yaml
   Unabhängigkeit_von_VegasLuna:
     de: 2231_Unabhängigkeit_von_VegasLuna.yaml
   Lunar_Skyhook_Eine_Orbitalroto:
