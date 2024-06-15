@@ -234,6 +234,9 @@ entries:
     de: 2227_Weltspiel.yaml
   Der_energetische_Hohlleiter_wi:
     de: 2229_Der_energetische_Hohlleiter_wi.yaml
+  VegasTreaty:
+    de: 2231_VertragVonVegas.yaml
+    en: 2231_TreatyOfVegas.yaml
   Unabhängigkeit_von_VegasLuna:
     de: 2231_Unabhängigkeit_von_VegasLuna.yaml
   Lunar_Skyhook_Eine_Orbitalroto:
@@ -281,8 +284,6 @@ entries:
     de: 2274_Lokaler_Ausbruch_unkontrollier.yaml
   Die_Weltbevölkerung_überschrei:
     de: 2274c_Die_Weltbevölkerung_überschrei.yaml
-  Vertrag_von_VegasLuna:
-    de: 2275_Vertrag_von_VegasLuna.yaml
   Free_Space_Treaty:
     de: 2278_Free_Space_Treaty.yaml
   Konflikte_zwischen_Europa_und_:
@@ -333,8 +334,9 @@ entries:
   Erdunion:
     de: 2318_Erdunion.yaml
     en: 2318_EarthUnion.yaml
-  Selbstgewählte_Isolation_der_E:
-    de: 2321_Selbstgewählte_Isolation_der_E.yaml
+  EarthIsolation:
+    de: 2321_EarthIsolation.yaml
+    en: 2321_EarthIsolation.yaml
   Kalter_Krieg:
     de: 2322_Kalter_Krieg.yaml
   Kriegserklärung_an_die_Koaliti:
