@@ -69,12 +69,12 @@ p {
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    /* border: 1px solid rgba(0,0,0,0.5); */
-    /* margin: -2px; */
-    /* background-color: #e8e8e8; */
-    /*filter: drop-shadow(1px 1px 3px #555);*/
-}
+    .card:hover {
+        /* border: 1px solid rgba(0,0,0,0.5); */
+        /* margin: -2px; */
+        /* background-color: #e8e8e8; */
+        /*filter: drop-shadow(1px 1px 3px #555);*/
+    }
 
 .card-body {
     padding: 1rem 1rem 0.3rem 1rem; /* because <p> always has its own margin-bottom */
@@ -200,6 +200,25 @@ span.gd-code-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m7 8l-4 4l4 4m10-8l4 4l-4 4M14 4l-4 16'/%3E%3C/svg%3E");
 }
 
+div.gd-stage {
+    width: 100%;
+    position: relative;
+}
+
+div.gd-stage-text {
+    position: absolute;
+    bottom: 0.2em;
+    right: 0.4em;
+    color: #ffffff;
+    filter: drop-shadow(1px 1px 2px #000000);
+}
+
+@media (max-width: 992px) {
+    div.gd-stage img {
+        height: 100px;
+    }
+}
+
 span.gd-next-arrow {
     display: inline-block;
     width: 0.7em;
@@ -315,6 +334,7 @@ img.gd-blog-post-image {
     opacity: .5;
 }
 
+/*
 div.stage-Index {
     width: 100%;
 }
@@ -324,6 +344,7 @@ div.stage-Index {
         width: 100%;
     }
 }
+*/
 
 div.modal-content img#iModalDialogImage {
     box-shadow: 0px 0px 20px #000000;
