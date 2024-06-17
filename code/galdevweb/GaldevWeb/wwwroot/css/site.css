@@ -203,6 +203,12 @@ span.gd-code-icon {
 div.gd-stage {
     width: 100%;
     position: relative;
+    margin-top: 0.5em
+}
+
+div.gd-stage img {
+    border-radius: .5rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 div.gd-stage-text {
