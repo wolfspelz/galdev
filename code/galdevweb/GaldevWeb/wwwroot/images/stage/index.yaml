@@ -7,8 +7,8 @@ list:
 
   - image: 2260-EarthFleet.jpg
     description: 
-      de: Erdflotte vor dem Angriff auf den Mars, 2260
-      en: Earth Fleet before the attack on Mars, 2260
+      de: Erdflotte vor dem Angriff auf den Mars, 2261
+      en: Earth Fleet before the attack on Mars, 2261
 
   - image: 2300-EarthEnvironment.jpg
     description: 
@@ -32,7 +32,7 @@ list:
 
   - image: XXXX-EarthRingConstruction.jpg
     description: 
-      de: Während der Konstruktion des Erdrings
+      de: Bau des Erdrings
       en: During the construction of the Earth ring
 
   - image: XXXX-InterstellarMegaProbe.jpg
