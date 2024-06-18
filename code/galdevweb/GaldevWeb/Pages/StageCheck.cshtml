@@ -1,0 +1,27 @@
+﻿@page
+@model StageCheckModel
+
+@{
+    var stages = new Dictionary<string, string>();
+    try {
+        var yaml = System.IO.File.ReadAllText("wwwroot/images/stage/index.yaml");
+        var data = JsonPath.Node.FromYaml(yaml);
+        var list = data["list"].AsList;
+        foreach (var entry in list) {
+            var stageImageFilename = entry["image"].AsString;
+            var description = entry["description"].AsDictionary;
+            var stageImageDescription = description[Model.Lang].AsString;
+            stages.Add(stageImageFilename, stageImageDescription);
+        }
+    } catch { }
+}
+
+<div class="container">
+    @foreach (var stage in stages) {
+        <div class="gd-stage">
+            <img src="/images/stage/@stage.Key" class="img-fluid" alt="@stage.Value" />
+            <div class="gd-stage-text">@stage.Value</div>
+        </div>
+    }
+</div>
+
