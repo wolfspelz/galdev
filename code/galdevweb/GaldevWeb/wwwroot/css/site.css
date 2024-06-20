@@ -208,7 +208,7 @@ div.gd-stage {
 
 div.gd-stage img {
     border-radius: .5rem;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 div.gd-stage-text {
