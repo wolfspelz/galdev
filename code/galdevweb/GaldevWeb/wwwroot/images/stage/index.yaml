@@ -20,9 +20,14 @@ list:
       de: Die Erde beim Beginn des GAIA-Sanierungsprojekts, 2300
       en: Earth at the start of the GAIA-restoration project, 2300
 
+  - image: 2321-SpaceDominanceVehicle.jpg
+    description: 
+      de: Raumüberlegenheitskreuzer im orbialen Dock, 2321
+      en: Space Dominance Vehicleat a spacedock, 2321
+
   - image: 2433-ExprimentalVessel.jpg
     description: 
-      de: Experientellen Raumschiff für den Flug in die Oort Wolke, 2433
+      de: Experientelles Raumschiff für den Flug in die Oort Wolke, 2433
       en: Experimental vessel for the flight to the Oort Cloud, 2433
 
   - image: 2550-OrbitalBattle.jpg
@@ -54,11 +59,6 @@ list:
     description: 
       de: Interstellarer sublicht Mega-Scout des 24. Jhr.
       en: 24th century interstellar sublight mega probe
-
-  - image: 2321-SpaceDominanceVehicleDocked.jpg
-    description: 
-      de: Raumüberlegenheitskreuzer im orbialen Dock, 2321
-      en: Space Dominance Vehicleat a spacedock, 2321
 
   - image: XXXX-UnnamedSpaceVessel.jpg
     description: 
