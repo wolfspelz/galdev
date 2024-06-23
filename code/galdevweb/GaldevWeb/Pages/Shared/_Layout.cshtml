@@ -165,7 +165,7 @@
                 var stageImageDescription = "";
                 try
                 {
-                    var yaml = System.IO.File.ReadAllText("wwwroot/images/stage/index.yaml");
+                    var yaml = System.IO.File.ReadAllText(Model.Config.StageIndexPath);
                     var data = JsonPath.Node.FromYaml(yaml);
                     var list = data["list"].AsList;
                     var rndIndex = new Random().Next(0, list.Count);

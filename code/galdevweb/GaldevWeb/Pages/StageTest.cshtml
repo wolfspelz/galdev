@@ -7,7 +7,7 @@
 @{
     var stages = new Dictionary<string, string>();
     try {
-        var yaml = System.IO.File.ReadAllText("wwwroot/images/stage/index.yaml");
+        var yaml = System.IO.File.ReadAllText(Model.Config.StageIndexPath);
         var data = JsonPath.Node.FromYaml(yaml);
         var list = data["list"].AsList;
         foreach (var entry in list) {
