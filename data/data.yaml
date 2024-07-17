@@ -312,8 +312,9 @@ entries:
     de: 2298_Handelskrieg_der_Palladischen_.yaml
   Beginn_der_JupiterSwingBy_Gebü:
     de: 2301_Beginn_der_JupiterSwingBy_Gebü.yaml
-  Neuorganisation_der_interplane:
-    de: 2302_Neuorganisation_der_interplane.yaml
+  SolarCoalition:
+    de: 2302_SolareKoalition.yaml
+    en: 2302_SolarCoalition.yaml
   Putsch_der_Raumhändler_in_Sant:
     de: 2303_Putsch_der_Raumhändler_in_Sant.yaml
   Onong:
