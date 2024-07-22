@@ -327,8 +327,9 @@ entries:
     de: 2308_Friedenskonvention_der_Koaliti.yaml
   Nach_einem_Aufstand_auf_Vesta_:
     de: 2309_Nach_einem_Aufstand_auf_Vesta_.yaml
-  Entdeckung_des_KaioArtefakts:
-    de: 2312_Entdeckung_des_KaioArtefakts.yaml
+  KaioArtefakt:
+    de: 2312_KaioArtefakt.yaml
+    en: 2312_KaioArtifact.yaml
   Ein_Raketenangriff_zerstört_zw:
     de: 2315_Ein_Raketenangriff_zerstört_zw.yaml
   Erdunion:
