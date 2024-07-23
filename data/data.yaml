@@ -331,14 +331,19 @@ entries:
   KaioArtefakt:
     de: 2312_KaioArtefakt.yaml
     en: 2312_KaioArtifact.yaml
-  Ein_Raketenangriff_zerstört_zw:
-    de: 2315_Ein_Raketenangriff_zerstört_zw.yaml
   Erdunion:
     de: 2318_Erdunion.yaml
     en: 2318_EarthUnion.yaml
   EarthIsolation:
     de: 2321_EarthIsolation.yaml
     en: 2321_EarthIsolation.yaml
+  # NoWar:
+  #   de: 2326_KeinInterplanetarerKrieg.yaml
+  #   en: 2326_NoInterplanetaryWar.yaml
+    # de: 2322_Kalter_Krieg.yaml
+    # de: 2326_Kriegserklärung_an_die_Koaliti.yaml
+    # de: 2328_Rücknahme_der_Kriegserklärung.yaml
+    # de: 2330_Konferenz_von_Quadrupol.yaml
   Kalter_Krieg:
     de: 2322_Kalter_Krieg.yaml
   Kriegserklärung_an_die_Koaliti:
