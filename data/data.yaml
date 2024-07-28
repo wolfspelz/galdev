@@ -315,8 +315,9 @@ entries:
   SolarCoalition:
     de: 2302_SolareKoalition.yaml
     en: 2302_SolarCoalition.yaml
-  Putsch_der_Raumhändler_in_Sant:
-    de: 2303_Putsch_der_Raumhändler_in_Sant.yaml
+  SpaceTraderCoup:
+    de: 2303_Putsch_der_Raumhaendler.yaml
+    en: 2303_Space_Trader_Coup.yaml
   Onong:
     de: 2305_Onong.yaml
   Zweiter_Mittelmeerkrieg:
