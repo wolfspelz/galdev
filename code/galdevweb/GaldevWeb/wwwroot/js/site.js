@@ -8,7 +8,7 @@ function initializeImagePreview() {
     const imagePreview = document.createElement("img");
     imagePreview.style.position = "absolute";
     imagePreview.style.display = "none";
-    imagePreview.style.width = "25%"; // Set image width to 1/3rd of the page width
+    imagePreview.style.width = "25%"; // Set image width to 1/4th of the page width
     imagePreview.style.filter = "drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))"; // Add drop-shadow style
     imagePreview.style.borderRadius = ".5rem";
     document.body.appendChild(imagePreview);
@@ -34,11 +34,15 @@ function initializeImagePreview() {
         const mouseX = event.pageX;
         const mouseY = event.pageY;
         const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
         const imageWidth = imagePreview.offsetWidth;
+        const imageHeight = imagePreview.offsetHeight;
         const offset = 80; // Distance from the mouse
 
         // Determine the image position based on mouse position
         let posX;
+        let posY = mouseY;
+
         if (mouseX < windowWidth / 2) {
             // Mouse is in the left half of the content
             posX = mouseX + offset;
@@ -53,8 +57,13 @@ function initializeImagePreview() {
             }
         }
 
+        // Adjust the vertical position to ensure the image is completely within the viewport
+        if (posY + imageHeight > windowHeight + window.scrollY) {
+            posY = windowHeight + window.scrollY - imageHeight - 20; // Adjust if image goes beyond the bottom edge
+        }
+
         imagePreview.style.left = posX + "px";
-        imagePreview.style.top = mouseY + "px"; // Top of the image at the mouse position
+        imagePreview.style.top = posY + "px";
     }
 
     // Attach mouseover, mouseout, and mousemove events to all <a> elements with data-image attribute
