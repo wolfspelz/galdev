@@ -9,9 +9,9 @@
     <div class="col-12">
         <h1>
             @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Geschichte in Themen",
-            ["en-US"] = () => "History by Topic"
-            })
+           ["de-DE"] = () => "Geschichte in Themen",
+           ["en-US"] = () => "History by Topic"
+       })
         </h1>
     </div>
 </div>
@@ -26,7 +26,7 @@
                     ["Anchor"] = topic,
                     ["Text"] = string.Join("<br/>",
                 Model.Timeline.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a>")
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
                 )
                 }));
     }
@@ -42,5 +42,9 @@
                 $("#id-" + hash).addClass("card-body-hilite");
             }
         });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", initializeImagePreview);
     </script>
 }

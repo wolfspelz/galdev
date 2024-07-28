@@ -31,9 +31,9 @@
     <div class="col-12">
         <h1>
             @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Die Geschichte der Zukunft",
-            ["en-US"] = () => "The History of the Future"
-            })
+           ["de-DE"] = () => "Die Geschichte der Zukunft",
+           ["en-US"] = () => "The History of the Future"
+       })
         </h1>
     </div>
 </div>
@@ -42,9 +42,9 @@
     <div class="col-12">
         <h2>
             @Model.I18n.String(path: "SubTitle", i18n: new StringGeneratorI18n {
-            ["de-DE"] = () => "Von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation",
-            ["en-US"] = () => "From Early Settlements in the Solar System to an Interstellar Civilization"
-            })
+           ["de-DE"] = () => "Von der Besiedlung des Sonnensystems bis zur interstellaren Zivilisation",
+           ["en-US"] = () => "From Early Settlements in the Solar System to an Interstellar Civilization"
+       })
         </h2>
     </div>
 </div>
@@ -108,11 +108,11 @@
                             + $"Starte mit <a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName} <span class='gd-next-arrow'></span></a><br/>"
                             + $"Oder mit einem <a href='{Links.GetPathByPage("/Topics", null, new { })}#adventure'>" + Model.Timeline.GetTitleOfTopic("adventure") + " <span class='gd-next-arrow'></span></a><br/>"
                             + $"Oder <a href='{Links.GetPathByPage("/List", null, new { })}'>die ganze Zeitleiste chronologisch <span class='gd-next-arrow'></span></a><br/>"
-                                        ,
+                    ,
                             ["en-US"] = () => ""
                             + $"<p>Start with: <a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}'>{entry.Year} {entry.DisplayName}</a></p>"
                             + $"<p>Or here: <a href='{Links.GetPathByPage("/List", null, new { })}'>Die entire timeline chronologically</a>.</p>"
-                        ,
+                    ,
                         }),
                     }));
         }
@@ -123,9 +123,9 @@
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                        Model.Timeline.GetEntriesOfTopic(topic)
-                        .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName}</a>")
-                        )
+                Model.Timeline.GetEntriesOfTopic(topic)
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName}</a>")
+                )
                 }));
     }
 
@@ -201,12 +201,12 @@
                         ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
                         ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
                     })
-                        + "<br/><br/>"
-                        + string.Join("<br/>",
-                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_project_expansion"))
-                        .Select(entry => {
-                                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                + "<br/><br/>"
+                + string.Join("<br/>",
+                Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_project_expansion"))
+                .Select(entry => {
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -310,9 +310,9 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
-                        Model.Timeline.GetEntriesOfTopic(topic)
-                                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
-                        )
+                Model.Timeline.GetEntriesOfTopic(topic)
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
+                )
                 }));
     }
 
@@ -320,10 +320,10 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = "Latest Translations",
                     ["Text"] = string.Join("<br/>",
-                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new_en"))
-                        .Select(entry => {
-                                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new_en"))
+                .Select(entry => {
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -334,10 +334,10 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["en-US"] = () => "Latest Articles",
                     }),
                     ["Text"] = string.Join("<br/>",
-                        Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new"))
-                        .Select(entry => {
-                                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new"))
+                .Select(entry => {
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -351,12 +351,12 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["de-DE"] = () => "Die Dinge mit denen wir täglich umgehen, prägen unseren Alltag. Sie sind oft charakteristisch für ihre Zeit. Sie zeigen, wie die Menschen leben und was gerade aktuell ist. Eigentlich sind sie uns viel näher als Nachrichtenmeldungen, Geschichtsbucheinträge und die große Politik. Deshalb will ich 100 Objekte aus den nächsten 1000 Jahren vorstellen. Auch wenn das nicht immer Alltagsgegenstände sind. Highlights:",
                         ["en-US"] = () => "The things we deal with on a daily basis shape our everyday life. They are often characteristic of their time. They show how people live and what's important to them. In fact, they are much closer to us than news reports, history book entries, and grand politics. That's why I want to show 100 objects from the next 1000 years, even if they are not always everyday items. Highlights:",
                     })
-                        + "<br/><br/>"
-                        + string.Join("<br/>",
-                        Model.Timeline.GetFilteredList(entry => entry.Topics.Contains("things"))
-                        .Select(entry => {
-                                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                + "<br/><br/>"
+                + string.Join("<br/>",
+                Model.Timeline.GetFilteredList(entry => entry.Topics.Contains("things"))
+                .Select(entry => {
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -411,11 +411,11 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 "executivedecision",
 "kisor",
 }
-                        .Where(name => Model.Timeline.HasEntry(name))
-                        .Select(name => {
-                            var entry = Model.Timeline.GetEntry(name);
-                                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                        })),
+                .Where(name => Model.Timeline.HasEntry(name))
+                .Select(name => {
+                    var entry = Model.Timeline.GetEntry(name);
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                })),
                 }));
     }
 
@@ -476,67 +476,6 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
 
 @section Scripts {
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Create a container for the preview image
-            const imagePreview = document.createElement("img");
-            imagePreview.style.position = "absolute";
-            imagePreview.style.display = "none";
-            imagePreview.style.width = "25%"; // Set image width to 1/3rd of the page width
-            imagePreview.style.filter = "drop-shadow(5px 5px 5px #505050)"; // Add drop-shadow style
-            imagePreview.style.borderRadius = ".5rem";
-            document.body.appendChild(imagePreview);
-
-            // Function to show the image preview
-            function showImage(event) {
-                const imageUrl = event.target.getAttribute("data-image");
-                if (imageUrl) {
-                    imagePreview.src = "/Image/" + imageUrl;
-                    imagePreview.style.display = "block";
-                    moveImage(event);
-                }
-            }
-
-            // Function to hide the image preview
-            function hideImage() {
-                imagePreview.style.display = "none";
-            }
-
-            // Function to move the image with the mouse
-            function moveImage(event) {
-                // Determine mouse position and window dimensions
-                const mouseX = event.pageX;
-                const mouseY = event.pageY;
-                const windowWidth = window.innerWidth;
-                const imageWidth = imagePreview.offsetWidth;
-                const offset = 80; // Distance from the mouse
-
-                // Determine the image position based on mouse position
-                let posX;
-                if (mouseX < windowWidth / 2) {
-                    // Mouse is in the left half of the content
-                    posX = mouseX + offset;
-                    if (posX + imageWidth > windowWidth) {
-                        posX = windowWidth - imageWidth - 20; // Adjust if image goes beyond the right edge
-                    }
-                } else {
-                    // Mouse is in the right half of the content
-                    posX = mouseX - imageWidth - offset;
-                    if (posX < 0) {
-                        posX = 20; // Adjust if image goes beyond the left edge
-                    }
-                }
-
-                imagePreview.style.left = posX + "px";
-                imagePreview.style.top = mouseY + "px"; // Top of the image at the mouse position
-            }
-
-            // Attach mouseover, mouseout, and mousemove events to all <a> elements with data-image attribute
-            const links = document.querySelectorAll("a[data-image]");
-            links.forEach(function (link) {
-                link.addEventListener("mouseover", showImage);
-                link.addEventListener("mouseout", hideImage);
-                link.addEventListener("mousemove", moveImage);
-            });
-        });
+        document.addEventListener("DOMContentLoaded", initializeImagePreview);
     </script>
 }
