@@ -8,7 +8,8 @@ function initializeImagePreview() {
     const imagePreview = document.createElement("img");
     imagePreview.style.position = "absolute";
     imagePreview.style.display = "none";
-    imagePreview.style.width = "25%"; // Set image width to 1/4th of the page width
+    imagePreview.style.width = "33%"; // Set image width to 1/4th of the page width
+    imagePreview.style.maxWidth = "30rem"; // Limit image width
     imagePreview.style.filter = "drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))"; // Add drop-shadow style
     imagePreview.style.borderRadius = ".5rem";
     document.body.appendChild(imagePreview);
