@@ -152,13 +152,13 @@ list:
 
   - image: XXXX-FrontWindow.jpg
     description: 
-      de: Cockpitansicht im Anflug auf die Erde
-      en: Cockpit view approaching Earth
+      de: Cockpitansicht im Anflug auf Cobols orbitale Ressource-Asteroiden
+      en: Cockpit view approaching Cobols orbital resource asteroids
 
   - image: XXXX-FrontWindow2.jpg
     description: 
-      de: Cockpitansicht im Anflug auf Cobol
-      en: Cockpit view approaching Cobol
+      de: Cockpitansicht im Anflug auf die Erde
+      en: Cockpit view approaching Earth
 
   - image: XXXX-CobolBiosphere.jpg
     description: 
