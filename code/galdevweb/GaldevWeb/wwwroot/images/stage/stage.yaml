@@ -1,5 +1,10 @@
 AssertUtf8: ä
 list:
+  - image: 2179-MatterStream.jpg
+    description: 
+      de: Materiestromprojektor, 2179
+      en: Matter stream projector, 2179
+
   - image: 2180-OrbitalConstruction.jpg
     description: 
       de: Konstruktion im Orbit, 2180
@@ -10,6 +15,11 @@ list:
       de: "Asteroidencycler: automatischer Frachter, frühes 23. Jahrhundert"
       en: "Asteroid cycler: automated freighter, early 23rd century"
 
+  - image: 2222-SpacePirates.jpg
+    description: 
+      de: Kapitänin Priya Nair, 2222
+      en: Captain Priya Nair, 2222
+
   - image: 2260-EarthFleet.jpg
     description: 
       de: Erdflotte vor dem Angriff auf den Mars, 2261
@@ -19,6 +29,16 @@ list:
     description: 
       de: Millionen demonstrieren für Weltfreundschaft, 2252
       en: Millions rally for World Friendship in 2252
+
+  - image: 2280-DronePilot.jpg
+    description: 
+      de: Drohnenpilotin im 1. Mittelmeerkrieg, 2280
+      en: Drohne pilot during the fist Mediterranean War, 2280
+
+  - image: 2284-LeaPerres.jpg
+    description: 
+      de: Lea Perres, Virtuelle Halle der planetaren Vollversammlung, 2284
+      en: Lea Perres, Planetary Assembly V-Hall, 2284
 
   - image: 2300-EarthEnvironment.jpg
     description: 
@@ -37,7 +57,7 @@ list:
 
   - image: 2433-ExprimentalVessel.jpg
     description: 
-      de: Experientelles Raumschiff für den Flug in die Oort Wolke, 2433
+      de: Experimentelles Raumschiff für den Flug in die Oort Wolke, 2433
       en: Experimental vessel for the flight to the Oort Cloud, 2433
 
   - image: 2550-OrbitalBattle.jpg
@@ -55,10 +75,45 @@ list:
       de: Ultrakapazitor von Corebridge Energy spätes 30. Jahrhundert
       en: Shiny new Corebridge Energy ultra capacitor late 30th century
 
+  - image: 2890-SpaceStation.jpg
+    description: 
+      de: Morogoro Terminal M'kele Orbit, 2890
+      en: Morogoro Terminal M'kele Orbit, 2890
+
+  - image: 3070-ObservationDeck.jpg
+    description: 
+      de: Aussichtsdeck, Marduk System, 3070
+      en: Observation deck, Marduk System, 3070
+
+  - image: 3090-Solo.jpg
+    description: 
+      de: Solo, ein Ritter und ihr Schiff, 3090
+      en: Solo, a knight and her ship, 3090
+
+  - image: 3121-TacticalDiscussion.jpg
+    description: 
+      de: Taktische Diskussion im Untergrund, 3121
+      en: Tactical discussion in the station underground, 3121
+
   - image: 3148-EarthRing.jpg
     description: 
       de: Erdring im 32. Jahrhundert
       en: Earth ring in the 32nd century
+
+  - image: XXXX-MoonBase.jpg
+    description: 
+      de: Mondbasis, spätes 21. Jahrhundert
+      en: Moon base, late 21st century
+
+  - image: XXXX-OrbitalDocking.jpg
+    description: 
+      de: Dockingvorgang im Orbit, 23. Jahrhundert
+      en: Orbital docking, 23nd century
+
+  - image: XXXX-CitySpeeding.jpg
+    description: 
+      de: Gefährliche Überschallgeschwindigkeit über einer Stadt 
+      en: Illegal supersonic speeding over a city
 
   - image: XXXX-EarthRingConstruction.jpg
     description: 
@@ -78,4 +133,34 @@ list:
   - image: XXXX-VenusFreighter.jpg
     description: 
       de: Frachter in der oberen Venus-Atmosphäre
-      en: Bubble freighter crusing in the upper Venus atmosphere
+      en: Bubble freighter cruising in the upper Venus atmosphere
+
+  - image: XXXX-Skyline.jpg
+    description: 
+      de: Skyline
+      en: Skyline
+
+  - image: XXXX-GreenHabitat.jpg
+    description: 
+      de: Rotierendes Zylinderhabitat L5
+      en: Green rotating cylinder habitat at L5
+
+  - image: XXXX-Hangar.jpg
+    description: 
+      de: Verlassenes Raumschiff im Hangar
+      en: Derelict space vessel
+
+  - image: XXXX-FrontWindow.jpg
+    description: 
+      de: Cockpitansicht im Anflug auf die Erde
+      en: Cockpit view approaching Earth
+
+  - image: XXXX-FrontWindow2.jpg
+    description: 
+      de: Cockpitansicht im Anflug auf Cobol
+      en: Cockpit view approaching Cobol
+
+  - image: XXXX-CobolBiosphere.jpg
+    description: 
+      de: Ursprüngliche Biosphäre in einer gemäßigten Klimazone von Cobol
+      en: Original biosphere in a temperate climate zone of Cobol
