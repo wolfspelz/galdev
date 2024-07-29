@@ -6,12 +6,7 @@
 function initializeImagePreview() {
     // Create a container for the preview image
     const imagePreview = document.createElement("img");
-    imagePreview.style.position = "absolute";
-    imagePreview.style.display = "none";
-    imagePreview.style.width = "33%"; // Set image width to 1/4th of the page width
-    imagePreview.style.maxWidth = "30rem"; // Limit image width
-    imagePreview.style.filter = "drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5))"; // Add drop-shadow style
-    imagePreview.style.borderRadius = ".5rem";
+    imagePreview.className = "gd-preview";
     document.body.appendChild(imagePreview);
 
     // Function to show the image preview
@@ -75,3 +70,5 @@ function initializeImagePreview() {
         link.addEventListener("mousemove", moveImage);
     });
 }
+
+document.addEventListener("DOMContentLoaded", initializeImagePreview);
