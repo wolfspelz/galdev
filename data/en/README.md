@@ -1,6 +1,6 @@
 # The History of the Future. 
 
-From early settlements in the Solar system to an interstellar civilization.
+From early settlements in the Sol System to an interstellar civilization.
  
 Galactic Developments is a history book of the future, a realistic timeline.
 
