@@ -11,7 +11,7 @@ Translation: Rosmarie Wolf, Heiner Wolf
 Tags: [science, interplanetary, spaceship, FTL, accident]
 Topics: [adventure, discovery, accident]
 Text: |
-  --- Private message ---
+  -- Private message --
   Calixtos Kamikatsu on board the Gahara Sthaan IX on the return flight from Pontos, planet 9, at the 1000 AU (astronomical units) mark, year 2412:
   Hello Darling,
   there are now only 1000 astronomical units left until we are home. Less than a year. Pontos was incredible. We are all still completely stunned. There was not much to see in the visible spectrum. A thousand AU from the Sun you have to look very closely to see anything at all. But in the infrared, we saw the planet's landscape in splendor. In the inner Sol System, there are gas giants with thick atmospheres, bands of clouds, and storms. Out here, so far from the Sun, there is only ice. The whole atmosphere is frozen. Pontos is an ice giant.
@@ -23,9 +23,9 @@ Text: |
   All that is now frozen. Like suddenly petrified amidst the movement, simply marvelous.
   I must be returning to my analysis now…
   See you soon.
-  --- End private message ---
+  -- End private message --
    
-  --- Private message ---
+  -- Private message --
   Calixtos Kamikatsu on board the Gahara Sthaan IX, 999 AU from Sol, three months after the accident:
   Hi honey,
   bad news. Anne can't get the drive to work. She says we have been pretty lucky. We all knew the journey would be risky. The matter density out here is so low that you don't really expect to hit anything. Must have been a decent asteroid. At full speed, two million kilometers is enough proximity for its gravitational field to damage our FTL system when it runs under load.
@@ -33,9 +33,9 @@ Text: |
   SuSI is our FTL engineering AI. Tech-gibberish. I ask Anne what this means: she says, the converter poles are fractals. They have to be as fine as possible, down to nanometers. A value of 3.0 as the fractal dimension would be perfect. But that is only theoretical. They try to get as close as possible: 3.0 minus a little bit. In our case the "bit" would be ten to the power of minus 4.8. If the number is smaller, then the distance to 3 is larger and the Lévy effect collapses. There is more. Something with virtual particles, negative energy, quantum violation and so on.
   Anyway, when we passed the asteroid, some superfine structures in the converter poles were distorted. They clump together. In other words: the converter poles are trash. We can't fix that here. True, we do have fabs for all our daily needs as mechs, but the bush robots of Majumdar Abhiyaantrikk supposedly spent a full two years assembling the converter poles. That's a totally different game. 
   I'm going to get back to you when I know more.
-  --- End private message ---
+  -- End private message --
    
-  --- Private message ---
+  -- Private message --
   Calixtos Kamikatsu on board the Gahara Sthaan IX, 999 AU from Sol, four months after the accident:
   Hello you three,
   most of the data is now analyzed. The drive is still not working. Unfortunately, there seems to be no capacity for a rescue mission. Understandable, this flight was expensive enough. There is not enough bandwidth for an info evacuation, either. We are stuck out here.
@@ -44,12 +44,12 @@ Text: |
   We have to switch off here. The engine is not only broken. It's also radioactive. Anne says that this often happens after converter accidents. The radiation disrupts the reactor. We are running out of energy. SuSI and the other AIs are already off. Our mech shells have also been shut down. Only the HICs (our Human Infomorph Cores) are still running. We are already in VR-habitat.
   We are now going into hibernation. Only the proximity sensor remains active. We will not notice anything. Time will fly by. For us. I'm sorry.
   I kiss you.
-  --- End private message ---
+  -- End private message --
    
-  --- Ship log, 30 years after the accident ---
+  -- Ship log, 30 years after the accident --
   Gahara Sthaan IX, 999 AU from Sol, 2442:
   ...T15:33:21,042 Passive Radar: Signal: Source: Distance 1.3e7 km.
   ...T15:33:22.314 Controller: Send identification via: ComLaser.
   ...T15:33:22.316 Controller: Activate HIC: Captain: Rashid Agarwal.
   ...T15:34:59.271 ComLaser: Message received: "We are coming to get you".
-  --- End ship log excerpt ---
+  -- End ship log excerpt --

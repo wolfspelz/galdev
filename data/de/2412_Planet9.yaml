@@ -17,7 +17,7 @@ Author: Heiner Wolf
 Tags: [Wissenschaft, interplanetar, Raumschiff, Überlicht]
 Topics: [adventure, discovery, accident]
 Text: |
-  --- private Nachricht ---
+  -- private Nachricht --
   Calixtos Kamikatsu an Bord der Gahara Sthaan IX auf dem Rückflug von Pontos, Planet 9, 2412:
   Hallo meine Liebe,
   jetzt sind es nur noch 1000 astronomische Einheiten bis nach Hause. Ein knappes Jahr. Pontos war der Wahnsinn. Wir sind alle noch ganz geflasht. Optisch war nicht viel los. Tausend Astronomische Einheiten (AU) von der Sonne entfernt muss man schon sehr genau hinsehen, um etwas zu erkennen. Aber im Infrarot haben wir alles in voller Schönheit gesehen. Drinnen im Sonnensystem gibt es die Gasriesen mit dicken Atmosphären, Wolkenbändern und Stürmen. Hier draußen, so weit von der Sonne entfernt, ist nur Eis. Die ganze Atmosphäre ist gefroren. Pontos ist ein Eisriese.
@@ -30,8 +30,8 @@ Text: |
   Ich mache mich jetzt wieder an die Auswertung.
   Bis bald.
   ENDE.
-  ---
-  --- private Nachricht ---
+  --
+  -- private Nachricht --
   Calixtos Kamikatsu an Bord der Gahara Sthaan IX, 999 AU von Sol, drei Monate nach der Havarie:
   Hi Schätzchen,
   schlechte Nachrichten. Anne bekommt den Antrieb nicht zum Laufen. Sie sagt, wir hatten ziemliches Glück. Wir wussten alle, dass die Sache riskant ist. Aber die Materiedichte hier draußen ist so gering, dass man nicht wirklich damit rechnet was zu treffen. Naja, getroffen haben wir ja auch nicht; eher es uns. Muss ein ordentlicher Asteroid gewesen sein. Bei voller Fahrt reichen schon zwei Millionen Kilometer "Nähe", damit sein Gravitationsfeld unseren Antrieb beschädigt, wenn er unter Last läuft.
@@ -40,8 +40,8 @@ Text: |
   Jedenfalls, als wir an dem Asteroiden vorbei sind, haben sich diese superfeinen Verästelungen verzogen. Sie klumpen zusammen. Mit anderen Worten: die Konverterpole sind Matsch. Das können wir hier nicht fixen. Wir haben zwar Fabs für alles, was wir als Mechs so brauchen, aber an den Konvertern haben die Bush-Robots von Majumdar Abhiyaantrikk angeblich zwei Jahre rum-assembliert.
   Ich melde mich wieder, wenn ich mehr weiß.
   ENDE.
-  ---
-  --- private Nachricht ---
+  --
+  -- private Nachricht --
   Calixtos Kamikatsu an Bord der Gahara Sthaan IX, 999 AU von Sol, 2412, vier Monate nach der Havarie:
   Hallo ihr drei,
   die meisten Daten sind jetzt ausgewertet. Der Antrieb geht immer noch nicht. Anscheinend gibt es keine Kapazitäten für eine Rettungsmission. Verständlich, dieser Flug war teuer genug. Und für eine Info-Evakuierung reicht die Bandbreite bei weitem nicht. Wir sitzen hier fest.
@@ -51,11 +51,11 @@ Text: |
   Wir gehen jetzt in den Winterschlaf. Nur ein Automat für den Annäherungssensor bleibt an. Wir werden nichts merken. Die Zeit vergeht wie im Flug. Für uns. Tut mir leid.
   Ich küsse dich.
   ENDE.
-  ---
-  --- Schiffslog, 30 Jahre nach der Havarie ---
+  --
+  -- Schiffslog, 30 Jahre nach der Havarie --
   Gahara Sthaan IX, 999 AU von Sol, 2442:
   ...T15:33:21.042 Passive Radar: Signal: Quelle: Entfernung 1,3e7 km
   ...T15:33:22.314 Controller: Sende Kennung via: KomLaser
   ...T15:33:22.316 Controller: Aktiviere HIC: Kapitän: Rashid Agarwal
   ...T15:34:59.271 KomLaser: Nachricht empfangen: "Wir haben Euch."
-  ---
+  --

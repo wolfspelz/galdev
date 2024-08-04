@@ -1,4 +1,5 @@
 ﻿@page
+@using Markdig
 @model BookModel
 @{
     Layout = "_BookLayout";
@@ -6,10 +7,12 @@
 
 @foreach (var entry in Model.List) {
     <div>
-        <p>MARK_TITLE @(entry.Year) @entry.Title</p>
-        MARK_TEXT
+        <p>MARK_TITLE</p>
+        <p>@(entry.Year) MARK_TAB @entry.Title</p>
+        <p>MARK_TEXT_BEGIN</p>
         @foreach (var t in entry.Text) {
-            <p>@t</p>
+            @Html.Raw(Markdown.ToHtml(t))
         }
+        <p>MARK_TEXT_END</p>
     </div>
 }
