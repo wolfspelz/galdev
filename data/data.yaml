@@ -341,8 +341,9 @@ entries:
   NoInterplanetaryWar:
     de: 2326_KeinInterplanetarerKrieg.yaml
     en: 2326_NoInterplanetaryWar.yaml
-  Die_Entwicklung_des_Konvertert:
-    de: 2333_Die_Entwicklung_des_Konvertert.yaml
+  MetricImpulse:
+    de: 2333_MetricImpulse.yaml
+    en: 2333_MetricImpulse.yaml
   Übertragung_der_Verantwortung_:
     de: 2335_Übertragung_der_Verantwortung_.yaml
   Übernahme_der_wiederaufgebaute:
