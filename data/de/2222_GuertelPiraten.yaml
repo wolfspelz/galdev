@@ -96,7 +96,7 @@ Text: |
     KMDO Nair: "Betrieb: drehen 180, Beschleunigung 2 g"
     BETR Al-Kazemi: "Captain ...?"
     KMDO Nair: "Mach‘s einfach."
-    BETR Al-Kazemi: "Vorbereiten auf SDK und HTS" (Steuerdüsen und Haupttriebwerksstart).
+    BETR Al-Kazemi: "Vorbereiten auf SDK und HTS" (Einsatz der Steuerdüsen und Haupttriebwerksstart).
     [Kurze Pause]
     BETR Al-Kazemi: "HTS".
     Nicht identifiziert: "Verdammt, was macht ihr da?"
@@ -126,7 +126,7 @@ Text: |
     [Kurze Pause]
     BETR Al-Kazemi: "Und ... wir sind auf Aux."
     [Pause]
-    BETR Al-Kazemi: "KSM zeigt sie in 100 Meter Entfernung. SDK aktiv" (Sie nähern sich mit den Steuerdüsen).
+    BETR Al-Kazemi: "KSM zeigt sie in 100 Meter Entfernung. SDK aktiv" (KSM: Kombinierter Situationsmonitor, SDK: Sie nähern sich mit den Steuerdüsen).
     [Pause]
     BETR Al-Kazemi: "Sie haben bei 30 Metern auf unserer 5 minus 45 gestoppt" (5 Uhr bedeutet auf der Rückseite des Schiffes und 45 Grad nach unten in Bezug auf seine Hauptachse. Oben und Unten sind definiert durch die Anordnung der Beschleunigungssitze, eine willkürliche, aber notwendige Festlegung).
     [Kurze Pause]
