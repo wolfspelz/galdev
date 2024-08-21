@@ -96,7 +96,7 @@ Text: |
     KMDO Nair: "Betrieb: drehen 180, Beschleunigung 2 g"
     BETR Al-Kazemi: "Captain ...?"
     KMDO Nair: "Mach‘s einfach."
-    BETR Al-Kazemi: "Vorbereiten auf SDK und HTS" (Steuerdüsen und Haupttriebwerksstart).
+    BETR Al-Kazemi: "Vorbereiten auf SDK und HTS" (Einsatz der Steuerdüsen und Haupttriebwerksstart).
     [Kurze Pause]
     BETR Al-Kazemi: "HTS".
     Nicht identifiziert: "Verdammt, was macht ihr da?"
@@ -126,14 +126,14 @@ Text: |
     [Kurze Pause]
     BETR Al-Kazemi: "Und ... wir sind auf Aux."
     [Pause]
-    BETR Al-Kazemi: "KSM zeigt sie in 100 Meter Entfernung. SDK aktiv" (Sie nähern sich mit den Steuerdüsen).
+    BETR Al-Kazemi: "KSM zeigt sie in 100 Meter Entfernung. SDK aktiv" (KSM: Kombinierter Situationsmonitor, SDK: Sie nähern sich mit den Steuerdüsen).
     [Pause]
     BETR Al-Kazemi: "Sie haben bei 30 Metern auf unserer 5 minus 45 gestoppt" (5 Uhr bedeutet auf der Rückseite des Schiffes und 45 Grad nach unten in Bezug auf seine Hauptachse. Oben und Unten sind definiert durch die Anordnung der Beschleunigungssitze, eine willkürliche, aber notwendige Festlegung).
     [Kurze Pause]
     KMDO Nair: "Die Außenkameras zeigen ein paar Gestalten mit APEX-Anzügen im ABE... [Kurze Pause] ... 3 ... sie kommen näher." (APEX: Armored Powered EXoskeleton Raumanzug, ABE: Außenbordeinsatz, mit anderen Worten: sie haben ihr Schiff verlassen und kommen in gepanzerten Raumanzügen herüber. APEX war ursprünglich ein Produktname, der so viel bedeutete wie der Apex-Predator unter den Raumanzügen. Später wurde APEX das Synonym für eine ganze Klasse von Anzügen für militärische Einsätze im Weltraum. Ein APEX ist jetzt im Prinzip ein eigenständiges Ein-Personen-Mikroraumschiff für kurze Strecken).
     BETR Al-Kazemi: "Anscheinend nähert sich einer dem ventralen Kommunikationscluster. Zwei andere kommen Richtung unserer Frontluke." (Ventral: auf der Unterseite – Bauchseite – bezogen auf die Hauptachse des Schiffes. Einer der beiden Kommunikationscluster, ventral oder dorsal, sollte immer Kontakt zur Basis haben egal wie das Schiff im Raum steht). 
     KMDO Nair: "Kontrolle: können wir sie mit einem Container treffen? Können wir einen Container sprengen oder einen Container zwischen uns und die Rakete 2 bringen? Am besten beides gleichzeitig."
-    KTRL Ling: "Ich brauche drei Minuten, um die Container freizumachen und ihnen einen Schub zu geben. Aber ich muss den Schieber benutzen für den hinteren Container." (Containerschieber: ein kleines Raumfahrzeug, das zum Verschieben von Containern benutzt wird). 
+    KTRL Ling: "Ich brauche drei Minuten, um die Container freizumachen und ihnen einen Schub zu geben. Aber für den hinteren Container muss ich den Schieber benutzen." (Containerschieber: ein kleines Raumfahrzeug, das zum Manövrieren von Containern benutzt wird). 
     KMDO Nair: "Kontrolle: mach' es. Betrieb: Relais-Drohne stop. Kehre den Kurs um und schicke sie in drei Minuten dicht an uns vorbei. Bereite dich auf Manöver im Endanflug vor. Koordiniere das Timing mit der Container-Aktion."
     Nicht identifiziert: "Sie werden angewiesen, die Luke zu räumen und sich für den Schleusenzyklus bereitzuhalten. Versucht nicht kreativ zu werden. Das ist nicht unsere erste Mission. Wir haben schon viel gesehen. Container, die auf uns geworfen werden. Der Antrieb als Waffe. Blenden mit Kommunikationslaser. Drohnen, die uns rammen. Alles Mögliche. Ernsthaft, wir gehen kein Risiko ein. Eine Bedrohung unserer Mission, und die Rakete jagt euch in die Luft. Zuerst die Brücke. Denkt nicht mal dran."
     BETR Al-Kazemi: "Zweite Rakete manövriert, nähert sich KWM ... 20 Meter ... sollte jetzt in Sicht kommen ... da ist sie ... eine schöne Suzume Typ 8." (KWM: Kommando- und Wohnmodul, Suzume: Standard-Abfangrakete für kurze Entfernungen mit genug Intelligenz, Sensoren und Antrieb, um jedes Ziel autonom zu verfolgen, vor allem jedes zivile Frachtschiff).
