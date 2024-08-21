@@ -62,8 +62,14 @@
 
                         <li class="nav-item">
                             <div class="my-findform">
-                                <form id="selectLanguage" asp-page="/Find" method="get" class="form-horizontal" role="form">
-                                    <input type="text" name="term" placeholder="@Model.I18n.String(path: "Search", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"Suchen", ["en-US"] = () =>"Search" })" value="@ViewData["SearchTerm"]" />
+                                <form id="selectLanguage" asp-page="/Find" method="get" class="form-horizontal" role="search">
+                                    <input 
+                                        type="text" 
+                                        name="term"
+                                        aria-label="Search through site content"
+                                        placeholder="@Model.I18n.String(path: "Search", i18n: new StringGeneratorI18n { ["de-DE"] = () =>"Suchen", ["en-US"] = () =>"Search" })"
+                                        value="@ViewData["SearchTerm"]" 
+                                        />
                                 </form>
                             </div>
                         </li>

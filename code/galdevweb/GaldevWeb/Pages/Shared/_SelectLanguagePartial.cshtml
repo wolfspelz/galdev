@@ -13,11 +13,12 @@
 }
 
 <div class="my-langselector">
-    <form id="selectLanguage" asp-controller="Culture" asp-action="SetCulture"
-          method="get" class="form-horizontal" role="form">
+    <form id="selectLanguage" asp-controller="Culture" asp-action="SetCulture" method="get" class="form-horizontal">
         <select name="culture" onchange="this.form.submit();"
-                asp-for="@culture.Name"
-                asp-items="cultureItems">
+            role="combobox"
+            aria-label="Select language"
+            asp-for="@culture.Name"
+            asp-items="cultureItems">
         </select>
     </form>
 </div>
