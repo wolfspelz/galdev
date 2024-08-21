@@ -11,9 +11,9 @@
             <div class="card" @(string.IsNullOrEmpty(card["Id"]) ? "" : "id=" + card["Id"])>
                 @if (@card["ImgSrc"].String != "") {
                     @if (@card["Link"].String != "") {
-                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
+                        <a href="@card["Link"].String"><img class="card-img-top" src="@card["ImgSrc"]" alt="@card["ImgAlt"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())"></a>
                     } else {
-                        <img class="card-img-top" src="@card["ImgSrc"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
+                        <img class="card-img-top" src="@card["ImgSrc"]" alt="@card["ImgAlt"]" data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
                     }
                     <div id="iCard@(card.GetHashCode())" class="modal fade" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
