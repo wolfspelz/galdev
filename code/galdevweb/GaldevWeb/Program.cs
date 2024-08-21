@@ -13,6 +13,8 @@ namespace GaldevWeb
             //if (!string.IsNullOrEmpty(cwd)) {
             //    Directory.SetCurrentDirectory(cwd);
             //}
+            var myConfig = new GaldevConfig();
+            var myLogger = new NullCallbackLogger();
 
             var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,13 @@ namespace GaldevWeb
               .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
               .AddDataAnnotationsLocalization();
 
+            builder.Services.AddMemoryCache();
+
+            builder.Services.Configure<ImageToWebpConversionMiddlewareOptions>(options =>
+            {
+                options.CacheDurationSec = myConfig.WebpMemoryCacheDurationSec;
+            });
+            
             builder.Services.AddResponseCompression(options =>
             {
                 options.EnableForHttps = true;
@@ -48,9 +57,6 @@ namespace GaldevWeb
                     .AddSupportedCultures(supportedCultures)
                     .AddSupportedUICultures(supportedCultures);
             });
-
-            var myConfig = new GaldevConfig();
-            var myLogger = new NullCallbackLogger();
 
             var timeIndex = new TimelineIndex {
                 IndexFilePath = myConfig.DataIndexPath,
@@ -87,6 +93,10 @@ namespace GaldevWeb
             //}
             app.UseResponseCompression();
 
+            app.UseRouting();
+
+            app.UseMiddleware<ImageToWebpConversionMiddleware>();
+
             app.UseStaticFiles(new StaticFileOptions() {
                 ServeUnknownFileTypes = true
             });
@@ -106,7 +116,6 @@ namespace GaldevWeb
             app.UseRequestLocalization(localizationOptions); // Sets Thread.CurrentThread.CurrentUICulture
 
             app.UseCors();
-            app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
             
