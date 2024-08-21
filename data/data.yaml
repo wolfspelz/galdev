@@ -344,10 +344,8 @@ entries:
   MetricImpulse:
     de: 2333_MetricImpulse.yaml
     en: 2333_MetricImpulse.yaml
-  Übertragung_der_Verantwortung_:
-    de: 2335_Übertragung_der_Verantwortung_.yaml
-  Übernahme_der_wiederaufgebaute:
-    de: 2337_Übernahme_der_wiederaufgebaute.yaml
+  # Übernahme_der_wiederaufgebaute:
+  #   de: 2337_Übernahme_der_wiederaufgebaute.yaml
   AiExpansionStopped:
     de: 2338_KiExpansionGestoppt.yaml
     en: 2338_AiExpansionStopped.yaml
