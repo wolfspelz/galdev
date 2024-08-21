@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace GaldevWeb
 {
@@ -25,6 +26,22 @@ namespace GaldevWeb
               .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
               .AddDataAnnotationsLocalization();
 
+            builder.Services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.MimeTypes = new[]
+                {
+                    "text/html",
+                    "text/css",
+                    "application/javascript",
+                    "text/javascript",
+                    "application/json",
+                    "application/xml",
+                    "text/plain",
+                    "image/svg+xml"
+                };
+            });
+            
             builder.Services.Configure<RequestLocalizationOptions>(options => {
                 var supportedCultures = new[] { "en-US", "de-DE" };
                 options.SetDefaultCulture("de-DE")
@@ -68,6 +85,8 @@ namespace GaldevWeb
             //if (!app.Environment.IsDevelopment()) {
             //    app.UseExceptionHandler("/Error");
             //}
+            app.UseResponseCompression();
+
             app.UseStaticFiles(new StaticFileOptions() {
                 ServeUnknownFileTypes = true
             });
@@ -90,7 +109,7 @@ namespace GaldevWeb
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints => {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
