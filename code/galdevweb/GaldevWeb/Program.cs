@@ -95,7 +95,7 @@ namespace GaldevWeb
 
             app.UseRouting();
 
-            app.UseMiddleware<ImageToWebpConversionMiddleware>();
+            //app.UseMiddleware<ImageToWebpConversionMiddleware>();
 
             app.UseStaticFiles(new StaticFileOptions() {
                 ServeUnknownFileTypes = true
