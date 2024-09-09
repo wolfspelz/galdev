@@ -28,15 +28,14 @@ namespace GaldevWeb
               .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
               .AddDataAnnotationsLocalization();
 
-            builder.Services.AddMemoryCache();
+            //builder.Services.AddMemoryCache();
 
             builder.Services.Configure<ImageToWebpConversionMiddlewareOptions>(options =>
             {
                 options.CacheDurationSec = myConfig.WebpMemoryCacheDurationSec;
             });
-            
-            builder.Services.AddResponseCompression(options =>
-            {
+
+            builder.Services.AddResponseCompression(options => {
                 options.EnableForHttps = true;
                 options.MimeTypes = new[]
                 {
@@ -50,7 +49,7 @@ namespace GaldevWeb
                     "image/svg+xml"
                 };
             });
-            
+
             builder.Services.Configure<RequestLocalizationOptions>(options => {
                 var supportedCultures = new[] { "en-US", "de-DE" };
                 options.SetDefaultCulture("de-DE")
@@ -91,15 +90,14 @@ namespace GaldevWeb
             //if (!app.Environment.IsDevelopment()) {
             //    app.UseExceptionHandler("/Error");
             //}
-            app.UseResponseCompression();
-
-            app.UseRouting();
 
             //app.UseMiddleware<ImageToWebpConversionMiddleware>();
-
             app.UseStaticFiles(new StaticFileOptions() {
                 ServeUnknownFileTypes = true
             });
+
+            app.UseResponseCompression();
+            app.UseRouting();
 
             var supportedCultures = new[]{
                 new CultureInfo("de-DE"),
