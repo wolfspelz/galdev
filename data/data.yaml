@@ -344,8 +344,9 @@ entries:
   MetricImpulse:
     de: 2333_MetricImpulse.yaml
     en: 2333_MetricImpulse.yaml
-  # Übernahme_der_wiederaufgebaute:
-  #   de: 2337_Übernahme_der_wiederaufgebaute.yaml
+  GeminiTakeover:
+    de: 2337_GeminiÜbernahme.yaml
+    en: 2337_GeminiTakeover.yaml
   AiExpansionStopped:
     de: 2338_KiExpansionGestoppt.yaml
     en: 2338_AiExpansionStopped.yaml
