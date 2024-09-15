@@ -3,21 +3,54 @@
 @model BookModel
 @{
     Layout = "_BookLayout";
-    var pipeline = new MarkdownPipelineBuilder()
+
+    var pipeline = Model.Export
+      ? new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
         .Use(new CustomListExtension() { Prefix = "MARK_LIST_ITEM " })
         .Use(new CustomHeadingRendererExtension { Prefix = "MARK_HEADING1 ", Suffix = "" })
+        .Build()
+      : new MarkdownPipelineBuilder()
+        .Use(new DemoteHeadingsExtension(1))
         .Build();
+    ;
+}
+
+@if (!Model.Export) {
+    <style>
+        h1 {
+            font-size: 1.1em;
+        }
+
+        h2 {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0.3em 0;
+        }
+    </style>
 }
 
 @foreach (var entry in Model.List) {
     <div>
-        <p>MARK_TITLE</p>
-        <p>@(entry.Year) MARK_TAB @entry.Title</p>
-        <p>MARK_TEXT_BEGIN</p>
+        @if (Model.Export) {
+            <p>MARK_TITLE</p>
+        }
+        @if (Model.Export) {
+            <p>@(entry.Year) MARK_TAB @entry.Title</p>
+        } else {
+            <h1>@(entry.Year) @entry.Title</h1>
+        }
+        @if (Model.Export) {
+            <p>MARK_TEXT_BEGIN</p>
+        }
         @foreach (var t in entry.Text) {
             @Html.Raw(Markdown.ToHtml(t, pipeline))
         }
-        <p>MARK_TEXT_END</p>
+        @if (Model.Export) {
+            <p>MARK_TEXT_END</p>
+        }
     </div>
 }

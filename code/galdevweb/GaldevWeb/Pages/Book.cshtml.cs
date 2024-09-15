@@ -2,6 +2,7 @@
 {
     public class BookModel : GaldevPageModel
     {
+        public bool Export = false;
         public TimelineSeries bookTimeline;
         public TimelineEntryList List = new();
 
@@ -15,10 +16,13 @@
             bookTimeline = timeIndex.GetSeriesForLanguage(Lang);
         }
 
-        public void OnGet(int start = -1, int end = -1, int min = -1)
+        public void OnGet(bool export = false, int start = -1, int end = -1, int min = -1)
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            Log.Info($"min={min} start={start} end={end}");
+            Log.Info($"export={export} min={min} start={start} end={end}");
+
+            Export = export;
+
             List = bookTimeline.GetFilteredList(entry => {
                 var match = true;
                 if (match) {
