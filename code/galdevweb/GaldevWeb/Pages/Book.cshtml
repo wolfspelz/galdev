@@ -3,6 +3,11 @@
 @model BookModel
 @{
     Layout = "_BookLayout";
+    var pipeline = new MarkdownPipelineBuilder()
+        .UseAdvancedExtensions()
+        .Use(new CustomListExtension() { Prefix = "MARK_LIST_ITEM " })
+        .Use(new CustomHeadingRendererExtension { Prefix = "MARK_HEADING1 ", Suffix = "" })
+        .Build();
 }
 
 @foreach (var entry in Model.List) {
@@ -11,7 +16,7 @@
         <p>@(entry.Year) MARK_TAB @entry.Title</p>
         <p>MARK_TEXT_BEGIN</p>
         @foreach (var t in entry.Text) {
-            @Html.Raw(Markdown.ToHtml(t))
+            @Html.Raw(Markdown.ToHtml(t, pipeline))
         }
         <p>MARK_TEXT_END</p>
     </div>
