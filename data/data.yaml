@@ -663,52 +663,30 @@ entries:
     de: 2661_Besuch_Panol_Degans_auf_Aaron.yaml
   Podgorski:
     de: 2664_Podgorski.yaml
-  Wiederbesiedlung_von_Tawanna:
-    de: 2666_Wiederbesiedlung_von_Tawanna.yaml
   UltraMetals:
     de: 2668_Draco.yaml
     en: 2668_UltraMetals.yaml
   Fertigstellung_des_geosynchron:
     de: 2669_Fertigstellung_des_geosynchron.yaml
-  Sapio_Eine_Gruppe_von_Siedlung:
-    de: 2671_Sapio_Eine_Gruppe_von_Siedlung.yaml
-  Konflikte_mit_Ureinwohnern_esk:
-    de: 2673_Konflikte_mit_Ureinwohnern_esk.yaml
-  TawannaKrise:
-    de: 2673c_TawannaKrise.yaml
+  Siedlungskonflikte:
+    de: 2670_Siedlungskonflikte.yaml
   Entdeckung_des_Brandes:
     de: 2674_Entdeckung_des_Brandes.yaml
-  AlwayBesiedlung:
-    de: 2676_AlwayBesiedlung.yaml
   Mansalu:
     de: 2677_Mansalu.yaml
-  AlwayKrieg:
-    de: 2678_AlwayKrieg.yaml
   Entdeckung_der_goldenen_Städte:
     de: 2679_Entdeckung_der_goldenen_Städte.yaml
-  Ohni_Unruhen_in_den_Uranbergwe:
-    de: 2680_Ohni_Unruhen_in_den_Uranbergwe.yaml
   AncientRobots:
     de: 2681_Solberg.yaml
     en: 2681_AncientRobots.yaml
   TXYG:
     de: 2682_TXYG.yaml
-  Koalitionstruppen_zwingen_ein_:
-    de: 2683_Koalitionstruppen_zwingen_ein_.yaml
   Erste_Austragung_des_Raumrenne:
     de: 2684_Erste_Austragung_des_Raumrenne.yaml
-  Handelsstützpunkt_auf_Diobe:
-    de: 2685_Handelsstützpunkt_auf_Diobe.yaml
   Gründung_der_Philosophenschule:
     de: 2686_Gründung_der_Philosophenschule.yaml
-  Kisor_entsendet_Kriegsschiffe_:
-    de: 2687_Kisor_entsendet_Kriegsschiffe_.yaml
   Errichtung_der_ersten_Supermet:
     de: 2688_Errichtung_der_ersten_Supermet.yaml
-  Die_Lage_auf_Tawanna_verschärf:
-    de: 2689_Die_Lage_auf_Tawanna_verschärf.yaml
-  Freundschaftsvertrag_der_Koali:
-    de: 2689c_Freundschaftsvertrag_der_Koali.yaml
   Entdeckung_des_sonnenlosen_Sch:
     de: 2690_Entdeckung_des_sonnenlosen_Sch.yaml
   Koriko:
@@ -717,92 +695,44 @@ entries:
     de: 2692_Rettung_mehrerer_Völker_Checko.yaml
   Veröffentlichung_der_Reisen_un:
     de: 2693_Veröffentlichung_der_Reisen_un.yaml
-  Wesentliche_Verstärkung_der_zu:
-    de: 2694_Wesentliche_Verstärkung_der_zu.yaml
   Entdeckung_und_erste_Erforschu:
     de: 2695_Entdeckung_und_erste_Erforschu.yaml
-  Ausschreitungen_gegen_Gildeein:
-    de: 2696_Ausschreitungen_gegen_Gildeein.yaml
   Umwandlung_der_Kobesiedlungsko:
     de: 2697_Umwandlung_der_Kobesiedlungsko.yaml
-  Im_AsgardSystem_wird_ein_Gilde:
-    de: 2697c_Im_AsgardSystem_wird_ein_Gilde.yaml
-  Die_Planetenregierung_von_Äzea:
-    de: 2699_Die_Planetenregierung_von_Äzea.yaml
-  Vernichtung_einer_größeren_mil:
-    de: 2699c_Vernichtung_einer_größeren_mil.yaml
-  Kisor_entsendet_eine_Kriegsflo:
-    de: 2700_Kisor_entsendet_eine_Kriegsflo.yaml
-  Je'esua'a_löst_sich_aus_dem_Ha:
-    de: 2700c_Je'esua'a_löst_sich_aus_dem_Ha.yaml
-  Landung_auf_Je'esua'a_und_Bese:
-    de: 2702_Landung_auf_Je'esua'a_und_Bese.yaml
-  Zuspitzung_der_Lage_auf_Khedro:
-    de: 2702c_Zuspitzung_der_Lage_auf_Khedro.yaml
-  Schwere_Raum_und_Bodenkämpfe_i:
-    de: 2702f_Schwere_Raum_und_Bodenkämpfe_i.yaml
-  TawannaBlockade:
-    de: 2702i_TawannaBlockade.yaml
-  2702l_Eingliederung_der_Kolonie_Obsk:
-    de: 2702l_Eingliederung_der_Kolonie_Obsk.yaml
-  Angriff_der_Flotte_von_Kisor_g:
-    de: 2703_Angriff_der_Flotte_von_Kisor_g.yaml
-  Afro_eine_wichtige_Handelskolo:
-    de: 2703c_Afro_eine_wichtige_Handelskolo.yaml
-  Die_Völker_von_Neith_lehnen_si:
-    de: 2704_Die_Völker_von_Neith_lehnen_si.yaml
+  Eskalation:
+    de: 2700_Eskalation.yaml
+  2702_Eingliederung_der_Kolonie_Obsk:
+    de: 2702_Eingliederung_der_Kolonie_Obsk.yaml
   Eine_Freiwilligenarmee_von_Ger:
-    de: 2704c_Eine_Freiwilligenarmee_von_Ger.yaml
+    de: 2704_Eine_Freiwilligenarmee_von_Ger.yaml
   KisorKrieg:
     de: 2705_KisorKrieg.yaml
   Entdeckung_der_pflanzlichen_In:
     de: 2705c_Entdeckung_der_pflanzlichen_In.yaml
-  Stellvertreterkrieg_zwischen_D:
-    de: 2705f_Stellvertreterkrieg_zwischen_D.yaml
   Konferenz_der_äußeren_Kolonien:
     de: 2706_Konferenz_der_äußeren_Kolonien.yaml
+  KisorDefensive:
+    de: 2706b_KisorDefensive.yaml
   Gründung_des_Fernhandelszentru:
     de: 2706c_Gründung_des_Fernhandelszentru.yaml
   Beginn_des_Aufbaus_von_Selbstv:
-    de: 2706f_Beginn_des_Aufbaus_von_Selbstv.yaml
-  Bombardierung_Kisor_Betas:
-    de: 2706i_Bombardierung_Kisor_Betas.yaml
+    de: 2708_Beginn_des_Aufbaus_von_Selbstv.yaml
   Beschluss_des_Konfliktvertrags:
     de: 2707_Beschluss_des_Konfliktvertrags.yaml
-  Kisor_zieht_seine_Flotte_in_da:
-    de: 2707c_Kisor_zieht_seine_Flotte_in_da.yaml
-  Zur_Jahreswende_versucht_die_K:
-    de: 2708_Zur_Jahreswende_versucht_die_K.yaml
   Kontaktdrohung_Kisors_an_die_K:
     de: 2708c_Kontaktdrohung_Kisors_an_die_K.yaml
-  Fragmentierung_der_Koalitionst:
-    de: 2709_Fragmentierung_der_Koalitionst.yaml
-  Die_Strategie_der_Koalition_Ki:
-    de: 2709c_Die_Strategie_der_Koalition_Ki.yaml
-  Kisor_verhindert_erfolgreich_w:
-    de: 2710_Kisor_verhindert_erfolgreich_w.yaml
-  Rückzug_der_Koalition:
-    de: 2710c_Rückzug_der_Koalition.yaml
+  WechselndeFronten:
+    de: 2709_WechselndeFronten.yaml
   FoxKatastrophe:
     de: 2711_FoxKatastrophe.yaml
-  Gegenangriff_der_Koalition:
-    de: 2712_Gegenangriff_der_Koalition.yaml
-  Kisor_konzentriert_seine_Flott:
-    de: 2713_Kisor_konzentriert_seine_Flott.yaml
   Rückkehr_der_GaPax_Expedition:
     de: 2714_Rückkehr_der_GaPax_Expedition.yaml
-  Stellungskrieg_auf_den_Planete:
-    de: 2715_Stellungskrieg_auf_den_Planete.yaml
   Entdeckung_der_Transmittertore:
     de: 2716_Entdeckung_der_Transmittertore.yaml
-  Langsamer_Rückzug_der_Koalitio:
-    de: 2718_Langsamer_Rückzug_der_Koalitio.yaml
-  Verlust_der_Schlachten_von_Lib:
-    de: 2719_Verlust_der_Schlachten_von_Lib.yaml
   Kriegsabkommen:
     de: 2720_Kriegsabkommen.yaml
-  Belagerung_und_Blockade_des_So:
-    de: 2720c_Belagerung_und_Blockade_des_So.yaml
+  BelagerungDesSolsystems:
+    de: 2720_BelagerungDesSolsystems.yaml
   Spacedom:
     de: 2721_Spacedom.yaml
   Guedan:
@@ -812,21 +742,13 @@ entries:
     de: 2723_Spektakuläre_Evakuierung_von_1.yaml
   Entdeckung_der_unsterblichen_S:
     de: 2723c_Entdeckung_der_unsterblichen_S.yaml
-  Eroberung_der_Basen_auf_Pluto:
-    de: 2724_Eroberung_der_Basen_auf_Pluto.yaml
   Gee: 
     de: 2725_Gee.yaml
     en: 2725_Gee.yaml
-  Landung_auf_Mars_durch_Kisors_:
-    de: 2725c_Landung_auf_Mars_durch_Kisors_.yaml
   Lem:
     de: 2726_Lem.yaml
   SpacedomRettung:
     de: 2727_SpacedomRettung.yaml
-  Mehrwöchige_Schlacht_um_die_Er:
-    de: 2727c_Mehrwöchige_Schlacht_um_die_Er.yaml
-  Bodenkämpfe_auf_der_Erde:
-    de: 2728_Bodenkämpfe_auf_der_Erde.yaml
   Entdeckung_eines_Black_Hole_vo:
     de: 2729_Entdeckung_eines_Black_Hole_vo.yaml
   Minimum_der_interplanetaren_Be:
