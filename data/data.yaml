@@ -1,3 +1,4 @@
+AssertUtf8: ä
 languages:
   de: 
     path: ./de
@@ -552,20 +553,10 @@ entries:
   Exotechnologie:
     de: 2560_Exotechnologie.yaml
     en: 2560_Exotechnology.yaml
-  Kinetische_Bombardierung_von_I:
-    de: 2561_Kinetische_Bombardierung_von_I.yaml
-  Friedensvertrag_der_Koalition_:
-    de: 2562_Friedensvertrag_der_Koalition_.yaml
-  Sieg_des_Andenbundes_in_den_Sc:
-    de: 2563_Sieg_des_Andenbundes_in_den_Sc.yaml
+  Einigungskriege:
+    de: 2561_Einigungskriege.yaml
   100_Millionen_leben_im_Sonnens:
     de: 2564_100_Millionen_leben_im_Sonnens.yaml
-  Kriege_zwischen_expansionistis:
-    de: 2565_Kriege_zwischen_expansionistis.yaml
-  Auf_der_Erde_zeichnet_sich_ab_:
-    de: 2568_Auf_der_Erde_zeichnet_sich_ab_.yaml
-  Waffenstillstand_in_Südchina_S:
-    de: 2570_Waffenstillstand_in_Südchina_S.yaml
   Das_Konzil_von_Kalkutta_entwic:
     de: 2571_Das_Konzil_von_Kalkutta_entwic.yaml
   ArtuDomain:
