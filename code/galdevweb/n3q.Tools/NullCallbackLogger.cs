@@ -26,5 +26,6 @@ namespace n3q.Tools
         public bool IsDebug() { return false; }
         public bool IsVerbose() { return false; }
         public bool IsFlooding() { return false; }
+        public void Generic(string level, string message, string context = null, string callerFilePath = null) { }
     }
 }

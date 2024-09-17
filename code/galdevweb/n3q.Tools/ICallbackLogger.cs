@@ -28,6 +28,7 @@ namespace n3q.Tools
         bool IsDebug();
         bool IsVerbose();
         bool IsFlooding();
+        void Generic(string level, string message, [CallerMemberName] string context = null, [CallerFilePath] string callerFilePath = null);
     }
 
     public interface ICallbackLogger<T> : ICallbackLogger

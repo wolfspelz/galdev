@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.ResponseCompression;
+using n3q.FrameworkTools;
 
 namespace GaldevWeb
 {
@@ -14,10 +15,18 @@ namespace GaldevWeb
             //    Directory.SetCurrentDirectory(cwd);
             //}
             var myConfig = new GaldevConfig();
-            var myLogger = new NullCallbackLogger();
 
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Logging.ClearProviders();
+            builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
+            builder.Logging.AddConsole();
+            builder.Logging.AddDebug();
+            var inMemoryLoggerProvider = new InMemoryLoggerProvider();
+            builder.Logging.AddProvider(inMemoryLoggerProvider);
+            builder.Logging.AddFilter("Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware", LogLevel.None);
+            builder.Logging.AddFilter("Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware", LogLevel.None);
+            
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
             builder.Services.AddControllers();
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -57,29 +66,32 @@ namespace GaldevWeb
                     .AddSupportedUICultures(supportedCultures);
             });
 
+            //BlogIndex? blog = new BlogIndex {
+            //    IndexFilePath = myConfig.BlogIndexPath,
+            //    Log = myLogger,
+            //};
+            //blog.Load();
+            //builder.Services.AddSingleton(blog);
+
             var timeIndex = new TimelineIndex {
                 IndexFilePath = myConfig.DataIndexPath,
-                Log = myLogger,
-            };
-            timeIndex.Load(entry => !entry.Tags.Contains("_hidden") && !entry.Tags.Contains("_noweb"));
-
-            Don.t = () => {
-                BlogIndex? blog = new BlogIndex {
-                    IndexFilePath = myConfig.BlogIndexPath,
-                    Log = myLogger,
-                };
-                blog.Load();
-                builder.Services.AddSingleton(blog);
             };
 
             var myApp = new GaldevApp {
                 Config = myConfig,
-                Log = myLogger,
                 Timelines = timeIndex,
             };
             builder.Services.AddSingleton(myApp);
+            
+            builder.Services.AddSingleton(inMemoryLoggerProvider);
 
             var app = builder.Build();
+
+            var myLogger = new MicrosoftLoggingCallbackLogger(app.Services.GetService<ILogger<Galdev>>());
+            timeIndex.Log = myLogger;
+            myApp.Log = myLogger;
+
+            timeIndex.Load(entry => !entry.Tags.Contains("_hidden") && !entry.Tags.Contains("_noweb"));
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
@@ -121,7 +133,7 @@ namespace GaldevWeb
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
-
+            
             app.Run();
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace n3q.Tools
 {
@@ -28,11 +29,12 @@ namespace n3q.Tools
         public bool IsDebug() { return true; }
         public bool IsVerbose() { return true; }
         public bool IsFlooding() { return true; }
+        public void Generic(string level, string message, string context = null, string callerFilePath = null) { DoLog(context, callerFilePath, level + " " + message); }
 
         private void DoLog(string context, string callerFilePath, string message)
         {
             context = GetContext(context, callerFilePath);
-            Console.WriteLine($"#### {context} {message}");
+            Console.WriteLine($"{context} {message}");
         }
 
         private static string MethodName(int skip = 0)

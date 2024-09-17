@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using JsonPath;
+using ICallbackLogger = n3q.Tools.ICallbackLogger;
 
 namespace GaldevWeb
 {

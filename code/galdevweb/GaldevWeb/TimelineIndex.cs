@@ -1,4 +1,6 @@
-﻿namespace GaldevWeb
+﻿using JsonPath;
+
+namespace GaldevWeb
 {
     public delegate bool TimelineEntryCondition(TimelineEntry entry);
 
@@ -15,16 +17,24 @@
 
         private TimelineEntryCondition _lastFilter = (e) => true;
 
+        private YamlDeserializer.Options YamlOptions = new YamlDeserializer.Options { LowerCaseDictKeys = true };
+
         public void Load(TimelineEntryCondition filter)
         {
+            YamlOptions.Log.LogHandler = (lvl, ctx, msg) => Log.Generic(lvl.ToString(), msg, ctx);
+
             _lastFilter = filter;
 
-            LoadLanguages();
-            LoadEntries(filter);
-            LoadSequences();
-            ConnectEntries();
-            CreateTopics();
-            CreateAliases();
+            try {
+                LoadLanguages();
+                LoadEntries(filter);
+                LoadSequences();
+                ConnectEntries();
+                CreateTopics();
+                CreateAliases();
+            } catch (Exception ex) {
+                Log.Error("Failed to load timeline data", ex);
+            }
         }
 
         public void Reload()
@@ -67,7 +77,7 @@
         private void LoadLanguages()
         {
             var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var indexNode = JsonPath.Node.FromYaml(indexData, YamlOptions);
 
             var languagesNode = indexNode["languages"].AsDictionary;
             foreach (var langNode in languagesNode) {
@@ -83,7 +93,7 @@
         private void LoadEntries(TimelineEntryCondition filter)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var indexNode = JsonPath.Node.FromYaml(indexData, YamlOptions);
 
             foreach (var kv in _languageById) {
                 _timelineByLang.Add(kv.Key, new TimelineSeries());
@@ -111,7 +121,7 @@
         private void LoadSequences()
         {
             var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var indexNode = JsonPath.Node.FromYaml(indexData, YamlOptions);
 
             var sequencesNode = indexNode["sequences"].AsDictionary;
             foreach (var sequenceNode in sequencesNode) {
@@ -153,7 +163,7 @@
             }
 
             var contentData = DataProvider.GetData(entryPathWithExt);
-            var contentNode = JsonPath.Node.FromYaml(contentData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var contentNode = JsonPath.Node.FromYaml(contentData, YamlOptions);
 
             var year = contentNode["year"].AsString;
             var title = contentNode["title"].AsString;
@@ -220,7 +230,7 @@
         public string GetImagePath(string lang, string imageName)
         {
             var indexData = DataProvider.GetData(IndexFilePath);
-            var indexNode = JsonPath.Node.FromYaml(indexData, new YamlDeserializer.Options { LowerCaseDictKeys = true });
+            var indexNode = JsonPath.Node.FromYaml(indexData, YamlOptions);
             var langPath = indexNode["languages"][lang]["images"].AsString;
             return Path.Combine(Path.GetDirectoryName(IndexFilePath) ?? "", langPath, imageName);
         }

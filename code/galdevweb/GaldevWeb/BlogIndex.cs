@@ -1,4 +1,6 @@
-﻿namespace GaldevWeb
+﻿using JsonPath;
+
+namespace GaldevWeb
 {
     public class BlogIndex : List<BlogPost>
     {
