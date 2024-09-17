@@ -22,7 +22,7 @@ namespace GaldevWeb
             builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
             builder.Logging.AddConsole();
             builder.Logging.AddDebug();
-            var inMemoryLoggerProvider = new InMemoryLoggerProvider();
+            var inMemoryLoggerProvider = new InMemoryLoggerProvider(myConfig.MaxLogLines);
             builder.Logging.AddProvider(inMemoryLoggerProvider);
             builder.Logging.AddFilter("Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware", LogLevel.None);
             builder.Logging.AddFilter("Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware", LogLevel.None);

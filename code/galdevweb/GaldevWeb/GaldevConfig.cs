@@ -13,5 +13,6 @@
         public int EntryPageTextLength = 4000;
         public string GitHubProjectDataBaseUrl = "https://raw.githubusercontent.com/wolfspelz/galdev/main";
         public int WebpMemoryCacheDurationSec = 7 * 24 * 3600;
+        public int MaxLogLines = 1000;
     }
 }
