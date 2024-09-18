@@ -20,7 +20,7 @@ public class InMemoryLoggerProvider : ILoggerProvider
 
     public void Dispose() { }
 
-    public ConcurrentQueue<string> GetLogs() => _logs;
+    public IEnumerable<string> GetLogs() => _logs.Reverse();
 }
 
 public class InMemoryLogger : ILogger
