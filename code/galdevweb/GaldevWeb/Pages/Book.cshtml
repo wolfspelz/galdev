@@ -7,8 +7,8 @@
     var pipeline = Model.Export
       ? new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
-        .Use(new CustomListExtension() { Prefix = "MARK_LIST_ITEM " })
-        .Use(new CustomHeadingRendererExtension { Prefix = "MARK_HEADING1 ", Suffix = "" })
+        .Use(new CustomListExtension() { Prefix = "MARK_LISTITEM ", Suffix = " MARK_LISTITEM_END" })
+        .Use(new CustomHeadingRendererExtension { Prefix = "MARK_HEADING1 ", Suffix = " MARK_HEADING1_END" })
         .Build()
       : new MarkdownPipelineBuilder()
         .Use(new DemoteHeadingsExtension(1))
@@ -36,21 +36,18 @@
 @foreach (var entry in Model.List) {
     <div>
         @if (Model.Export) {
-            <p>MARK_TITLE</p>
+            <p>MARK_ENTRY</p>
         }
         @if (Model.Export) {
-            <p>@(entry.Year) MARK_TAB @entry.Title</p>
+            <p>MARK_TITLE @(entry.Year) MARK_TAB @entry.Title MARK_TITLE_END</p>
         } else {
             <h1>@(entry.Year) @entry.Title</h1>
-        }
-        @if (Model.Export) {
-            <p>MARK_TEXT_BEGIN</p>
         }
         @foreach (var t in entry.Text) {
             @Html.Raw(Markdown.ToHtml(t, pipeline))
         }
         @if (Model.Export) {
-            <p>MARK_TEXT_END</p>
+            <p>MARK_ENTRY_END</p>
         }
     </div>
 }
