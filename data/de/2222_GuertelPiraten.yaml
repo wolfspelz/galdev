@@ -29,7 +29,7 @@ Text: |
     KTRL Ling: "Bestätige MEB" (Materieempfangsbetrieb, Missionskritische Ereignisse werden von der Missionskontrolle bestätigt).
     KMDO Nair: "Eintritt mit SDK" (Steuerdüsenkontrolle: Schiff manövriert etwas mit Steuerdüsen, um den Materieempfänger in den Strom zu bringen).
     [Kurze Pause]
-    KTRL Ling: "Bestätige MSK mit 83" (Materiestromkopplung mit 83 % Effizienz).
+    KTRL Ling: "Bestätige MSK mit 83" (Materiestromkopplung mit 83% Effizienz).
     KTRL Ling: "Viel Streuung. Ihr Fokus wird immer schlechter. Ich werde eine Meldung absetzen. Aber wir hatten auch schon bessere Tage, wir haben 1200 Kilometer Schadstaub verpasst." (Schadstaub: umgangssprachlich für nicht eingefangene, potenziell gefährliche Materiestrompartikel).
     KMDO Nair: "Kontrolle: Meldung ok" (Captain bestätigt das Senden der Beschwerde an die Jade Hase-Materiestrom Gesellschaft, die Materiestromanbieterin).
     KTRL Ling: "@JadeHase QSKB Fluss 5 Komma 3 Fokus 83 runter von 85, dauerhaft unter den erwarteten 90, das brennt uns den Empfänger weg mit 11 ppms." (Qualitätssicherungskundenbeschwerde zusätzlich zur automatisierten Kommunikation zwischen Sender und Empfänger, weil der fehlerhafte Strom zusätzlichen Schadstaub produziert und Streupartikel die Empfängerhardware mit 11 Millionstel pro Sekunde relativ schnell abnutzen, ein zarter Hinweis auf mögliche Schadensersatzansprüche).
