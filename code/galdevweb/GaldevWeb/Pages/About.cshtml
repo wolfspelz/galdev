@@ -25,11 +25,15 @@
             }));
 
     cards.Add(Node.From(new Dictionary<string, string> {
-                ["Text"] = "Norden Esstisch war Kommandant beim Sondereinsatzkommando der Cloning Kontrollbehörde auf dem Asteroiden Iris. Er verhinderte, dass Androiden in menschenunwürdigen Umständen leben müssen und schrieb nie gerne Einsatzberichte. Auf noch nicht geklärte Weise hat das Schicksal ihn in das <a href='https://www.instagram.com/p/CiSjvR7s84E/'>Jahr 4581 u.Z. nach New Paris</a> verschlagen, wo er jetzt Geschichtsbücher schreibt.",
+                ["Text"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => "Norden Esstisch war Kommandant beim Sondereinsatzkommando der Cloning Kontrollbehörde auf dem Asteroiden Iris. Er verhinderte, dass Androiden in menschenunwürdigen Umständen leben müssen und schrieb nie gerne Einsatzberichte. Auf noch nicht geklärte Weise hat das Schicksal ihn in das <a href='https://www.instagram.com/p/CiSjvR7s84E/'>Jahr 4581 u.Z. nach New Paris</a> verschlagen, wo er jetzt Geschichtsbücher schreibt.",
+                    ["en-US"] = () => "In the 25th century, Norden Esstisch served as a commander in the Special Operations Unit of the Cloning Enforcement Administration in Iris City. He dedicated his career to protecting androids from undignified living condi-tions and was notorious for his aversion to writing mission reports. Through a labyrinth of twists and turns (it's a long story), he found himself in <a href='https://www.instagram.com/p/CiSjvR7s84E/'>New Paris in 4581 CE</a>, where he now writes history books."
+                }),
             }));
 
     cards.Add(Node.From(new Dictionary<string, string> {
-                ["Text"] = @"
+                ["Text"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => @"
 <dl>
     <dt>Profil:</dt>
     <dd>Alter: 17 Parsec / Licht</dd>
@@ -55,19 +59,50 @@
     <dd>Ideal: Jarura</dd>
 </dl>
 ",
+                    ["en-US"] = () => @"
+<dl>
+    <dt>Profile:</dt>
+    <dd>Age: 17 Parsec / Light</dd>
+    <dd>Day job: CTO</dd>
+    <dd>Calling: Coder</dd>
+    <dd>Favorite pastime: Writing Science Fiction</dd>
+    <dd>Weakness: An obsession with details</dd>
+    <dd>Residence: Hamburg</dd>
+    <dd>Core belief: The scientific method</dd>
+    <dd>Science code: <a href='https://medium.com/@@Wolfspelz/sciencecode-the-geekcode-for-science-e859698fc60f'>bb+/un ci0 eu+ dm+/sn de- mv/rp sm+ ss- st- lqg+ gr+ sr++ gut- fp++/gf sh0</a></dd>
+    <dd>Role models: James Clerk Maxwell, Margaret Hamilton, David Pulver, Vitalik Buterin, Kelonikoa Pono</dd>
+    <dd>Motto: Know what you're doing.</dd>
+    <dd>Favorite SF: <a href='http://blog.wolfspelz.de/2012/11/die-besten-science-fiction-romane.html'>A Talent for War, Voice of the Whirlwind, The Cosmic Computer, The Honor of the Queen, Matter, Transhuman Space, The Earth Book of Stormgate, Schismatrix, The Mote in God's Eye, The Engines of God, Starship Troopers (Book), Pushing Ice, A Fire Upon the Deep</a></dd>
+    <dd>Favorite rant: <a href='http://blog.wolfspelz.de/2022/10/hot-fusion-technologien.html'>There are better ways to do fusion.</a></dd>
+    <dd>Favorite artwork: <a href='https://www.youtube.com/watch?v=vV1YbWBSXS8'>Watch the World (Second Life Machinima) by Robbie Dingo, Don McLean, Vincent Van Gogh.</a></dd>
+    <dd>Quirkiest habit: Resetting the microwave timer to 0 for tidiness.</dd>
+    <dd>Goal: Have fun and stay nice.</dd>
+    <dd>Biggest fear: This generation won't make it to the upload.</dd>
+    <dd>Quirk: Watching Let's Plays and reading about games without actually playing them.</dd>
+    <dd>Known vices: Chocolate, news feeds.</dd>
+    <dd>Dream: April Fools' jokes that millions enjoy.</dd>
+    <dd>Ideal: Jarura</dd>
+</dl>"
+                }),
             }));
 
     cards.Add(Node.From(new Dictionary<string, string> {
                 ["Title"] = "Im realen Leben",
-                ["Text"] = "... bin ich Diplom Physiker. Ich habe am CERN eine Masterarbeit in Hochenergiephysik gemacht, dann einen Doktor in Informatik und jetzt bin ich leidenschaftlich Full Stack Entwickler in C#, TypeScript, Python. Ich habe mehrere Unternehmen gegründet und bin seit vielen Jahren IT-Leiter. Ich habe Giphys, AJAX, WebGUIs für Geräte und embedded Webserver erfunden, Microservices, Devops und REST gemacht, bevor die einen Namen hatten, den ersten Livestream im Web gesendet, das erste animierte GIF im Web gepostet und viele andere 'erste' im Web gemacht. Ich habe mal (mit anderen zusammen) den Lead-Award für Webdesign und ein paar andere Auszeichnungen für Startups bekommen. Ich interessiere mich für Wissenschaft und Technologie, für gesellschaftliche und wirtschaftliche Entwicklungen. Neben allen möglichen guten Geschichten mag ich realistische Zukunftsszenarien und Hard-Science-Fiction mit einer kleinen Ausnahme: Überlichtgeschwindigkeit, denn sonst kann man keine Außerirdischen treffen. Aber dafür habe ich mir was überlegt (nichts Ausgefallenes: nur mit Fraktalen, Quantenspiegeln und exotischer Materie).",
+                ["Text"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => "... bin ich Diplom Physiker. Ich habe am CERN eine Masterarbeit in Hochenergiephysik gemacht, dann einen Doktor in Informatik und jetzt bin ich leidenschaftlich Full Stack Entwickler in C#, TypeScript, Python. Ich habe mehrere Unternehmen gegründet und bin seit vielen Jahren IT-Leiter. Ich habe Giphys, AJAX, WebGUIs für Geräte und embedded Webserver erfunden, Microservices, Devops und REST gemacht, bevor die einen Namen hatten, den ersten Livestream im Web gesendet, das erste animierte GIF im Web gepostet und viele andere 'erste' im Web gemacht. Ich habe mal (mit anderen zusammen) den Lead-Award für Webdesign und ein paar andere Auszeichnungen für Startups bekommen. Ich interessiere mich für Wissenschaft und Technologie, für gesellschaftliche und wirtschaftliche Entwicklungen. Neben allen möglichen guten Geschichten mag ich realistische Zukunftsszenarien und Hard-Science-Fiction mit einer kleinen Ausnahme: Überlichtgeschwindigkeit, denn sonst kann man keine Außerirdischen treffen. Aber dafür habe ich mir was überlegt (nichts Ausgefallenes: nur mit Fraktalen, Quantenspiegeln und exotischer Materie).",
+                    ["en-US"] = () => "... I'm a graduate physicist. I completed a master's thesis in high-energy physics at CERN, then earned a doctorate in computer science, and now I'm a passionate full-stack developer working with C#, TypeScript, and Python. I've founded several companies and have been CTO for many years. I in-vented AJAX, WebGUIs for devices and embedded web servers, made microservices, DevOps, and REST before they had names. I broadcast the first livestream on the web, created the first live chat, posted the first ani-mated GIF on the web, and achieved many other \"firsts\" on the internet. I once received (along with friends) the Lead Award for web design and a few other awards for startups. I'm interested in science and technology, as well as social and economic developments. Besides all kinds of good stories, I enjoy realistic future sce-narios and hard science fiction with one small exception: faster-than-light travel, because otherwise you can't meet aliens. But I've come up with some-thing for that (nothing fancy: just involving fractals, quantum mirrors, and exotic matter).",
+                })
             }));
 
     cards.Add(Node.From(new Dictionary<string, string> {
-                ["Title"] = "Andere Beschäftigungen",
+                ["Title"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => "Andere Beschäftigungen",
+                    ["en-US"] = () => "Other hobbies"
+                }),
                 ["Text"] = @"
 <dl>
     <dd><a href='http://blog.wolfspelz.de/'>Blog - Rants about Code and Life</a></dd>
-    <dd><a href='https://www.weblin.io/Start'>weblin.io - Avatare auf Webseiten</a></dd>
+    <dd><a href='https://www.weblin.io/Start'>weblin.io - Avatars on Web pages</a></dd>
 </dl>
 ",
             }));
