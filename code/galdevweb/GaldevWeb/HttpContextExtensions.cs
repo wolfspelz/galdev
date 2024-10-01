@@ -22,7 +22,7 @@ public static class HttpContextExtensions
 
         if (Is.Value(ipAddress)) {
             var hashedIp = Crc32.Compute(ipAddress).ToString("X8");
-            return hashedIp + "-" + ipAddress;
+            return hashedIp;// + "-" + ipAddress;
         }
         return "";
     }
