@@ -1,0 +1,10 @@
+﻿@page
+@inject GaldevWeb.InMemoryLoggerProvider LoggerProvider
+@model DevModel
+@{
+    Layout = "_PlainLayout";
+}
+
+@foreach (var line in Model.Data) {
+    @line<br />
+}
