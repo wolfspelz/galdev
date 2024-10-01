@@ -39,18 +39,21 @@ namespace n3q.Tools
     {
         public static class Key
         {
-            public const string Message = "message";
-            public const string Context = "context";
-            public const string LogLevel = "level";
-            public const string Data = "data";
-            public const string Values = "values";
-            public const string Exception = "ex";
-            public const string Query = "query";
-            public const string Body = "body";
             public const string Arguments = "args";
-            public const string User = "user";
-            public const string TraceId = "trace";
+            public const string Body = "body";
+            public const string Client = "client";
+            public const string Context = "context";
+            public const string Culture = "culture";
+            public const string Data = "data";
+            public const string Exception = "ex";
+            public const string LogLevel = "level";
+            public const string Message = "message";
             public const string ObjectId = "id";
+            public const string Query = "query";
+            public const string TraceId = "trace";
+            public const string Uri = "uri";
+            public const string User = "user";
+            public const string Values = "values";
         }
 
         public static string Join<T>(IDictionary<string, T> values)

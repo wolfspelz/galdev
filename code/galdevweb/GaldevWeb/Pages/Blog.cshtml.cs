@@ -19,7 +19,7 @@
 
             if (Is.Value(name)) {
                 name = BlogIndex.GetNameFromSeoTitle(name);
-                Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
+                //Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
                 Post = Index?.GetPost(name, lang);
             }
         }

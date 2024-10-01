@@ -22,7 +22,7 @@ namespace GaldevWeb.Pages
         public ContentResult OnGet(int start = -1, int end = -1, int min = -1)
         {
             var lang = GetLangFromCultureName(UiCultureName);
-            Log.Info($"min={min} start={start} end={end}");
+            //Log.Info($"min={min} start={start} end={end}");
             List = plainTimeline.GetFilteredList(entry => {
                 var match = true;
                 if (match) {

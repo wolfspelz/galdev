@@ -16,7 +16,7 @@ namespace GaldevWeb.Pages
         {
             if (Is.Value(year)) {
                 var lang = GetLangFromCultureName(UiCultureName);
-                Log.Info("", new LogData { [nameof(year)] = year });
+                //Log.Info("", new LogData { [nameof(year)] = year });
                 var entry = Timeline.GetEntryByYear(year);
                 if (entry == null) {
                     NotAvailable = true;

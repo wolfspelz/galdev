@@ -13,7 +13,7 @@ namespace GaldevWeb.Pages
 
         public void OnGet(string name)
         {
-            Log.Info("", new LogData { [nameof(name)] = name });
+            //Log.Info("", new LogData { [nameof(name)] = name });
 
             var sequence = Timeline.GetSequence(name);
             if (sequence != null) {

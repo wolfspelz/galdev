@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
-using YamlDotNet.Core;
 
 namespace GaldevWeb.Controllers
 {
@@ -14,7 +13,7 @@ namespace GaldevWeb.Controllers
         [Route("[controller]/{lang}/{name}")]
         public IActionResult Get(string lang, string name)
         {
-            Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
+            //Log.Info("", new LogData { [nameof(lang)] = lang, [nameof(name)] = name });
 
             var filePath = Timelines.GetImagePath(lang, name);
 

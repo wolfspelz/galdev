@@ -5,6 +5,6 @@
     Layout = "_PlainLayout";
 }
 
-@foreach (var line in LoggerProvider.GetLogs()) {
+@foreach (var line in LoggerProvider.GetLogs().Take(Model.Lines)) {
     @line<br />
 }

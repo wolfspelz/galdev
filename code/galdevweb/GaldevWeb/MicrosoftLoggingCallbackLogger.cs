@@ -1,6 +1,8 @@
 ﻿#nullable disable
+using System.Collections;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using YamlDotNet.Core.Tokens;
 
 namespace n3q.FrameworkTools
 {
@@ -73,21 +75,44 @@ namespace n3q.FrameworkTools
 
                 var root = new JsonPath.Node(JsonPath.Node.Type.Dictionary);
 
-                root[LogData.Key.Context] = context;
+                //root[LogData.Key.Context] = context;
 
-                if (!string.IsNullOrEmpty(message)) {
-                    root[LogData.Key.Message] = message;
+                //if (!string.IsNullOrEmpty(message)) {
+                //    root[LogData.Key.Message] = message;
+                //}
+
+                //if (data != null && data.Count > 0) {
+                //    root[LogData.Key.Data] = JsonPath.Node.From(data);
+                //}
+
+                //if (_values != null && _values.Count > 0) {
+                //    root[LogData.Key.Values] = JsonPath.Node.From(_values);
+                //}
+
+                foreach (var item in data) {
+                    if (item.Value is string value) {
+                        root[item.Key] = JsonPath.Node.From(value);
+                    } else if (item.Value is IEnumerable enumerable) {
+                        var list = new List<string>();
+                        foreach (object e in enumerable) {
+                            list.Add(e.ToString());
+                        }
+                        root[item.Key] = JsonPath.Node.From(list);
+                    } else if (item.Value is IDictionary<string,object> dictionary) {
+                        var dict = new Dictionary<string, string>();
+                        foreach (var kv in dictionary) {
+                            dict.Add(kv.Key, kv.Value.ToString());
+                        }
+                        root[item.Key] = JsonPath.Node.From(dict);
+                    }
+                }
+                foreach (var item in _values) {
+                    if (item.Value is string value) {
+                        root[item.Key] = JsonPath.Node.From(value);
+                    }
                 }
 
-                if (data != null && data.Count > 0) {
-                    root[LogData.Key.Data] = JsonPath.Node.From(data);
-                }
-
-                if (_values != null && _values.Count > 0) {
-                    root[LogData.Key.Values] = JsonPath.Node.From(_values);
-                }
-
-                var text = root.ToJson();
+                var text = $"{context} {message} {root.ToJson()}";
 
                 switch (level) {
                     case Level.Silent:

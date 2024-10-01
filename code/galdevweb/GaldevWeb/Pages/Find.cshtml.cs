@@ -11,7 +11,7 @@ namespace GaldevWeb.Pages
 
         public void OnGet(string term)
         {
-            Log.Info("", new LogData { [nameof(term)] = term });
+            //Log.Info("", new LogData { [nameof(term)] = term });
             SearchTerm = term.ToLower();
 
             foreach (var kv in Timeline) {

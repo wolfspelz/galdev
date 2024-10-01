@@ -12,7 +12,7 @@
         {
             min = min < 0 ? Config.ListMinTextLength : min;
             var lang = GetLangFromCultureName(UiCultureName);
-            Log.Info("", new LogData { [nameof(min)] = min });
+            //Log.Info("", new LogData { [nameof(min)] = min });
             List = Timeline.GetFilteredList(entry => entry.TextLen > min);
         }
     }

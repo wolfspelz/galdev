@@ -14,7 +14,7 @@ namespace GaldevWeb.Pages
         public IActionResult OnGet(string code)
         {
             if (Is.Value(code)) {
-                Log.Info("", new LogData { [nameof(code)] = code });
+                //Log.Info("", new LogData { [nameof(code)] = code });
                 var prefix = code.Substring(0, 1);
                 var year = code.Substring(1);
 

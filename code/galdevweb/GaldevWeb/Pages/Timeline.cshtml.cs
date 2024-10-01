@@ -15,7 +15,7 @@
         {
             if (Is.Value(name)) {
                 name = TimelineIndex.GetNameFromSeoTitle(name);
-                Log.Info("", new LogData { [nameof(name)] = name });
+                //Log.Info("", new LogData { [nameof(name)] = name });
 
                 var entry = Timeline.GetEntry(name);
                 if (entry == null) {

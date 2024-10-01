@@ -1,4 +1,5 @@
 ﻿using JsonPath;
+using System.IO;
 
 namespace GaldevWeb
 {
@@ -87,6 +88,7 @@ namespace GaldevWeb
                 var topics = langNode.Value["topics"].AsDictionary.ToDictionary(kv => kv.Key, kv => kv.Value.AsString);
                 var languageConfig = new TimelineLanguage(id, path, imagePath, topics);
                 _languageById.Add(id, languageConfig);
+                Log.Info("Add lang", data: new LogData { ["id"] = id, ["path"] = path, ["imagePath"] = imagePath, });
             }
         }
 
@@ -111,7 +113,12 @@ namespace GaldevWeb
                     if (entry != null) {
                         if (filter == null || filter(entry)) {
                             _timelineByLang[lang].Add(name, entry);
+                            Log.Info("Add entry", data: new LogData { ["lang"] = lang, ["name"] = name, ["folderPath"] = folderPath, ["fileName"] = fileName, });
+                        } else {
+                            Log.Info("Add entry skipped by filter", data: new LogData { ["lang"] = lang, ["name"] = name, ["folderPath"] = folderPath, ["fileName"] = fileName, });
                         }
+                    } else {
+                        Log.Info("Add entry failed", data: new LogData { ["lang"] = lang, ["name"] = name, ["folderPath"] = folderPath, ["fileName"] = fileName, });
                     }
                 }
 
@@ -134,6 +141,7 @@ namespace GaldevWeb
                     var entries = threadByLang.Value.AsDictionary["entries"].AsList.Select(x => x.String);
                     var sequence = new TimelineSequence(title, summary, entries);
                     _timelineByLang[lang].AddSequence(name, sequence);
+                    Log.Info("Add sequence", data: new LogData { ["lang"] = lang, ["name"] = name, ["entries"] = entries, });
                 }
             }
         }
