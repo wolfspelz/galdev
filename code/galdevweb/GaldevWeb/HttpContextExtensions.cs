@@ -1,10 +1,25 @@
-﻿namespace n3q.FrameworkTools;
+﻿using System.Net;
+
+namespace n3q.FrameworkTools;
 
 public static class HttpContextExtensions
 {
+    // Header: X-Real-IP=37.5.240.165
+    // Header: X-Forwarded-For=37.5.240.165
     public static string GetRemoteIpAddressHashed(this HttpContext self)
     {
-        var ipAddress = self.Connection?.RemoteIpAddress?.ToString();
+        var ipAddress = "";
+
+        if (!Is.Value(ipAddress)) {
+            ipAddress = self.Request.Headers.TryGetValue("X-Real-IP", out var realIpValues) ? realIpValues.FirstOrDefault() : "";
+        }
+        if (!Is.Value(ipAddress)) {
+            ipAddress = self.Request.Headers.TryGetValue("X-Forwarded-For", out var values) ? values.FirstOrDefault() : "";
+        }
+        if (!Is.Value(ipAddress)) {
+            ipAddress = self.Connection?.RemoteIpAddress?.ToString();
+        }
+
         if (Is.Value(ipAddress)) {
             var hashedIp = Crc32.Compute(ipAddress).ToString("X8");
             return hashedIp + "-" + ipAddress;
