@@ -49,19 +49,8 @@ namespace GaldevWeb
                 logData[LogData.Key.Culture] = UiCultureName;
 
                 if (context.HttpContext != null) {
-
-                    var ipAddress = context.HttpContext.Connection?.RemoteIpAddress?.ToString();
-                    if (Is.Value(ipAddress)) {
-                        var hashedIp = Crc32.Compute(ipAddress).ToString("X8");
-                        logData[LogData.Key.Client] = hashedIp;
-                    }
-
-                    var request = context.HttpContext.Request;
-                    var uri = request?.Path.Value + request?.QueryString.Value;
-                    if (Is.Value(uri)) {
-                        logData[LogData.Key.Uri] = uri;
-                    }
-
+                    logData[LogData.Key.Client] = context.HttpContext.GetRemoteIpAddressHashed();
+                    logData[LogData.Key.Uri] = context.HttpContext.GetUri();
                     Log.SetTraceIdentifier(context.HttpContext);
                 }
 
