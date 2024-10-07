@@ -431,15 +431,48 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["ImgSrc"] = "/images/Index/book.png",
-                    ["ImgAlt"] = "Buch",
-                    ["Link"] = "https://www.amazon.de/gp/aw/d/B0DJ2BGVHB/",
+                    ["ImgAlt"] = Model.I18n.String(path: "Box/Book/ImgAlt", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Buchcover",
+                        ["en-US"] = () => "Book cover",
+                    }),
+                    ["Link"] = Model.I18n.String(path: "Box/Book/Link", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "https://www.amazon.de/dp/B0DJ2BGVHB",
+                        ["en-US"] = () => "https://www.amazon.com/dp/B0DJDCJR4K",
+                    }),
                     ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Buch",
-                        ["en-US"] = () => "Printed Book",
+                        ["de-DE"] = () => "Alles in einem Buch",
+                        ["en-US"] = () => "The Book",
                     }),
                     ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Galactic Developments als Buch und eBook für alle, die nicht auf Social Networks aktiv sind oder lieber ein Buch in der Hand haben.",
-                        ["en-US"] = () => "Galactic Developments as Buch and eBook (in German).",
+                        ["de-DE"] = () => "Die ganze Geschichte gedruckt für alle, die lieber ein Buch in der Hand haben.",
+                        ["en-US"] = () => "The entire history as a printed book.",
+                    }),
+                }));
+    }
+    if (Model.UiCultureName == "de-DE") {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["ImgSrc"] = "/images/Index/book-serie.png",
+                    ["ImgAlt"] = Model.I18n.String(path: "Box/Book/ImgAlt", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Buchserie",
+                        ["en-US"] = () => "(upcoming)",
+                    }),
+                    ["Link"] = Model.I18n.String(path: "Box/Book/Link", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "https://www.amazon.de/-/de/dp/B0DJM967TV",
+                        ["en-US"] = () => "(upcoming)",
+                    }),
+                    ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "Ein Buch pro Zeitalter",
+                        ["en-US"] = () => "(upcoming)",
+                    }),
+                    ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
+                        ["de-DE"] = () => "<ul>" + string.Join("\n", new Dictionary<string, string> {
+                            ["Aufbruch ins Sonnensystem (2050 - 2280)"] = "https://www.amazon.de/-/de/gp/product/B0DJC38SSW",
+                            ["Interplanetare Zivilisation (2280 - 2570)"] = "https://www.amazon.de/-/de/gp/product/B0DHW4636N",
+                            ["Ruf der Sterne (2570 - 2850)"] = "https://www.amazon.de/-/de/gp/product/B0DJCPDMKB",
+                            ["Sturm im Sonnensystem (2850 - 3180)"] = "https://www.amazon.de/-/de/gp/product/B0DJLTXD41",
+                            ["Imperium aus der Asche (3180 - 3370)"] = "https://www.amazon.de/-/de/gp/product/B0DJLV5CZQ",
+                        }.Select(kv => $"<li><a href='{kv.Value}'>{kv.Key}</a></li>")) + "</ul>",
+                        ["en-US"] = () => "(upcoming)",
                     }),
                 }));
     }
