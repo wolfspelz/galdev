@@ -461,17 +461,18 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         ["en-US"] = () => "(upcoming)",
                     }),
                     ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "Ein Buch pro Zeitalter",
+                        ["de-DE"] = () => "Als Buchreihe",
                         ["en-US"] = () => "(upcoming)",
                     }),
+                    ["TitleHasLink"] = "true",
                     ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => "<ul>" + string.Join("\n", new Dictionary<string, string> {
+                        ["de-DE"] = () => "Ein Buch pro Zeitalter:\n<dl>" + string.Join("\n", new Dictionary<string, string> {
                             ["Aufbruch ins Sonnensystem (2050 - 2280)"] = "https://www.amazon.de/-/de/gp/product/B0DJC38SSW",
                             ["Interplanetare Zivilisation (2280 - 2570)"] = "https://www.amazon.de/-/de/gp/product/B0DHW4636N",
                             ["Ruf der Sterne (2570 - 2850)"] = "https://www.amazon.de/-/de/gp/product/B0DJCPDMKB",
                             ["Sturm im Sonnensystem (2850 - 3180)"] = "https://www.amazon.de/-/de/gp/product/B0DJLTXD41",
                             ["Imperium aus der Asche (3180 - 3370)"] = "https://www.amazon.de/-/de/gp/product/B0DJLV5CZQ",
-                        }.Select(kv => $"<li><a href='{kv.Value}'>{kv.Key}</a></li>")) + "</ul>",
+                        }.Select(kv => $"<dd><a href='{kv.Value}'>{kv.Key}</a></dd>")) + "</dl>",
                         ["en-US"] = () => "(upcoming)",
                     }),
                 }));
