@@ -269,24 +269,30 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
     }
 
     {
+        var icons = "<p>" + string.Join(" ", new[] {
+"<a href='https://www.facebook.com/GalacticDevelopments'><img src='/images/Index/facebook.png' width='32'/></a>",
+"<a href='https://www.youtube.com/@GalacticDevelopments'><img src='/images/Index/youtube.png' width='32'/></a>",
+"<a href='https://www.instagram.com/galacticdevelopments/'><img src='/images/Index/instagram.png' width='32'/></a>",
+        }) + "</p>";
+
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Title"] = Model.I18n.String(path: "Box/SocialMedia/Title", i18n: new StringGeneratorI18n {
                         ["de-DE"] = () => "Social Media",
                         ["en-US"] = () => "SocialMedia",
                     }),
                     ["Text"] = Model.I18n.String(path: "Box/SocialMedia/Text", i18n: new StringGeneratorI18n {
-                        ["de-DE"] = () => string.Join(" ", new[] {
+                        ["de-DE"] = () => "<p>" + string.Join(" ", new[] {
 "<a href='https://www.facebook.com/GalacticDevelopments'>Facebook</a>",
 "<a href='https://www.youtube.com/@GalacticDevelopments'>YouTube</a>",
 "<a href='https://twitter.com/galacticdev'>Twitter</a>",
 "<a href='https://www.instagram.com/galacticdevelopments/'>Insta</a>",
-}),
-                        ["en-US"] = () => string.Join(" ", new[] {
+}) + "</p>" + icons,
+                        ["en-US"] = () => "<p>" + string.Join(" ", new[] {
 "<a href='https://www.facebook.com/GalacticDevelopments'>Facebook</a>",
 "<a href='https://www.youtube.com/@GalacticDevelopments'>YouTube</a>",
 "<a href='https://twitter.com/galacticdev'>Twitter</a>",
 "<a href='https://www.instagram.com/galacticdevelopments/'>Insta</a>",
-}),
+}) + "</p>" + icons,
                     }),
                 }));
     }
