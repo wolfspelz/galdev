@@ -135,7 +135,7 @@
                         ["de-DE"] = () => "Alle Themen",
                         ["en-US"] = () => "All Topics",
                     }),
-                    ["Text"] = string.Join(" - ", Model.Timeline.Topics.Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
+                    ["Text"] = string.Join(" - ", Model.Timeline.Topics.OrderBy(topic => Model.Timeline.GetTitleOfTopic(topic)).Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
                 }));
     }
 
