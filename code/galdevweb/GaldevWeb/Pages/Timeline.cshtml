@@ -84,7 +84,13 @@
                 }
 
                 @foreach (var t in entry.Text) {
-                    @Html.Raw(Markdown.ToHtml(t))
+                    var text = "";
+                    if (string.IsNullOrEmpty(Model.Term)) {
+                        text = t;
+                    } else {
+                        text = t.Replace(Model.Term, $"<a name='{Model.Term}'></a><span class='gd-hilite-term'>{Model.Term}</span>");
+                    }
+                    @Html.Raw(Markdown.ToHtml(text))
                 }
             }
         </div>

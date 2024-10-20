@@ -12,11 +12,11 @@ namespace GaldevWeb.Pages
         public void OnGet(string term)
         {
             //Log.Info("", new LogData { [nameof(term)] = term });
-            SearchTerm = term.ToLower();
+            SearchTerm = term;
 
             foreach (var kv in Timeline) {
                 var entry = kv.Value;
-                if (entry.FullTextForSearch.ToLower().Contains(SearchTerm)) {
+                if (entry.FullTextForSearch.ToLower().Contains(SearchTerm.ToLower())) {
                     List.Add(entry);
                 }
             }

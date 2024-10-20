@@ -81,7 +81,11 @@ p {
 }
 
 .card-body-hilite {
-    background-color: #f3f4f5;
+    background-color: #e0e0f0;
+}
+
+span.gd-hilite-term {
+    background: #e0e0f0;
 }
 
 .card-img, .card-img-top {

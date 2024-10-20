@@ -23,7 +23,7 @@
     <div class="col-12">
         @foreach (var entry in Model.List) {
             <div>
-                <a asp-page="/Timeline" asp-route-name="@entry.SeoTitle">@entry.Year @entry.Title</a>
+                <a href="@Url.Page("/Timeline", null, new { name = entry.SeoTitle, term = Model.SearchTerm })#@Model.SearchTerm">@entry.Year @entry.Title</a>
             </div>
         }
     </div>

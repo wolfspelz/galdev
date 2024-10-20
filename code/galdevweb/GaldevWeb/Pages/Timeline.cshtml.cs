@@ -1,4 +1,6 @@
-﻿namespace GaldevWeb.Pages
+﻿using Markdig.Extensions.DefinitionLists;
+
+namespace GaldevWeb.Pages
 {
     public class TimelineModel : GaldevPageModel
     {
@@ -6,14 +8,17 @@
         public bool NotAvailable = false;
         public TimelineEntry? NextEntry = null;
         public TimelineEntry? PreviousEntry = null;
+        public string Term = "";
 
         public TimelineModel(GaldevApp app) : base(app, "Timeline")
         {
         }
 
-        public void OnGet(string name)
+        public void OnGet(string name, string term = "")
         {
             if (Is.Value(name)) {
+                Term = term;
+
                 name = TimelineIndex.GetNameFromSeoTitle(name);
                 //Log.Info("", new LogData { [nameof(name)] = name });
 
