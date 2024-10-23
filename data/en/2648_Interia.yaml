@@ -5,6 +5,8 @@ Headline: "Adventurous Journey: To the fabled heart of the empire"
 Short: After a long adventurous journey, an expedition reaches the heart of the empire. They report about the danger for the Sol System, get help and save humanity...
 Image: en_Interia.jpg
 Translation: Heiner Wolf, Rosmarie Wolf
+Created: 2019-12-07
+Changed: 2024-10-24
 Tags: [empire, adventure, voyage, aliens, empress]
 Topics: [adventure, spaceflight, aliens, luck]
 Text: |
@@ -69,6 +71,6 @@ MurfScript: |
   [pause strong] Another group of independent persons cares more about the empire than their own social status. They serve the empire even though they cannot participate in the grand social intercourse. They are called the preservers. While the others are occupied with choosing the new empress, they continue the strategy of their last empress. 
   [pause strong] One of these preservers meets the Podagraria. Interia is delighted at the arrival of humanity. A new race starting to explore their interstellar neighborhood. A somewhat civilized race, cautiously expanding with its own technology. Quite contrary to neo-barbarians who cause many problems using stolen technology while still having barbarous customs. Experience shows that a race like humanity is a candidate for the future leadership of a regional sector. 
   [pause strong] But humanity has a problem. Solar colonies were invaded by Kelrecs shortly before the departure of the expedition. A massive attack on the solar system is expected any time soon. Humanity has nothing to oppose the vastly superior technology looted from unguarded Interian depots. Three years have passed - and unknown to the expedition - the solar system is in fact already under siege. Humanity is on the brink. 
-  [pause strong] The preservers reactivate the empire's military forces, and attack the Kelrec home planet. The Kelrecs have to abandon the siege of the Sol system. It is the last major naval action of the Interian empire. 
-  [pause strong] Humanity escapes barely with a black eye. This one expedition, and the swift reaction of some Interian preservers, save humanity and the Sol system from total destruction and enslavement by techno-barbarians. 
+  [pause strong] The preservers reactivate the empire's military forces, and attack the Kelrec home planet. The Kelrecs have to abandon the siege of the Sol System. It is the last major naval action of the Interian empire. 
+  [pause strong] Humanity escapes barely with a black eye. This one expedition, and the swift reaction of some Interian preservers, save humanity and the Sol System from total destruction and enslavement by techno-barbarians. 
   [pause 1.5s] This was, Galactic Developments, Year 26 48
