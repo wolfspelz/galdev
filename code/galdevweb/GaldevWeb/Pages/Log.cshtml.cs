@@ -4,7 +4,7 @@ namespace GaldevWeb.Pages
 {
     public class LogModel : GaldevPageModel
     {
-        public int Lines = 0;
+        public int NumLines = 0;
 
         public LogModel(GaldevApp app) : base(app, "Log")
         {
@@ -14,9 +14,9 @@ namespace GaldevWeb.Pages
         {
             //Log.Info($"");
             if (lines > 0) {
-                Lines = lines;
+                NumLines = lines;
             } else {
-                Lines = Config.MaxLogLines;
+                NumLines = Config.MaxLogLines;
             }
         }
     }

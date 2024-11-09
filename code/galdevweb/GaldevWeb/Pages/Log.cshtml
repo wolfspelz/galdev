@@ -1,10 +1,23 @@
 ﻿@page
 @inject GaldevWeb.InMemoryLoggerProvider LoggerProvider
+@using n3q.Tools
 @model LogModel
 @{
     Layout = "_PlainLayout";
 }
 
-@foreach (var line in LoggerProvider.GetLogs().Take(Model.Lines)) {
-    @line<br />
+@foreach (var line in LoggerProvider.GetLogs().Take(Model.NumLines)) {
+    var beginJson = line.IndexOf("{");
+    var hexColor = "FFFFFF";
+    if (beginJson >= 0) {
+        var json = line.Substring(beginJson);
+        var node = JsonPath.Node.FromJson(json);
+        var client = node["client"].AsString;
+        var hash = Crypto.SHA1Hex(client);
+        var hash6 = hash.Substring(0, 6);
+        var hashInt = int.Parse(hash6, System.Globalization.NumberStyles.HexNumber);
+        var colInt = hashInt | 0x808080;
+        hexColor = colInt.ToString("X6");
+    }
+    <div style="background-color: @("#" + hexColor)">@line</div>
 }
