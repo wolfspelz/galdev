@@ -11,14 +11,18 @@
     var hexColor = "FFFFFF";
     if (Model.Colored) {
         if (beginJson >= 0) {
-            var json = line.Substring(beginJson);
-            var node = JsonPath.Node.FromJson(json);
-            var client = node["client"].AsString;
-            var hash = Crypto.SHA1Hex(client);
-            var hash6 = hash.Substring(0, 6);
-            var hashInt = int.Parse(hash6, System.Globalization.NumberStyles.HexNumber);
-            var colInt = hashInt | 0x808080;
-            hexColor = colInt.ToString("X6");
+            try {
+                var json = line.Substring(beginJson);
+                var node = JsonPath.Node.FromJson(json);
+                var client = node["client"].AsString;
+                var hash = Crypto.SHA1Hex(client);
+                var hash6 = hash.Substring(0, 6);
+                var hashInt = int.Parse(hash6, System.Globalization.NumberStyles.HexNumber);
+                var colInt = hashInt | 0x808080;
+                hexColor = colInt.ToString("X6");
+            } catch (Exception) {
+                // ignore
+            }
         }
     }
     <div style="background-color: @("#" + hexColor)">@line</div>
