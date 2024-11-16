@@ -205,6 +205,20 @@ namespace GaldevWeb
                 entry.Headline = headline;
             }
 
+            var created = contentNode["created"].AsString;
+            if (Is.Value(created)) {
+                if (DateTime.TryParse(created, out DateTime parsedDate)) {
+                    entry.CreatedDate = parsedDate;
+                }
+            }
+
+            var changed = contentNode["changed"].AsString;
+            if (Is.Value(changed)) {
+                if (DateTime.TryParse(changed, out DateTime parsedDate)) {
+                    entry.ChangedDate = parsedDate;
+                }
+            }
+
             var image = contentNode["image"].AsString;
             if (Is.Value(image) && !image.Contains("NAME")) {
                 entry.Image = $"{lang}/{image}";

@@ -8,12 +8,17 @@
         {
         }
 
-        public void OnGet(int min = -1)
+        public void OnGet(int length = -1, string date = "")
         {
-            min = min < 0 ? Config.ListMinTextLength : min;
+            length = length < 0 ? Config.ListMinTextLength : length;
+
+            if (!DateTime.TryParse(date, out DateTime minDate)) {
+                minDate = DateTime.MinValue;
+            }
+
             var lang = GetLangFromCultureName(UiCultureName);
-            //Log.Info("", new LogData { [nameof(min)] = min });
-            List = Timeline.GetFilteredList(entry => entry.TextLen > min);
+
+            List = Timeline.GetFilteredList(entry => entry.TextLen >= length && entry.ChangedDate >= minDate);
         }
     }
 }

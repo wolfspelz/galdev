@@ -22,7 +22,10 @@ namespace GaldevWeb
         public string Next = "";
         public string Previous = "";
         public string Headline = "";
-        
+
+        public DateTime CreatedDate { get; internal set; } = DateTime.MinValue;
+        public DateTime ChangedDate { get; internal set; } = DateTime.MinValue;
+
         public Dictionary<string, string> _sequenceText = new();
         public Dictionary<string, string> _sequenceNext = new();
 
