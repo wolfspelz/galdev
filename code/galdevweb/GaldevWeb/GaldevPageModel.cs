@@ -50,7 +50,17 @@ namespace GaldevWeb
 
                 if (context.HttpContext != null) {
                     logData[LogData.Key.Client] = context.HttpContext.GetRemoteIpAddressHashed();
-                    logData[LogData.Key.Uri] = context.HttpContext.GetUri();
+
+                    var uri = context.HttpContext.GetUri();
+                    if (Is.Value(uri)) {
+                        logData[LogData.Key.Uri] = uri;
+                    }
+
+                    var ua = context.HttpContext.GetUserAgent();
+                    if (Is.Value(ua)) {
+                        logData[LogData.Key.Agent] = ua;
+                    }
+
                     Log.SetTraceIdentifier(context.HttpContext);
                 }
 

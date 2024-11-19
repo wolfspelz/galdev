@@ -35,4 +35,13 @@ public static class HttpContextExtensions
         }
         return "";
     }
+
+    public static string GetUserAgent(this HttpContext self)
+    {
+        var ua = self.Request?.Headers["User-Agent"].FirstOrDefault();
+        if (Is.Value(ua)) {
+            return ua;
+        }
+        return "";
+    }
 }

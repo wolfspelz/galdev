@@ -39,6 +39,7 @@ namespace n3q.Tools
     {
         public static class Key
         {
+            public const string Agent = "agent";
             public const string Arguments = "args";
             public const string Body = "body";
             public const string Client = "client";
