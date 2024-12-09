@@ -40,7 +40,7 @@ public static class HttpContextExtensions
     {
         var ua = self.Request?.Headers["User-Agent"].FirstOrDefault();
         if (Is.Value(ua)) {
-            return ua;
+            return ua!;
         }
         return "";
     }
