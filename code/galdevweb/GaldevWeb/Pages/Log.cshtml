@@ -1,12 +1,11 @@
 ﻿@page
-@inject GaldevWeb.InMemoryLoggerProvider LoggerProvider
 @using n3q.Tools
 @model LogModel
 @{
     Layout = "_PlainLayout";
 }
 
-@foreach (var line in LoggerProvider.GetLogs().Take(Model.NumLines)) {
+@foreach (var line in Model.Lines) {
     var beginJson = line.IndexOf("{");
     var hexColor = "FFFFFF";
     if (Model.Colored) {

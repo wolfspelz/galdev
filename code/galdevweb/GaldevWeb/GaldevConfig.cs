@@ -14,5 +14,6 @@
         public string GitHubProjectDataBaseUrl = "https://raw.githubusercontent.com/wolfspelz/galdev/main";
         public int WebpMemoryCacheDurationSec = 7 * 24 * 3600;
         public int MaxLogLines = 10_000;
+        public List<string> LogLineRegexDenyList = new() { @"(?i)""agent"":""[^""]*?bot[^""]*?""", @"(?i)""agent"":""[^""]*?spider[^""]*?""" };
     }
 }
