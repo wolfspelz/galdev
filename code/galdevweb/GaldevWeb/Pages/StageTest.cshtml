@@ -12,8 +12,7 @@
         var list = data["list"].AsList;
         foreach (var entry in list) {
             var stageImageFilename = entry["image"].AsString;
-            var description = entry["description"].AsDictionary;
-            var stageImageDescription = description[Model.Lang].AsString;
+            var stageImageDescription = entry["description"].AsDictionary[Model.Lang].AsString;
             stages.Add(stageImageFilename, stageImageDescription);
         }
     } catch { }
@@ -27,4 +26,3 @@
         </div>
     }
 </div>
-
