@@ -95,7 +95,7 @@ span.gd-hilite-term {
 
 a {
     text-decoration: none;
-    color: #8080a0;
+    color: #8080c0;
 }
 
     a:hover {
@@ -109,7 +109,7 @@ a {
     }
 
     a:visited {
-        color: #808080;
+        color: #909090;
     }
 
     a[name], a[name]:hover, a[name]:focus {
