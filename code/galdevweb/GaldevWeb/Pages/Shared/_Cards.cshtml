@@ -25,6 +25,11 @@
                         </div>
                     </div>
                 }
+                @if (@card["VideoSrc"].String != "") {
+                    <video class="card-img-top" src="@card["VideoSrc"]" alt="@card["ImgAlt"]" autoplay loop muted data-toggle="modal" data-target="#iCard@(card.GetHashCode())">
+                        Your browser does not support the video tag.
+                    </video>
+                }
                 <div class="card-body">
                     @if (@card["Title"].String != "") {
                         <h5 class="card-title">
