@@ -347,8 +347,8 @@ entries:
     de: 2337_GeminiÜbernahme.yaml
     en: 2337_GeminiTakeover.yaml
   AiExpansionStopped:
-    de: 2338_KiExpansionGestoppt.yaml
-    en: 2338_AiExpansionStopped.yaml
+    de: 2330_KiExpansionGestoppt.yaml
+    en: 2330_AiExpansionStopped.yaml
   Neuausrichtung_der_Raummodulat:
     de: 2340_Neuausrichtung_der_Raummodulat.yaml
   Erstmalige_Austragung_der_sola:
