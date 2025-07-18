@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{6480EB88-FD80-4051-8CE2-60B655CDFD5A}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.github\workflows\cicd.yaml = .github\workflows\cicd.yaml
 		Dockerfile = Dockerfile
 		README.md = README.md
 	EndProjectSection
