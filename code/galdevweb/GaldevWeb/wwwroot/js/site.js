@@ -87,4 +87,10 @@ function setHiliteClass() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", initializeImagePreview);
+function init() {
+    initializeImagePreview()
+    setHiliteClass()
+    $(window).on('hashchange', setHiliteClass)
+}
+
+document.addEventListener("DOMContentLoaded", init);

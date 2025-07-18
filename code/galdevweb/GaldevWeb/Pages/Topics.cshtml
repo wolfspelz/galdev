@@ -33,11 +33,3 @@
 }
 
 @await Html.PartialAsync("_Cards", cards, ViewData)
-
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            window.setInterval(setHiliteClass, 500)
-        });
-    </script>
-}
