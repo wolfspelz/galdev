@@ -11,7 +11,7 @@ Postimage: NAME.jpg
 Smallimage: NAME-100x70.jpg
 Author: Heiner Wolf
 Translation: Rosmarie Wolf, Heiner Wolf
-Tags: [TAG1, TAG2]
+Tags: [_hilite, TAG1, TAG2]
 Topics: [catastrophe]
 Text: |
   The first interstellar colony fails. Due to alien life forms and hostility among humans.

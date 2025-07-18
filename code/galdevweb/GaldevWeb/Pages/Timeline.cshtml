@@ -124,6 +124,8 @@
                         }),
                         ["Text"] = string.Join("<br/>",
                     Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_new"))
+                    .OrderByDescending(entry => entry.ChangedDate)
+                    .Take(Model.Config.IndexListLimit)
                     .Select(entry => {
                         return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                     })),
@@ -131,25 +133,57 @@
                 }
 
                 {
+                    var randomizedList = Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_hilite")).OrderBy(a => Guid.NewGuid());
+                    var len = randomizedList.Count();
                     cards.Add(Node.From(new Dictionary<string, string> {
-                        ["Title"] = Model.I18n.String(path: "Box/Expansion/Title", i18n: new StringGeneratorI18n {
-                            ["de-DE"] = () => "Die grosse Erweiterung",
-                            ["en-US"] = () => "The Great Expansion",
-                        }),
-                        ["Text"] = Model.I18n.String(path: "Box/Expansion/Text", i18n: new StringGeneratorI18n {
-                            ["de-DE"] = () => "Es gibt noch viele kurze Einträge. Viele davon sind tolle Ideen und wichtige Meilensteine der Entwicklung. Sie verdienen mehr Einzelheiten und mehr Liebe. Die ersten Ergebnisse der Erweiterungkampagne:",
-                            ["en-US"] = () => "There are still lots of small an short entries. The are great ideas and great milestones. They deserve more detail and love. First results of the expansion campaign:",
-                        })
-                    + "<br/><br/>"
-                    + string.Join("<br/>",
-                    Model.Timeline.GetFilteredList(entry => entry.Tags.Contains("_project_expansion"))
-                    .Select(entry => {
-                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
-                    })),
-                    }));
+                                ["Title"] = Model.I18n.String(path: "Box/New/Title", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => "Die Besten",
+                                    ["en-US"] = () => "Absolute Highlights",
+                                }),
+                                ["Id"] = "id-Highlights",
+                                ["Anchor"] = "Highlights",
+                                ["Text"] = Model.I18n.String(path: "Box/New/Text", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => $"({Model.Config.IndexListLimit} von {len})",
+                                    ["en-US"] = () => $"({Model.Config.IndexListLimit} of {len})",
+                                }) + "<br/>" +
+                                string.Join("<br/>",
+                                    randomizedList
+                                    .Take(Model.Config.IndexListLimit)
+                                    .OrderBy(entry => entry.Year)
+                                    .Select(entry => {
+                                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                                    })),
+                            }));
                 }
 
-                {
+                if (Model.UiCultureName == "de-DE") {
+                    cards.Add(Node.From(new Dictionary<string, string> {
+                                ["ImgSrc"] = "/images/Index/book-serie.png",
+                                ["ImgAlt"] = Model.I18n.String(path: "Box/Book/ImgAlt", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => "Buchserie",
+                                    ["en-US"] = () => "(upcoming)",
+                                }),
+                                ["Link"] = Model.I18n.String(path: "Box/Book/Link", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => "https://www.amazon.de/-/de/dp/B0DJM967TV",
+                                    ["en-US"] = () => "(upcoming)",
+                                }),
+                                ["Title"] = Model.I18n.String(path: "Box/Book/Title", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => "Als Buchreihe",
+                                    ["en-US"] = () => "(upcoming)",
+                                }),
+                                ["TitleHasLink"] = "true",
+                                ["Text"] = Model.I18n.String(path: "Box/Book/Text", i18n: new StringGeneratorI18n {
+                                    ["de-DE"] = () => "Ein Buch pro Zeitalter:\n<dl>" + string.Join("\n", new Dictionary<string, string> {
+                                        ["Aufbruch ins Sonnensystem (2050 - 2280)"] = "https://www.amazon.de/-/de/gp/product/B0DJC38SSW",
+                                        ["Interplanetare Zivilisation (2280 - 2570)"] = "https://www.amazon.de/-/de/gp/product/B0DHW4636N",
+                                        ["Ruf der Sterne (2570 - 2850)"] = "https://www.amazon.de/-/de/gp/product/B0DJCPDMKB",
+                                        ["Sturm im Sonnensystem (2850 - 3180)"] = "https://www.amazon.de/-/de/gp/product/B0DJLTXD41",
+                                        ["Imperium aus der Asche (3180 - 3370)"] = "https://www.amazon.de/-/de/gp/product/B0DJLV5CZQ",
+                                    }.Select(kv => $"<dd><a href='{kv.Value}'>{kv.Key}</a></dd>")) + "</dl>",
+                                    ["en-US"] = () => "(upcoming)",
+                                }),
+                            }));
+                } else {
                     cards.Add(Node.From(new Dictionary<string, string> {
                         ["ImgSrc"] = "/images/Index/book.png",
                         ["ImgAlt"] = "Buch",

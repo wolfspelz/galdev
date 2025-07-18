@@ -22,8 +22,8 @@
     foreach (var topic in Model.Timeline.Topics) {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["Id"] = "id-" + topic,
-                    ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Anchor"] = topic,
+                    ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                 Model.Timeline.GetEntriesOfTopic(topic)
                 .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
@@ -37,14 +37,7 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            var hash = window.location.hash.substring(1);
-            if (hash) {
-                $("#id-" + hash).addClass("card-body-hilite");
-            }
+            window.setInterval(setHiliteClass, 500)
         });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", initializeImagePreview);
     </script>
 }

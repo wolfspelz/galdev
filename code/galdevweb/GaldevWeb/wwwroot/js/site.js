@@ -71,4 +71,20 @@ function initializeImagePreview() {
     });
 }
 
+function setHiliteClass() {
+    var hash = window.location.hash.substring(1);
+    var $currentHilite = $(".card-body-hilite");
+    if (hash) {
+        var $targetElement = $("#id-" + hash);
+        // Only add class if it's not already on the target element
+        if (!$targetElement.hasClass("card-body-hilite")) {
+            $currentHilite.removeClass("card-body-hilite");
+            $targetElement.addClass("card-body-hilite");
+        }
+    } else {
+        // Remove class when no hash is set
+        $currentHilite.removeClass("card-body-hilite");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", initializeImagePreview);
