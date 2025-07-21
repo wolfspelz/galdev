@@ -372,8 +372,9 @@ entries:
     en: 2359_FreeAreaVegas.yaml
   Beginn_des_Baus_der_Weltraumst:
     de: 2363_Beginn_des_Baus_der_Weltraumst.yaml
-  Der_Nabenrat_von_VestaPrime_ve:
-    de: 2366_Der_Nabenrat_von_VestaPrime_ve.yaml
+  TransorbitalEquilibrium:
+    de: 2366_TransorbitalerAusgleich.yaml
+    en: 2366_TransorbitalEquilibrium.yaml
   MabesiKrise_Schwere_soziale_un:
     de: 2369_MabesiKrise_Schwere_soziale_un.yaml
   Beginn_des_Spacedom_Baus:
