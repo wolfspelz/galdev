@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -53,9 +53,9 @@ public class ImageToWebpConversionMiddleware
     {
         var cacheKey = $"WEBP_{context.Request.Path}_{memStream.Length}";
 
-        if (!_cache.TryGetValue(cacheKey, out byte[] webpImage)) {
+        if (!_cache.TryGetValue(cacheKey, out byte[]? webpImage)) {
             memStream.Seek(0, SeekOrigin.Begin);
-            using var image = Image.Load<Rgba32>(memStream);
+            using var image = SixLabors.ImageSharp.Image.Load<Rgba32>(memStream);
             using var webpStream = new MemoryStream();
             await image.SaveAsync(webpStream, new WebpEncoder());
             webpImage = webpStream.ToArray();
@@ -66,6 +66,9 @@ public class ImageToWebpConversionMiddleware
             _cache.Set(cacheKey, webpImage, cacheOptions);
         }
 
+        if (webpImage == null) {
+            throw new InvalidOperationException("WebP conversion failed.");
+        }
         context.Response.ContentType = "image/webp";
         context.Response.ContentLength = webpImage.Length;
         await originalBody.WriteAsync(webpImage, 0, webpImage.Length);

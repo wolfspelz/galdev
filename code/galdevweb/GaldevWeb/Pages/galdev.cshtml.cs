@@ -1,9 +1,8 @@
-namespace GaldevWeb.Pages
+namespace GaldevWeb.Pages;
+
+public class GaldevModel : GaldevPageModel
 {
-    public class GaldevModel : GaldevPageModel
+    public GaldevModel(GaldevApp app) : base(app, "Galdev")
     {
-        public GaldevModel(GaldevApp app) : base(app, "Galdev")
-        {
-        }
     }
 }

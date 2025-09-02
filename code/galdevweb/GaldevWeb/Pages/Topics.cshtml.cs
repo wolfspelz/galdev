@@ -1,14 +1,13 @@
-﻿namespace GaldevWeb.Pages
-{
-    public class TopicsModel : GaldevPageModel
-    {
-        public TopicsModel(GaldevApp app) : base(app, "Topics")
-        {
-        }
+namespace GaldevWeb.Pages;
 
-        public void OnGet()
-        {
-            //Log.Info("");
-        }
+public class TopicsModel : GaldevPageModel
+{
+    public TopicsModel(GaldevApp app) : base(app, "Topics")
+    {
+    }
+
+    public void OnGet()
+    {
+        //Log.Info("");
     }
 }

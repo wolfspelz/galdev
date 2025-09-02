@@ -1,9 +1,8 @@
-namespace GaldevWeb.Pages
+namespace GaldevWeb.Pages;
+
+public class StageTestModel : GaldevPageModel
 {
-    public class StageTestModel : GaldevPageModel
+    public StageTestModel(GaldevApp app) : base(app, "StageTest")
     {
-        public StageTestModel(GaldevApp app) : base(app, "StageTest")
-        {
-        }
     }
 }

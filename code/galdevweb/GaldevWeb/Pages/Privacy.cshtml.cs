@@ -1,14 +1,13 @@
-﻿namespace GaldevWeb.Pages
-{
-    public class PrivacyModel : GaldevPageModel
-    {
-        public PrivacyModel(GaldevApp app) : base(app, "Privacy")
-        {
-        }
+namespace GaldevWeb.Pages;
 
-        public void OnGet()
-        {
-            //Log.Info("");
-        }
+public class PrivacyModel : GaldevPageModel
+{
+    public PrivacyModel(GaldevApp app) : base(app, "Privacy")
+    {
+    }
+
+    public void OnGet()
+    {
+        //Log.Info("");
     }
 }

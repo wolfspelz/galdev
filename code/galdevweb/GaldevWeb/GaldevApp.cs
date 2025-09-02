@@ -1,10 +1,9 @@
-﻿namespace GaldevWeb
+namespace GaldevWeb;
+
+public class GaldevApp
 {
-    public class GaldevApp
-    {
-        public GaldevConfig Config = new GaldevConfig();
-        public ICallbackLogger Log = new NullCallbackLogger();
-        public ITimeProvider Time = new RealTime();
-        public TimelineIndex Timelines = new();
-    }
+    public GaldevConfig Config = new GaldevConfig();
+    public ICallbackLogger Log = new NullCallbackLogger();
+    public ITimeProvider Time = new RealTime();
+    public TimelineIndex Timelines = new();
 }
