@@ -9,4 +9,5 @@ COPY --from=build /app/out .
 COPY data /data
 RUN apt-get update && apt-get install -y libfontconfig1
 EXPOSE 80
+ENV ASPNETCORE_HTTP_PORTS=80
 ENTRYPOINT ["dotnet", "GaldevWeb.dll"]
