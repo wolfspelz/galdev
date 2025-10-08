@@ -1,14 +1,13 @@
-﻿namespace GaldevWeb.Pages
-{
-    public class AboutModel : GaldevPageModel
-    {
-        public AboutModel(GaldevApp app) : base(app, "About")
-        {
-        }
+namespace GaldevWeb.Pages;
 
-        public void OnGet()
-        {
-            //Log.Info("");
-        }
+public class AboutModel : GaldevPageModel
+{
+    public AboutModel(GaldevApp app) : base(app, "About")
+    {
+    }
+
+    public void OnGet()
+    {
+        //Log.Info("");
     }
 }

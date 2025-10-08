@@ -1,21 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
-namespace futr.Controllers
+namespace GaldevWeb.Controllers;
+
+[ApiController]
+public class ReloadController : GaldevControllerBase
 {
-    [ApiController]
-    public class ReloadController : GaldevControllerBase
+    public ReloadController(GaldevApp app) : base(app) { }
+
+    [Route("[controller]")]
+    [HttpGet]
+    public IActionResult Index()
     {
-        public ReloadController(GaldevApp app) : base(app) { }
+        App.Timelines.Reload();
 
-        [Route("[controller]")]
-        [HttpGet]
-        public IActionResult Index()
-        {
-            App.Timelines.Reload();
-
-            return new ContentResult {
-                Content = $"{DateTime.UtcNow}"
-            };
-        }
+        return new ContentResult {
+            Content = $"{DateTime.UtcNow}"
+        };
     }
 }

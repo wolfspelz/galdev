@@ -1,27 +1,26 @@
-namespace GaldevWeb.Pages
+namespace GaldevWeb.Pages;
+
+public class FindModel : GaldevPageModel
 {
-    public class FindModel : GaldevPageModel
+    public TimelineEntryList List = new();
+    public string SearchTerm = "";
+
+    public FindModel(GaldevApp app) : base(app, "List")
     {
-        public TimelineEntryList List = new();
-        public string SearchTerm = "";
+    }
 
-        public FindModel(GaldevApp app) : base(app, "List")
-        {
-        }
+    public void OnGet(string term)
+    {
+        //Log.Info("", new LogData { [nameof(term)] = term });
+        SearchTerm = term;
 
-        public void OnGet(string term)
-        {
-            //Log.Info("", new LogData { [nameof(term)] = term });
-            SearchTerm = term;
-
-            foreach (var kv in Timeline) {
-                var entry = kv.Value;
-                if (entry.FullTextForSearch.ToLower().Contains(SearchTerm.ToLower())) {
-                    List.Add(entry);
-                }
+        foreach (var kv in Timeline) {
+            var entry = kv.Value;
+            if (entry.FullTextForSearch.ToLower().Contains(SearchTerm.ToLower())) {
+                List.Add(entry);
             }
-
-            ViewData["SearchTerm"] = SearchTerm;
         }
+
+        ViewData["SearchTerm"] = SearchTerm;
     }
 }

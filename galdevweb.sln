@@ -13,10 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{64
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaldevWeb", "code\galdevweb\GaldevWeb\GaldevWeb.csproj", "{01A8F030-660A-4B6B-B924-BA68ADC022EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath", "code\galdevweb\JsonPath\JsonPath.csproj", "{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonPath.Test", "code\galdevweb\JsonPath.Test\JsonPath.Test.csproj", "{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "n3q.Tools", "code\galdevweb\n3q.Tools\n3q.Tools.csproj", "{C5C372FD-4231-41BF-81D2-D2A525417ED1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaldevWeb.Test", "code\galdevweb\GaldevWeb.Test\GaldevWeb.Test.csproj", "{C69BC625-C94D-4D47-87CA-D63BAFC49C86}"
@@ -33,14 +29,6 @@ Global
 		{01A8F030-660A-4B6B-B924-BA68ADC022EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01A8F030-660A-4B6B-B924-BA68ADC022EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01A8F030-660A-4B6B-B924-BA68ADC022EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69DE6283-351C-47E9-AB1E-BF96CE23B7F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E564B68-F850-4A2F-B5AC-5D0A9103EEC7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C372FD-4231-41BF-81D2-D2A525417ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU

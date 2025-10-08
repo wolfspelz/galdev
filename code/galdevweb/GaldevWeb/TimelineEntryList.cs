@@ -1,4 +1,3 @@
-﻿namespace GaldevWeb
-{
-    public class TimelineEntryList : List<TimelineEntry> { }
-}
+namespace GaldevWeb;
+
+public class TimelineEntryList : List<TimelineEntry> { }
