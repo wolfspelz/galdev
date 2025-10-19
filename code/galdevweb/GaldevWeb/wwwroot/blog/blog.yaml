@@ -1,4 +1,6 @@
 entries:
+  Termine:
+    de: de_Termine.yaml
   ConsUndMessen:
     de: de_ConsUndMessen.yaml
     en: en_ConsUndMessen.yaml
