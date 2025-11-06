@@ -1,4 +1,5 @@
-﻿@page
+@* ä *@
+@page
 @model IndexModel
 @inject LinkGenerator Links
 @{
@@ -106,7 +107,7 @@
                         ["ImgAlt"] = "Launch Pad",
                         ["Text"] = Model.I18n.String(path: "Box/Start/Text", i18n: new StringGeneratorI18n {
                             ["de-DE"] = () => ""
-                            + $"Starte mit <a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName} <span class='gd-next-arrow'></span></a><br/>"
+                            + $"Starte mit <a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-preview-image='{entry.Image}'>{entry.Year} {entry.DisplayName} <span class='gd-next-arrow'></span></a><br/>"
                             + $"oder mit einem <a href='{Links.GetPathByPage("/Topics", null, new { })}#adventure'>" + Model.Timeline.GetTitleOfTopic("adventure") + " <span class='gd-next-arrow'></span></a><br/>"
                             + $"oder mit <a href='{Links.GetPathByPage("/", null, new { })}#Highlights'>den besten Beiträgen<span class='gd-next-arrow'></span></a><br/>"
                             + $"oder <a href='{Links.GetPathByPage("/List", null, new { })}'>die ganze Zeitleiste chronologisch <span class='gd-next-arrow'></span></a><br/>"
@@ -135,7 +136,7 @@
                     .Where(entry => entry.Tags.Contains("_new"))
                     .OrderByDescending(entry => entry.CreatedDate)
                     .Take(Model.Config.IndexListLimit)
-                    .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName} </a>")),
+                    .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-preview-image='{entry.Image}'>{entry.Year} {entry.DisplayName} </a>")),
                 }));
     }
 
@@ -145,7 +146,7 @@
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                 Model.Timeline.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry.Image}'>{entry.Year} {entry.DisplayName}</a>")
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-preview-image='{entry.Image}'>{entry.Year} {entry.DisplayName}</a>")
                 )
                 }));
     }
@@ -230,7 +231,7 @@
                 .OrderByDescending(entry => entry.ChangedDate)
                 .Take(Model.Config.IndexListLimit)
                 .Select(entry => {
-                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                 })),
                 }));
     }
@@ -360,7 +361,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                 Model.Timeline.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
                 )
                 }));
     }
@@ -373,7 +374,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                 .OrderByDescending(entry => entry.ChangedDate)
                 .Take(Model.Config.IndexListLimit)
                 .Select(entry => {
-                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                 })),
                 }));
     }
@@ -400,7 +401,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                         .Take(Model.Config.IndexListLimit)
                         .OrderBy(entry => entry.Year)
                         .Select(entry => {
-                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                            return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                         })),
                 }));
     }
@@ -419,7 +420,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                 + string.Join("<br/>",
                 Model.Timeline.GetFilteredList(entry => entry.Topics.Contains("things"))
                 .Select(entry => {
-                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                 })),
                 }));
     }
@@ -478,7 +479,7 @@ Hier ist eine Reihe von Annahmen und Grundlagen...",
                 .Where(name => Model.Timeline.HasEntry(name))
                 .Select(name => {
                     var entry = Model.Timeline.GetEntry(name);
-                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                    return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                 })),
                 }));
     }
