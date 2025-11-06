@@ -71,6 +71,98 @@ function initializeImagePreview() {
     });
 }
 
+function initializeVideoPreview() {
+    // Create a container for the preview video
+    const videoPreview = document.createElement("video");
+    videoPreview.className = "gd-preview";
+    videoPreview.autoplay = true;
+    videoPreview.loop = true;
+    videoPreview.muted = true;
+    videoPreview.style.maxWidth = "30rem";
+    videoPreview.style.maxHeight = "30rem";
+    videoPreview.style.objectFit = "contain";
+    document.body.appendChild(videoPreview);
+
+    // Function to show the video preview
+    function showVideo(event) {
+        const videoUrl = event.target.getAttribute("data-video");
+        if (videoUrl) {
+            // Get custom max dimensions if specified
+            const maxWidth = event.target.getAttribute("data-video-max-width");
+            const maxHeight = event.target.getAttribute("data-video-max-height");
+            
+            if (maxWidth) {
+                videoPreview.style.maxWidth = maxWidth;
+            } else {
+                videoPreview.style.maxWidth = "30rem";
+            }
+            
+            if (maxHeight) {
+                videoPreview.style.maxHeight = maxHeight;
+            } else {
+                videoPreview.style.maxHeight = "30rem";
+            }
+            
+            videoPreview.src = videoUrl;
+            videoPreview.style.display = "block";
+            videoPreview.play();
+            moveVideo(event);
+        }
+    }
+
+    // Function to hide the video preview
+    function hideVideo() {
+        videoPreview.style.display = "none";
+        videoPreview.pause();
+    }
+
+    // Function to move the video with the mouse
+    function moveVideo(event) {
+        // Determine mouse position and window dimensions
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const videoWidth = videoPreview.offsetWidth;
+        const videoHeight = videoPreview.offsetHeight;
+        const offset = 80; // Distance from the mouse
+
+        // Determine the video position based on mouse position
+        let posX;
+        let posY = mouseY;
+
+        if (mouseX < windowWidth / 2) {
+            // Mouse is in the left half of the content
+            posX = mouseX + offset;
+            if (posX + videoWidth > windowWidth) {
+                posX = windowWidth - videoWidth - 20; // Adjust if video goes beyond the right edge
+            }
+        } else {
+            // Mouse is in the right half of the content
+            posX = mouseX - videoWidth - offset;
+            if (posX < 0) {
+                posX = 20; // Adjust if video goes beyond the left edge
+            }
+        }
+
+        // Adjust the vertical position to ensure the video is completely within the viewport
+        if (posY + videoHeight > windowHeight + window.scrollY) {
+            posY = windowHeight + window.scrollY - videoHeight - 20; // Adjust if video goes beyond the bottom edge
+        }
+
+        videoPreview.style.left = posX + "px";
+        videoPreview.style.top = posY + "px";
+    }
+
+    // Attach mouseover, mouseout, and mousemove events to all <a> elements with data-video attribute
+    const videoLinks = document.querySelectorAll("a[data-video]");
+    videoLinks.forEach(function (link) {
+        link.addEventListener("mouseover", showVideo);
+        link.addEventListener("mouseout", hideVideo);
+        link.addEventListener("mousemove", moveVideo);
+    });
+}
+
 function setHiliteClass() {
     var hash = window.location.hash.substring(1);
     var $currentHilite = $(".card-body-hilite");
@@ -89,6 +181,7 @@ function setHiliteClass() {
 
 function init() {
     initializeImagePreview()
+    initializeVideoPreview()
     setHiliteClass()
     $(window).on('hashchange', setHiliteClass)
 }
