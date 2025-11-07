@@ -33,9 +33,10 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/galdevweb.sln"
+                "${workspaceFolder}/code/galdevweb/GaldevWeb/GaldevWeb.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "isBackground": true
         }
     ]
 }

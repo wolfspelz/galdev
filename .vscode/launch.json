@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Launch Web",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -13,8 +13,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/code/galdevweb/GaldevWeb",
             "stopAtEntry": false,
-            "hotReloadEnabled": true,
-            "hotReloadProfile": "aspnetcore",
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
