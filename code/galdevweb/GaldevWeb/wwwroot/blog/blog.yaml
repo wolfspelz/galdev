@@ -1,10 +1,14 @@
 entries:
+  39c3:
+    de: de_39c3.yaml
   ConsUndMessen:
     de: de_ConsUndMessen.yaml
     en: en_ConsUndMessen.yaml
   Nft4CollectiveOwnership:
     de: en_Nft4CollectiveOwnership.yaml
     en: en_Nft4CollectiveOwnership.yaml
+  GalerieRisiken:
+    de: de_GalerieRisiken.yaml
   GalerieFrauen:
     de: de_GalerieFrauen.yaml
     en: en_GalerieFrauen.yaml
