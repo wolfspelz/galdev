@@ -1,4 +1,4 @@
-﻿@page "{name?}"
+@page "{name?}"
 @using Markdig
 @model TimelineModel
 @inject IUrlHelper UrlHelper
@@ -111,7 +111,7 @@
                         }) + Model.Timeline.GetTitleOfTopic(topic),
                         ["Text"] = string.Join("<br/>",
                     Model.Timeline.GetEntriesOfTopic(topic)
-                    .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
+                    .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
                     )
                     }));
                 }
@@ -127,7 +127,7 @@
                     .OrderByDescending(entry => entry.ChangedDate)
                     .Take(Model.Config.IndexListLimit)
                     .Select(entry => {
-                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                     })),
                     }));
                 }
@@ -151,7 +151,7 @@
                                     .Take(Model.Config.IndexListLimit)
                                     .OrderBy(entry => entry.Year)
                                     .Select(entry => {
-                                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
+                                        return $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry?.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>";
                                     })),
                             }));
                 }

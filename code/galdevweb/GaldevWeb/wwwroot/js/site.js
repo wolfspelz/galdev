@@ -3,71 +3,109 @@
 
 // Write your JavaScript code.
 
-function initializeImagePreview() {
-    // Create a container for the preview image
+function initializeMediaPreview() {
+    // Create containers for preview image and video
     const imagePreview = document.createElement("img");
     imagePreview.className = "gd-preview";
     document.body.appendChild(imagePreview);
 
-    // Function to show the image preview
-    function showImage(event) {
-        const imageUrl = event.target.getAttribute("data-image");
-        if (imageUrl) {
-            imagePreview.src = "/Image/" + imageUrl;
-            imagePreview.style.display = "block";
-            moveImage(event);
-        }
-    }
+    const videoPreview = document.createElement("video");
+    videoPreview.className = "gd-preview";
+    videoPreview.autoplay = true;
+    videoPreview.loop = true;
+    videoPreview.muted = true;
+    videoPreview.style.objectFit = "contain";
+    document.body.appendChild(videoPreview);
 
-    // Function to hide the image preview
-    function hideImage() {
-        imagePreview.style.display = "none";
-    }
-
-    // Function to move the image with the mouse
-    function moveImage(event) {
-        // Determine mouse position and window dimensions
+    // Generic function to move preview element with the mouse
+    function movePreview(event, previewElement) {
         const mouseX = event.pageX;
         const mouseY = event.pageY;
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
-        const imageWidth = imagePreview.offsetWidth;
-        const imageHeight = imagePreview.offsetHeight;
+        const previewWidth = previewElement.offsetWidth;
+        const previewHeight = previewElement.offsetHeight;
         const offset = 80; // Distance from the mouse
 
-        // Determine the image position based on mouse position
         let posX;
         let posY = mouseY;
 
         if (mouseX < windowWidth / 2) {
             // Mouse is in the left half of the content
             posX = mouseX + offset;
-            if (posX + imageWidth > windowWidth) {
-                posX = windowWidth - imageWidth - 20; // Adjust if image goes beyond the right edge
+            if (posX + previewWidth > windowWidth) {
+                posX = windowWidth - previewWidth - 20;
             }
         } else {
             // Mouse is in the right half of the content
-            posX = mouseX - imageWidth - offset;
+            posX = mouseX - previewWidth - offset;
             if (posX < 0) {
-                posX = 20; // Adjust if image goes beyond the left edge
+                posX = 20;
             }
         }
 
-        // Adjust the vertical position to ensure the image is completely within the viewport
-        if (posY + imageHeight > windowHeight + window.scrollY) {
-            posY = windowHeight + window.scrollY - imageHeight - 20; // Adjust if image goes beyond the bottom edge
+        // Adjust vertical position to ensure preview is within viewport
+        if (posY + previewHeight > windowHeight + window.scrollY) {
+            posY = windowHeight + window.scrollY - previewHeight - 20;
         }
 
-        imagePreview.style.left = posX + "px";
-        imagePreview.style.top = posY + "px";
+        previewElement.style.left = posX + "px";
+        previewElement.style.top = posY + "px";
     }
 
-    // Attach mouseover, mouseout, and mousemove events to all <a> elements with data-image attribute
-    const links = document.querySelectorAll("a[data-image]");
-    links.forEach(function (link) {
-        link.addEventListener("mouseover", showImage);
-        link.addEventListener("mouseout", hideImage);
-        link.addEventListener("mousemove", moveImage);
+    // Generic function to show preview based on data attribute
+    function showPreview(event) {
+        const imageUrl = event.target.getAttribute("data-preview-image");
+        const videoUrl = event.target.getAttribute("data-preview-video");
+        const maxWidth = event.target.getAttribute("data-preview-max-width");
+        const maxHeight = event.target.getAttribute("data-preview-max-height");
+
+        if (imageUrl) {
+            videoPreview.style.display = "none";
+            videoPreview.pause();
+            
+            imagePreview.style.maxWidth = maxWidth || "30rem";
+            imagePreview.style.maxHeight = maxHeight || "30rem";
+            imagePreview.style.objectFit = "contain";
+            
+            imagePreview.src = "/Image/" + imageUrl;
+            imagePreview.style.display = "block";
+            movePreview(event, imagePreview);
+        } else if (videoUrl) {
+            imagePreview.style.display = "none";
+            
+            videoPreview.style.maxWidth = maxWidth || "30rem";
+            videoPreview.style.maxHeight = maxHeight || "30rem";
+            
+            videoPreview.src = videoUrl;
+            videoPreview.style.display = "block";
+            videoPreview.play();
+            movePreview(event, videoPreview);
+        }
+    }
+
+    // Generic function to hide all previews
+    function hidePreview() {
+        imagePreview.style.display = "none";
+        videoPreview.style.display = "none";
+        videoPreview.pause();
+    }
+
+    // Generic function to move the currently visible preview
+    function moveCurrentPreview(event) {
+        if (imagePreview.style.display === "block") {
+            movePreview(event, imagePreview);
+        } else if (videoPreview.style.display === "block") {
+            movePreview(event, videoPreview);
+        }
+    }
+
+    // Attach events to all elements with data-preview-image or data-preview-video attributes
+    const mediaLinks = document.querySelectorAll("a[data-preview-image], a[data-preview-video]");
+    mediaLinks.forEach(function (link) {
+        link.addEventListener("mouseover", showPreview);
+        link.addEventListener("mouseout", hidePreview);
+        link.addEventListener("mousemove", moveCurrentPreview);
     });
 }
 
@@ -88,7 +126,7 @@ function setHiliteClass() {
 }
 
 function init() {
-    initializeImagePreview()
+    initializeMediaPreview()
     setHiliteClass()
     $(window).on('hashchange', setHiliteClass)
 }

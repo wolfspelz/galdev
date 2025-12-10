@@ -1,6 +1,8 @@
 entries:
   39c3:
     de: de_39c3.yaml
+  Termine:
+    de: de_Termine.yaml
   ConsUndMessen:
     de: de_ConsUndMessen.yaml
     en: en_ConsUndMessen.yaml

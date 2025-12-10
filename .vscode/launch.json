@@ -5,18 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Launch Web",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/code/galdevweb/GaldevWeb/bin/Debug/net6.0/GaldevWeb.dll",
+            "program": "${workspaceFolder}/code/galdevweb/GaldevWeb/bin/Debug/net8.0/GaldevWeb.dll",
             "args": [],
             "cwd": "${workspaceFolder}/code/galdevweb/GaldevWeb",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },

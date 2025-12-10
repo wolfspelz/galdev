@@ -27,9 +27,16 @@ public class Program
         builder.Logging.AddFilter("Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware", LogLevel.None);
         builder.Logging.AddFilter("Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware", LogLevel.None);
 
-        builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+        var razorPagesBuilder = builder.Services.AddRazorPages();
+        var mvcBuilder = builder.Services.AddControllersWithViews();
+        
+        if (builder.Environment.IsDevelopment())
+        {
+            razorPagesBuilder.AddRazorRuntimeCompilation();
+            mvcBuilder.AddRazorRuntimeCompilation();
+        }
+        
         builder.Services.AddControllers();
-        builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
         builder.Services.AddLocalization();
 

@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model TopicsModel
 @inject LinkGenerator Links
 @{
@@ -26,7 +26,7 @@
                     ["Title"] = Model.Timeline.GetTitleOfTopic(topic),
                     ["Text"] = string.Join("<br/>",
                 Model.Timeline.GetEntriesOfTopic(topic)
-                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
+                .Select(entry => $"<a href='{Links.GetPathByPage("/Timeline", null, new { name = entry.SeoTitle })}' data-preview-image='{entry?.Image}'>{entry?.Year} {entry?.DisplayName}</a>")
                 )
                 }));
     }
