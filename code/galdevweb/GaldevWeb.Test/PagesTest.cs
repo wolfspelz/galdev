@@ -2,6 +2,7 @@ using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -132,6 +133,127 @@ public class PagesTest
         var doc = new HtmlDocument();
         doc.LoadHtml(await response.Content.ReadAsStringAsync());
         Assert.AreEqual("News", doc.DocumentNode.SelectNodes("//h1").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Topics()
+    {
+        // Act
+        var response = await _client.GetAsync("/Topics");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+    }
+
+    // Timeline regression tests for German (de-DE)
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_TransorbitalEquilibrium_de()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/TransorbitalEquilibrium?lang=de-DE");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Transorbitaler Ausgleich", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
+        Assert.AreEqual("2366", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+        Assert.AreEqual("Transorbitaler Ausgleich", doc.DocumentNode.SelectNodes("//h3/span").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_NinthPlanet_de()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/NinthPlanet?lang=de-DE");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Pontos Mission: Forschungsexpedition zum neunten Planeten", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
+        Assert.AreEqual("2412", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_VegasTreaty_de()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/VegasTreaty?lang=de-DE");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Vertrag von Vegas/Luna", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
+        Assert.AreEqual("2231", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_BeltPirates_de()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/BeltPirates?lang=de-DE");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Piraten im Asteroidengürtel", WebUtility.HtmlDecode(doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", "")));
+        Assert.AreEqual("2222", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    // Timeline regression tests for English (en-US)
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_TransorbitalEquilibrium_en()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/TransorbitalEquilibrium?lang=en-US");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Transorbital Equilibrium", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
+        Assert.AreEqual("2366", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
+        Assert.AreEqual("Transorbital Equilibrium", doc.DocumentNode.SelectNodes("//h3/span").FirstOrDefault()?.InnerText.Trim());
+    }
+
+    [TestMethod]
+    [TestCategory("GaldevWeb.Pages")]
+    public async Task Timeline_BeltPirates_en()
+    {
+        // Act
+        var response = await _client.GetAsync("/Timeline/BeltPirates?lang=en-US");
+
+        // Assert
+        Assert.IsNotNull(response.Content);
+        response.EnsureSuccessStatusCode();
+        Assert.AreEqual("text/html; charset=utf-8", response.Content.Headers.ContentType?.ToString());
+        var doc = new HtmlDocument();
+        doc.LoadHtml(await response.Content.ReadAsStringAsync());
+        Assert.AreEqual("Piracy in the Asteroid Belt", doc.DocumentNode.SelectNodes("//meta").FirstOrDefault(n => n.GetAttributeValue("property", "") == "og:title")?.GetAttributeValue("content", ""));
+        Assert.AreEqual("2222", doc.DocumentNode.SelectNodes("//h3/a/span").FirstOrDefault()?.InnerText.Trim());
     }
 
 }
