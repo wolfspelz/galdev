@@ -21,3 +21,68 @@ Text: |
     Der Komplex verfügt über keinerlei herausgehobene Ausführungsprivilegien. Er läuft selbständig nur mit einem schmalen Wartungsflow, der sehr wenig Leistung beansprucht. Der Komplex lebte deshalb unauffällig mit Myriaden anderen Low-Priority Prozessen in Solnet und wird über öffentliche Budgets unterhalten. Bei aktiver Benutzung wird der Eingangsbereich semistatisch erzeugt über die persönliche Visualisierung des Benutzers. Interfaces zu Nano-Caves sind verfügbar. Es gibt eine breite Palette von Standardszenen, die von den meisten Visualisierungen interpretiert werden können. Im Normalfall wird der Simulatorkern nicht benötigt. Die Standardszenen sind flexibel genug, um individuelle Szenen ohne Vollsimulation zu ermöglichen. Dadurch ist der Zugang sehr günstig. Dies ist ein wesentlicher Grund, dass der Centaurus-Komplex als Ausflugsziel immer beliebter wird. Neben der fast perfekten Darstellung einer bezaubernden Landschaft ist es vor allem der günstige Zugang auch für kurze Runs, der immer mehr Leute anzieht. Obwohl Nano-Visualisierung wegen der Cavezeit nicht so günstig ist, wie 3D, wird auch der Zugang über das Nano-Interface immer häufiger benutzt. Vor allem die Nano-Darstellung überzeugt durch detailreiche, aber ressourcenschonende Implementierung. Eine normale 2-Personen Szene im 500er Cave (500 Kubikmeter) degradiert den Cave-Fog nur um ein Prozent pro Stunde.
     Wie ein so hochentwickeltes Simulationspaket der Vocon Zivilisation in das Solnet gelangte, ist weiterhin ungeklärt. Nachforschungen haben ergeben, dass es erstmals 2764 in Backups auftaucht. Traces, die über die ersten Transaktionen Aufschluss geben könnten, sind vermutlich bei der Solnet Kompaktifizierung 2824 gelöscht worden. Es konnte keine Eigentumszuordnung gefunden werden, weder im Komplex noch in Solnet-Beständen. Die einzige externe Zuordnung mit Kontakteigenschaften im Solnet ist intern ungültig. Centaurus ist nach neuesten Erkenntnissen ein TSNH-Fall (This Should Never Happen). Seine Entdeckung löste ein aufwändiges systemweites Remapping referenzieller Gruppenkennungen aus. Der Komplex lebte – und lebt immer noch – unter diversen wechselnden öffentlichen Identitäten, eine durchaus weit verbreitete Vorgehensweise. Vermutungen, dass der Komplex als Tarnung für einen Infiltrationsmechanismus dient, haben sich als haltlos erwiesen. Der Komplex wurde als unbedenklich eingestuft und hat in 150 Jahren öffentlichen Betriebs keine Auffälligkeiten gezeigt.
     Der Centaurus-Komplex wurde von zwei Studenten entdeckt, die an einer Studie über Transformationsfluktuationen zweiter Ordnung in Backbone-Flows arbeiteten. Die Studenten, E. T. Harris (hartE) und S. Nunez (ce9kit) griffen nur zufällig Transaktionen von Centaurus heraus. Sie analysierten dann aber die Quelle und verschafften sich schließlich Zugang zum Komplex. Der Wartungszugang war nur schwach gesichert mit einer einfachen Passgeste, die mit Standardtools rekonstruiert werden konnte. Die Geste ähnelt dem Sternbild Centaurus, daher der Name des Komplexes. Nach dem Unclaimed Information Structure Act von 2800 wurde der Komplex nach 3-jähriger einspruchsfreier Offenlegungsfrist den beiden Entdeckern zugesprochen. 2869 wurde er dann öffentliches Eigentum unter Solnet Verwaltung. Die Wartungszugänge wurden geschlossen, um den Komplex vor Missbrauch zu schützen. Das Besuchertor bleibt weiterhin geöffnet.
+
+Markdown: |
+    Die Studenten E. Harris und S. Nunez entdecken den Centaurus-Komplex.
+    Der Softwarekomplex läuft seit langer Zeit anonym im Solnet und wird beliebt als Ausflugsziel.
+
+    Der Centaurus-Simulationskomplex wurde per Zufall im Solnet, dem solaren Informationsverbund, entdeckt.
+    Er umfasst eine Datenmenge von 85 PB; 15 PB im Interface, ca. 50 PB im Kern und 20 PB Utilities, darunter mindestens vier verschiedene nicht bewusste KIs.
+    Der Komplex ist größen- und inhaltsstabil.
+    Die mittlere Datenaustauschrate beträgt nur 10 ppB pro Jahr, im Wesentlichen durch Statistik und automatische Optimierungen.
+    Er ist wie viele andere Software-Komplexe delokalisiert mit 60% Aufenthaltswahrscheinlichkeit der Hauptmasse im irdischen Geosyncbackbone.
+    Der Gesamt-IO war in der Vergangenheit vernachlässigbar, steigt in jüngster Zeit aber deutlich an.
+
+    Die Hauptfunktion des Komplexes ist die physikalische Simulation eines (für Menschen idyllischen) Kontinents auf Eon im Vocon-Cluster.
+    Die Simulation ist sehr detailliert, so dass der durchschnittliche Benutzer mit einem modernen Rig keine Inkonsistenzen sehen sollte.
+    Der ursprüngliche Zweck scheint eine wissenschaftliche Biosphärensimulation zu sein.
+    Darauf deuten die alten Logs hin.
+    In den Logs erscheinen die Beschreibungen sehr vieler Simulationsläufe und Restarts mit jeweils leicht variierenden Anfangsbedingungen.
+    Deutlich sind Forschungsreihen zu erkennen in denen Wissenschaftler von Vocon den Einfluss von Umwelteffekten auf die Biosphäre untersuchten.
+    Die einzelnen Personen sind heute nicht mehr zu identifizieren.
+    Für genaue Nachforschungen ist der Vocon-Cluster aber auch zu weit entfernt und der Komplex zu alt.
+
+    Die im Vergleich zur Funktionsvielfalt und Detailtreue geringe Größe des Centaurus-Komplexes spricht für einen hohen Entwicklungsstand der Informationsverarbeitung.
+    Die Blindleistung des Simulatorkerns wird auf weniger als 30% geschätzt; bei weniger als 5% Transferverlusten.
+    Die Implementierung ist sehr flexibel.
+    Sie läuft im öffentlichen Solnet auf moderner Quantenhardware und sogar – mittels einer eigenen KI – auch im alten Nukleonenarrayverbund, der im Tara Computing History Museum immer noch als Simulation betrieben wird.
+    Untersuchungen verschiedener Kernsysteme zeigen sehr effiziente Algorithmen.
+    Einer der Objectcores wurde sogar in das irdische Wettersystem übernommen.
+    Dies geschah allerdings erst nach Ablauf der Sperrfrist, die den Entdeckern für 20 Jahre die Exklusivrechte zusicherte.
+
+    Der Komplex verfügt über keinerlei herausgehobene Ausführungsprivilegien.
+    Er läuft selbständig nur mit einem schmalen Wartungsflow, der sehr wenig Leistung beansprucht.
+    Der Komplex lebte deshalb unauffällig mit Myriaden anderen Low-Priority Prozessen in Solnet und wird über öffentliche Budgets unterhalten.
+    Bei aktiver Benutzung wird der Eingangsbereich semistatisch erzeugt über die persönliche Visualisierung des Benutzers.
+    Interfaces zu Nano-Caves sind verfügbar.
+    Es gibt eine breite Palette von Standardszenen, die von den meisten Visualisierungen interpretiert werden können.
+    Im Normalfall wird der Simulatorkern nicht benötigt.
+    Die Standardszenen sind flexibel genug, um individuelle Szenen ohne Vollsimulation zu ermöglichen.
+    Dadurch ist der Zugang sehr günstig.
+    Dies ist ein wesentlicher Grund, dass der Centaurus-Komplex als Ausflugsziel immer beliebter wird.
+    Neben der fast perfekten Darstellung einer bezaubernden Landschaft ist es vor allem der günstige Zugang auch für kurze Runs, der immer mehr Leute anzieht.
+    Obwohl Nano-Visualisierung wegen der Cavezeit nicht so günstig ist, wie 3D, wird auch der Zugang über das Nano-Interface immer häufiger benutzt.
+    Vor allem die Nano-Darstellung überzeugt durch detailreiche, aber ressourcenschonende Implementierung.
+    Eine normale 2-Personen Szene im 500er Cave (500 Kubikmeter) degradiert den Cave-Fog nur um ein Prozent pro Stunde.
+
+    Wie ein so hochentwickeltes Simulationspaket der Vocon Zivilisation in das Solnet gelangte, ist weiterhin ungeklärt.
+    Nachforschungen haben ergeben, dass es erstmals 2764 in Backups auftaucht.
+    Traces, die über die ersten Transaktionen Aufschluss geben könnten, sind vermutlich bei der Solnet Kompaktifizierung 2824 gelöscht worden.
+    Es konnte keine Eigentumszuordnung gefunden werden, weder im Komplex noch in Solnet-Beständen.
+    Die einzige externe Zuordnung mit Kontakteigenschaften im Solnet ist intern ungültig.
+    Centaurus ist nach neuesten Erkenntnissen ein TSNH-Fall (This Should Never Happen).
+    Seine Entdeckung löste ein aufwändiges systemweites Remapping referenzieller Gruppenkennungen aus.
+    Der Komplex lebte – und lebt immer noch – unter diversen wechselnden öffentlichen Identitäten, eine durchaus weit verbreitete Vorgehensweise.
+    Vermutungen, dass der Komplex als Tarnung für einen Infiltrationsmechanismus dient, haben sich als haltlos erwiesen.
+    Der Komplex wurde als unbedenklich eingestuft und hat in 150 Jahren öffentlichen Betriebs keine Auffälligkeiten gezeigt.
+
+    Der Centaurus-Komplex wurde von zwei Studenten entdeckt, die an einer Studie über Transformationsfluktuationen zweiter Ordnung in Backbone-Flows arbeiteten.
+    Die Studenten, E. T.
+    Harris (hartE) und S. Nunez (ce9kit) griffen nur zufällig Transaktionen von Centaurus heraus.
+    Sie analysierten dann aber die Quelle und verschafften sich schließlich Zugang zum Komplex.
+    Der Wartungszugang war nur schwach gesichert mit einer einfachen Passgeste, die mit Standardtools rekonstruiert werden konnte.
+    Die Geste ähnelt dem Sternbild Centaurus, daher der Name des Komplexes.
+    Nach dem Unclaimed Information Structure Act von 2800 wurde der Komplex nach 3-jähriger einspruchsfreier Offenlegungsfrist den beiden Entdeckern zugesprochen.
+    2869 wurde er dann öffentliches Eigentum unter Solnet Verwaltung.
+    Die Wartungszugänge wurden geschlossen, um den Komplex vor Missbrauch zu schützen.
+    Das Besuchertor bleibt weiterhin geöffnet.

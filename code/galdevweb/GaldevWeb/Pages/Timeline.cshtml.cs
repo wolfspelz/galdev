@@ -8,7 +8,7 @@ public class TimelineModel : GaldevPageModel
     public bool NotAvailable = false;
     public TimelineEntry? NextEntry = null;
     public TimelineEntry? PreviousEntry = null;
-    public string Term = "";
+    public string ReferencedTerm = "";
 
     public TimelineModel(GaldevApp app) : base(app, "Timeline")
     {
@@ -17,7 +17,7 @@ public class TimelineModel : GaldevPageModel
     public void OnGet(string name, string term = "")
     {
         if (Is.Value(name)) {
-            Term = term;
+            ReferencedTerm = term;
 
             name = TimelineIndex.GetNameFromSeoTitle(name);
             //Log.Info("", new LogData { [nameof(name)] = name });

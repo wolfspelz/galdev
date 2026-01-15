@@ -51,3 +51,241 @@ Text: |
     Another reflex. I look up. There's a line across the panel. That's a shock wave running through the grid structure. Pretty big if you can see it from here. It gets closer quickly. Should not happen, but it does from time to time. Fortunately, I am not firmly connected with the grid. Only by the leash. Oops, the tether is tight because I'm hooked 40 meters away from the first contact point, beginner's mistake ... damn it. A blow. Glistening light. Darkness.
     -- End of EVA --
     One year before the planned commissioning, a technician was killed in an accident during an EVA mission. He was monitoring a functional test where panels run through various shading profiles. In some modules unexpected resonances occurred which were not damped well enough. The technician's space suit was attached to the grid structure by a safety leash. Unfortunately, the vibration caused a sudden pull of the tether which threw the suit against a beam. The resulting acceleration was lethal. 
+
+Markdown: |
+    The name SCALE means "Solar Constant Adjustment at the Lagrangian point of Earth", a sunshade between the Sun and the Earth.
+
+    There are five Lagrangian points where the gravitational forces of the Sun and Earth cancel each other out.
+    One of them, the L1 point, is located 1.5 million kilometers from the Earth, directly between our planet and the Sun.
+    Objects can maintain their position there for extended periods without the need for propulsion.
+
+    The SCALE program utilizes this L1 point to build enormous shadow panels made of aluminum foil.
+    Over a period of 15 years, it aims to create an area of three million square kilometers, equivalent to two percent of the Earth's surface.
+    This massive structure can thus reduce the solar radiation reaching Earth by up to two percent, potentially lowering global temperatures by several degrees.
+
+    -- EVA (Extra Vehicular Activity) --
+
+    Glistening sunlight.
+    Darkness.
+    Then the adaptive visor slowly adjusts.
+    My vision comes back.
+    Everything is still covered by the afterimage that the sun left on my retina.
+    The transparency control of the visor reacted too slowly, again.
+    I should really check the controller.
+    And I should learn not to look exactly in the direction of the sun when the hatch opens.
+    Beginner's mistake.
+    I can't exit that way.
+    I'll be waiting a short time until my eyes have calmed down.
+
+    "Chrzz" the audio connection signals, "Jomo, what's going on?".
+    "Eyes adjusting", I tell her, hoping that my mishap won't be noticed.
+    "Okay", comes from the other side, "you should really check the controller".
+    Well, nothing escapes my operations manager Kuki Nguya.
+    That's a good thing, after all.
+    Let's go then.
+
+    I float forward along the handrail through the hatch.
+    Then I turn right.
+    Once again, I stand before the largest wall in the Solar system.
+    We are at Habitat III, a few kilometers in front of the shadow panels on the sun facing side.
+    The shadow panels extend in all directions, over thousands of kilometers.
+    It's a majestic sight.
+    The proof that humanity doesn't give up, that there is always a solution, even for big problems like global warming.
+    A triumph of human engineering.
+    I'm a little proud to be up here.
+    Granted, almost everyone who works in orbit is here because SCALE needs so many people, even EVA noobs like me.
+    Still cool...
+
+    "Chrzz, you know that things are standing still down there?" – "Sure, I'm on my way", I reply.
+
+    --
+
+    SCALE reduces the solar radiation without casting distinct shadows.
+    This is achieved through deliberately induced diffraction effects at the edges.
+    Special care is taken to avoid shadows on Earth in the during daytime as that would feel like a solar eclipse.
+    The grids are movable and adjustable in order to shadow individual regions of the Earth.
+    This capability enables the project to potentially mitigate heat waves, alter evaporation patterns over the sea, and increase precipitation in arid areas.
+
+    The design also ensures that SCALE cannot be misused.
+    Safety features are a cornerstone of the overall design.
+    They guarantee, that solar radiation cannot be focused on individual areas.
+    The maximum regional increase of sunlight is 10%, the highest attenuation 2%.
+
+    Most SCALE elements are manufactured in lunar factories.
+    Lunar mining operations have been greatly expanded.
+    They mine millions of tons of titanium and aluminum.
+    Refineries produce raw aluminum and titanium.
+    The material is then launched to lunar orbit and processed into SCALE elements: lattice structures and foil.
+    After transporting them to the L1 point, the stabilization grids unfold.
+    Remote-controlled manipulators coat the grid structures with very thin aluminum foils.
+    Each sunshade is several square kilometers in size and weighs only a few hundred tons, taking advantage of the zero-gravity environment.
+    In orbit the shades do not have to support much weight.
+    Only the solar wind and the radiation pressure exert forces.
+
+    The surfaces act like light sails.
+    They are slowly pushed towards Earth.
+    To compensate for this, SCALE is located a little bit closer to the Sun, where a small residual gravity of the Sun compensates for the light sail effect.
+    The elements hold their position independently.
+    They regulate the balance between solar attraction and radiation pressure by slightly tilting the surface.
+    Elements can even drift laterally and shift sideways at the L1 point.
+    They can join to form larger groups or fly in open formation, depending on the intended shadow profile.
+
+    SCALE is a huge effort.
+    The project absorbs the entire available workforce in high earth orbit (HEO).
+    The expansion of L4 and L5 colonies almost comes to a standstill.
+
+    Assembly drones do the main work.
+    Engineers at assembly hubs remote-control the drones.
+    However, for most activities, drones do not require human control.
+    They are programmed for their tasks, working independently and sending progress reports to the control center.
+    Human operators must intervene only in case of problems or accidents.
+    And even then, they use specialized drones.
+    Very rarely someone in a space suit must go out to solve a problem manually.
+
+    The five second light lag between L1 and the Earth is too long to do everything remotely.
+    More than 100 engineers live in habitats at L1. In total there are 200 people at L1, including drone operators, logistics specialists, and habitat management staff.
+    That is almost a quarter of the total interplanetary population.
+    However, only 10 astronauts are in active "field service" occupied with EVA activities.
+
+    -- EVA (Extra Vehicular Activity) --
+
+    "Mission control, specialist Amadi on EVA 49-05-B in position BG/53", I report, "Camera drones online, telemetry is GO, please confirm." – "Chrzz, confirming, camera and telemetry coming in."
+
+    I am floating right in front of a mile-long shade, one of millions.
+    From the distance they look like flat surfaces.
+    But at close range you can see their structure, the struts, the joints.
+    The aluminum of the shadow panels is not a continuous sheet.
+    It has many gaps where sunlight shines through.
+    It is a pattern of four-leaf clovers as if a giant had worked the aluminum foil with a 10-meter cookie cutter.
+    One after the other, for miles and miles.
+    The cutouts are shaped in such a way that sunlight is bent into the shade.
+    The design avoids deep shadows and even more important, it prevents sunlight from focusing on the same spot.
+    This would have fatal consequences for the affected region on Earth like a super death ray.
+    There are many safety measures to avoid such a scenario: optical, mechanical, and digital.
+    The whole construction is made such that nothing bad can happen.
+
+    Anyway, the test of a new panel stopped with an error message.
+    The drones could not find the problem.
+    The debugger AI says there is no error.
+    Everything has been built according to specification, it says.
+    Still, the panel does not go back to its original position.
+    So, someone must go out and check.
+    And here I am.
+
+    I am drifting closer to the stuck segment.
+
+    "Control, there's a panel bent off here. I'll take a closer look." – "Chrzz, got it."
+
+    I hook my safety leash to the next strut and pull myself to the faulty element.
+    The titanium beam is curved – but without the typical wrinkles of a bent strut.
+    This does not look like a break.
+    More like one of the piezo joints.
+    As if it was meant to be so.
+    With my gloved hand I push the thing back into the straight position.
+    This is much easier than forcing a bent titanium rod straight.
+    It really is a joint.
+    These joints are so small and integrated into the rods that you only notice them when you look very closely.
+    If it is straight, you can only see where the shiny titanium gets a little bit blunt.
+    A joint consists of thousands of piezo actuators one next to the other, each moving only fractions of a degree.
+    In total they can get to 180 degrees.
+    But what is a joint doing here?
+
+    My neuro-implant shows the construction plan in the heads-up display.
+    I flip through the planes.
+    Diagrams alternate: the macrostructure, electrics, sensors, theoretical mechanical stress, electromechanical actuators, control network, sensor network ... wait, back.
+    The actuator diagram should show something here.
+    But there is no joint listed.
+    The thing is not in the plan.
+    The AI claims that everything has been built according to plan.
+    Does it have a different blueprint?
+
+    I pull myself a few meters further along to take a close look at the titanium beam.
+    Ten meters on there is another spot where the shiny titanium becomes a little blunt for several centimeters, another joint.
+    Then one more.
+    WTF.
+    According to the plan there is only one joint right in the middle of the 1000-meter-wide sunshade.
+    It can tilt the panel so that it moves sideways as a light sail.
+    On the other hand, there are also other panel designs with special functions.
+    They have different configurations: power generators with solar cells, light sail tractors, and express modules.
+    Express modules have many joints.
+    But they don't have the cloverleaf structure.
+    That just does not fit.
+
+    "Uh, control, there's something funny here." – "Chrzz, Jomo, please specify."
+
+    "There's a lot of joints here. One was bent." – "Chrzz, that's ok. It's an express module with shutter function."
+
+    "Got it." – "Chrzz, I'm glad you cleared that up. Come back in."
+
+    "Control, understood."
+
+    "They're not in my plan!" – Pause – "Chrzz, specialist Amadi, abort. The mission is over. That's an order."
+
+    "Copy that." – All right, I'm coming.
+
+    But this isn't a shutter module.
+    It's a standard panel with the usual inverted cloverleaf pattern.
+    Express shutter modules have continuous foil, without openings, without cloverleaves.
+    That doesn't fit at all.
+
+    Hm, joints at 10 meters each.
+    Apart from the fact that the express modules have a 50-meter grid.
+    If the inverted cloverleaves are shortened by angling, the pattern no longer has a dispersing effect.
+    It could also focus, depending on the effective length caused by the angle... OMG.
+    It could be a meta lens.
+
+    During my mechatronics studies in Addis Ababa in the Nonlinear Optics seminar we calculated diffraction effects with metamaterials.
+    Meta-optics are very small.
+    They are used in the optical near field.
+    But if you scale the whole thing up by one billion, you get the same effect with macroscopic structuring and a million kilometers distance.
+    OMG.
+    Someone out here may be building huge focusing meta-optics.
+    Exactly what the design is supposed to prevent.
+
+    "Control, we should simulate the projective shortening of the standard structure to check if it may have a focusing effect at L1 distance."
+
+    If that's the intention, then someone is misusing SCALE to build a million square kilometer sized burning glass.
+    All you have to do is to add piezo joints in the right places.
+    A small change in the construction plan.
+    Autofabs then produce it automatically.
+    The change is almost invisible.
+    It is only noticeable in the plan overlay.
+    And when someone comes very close, like me today.
+
+    In the corner of my eye, I see something moving, a reflection ... is the panel moving?
+    Or is it my relative movement?
+    After all, you are never completely motionless in space.
+    Hence the safety leash.
+
+    Anyway – I only noticed it because of the failed test and because the joints are not in my plans.
+    My implant is currently getting its data from the space suit.
+    And the suit's controller always reacts so slowly, as if it is overloaded.
+    Has this been the case for some time?
+    Is that why it missed a blueprint update?
+    Did I seen plans that weren't meant for me?
+    I really should have checked the controller.
+
+    "Chrzz, I'm sorry Jomo. You really should have checked the controller." – "Control, yes, you're right... what do you mean..."
+
+    Another reflex.
+    I look up.
+    There's a line across the panel.
+    That's a shock wave running through the grid structure.
+    Pretty big if you can see it from here.
+    It gets closer quickly.
+    Should not happen, but it does from time to time.
+    Fortunately, I am not firmly connected with the grid.
+    Only by the leash.
+    Oops, the tether is tight because I'm hooked 40 meters away from the first contact point, beginner's mistake ... damn it.
+    A blow.
+    Glistening light.
+    Darkness.
+
+    -- End of EVA --
+
+    One year before the planned commissioning, a technician was killed in an accident during an EVA mission.
+    He was monitoring a functional test where panels run through various shading profiles.
+    In some modules unexpected resonances occurred which were not damped well enough.
+    The technician's space suit was attached to the grid structure by a safety leash.
+    Unfortunately, the vibration caused a sudden pull of the tether which threw the suit against a beam.
+    The resulting acceleration was lethal.

@@ -55,11 +55,9 @@ public class PlainModel : GaldevPageModel
             entryString.Append(entry.Title);
             entryString.Append('.');
 
-            foreach (var t in entry.Text) {
-                if (Is.Value(t)) {
-                    entryString.Append(" # ");
-                    entryString.Append(t);
-                }
+            if (Is.Value(entry.Markdown)) {
+                entryString.Append(" # ");
+                entryString.Append(entry.Markdown);
             }
 
             //entryString.Append(" | tags=");

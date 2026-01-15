@@ -48,3 +48,111 @@ Text: |
     - "Polarisierter Stabilisator für ultradichte Quantenpartikelsysteme unter dem Regime der Gluon-Quark Pseudowechselwirklung": Nneka Chukwuma, Jane D. Chukwuma.
     - "QCD-Simulator basierend auf einem kontinuierlichen Quantenlöser für nichtlineare Differentialgleichungen": Hye-Jin Song, Idrissa N'Diaye, Young-Min Lee.
     - "Gravitative Isolationstechniken für Hochenergie-Teilchenexperimente in Null-G Umgebungen": Afolabi Adekunle, Ji-Ae Yoon.
+
+Markdown: |
+    Das Jahr 2248 geht als eine der größten Katastrophen in die Geschichte der Raumfahrt ein: die Zerstörung von Gemini, dem riesigen Doppelzylinderhabitat am Erde-Mond-Lagrange-Punkt L5.
+
+    In der Mitte des 23. Jahrhunderts hatte sich Gemini hervorragend entwickelt.
+    Mit einer Bevölkerung von über 40.000 ist der Gemini-Komplex das Juwel des hohen Erdorbits.
+    Die Zylinder bieten eine erdähnliche Umgebung und sie sind ein blühendes kulturelles und wirtschaftliches Zentrum im erdnahen Raum.
+
+    Dann einen Augenblick später, ist alles weg, verwandelt in eine Trümmerwolke, ein tragisches Zeugnis für die Fragilität menschlicher Unternehmungen im Weltraum.
+
+    Verursacht wurde die Katastrophe von Hwanin Dachaeloun Gwahag, einer dezentralen wissenschaftlichen Organisation (DWO).
+    In ihrer Forschungseinrichtung bei L5 entwickelte Hwanin DWO die wissenschaftlichen Grundlagen für Energiespeicher, die sich die starke Wechselwirkung in Atomkernen zunutze machen; insbesondere die Trennung von Farbladungen der Quantenchromodynamik.
+    Die Experimente konzentrierten sich auf so genannte Quark-Polarisatoren, die – vereinfacht ausgedrückt – die Farbladungen in einem Gluonenball auseinanderziehen, ähnlich wie bei einem geladenen elektrischen Kondensator.
+    Trotz der immensen technischen Schwierigkeiten hat die Farbladungstrennung das Potenzial, die Energiespeicherung zu revolutionieren.
+
+    Die Experimente wurden im Weltraum durchführt, weil man den allgegenwärtigen Vibrationen und mechanischen Erschütterungen auf der Erde entgehen wollte.
+    Die Experimente müssen vor Störungen im subatomaren Bereich, viel kleiner als ein Atomkerndurchmesser, geschützt werden, denn schon kleinste Erschütterungen von weit entfernt vorbeifahrenden Lastwagen können das empfindliche metastabile Gleichgewicht der Farbladungspolarisatoren beeinflussen.
+
+    Letztlich wurde die Katastrophe nicht durch Erschütterungen ausgelöst, sondern durch die Gravitation von Massen in der Nähe der Experimente.
+    Insbesondere die Auswirkungen des Geschäftsbetriebs einer riesigen lebendigen Weltraumhabitats wie Gemini,  wurden stark unterschätzt.
+    Die Hwanin DWO hatte die hochentwickelte industrielle Produktionsumgebung von Gemini einem abgelegenen und wesentlich teureren Forschungsaußenposten vorgezogen.
+    Dieser Entscheidung wurde allein aus wirtschaftlichen Erwägungen getroffen, ohne die Risiken zu berücksichtigen, die mit der Nähe zu einer großen Raumstation verbunden sind.
+
+    Es gab schon früh Kritiker, die davor warnten, dass selbst geringe Gravitationseinflüsse den empfindlichen Aufbau des QCD-Experiments stören könnten, z.
+    B.: Smith, J., & Zhang, L.
+    "Gravitationsstörungen bei Hochenergie-Experimenten in der Schwerelosigkeit: Ein vernachlässigtes Risiko?" *Magazin für Weltraumphysik*, 2247. In diesem Bericht heben die Autoren die Risiken hervor, die mit Hochenergiephysikexperimenten in belebten Weltraumhabitaten wie Gemini verbunden sind, wo bei unzähligen wirtschaftlichen und industriellen Aktivitäten teilweise große Massen bewegt werden.
+    Sie weisen darauf hin, dass selbst geringe Gravitationsstörungen die Versuchsaufbauten in der Schwerelosigkeit destabilisieren können.
+    Diese Abweichungen können dann, verstärkt durch die starke Kernkraft, zur spontanen Freisetzung großer Energiemengen führen.
+    Der Bericht plädiert für verstärkte Sicherheitsmaßnahmen und eine Neubewertung der Versuchsstandorte, um diese Risiken zu reduzieren.
+
+    Dr. Zhang in einem Interview: "Sie spielen mit dem Feuer. Es geht nicht nur darum, dass Experimente fehlschlagen, sondern darum, dass sie eine Katastrophe auslösen können" und "diese Habitate sind Pulverfässer. Es ist, als würde man in einem Raum voll brennender Lunten mit Dynamit jonglieren".
+
+    Auch der Bevölkerung sind die Experimente aufgefallen.
+    Hier die Anfrage eines besorgten Bürgers an den Stadtrat von Gemini B: "Lieber Stadtrat, mein Name ist Bao Nguyen, ich bin 7 Jahre alt und wohne in Gemini §INIT0§ Mir ist aufgefallen, dass es in Gewerbezone 3 viele Fusionsreaktoren gibt und sie anscheinend ständig laufen. Ich würde gerne wissen, was mit der ganzen Energie passiert. Außerdem mache ich mir Sorgen, ob das für alle hier sicher ist. Vielen Dank, Bao." Die Antwort des Stadtrats: "Lieber Bao, vielen Dank für deine Frage zu den Fusionsreaktoren. Wir haben bei der Firma, die für diese Reaktoren verantwortlich ist, nachgefragt, und sie haben uns versichert, dass alles in Ordnung ist."
+
+    Aber Warnungen und Bedenken wurden nicht nur aus finanziellen Gründen ignoriert.
+    Vor allem galt die weit verbreitete Annahme, dass der gewaltige Größenunterschied zwischen den Kernkräften und der Gravitation negativen Einflüsse ausschließen würde.
+    Der Unterschied zwischen der starken Kernkraft und der Gravitation ist in der Tat atemberaubend: die Kernkräfte sind etwa 10^39-mal stärker als die Schwerkraft – ein unvorstellbarerer Größenunterschied, nicht in Tausenden oder Millionen, sondern tausend Milliarden Milliarden Milliarden Milliarden.
+    Bei einem so gigantischen Unterschied schien es unvorstellbar, dass die schwächere Kraft jemals einen signifikanten Einfluss auf die stärkere haben könnte.
+    Was konnte da schon schief gehen?
+
+    Außerdem wurde das Argument vorgebracht, dass die Technologie in dynamischen Umgebungen funktionieren müsse, um kommerziell erfolgreich zu sein.
+    Die Entwicklung der Technologie in der Abgeschiedenheit eines weit entfernten Außenpostens wurde als kontraproduktiv angesehen, da dort andere Bedingungen herrschen würden als in den Umgebungen, wo die neuen Energiespeicher letztendlich eingesetzt werden sollten.
+
+    Wie sich herausstellte, war die Gravitation tatsächlich viel schwächer als die anderen Kräfte und damit irrelevant im Experiment.
+    Aber nahe gelegenen Massen wirkten trotzdem auf alle Teile des Experiments.
+    Der wirtschaftliche Betrieb der Habitate, der ständige Verkehr und vor allem der Gravitationseinfluss der nahe gelegenen Rohstoffasteroiden bewirkte kleine Asymmetrien, die dann durch die enormen Kräfte im Experiment verstärkt wurden.
+    So wurde der Faktor, der eigentlich Schutz bieten sollte, nämlich der Größenunterschied der Kräfte, ironischerweise zur Quelle des Problems.
+
+    Die Wissenschaftler standen unter dem Druck der Investoren und des Managements, schnell Fortschritte zu erzielen.
+    Die Forschungsarbeiten hinkten dem Zeitplan hinterher und standen auf dem Prüfstand.
+    In dem Bestreben, die Ergebnisse zu beschleunigen, entschied sich die Unternehmensleitung für einen gewagten Versuchslauf.
+    Über mehrere Monate fügten starke Fusionsreaktoren dem Experiment ständig mehr Energie hinzu, während Sicherheitsbedenken beiseitegeschoben wurden.
+    Man wollte einen großen Sprung machen, statt eines weiteren kleinen Schrittes.
+    Zitat der Vorstandsvorsitzenden Adeola Tran-Nguyen: "Lasst uns mutig sein".
+
+    Irgendwann entstand in den Quark-Polarisatoren eine Schwingung, die vom Korrektursystem nicht mehr ausgeglichen werden konnte.
+    Es war eine Kombination von unerwartet regelmäßigen Masseeinflüssen und den zu großen Kräften hervorgerufen durch das hochgesteckte Ziel der aktuellen Versuchsreihe.
+    Diese Destabilisierung führte in Nanosekunden zu einer Kettenreaktion.
+    Die getrennten Farbladungen vereinigten sich und setzten die gesamte gespeicherte Energie in einer verheerenden Explosion frei.
+
+    Eine Explosion so stark wie eine Nukleardetonation zerstörte die Zwillingszylinder von Gemini, ihre Ökosysteme, Wohn- und Geschäftsbereiche.
+    Ohne Vorwarnung, in nur wenigen Millisekunden, wurde das Symbol der menschlichen Besiedlung des Weltraums zu einem lautlos expandierenden Trümmerfeld.
+
+    Als die Katastrophe passierte, war Bao mit seiner Lerngruppe gerade zu Besuch in den äußeren Pharmen.
+    Er war deshalb der einzige Überlebende des gemischten Mehrgenerationenhaushalts Nguyen auf Gemini-B.
+
+    # Technischer Anhang:
+
+    Die Darstellung der QCD mit Quarks und Gluonen, die durch Farbladungen wechselwirken, ist nur eine Näherung.
+    Das QCD-Modell reicht aus, um die Prozesse zu berechnen, die bei der Energiespeicherung mittels Farbladungstrennung eine Rolle spielen wird, weil dabei nur am unteren Ende der subnuklearen Energieskala gearbeitet wird.
+    Aber QCD vernachlässigt Effekte, die erst bei höheren Energien auftreten.
+    Trotzdem wurde QCD benutzt, weil genauere Modelle schwieriger zu simulieren sind.
+
+    Die Vorstellung einer physikalischen Trennung von Farbladungen ist nicht korrekt, da die Energie im Kraftfeld der starken Wechselwirkung neue Teilchen-Antiteilchen-Paare erzeugt, die sowohl die Trennung als auch die gespeicherte Energie zunichtemachen.
+    In Wirklichkeit handelt es sich um eine dynamische Veränderung der Wellenfunktion der Farbladungen, die zu einer "imaginären" Trennung führt.
+    Diese wird dann im Phasenraum gedreht und manifestiert sich als eine geringe effektive reale Farbladungstrennung.
+
+    Aufgrund der Beschränkungen der traditionellen Gitter-QCD, die für diese Anwendung zu grob ist, war eine neuartige Berechnungsmethode erforderlich.
+    Erst die Entwicklung eines neuen Verfahrens zur analytischen Lösung für nichtlineare Differentialgleichungen der QCD ermöglichte die numerische Simulation der Farbladungstrennung.
+
+    Der so genannte "Quarkpolarisator" polarisiert eigentlich keine Quarks, insbesondere nicht die in Baryonen gebundenen Valenzquarks.
+    Er wirkt auf ein Gluonenplasma, das kurzzeitig stabilisiert wird, indem bestimmte Zerfallsprozesse verhindert werden.
+    Dies wird durch den Chukwuma-Effekt erreicht, der die Rolle von Quarks und Gluonen umkehrt und Quarks als Träger einer Pseudokraft zwischen Gluonenbällen interpretiert.
+    Die Polarisation dieser Wirkungsquarks blockiert bestimmte Zerfallskanäle und stabilisiert damit die beteiligten Gluonenbälle so lang, dass eine praktisch nutzbare Farbladungstrennung eintreten kann.
+
+    Der Begriff "Quark-Polarisator" ist zwar irreführend, hat sich aber trotzdem in der Populärwissenschaft durchgesetzt, um die Farbladungstrennung mit der bekannten Ladungstrennung in elektrischen Kondensatoren zu vergleichen.
+    Zwar sind polarisierte Quarks tatsächlich an der Farbladungstrennung beteiligt, doch ist damit eine ganz andere Art der Polarisierung gemeint (nämlich die Chiralität, nicht die Ladungstrennung).
+    Trotzdem hat sich die Terminologie durchgesetzt und die Ausdrücke "Quarkpolarisatoren" und "Farbladungstrenner" sind nun weit verbreitet.
+
+    Die Stabilisierung der Quarkpolarisatoren zur Farbladungstrennung ist sehr schwierig.
+    Ursprünglich wurden aktive Kontrollmechanismen entwickelt, um diese Polarisatoren zu stabilisieren.
+    Diese Regelkreise versuchten, als Reaktion auf kleinste Veränderungen, das System dynamisch anzupassen.
+    Aber die starke Wechselwirkung zwischen Quarks und Gluonen wirkt auf so kleinen Skalen und mit einer solchen Intensität, dass aktive Kontrollmechanismen Schwierigkeiten haben, rechtzeitig zu reagieren.
+    Wie sich zeigte, sind aktive Kontrollsysteme für die praktische Anwendung nicht geeignet.
+
+    Erst viel später, mit der Entwicklung von selbstregulierenden Rückkopplungsschleifen, werden Farbladungstrenner stabil genug für den praktischen Einsatz.
+    Dieser passive Ansatz nutzt die natürliche Dynamik der starken Wechselwirkung und ermöglichte es dem System, von sich aus auf Schwankungen zu reagieren, indem er sich an die dabei wirkenden Kräfte anpasst, anstatt ihnen entgegenzuwirken.
+    Dadurch werden die QCD-Ladungstrenner stabil genug für praktische Anwendungen und können schließlich wirklich die Energiespeicherung revolutionieren.
+
+    Einige bemerkenswerte Patente von Hwanin Dachaeloun Gwahag DSO:
+
+    - "Energiespeichersysteme mittels kontrollierter Farbladungsverschiebung in quantenchromodynamischen Prozessen": Kyung-Min Lee, Ama Abebrese, Ji-Hoon Park, Hyun-Jae Tran- Chukwuma.
+    - "Verfahren und Vorrichtung zur Stabilisierung eines Farbladungstrennungsgleichgewichts für einen kontinuierlichen Betrieb": Kyung-Min Lee, Soo-Yun Kim.
+    - "Quantenverschränkungsschnittstelle für Anwendungen der Quantenchromodynamik auf einer Attometer-Skala": Lekan Balogun, Bo-Hyun Ahn.
+    - "Polarisierter Stabilisator für ultradichte Quantenpartikelsysteme unter dem Regime der Gluon-Quark Pseudowechselwirklung": Nneka Chukwuma, Jane D. Chukwuma.
+    - "QCD-Simulator basierend auf einem kontinuierlichen Quantenlöser für nichtlineare Differentialgleichungen": Hye-Jin Song, Idrissa N'Diaye, Young-Min Lee.
+    - "Gravitative Isolationstechniken für Hochenergie-Teilchenexperimente in Null-G Umgebungen": Afolabi Adekunle, Ji-Ae Yoon.

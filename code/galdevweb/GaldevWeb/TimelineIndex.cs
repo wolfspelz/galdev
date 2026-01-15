@@ -182,8 +182,9 @@ public class TimelineIndex
             .Split('\n')
             .Select(x => x.Trim())
             .ToArray();
+        var markdown = contentNode["markdown"].AsString.Trim();
 
-        var entry = new TimelineEntry(entryName, year, title, fileNameWithExt, text);
+        var entry = new TimelineEntry(entryName, year, title, fileNameWithExt, text, markdown);
 
         var shortTitle = contentNode["shorttitle"].AsString;
         if (Is.Value(shortTitle)) {

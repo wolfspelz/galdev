@@ -6,11 +6,14 @@ namespace GaldevWeb;
 
 public class TimelineEntry
 {
+    public static readonly TimelineEntry Empty = new TimelineEntry("", "", "", "", Array.Empty<string>(), "");
+
     public string Name;
     public string Year;
     public string Title;
     public string Filename;
     public string[] Text;
+    public string Markdown;
 
     public string? ShortTitle;
     public string? Summary;
@@ -39,13 +42,14 @@ public class TimelineEntry
 
     public override string ToString() => $"{Year} {Name} {Title}";
 
-    public TimelineEntry(string name, string year, string title, string filename, string[] text)
+    public TimelineEntry(string name, string year, string title, string filename, string[] text, string markdown)
     {
         Name = name;
         Year = year;
         Title = title;
         Filename = filename;
         Text = text;
+        Markdown = markdown;
     }
 
     public string SeoTitle => $"{Name}-{Year}-{Title}"
@@ -55,7 +59,7 @@ public class TimelineEntry
         .Replace("\"", "")
         ;
 
-    public int TextLen => Text.Aggregate(0, (acc, x) => acc + x.Length);
+    public int TextLen => Markdown.Length;
 
     public string Description
     {
@@ -108,9 +112,7 @@ public class TimelineEntry
             s += ShortTitle != null ? sep + ShortTitle : "";
             s += Summary != null ? sep + Summary : "";
             s += Headline != null ? sep + Headline : "";
-            foreach (var t in Text) {
-                s += sep + t;
-            }
+            s += sep + Markdown;
             foreach (var t in Topics) {
                 s += sep + t;
             }

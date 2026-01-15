@@ -83,15 +83,13 @@
                     </div>
                 }
 
-                @foreach (var t in entry.Text) {
-                    var text = "";
-                    if (string.IsNullOrEmpty(Model.Term)) {
-                        text = t;
-                    } else {
-                        text = t.Replace(Model.Term, $"<a name='{Model.Term}'></a><span class='gd-hilite-term'>{Model.Term}</span>");
-                    }
-                    @Html.Raw(Markdown.ToHtml(text))
+                var text = "";
+                if (string.IsNullOrEmpty(Model.ReferencedTerm)) {
+                    text = entry.Markdown;
+                } else {
+                    text = entry.Markdown.Replace(Model.ReferencedTerm, $"<a name='{Model.ReferencedTerm}'></a><span class='gd-hilite-term'>{Model.ReferencedTerm}</span>");
                 }
+                @Html.Raw(Markdown.ToHtml(text))
             }
         </div>
 

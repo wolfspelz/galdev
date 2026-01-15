@@ -38,3 +38,58 @@ Text: |
   - Ein improvisierter Netzfaden-Splicer ohne integrierten 3D-Drucker. Das Gerät verbindet wiederbenutzte Stecker mit Fäden, statt selbst neue Stecker direkt auf den Faden zu drucken.
   - Einige 10 TB-Sticks, der damalige Standard bei Wechselspeichern. Die Sticks sind kleine Röhrchen, zwei Zentimeter lang und zwei Millimeter dick. Gerade so groß, dass man sie noch gut handhaben kann. Sie haben den gleichen Stecker, wie die Netzfäden. Die Sticks sind eigentlich Netzwerk-Speicher (NAS: Network Attached Storage), die in den Stecker integriert sind.
   
+Markdown: |
+  Die Programmierungs- und Datengeräte von Zaza Wachtang, ihr Code-Kit.
+
+  Alles, was man zum Programmieren braucht, wenn man keinen Zugriff auf Netzwerkressourcen (Energie/Daten/Compute) hat.
+
+  Zaza Wachtang war vor dem Crash Systemintegratorin für individualisierte Consumer-Elektronik (Appliances).
+  Sie entwarf Geräte für die gewünschten Anordnungen und mit den geforderten Leistungsmerkmalen.
+  Sie stellte Komponenten zusammen und programmierte, bzw. konfigurierte die Systeme.
+  Ob SmartHome oder Quadcopter, Pedelec-Sharing oder ThermoMax, alle Geräte enthalten Elektronik.
+  Sie haben Spracherkennung und Gestensteuerung, Sensoren und Datenverarbeitung, Cloud-Anschluss und Stromversorgung, in immer wieder neuen Anordnungen und Konfigurationen.
+  Zaza Wachtang war spezialisiert auf Outdoor- und Offgrid.
+  Sie baute Systeme zusammen, die auch ohne allgegenwärtige Daten- und Compute-Netze funktionierten.
+
+  Dann kam der Crash.
+
+  Alle Netze fielen aus.
+
+  Nicht nur Strom, Wasser und mobiles Netz.
+  Auch Rechenleistung war nicht mehr verfügbar, denn Compute-Leistung kam aus der Cloud.
+  Alle Daten waren weg, weil sie online gespeichert waren.
+  Geräte mit Sprachsteuerung waren nicht bedienbar.
+  Und selbst wenn man auf lokale Gestensteuerung umschaltete, fehlte der situationsbewusste Wissensnavigator, der sich selbständig durch das Wissen der Welt wühlen konnte, um Information zu beschaffen.
+
+  Irgendwann wurde klar, dass die Krise länger dauern würde.
+  Ein Jahr nach dem Crash gab es immer noch keine Netze.
+  Normale Alltagsgeräte waren nicht benutzbar.
+  Oft nicht einmal mit einer improvisierten Stromversorgung, denn fast alle verließen sich auf Netzwerke und Online-Dienste.
+  Manche Kühlschränke kühlten nicht, weil sie Cloud-Komponenten zur Steuerung benutzten oder einfach nur deswegen, weil sie beim Hochfahren den Hersteller kontaktierten, um die Lizenz zu erneuern (Stichwort: Kitchen on Demand).
+  Moderne Fahrräder bremsten nicht, weil seit dem Drive-by-wireless Trend der 60-er Jahre in der Bike-Branche keine Seilzüge mehr verbaut wurden und einige Softwarebibliotheken in Subkomponenten der Bremssysteme alle paar Wochen ihren Konfigurationsserver kontaktierten, was niemand aufgefallen ist solange Netze allgegenwärtig waren.
+  Pay-as-you-go Miet-Bikes gingen sowieso nicht ohne ihre Server.
+
+  Aber Wachtang hatte die Erfahrung und die Ausrüstung, um IT auch lokal zu betreiben, ohne Online-Netze.
+  Sie konnte Geräte reparieren.
+  Manche musste sie umprogrammieren.
+  Bei anderen konnte sie ein Netz und die Server simulieren.
+  Zaza Wachtang brachte die Sachen wieder in Gang.
+  Das sprach sich herum.
+
+  Ein Jahr nach dem Crash betrieb sie das IT-Zentrum ROBOit.
+  Sie reparierte mit ihrem Team nicht nur Geräte, sondern sie bewahrte auch IT-Hardware, Hardware-Designs, Software und Quellcodes.
+  Durch den Erhalt der ROBOit Wissensbasis und die Konzentration von Infrastruktur um ROBOit trug sie wesentlich zur Überwindung der Krise in der Kaukasusregion bei.
+
+  Mit dieser Ausrüstung arbeitete Zaza:
+
+  - DIN A4 ePaper Display, fixiert zwischen einer transparenten Folie und einer Scheibe stabilen Kunststoffs. Das ePaper ist eigentlich falt- und rollbar. Aber da es keine Ersatzteile oder Ersatzgeräte mehr gibt, ist jedes funktionierende Gerät sehr wertvoll. Man versucht deshalb den Verschleiß zu minimieren. Das bedeutet in diesem Fall, das Paper nicht zu knicken. Wachtang verzichtet auch auf Multitouch, um das Papier zu schonen. Stattdessen ist am Rand des Papiers ein Gestenscanner montiert.
+  - Mehrere Multifunktionshubs (eKabel & drahtlos): kleine Boxen, die Verbindungen zwischen allen möglichen elektronischen Geräten herstellen. Ein Hub verbindet Display, Storage, Compute, Grok, Netz und Eingabegeräte. Er kann drahtlos kommunizieren. Das war vor dem Crash die Standardbetriebsart. Aber seit es keine allgegenwärtige Stromversorgung mehr gibt, ist der Kabelbetrieb praktischer, denn die Netzwerkfäden leiten nicht nur Daten, sondern auch Strom.
+  - Eine Speicherbank mit dem gesamten öffentlichen Wissen der Menschheit vor dem Crash und genügend freiem Platz. Ein Überbleibsel eines ihrer früheren Offgrid-Projekte. Die Daten sind jetzt Gold wert, denn darunter sind auch Bedienungsanleitungen, Schaltpläne und Software, die man zum Reparieren braucht.
+  - Ein Rechenwürfel für klassische Zahlen- und Datenverarbeitung mit 2.000 k x 10 TOps Leistung. Im Consumer-Bereich ist lokale Rechenleistung eher ungewöhnlich. Der Würfel stammt aus einem wissenschaftlichen Institut. Er hat ein 8x8 Netzfaden-Array für schnelle lokale Speicher.
+  - Ein professioneller Grokker: neuronale Netzwerk Hardware für verständnisorientierte Aufgaben, wie Spracherkennung, Daten-Segmentierung, Problem-Klassifizierung und automatische Modellierung. Eine Rarität aus dem Rechenzentrum eines Cloud-Service Anbieters aus Baku.
+  - Eine handelsübliche Hardware-Firewall, die man Fremdgeräten vorschaltet. Sie enthält spezialisierte Compute- und Grok-Elemente, die Simulationen, heuristische und inferenzielle Analysen machen, um aggressiven Traffic wegzufiltern. Das ist unbedingt nötig, da alle Geräte mit Web-Leben besiedelt sind. Immunsystem hin oder her. Das will man nicht auf den eigenen Geräten haben. Meistens sind diese virtuellen Lebensformen allerdings harmlos.
+  - Powerbank plus Ladekurbel, ein alter, aber robuster Nanotube-Kondensator Akku mit genügend Power, um alle Komponenten für 14 Tage zu versorgen, bei einem typischen Consumer-Betrieb (einem Mix aus Netz-Recherche, Media-Benutzung, Game-Simulation, Sprach/Text-Erkennung). Die Rechenbank braucht eine eigene Stromversorgung, wenn sie über 0,1% ihrer Nominalleistung läuft, also wenn dauerhaft mehr als 2.000 der multi-TOPS-Kerne aktiv sind.
+  - Eine 50 Jahre alte mechanische Einhandtastatur als Backup für den Gestenscanner. Die Tastatur hat einen modernen Adapter mit Netzfaden-Schnittstelle.
+  - Etwa 100 Netzfäden verschiedener Länge, von 10 cm bis 10 Meter.
+  - Ein improvisierter Netzfaden-Splicer ohne integrierten 3D-Drucker. Das Gerät verbindet wiederbenutzte Stecker mit Fäden, statt selbst neue Stecker direkt auf den Faden zu drucken.
+  - Einige 10 TB-Sticks, der damalige Standard bei Wechselspeichern. Die Sticks sind kleine Röhrchen, zwei Zentimeter lang und zwei Millimeter dick. Gerade so groß, dass man sie noch gut handhaben kann. Sie haben den gleichen Stecker, wie die Netzfäden. Die Sticks sind eigentlich Netzwerk-Speicher (NAS: Network Attached Storage), die in den Stecker integriert sind.

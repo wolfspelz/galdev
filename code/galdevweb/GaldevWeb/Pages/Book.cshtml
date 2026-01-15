@@ -43,9 +43,7 @@
         } else {
             <h1>@(entry.Year) @entry.Title</h1>
         }
-        @foreach (var t in entry.Text) {
-            @Html.Raw(Markdown.ToHtml(t, pipeline))
-        }
+        @Html.Raw(Markdown.ToHtml(entry.Markdown, pipeline))
         @if (Model.Export) {
             <p>MARK_ENTRY_END</p>
         }
