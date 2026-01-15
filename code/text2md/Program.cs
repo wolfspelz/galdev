@@ -172,6 +172,8 @@ int ConvertFile(string filepath)
             markdownSection.Add(indent + line);
         }
     }
+    markdownSection.Add(""); // Append trailing empty line at end of Markdown section
+    markdownSection.Add(""); // Second empty string needed for join to produce \n\n
 
     // Build the Attention section if needed
     var attentionSection = new List<string>();
