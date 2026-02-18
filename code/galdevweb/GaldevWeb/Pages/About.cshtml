@@ -110,7 +110,10 @@
     cards.Add(Node.From(new Dictionary<string, string> {
                 ["ImgSrc"] = "/images/About/Lego-Margaret-Hamilton.jpg",
                 ["ImgAlt"] = "Lego Margaret Hamilton",
-                ["Text"] = "<a href='https://de.wikipedia.org/wiki/Margaret_Hamilton_(Wissenschaftlerin)'>Margaret Hamilton</a>",
+                ["Text"] = @Model.I18n.String(path: "Title", i18n: new StringGeneratorI18n {
+                    ["de-DE"] = () => "<a href='https://de.wikipedia.org/wiki/Margaret_Hamilton_(Informatikerin)'>Margaret Hamilton</a>",
+                    ["en-US"] = () => "<a href='https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)'>Margaret Hamilton</a>"
+                }),
             }));
 
 }
