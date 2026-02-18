@@ -2,7 +2,7 @@
 
 ## Overview
 
-Galactic Developments — a sci-fi timeline of humanity's future from 2051 to 3365+.
+Galactic Developments — a sci-fi timeline of humanity's future from the mid 21st century to 3365+.
 Website: www.galactic-developments.de
 
 The repo has two parts:
