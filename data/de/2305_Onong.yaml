@@ -13,6 +13,7 @@ Facebook2: 2305 Onong-Medaille für Ghaassedak Jelveh.
 Facebook3: "Eine mathematische Theorie sorgt für optimale Verhandlungsergebnisse in Wirtschaft und Politik... weiter: http://jmp1.de/h2305"
 FacebookImage: Onong-fbpost.jpg
 Author: Heiner Wolf
+Changed: 2026-05-02
 Tags: [Attraktor, Chaostheorie, Mathematik, Numerik, Software]
 Topics: [science, economy]
 Text: |
@@ -46,7 +47,7 @@ Markdown: |
   Anfangs wird der Jelveh-Generator natürlich kritisch gesehen.
   Individuell erzielen gute Verhandlungsführer bessere Ergebnisse, wenn sie schlechteren Verhandlungspartnern gegenüberstehen.
   Aber statistisch, über viele Verhandlungsergebnisse gemittelt, ist der Jelveh-Generator überlegen, da er für alle Parteien zufriedenstellende Ergebnisse erzielt.
-  Er ist nicht von individuellen Leistungen abhängig, sondern nähert sich dem globalen Optimum (dem sogenannten Handelspunkt nach §INIT0§ P. Muts).
+  Er ist nicht von individuellen Leistungen abhängig, sondern nähert sich dem globalen Optimum (dem sogenannten Handelspunkt nach F. P. Muts).
 
   Diese Art der automatisierten Verhandlung ist vor allem für große Unternehmen interessant, die in Verhandlungen und Verträgen mit ihren Partnern immer eine Durchschnittsleistung über alle Prozesse akzeptieren müssen.
   Ein Jelveh-Generator sorgt dafür, dass es keine lokalen Qualitätseinbrüche durch individuelle schlechte Verhandlungsleistungen gibt, und er beschleunigt das Ergebnis.
