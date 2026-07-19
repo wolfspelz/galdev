@@ -12,7 +12,7 @@ Image: de_2222_BeltPirates.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2023-11-25
-Changed: 2026-05-02
+Changed: 2026-07-19
 Tags: [_project_expansion, _new, _hilite, _carousel, Weltraumpiraterie, interplanetare Wirtschaft, Anti-Expansionismus, Palladische Liga, interplanetarer Handel, Weltraumkonflikt]
 Topics: [adventure, spaceflight, crime]
 Text: |
@@ -41,7 +41,7 @@ Text: |
     KMDO Nair: "Vielleicht eine Wartungseinheit ... aber die werden nicht aus dem Nichts auftauchen. Betrieb: gibt es einen Grund, warum es nicht auf dem LIDAR war? Rand vom Sensorbereich?" (LIDAR: ein aktives Ortungsverfahren mit phasengesteuertem Laser. Möglicherweise war das Objekt in einem von der Sensorik nicht abgedeckten Bereich).
     BETR Al-Kazemi: "Nein, es ist genau in unserem Blickfeld. Es muss schon lange dort gewesen sein. Als hätte es LIDAR abgelenkt. Erst aufgetaucht als der Antrieb heiß wurde" (Als sie ihren Antrieb hochgefahren haben).
     KMDO Nair: "Kontrolle: irgendeine Kennung?"
-    KTRL Ling: "Kein Transpondersignal" (normalerweise senden alle Schiffe regelmäßig ihre Kennung über Funk. Ein deutlicher Hinweis auf böse Absichten. Sie könnten natürliche eine falsche Kennung senden, aber das würde eine einfache Nachverfolgung aus der Ferne ermöglichen).
+    KTRL Ling: "Kein Transpondersignal" (normalerweise senden alle Schiffe regelmäßig ihre Kennung über Funk. Ein deutlicher Hinweis auf böse Absichten. Sie könnten natürlich eine falsche Kennung senden, aber das würde eine einfache Nachverfolgung aus der Ferne ermöglichen).
     KMDO Nair: "Kontrolle: ruf' sie."
     [Kurze Pause]
     KTRL Ling: "Keine Antwort. Weder Audio noch AWIS." (Ton/Bild Kommunikationsversuche und AWIS: Autonomes Wartungs- und Ingenieursystem, ein weit verbreitetes System, das dafür konzipiert ist, Wartungs- und Reparaturaufgaben für Infrastrukturen im Weltraum ohne menschliches Eingreifen durchzuführen).
@@ -52,13 +52,13 @@ Text: |
     KMDO Nair: "Betrieb: gib mir ein Bild."
     BETR Al-Kazemi: "Sichtkontakt kommt... da ist es. Eine Sakana, Ladeplätze sind voll, aber keine Standardcontainer, dunkel, keine Markierungen." (Frachtschiff der Sakana-Klasse, offenbar mit Spezialcontainern in den Ladeplätzen).
     [Kurze Pause]
-    BETR Al-Kazemi: "PHASAT zeigt eine strahlenabweisende-Beschichtung. Noch auf Abfangkurs." (PHASAT, sein privates Fernmineralogie-Teleskop).
+    BETR Al-Kazemi: "PHASAT zeigt eine strahlenabweisende Beschichtung. Noch auf Abfangkurs." (PHASAT, sein privates Fernmineralogie-Teleskop).
     KMDO Nair: "Irgendwelche Anzeichen von Waffen oder feindlichen Absichten?"
     BETR Al-Kazemi: "Schwer zu sagen. Sie kommen mit hoher Leistung auf uns zu, kein Transponder, keine Kommunikation, aber Tarnbeschichtung und einige Container sehen aus wie ... naja, Startzellen, ehrlich gesagt. Sieht seeehr verdächtig aus." (Startzellen: standardisierte Raketenbehälter aus denen Raketen direkt starten).
     KMDO Nair: "Kontrolle: etwas hinzuzufügen?"
     [Kurze Pause]
-    KTRL Ling: "Die Statistik zeigt 92% feindselig, 5% deren Fehlfunktion, 1% unsere." (Eine statistische Analyse lässt böse Absichten vermuten und nur eine kleine Wahrscheinlich dafür, dass alles ein Missverständnis ist, verursacht durch einen Defekt).
-    KMDO Nair: "OK, dann ... allgemeiner Hinweis: angesichts früherer Ereignisse, fehlender Kommunikation, Ausrüstung und Vektor, erkläre ich den Kontakt für feindselig. Das KomLog geht zwar sowieso live raus, aber Kontrolle: bitte zusätzlichen MSB für diese Entscheidung." (MSB: Missionsstatusbericht)".
+    KTRL Ling: "Die Statistik zeigt 92% feindselig, 5% deren Fehlfunktion, 1% unsere." (Eine statistische Analyse lässt böse Absichten vermuten und nur eine kleine Wahrscheinlichkeit dafür, dass alles ein Missverständnis ist, verursacht durch einen Defekt).
+    KMDO Nair: "OK, dann ... allgemeiner Hinweis: angesichts früherer Ereignisse, fehlender Kommunikation, Ausrüstung und Vektor, erkläre ich den Kontakt für feindselig. Das KomLog geht zwar sowieso live raus, aber Kontrolle: bitte zusätzlichen MSB für diese Entscheidung." (MSB: Missionsstatusbericht).
     KMDO Nair: "Betrieb: ist jemand in der Nähe, der helfen kann?"
     BETR Al-Kazemi: "Nicht in 30 LS" (30 Lichtsekunden = 9 Millionen Kilometer)
     [Kurze Pause]
@@ -427,7 +427,7 @@ Markdown: |
     Im Jahr 2222 wird die interplanetare Wirtschaft von einer neuen Entwicklung überrascht: dem ersten Piratenangriff auf ein Frachtschiff im Asteroidengürtel.
     Diese Tat bleibt kein Einzelfall.
     Im Laufe des nächsten Jahrzehnts häufen sich solche Überfälle und sie werden immer dreister.
-    Die Piraten verfügen über fortschrittlicher Tarn- und Waffentechnik.
+    Die Piraten verfügen über fortschrittliche Tarn- und Waffentechnik.
     Sie kapern zivile Frachter, stehlen Schiffe, deren wertvolle Fracht und sie entführen die Passagiere.
     Sie verursachen erhebliche Verluste und verbreiten Angst unter den Reisenden.
 
@@ -437,7 +437,7 @@ Markdown: |
     Die enormen Ressourcen, die in die Infrastruktur der Piraten, einschließlich geheimer Stützpunkte, investiert werden, lassen vermuten, dass es bei der Piraterie nicht um finanzielle Interessen geht.
     Es gibt Spekulationen, dass diese Piraterie Teil einer umfassenderen wirtschaftspolitischen Kriegsführung ist.
     Viele vermuten dahinter die antiexpansionistische Bewegung.
-    Auf der Erde gewinnen die anti-expansionistische Ideologien immer mehr an Boden gewinnt.
+    Auf der Erde gewinnen anti-expansionistische Ideologien immer mehr an Boden.
     Inzwischen kontrollieren Anti-Expansionisten mehrere Nationalstaaten auf der Erde.
     Es ist gut möglich, dass einige dieser Staaten die Piratenangriffe finanzieren und orchestrieren.
     Aber die Angreifer bleiben anonym, sogar bei Lösegeldverhandlungen.
@@ -455,7 +455,7 @@ Markdown: |
     Der Erde-Mond-Raum ist deshalb sicher.
 
     Die Weltraumpiraterie ist auf der Erde ein umstrittenes Thema.
-    Während die Mehrheit der Erdbewohner nicht direkt betroffen ist, sind der High-Tech-Sektor und vor allem Wohlhabenden der Erde auf Produkte aus der Erdumlaufbahn angewiesen.
+    Während die Mehrheit der Erdbewohner nicht direkt betroffen ist, sind der High-Tech-Sektor und vor allem die Wohlhabenden der Erde auf Produkte aus der Erdumlaufbahn angewiesen.
     Die weitere Entwicklung der orbitalen Wirtschaft wäre gefährdet, wenn das Erde-Mond System vom Asteroidengürtel abgeschnitten würde.
     Grundsätzlich ist die Öffentlichkeit gegen Piraterie eingestellt, aber ein beträchtlicher Teil der Erdbevölkerung, vor allem diejenigen, die nicht von der orbitalen Expansion profitieren, neigt zum Anti-Expansionismus.
     Sie lehnen aktive und teure Maßnahmen gegen die Piraterie ab, vor allem unter Hinweis auf das Kosten-Nutzen-Verhältnis für die Erdbewohner.
@@ -466,20 +466,20 @@ Markdown: |
     Die Palladische Liga und andere interplanetare Organisationen geraten in wirtschaftliche Schwierigkeiten.
     Und mit der ökonomischen Selbständigkeit ist schnell auch die gerade erst gewonnene politische Unabhängigkeit in Gefahr.
     Die Palladische Liga, die die Interessen der Unternehmen jenseits der erweiterten Erdumlaufbahn vertritt, drängt auf ein aggressives Vorgehen.
-    Obwohl die Unternehmen der Liga die interplanetare Wirtschaft dominieren, ist der Umfang ihrer Operationen doch noch relative klein verglichen mit der Verkehrsdichte auf der Erde und im erdnahen Bereich.
-    Die Liga kann as Piratenproblem nicht allein bewältigen.
+    Obwohl die Unternehmen der Liga die interplanetare Wirtschaft dominieren, ist der Umfang ihrer Operationen doch noch relativ klein verglichen mit der Verkehrsdichte auf der Erde und im erdnahen Bereich.
+    Die Liga kann das Piratenproblem nicht allein bewältigen.
     Das mittlere System ist groß und jenseits der Erdumlaufbahn werden Entfernungen in zig-Millionen Kilometern gemessen.
     Schiffe, die zwischen dem Erde-Mond System und dem Asteroidengürtel verkehren, sind für lange Zeit auf sich allein gestellt.
     Der nächste Stützpunkt, der helfen könnte, ist oft Wochen Flugzeit entfernt.
     Das macht eine effektive Überwachung des gesamten Raums schwierig und an eine flächendeckende Sicherung der Flugrouten durch Polizeikräfte ist noch nicht zu denken.
 
     Als Reaktion auf die wachsende Bedrohung rüsten die Transportunternehmen ihre Schiffe mit Verteidigungssystemen wie automatischen Geschütztürmen und Abwehrraketen aus.
-    Einige beschäftigen sogar private Sicherheitskräfte ein, die ihre Schiffe auf besonders gefährdeten Routen eskortieren.
+    Einige beschäftigen sogar private Sicherheitskräfte, die ihre Schiffe auf besonders gefährdeten Routen eskortieren.
     Aber diese Art der Selbstbewaffnung mit Kriegswaffen ist illegal, und die Raumpatrouille, die wichtigste Polizeiorganisation im Weltraum, geht gegen Unternehmen vor, die sich auf solche Praktiken einlassen.
     Die Raumpatrouille sieht sich also der Herausforderung gegenüber, mit ihren wenigen Einsatzkräften in der Weite des Weltraums nicht nur Piraten zu bekämpfen, sondern auch private Unternehmen strafrechtlich zu verfolgen, die sich nur selbst schützen wollen.
 
     Die Haltung der Erde zu diesem Thema ist ambivalent.
-    Viele Menschen sind entweder anti-expansionistisch eingestellt oder zumindest kritisch gegenüber teuren Weltraumunternehmungen Noch mehr sind gleichgültig, da sie nicht direkt betroffen sind.
+    Viele Menschen sind entweder anti-expansionistisch eingestellt oder zumindest kritisch gegenüber teuren Weltraumunternehmungen. Noch mehr sind gleichgültig, da sie nicht direkt betroffen sind.
     Die Erde ist also gespalten und neigt zu einer abwartenden Haltung, während die Liga auf ein energisches Vorgehen drängt.
     Das führt zu Meinungsverschiedenheiten und kontroversen Auseinandersetzungen zwischen der Erde und der Palladischen Liga.
     Die Giga-Konzerne, die die meisten Mitglieder der Liga sponsern, zwingen den Weltrat der Erde schließlich zum Handeln.
@@ -492,7 +492,7 @@ Markdown: |
     Es dauert Jahre bis die Nationen der Erde sich im Weltrat auf die interplanetaren Piratengesetze einigen.
     Diese Vorschriften sehen strengere Strafen für Piraterie vor und die Einrichtung einer spezialisierten Anti-Piraterie-Taskforce innerhalb der Raumpatrouille.
     Zusätzlich soll die Selbstverteidigungsfähigkeit der Langstreckenfrachter gestärkt werden, ohne dass Zivilisten Kriegswaffen in die Hand bekommen.
-    Ein Initiative namens REAKTION: Robuste Einsatz- und Abwehrsysteme für Kommerzielle Transporte in orbitalen Notsituationen, stattet zivile Schiffe mit versiegelten Waffenkapseln, sogenannten Waffen-Pods aus, die von einer internen KI gesteuert werden.
+    Eine Initiative namens REAKTION: Robuste Einsatz- und Abwehrsysteme für Kommerzielle Transporte in orbitalen Notsituationen, stattet zivile Schiffe mit versiegelten Waffenkapseln, sogenannten Waffen-Pods aus, die von einer internen KI gesteuert werden.
     Die KI soll vor allem dafür sorgen, dass die Waffensysteme ordnungsgemäß eingesetzt werden, um das Missbrauchsrisiko zu minimieren.
     Die zivilen Nutzer müssen selbst für die Kosten der Waffen-Pods aufkommen.
     Aber im Gegenzug erhalten sie Zugang zu modernen Kriegswaffen einschließlich einer Lizenz für deren Installation und Nutzung in Notsituationen.
@@ -510,7 +510,7 @@ Markdown: |
 
     Der Kreislauf von Kompromittierung und Gegenmaßnahmen dauert mehrere Jahre an.
     REAKTION-Kapseln werden deaktiviert, dann gehärtet und umgestaltet, nur um wieder angegriffen zu werden.
-    Die Lieferanten mehrmals gewechselt, aber das Muster bleibt bestehen.
+    Die Hersteller werden dabei mehrmals gewechselt, aber das Muster bleibt bestehen.
 
     Das Problem der Piraterie fügt sich in das Gesamtbild des Anti-Expansions-Aktivismus ein, der zu dieser Zeit eine wichtige Bewegung war.
     Es kann aber durchaus sein, dass die hinter den Piraten stehenden Gruppierungen nur Trittbrettfahrer sind, die den Anti-Expansionismus als Deckmantel für Wirtschaftskrieg und Erpressung nutzen.
