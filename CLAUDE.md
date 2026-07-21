@@ -13,8 +13,3 @@ The repo has two parts:
 
 - Do NOT add "Co-Authored-By: Claude" to commit messages
 - Keep commit messages short: max 2 lines
-
-## Tools
-
-Do not ask for these commands in this folder: ls, grep, find, tree
-
