@@ -281,10 +281,8 @@ Verhaltensweisen zurückzukehren und damit | Verhaltensweisen zurückkehren und 
 der letzten Generationen in der sich | der letzten Generationen, in der sich | de/2794_Hro
 Die Temperaturen des vorher bewohnbaren Planeten beträgt 350 K. | Die Temperatur des vorher bewohnbaren Planeten beträgt 350 K. | de/2799_Beobachtung_des_Exodus_der_Alt
 wie Menschen und Kisori sind ähnlich | wie Menschen und Kisori, sind ähnlich | de/2786_Yaris
-
 scharfe, eindeutigen Spitzen | scharfe, eindeutige Spitzen | de/2804_Die_Jagd_auf_die_riesigen_rept
 nach der Annektion Alphas durch Beta | nach der Annexion Alphas durch Beta | de/2819_Kisor_Beta_übernimmt_die_Macht
-und einem Volumen von 84.000 Kubikkilometern | und ein Volumen von 84.000 Kubikkilometern | de/2822_Koloss
 aus dem Schiffskörper bis nur noch das Makroskelett | aus dem Schiffskörper, bis nur noch das Makroskelett | de/2822_Koloss
 einen neuen Tranceiver in Betrieb | einen neuen Transceiver in Betrieb | de/2834_Generationsschiff
 wird es aber zur Regel nur noch lokal registrierte Schiffe zuzulassen | wird es aber zur Regel, nur noch lokal registrierte Schiffe zuzulassen | de/2835_Errichtung_von_Raumschutzzonen
@@ -295,7 +293,6 @@ vielleicht sogar ein Wesen, dass durch den Demontageprozess aus seiner Millionen
 Es besteht zum Großteil aus den Platten der ehemaligen Schiffshülle | Er besteht zum Großteil aus den Platten der ehemaligen Schiffshülle | de/2843_RiskanteBergung
 Deutlich sind Forschungsreihen zu erkennen in denen Wissenschaftler von Vocon | Deutlich sind Forschungsreihen zu erkennen, in denen Wissenschaftler von Vocon | de/2844_Centaurus
 wenn sich ihre Handlungsweise fatal auf etablierte Zivilisationen auswirken | wenn sich ihre Handlungsweise fatal auf etablierte Zivilisationen auswirkt | de/2845_Plünderung_von_Artus_durch_Neo
-Bemerkenswert ist der Einsatz kisorischer Alturisten mit 80 Schleppern | Bemerkenswert ist der Einsatz kisorischer Altruisten mit 80 Schleppern | de/2851_Begun
 vergleichbar mit dem Einschlag auf der Erde bei dem der Mond geformt wurde | vergleichbar mit dem Einschlag auf der Erde, bei dem der Mond geformt wurde | de/2851_Begun
 Das Ereignis führt unter den Begunern auf verschieden Planeten zur Gründung | Das Ereignis führt unter den Begunern auf verschiedenen Planeten zur Gründung | de/2851_Begun
 Die meisten Habitatarchitekten hanben mir erklärt | Die meisten Habitatarchitekten haben mir erklärt | de/2852_Haie
@@ -306,6 +303,7 @@ Bei Qi handelt sich um Netzleben | Bei Qi handelt es sich um Netzleben | de/2870
 nicht in der Lage auf die reale Information im Solnet zuzugreifen | nicht in der Lage, auf die reale Information im Solnet zuzugreifen | de/2870_Qi
 Nur selten gelingt es Schläge gegen die inneren Systeme zu führen. | Nur selten gelingt es, Schläge gegen die inneren Systeme zu führen. | de/2895_Militärisches_Patt_zwischen_de
 umgerüstet worden wurde | umgerüstet worden war | de/2915_FTLRailgun
+
 manche auf simulierten Bewusstseinsniveau | manche auf simuliertem Bewusstseinsniveau | de/2915_FTLRailgun
 eines der wenigen Systemen der menschlichen Sphäre | eines der wenigen Systeme der menschlichen Sphäre | de/2949_KoeniginMarduk
 MCC unterhielt dafür eine kleine Flotille von mobilen Waffenplattformen | MCC unterhielt dafür eine kleine Flottille von mobilen Waffenplattformen | de/2949_KoeniginMarduk
