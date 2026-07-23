@@ -303,7 +303,6 @@ Bei Qi handelt sich um Netzleben | Bei Qi handelt es sich um Netzleben | de/2870
 nicht in der Lage auf die reale Information im Solnet zuzugreifen | nicht in der Lage, auf die reale Information im Solnet zuzugreifen | de/2870_Qi
 Nur selten gelingt es Schläge gegen die inneren Systeme zu führen. | Nur selten gelingt es, Schläge gegen die inneren Systeme zu führen. | de/2895_Militärisches_Patt_zwischen_de
 umgerüstet worden wurde | umgerüstet worden war | de/2915_FTLRailgun
-
 manche auf simulierten Bewusstseinsniveau | manche auf simuliertem Bewusstseinsniveau | de/2915_FTLRailgun
 eines der wenigen Systemen der menschlichen Sphäre | eines der wenigen Systeme der menschlichen Sphäre | de/2949_KoeniginMarduk
 MCC unterhielt dafür eine kleine Flotille von mobilen Waffenplattformen | MCC unterhielt dafür eine kleine Flottille von mobilen Waffenplattformen | de/2949_KoeniginMarduk
@@ -317,11 +316,9 @@ dem Ausrüstungsveranwortlichen für die Überlicht-Kampfeinheiten | dem Ausrüs
 Das Sonnensystem ist sein 70 Jahren besetzt. | Das Sonnensystem ist seit 70 Jahren besetzt. | de/2969_Millennium
 Der Wirtschaftsleistung des gesamten Systems ist von ihrem Höchststand | Die Wirtschaftsleistung des gesamten Systems ist von ihrem Höchststand | de/2969_Millennium
 den speziellen Uthoismus bei dem nur die Besten und Mächtigsten | den speziellen Uthoismus, bei dem nur die Besten und Mächtigsten | de/2997_Utho
-für Reshumana, der interstellaren Allianz zur Rückeroberung | für Reshumana, die interstellare Allianz zur Rückeroberung | de/2997_Utho
 unzählige Zufluchtsstätten in denen Flüchtlinge eingelagert sind | unzählige Zufluchtsstätten, in denen Flüchtlinge eingelagert sind | de/3010_IcePlanet
 interstellare militärischen Stützpunkte | interstellare militärische Stützpunkte | de/3010_IcePlanet
 leisten wichtige Beträge | leisten wichtige Beiträge | de/3010_IcePlanet
-daraus leiten Sie den Anspruch ab | daraus leiten sie den Anspruch ab | de/3010_IcePlanet
 einzelne irdischen Regionen | einzelne irdische Regionen | de/3020_MagnetUnabhängigkeit
 der Raumzeit in der geordnete Muster entstehen können | der Raumzeit, in der geordnete Muster entstehen können | de/3042_Simba
 um das SMBH in der die Raumzeit | um das SMBH, in der die Raumzeit | de/3042_Simba
@@ -329,6 +326,7 @@ einen Galaxienhaufen bei dem 15 Galaxien | einen Galaxienhaufen, bei dem 15 Gala
 dass die Bewegungen großer Simbas planvoll ist | dass die Bewegungen großer Simbas planvoll sind | de/3042_Simba
 Verschmelzungen großer Galaxien bei denen die SMBHs | Verschmelzungen großer Galaxien, bei denen die SMBHs | de/3042_Simba
 einsteht aus zwei Individuen ein mächtigeres Neues | entsteht aus zwei Individuen ein mächtigeres Neues | de/3042_Simba
+
 da Instinkt und Reflexe evolutionäre hervorgebrachte und nicht emergente Eigenschaften sind | da Instinkt und Reflexe evolutionär hervorgebrachte und nicht emergente Eigenschaften sind | de/3042_Simba
 die eine Millionen Jahre dauern | die eine Million Jahre dauern | de/3042_Simba
 integrierte Völker, wurden sich selbst überlassen | integrierte Völker wurden sich selbst überlassen | de/3050_Solos
