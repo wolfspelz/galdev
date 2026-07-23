@@ -131,12 +131,9 @@ des Ganymed-Direktorats gedeckt deren Raum sich teilweise | des Ganymed-Direktor
 in zig- Millionen Kilometer Entfernung | in zig Millionen Kilometer Entfernung | de/2312_KaioArtefakt
 bei vielen interstellare Fraktionen begegnen wird | bei vielen interstellaren Fraktionen begegnen wird | de/2312_KaioArtefakt
 Generationen werden durch darauf eingeschworen, die Gesundheit | Generationen werden darauf eingeschworen, die Gesundheit | de/2318_Erdunion
-
 Gaia-Sanierungskomittees | Gaia-Sanierungskomitees | de/2321_EarthIsolation
 Indoktrination auf der Erde sind. | Indoktrination auf der Erde ist. | de/2321_EarthIsolation
-radikale isolationistische Gruppen, feiern die Kriegserklärung | radikale isolationistische Gruppen feiern die Kriegserklärung | de/2326_KeinInterplanetarerKrieg
 Folgen an Bord der Streaker, gehen als der | Folgen an Bord der Streaker, geht als der | de/2333_MetricImpulse
-Nachhaltiger Expansionismus"), wollen Gemini | Nachhaltiger Expansionismus") wollen Gemini | de/2337_GeminiÜbernahme
 transparenter Streben an denen elektromagnetische Nahfeldprojektoren befestigt, die die Bewegung | transparenter Streben, an denen elektromagnetische Nahfeldprojektoren befestigt sind, die die Bewegung | de/2359_Vegas
 ging der Großteil der interplanetaren Handelsverkehrs vom erdnahen Raum aus | ging der Großteil des interplanetaren Handelsverkehrs vom erdnahen Raum aus | de/2366_TransorbitalerAusgleich
 nachdem sich die interplanetaren Wirtschaft vom Verlust der Erde als Handelspartner erholt hatte | nachdem sich die interplanetare Wirtschaft vom Verlust der Erde als Handelspartner erholt hatte | de/2366_TransorbitalerAusgleich
@@ -152,19 +149,17 @@ wenn der Verurteile mit seinem Vermögen | wenn der Verurteilte mit seinem Verm�
 durch ihre Neuroimplanatate geschützt | durch ihre Neuroimplantate geschützt | de/2392_Schmerzen
 herbeigeführte Apathische Analgesie | herbeigeführte apathische Analgesie | de/2392_Schmerzen
 sowieso eher als das sie hilft | sowieso eher als dass sie hilft | de/2403_Savant
-von Raumkrümmungsantrieben, liegt weit unter der Lichtgeschwindigkeit | von Raumkrümmungsantrieben liegt weit unter der Lichtgeschwindigkeit | de/2409_Überlichtverbot
 Es gibt Eis-Vulkane aus denen in der Vergangenheit | Es gibt Eis-Vulkane, aus denen in der Vergangenheit | de/2412_Planet9
 die einzige Möglichkeit physische Dinge auszutauschen | die einzige Möglichkeit, physische Dinge auszutauschen | de/2445_ScumFestival
 tief in interstellaren Raum | tief im interstellaren Raum | de/2458_Egalitaetsflug
 den Bereich von Gigatonnen mit dem man | den Bereich von Gigatonnen, mit dem man | de/2458_Egalitaetsflug
-im inneren Sonnensystem auf bis auf 3% | im inneren Sonnensystem bis auf 3% | de/2458_Egalitaetsflug
+im inneren Sonnensystem auf bis auf 3% | im inneren Sonnensystem auf bis zu 3% | de/2458_Egalitaetsflug
 auf einem guten Weg als Systemkrieg | auf einem guten Weg, als Systemkrieg | de/2460_Turnaround
 Der 60 Kilometer große Asteroid auf dem sich Newplace befand | Der 60 Kilometer große Asteroid, auf dem sich Newplace befand | de/2463_Aufdeckung_der_NewplaceVerschw
 um den Antrieb bei Bedarf reparieren können | um den Antrieb bei Bedarf reparieren zu können | de/2466_Auswanderer
 Fortschritte in den Wissenschaften deren Auswirkungen | Fortschritte in den Wissenschaften, deren Auswirkungen | de/2469_Tranquility500
 Es gab Kriege, Krisen, und Katastrophen. | Es gab Kriege, Krisen und Katastrophen. | de/2469_Tranquility500
 wird von Ciudad Nueva Mesilla einem Moscona-Bubble-Floß angegriffen | wird von Ciudad Nueva Mesilla, einem Moscona-Bubble-Floß, angegriffen | de/2471_FashionWar
-abgelöst durch den Zyklismus, einer dynamisierten Variante konservativen Denkens | abgelöst durch den Zyklismus, eine dynamisierte Variante konservativen Denkens | de/2471_FashionWar
 Amdistas versuchen die Zyklen zu durchbrechen. | Amadistas versuchen die Zyklen zu durchbrechen. | de/2471_FashionWar
 Autofabs mit denen im Zielsystem | Autofabs, mit denen im Zielsystem | de/2484_Die_ehemalige_Führung_der_Pall
 nur für öffentliche bekannte Aktivitäten | nur für öffentlich bekannte Aktivitäten | de/2487_Adic
@@ -192,7 +187,6 @@ Austausch von gewonnen Informationen zwischen den Instituten | Austausch von gew
 den Tauneunjot eine Hyperparallel-KI | den Tauneunjot, eine Hyperparallel-KI | de/2560_Exotechnologie
 des interstellaren Herrschaftsbereichs von Artu zu dem das Solsystem gehört | des interstellaren Herrschaftsbereichs von Artu, zu dem das Solsystem gehört | de/2574_ArtuDomaene
 Ihre Schiffe brauchen nur wenige Tage bis zum Solsystem während solare Schiffe fast drei Jahre unterwegs wären. | Ihre Schiffe brauchen nur wenige Tage bis zum Solsystem, während solare Schiffe fast drei Jahre unterwegs wären. | de/2574_ArtuDomaene
-Das äußere System, ist ein Flickenteppich | Das äußere System ist ein Flickenteppich | de/2574_ArtuDomaene
 sogenannter Ressourcenprotektorate bei denen 1/4 der Wirtschaftsleistung | sogenannter Ressourcenprotektorate, bei denen 1/4 der Wirtschaftsleistung | de/2574_ArtuDomaene
 Im Lauf der folgenden zehn Jahren erreicht die Abgabenquote | Im Lauf der folgenden zehn Jahre erreicht die Abgabenquote | de/2574_ArtuDomaene
 und einige Organisation wurde sehr mächtig | und einige Organisationen wurden sehr mächtig | de/2574_ArtuDomaene
@@ -203,7 +197,6 @@ aus mehreren Informationenblöcken zusammensetzt von denen jeder einzelne | aus 
 Gedanken und Erlebnisse sind of fragmentarisch und irrational. | Gedanken und Erlebnisse sind oft fragmentarisch und irrational. | de/2580_Teamspirit
 Hauptsitz der Art-Domäne im Solsystem | Hauptsitz der Artu-Domäne im Solsystem | de/2587_Alienkriege
 Solaren Nachrichtenagenturen berichten ausführlich | Solare Nachrichtenagenturen berichten ausführlich | de/2587_Alienkriege
-mit der Artu-Domäne als interstellare Macht, trägt immerhin dazu bei | mit der Artu-Domäne als interstellare Macht trägt immerhin dazu bei | de/2587_Alienkriege
 Man lässt sie gewähren solange sie sich unauffällig verhalten | Man lässt sie gewähren, solange sie sich unauffällig verhalten | de/2587_Alienkriege
 Die Absicht unter dem Radar zu bleiben, ist der eigentliche Grund | Die Absicht, unter dem Radar zu bleiben, ist der eigentliche Grund | de/2587_Alienkriege
 und man versteht nicht was vorgeht | und man versteht nicht, was vorgeht | de/2587_Alienkriege
@@ -220,7 +213,6 @@ in sich zusammen als die Isolation der Erde endete | in sich zusammen, als die I
 Wir wissen nicht warum q3 sich im Solsystem so engagierte | Wir wissen nicht, warum q3 sich im Solsystem so engagierte | de/2630_Chanakya
 riesige gasförmigen Wesen | riesige gasförmige Wesen | de/2638_Wotan
 der moderate Teil Atmosphäre sehr tief | der moderate Teil der Atmosphäre sehr tief | de/2638_Wotan
-entgegengesetzt rotierenden Jets-Streams | entgegengesetzt rotierenden Jet-Streams | de/2638_Wotan
 Sie ist nur über die Folgen des Urteils betroffen ist. | Sie ist nur über die Folgen des Urteils betroffen. | de/2646_Handelsgericht
 die die Kelrecs aus interianischen Depots geplünderten haben | die die Kelrecs aus interianischen Depots geplündert haben | de/2648_Interia
 wussten schon, was sie tun als sie Abani | wussten schon, was sie tun, als sie Abani | de/2648_Interia
@@ -232,12 +224,9 @@ der einzigen für Menschen bewohnbaren Region | die einzige für Menschen bewohn
 mit mindestens 30.000 Milliarden Bewohnern von denen 95% | mit mindestens 30.000 Milliarden Bewohnern, von denen 95% | de/2677_Mansalu
 Deshalb ist es effizienter in extrasolaren Bibliotheken nach lohnenden Forschungszielen zu recherchieren | Deshalb ist es effizienter, in extrasolaren Bibliotheken nach lohnenden Forschungszielen zu recherchieren | de/2681_Solberg
 Jetzt weiß man ungefähr wie lang Kelaner schon | Jetzt weiß man ungefähr, wie lang Kelaner schon | de/2681_Solberg
-gab es auch viele Versuche die Roboterzivilisation zu vernichten | gab es auch viele Versuche, die Roboterzivilisation zu vernichten | de/2681_Solberg
 Die Roboter haben den Auftrag das Andenken ihrer Erbauer zu bewahren | Die Roboter haben den Auftrag, das Andenken ihrer Erbauer zu bewahren | de/2681_Solberg
 öffnet vielen Menschen die Augen wie groß und vielfältig das Universum ist | öffnet vielen Menschen die Augen, wie groß und vielfältig das Universum ist | de/2681_Solberg
 Nach den Progromen auf der Erde | Nach den Pogromen auf der Erde | de/2691_Koriko
-der Slink-Abenteurerin Su Mei, an Tutu Awo gespendet wurden | der Slink-Abenteurerin Su Mei an Tutu Awo gespendet wurden | de/2691_Koriko
-eine wichtige Handelskolonie Kisors bietet der Koalition | eine wichtige Handelskolonie Kisors, bietet der Koalition | de/2700_Eskalation
 da sie für die Bewohner Dravemir nicht mehr nützlich sind | da sie für die Bewohner Dravemirs nicht mehr nützlich sind | de/2700_Eskalation
 helfen überraschenderweise aaronischer Söldner unbekannter Abstammung | helfen überraschenderweise aaronische Söldner unbekannter Abstammung | de/2704_Eine_Freiwilligenarmee_von_Ger
 die wie so oft, auf unterschiedliche Verhältnisse und Denkweisen | die, wie so oft, auf unterschiedliche Verhältnisse und Denkweisen | de/2705_KisorKrieg
@@ -255,7 +244,6 @@ Im ihrem Sockel liegen | In ihrem Sockel liegen | de/2725_Gee
 eine planetenumspannenden Lebensform | eine planetenumspannende Lebensform | de/2726_Lem
 Die Solaren Befreiungsfront und Survivalisten durchbrechen | Die Solare Befreiungsfront und Survivalisten durchbrechen | de/2727_SpacedomRettung
 und gründeten die Solaren Befreiungsfront (SLF) | und gründen die Solare Befreiungsfront (SLF) | de/2727_SpacedomRettung
-kisorisch alturistische | kisorisch altruistische | de/2731_MittelalterUltimatum
 zerstört die dort herrschende Gilde 90% aller Industrie während in Asien Wiederaufbauprogramme laufen. | zerstört die dort herrschende Gilde 90% aller Industrie, während in Asien Wiederaufbauprogramme laufen. | de/2733_Gilden_befriedigen_Reparations
 berühmt geworden durch den Beststeller *Höllentor Tsomo* | berühmt geworden durch den Bestseller *Höllentor Tsomo* | de/2734_Die_Versorgung_der_internierte
 Hilfsprogrammen gegen Hun-gersnöte und Seuchen | Hilfsprogrammen gegen Hungersnöte und Seuchen | de/2736_Ende_der_Kriegsfolgen
@@ -267,8 +255,6 @@ als Vertreter des Mutterplaneten gegen-über den Kolonien | als Vertreter des Mu
 und Abzug ei-nes Großteils der Besatzungstruppen | und Abzug eines Großteils der Besatzungstruppen | de/2736_Ende_der_Kriegsfolgen
 wobei anfangs nur Alpha, der äußere Planet bewohnbar war. | wobei anfangs nur Alpha, der äußere Planet, bewohnbar war. | de/2743_Kisor
 ein atmosphärenloser Mond von 2000 Kilometer Durchmesser während Alpha keine Satelliten hat. | ein atmosphärenloser Mond von 2000 Kilometer Durchmesser, während Alpha keine Satelliten hat. | de/2743_Kisor
-der erste Gasriese mit 190.000 Kilometer Durchmesser ist doppelt beringt | der erste Gasriese mit 190.000 Kilometer Durchmesser, ist doppelt beringt | de/2743_Kisor
-(des sogenannten goldenen Reiches) über dessen bewegte Geschichte viele Aufzeichnungen gefunden wurden. | (des sogenannten goldenen Reiches), über dessen bewegte Geschichte viele Aufzeichnungen gefunden wurden. | de/2743_Kisor
 einem Gebiet des Sagittarius-Arms der Galaxis vertrieben worden | einem Gebiet des Sagittarius-Arms der Galaxis, vertrieben worden | de/2743_Kisor
 so stark einschränkt, dass sie den Sektor wieder verließen. | so stark eingeschränkt, dass sie den Sektor wieder verließen. | de/2743_Kisor
 der Auslöser biologischen eines Auslöschungs-Ereignisses | der Auslöser eines biologischen Auslöschungs-Ereignisses | de/2746_Massara
@@ -276,7 +262,6 @@ wenn Menschen eine Methan-Ammoniak Volk besuchen | wenn Menschen ein Methan-Ammo
 CGTA-DNA basierte Biossysteme | CGTA-DNA basierte Biosysteme | de/2746_Massara
 der Oortsche Wolke navigieren | der Oortschen Wolke navigieren | de/2747_Rennen
 eine dramatische Situation zu herbeizuführen | eine dramatische Situation herbeizuführen | de/2750_Decision
-von Marktorf Filmkraft Produkktion | von Marktorf Filmkraft Produktion | de/2750_Decision
 eine einzigartige Möglichkeit die Interaktion von Biosystemen zu beobachten | eine einzigartige Möglichkeit, die Interaktion von Biosystemen zu beobachten | de/2776_Caves
 auf die Idee gekommen die Höhlen von Sona als Versuchsgelände für Biosysteme zu verwenden | auf die Idee gekommen, die Höhlen von Sona als Versuchsgelände für Biosysteme zu verwenden | de/2776_Caves
 Die Biosysteme unterschieden sich so sehr untereinander | Die Biosysteme unterscheiden sich so sehr untereinander | de/2776_Caves
@@ -296,6 +281,7 @@ Verhaltensweisen zurückzukehren und damit | Verhaltensweisen zurückkehren und 
 der letzten Generationen in der sich | der letzten Generationen, in der sich | de/2794_Hro
 Die Temperaturen des vorher bewohnbaren Planeten beträgt 350 K. | Die Temperatur des vorher bewohnbaren Planeten beträgt 350 K. | de/2799_Beobachtung_des_Exodus_der_Alt
 wie Menschen und Kisori sind ähnlich | wie Menschen und Kisori, sind ähnlich | de/2786_Yaris
+
 scharfe, eindeutigen Spitzen | scharfe, eindeutige Spitzen | de/2804_Die_Jagd_auf_die_riesigen_rept
 nach der Annektion Alphas durch Beta | nach der Annexion Alphas durch Beta | de/2819_Kisor_Beta_übernimmt_die_Macht
 und einem Volumen von 84.000 Kubikkilometern | und ein Volumen von 84.000 Kubikkilometern | de/2822_Koloss
