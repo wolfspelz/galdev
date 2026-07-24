@@ -11,5 +11,7 @@ The repo has two parts:
 
 ## Commits
 
+- NEVER commit automatically — only commit when explicitly asked to ("commit", "amend", ...).
+  After making changes, leave them in the working tree so they can be reviewed in the diff view first.
 - Do NOT add "Co-Authored-By: Claude" to commit messages
 - Keep commit messages short: max 2 lines
