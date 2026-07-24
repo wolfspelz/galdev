@@ -1,3 +1,22 @@
 {
-    "dotnet.defaultSolution": "galdevweb.sln"
+    "dotnet.defaultSolution": "galdevweb.sln",
+    // "advanced" produces much finer word/character-level diffs than "legacy"
+    "diffEditor.diffAlgorithm": "advanced",
+    "workbench.colorCustomizations": {
+        // whole changed line: faint tint, just enough to scan
+        "diffEditor.insertedLineBackground": "#1b5e2033",
+        "diffEditor.removedLineBackground": "#7f1d1d33",
+        // the changed letters inside a line: strong, with a border
+        "diffEditor.insertedTextBackground": "#2ea04399",
+        "diffEditor.removedTextBackground": "#f8514999",
+        "diffEditor.insertedTextBorder": "#3fb950",
+        "diffEditor.removedTextBorder": "#f85149",
+        // gutter + overview ruler markers
+        "diffEditorGutter.insertedLineBackground": "#2ea04366",
+        "diffEditorGutter.removedLineBackground": "#f8514966",
+        "diffEditorOverview.insertedForeground": "#3fb950cc",
+        "diffEditorOverview.removedForeground": "#f85149cc",
+        // unchanged regions when they are collapsed
+        "diffEditor.unchangedRegionBackground": "#00000000"
+    }
 }
