@@ -12,7 +12,7 @@ Image: en_2222_BeltPirates.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2023-11-25
-Changed: 2026-05-02
+Changed: 2026-07-25
 Tags: [_project_expansion, _new, _new_en, _hilite, _carousel, interplanetary trade, space piracy, political warfare, economic impact, anti-expansionism, defense systems, space politics]
 Topics: [adventure, spaceflight, crime]
 Text: |
@@ -48,7 +48,7 @@ Text: |
     OPS Al-Kazemi: "It's kind o' big, not a drone. Closing quickly at 3g. CSA thinks it's a mil grade core over there." (The Composite Situational Awareness AI deducing from various sensors and known emission profiles, a military grade reactor core.)
     OPS Al-Kazemi: "They're on a 0-intercept. ETA 40 minutes." (Zero-intercept: expected to match trajectory if nothing changes, ETA: Estimated Time of Arrival.)
     CMD Nair: "Control: how is our re-supply status?"
-    CTL Ling: "We are at 10% reaction mass. 12% in 20 minutes. Reactor fuel is 50 kg B and 2 tons H, unchanged." (Still some reaction mass for the drive and boron-11 plus hydrogen for the fusion reactor left, but not much refueled yet since the resupply phase hast just started.)
+    CTL Ling: "We are at 10% reaction mass. 12% in 20 minutes. Reactor fuel is 50 kg B and 2 tons H, unchanged." (Still some reaction mass for the drive and boron-11 plus hydrogen for the fusion reactor left, but not much refueled yet since the resupply phase has just started.)
     CMD Nair: "OPS: get me a visual."
     OPS Al-Kazemi: "Visual coming up... there it is. A Sakana, holds are packed, but no standard containers, dark, no markings." (Sakana class cargo vessel, apparently with specialized containers in its cargo holds.)
     [Short Pause]
@@ -116,7 +116,7 @@ Text: |
     CMD Nair: "Any way to override it?"
     CTL Ling: "I am trying. S-POD is unresponsive ... uh, it's like they know exactly how to disable it via AMES."
     OPS Al-Kazemi: "The S-POD just vanished from CnCC. Can't even talk to it now." (CnCC: the Command & Control Console displaying all ship components and software modules.)
-    CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our of point of view in 7 minutes."
+    CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our point of view in 7 minutes."
     [Short Pause]
     OPS Al-Kazemi: "Drone launched."
     [Pause]
@@ -158,7 +158,7 @@ Text: |
     After extensive deliberations, the World Council introduces the Interplanetary Pirate Laws. These regulations mandate stricter penalties for piracy and establish a dedicated anti-pirate task force within the space patrol. Moreover, the World Council launches the Space User Response: Protective Reactive Interplanetary Security Equipment (SURPRISE) Program. This initiative allows civilian ships to be equipped with sealed weapon pods, controlled by an internal AI. The AI's primary function is to ensure that the weapon systems are used appropriately, minimizing the risk of misuse or accidental discharge. While civilian users bear the cost of these weapon pods, they, in return, get access to advanced weaponry and obtain a license to install and utilize them.
     Initially, the SURPRISE pods prove effective, bolstering the defense of many civilian vessels. However, this success is short-lived. Pirates, seemingly possessing intricate knowledge of the AI and hardware specifications, succeed in hacking and disabling the pods remotely. This vulnerability suggests a deeper concern: potential infiltration or compromise of the SURPRISE pod producers. The pirates, operating vessels that rival the space forces of medium-sized states, clearly have substantial backing. This support not only equips their pirate vessels and covers initial operating costs but also supplies them with insider information. Such capabilities suggest significant secret intelligence gathering, hinting at the involvement of major corporate or even state actors.
     The cycle of compromise and countermeasure persists for several years. SURPRISE pods are disabled, then hardened and redesigned, only to be breached again. In an attempt to break this cycle, suppliers are switched several times, but the pattern persists. 
-    The piracy problem fits into the wider picture of anti-expansionist activism, a major movement at the time. But it may well be that the factions behind the pirates are just free riders using Anti-Expansionism as cover for economic warfare and extorsion. Despite the concerted efforts of private companies, the Earth based Space Force, and initiatives by the Palladian League, the piracy problem only worsens. 25 years after the first incident, traffic between Earth and the asteroid belt becomes economically untenable as insurance policy costs skyrocket.
+    The piracy problem fits into the wider picture of anti-expansionist activism, a major movement at the time. But it may well be that the factions behind the pirates are just free riders using Anti-Expansionism as cover for economic warfare and extortion. Despite the concerted efforts of private companies, the Earth based Space Force, and initiatives by the Palladian League, the piracy problem only worsens. 25 years after the first incident, traffic between Earth and the asteroid belt becomes economically untenable as insurance policy costs skyrocket.
 
 Markdown: |
     Long range cargo vessel LRV Void Wanderer en route from Mars orbit to trojan asteroid 911 Agamemnon carrying valuable high-tech metamaterials, filaments, and components destined for autofabs supplying the mining operations on Agamemnon.
@@ -224,7 +224,7 @@ Markdown: |
 
     CMD Nair: "Control: how is our re-supply status?"
 
-    CTL Ling: "We are at 10% reaction mass. 12% in 20 minutes. Reactor fuel is 50 kg B and 2 tons H, unchanged." (Still some reaction mass for the drive and boron-11 plus hydrogen for the fusion reactor left, but not much refueled yet since the resupply phase hast just started.)
+    CTL Ling: "We are at 10% reaction mass. 12% in 20 minutes. Reactor fuel is 50 kg B and 2 tons H, unchanged." (Still some reaction mass for the drive and boron-11 plus hydrogen for the fusion reactor left, but not much refueled yet since the resupply phase has just started.)
 
     CMD Nair: "OPS: get me a visual."
 
@@ -362,7 +362,7 @@ Markdown: |
 
     OPS Al-Kazemi: "The S-POD just vanished from CnCC. Can't even talk to it now." (CnCC: the Command & Control Console displaying all ship components and software modules.)
 
-    CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our of point of view in 7 minutes."
+    CMD Nair: "OPS: launch a relay-drone and activate the link. Direction: find the spot in the sky where the sun will be from our point of view in 7 minutes."
 
     [Short Pause]
 
@@ -494,7 +494,7 @@ Markdown: |
     In an attempt to break this cycle, suppliers are switched several times, but the pattern persists.
 
     The piracy problem fits into the wider picture of anti-expansionist activism, a major movement at the time.
-    But it may well be that the factions behind the pirates are just free riders using Anti-Expansionism as cover for economic warfare and extorsion.
+    But it may well be that the factions behind the pirates are just free riders using Anti-Expansionism as cover for economic warfare and extortion.
     Despite the concerted efforts of private companies, the Earth based Space Force, and initiatives by the Palladian League, the piracy problem only worsens.
     25 years after the first incident, traffic between Earth and the asteroid belt becomes economically untenable as insurance policy costs skyrocket.
 

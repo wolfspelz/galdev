@@ -11,6 +11,7 @@ Twitter: "2501 Early Extraplanetary Exploration Missions. The space between the 
 Image: en_2501_Extraplanetar.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf, Rosmarie Wolf
+Changed: 2026-07-25
 Tags: [_new_en, _hilite, Planets, Travel, Science, Rogue, Interstellar, Exotic Objects]
 Topics: [discovery, accident, spaceflight, science]
 Text: |
@@ -26,7 +27,7 @@ Text: |
     Trivia: The name Pontos, borrowed from the ancient Greek sea god, was intentionally selected to maintain the initial 'P' in mnemonics commonly used for recalling the order of the planets, thereby substituting Pluto.
     - Another intriguing celestial object is Tyche, a brown dwarf situated 1.1 light-years away, equivalent to 80,000 astronomical units, from the Sun. It remains gravitationally bound to our Sun, tracing an expansive, slow orbit that spans millions of years. With a mass fifteen times that of Jupiter, Tyche is a relatively small and chilly brown dwarf, with an average surface temperature of -20 degrees Celsius. Encircled by four moons — or planets, depending on your point of view — some of which possess their own satellites, Tyche is essentially a miniature solar system in itself.
     The system is first visited in 2493. Tyche A, the inner moon houses a permanent research station in the late 27th century. The scientists are particularly interested in the possibility of finding native life at hot water springs which are powered by tidal heating.
-    Trivia: Tyche's name originally referred to a hypothetical planet in Oort cloud that was believed to produce long-period comets. However, a survey with infrared telescopes in the 21st century revealed that the planet did not exist. The celestial body now known as Tyche is much farther away than the hypothetical Tyche of the 20th century. The suspected source of long-period comets later turns out to be an oscillation in Oort's Cloud itself. Tyche also does not correspond to a previously suspected periodic Oort disturbance that was thought to have caused the extinction of the dinosaurs. 
+    Trivia: Tyche's name originally referred to a hypothetical planet in the Oort cloud that was believed to produce long-period comets. However, a survey with infrared telescopes in the 21st century revealed that the planet did not exist. The celestial body now known as Tyche is much farther away than the hypothetical Tyche of the 20th century. The suspected source of long-period comets later turns out to be an oscillation in Oort's Cloud itself. Tyche also does not correspond to a previously suspected periodic Oort disturbance that was thought to have caused the extinction of the dinosaurs. 
     - In addition, there are many more planet-like celestial bodies up to a distance of two light-years. These objects are stray planets formed around other suns and flung out of their original systems. They come in various sizes, from small Mercury-sized rocky planets to frozen gas giants and brown dwarfs. Together they constitute what is known as the Baqannoo sphere, named after Iddo Baqannoo the 22nd century astronomer. 
     Pontos and Tyche are the most well-known members of this group. There are currently over 300 of these Baqannoo objects, but only three of them have been visited by extraplanetary explorers in the early days of space exploration. Unfortunately, a fourth expedition was lost, and no one knows what happened to them. The sudden loss of contact occurred during their outbound flight at a distance of 4000 astronomical units, leaving no clues as to their whereabouts.
     Trivia: the discovery of the fourth Baqannoo object prompted a re-evaluation of Pontos' status as the ninth planet of our solar system. As more interstellar planet-like objects were discovered, Pontos was eventually reclassified as a semi-planet by the International Astronomical Union, thus losing its status as a planet.
@@ -89,7 +90,7 @@ Markdown: |
     The system is first visited in 2493. Tyche A, the inner moon houses a permanent research station in the late 27th century.
     The scientists are particularly interested in the possibility of finding native life at hot water springs which are powered by tidal heating.
 
-    Trivia: Tyche's name originally referred to a hypothetical planet in Oort cloud that was believed to produce long-period comets.
+    Trivia: Tyche's name originally referred to a hypothetical planet in the Oort cloud that was believed to produce long-period comets.
     However, a survey with infrared telescopes in the 21st century revealed that the planet did not exist.
     The celestial body now known as Tyche is much farther away than the hypothetical Tyche of the 20th century.
     The suspected source of long-period comets later turns out to be an oscillation in Oort's Cloud itself.

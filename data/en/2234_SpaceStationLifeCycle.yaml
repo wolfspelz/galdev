@@ -12,7 +12,7 @@ Image: en_2234_SpaceStationLifeCycle.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2024-01-01
-Changed: 2024-11-01
+Changed: 2026-07-25
 Tags: [_project_expansion, _new, _new_en, _hilite, _carousel, space exploration, asteroid mining, technological evolution, space economy, moral dilemma, resource management]
 Topics: [crime, culture, spaceflight]
 Text: |
@@ -31,7 +31,7 @@ Text: |
     - Interactive VR Experience *Abandonment and Adaptation*: Puts players in decision-making roles to determine the future of Taromka amid technological shifts. The virtual environment is richly detailed, offering an authentic feel of life in space, and challenges players to weigh the impacts of their decisions on the station's crew and its evolving role in space exploration. Developed by Elena Rodriguez (Europe).
     - Suspense Novel *Desolation at L4*: In this gripping narrative, Liu Wei masterfully delves into the psychological and social ramifications experienced by the crew of Taromka Station as it confronts the harsh reality of obsolescence and decline. The novel intricately weaves a tale of suspense and emotion, capturing the tension and uncertainty that permeate the station. Liu Wei (China), Winner of the Outer Space Literature Award.
     In the 2190s, the station is repurposed for housing workers involved in the construction of L4 habitats. The station, once bustling with asteroid miners, now accommodates engineers, technicians, and other personnel dedicated to expanding the human presence in the L4 region. The support infrastructure is transformed from industrial production, in-space manufacturing and fuel supply to accommodation and entertainment services for a wide range of economic needs. These include luxurious hotel-style housing and more economically priced, compact bunks. 
-    A notable innovation during this period is the introduction of "Capsule Motels" by Taromka. These self-contained, live-support capsules are designed to be detachable from the main station. They can be deployed individually or in groups, providing on-site accommodation for engineers and technicians working on specific projects or workshops in space. After their temporary use, these capsules return to Taromka for restocking and necessary repairs. 
+    A notable innovation during this period is the introduction of "Capsule Motels" by Taromka. These self-contained, life-support capsules are designed to be detachable from the main station. They can be deployed individually or in groups, providing on-site accommodation for engineers and technicians working on specific projects or workshops in space. After their temporary use, these capsules return to Taromka for restocking and necessary repairs. 
     Areas of the station previously dedicated to ship-part fabbing transform into facilities for food production and enhanced life support systems. Most importantly, they support the growing capsule motel economy, becoming a hallmark of Taromka's adaptation to its new role in space infrastructure development.
     Works about the '90s transition to a profitable modular motel station:
     - Interactive Novel *Life in Orbit*: A choose-your-own-adventure interactive book allowing readers to explore various narratives and outcomes of life on the repurposed station with hundreds of hand-crafted story arcs as a strong statement against generated narratives. Written by Clara Johnson (USA).
@@ -114,7 +114,7 @@ Markdown: |
     These include luxurious hotel-style housing and more economically priced, compact bunks.
 
     A notable innovation during this period is the introduction of "Capsule Motels" by Taromka.
-    These self-contained, live-support capsules are designed to be detachable from the main station.
+    These self-contained, life-support capsules are designed to be detachable from the main station.
     They can be deployed individually or in groups, providing on-site accommodation for engineers and technicians working on specific projects or workshops in space.
     After their temporary use, these capsules return to Taromka for restocking and necessary repairs.
 
