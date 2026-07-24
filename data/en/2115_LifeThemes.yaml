@@ -11,6 +11,7 @@ Postimage: NAME.jpg
 Smallimage: NAME-100x70.jpg
 Author: Heiner Wolf
 Translation: Rosmarie Wolf, Heiner Wolf
+Changed: 2026-07-25
 Tags: [_hilite, TAG1, TAG2]
 Topics: [culture]
 Text: |
@@ -23,15 +24,15 @@ Text: |
   Life-themes are based on proven technology that many people have been using every day. More and more people have been experiencing a reality adapted to their own ideas. For some time now, neuro-implants have been changing perception by blocking out undesired parts and by augmenting reality with additional information.
   - Ad-blockers have been removing ads from the retinal data stream before the neural signals can reach the brain. 
   - Virtual tags show annotations, cues, and directions like a kind of head-up display. 
-  - In gaming, so-called Real-Plays, an extension of 3D VR technologies into the real world. Have been around for a long time, these games show their content as a layer on top of reality. 
-  - One of the first applications of neuro-implants have been assistants analyzing the environment to provide real-time advice like data, talking points, or behavioral guidance. Wingman flirt-assistants have become notorious for analyzing biometrics of your interlocutor and providing statistical and profile-based advice. 
+  - In gaming, so-called Real-Plays, an extension of 3D VR technologies into the real world, have been around for a long time. These games show their content as a layer on top of reality. 
+  - One of the first applications of neuro-implants has been assistants analyzing the environment to provide real-time advice like data, talking points, or behavioral guidance. Wingman flirt-assistants have become notorious for analyzing biometrics of your interlocutor and providing statistical and profile-based advice. 
   - Augmented reality assistants have proven indispensable for engineers, who have long since ceased to carry around construction plans as display sheets or paper rolls. Engineers can display diagrams through their implants at any time. 
   - So-called Shiva-assistants provide background information about the people you meet in everyday life including their reputation ratings. It would be unimaginable not to get up to date information about anybody. 
   - Of course, there is also malware. Implant malware has long been manipulating the perception of its victims, some in a subtle way, others less so. Such malware may overlay advertising messages bypassing web blockers and meme filters. 
   - There is even malware that presents real events differently to deceive viewers, so-called stream-spoofing.
   A life-theme is a software module installed as a plugin at the neuro-implant. Good themes are not cheap though. Real time analysis of all the sensory data is demanding. It can easily overload the processing capabilities of consumer implants. Some themes therefore use external scene analysis by streaming to a cloud service. Cloud-based scene handling faces two difficulties. Sending everything you hear and see to the net might pose a security risk, and secondly the real-time capability might suffer. Even a ping of a few tens of milliseconds is irritating. That basically rules out cloud-analysis for any serious application. In other words: local scene processing is a must. This in turn requires good (expensive) algorithms and powerful (expensive) hardware. In addition, themes contain transformation libraries, graphics routines, and graphics data, which all can be of very different quality and variety, depending on the price.
   A huge economy grows around the life-theme technology. Each genre has many variants: whether medieval, fantasy, steam punk or science fiction, popular genres have hundreds of themes and thousands of mods, hacks, and add-ons.
-  Not long after live-themes became available, entertainment networks started to release themes based on their own IPs which can be used by fans to make the world look like their favorite series. Vacation themes are also very popular, as well as many other real-world themes that simply simulate a different, but real, environment – city trips without leaving your own city. Some themes are especially popular in certain seasons, such as the *Frau Holle* add-on from the Zugspitze weather station. The add-on conjures everything up with a layer of new snow. The height of the snow adjustable.
+  Not long after life-themes became available, entertainment networks started to release themes based on their own IPs which can be used by fans to make the world look like their favorite series. Vacation themes are also very popular, as well as many other real-world themes that simply simulate a different, but real, environment – city trips without leaving your own city. Some themes are especially popular in certain seasons, such as the *Frau Holle* add-on from the Zugspitze weather station. The add-on conjures everything up with a layer of new snow. The height of the snow is adjustable.
   There are also render themes that do not really change objects, but rather adjust their appearance to make everything look like a fresco or like a line drawing, for example the famous open-source theme *A-ha*. Comic themes not only show the world in comic style, but they also add speech bubbles and onomatopoeia boxes while the audio implant mutes voices and ambient noises.
   Most themes offer software interfaces where plugins can hook into the processing pipeline, thus cooperating with ad-blockers, assistants and all the other applications running on neuro-implants that have become indispensable, and which of course should also be displayed in the chosen theme. 
 
@@ -63,8 +64,8 @@ Markdown: |
 
   - Ad-blockers have been removing ads from the retinal data stream before the neural signals can reach the brain. 
   - Virtual tags show annotations, cues, and directions like a kind of head-up display. 
-  - In gaming, so-called Real-Plays, an extension of 3D VR technologies into the real world. Have been around for a long time, these games show their content as a layer on top of reality. 
-  - One of the first applications of neuro-implants have been assistants analyzing the environment to provide real-time advice like data, talking points, or behavioral guidance. Wingman flirt-assistants have become notorious for analyzing biometrics of your interlocutor and providing statistical and profile-based advice. 
+  - In gaming, so-called Real-Plays, an extension of 3D VR technologies into the real world, have been around for a long time. These games show their content as a layer on top of reality. 
+  - One of the first applications of neuro-implants has been assistants analyzing the environment to provide real-time advice like data, talking points, or behavioral guidance. Wingman flirt-assistants have become notorious for analyzing biometrics of your interlocutor and providing statistical and profile-based advice. 
   - Augmented reality assistants have proven indispensable for engineers, who have long since ceased to carry around construction plans as display sheets or paper rolls. Engineers can display diagrams through their implants at any time. 
   - So-called Shiva-assistants provide background information about the people you meet in everyday life including their reputation ratings. It would be unimaginable not to get up to date information about anybody. 
   - Of course, there is also malware. Implant malware has long been manipulating the perception of its victims, some in a subtle way, others less so. Such malware may overlay advertising messages bypassing web blockers and meme filters. 
@@ -86,11 +87,11 @@ Markdown: |
   A huge economy grows around the life-theme technology.
   Each genre has many variants: whether medieval, fantasy, steam punk or science fiction, popular genres have hundreds of themes and thousands of mods, hacks, and add-ons.
 
-  Not long after live-themes became available, entertainment networks started to release themes based on their own IPs which can be used by fans to make the world look like their favorite series.
+  Not long after life-themes became available, entertainment networks started to release themes based on their own IPs which can be used by fans to make the world look like their favorite series.
   Vacation themes are also very popular, as well as many other real-world themes that simply simulate a different, but real, environment – city trips without leaving your own city.
   Some themes are especially popular in certain seasons, such as the *Frau Holle* add-on from the Zugspitze weather station.
   The add-on conjures everything up with a layer of new snow.
-  The height of the snow adjustable.
+  The height of the snow is adjustable.
 
   There are also render themes that do not really change objects, but rather adjust their appearance to make everything look like a fresco or like a line drawing, for example the famous open-source theme *A-ha*.
   Comic themes not only show the world in comic style, but they also add speech bubbles and onomatopoeia boxes while the audio implant mutes voices and ambient noises.

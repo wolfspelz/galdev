@@ -11,6 +11,7 @@ Postimage: NAME.jpg
 Smallimage: NAME-100x70.jpg
 Author: Heiner Wolf
 Translation: Rosmarie Wolf, Heiner Wolf
+Changed: 2026-07-25
 Tags: [TAG1, TAG2]
 Topics: [science]
 Text: |
@@ -21,7 +22,7 @@ Text: |
   Also included are two liters of nutrient solution containing all proteinogenic amino acids necessary for up to 200 grams of life forms thanks to the patented recycling technology of the growth system. Consumables can be reordered easily. The integrated monitor can order new material in time. A refill subscription is recommended to ensure unrestricted fun.
   The add-on module "Sequencer" is required to analyze the genome of existing life forms in order to add their genes to the traits library. For example, the genes for skin pigments can be extracted from many plants. Though, combining genes from different sources needs some practice, as genes may interact with each other. An additional software simulator that is also available as an add-on helps to avoid failed attempts, which consume resources without producing viable organisms.
   For advanced users there is a protein designer module available that can create new functional gene groups. Its core component is a protein folder, which is also used in professional applications.
-  The base for all designs is the so-called Omnipod, a completely artificial life form. It is a 2 cm high egg-shaped creature that stands on four short legs; with a white, almost transparent skin and no sensory organs, just a simple central nervous system to keep it up. The base model has no digestive system living on a built-in glucose supply for a limited time. The *Darwin Omnipod is an adapted and simplified version of the widely used H8Z2(b) line, the standard platform for many scientific experiments.
+  The base for all designs is the so-called Omnipod, a completely artificial life form. It is a 2 cm high egg-shaped creature that stands on four short legs; with a white, almost transparent skin and no sensory organs, just a simple central nervous system to keep it up. The base model has no digestive system living on a built-in glucose supply for a limited time. The *Darwin* Omnipod is an adapted and simplified version of the widely used H8Z2(b) line, the standard platform for many scientific experiments.
   Besides the Omnipod there are other platforms available as upgrades. Each platform comes with its own library of gene traits. Jogos Ubirajara takes great care to harmonize platform and feature library so as to guarantee the unlimited combinability of traits.
   The combination of sequencer and protein designer even allows to design and publish new traits. Within a short time, hundreds of new traits appear on the net. Even some scientific and commercial gene templates are adapted to the *Darwin* platforms. Of course, users can also download and try out complete gene templates with functionally matching traits.
   Some designs have practical applications, like the "Fluff Pod" template. The Fluff Pod is based on the Omnipod but with a discus-shaped body. The creature walks on its stubby legs tirelessly collecting dust on the ground. Having a simple digestive system, it can live permanently on the *Darwin* nutritional solution. Any household fab can produce a suitable solution dispenser from the provided blueprint.
@@ -66,7 +67,7 @@ Markdown: |
   The base for all designs is the so-called Omnipod, a completely artificial life form.
   It is a 2 cm high egg-shaped creature that stands on four short legs; with a white, almost transparent skin and no sensory organs, just a simple central nervous system to keep it up.
   The base model has no digestive system living on a built-in glucose supply for a limited time.
-  The *Darwin Omnipod is an adapted and simplified version of the widely used H8Z2(b) line, the standard platform for many scientific experiments.
+  The *Darwin* Omnipod is an adapted and simplified version of the widely used H8Z2(b) line, the standard platform for many scientific experiments.
 
   Besides the Omnipod there are other platforms available as upgrades.
   Each platform comes with its own library of gene traits.

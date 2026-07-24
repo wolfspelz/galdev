@@ -12,7 +12,7 @@ Image: de_2222_BeltPirates.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2023-11-25
-Changed: 2026-07-19
+Changed: 2026-07-25
 Tags: [_project_expansion, _new, _hilite, _carousel, Weltraumpiraterie, interplanetare Wirtschaft, Anti-Expansionismus, Palladische Liga, interplanetarer Handel, Weltraumkonflikt]
 Topics: [adventure, spaceflight, crime]
 Text: |
@@ -211,7 +211,7 @@ Markdown: |
 
     KMDO Nair: "Kontrolle: irgendeine Kennung?"
 
-    KTRL Ling: "Kein Transpondersignal" (normalerweise senden alle Schiffe regelmäßig ihre Kennung über Funk. Ein deutlicher Hinweis auf böse Absichten. Sie könnten natürliche eine falsche Kennung senden, aber das würde eine einfache Nachverfolgung aus der Ferne ermöglichen).
+    KTRL Ling: "Kein Transpondersignal" (normalerweise senden alle Schiffe regelmäßig ihre Kennung über Funk. Ein deutlicher Hinweis auf böse Absichten. Sie könnten natürlich eine falsche Kennung senden, aber das würde eine einfache Nachverfolgung aus der Ferne ermöglichen).
 
     KMDO Nair: "Kontrolle: ruf' sie."
 
@@ -233,7 +233,7 @@ Markdown: |
 
     [Kurze Pause]
 
-    BETR Al-Kazemi: "PHASAT zeigt eine strahlenabweisende-Beschichtung. Noch auf Abfangkurs." (PHASAT, sein privates Fernmineralogie-Teleskop).
+    BETR Al-Kazemi: "PHASAT zeigt eine strahlenabweisende Beschichtung. Noch auf Abfangkurs." (PHASAT, sein privates Fernmineralogie-Teleskop).
 
     KMDO Nair: "Irgendwelche Anzeichen von Waffen oder feindlichen Absichten?"
 
@@ -243,9 +243,9 @@ Markdown: |
 
     [Kurze Pause]
 
-    KTRL Ling: "Die Statistik zeigt 92% feindselig, 5% deren Fehlfunktion, 1% unsere." (Eine statistische Analyse lässt böse Absichten vermuten und nur eine kleine Wahrscheinlich dafür, dass alles ein Missverständnis ist, verursacht durch einen Defekt).
+    KTRL Ling: "Die Statistik zeigt 92% feindselig, 5% deren Fehlfunktion, 1% unsere." (Eine statistische Analyse lässt böse Absichten vermuten und nur eine kleine Wahrscheinlichkeit dafür, dass alles ein Missverständnis ist, verursacht durch einen Defekt).
 
-    KMDO Nair: "OK, dann ... allgemeiner Hinweis: angesichts früherer Ereignisse, fehlender Kommunikation, Ausrüstung und Vektor, erkläre ich den Kontakt für feindselig. Das KomLog geht zwar sowieso live raus, aber Kontrolle: bitte zusätzlichen MSB für diese Entscheidung." (MSB: Missionsstatusbericht)".
+    KMDO Nair: "OK, dann ... allgemeiner Hinweis: angesichts früherer Ereignisse, fehlender Kommunikation, Ausrüstung und Vektor, erkläre ich den Kontakt für feindselig. Das KomLog geht zwar sowieso live raus, aber Kontrolle: bitte zusätzlichen MSB für diese Entscheidung." (MSB: Missionsstatusbericht).
 
     KMDO Nair: "Betrieb: ist jemand in der Nähe, der helfen kann?"
 

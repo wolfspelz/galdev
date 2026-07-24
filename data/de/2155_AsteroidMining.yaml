@@ -9,6 +9,7 @@ Post: "2155 Kommerzielles Bergwerksschiff startet zum Asteroidengürtel. Im Jahr
 Image: de_2155_AsteroidMining.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
+Changed: 2026-07-25
 Tags: [_project_expansion, Asteroidenbergbau, Fusionsfackel-Antrieb, Weltraumwirtschaft, erdnahe Objekte, kommerzielle Raumfahrt]
 Topics: [spaceflight]
 Text: |
@@ -19,7 +20,7 @@ Text: |
     Im Jahr 2155 startet ein erstes kommerzielles Bergbauschiff mit einer Ladung von Komponenten für Fusionsfackel-Motoren. Das Ziel: ein ressourcenreicher Asteroid im inneren Asteroidengürtel. Der Plan besteht darin, die Motoren am Kern des Asteroiden zu installieren und ihn dann langsam in die Nähe der Erdumlaufbahn zu bringen. Im Gegensatz zu früheren Missionen, die hauptsächlich wissenschaftlich waren und kleine Asteroiden zur Forschung zurückbrachten, ist diese Mission rein kommerziell und in einer ganz anderen Größenordnung.
     Das Konzept der Nutzung von Asteroidenressourcen ist nicht neu. Es hatte zahlreiche wissenschaftliche Missionen zu Asteroiden gegeben mit Landungen und Probenrückführungen. Allerdings waren diese Missionen in ihrem Umfang begrenzt; sie sammelten nur kleine Proben für wissenschaftliche Studien. Der Durchbruch kam mit der Entwicklung von Technologien, die es ermöglichen, ganze Asteroiden in den Erdorbit zu bringen. 
     Der Fusionsfackel-Motor spielt dabei eine entscheidende Rolle. Diese Motoren, die auf Kometenkernen installiert werden, bieten die nötige Leistung und Ausdauer, um die Flugbahn von Kometen signifikant zu verändern. Die Fusionsfackelmotoren werden mit dem in den Kometen reichlich vorhandenen Wasserstoff betrieben, einer praktisch unerschöpflichen Treibstoffquelle. 
-    Trotz der großen Nachfrage nach Material birgt das kommerzielle Unterfangen wirtschaftlichen Risiken. Das Verschieben eines Asteroiden in die Erdumlaufbahn ist ein jahrzehntelanges Projekt. In dieser Zeit kann sich die wirtschaftliche, politische und technologische Landschaft dramatisch verändern, was die Rentabilität des Unternehmens negativ beeinträchtigen könnte.
+    Trotz der großen Nachfrage nach Material birgt das kommerzielle Unterfangen wirtschaftliche Risiken. Das Verschieben eines Asteroiden in die Erdumlaufbahn ist ein jahrzehntelanges Projekt. In dieser Zeit kann sich die wirtschaftliche, politische und technologische Landschaft dramatisch verändern, was die Rentabilität des Unternehmens negativ beeinträchtigen könnte.
     Mit der zunehmenden Kommerzialisierung des erdnahen Weltraums, ist der Orbit nicht mehr nur die Domäne von Astronauten und Wissenschaftlern. Die Aussicht auf Reichtum durch den Asteroidenbergbau zieht viele verschiedene Menschen und Unternehmen an. Sie führt zu einem bedeutenden kulturellen Wandel: Der Weltraum wird von einem seltenen und exotischen Arbeitsumfeld zum neuen Geschäftsfeld für global operierende Unternehmen.
 
 Markdown: |
@@ -55,7 +56,7 @@ Markdown: |
     Diese Motoren, die auf Kometenkernen installiert werden, bieten die nötige Leistung und Ausdauer, um die Flugbahn von Kometen signifikant zu verändern.
     Die Fusionsfackelmotoren werden mit dem in den Kometen reichlich vorhandenen Wasserstoff betrieben, einer praktisch unerschöpflichen Treibstoffquelle.
 
-    Trotz der großen Nachfrage nach Material birgt das kommerzielle Unterfangen wirtschaftlichen Risiken.
+    Trotz der großen Nachfrage nach Material birgt das kommerzielle Unterfangen wirtschaftliche Risiken.
     Das Verschieben eines Asteroiden in die Erdumlaufbahn ist ein jahrzehntelanges Projekt.
     In dieser Zeit kann sich die wirtschaftliche, politische und technologische Landschaft dramatisch verändern, was die Rentabilität des Unternehmens negativ beeinträchtigen könnte.
 
