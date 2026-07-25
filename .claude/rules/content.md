@@ -23,8 +23,7 @@ Files are named `YEAR_Name.yaml`. Key fields:
 - `Author` — typically "Heiner Wolf"
 - `Tags` — list; special tags: `_hidden`, `_noweb`, `_nobook`, `_new`, `_hilite`, `_carousel`
 - `Topics` — list from: accident, adventure, ai, aliens, catastrophe, conspiracy, crime, culture, discovery, ecology, economy, epidemic, event, life, luck, people, philosophy, politics, science, spaceflight, statistics, technology, things, upgrades, visitors, war, wonder
-- `Text` — plain text body (legacy)
-- `Markdown` — markdown body (preferred, rendered on site)
+- `Markdown` — markdown body, rendered on site
 
 See `data/de_template.yaml` / `data/en_template.yaml` for the full template.
 
