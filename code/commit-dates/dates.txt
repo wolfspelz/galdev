@@ -57,7 +57,6 @@ data\de\2231_VertragVonVegas.yaml 2024-06-16 2024-09-21
 data\de\2233_Lunar_Skyhook_Eine_Orbitalroto.yaml 2019-12-08 2024-09-16
 data\de\2234_SpaceStationLifeCycle.yaml 2024-01-01 2024-10-06
 data\de\2236_Eine_atomare_Explosion_zerstör.yaml 2019-12-08 2024-09-16
-data\de\2239_Big5.yaml 2019-12-08 2023-10-22
 data\de\2241_Beschluss_von_AntiTrustGesetze.yaml 2019-12-08 2024-09-16
 data\de\2244_Bewaffneter_Kampf_zwischen_Sch.yaml 2019-12-08 2024-09-19
 data\de\2246_Enklave.yaml 2019-12-11 2024-09-19
@@ -498,7 +497,6 @@ data\en\2209_Decompression.yaml 2023-08-12 2024-09-26
 data\en\2222_BeltPirates.yaml 2023-11-25 2024-09-30
 data\en\2231_TreatyOfVegas.yaml 2024-06-16 2024-09-26
 data\en\2234_SpaceStationLifeCycle.yaml 2024-01-01 2024-09-30
-data\en\2239_Big5.yaml 2023-08-20 2023-08-20
 data\en\2247_MetricShift.yaml 2024-01-20 2024-09-26
 data\en\2248_GeminiDisaster.yaml 2024-01-13 2024-09-30
 data\en\2265_Oekomil.yaml 2023-08-20 2023-08-20
