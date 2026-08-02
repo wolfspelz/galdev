@@ -1,18 +1,17 @@
 AssertUtf8: ä
-1000000InSpace: 1000000InSpace
+Name: 1000000InSpace
 Aliases: []
 Year: 2269
 Title: "Eine Million außerhalb der Erde"
 ShortTitle: Eine Million im Raum
-Short: "Mehr als eine Million Menschen leben im Sonnensystem verteilt auf 12.000 Strukturen, von Raumstationen bis zu automatisierten Anlagen. Diese Expansion wird durch private, unternehmerische und staatliche Akteure vorangetrieben."
+Short: "Mehr als eine Million Menschen leben im Sonnensystem verteilt auf 12.000 Strukturen, von Raumstationen bis zu automatisierten Anlagen. Die Entwicklung wird durch private und staatliche Akteure vorangetrieben."
 Headline: "Weltraumboom: Eine Million Menschen"
-Post: "2269 Eine Million außerhalb der Erde. Mehr als eine Million Menschen leben im Sonnensystem verteilt auf 12.000 Strukturen, von Raumstationen bis zu automatisierten Anlagen. Diese Expansion wird durch private, unternehmerische und staatliche Akteure vorangetrieben... Mehr: https://www.galactic-developments.de/Timeline/1000000InSpace?lang=de-DE"
-Twitter: "2269 Eine Million außerhalb der Erde. Mehr als eine Million Menschen leben im Sonnensystem verteilt auf 12.000 Strukturen, von Raumstationen bis zu automatisierten Anlagen. Diese Expansion wird durch private, unternehmerische und staatliche Akteure vorangetrieben... Mehr: https://www.galactic-developments.de/Timeline/1000000InSpace?lang=de-DE"
 Link: "https://www.galactic-developments.de/Timeline/1000000InSpace?lang=de-DE"
 Image: de_2269_1000000InSpace.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2024-06-02
+Changed: 2026-08-02
 Tags: [_project_expansion, Weltraum, Expansion, Menschheit, Besiedlung, Raumstation, Habitat, Orbit, Sonnensystem]
 Topics: [statistics]
 
@@ -22,25 +21,22 @@ Markdown: |
   Am dreihundertsten Jahrestag der ersten Mondlandung leben eine Million Menschen und Uploads außerhalb der Erde.
   Die Bevölkerung verteilt sich über einen großen Teil des Sonnensystems.
   Insgesamt gibt es 12.000 bewohnte Strukturen: Raumstationen, Raumschiffe, Industrieanlagen, rotierende Habitate, Asteroidenbasen und weitgehend automatisierte Infrastrukturanlagen.
-  Diese Einrichtungen spiegeln die fortschrittlichen technologischen Fähigkeiten und die Vielzahl der Aktivitäten von privaten, unternehmerischen und staatlichen Akteuren wider, die die Präsenz der Menschheit im Weltraum vorantreiben.
+  Betrieben werden sie von privaten und staatlichen Akteuren, wobei die privaten weit mehr Aktivitäten entfalten.
 
   In der Erdumlaufbahn leben 320.000 Menschen in rotierenden Habitaten.
-  Darüber hinaus beherbergen unzählige Raumstationen, Industrieanlagen und verschiedene andere Strukturen weitere 70.000 Menschen.
-  Die Erdumlaufbahn ist die geschäftigste Region des Sonnensystems und inzwischen sehr wichtig für Hightechprodukte in Informationstechnik und Biotechnologie.
+  Weitere 70.000 leben in Raumstationen und in Wohnbereichen von orbitalen Industrieanlagen.
+  Der Erdorbit ist die dichteste Region des Sonnensystems.
+  Er liefert vor allem Hightechprodukte für die Informations- und Biotechnologie der Erde.
 
-  Der Mond und der cis-lunare Raum (der erdnahe Raum einschließlich der Erde-Mond Lagrange-Punkte) sind ebenfalls zu wichtigen Zentren menschlicher Besiedlung geworden.
-  Auf dem Mond leben 210.000 Menschen, vor allem in großen Mondbasen, Industrieanlagen und Raumstationen.
-  Der cis-lunare Raum, das Gebiet zwischen Erde und Mond, einschließlich der Lagrange-Punkte, beherbergt weitere 230.000 Menschen, hauptsächlich in rotierenden Habitaten und Raumstationen.
+  Auf dem Mond leben 210.000 Menschen, überwiegend in den großen Mondbasen, die anderen in Industrieanlagen und Stationen, einige davon im Mondorbit.
+  Der cis-lunare Raum zwischen Erde und Mond, einschließlich der Lagrange-Punkte, beherbergt weitere 230.000, hauptsächlich in rotierenden Habitaten.
   Vor allem Lagrange-5 ist sehr wichtig für die orbitale Wirtschaft mit industriellen Aktivitäten, die inzwischen schon dem Erdorbit Konkurrenz machen.
-  L5 ist auch Ausgangspunkt für viele Operationen im Gürtel.
+  Von L5 starten außerdem die meisten Missionen in den Gürtel.
 
-  Jenseits des Erde-Mond-Systems ist der Mars mit 40.000 Einwohnern, die sich auf Bodenbasen, Raumschiffe und Industrieanlagen verteilen, das nächste bedeutende Bevölkerungszentrum.
+  Jenseits des Erde-Mond-Systems ist der Mars mit 40.000 Einwohnern das nächste Bevölkerungszentrum, verteilt auf Bodenbasen, Schiffe und Industrieanlagen.
   Die inneren Planeten, einschließlich Venus und Merkur, sowie der Asteroidengürtel beherbergen kleinere, aber bedeutende Basen im Raum und auf den Planeten, die sich auf Forschung und industrielle Produktion konzentrieren.
-  Insbesondere die Wolkenstädte der Venus beherbergen 50.000 Menschen.
-  Sie sind ein Symbol für den Einfallsreichtum und die Anpassungsfähigkeit der menschlichen Expansion.
+  Die Wolkenstädte der Venus haben zusammen 50.000 Bewohner.
 
-  In den nahen Sonnenumlaufbahnen gibt es eine bedeutende Energieinfrastruktur, die von 20.000 Menschen gewartet wird und für die Versorgung der unzähligen menschlichen Aktivitäten im gesamten Sonnensystem unverzichtbar ist.
-  Die äußeren Regionen tragen mit insgesamt 20.000 Menschen, zur menschlichen Präsenz im Sonnensystem bei.
-  Die Aktivitäten im äußeren System werden noch dominiert durch Forschungsstationen.
-  Dort gibt es riesige astronomische Instrumente und außerdem Raum- und Bodenstationen, die die großen Planeten und deren Monde erforschen.
-
+  In den nahen Sonnenumlaufbahnen warten 20.000 Menschen die Energieinfrastruktur, die den Rest des Systems mit gebündeltem Sonnenlicht versorgt.
+  Die äußeren Regionen tragen mit insgesamt 20.000 Menschen zur menschlichen Präsenz im Sonnensystem bei.
+  Dort dominieren noch Forschungsstationen, die großen astronomischen Instrumente und Teleskope bei den Gasriesen und ihren Monden.
