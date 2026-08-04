@@ -31,22 +31,45 @@ See `data/de_template.yaml` / `data/en_template.yaml` for the full template.
 
 Binding whenever the `Markdown:` block is written or edited.
 
-**One sentence per line, no wrapping inside a sentence.**
+### One sentence per line
+
+No wrapping inside a sentence.
 Blank lines separate paragraphs, not sentences.
 One edited sentence is then one changed line; rendering is unaffected.
 
-**Split inside list items too**, indenting continuation lines to the content column — two spaces after `- `, three after `1. `.
+### Splitting inside list items
+
+Split inside list items too, indenting continuation lines to the content column — two spaces after `- `, three after `1. `.
 Too little ends the item, too much makes a code block.
 Sibling items get no blank line between them.
 
-**Never split where the break would change what is rendered:**
+### When not to split
+
+Never split where the break would change what is rendered:
 when the next sentence would begin the line with `-`, `*`, `+`, `#`, `>`, a fence or `1.` / `1)` — other numbers are safe mid-paragraph, but any number becomes a list as the first line of a block; table rows; code; frontmatter; link reference definitions; hard breaks; headings.
 
-**These periods do not end a sentence:**
+Periods that do not end a sentence:
 `d.h.` `z.B.` `u.a.` `v.a.` `s.o.` `s.u.` `o.ä.` `u.ä.` `bzw.` `inkl.` `exkl.` `ggf.` `evtl.` `bzgl.` `usw.` `etc.` `ca.` `Dr.` `Prof.` `Nr.` `Mio.` `Mrd.` `St.` `vs.` `i.e.` `e.g.` `Mr.` `Mrs.` `Ms.` `Inc.` `Ltd.` `Jr.` `Sr.`; ordinals (`22. Jahrhundert`); decimals and grouped figures (`1.5`, `300.000`); dates (`22.03.2024`); versions and filenames (`v1.2`, `data.yaml.`); ellipses; initials (`A. Einstein`); URLs; periods inside quotes or parentheses.
 Where the boundary is unclear, leave the sentences together — an over-eager split is worse than an unsplit line.
 
-**Indentation.**
+### Semantic line breaks
+
+A sentence whose line would exceed 120 characters is broken further,
+at a **semantic boundary** rather than at a width limit:
+after a subordinate clause, at a semicolon or colon,
+at a clause-separating comma, or before a conjunction.
+Each line then holds one coherent thought, and editing one clause still rewrites only one line.
+Never break mid-phrase just to satisfy the count;
+when no semantic boundary offers itself, the line simply stays long.
+
+Semantic breaks obey the same exceptions as sentence breaks (see [When not to split](#when-not-to-split)):
+a continuation line must never start with anything that would open a block,
+and headings and table rows stay on one line however long.
+In list items, semantic breaks follow the list-item rule:
+continuation lines are indented to the item's content column.
+
+### Indentation
+
 The `Markdown:` block is indented two spaces, so a list continuation line sits at two plus two.
 
 ```yaml
@@ -61,7 +84,9 @@ Markdown: |
 
 Separator lines are truly empty, the trailing blank line stays, and `Text:` keeps its own layout.
 
-**Existing text is not reflowed to match**, only converted when it is being rewritten anyway.
+### Reflowing existing text
+
+Existing text is not reflowed to match, only converted when it is being rewritten anyway.
 Then insert and remove line breaks and nothing else, merging any break inside a paragraph that is not a sentence boundary.
 
 ## data.yaml Index
