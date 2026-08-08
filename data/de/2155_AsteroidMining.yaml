@@ -9,14 +9,16 @@ Post: "2155 Kommerzielles Bergwerksschiff startet zum Asteroidengürtel. Im Jahr
 Image: de_2155_AsteroidMining.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
-Changed: 2026-07-25
+Changed: 2026-08-04
 Tags: [_project_expansion, Asteroidenbergbau, Fusionsfackel-Antrieb, Weltraumwirtschaft, erdnahe Objekte, kommerzielle Raumfahrt]
 Topics: [spaceflight]
 
 Markdown: |
     Im Lauf eines Jahrhunderts wurde Asteroidenbergbau von einem wissenschaftlichen Forschungsgegenstand zu einer kommerziell rentablen Unternehmung.
-    Frühe wissenschaftliche Missionen zu Asteroiden begannen Mitte des 21. Jahrhunderts in ernsthaftem Umfang, wobei für die lange Reise eine Mischung aus chemischen Raketen und elektrischem Antrieb eingesetzt wurde.
-    Diese Missionen lieferten wertvolle Einblicke in die Zusammensetzung von Asteroiden und bestätigten den Reichtum an abbaubaren Ressourcen, der schon vorher durch Fernspektroskopie analysiert worden war.
+    Frühe wissenschaftliche Missionen zu Asteroiden begannen Mitte des 21. Jahrhunderts in größerer Zahl.
+    Für die lange Reise wurde eine Mischung aus chemischen Raketen und elektrischem Antrieb eingesetzt.
+    Diese Missionen zeigten die Zusammensetzung von Asteroiden und bestätigten den Reichtum an abbaubaren Ressourcen,
+    der schon vorher durch Fernspektroskopie analysiert worden war.
 
     In den Jahrzehnten vor 2155 führte die steigende Nachfrage nach Baumaterialien in der hohen Erdumlaufbahn sowie der wachsende Bedarf von Industrien und Bevölkerungen nach Autofab-Quellen und Metamaterialien zu einer Veränderung in der orbitalen Ökonomie.
     Der Transport von Material von der Erde im großen Stil war prohibitiv teuer geworden.
@@ -39,18 +41,19 @@ Markdown: |
 
     Das Konzept der Nutzung von Asteroidenressourcen ist nicht neu.
     Es hatte zahlreiche wissenschaftliche Missionen zu Asteroiden gegeben mit Landungen und Probenrückführungen.
-    Allerdings waren diese Missionen in ihrem Umfang begrenzt; sie sammelten nur kleine Proben für wissenschaftliche Studien.
+    Allerdings waren diese Missionen in ihrem Umfang begrenzt.
+    Sie sammelten nur kleine Proben für wissenschaftliche Studien.
     Der Durchbruch kam mit der Entwicklung von Technologien, die es ermöglichen, ganze Asteroiden in den Erdorbit zu bringen.
 
-    Der Fusionsfackel-Motor spielt dabei eine entscheidende Rolle.
-    Diese Motoren, die auf Kometenkernen installiert werden, bieten die nötige Leistung und Ausdauer, um die Flugbahn von Kometen signifikant zu verändern.
-    Die Fusionsfackelmotoren werden mit dem in den Kometen reichlich vorhandenen Wasserstoff betrieben, einer praktisch unerschöpflichen Treibstoffquelle.
+    Möglich macht das der Fusionsfackel-Motor.
+    Er liefert die Leistung und die Ausdauer, um die Flugbahn eines Asteroiden zu verändern.
+    Betrieben wird er mit dem, vor allem in Kometen, vorhandenen Wasser, einer praktisch unerschöpflichen Wasserstoffquelle.
 
     Trotz der großen Nachfrage nach Material birgt das kommerzielle Unterfangen wirtschaftliche Risiken.
     Das Verschieben eines Asteroiden in die Erdumlaufbahn ist ein jahrzehntelanges Projekt.
     In dieser Zeit kann sich die wirtschaftliche, politische und technologische Landschaft dramatisch verändern, was die Rentabilität des Unternehmens negativ beeinträchtigen könnte.
 
-    Mit der zunehmenden Kommerzialisierung des erdnahen Weltraums, ist der Orbit nicht mehr nur die Domäne von Astronauten und Wissenschaftlern.
+    Mit der zunehmenden Kommerzialisierung des erdnahen Weltraums ist der Orbit nicht mehr nur die Domäne von Astronauten und Wissenschaftlern.
     Die Aussicht auf Reichtum durch den Asteroidenbergbau zieht viele verschiedene Menschen und Unternehmen an.
-    Sie führt zu einem bedeutenden kulturellen Wandel: Der Weltraum wird von einem seltenen und exotischen Arbeitsumfeld zum neuen Geschäftsfeld für global operierende Unternehmen.
+    Der Weltraum wird von einem seltenen und exotischen Arbeitsumfeld zum neuen Geschäftsfeld für global operierende Unternehmen.
 
