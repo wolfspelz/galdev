@@ -12,19 +12,19 @@ Image: en_2222_BeltPirates.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf
 Created: 2023-11-25
-Changed: 2026-07-25
+Changed: 2026-08-09
 Tags: [_project_expansion, _new, _new_en, _hilite, _carousel, interplanetary trade, space piracy, political warfare, economic impact, anti-expansionism, defense systems, space politics]
 Topics: [adventure, spaceflight, crime]
 
 Markdown: |
-    Long range cargo vessel LRV Void Wanderer en route from Mars orbit to trojan asteroid 911 Agamemnon carrying valuable high-tech metamaterials, filaments, and components destined for autofabs supplying the mining operations on Agamemnon.
+    Long-range cargo vessel LRV Void Wanderer en route from Mars orbit to trojan asteroid 911 Agamemnon carrying valuable high-tech metamaterials, filaments, and components destined for autofabs supplying the mining operations on Agamemnon.
     The ship is about to enter the pre-ordered in-flight refueling matter stream lane.
 
     Crew:
 
-    - Captain Priya Nair, station id CMD (Command): age 52, Master's in Space Command and Operation from the Thiruvananthapuram Space Institute / Kerala. Lead several successful missions for the Kerala Space Agency before moving to the belt. Fluent in Malayalam, English, and has learned conversational Mandarin to liaise with other space agencies. Nair's training in classical Kerala dance forms like Kathakali and Mohiniyattam has instilled in her a sense of rhythm and awareness of her body that proves invaluable in the zero-gravity environment of space. She also practices 0G yoga to maintain her physical and mental well-being amidst the stresses of space travel. 
-    - Flight Engineer Tarek Al-Kazemi, station id OPS (Operations): age 38, MSc in Aerospace Engineering, Queen Noor University of Minerals and Automation, Dhahran. Specialized in propulsion systems at the Kalifate Space Agency Kuwait City. Innovator of a micro-repair drone system for in-flight emergencies. Fluent in Arabic, proficient in Mandarin. Al-Kazemi still has a keen interest in remote mineralogy and enjoys photographing celestial bodies from the ship's observation deck where he operates a privately owned phased array synthetic aperture telescope (PHASAT). His channel where he shares his remote mineralogy photos and spectra has 7 million followers, a mix of academic enthusiasts, industry professionals, and a growing community of space aficionados drawn by his unique blend of scientific expertise and captivating visuals. 
-    - Cargo Specialist Ling Wei, station id CTL (Control): age 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and may even contribute to a system-wide Kessler syndrome in the far future if left unchecked.  
+    - Captain Priya Nair, station id CMD (Command): age 52, Master's in Space Command and Operation from the Thiruvananthapuram Space Institute / Kerala. Led several successful missions for the Kerala Space Agency before moving to the belt. Fluent in Malayalam, English, and has learned conversational Mandarin to liaise with other space agencies. Nair's training in classical Kerala dance forms like Kathakali and Mohiniyattam has instilled in her a sense of rhythm and awareness of her body that proves invaluable in the zero-gravity environment of space. She also practices 0G yoga to maintain her physical and mental well-being amidst the stresses of space travel.
+    - Flight Engineer Tarek Al-Kazemi, station id OPS (Operations): age 38, MSc in Aerospace Engineering, Queen Noor University of Minerals and Automation, Dhahran. Specialized in propulsion systems at the Kalifate Space Agency Kuwait City. Innovator of a micro-repair drone system for in-flight emergencies. Fluent in Arabic, proficient in Mandarin. Al-Kazemi still has a keen interest in remote mineralogy and enjoys photographing celestial bodies from the ship's observation deck where he operates a privately owned phased array synthetic aperture telescope (PHASAT). His channel where he shares his remote mineralogy photos and spectra has 7 million followers, a mix of academic enthusiasts, industry professionals, and a growing community of space aficionados drawn by his unique blend of scientific expertise and captivating visuals.
+    - Cargo Specialist Ling Wei, station id CTL (Control): age 93, PhD in Logistics and Supply Chain Management, National University of Singapore. Orchestrated logistics for Singapore's first Mars-bound supply mission and many other missions since. In-flight, Ling serves – among other things – as the mission-controller, a critical role where she oversees the validity and accuracy of all operational commands, actions, and events, ensuring the smooth execution of mission protocols. Fluent in Mandarin with basic knowledge of Bahasa Indonesia. Ling is passionate about space conservation. She is actively engaged in initiatives aimed at mitigating space debris and ensuring the sustainability of space travel. She is serving on the Void Wanderer to study the effects of stream-head particulates – high-velocity and dense residual matter that escape at the beginning of an in-flight resupply phase. These particles might pose a significant navigational hazard and may even contribute to a system-wide Kessler syndrome in the far future if left unchecked.
 
     Message log via ComLaser:
 
@@ -98,7 +98,7 @@ Markdown: |
 
     [Short Pause]
 
-    CTL Ling: "Stats has it at 92% unfriendly, 5% their malfunction, 1% ours." (Statistical analysis indicating  a high probability of hostile intent with a low chance of this just being a misunderstanding due to equipment failure.)
+    CTL Ling: "Stats has it at 92% unfriendly, 5% their malfunction, 1% ours." (Statistical analysis indicating a high probability of hostile intent with a low chance of this just being a misunderstanding due to equipment failure.)
 
     CMD Nair: "Ok, then ... general notice: considering past events, lack of communication, their setup and vector, I declare the contact hostile. While this com-log goes live to base anyway, Control: please file an additional MSR for this declaration." (MSR: Mission Status Report.)
 
@@ -285,7 +285,7 @@ Markdown: |
     Over the next decade, such heists escalate in frequency and boldness.
     Pirates, equipped with advanced stealth and boarding technologies, target valuable cargo and passengers, causing significant losses and amplifying fears among travelers.
 
-    The motivations behind these attacks remain enigmatic.
+    The motivations behind these attacks remain unclear.
     The vast resources invested into the pirate infrastructure, including secret bases, suggest that the piracy is not merely about resource gathering or financial interests.
     The loot hardly justifies the investment.
     Speculations arise that this piracy is part of a broader economic or political warfare.
@@ -297,8 +297,8 @@ Markdown: |
     This makes interception easier despite the vastness of space.
     The primary targets are the routes between Earth space (including Earth orbit, the Moon, and L4/5) and the asteroid belt.
     There are also sporadic attacks on long-range lanes to Jupiter and the trojans.
-    These shippings, though less frequent, are even more vulnerable due to their heightened in-flight resupply requirements.
-    Earth orbit is not directly affected by piracy as resources come primarily from asteroids in Earth's orbit and from the moon.
+    These shipments, though less frequent, are even more vulnerable due to their heightened in-flight resupply requirements.
+    Earth orbit is not directly affected by piracy as resources come primarily from asteroids in Earth's orbit and from the Moon.
     The Earth-Moon space is safe.
 
     The piracy problem is a divisive issue on Earth.
@@ -307,7 +307,7 @@ Markdown: |
     However, a significant portion of Earth's population, especially those not benefiting from orbital expansion, lean towards Anti-Expansionism.
     They oppose active measures against the piracy, citing the cost-benefit disparity for Earth's inhabitants.
 
-    The economic impact of the piracy is profound.
+    The economic impact of the piracy is severe.
     Interplanetary trade dwindles, posing significant challenges for the Palladian League and other interplanetary bases.
     The League, representing the interests of those beyond Earth's extended orbit, pushes for aggressive action.
     However, their operations, while dominant in the interplanetary economy, are small in absolute terms.
@@ -319,16 +319,16 @@ Markdown: |
     This enforcement, coupled with the vast expanse of space and the pirates' growing sophistication, poses significant challenges for the space patrol.
 
     Earth's stance on the issue is ambivalent.
-    There are many anti-expansionist minded people despising the interplanetary economy.
+    There are many anti-expansionist-minded people despising the interplanetary economy.
     Even more are indifferent as the problem does not affect them directly.
-    So, the Earth is split, often leaning towards a wait-and-see attitude, while the League pushes for strong action resulting in disagreements and controversial arguments between Earth and the League.
+    So, the Earth is split, often leaning towards a wait-and-see attitude, while the League pushes for strong action, resulting in disagreements and controversial arguments between Earth and the League.
     The giga-corporations, which sponsor most of the League's members, eventually compel the World Council to act.
 
     Recognizing the severity of the situation, the World Council initiates a comprehensive legislative process.
     The proposal to address the pirate threat navigates a complex web of interests, factions, nations, and corporations on Earth.
     Coordination with the Palladian League becomes essential.
     Intense debates ensue, with various stakeholders championing their own agendas and concerns.
-    The process is a testament to the intricacies of interplanetary politics.
+    The process shows the intricacies of interplanetary politics.
 
     After extensive deliberations, the World Council introduces the Interplanetary Pirate Laws.
     These regulations mandate stricter penalties for piracy and establish a dedicated anti-pirate task force within the space patrol.
@@ -351,6 +351,6 @@ Markdown: |
 
     The piracy problem fits into the wider picture of anti-expansionist activism, a major movement at the time.
     But it may well be that the factions behind the pirates are just free riders using Anti-Expansionism as cover for economic warfare and extortion.
-    Despite the concerted efforts of private companies, the Earth based Space Force, and initiatives by the Palladian League, the piracy problem only worsens.
-    25 years after the first incident, traffic between Earth and the asteroid belt becomes economically untenable as insurance policy costs skyrocket.
+    Despite the concerted efforts of private companies, the Earth-based Space Patrol, and initiatives by the Palladian League, the piracy problem only worsens.
+    Twenty-five years after the first incident, traffic between Earth and the asteroid belt becomes economically untenable as insurance policy costs skyrocket.
 

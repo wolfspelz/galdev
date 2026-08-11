@@ -54,7 +54,7 @@ Where the boundary is unclear, leave the sentences together — an over-eager sp
 
 ### Semantic line breaks
 
-A sentence whose line would exceed 120 characters is broken further,
+A sentence whose line would exceed 140 characters is broken further,
 at a **semantic boundary** rather than at a width limit:
 after a subordinate clause, at a semicolon or colon,
 at a clause-separating comma, or before a conjunction.

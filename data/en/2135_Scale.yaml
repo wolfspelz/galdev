@@ -3,10 +3,10 @@ Year: 2135
 Title: "A Large-Scale Program Against Global Warming"
 ShortTitle: Cooling the Earth
 Short: A million square kilometers of sunshades to reduce the solar radiation
-Headline: "Againt the Global Warming: A Gigant Sunshade"
+Headline: "Against Global Warming: A Giant Sunshade"
 Author: Heiner Wolf
 Translation: Heiner Wolf, Rosmarie Wolf
-Changed: 2026-07-25
+Changed: 2026-08-08
 Tags: [_carousel, _hilite, Ecology, Technology, Interplanetar, Conspiracy]
 Topics: [ecology, spaceflight, conspiracy]
 
@@ -35,7 +35,7 @@ Markdown: |
     I can't exit that way.
     I'll be waiting a short time until my eyes have calmed down.
 
-    "Chrzz" the audio connection signals, "Jomo, what's going on?".
+    "Chrzz", the audio connection signals, "Jomo, what's going on?".
     "Eyes adjusting", I tell her, hoping that my mishap won't be noticed.
     "Okay", comes from the other side, "you should really check the controller".
     Well, nothing escapes my operations manager Kuki Nguya.
@@ -45,7 +45,7 @@ Markdown: |
     I float forward along the handrail through the hatch.
     Then I turn right.
     Once again, I stand before the largest wall in the Solar system.
-    We are at Habitat III, a few kilometers in front of the shadow panels on the sun facing side.
+    We are at Habitat III, a few kilometers in front of the shadow panels on the sun-facing side.
     The shadow panels extend in all directions, over thousands of kilometers.
     It's a majestic sight.
     The proof that humanity doesn't give up, that there is always a solution, even for big problems like global warming.
@@ -60,13 +60,12 @@ Markdown: |
 
     SCALE reduces the solar radiation without casting distinct shadows.
     This is achieved through deliberately induced diffraction effects at the edges.
-    Special care is taken to avoid shadows on Earth during daytime as that would feel like a solar eclipse.
+    Special care is taken to avoid shadows on Earth during daytime, as that would feel like a solar eclipse.
     The grids are movable and adjustable in order to shadow individual regions of the Earth.
     This capability enables the project to potentially mitigate heat waves, alter evaporation patterns over the sea, and increase precipitation in arid areas.
 
     The design also ensures that SCALE cannot be misused.
-    Safety features are a cornerstone of the overall design.
-    They guarantee, that solar radiation cannot be focused on individual areas.
+    Safety features are built into the construction to prevent solar radiation from being focused on individual areas.
     The maximum regional increase of sunlight is 10%, the highest attenuation 2%.
 
     Most SCALE elements are manufactured in lunar factories.
@@ -89,7 +88,7 @@ Markdown: |
     They can join to form larger groups or fly in open formation, depending on the intended shadow profile.
 
     SCALE is a huge effort.
-    The project absorbs the entire available workforce in high earth orbit (HEO).
+    The project absorbs the entire available workforce in high Earth orbit (HEO).
     The expansion of L4 and L5 colonies almost comes to a standstill.
 
     Assembly drones do the main work.
@@ -100,8 +99,9 @@ Markdown: |
     And even then, they use specialized drones.
     Very rarely someone in a space suit must go out to solve a problem manually.
 
-    The five second light lag between L1 and the Earth is too long to do everything remotely.
-    More than 100 engineers live in habitats at L1. In total there are 200 people at L1, including drone operators, logistics specialists, and habitat management staff.
+    The five-second light lag between L1 and the Earth is too long to do everything remotely.
+    More than 100 engineers live in habitats at L1.
+    In total there are 200 people at L1, including drone operators, logistics specialists, and habitat management staff.
     That is almost a quarter of the total interplanetary population.
     However, only 10 astronauts are in active "field service" occupied with EVA activities.
 
@@ -117,7 +117,7 @@ Markdown: |
     It is a pattern of four-leaf clovers as if a giant had worked the aluminum foil with a 10-meter cookie cutter.
     One after the other, for miles and miles.
     The cutouts are shaped in such a way that sunlight is bent into the shade.
-    The design avoids deep shadows and even more important, it prevents sunlight from focusing on the same spot.
+    The design avoids deep shadows and, even more important, it prevents sunlight from focusing on the same spot.
     This would have fatal consequences for the affected region on Earth like a super death ray.
     There are many safety measures to avoid such a scenario: optical, mechanical, and digital.
     The whole construction is made such that nothing bad can happen.
@@ -192,7 +192,7 @@ Markdown: |
     It could also focus, depending on the effective length caused by the angle... OMG.
     It could be a meta lens.
 
-    During my mechatronics studies in Addis Ababa in the Nonlinear Optics seminar we calculated diffraction effects with metamaterials.
+    During my mechatronics studies in Addis Ababa in the Nonlinear Optics seminar, we calculated diffraction effects with metamaterials.
     Meta-optics are very small.
     They are used in the optical near field.
     But if you scale the whole thing up by one billion, you get the same effect with macroscopic structuring and a million kilometers distance.
@@ -202,7 +202,7 @@ Markdown: |
 
     "Control, we should simulate the projective shortening of the standard structure to check if it may have a focusing effect at L1 distance."
 
-    If that's the intention, then someone is misusing SCALE to build a million square kilometer sized burning glass.
+    If that's the intention, then someone is misusing SCALE to build a burning glass a million square kilometers in size.
     All you have to do is to add piezo joints in the right places.
     A small change in the construction plan.
     Autofabs then produce it automatically.
@@ -245,6 +245,6 @@ Markdown: |
     He was monitoring a functional test where panels run through various shading profiles.
     In some modules unexpected resonances occurred which were not damped well enough.
     The technician's space suit was attached to the grid structure by a safety leash.
-    Unfortunately, the vibration caused a sudden pull of the tether which threw the suit against a beam.
+    Unfortunately, the vibration caused a sudden pull of the tether, which threw the suit against a beam.
     The resulting acceleration was lethal.
 
