@@ -11,7 +11,7 @@ Twitter: "2501 Early Extraplanetary Exploration Missions. The space between the 
 Image: en_2501_Extraplanetar.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf, Rosmarie Wolf
-Changed: 2026-07-25
+Changed: 2026-08-12
 Tags: [_new_en, _hilite, Planets, Travel, Science, Rogue, Interstellar, Exotic Objects]
 Topics: [discovery, accident, spaceflight, science]
 Markdown: |
@@ -38,14 +38,14 @@ Markdown: |
 
     Ever since they were developed, experimental space distortion drives have been used by astrophysical research expeditions trying to get far out into the unknown effectively conducting stress tests for the next generation of drives in addition to their scientific research programs.
 
-    Modern interplanetary instruments, with their remarkable range and accuracy, empower scientists to uncover intriguing new celestial destinations, extending our reach into the vastness of space.
+    Modern interplanetary instruments, with their remarkable range and accuracy, empower scientists to uncover intriguing new celestial destinations, extending humanity's reach into the vastness of space.
     Luckily, space distortion drives now offer the opportunity to visit astronomical discoveries in the closer interstellar neighborhood of the Sun, in extraplanetary space.
     So, there are many flights to extraplanetary destinations.
     There are scientific expeditions, secret military missions, private ventures but also spectacular failures.
 
     Venturing deep into interstellar space using experimental propulsion systems is one of the final great frontiers of exploration.
     However, technical problems could leave you marooned in the emptiness of space, potentially light weeks or even months away from any assistance.
-    There, quick rescue is impossible given the immense challenge of locating a ship within several cubic light months of space.
+    Out there a quick rescue is impossible, because a ship has to be found within several cubic light months of space.
     Even the transmission of a distress signal will take weeks, and the availability of equally capable vessels for a rescue mission is limited.
 
     Here are some notable expeditions during the first 100 years of extraplanetary travel:
@@ -53,7 +53,7 @@ Markdown: |
     - Pontos, initially called the ninth planet, the so-called wonderland of ice. Pontos was hit by a Mars-sized body hundreds of millions of years ago. The kinetic energy liquefied the entire planet and for a few million years the slowly cooling core caused its 1000-kilometer-thick ammonia water ice shell to experience a period of tectonics and weather. The planet has since solidified again into a stunning icy landscape.
 
     When an expedition visits Pontos in 2390 disaster strikes on the return journey leaving the crew stranded 1000 astronomical units away from the inner system, with a drive broken.
-    Despite valiant efforts to evacuate the crew's infomorphs, they are left adrift for 37 long years until a rescue mission can be mounted.
+    The crew's infomorphs cannot be evacuated, and they are left adrift for 37 years until a rescue mission can be mounted.
 
     Trivia: The name Pontos, borrowed from the ancient Greek sea god, was intentionally selected to maintain the initial 'P' in mnemonics commonly used for recalling the order of the planets, thereby substituting Pluto.
 
@@ -112,66 +112,3 @@ Markdown: |
     However, these gravitational anomalies are difficult to detect, as they are just empty space with a small gravitational potential.
 
     And it turned out that the scientists were right: there are indeed many dark matter clusters between the stars, and they continue to pose a significant hazard to interstellar travel even today.
-
-
-MurfScript: |
-    Year 23 90. Expedition to the Ninth Planet. 
-    [pause strong] Private message
-
-    [pause weak] From Calixtos Kamikatsu on board the Gahara Sthaan IX, on the return flight from Pontos, planet 9, at the 1000 astronomical units mark:
-
-    [pause strong] Hello darling,
-
-    [pause weak] there are now only 1000 astronomical units left until we are home. Less than a year. Pontos was incredible. We are all still completely stunned. There was not much to see in the visible spectrum. A thousand astronomical units from the sun you have to look very closely to see anything at all. But in the infrared, we saw the planet's landscape in splendor. In the inner solar system, there are gas giants with thick atmospheres, bands of clouds, and storms. Out here, so far from the sun, there is only ice. The whole atmosphere is frozen. Pontos is an ice giant. 
-    [pause strong] Yet Pontos is not just a chunk of ice. There are mountains, canyons and scree fields, even sand deserts with dunes of fine ice grains, like diamond dust. Everything here is made of ice, different ice. Water ice is rock hard at these temperatures. Water ice plays here the role of stone and rock. There are ice volcanoes from which in the past a mixture of water and ammonia erupted like lava. 
-    [pause strong] Pontos apparently had plate tectonics in the past with huge ice mountains folding. In active phases of Pontos there was even weather, tremendous weather. Ammonia rain washed out deep canyons from water ice mountains. The Grand Canyon would be lost in them. So would the Valles Marineris on Mars. 
-    [pause strong] Not to forget the Theia Basin! A crater larger than the earth. A long time ago, an object the size of Mars must have crashed into it. A cataclysmic event. It caused the whole planet to melt. After that the planet was active for millions of years, like the earth with volcanism, tectonics, weather, rain, rivers, and oceans. 
-    [pause strong] That was the time when all we see now was created. From the mountain ranges and volcanoes, to water ice sand along the beaches of ammonia seas. And then of course the sculptures! Where ice emerged from the ground, it froze in all kinds of shapes, sometimes in smooth shapes like a petrified waterfall, sometimes with razor-sharp edges, pinnacles, and corners. 
-    [pause strong] There are geometric cones that have, well, had, a water channel inside, having grown around it. There are slender columns, whole fields of ice columns, as if built by the ancient Greeks. And figures and sculptures, an infinite number of shapes... Some are white like snow due to fine air bubbles. Many are transparent, some crystal clear, others with regular patterns. There is a formation we called the Spires, columns hundreds of meters tall as if made of glass and crystal blue ice curtains in between. 
-    [pause strong] All that is now frozen. [pause strong] Like suddenly petrified amidst the movement, simply marvelous. 
-    [pause strong] I must be returning to my analysis now...
-
-    [pause medium] See you soon. 
-    [pause 1.5s] End of private message
-
-    [pause strong] Next Private message
-
-    [pause strong] From Calixtos Kamikatsu on board the Gahara Sthaan IX, 999 astronomical units from Sol, three months after the accident:
-
-    [pause strong] Hi honey,
-
-    [pause weak] bad news. Anne can't get the drive to work. She says we have been pretty lucky. We all knew the journey would be risky. The matter density out here is so low that you don't really expect to hit anything. Must have been a decent asteroid. At full speed, two million kilometers is enough proximity for its gravitational field to damage our FTL system when it runs under load. 
-    [pause strong] Anne says, and I quote: "on a whole 0.2 Tau, the fractality of the converters is below 4.8, as far as SuSI can measure it". 
-    [pause strong] SuSI is our FTL engineering AI. Tech-gibberish. I ask Anne what this means: she says, the converter poles are fractals. They have to be as fine as possible, down to nanometers. A value of 3.0 as the fractal dimension would be perfect. But that is only theoretical. They try to get as close as possible: 3.0 minus a little bit. In our case the "little bit" would be ten to the power of minus 4.8. If the number is smaller, then the distance to 3 is larger and the Lévy effect collapses. There is more. Something with virtual particles, negative energy, quantum violation and so on. 
-    [pause strong] Anyway, when we passed the asteroid, some superfine structures in the converter poles were distorted. They clump together. In other words: the converter poles are trash. We can't fix that here. True, we do have fabs for all our daily needs as micro mechs, but the bush robots in the factory supposedly spent a full two years assembling the converter poles for our ship. That's a totally different game. 
-    [pause strong] I'm going to get back to you when I know more. 
-    [pause strong] End of private message
-
-    [pause strong] Next private message
-
-    [pause strong] From Calixtos Kamikatsu on board the Gahara Sthaan IX, 999 astronomical units from Sol, four months after the accident:
-
-    [pause strong] Hello you three,
-
-    [pause weak] most of the data is now analyzed. The drive is still not working. Unfortunately there seems to be no capacity for a rescue mission. Understandable, this flight was expensive enough. There is not enough bandwidth for an info evacuation, either. We are stuck out here. 
-    [pause strong] Your dad's gonna be late. Ask mom. I'm hugging you all. 
-    [pause strong] This part is only for mom:
-
-    [pause weak] We have to switch off here. The engine is not only broken. It's also radioactive. Anne says that this often happens after converter accidents. The radiation disrupts the reactor. We are running out of energy. SuSI and the other AIs are already off. Our micro mech shells have also been shut down. Only the HICs (our Human Infomorph Cores) are still running. We are already in the virtual reality habitat. 
-    [pause strong] We are now going into hibernation. Only the proximity sensor remains active. We will not notice anything. Time will fly by. For us. I'm sorry. 
-    [pause strong] I kiss you. 
-    [pause strong] End of private message
-
-    [pause x-strong] The Ship log, 37 years after the accident
-
-    [pause strong] Gahara Sthaan IX, 999 astronomical units from Sol, 2427:
-
-    [pause weak] Passive Radar: Signal: Source: Distance 13 million kilometers. 
-    [pause weak] Controller: Send identification via ComLaser. 
-    [pause weak] Controller: Activate Human infomorph core: Captain: Rashid Agarwal. 
-    [pause weak] ComLaser: Message received: "We are coming to get you". 
-    [pause strong] End of ship log
-
-    [pause 2.0s] This was, Galactic Developments, Year, 23 90
-
-
