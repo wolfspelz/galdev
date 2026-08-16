@@ -4,11 +4,11 @@ Year: 2412
 Title: Expedition to the Ninth Planet 
 Short: Scientists discover a giant planet at the fringe of the Sol System. Then the spaceship drive fails...
 Headline: "Planet 9: An Icy Wonderland in the Darkness"
-Post: "2412 Planet 9: An Icy Wonderland in the Darkness. Scientists discover a giant planet at the fringe of the Sol System. Then the spaceship drive fails.. more: http://jmp1.de/e2412"
+Post: "2412 Planet 9: An Icy Wonderland in the Darkness. Scientists discover a giant planet at the fringe of the Sol System. Then the spaceship drive fails... more: http://jmp1.de/e2412"
 Image: en_NinthPlanet.jpg
 Author: Heiner Wolf
 Translation: Rosmarie Wolf, Heiner Wolf
-Changed: 2026-07-25
+Changed: 2026-08-16
 Tags: [_hilite, science, interplanetary, spaceship, FTL, accident]
 Topics: [adventure, discovery, accident]
 
@@ -32,7 +32,7 @@ Markdown: |
   Pontos is an ice giant.
 
   Yet, Pontos is not just a chunk of ice.
-  There are mountains, canyons and scree fields, even sand deserts with dunes of fine ice grains, like diamond dust.
+  There are mountains, canyons, and scree fields, even sand deserts with dunes of fine ice grains, like diamond dust.
   Everything here is made of ice, different ice.
   Water ice is rock hard at these temperatures.
   Water ice plays here the role of stone and rock.
@@ -56,7 +56,7 @@ Markdown: |
   And then of course the sculptures!
   Where ice emerged from the ground, it froze in all kinds of shapes, sometimes in smooth shapes like a petrified waterfall, sometimes with razor-sharp edges, pinnacles, and corners.
 
-  There are geometric cones that have, well, had a water channel inside having grown around it.
+  There are geometric cones that have, well, had a water channel inside, having grown around it.
   There are slender columns, whole fields of ice columns, as if built by the ancient Greeks.
   And figures and sculptures, an infinite number of shapes... Some are white like snow due to fine air bubbles.
   Many are transparent, some crystal clear, others with regular patterns.
@@ -155,7 +155,7 @@ Markdown: |
 
   Gahara Sthaan IX, 999 AU from Sol, 2442:
 
-  ...T15:33:21,042 Passive Radar: Signal: Source: Distance 1.3e7 km.
+  ...T15:33:21.042 Passive Radar: Signal: Source: Distance 1.3e7 km.
 
   ...T15:33:22.314 Controller: Send identification via: ComLaser.
 

@@ -13,7 +13,7 @@ Image: en_2560_Exotechnologie.jpg
 Author: Heiner Wolf
 Translation: Heiner Wolf, Rosmarie Wolf
 Created: 2024-06-08
-Changed: 2026-08-12
+Changed: 2026-08-16
 Tags: [_new_en, _hilite, exo-technology, Mars, alien technology, research facility, technology analysis, advanced tech, interstellar trade]
 Topics: [technology]
 
@@ -23,7 +23,7 @@ Markdown: |
     Throughout the millennia in which humanity has utilized technology, it has predominantly engaged with its own, domestically developed tech.
     However, even then, there were many instances of technology adoption.
     Humanity was never monolithic.
-    There were, and still are, numerous nations and societies and many of them have developed their own technologies.
+    There were, and still are, numerous nations and societies, and many of them have developed their own technologies.
 
     But also, time and again, technology was imported from neighbors and adapted.
     It is assumed that clans of Stone Age humans adopted the technique of, for example, hand-ax manufacturing from other clans.
@@ -32,7 +32,7 @@ Markdown: |
 
     Foreign technology was always analyzed, replicated, and often improved upon.
     In the distant past, their secrets could usually be deciphered through observation or disassembly.
-    But by the time of the 20th-century's wave of manufacturing outsourcing, very complex technologies were involved that could not simply be copied by mere observation.
+    But by the time of the 20th century's wave of manufacturing outsourcing, very complex technologies were involved that could not simply be copied by mere observation.
     Rather they were accompanied by consultants who patiently trained the recipients of the technology transfer over decades.
 
     Now, in the mid-26th century, a tidal wave of alien technologies is suddenly crashing upon humanity.
@@ -43,8 +43,8 @@ Markdown: |
 
     Yet, humans want to use alien technology.
     And not just that.
-    They want to understand exo-technology to be able to replicate it because alien technology is expensive for it is very challenging to purchase modern devices from other species.
-    Humanity's FTL drive technology is not yet advanced enough to travel dozens of light-years making Dilan at 13 light-years the only source of exo-technology.
+    They want to understand exo-technology to be able to replicate it because alien technology is expensive, for it is very challenging to purchase modern devices from other species.
+    Humanity's FTL drive technology is not yet advanced enough to travel dozens of light-years, making Dilan at 13 light-years the only source of exo-technology.
     Even journeys to Dilan are long and perilous, as the frequent loss of deep-space trade vessels shows.
     Moreover, from the perspective of other interstellar societies, the entire Sol System has little of value to offer, except for raw materials that are essentially ubiquitous and cheap everywhere.
 
@@ -56,17 +56,17 @@ Markdown: |
     Apart from the unpredictable dealings with Dilan beings, there are occasional visits by Marui traders.
     With them, at least, we can communicate meaningfully.
     These traders bring fantastic technology into the Sol System.
-    The arrival of a Marui trader and their auction is always a spectacular event that is noticed system wide.
+    The arrival of a Marui trader and their auction is always a spectacular event that is noticed system-wide.
     On these occasions, nation states, intelligence agencies, and major corporations try to outbid each other to acquire the equipment on offer.
     The Marui know what underdeveloped species like the humans desire.
     Still, Marui visits and auctions are rare.
-    Probably because these detours into the Sol System are loss-making ventures, serving more for long-term customer development than short term profits as a Marui trader once admitted.
+    Probably because these detours into the Sol System are loss-making ventures, serving more for long-term customer development than short-term profits, as a Marui trader once admitted.
 
     The scant exo-technology that humanity acquires is expensive either way, whether it is traded after the long journey to the Dilan or bought at steep prices at Marui auctions.
 
     There are basically three reasons to buy such tech despite the price tag:
 
-    A large share quickly disappears from public view being used in covert projects for intelligence or military purposes.
+    A large share quickly disappears from public view, being used in covert projects for intelligence or military purposes.
 
     Another portion of exo-technology in the Sol System is utilized to produce other high-tech equipment; high-tech with respect to the local (Solar) technology level.
     Such exo-technology serves as a production tool for items that could not be manufactured otherwise.
@@ -89,7 +89,7 @@ Markdown: |
     The energy sources within these devices could have an energy density a thousand times greater than the Solar technology of the 26th century.
     If mishandled, they could inadvertently trigger a RUD, a rapid unscheduled disassembly, releasing immense amounts of energy.
     While there are energy storage devices and generators with capacities 10,000 times that of Solar devices, humanity usually does not get access to the best of interstellar technology.
-    Still, even accidentally releasing 100 times the energy of 26th century tech can be devastating enough for the lab, for a space station or for a planetary region.
+    Still, even accidentally releasing 100 times the energy of 26th-century tech can be devastating enough for the lab, for a space station, or for a planetary region.
 
     What is more, devices with built-in AI pose a risk of an AI breakout.
     Most operating principles of AI in exo-technology remain a mystery to humans.
@@ -110,7 +110,7 @@ Markdown: |
     It is crucial to evaluate these potential consequences and consider imposing limitations if necessary.
 
     Technical analyses are carried out across multiple sensor dimensions while efforts are made to be as minimally invasive as possible.
-    However, if the exo-technology resists volume scans, its structure must be probed with micro-mechanical methods which – despite all goals to be non-invasive – means to inject sensors (often fractal probes) into the subject devices.
+    However, if the exo-technology resists volume scans, its structure must be probed with micro-mechanical methods, which – despite all goals to be non-invasive – means to inject sensors (often fractal probes) into the subject devices.
 
     The understanding that mechanical probing, info-mapping, and field effect analysis must go hand in hand and in alignment with security measures has led to the formation of the MET's structure.
 
@@ -135,7 +135,7 @@ Markdown: |
     - Several groups in the field of information and nano security:
     - Cross Channel Interference Working Group (XChi, occasionally called XX): Investigation of infections through extraordinary channels, especially optoacoustic coupling, anthropological manipulation, i.e., analysis of potential subversion of human users by foreign AI.
     - Department for Advanced Walling Technologies (AWT): Provision of firewall, sandbox, simulator technologies, and hardened AI for the investigating institutes, including a rapid intervention team to combat info-infections.
-    - Department of Nanoboxing (NQubed): Safety in micro and nanotechnology, secure containment of exotic nano-systems, with a small mobile task force designed to contain nano-breakouts, colloquially known as the "Ghostbusters".
+    - Department of Nanoboxing (NQube): Safety in micro and nanotechnology, secure containment of exotic nano-systems, with a small mobile task force designed to contain nano-breakouts, colloquially known as the "Ghostbusters".
 
     The MET partners with a wide range of entities from both industrial and military research.
     It is primarily funded by third-party projects seeking to integrate exo-technologies into their products.
@@ -161,5 +161,5 @@ Markdown: |
     Most institutes are located on Mars, within territories and enclaves of the Sargodha Republic.
     Security-sensitive areas are situated far away from population centers.
     NQube and Firewall are located in dedicated stations in Mars orbit.
-    Parts of EMC2 and NucEM are outsourced to asteroids near Mars and the analytical section of BioSec is an extraterritorial area in modules from Jiadasha in the Huayuan Tiankong Cluster.
+    Parts of EMC2 and NucEM are outsourced to asteroids near Mars, and the analytical section of BioSec is an extraterritorial area in modules from Jiadasha in the Huayuan Tiankong Cluster.
 
