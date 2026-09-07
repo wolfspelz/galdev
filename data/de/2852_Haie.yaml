@@ -4,15 +4,15 @@ Aliases: []
 Year: 2852
 Title: "Ein Ozean zwischen den Sternen"
 ShortTitle: Haie im Orbit
-Short: "Ein exzentrischer Aquarianer baut ein ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem. "
+Short: "Ein exzentrischer Aquarianer baut ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem."
 Headline: "Haie im Orbit: Ein extravagantes Hobby"
-Post: "2852 Ein Ozean zwischen den Sternen. Ein exzentrischer Aquarianer baut ein ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem. .. Mehr: https://www.galactic-developments.de/Timeline/Sharks?lang=de-DE"
-Twitter: "2852 Ein Ozean zwischen den Sternen. Ein exzentrischer Aquarianer baut ein ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem. .. Mehr: https://www.galactic-developments.de/Timeline/Sharks?lang=de-DE"
+Post: "2852 Ein Ozean zwischen den Sternen. Ein exzentrischer Aquarianer baut ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem... Mehr: https://www.galactic-developments.de/Timeline/Sharks?lang=de-DE"
+Twitter: "2852 Ein Ozean zwischen den Sternen. Ein exzentrischer Aquarianer baut ein gigantisches Meerwasser-Habitat, in dem große Haie erstmals artgerecht leben können. In einem kilometergroßen rotierenden Habitat schwimmen Weiße Haie, Seelöwen und unzählige Meerestiere durch ein geschlossenes, selbstregulierendes Ökosystem... Mehr: https://www.galactic-developments.de/Timeline/Sharks?lang=de-DE"
 Link: "https://www.galactic-developments.de/Timeline/Sharks?lang=de-DE"
 Image: de_2852_Sharks.jpg
 Author: Johannes Burkhardt, Heiner Wolf
 Created: 2026-04-20
-Changed: 2026-07-25
+Changed: 2026-09-07
 Tags: [_new, _hilite, _carousel, Marine, Aquaristik, Aquarium, Weltraumhabitat, Weiße Haie, Rotationszylinder, Ökosystem, Superreichtum]
 Topics: [culture]
 Published: [web]
@@ -22,7 +22,7 @@ Markdown: |
     Das folgende Interview erschien im Jahr 2852 in der Exklusivbeilage *Inner Circle* von *Heliotrop*, dem damals größten Lifestyle-Magazin des inneren Sonnensystems.
     Es dokumentiert die Eröffnung von MARINE (Massive Aquatic Rotating Installation for Natural Ecosystems) und damit den Beginn einer bewegten Geschichte, die sich über ein halbes Jahrtausend erstrecken sollte.
 
-    Der Beginn des 29. Jahrhunderts, die wilden 28er, waren eine wohlhabende und optimistische Zeit.
+    Der Beginn des 29. Jahrhunderts, die wilden 28er, war eine wohlhabende und optimistische Zeit.
     Nach beinahe zwei Jahrhunderten ununterbrochenen Wachstums hatten sich im Sonnensystem Vermögen gebildet, für die es kaum noch passende Begriffe gab.
     Die Leute sprachen von Trillionären, von Zillionären, gelegentlich – halb spöttisch, halb ehrfürchtig – von Olympiern: jener Klasse, deren Mittel seit einem halben Jahrtausend angewachsen waren, die tausendfach die größten Vermögen am Beginn des Raumfahrtzeitalters und millionenfach die eines gewöhnlichen Milliardärs übertrafen.
     Für einen Olympier war ein privates Gigatonnen-Zylinderhabitat nicht mehr als eine Yacht für Techbillionäre der Jahrtausendwende, ein extravagantes Hobby. 
@@ -40,6 +40,7 @@ Markdown: |
     Es ist ein auf den Kopf gestelltes Meer.
     Über uns krümmt sich die Wasseroberfläche in einer sanften Biegung nach oben, verliert sich im türkisen Dunst und kommt in mehreren Kilometern Entfernung auf der anderen Seite wieder zurück.
     Unter uns fällt das Wasser in eine tiefblaue Leere ab, durchzogen von trägen Strömungsschlieren.
+    Weit unten schimmert der Boden der Welt: blasse Riffbänke, die dunklen Bänder von Unterwasserwäldern, der modellierte Fels eines Meeresbodens, den jemand mit großer Sorgfalt gebaut hat.
     Ein Schwarm Makrelen zieht an der Blase vorbei, dicht gefolgt von einem silbrigen Schatten, der fast wie ein Fisch aussieht, aber ich weiß inzwischen, wie man die Drohnen erkennt.
     Ein künstlicher Schiffshalter auf dem Weg zu seinem Wirt.
     Bhattacharya sitzt mir gegenüber in einem altmodischen Ledersessel, den er eigens in die Blase hat einbauen lassen, und sieht dabei aus wie jemand, der gerade ein Glas Wein im Salon erwartet.
@@ -67,7 +68,7 @@ Markdown: |
     Die einzige Herausforderung war die Wassertiefe."
 
     Tatsächlich waren bisher in Betrieb genommene O'Neill-Zylinder nie mit derart großen Mengen an Wasser befüllt worden, erst recht nicht mit Salzwasser.
-    Der Wasserstand ergibt in den Tiefwasserzonen eine Wassersäule von 40 Metern über einer drei bis sieben Meter dicken Sandschicht.
+    Der Wasserstand ergibt in den Tiefwasserzonen eine Wassersäule von 40 Metern über mehreren Metern modelliertem Fels: fast 34 Quadratkilometer gestalteter Meeresboden, Riffbänke, Sandfelder und Haltegrund für Wasserwälder, die dutzende Meter von der Hülle aufragen.
     Ich frage nach den strukturellen Konsequenzen einer solchen Wassermenge.
 
     "Die Hülle ist der teuerste Teil der Anlage.
@@ -76,13 +77,17 @@ Markdown: |
     Jeder Kubikmeter Meerwasser wiegt eine Tonne, und davon haben wir mehr als eine Milliarde.
     Wir mussten Verfahren aus dem Orbitalbau adaptieren, die eigentlich für Großraumschiffe entwickelt wurden."
 
-    Im Habitat erhebt sich eine künstliche Felsformation bis zu elf Meter über den Wasserspiegel.
+    Etwa ein Zehntel der Habitatoberfläche liegt über Wasser: Sandstrände, felsige Uferlinien, Mangrovendickichte, hunderte Meter tiefe Palmenwälder auf nachgebildeten Atollen und, am auffälligsten, eine künstliche Felsformation, die sich bis zu elf Meter über den Wasserspiegel erhebt.
     Ich frage, ob es sich dann bei seinem Habitat nicht streng genommen um ein Aquaterrarium oder Paludarium handele.
 
     "Nein, ich denke nicht.
-    Diese kleine Erhebung hat nicht einmal annähernd die Ausmaße eines kleinen emersen Überstands in einem Aquascape, jedenfalls, wenn man es relativ zur Gesamtgröße sieht.
-    Der emerse Teil ist nicht bepflanzt und wird auch nicht von Landtieren bewohnt.
-    Er ist der Ruheort der Seelöwenkolonie, die den großen Räubern im Aquarium als Lebendfutter dient."
+    Es gibt hier kein Land um seiner selbst willen.
+    Jeder Quadratmeter Ufer arbeitet für das Wasser.
+    Die Mangroven geben Fischen und Amphibien Schutz vor den großen Räubern.
+    Die Strände sind Ruheplätze, die Atolle brechen die Strömungen und ernähren die Riffe.
+    Und die Insel, die Sie meinen, ist der Ruheort der Seelöwenkolonie, die den großen Räubern im Aquarium als Lebendfutter dient.
+    Das ist kein Land mit angeschlossenem Ozean.
+    Das ist ein Ozean, dem wir ein paar Küsten gegeben haben."
 
     Er hebt die Hand, noch bevor ich überhaupt fragen kann, entschuldigend:
 
@@ -201,7 +206,7 @@ Markdown: |
     Inzwischen ist Nacht im Habitat.
     Die zentrale Lichtsäule ist auf ein tiefes, fast violettes Dämmerlicht heruntergeregelt.
     Unsere Beobachtungsblase schwimmt langsam zurück zur Besucherlounge.
-    Dabei kommen wir noch einmal am transparenten Bodenabschnitt vorbei, seinem Crystoplast-Fenster.
+    Dabei kommen wir noch einmal an der Stelle vorbei, wo der modellierte Meeresboden endet und der transparente Bodenabschnitt beginnt, sein Crystoplast-Fenster.
     Draußen liegt das offene All.
     MARINE steht gerade günstig auf seiner Jahresschleife: die Erde ist eine volle Scheibe, kaum handgroß, aber hell genug, um durch die Fenster hereinzuscheinen.
     Und dort unten treibt ein schlafender Hai in seinem langsamen Sinkflug, bewegungslos bis auf das regelmäßige Aufklappen der Kiemen.
