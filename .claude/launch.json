@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "galdevweb",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "code/galdevweb/GaldevWeb"],
+      "port": 5000
+    }
+  ]
+}
