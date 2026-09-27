@@ -123,13 +123,6 @@
 
     {
         cards.Add(Node.From(new Dictionary<string, string> {
-                    ["IFrameSrc"] = "https://wolfspelz.de/lego-marcopolo/showcase.html?bg=transparent",
-                    ["IFrameRatio"] = "4:3",
-                }));
-    }
-
-    {
-        cards.Add(Node.From(new Dictionary<string, string> {
                     ["VideoSrc"] = "/images/Index/elevator.mp4",
                     ["ImgAlt"] = "Cargo ship starting",
                     ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
@@ -164,6 +157,14 @@
                         ["en-US"] = () => "All Topics",
                     }),
                     ["Text"] = string.Join(" - ", Model.Timeline.Topics.OrderBy(topic => Model.Timeline.GetTitleOfTopic(topic)).Select(topic => "<a href='Topics#" + topic + "'>" + Model.Timeline.GetTitleOfTopic(topic) + "</a>")),
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
+                    ["IFrameSrc"] = "https://wolfspelz.de/lego-marcopolo/showcase.html?bg=transparent",
+                    ["IFrameRatio"] = "4:3",
+                    ["IFrameStyle"] = "background-color: black;",
                 }));
     }
 
