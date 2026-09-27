@@ -34,7 +34,7 @@
                     var ratio = card["IFrameRatio"].String;
                     var ratioClass = "ratio-" + (ratio == "" ? "16x9" : ratio.Replace(":", "x"));
                     <div class="card-img-top ratio @ratioClass">
-                        <iframe src="@card["IFrameSrc"]" title="@card["ImgAlt"]" allowfullscreen></iframe>
+                        <iframe src="@card["IFrameSrc"]" title="@card["ImgAlt"]" allowfullscreen allowtransparency="true" style="background-color: black;"></iframe>
                     </div>
                 }
                 @if (@card["Title"].String != "" || @card["Text"].String != "") {
