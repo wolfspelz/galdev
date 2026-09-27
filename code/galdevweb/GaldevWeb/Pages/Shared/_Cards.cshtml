@@ -30,26 +30,37 @@
                         Your browser does not support the video tag.
                     </video>
                 }
-                <div class="card-body">
-                    @if (@card["Title"].String != "") {
-                        <h5 class="card-title">
-                            @if (@card["TitleHasLink"].Bool) {
-                                <a href="@card["Link"].String">@card["Title"]</a>
-                            } else {
-                                @if (@card["Anchor"].String != "") {
-                                    <a name="@card["Anchor"]">@card["Title"]</a>
+                @if (@card["IFrameSrc"].String != "") {
+                    var ratio = card["IFrameRatio"].String;
+                    var ratioClass = "ratio-" + (ratio == "" ? "16x9" : ratio.Replace(":", "x"));
+                    <div class="card-img-top ratio @ratioClass">
+                        <iframe src="@card["IFrameSrc"]" title="@card["ImgAlt"]" allowfullscreen></iframe>
+                    </div>
+                }
+                @if (@card["Title"].String != "" || @card["Text"].String != "") {
+                    <div class="card-body">
+                        @if (@card["Title"].String != "") {
+                            <h5 class="card-title">
+                                @if (@card["TitleHasLink"].Bool) {
+                                    <a href="@card["Link"].String">@card["Title"]</a>
                                 } else {
-                                    @card["Title"]
+                                    @if (@card["Anchor"].String != "") {
+                                        <a name="@card["Anchor"]">@card["Title"]</a>
+                                    } else {
+                                        @card["Title"]
+                                    }
                                 }
+                            </h5>
+                        }
+                        @if (@card["Text"].String != "") {
+                            @if (@card["TextHasLink"].Bool) {
+                                <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
+                            } else {
+                                <p>@Html.Raw(card["Text"])</p>
                             }
-                        </h5>
-                    }
-                    @if (@card["TextHasLink"].Bool) {
-                        <p><a href="@card["Link"].String">@Html.Raw(card["Text"])</a></p>
-                    } else {
-                        <p>@Html.Raw(card["Text"])</p>
-                    }
-                </div>
+                        }
+                    </div>
+                }
             </div>
         </div>
     }

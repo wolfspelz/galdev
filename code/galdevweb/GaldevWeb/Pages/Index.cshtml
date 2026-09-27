@@ -123,6 +123,13 @@
 
     {
         cards.Add(Node.From(new Dictionary<string, string> {
+                    ["IFrameSrc"] = "https://wolfspelz.de/lego-marcopolo/showcase.html",
+                    ["IFrameRatio"] = "4:3",
+                }));
+    }
+
+    {
+        cards.Add(Node.From(new Dictionary<string, string> {
                     ["VideoSrc"] = "/images/Index/elevator.mp4",
                     ["ImgAlt"] = "Cargo ship starting",
                     ["Title"] = Model.I18n.String(path: "Box/ByTopic/Title", i18n: new StringGeneratorI18n {
