@@ -160,11 +160,14 @@
                 }));
     }
 
-    {
+    if (Model.UiCultureName == "de-DE") {
         cards.Add(Node.From(new Dictionary<string, string> {
                     ["IFrameSrc"] = "https://wolfspelz.de/lego-marcopolo/showcase.html?bg=transparent",
                     ["IFrameRatio"] = "4:3",
-                    ["IFrameStyle"] = "background-color: black;",
+                    ["IFrameStyle"] = "background-color: white;",
+                    ["TextHasLink"] = "true",
+                    ["Link"] = "https://www.galactic-developments.de/Blog/lego-Lego_Modelle",
+                    ["Text"] = "LEGO Modelle zum Download",
                 }));
     }
 
