@@ -12,6 +12,8 @@ entries:
   ConsUndMessen:
     de: de_ConsUndMessen.yaml
     en: en_ConsUndMessen.yaml
+  Republica24:
+    de: de_Republica24.yaml
   Nft4CollectiveOwnership:
     de: en_Nft4CollectiveOwnership.yaml
     en: en_Nft4CollectiveOwnership.yaml
