@@ -1,0 +1,71 @@
+AssertUtf8: ä
+Language: de
+Title: "Ein neues modernes Marco Polo Modell"
+Time: 21.10.2026
+Author: Heiner Wolf
+Summary: "Ein neues Lego Modell der Marco Polo, dem ersten kommerziellen Überlichtschiff"
+Tags: [Lego, Bricks, Marco Polo, 2026]
+Image: de_lego-MarcoPolo.jpg
+Text: |
+    ## Ein neues modernes Marco Polo Modell
+
+    Die [Marco Polo](/Timeline/MarcoPoloDilan-2511-Start_der_Marco_Polo_zum_Flug_nach_Ross_614) ist das erste kommerzielle Überlichtschiff.
+    Sie startet 2511 zum Flug nach Ross 614, um mit der Zivilisation von Dilan zu handeln.
+    Das erste Lego Modell der Marco Polo entstand 2019. 
+    Das neue Modell ist eine komplette Neukonstruktion und etwa dreimal so groß.
+
+    Modell für BrickLink Studio: [MarcoPolo Modell](/stuff/bricks/GalDev-MarcoPolo-2026.io)
+
+    Online Bauplan: [www.wolfspelz.de/lego-marcopolo](https://www.wolfspelz.de/lego-marcopolo/)
+
+    Alle Modelle: [Lego Modelle](/Blog/lego-Lego_Modelle)
+
+    4196 Teile in 62 Baugruppen
+
+    ## Aufbau
+
+    Das Schiff ist ein bewährtes interplanetares Frachtschiff. 
+    Es hat keinen Rumpf, sondern ein Gerüst in dem die Container aufgehängt sind.
+    Oberhalb und unterhalb des Frachtgerüsts befinden starke, metrisch impulsverstärkte Fusionsfackeltriebwerke, jeweils mit ihrem eigenen Reaktor und Fusionsbrennstoff.
+    Die großen Tanks an den Seiten enthalten Stützmasse für die Triebwerke.
+    Der hintere Teil des Frachtgerüsts ist für die interstellare Reise umgebaut und enthält zusätzliche Ausrüstung für Langstreckenflüge, vor allem Ersatzteillager und Autofabs.
+    Auch im vorderen Teil des Frachbereichs musste ein Drittel der Frachtplätze zusätzlichen Modulen für die lange Reise weichen:
+    einem Ausweichhabitat, einem militärischen Shuttle und dem Notreaktor.
+    
+    Von vorne nach hinten:
+
+    - **Sensoren und Antenne**: Vorne sitzt die Sensorik. Am Heck ein nachgeschleppter Metrik-Sensor (Trailing Metric Sensor Suite), der die metrischen Komponenten des Normalraumtriebwerks überwacht.
+    - **Habitat**: Die Wohnsektion für die Besatzung mit eigener Sensorik. Es gibt eine alternative Habitat-Variante im Modell, die sich austauschen lässt.
+    - **Tanks**: Zwei Gruppen großer Tanks links und rechts auf Gerüsten, dazu mehrere kleine Tanks mit eigener Basis und Leitungen. Eine Raffinerie ist für die Aufbereitung des Treibstoffs aus lokalen Ressourcen (nur in der Langstreckenversion).
+    - **Werkstätten und Versorgung**: Werkstätten, Versorgungscontainer und ein Hilfsgenerator.
+    - **Container**: Die Handelsfracht in Containern. Die Marco Polo führt seltene Erden und Edelmetalle mit, weil niemand weiß, was für Dilan wertvoll ist.
+    - **Shuttles**: Ein kleines ziviles Shuttle, ein Militär-Shuttle und Schubplattformen (Pusher) zum Rangieren der Container.
+    - **Antrieb**: Reaktor mit Schutzgebäude, dahinter die Antriebssektion mit Energie-, Beschleuniger- und Metrik-Abschnitt, Radiatoren und Düse. Die rote Düse mit der bläulichen Cherenkov-Strahlung an den Emittern ist das auffälligste Element des Modells.
+    - **Ständer**: Das Modell steht auf einem eigenen Stand aus schwarzen Platten mit zwei Säulen.
+
+    ## Farben
+
+    Die Grundfarbe ist Light Bluish Gray, dazu Schwarz für Stand und Gerüstteile und Weiß für Tanks und Habitat.
+    Dark Bluish Gray setzt Akzente an Reaktor und Antrieb.
+    Transparente Teile sitzen an Sensoren und Positionslichtern. 
+    Die gestreiften Tanks und die gelben Containerrahmen sind die einzigen Farbflächen.
+
+    ## Entwurfsgeschichte
+
+    Das Modell ist in 27 Versionen entstanden, von MarcoPolo2-01 im November 2025 bis MarcoPolo2-27 im Oktober 2026.
+    Zwischendurch gab es Zwischenstände zur Optimierung der Teileliste (pre-optimization), Varianten ohne gruppierte Untermodelle (ungrouped) und einen eigenen Render-Stand.
+    Die Teile wurden in mehreren Bestellungen bei BrickLink geordert.
+    Für jede Nachbestellung gibt es ein eigenes Studio-Modell, das nur die fehlenden Teile enthält.
+    Vier Nachbestellungen waren nötig, bis alles da war.
+
+    ## Hinweise zum Nachbau
+
+    Wie bei allen Modellen gilt: vor dem Bestellen die Einzelpreise prüfen. 
+    Das Modell wurde optimiert, um teure Varianten zu vermeiden, aber die Preise bei BrickLink ändern sich.
+    Wer sich nicht an die Farben gebunden fühlt, kann besonders bei den Gerüstteilen in Light Bluish Gray auf günstigere Farben ausweichen.
+
+    Die Baugruppen lassen sich am besten in der Reihenfolge von Studio bauen: 
+    zuerst der Core Beam und der Stand, dann die Tankgruppen und das Habitat, zuletzt Antrieb, Container und Shuttles. 
+    Die Antenne und die Sensoren sind fragil und kommen ganz am Schluss.
+
+    Bauplan: [www.wolfspelz.de/lego-marcopolo](https://www.wolfspelz.de/lego-marcopolo/)
