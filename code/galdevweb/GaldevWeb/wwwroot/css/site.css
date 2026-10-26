@@ -180,6 +180,15 @@ h3.gd-entry-headline {
     font-size: 1.0rem;
 }
 
+/* Blog and Privacy markdown (showdown, headerLevelStart 3): ## -> h4, ### -> h5 */
+#iTarget h4 {
+    font-size: 1.1rem;
+}
+
+#iTarget h5 {
+    font-size: 1.0rem;
+}
+
 .gd-entry ul {
     margin-bottom: 0.7em;
 }
