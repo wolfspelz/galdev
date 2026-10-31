@@ -15,7 +15,7 @@ paths:
 
 - ASP.NET Core 8.0, Razor Pages + MVC
 - C# with nullable enabled, implicit usings
-- Markdig (Markdown), SixLabors.ImageSharp (images/WebP)
+- Markdig (Markdown), SkiaSharp (images/WebP)
 - Shared utility library: `code/galdevweb/n3q.Tools/`
 - Localization: de-DE (default), en-US via `?lang=` query param or cookie
 

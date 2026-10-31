@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using SixLabors.ImageSharp.Formats.Webp;
-using SixLabors.ImageSharp.PixelFormats;
+using SkiaSharp;
 
 public class ImageToWebpConversionMiddlewareOptions
 {
@@ -10,6 +9,8 @@ public class ImageToWebpConversionMiddlewareOptions
 
 public class ImageToWebpConversionMiddleware
 {
+    private const int WebpQuality = 75; // lossy, same default ImageSharp's WebpEncoder used
+
     private readonly RequestDelegate _next;
     private readonly IMemoryCache _cache;
     private readonly ImageToWebpConversionMiddlewareOptions _options;
@@ -54,11 +55,19 @@ public class ImageToWebpConversionMiddleware
         var cacheKey = $"WEBP_{context.Request.Path}_{memStream.Length}";
 
         if (!_cache.TryGetValue(cacheKey, out byte[]? webpImage)) {
-            memStream.Seek(0, SeekOrigin.Begin);
-            using var image = SixLabors.ImageSharp.Image.Load<Rgba32>(memStream);
-            using var webpStream = new MemoryStream();
-            await image.SaveAsync(webpStream, new WebpEncoder());
-            webpImage = webpStream.ToArray();
+            // Decode via an explicit codec: SKBitmap.Decode(Stream) closes the stream and
+            // SKBitmap.Decode(byte[]) throws on undecodable input, which would break the pass-through below.
+            var original = memStream.ToArray();
+            using var data = SKData.CreateCopy(original);
+            using var codec = SKCodec.Create(data);
+            if (codec == null) {
+                // Not decodable: pass the original image through unchanged.
+                await originalBody.WriteAsync(original, 0, original.Length);
+                return;
+            }
+            using var bitmap = SKBitmap.Decode(codec);
+            using var webpData = bitmap.Encode(SKEncodedImageFormat.Webp, WebpQuality);
+            webpImage = webpData.ToArray();
 
             var cacheOptions = new MemoryCacheEntryOptions {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(_options.CacheDurationSec)
