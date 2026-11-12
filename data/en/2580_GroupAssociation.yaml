@@ -11,7 +11,7 @@ Postimage: NAME.jpg
 Smallimage: NAME-100x70.jpg
 Author: Heiner Wolf
 Translation: Rosmarie Wolf, Heiner Wolf
-Changed: 2026-07-25
+Changed: 2026-11-12
 Tags: [TAG1, TAG2]
 Topics: [life]
 
@@ -58,6 +58,7 @@ Markdown: |
   - Rationality: Thoughts and experiences are often fragmentary and seemingly irrational. Such information should not enter the pool of the group. Therefore, reality is checked to filter out substandard data.
   - Priority: when associations and information from many participants converge on individuals, the system must take care not to overwhelm the recipients. Too many mental leaps and artificially generated inspirations would otherwise obstruct the natural thought process. Therefore, possible associations must be checked for relevance and be prioritized. The rate of artificially generated ideas can be adjusted individually.
   - Convexity: Associations are only useful if they lead to information and not to information deficits. Incomplete associations may appear confusing. The group association mechanism is meant to provide information, not to raise many new questions. So, associations should contain enough information to appear "complete". The so-called convexor-component guarantees that answers dominate the shared data rather than questions.
+  - Interpretation: facts do not speak for themselves. Everyone reads them within their own mental model, and what contradicts that model often goes unnoticed. An association that was obvious to the sender arrives at the recipient and does nothing. Every other processing step merely selects. Interpretation has to change the thought itself. The so-called reframer keeps a model of each participant's conceptual world, maps incoming associations onto it, and where no mapping exists, inserts a bridging association first. What cannot be bridged is held back and released later in small dose, shifting the mental model gently. Genuinely transforming a mental model succeeds only within narrow limits. This is where the products on the market differ.
 
   Group association enables everyone on a team to know intuitively about all relevant information even though just one member of the team has had the experience in reality:
 
